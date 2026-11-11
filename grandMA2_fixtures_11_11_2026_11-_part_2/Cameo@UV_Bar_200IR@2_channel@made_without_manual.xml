@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2018-06-21T16:11:13" showfile="cameo"/>
+	<FixtureType index="36" name="UV Bar 200IR" mode="2 channel">
+		<InfoItems>
+			<Info date="2018-06-21T15:51:44">made without manual</Info>
+		<Info type="Revision" date="2018-06-21T04:06:12">made without manual, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>UVB2IR2</short_name>
+		<manufacturer>Cameo</manufacturer>
+		<short_manufacturer>Cameo</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="LED" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<Body>
+					<Size x="1.022" y="0.066" z="0.067"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="2">
+					<ChannelFunction index="0" from="0" to="0" min_dmx_24="0" max_dmx_24="65535" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="0"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="0.392" to="100" min_dmx_24="65536" max_dmx_24="16777215" physfrom="1" physto="20" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Strobe" from_dmx="1" to_dmx="1"/>
+						<ChannelSet index="1" name="max Strobe" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

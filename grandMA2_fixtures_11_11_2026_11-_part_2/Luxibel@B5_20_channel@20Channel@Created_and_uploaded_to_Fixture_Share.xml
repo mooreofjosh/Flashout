@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA major_vers="3" minor_vers="2" stream_vers="2">
+  <Info datetime="2021-11-27T3:4:22" showfile="ma fixture builder"/>
+  <FixtureType index="18" name="B5 20 channel" mode="20Channel">
+    <InfoItems>
+      <Info>Created using MA FixtureBuilder version v1.9.0</Info>
+    <Info type="Revision" date="2021-11-27T03:20:41">Created and uploaded to Fixture Share, Uploaded to Fixture Share.</Info></InfoItems>
+    <short_name>B5</short_name>
+    <manufacturer>Luxibel</manufacturer>
+    <short_manufacturer>Luxibel</short_manufacturer>
+    <Modules index="0">
+      <Module index="0" name="B5 LED Cell" class="Conventional" beamtype="Wash" beam_angle="65" beam_intensity="8500">
+        <Body>
+          <Size x="0.1" y="0.1" z="0.13"/>
+        </Body>
+        <ChannelType index="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="1" default="255" highlight_value="100" color="ff0000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" subattribute_user_name="R" attribute_user_name="R" feature_user_name="MixColor" preset_user_name="Color"/>
+        </ChannelType>
+        <ChannelType index="1" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="2" default="255" highlight_value="100" color="00ff00">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" subattribute_user_name="G" attribute_user_name="G" feature_user_name="MixColor" preset_user_name="Color"/>
+        </ChannelType>
+        <ChannelType index="2" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="3" default="255" highlight_value="100" color="0000ff">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" subattribute_user_name="B" attribute_user_name="B" feature_user_name="MixColor" preset_user_name="Color"/>
+        </ChannelType>
+        <ChannelType index="3" attribute="COLORRGB4" feature="COLORRGB" preset="COLOR" coarse="4" default="255" highlight_value="100" color="ffbf00">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB4" attribute="COLORRGB4" feature="COLORRGB" preset="COLOR" subattribute_user_name="A" attribute_user_name="Amber" feature_user_name="MixColor" preset_user_name="Color"/>
+        </ChannelType>
+        <ChannelType index="4" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" subattribute_user_name="Dim" attribute_user_name="Dim" feature_user_name="Dimmer" preset_user_name="Dimmer"/>
+        </ChannelType>
+      </Module>
+    </Modules>
+    <Instances index="1">
+      <Instance index="0" patch="1" X="0.2" module_index="0"/>
+      <Instance index="1" patch="5" X="0.1" module_index="0"/>
+      <Instance index="2" patch="9" X="0" module_index="0"/>
+      <Instance index="3" patch="13" X="-0.1" module_index="0"/>
+      <Instance index="4" patch="17" X="-0.2" module_index="0"/>
+    </Instances>
+    <Wheels index="2"/>
+    <FixtureMacroCollect index="5"/>
+  </FixtureType>
+</MA>

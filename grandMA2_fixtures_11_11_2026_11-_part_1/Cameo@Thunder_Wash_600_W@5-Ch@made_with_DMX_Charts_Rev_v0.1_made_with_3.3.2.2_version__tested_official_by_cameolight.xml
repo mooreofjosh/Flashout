@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2016-08-22T12:16:32" showfile="movobeam100"/>
+	<FixtureType index="6" name="Thunder Wash 600 W" mode="5-Ch"><InfoItems><Info type="Revision" date="2017-06-22T02:06:11">made with DMX Charts Rev v0.1 made with 3.3.2.2 version  tested official by cameolight, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>TW-W</short_name>
+		<manufacturer>Cameo</manufacturer>
+		<short_manufacturer>Cameo</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="None" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="2" highlight_value="0" snap="true">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam"/>
+				</ChannelType>
+				<ChannelType index="2" attribute="EFFECTMACROS" feature="EFFECTMACROS" preset="BEAM" coarse="3" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="EFFECTMACROSELECT" subattribute_user_name="Select" attribute="EFFECTMACROS" attribute_user_name="EffectMacros" feature="EFFECTMACROS" feature_user_name="Macros" preset="BEAM" preset_user_name="Beam"/>
+				</ChannelType>
+				<ChannelType index="3" attribute="EFFECTMACRORATE" feature="EFFECTMACROS" preset="BEAM" coarse="4" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="EFFECTMACRORATE" subattribute_user_name="Rate" attribute="EFFECTMACRORATE" attribute_user_name="Rate" feature="EFFECTMACROS" feature_user_name="Macros" preset="BEAM" preset_user_name="Beam"/>
+				</ChannelType>
+				<ChannelType index="4" attribute="AUDIOSENSITIVITY" feature="MACRO" preset="CONTROL" coarse="5" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="AUDIOSENSITIVITY" subattribute_user_name="AudioSensitivity" attribute="AUDIOSENSITIVITY" attribute_user_name="AudioSensitivity" feature="MACRO" feature_user_name="Macro" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Sound Control off" from_dmx="0" to_dmx="5"/>
+						<ChannelSet index="1" name="Sound Control on" from_dmx="6" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

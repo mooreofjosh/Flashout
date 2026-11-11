@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.61/MA.xsd" major_vers="3" minor_vers="9" stream_vers="61">
+	<Info datetime="2025-12-30T14:56:14" showfile="edit"/>
+	<FixtureType index="12" name="MH 8Way BeamBar" mode="14-CH">
+		<InfoItems>
+			<Info date="2025-12-30T14:37:04">This Lighting Fixture created by: SCOBEE</Info>
+		<Info type="Revision" date="2025-12-30T08:23:50">This Lighting Fixture created by SCOBEE, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>MH 8wayBB</short_name>
+		<manufacturer>ALMOE AV SYSTEM</manufacturer>
+		<short_manufacturer>ALMOE AV</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="LED" beamtype="Wash" beam_angle="180" beam_intensity="10000">
+				<Body>
+					<Size x="0.15" y="0.15" z="0.05"/>
+				</Body>
+				<ChannelType index="0" attribute="TILT" feature="POSITION" preset="POSITION" coarse="1" default="127.5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-90" physto="90" subattribute="TILT" subattribute_user_name="Tilt" attribute="TILT" attribute_user_name="Tilt" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="POSITIONMSPEED" feature="MSPEED" preset="CONTROL" coarse="2">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="POSITIONMSPEEDTIME" subattribute_user_name="Time" attribute="POSITIONMSPEED" attribute_user_name="Position" feature="MSPEED" feature_user_name="Mspeed" preset="CONTROL" preset_user_name="Control"/>
+				</ChannelType>
+				<ChannelType index="2" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="3" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+				<ChannelType index="3" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="4">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam"/>
+				</ChannelType>
+				<ChannelType index="4" attribute="CHASE" feature="CHASE" preset="CONTROL" coarse="5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="CHASESELECT" subattribute_user_name="Select" attribute="CHASE" attribute_user_name="Chase" feature="CHASE" feature_user_name="Chase" preset="CONTROL" preset_user_name="Control"/>
+				</ChannelType>
+				<ChannelType index="5" attribute="CHASERATE" feature="CHASE" preset="CONTROL" coarse="6">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="CHASERATE" subattribute_user_name="Rate" attribute="CHASERATE" attribute_user_name="ChaseRate" feature="CHASE" feature_user_name="Chase" preset="CONTROL" preset_user_name="Control"/>
+				</ChannelType>
+				<ChannelType index="6" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" coarse="7" color="ffffff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB5" subattribute_user_name="White" attribute="COLORRGB5" attribute_user_name="White" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="7" attribute="COLORRGB6" feature="COLORRGB" preset="COLOR" coarse="8" color="ffffcc">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB6" subattribute_user_name="Warm White" attribute="COLORRGB6" attribute_user_name="Warm White" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="8" attribute="COLORRGB7" feature="COLORRGB" preset="COLOR" coarse="9" color="ccffff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB7" subattribute_user_name="Cool White" attribute="COLORRGB7" attribute_user_name="Cool White" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="9" attribute="COLORRGB8" feature="COLORRGB" preset="COLOR" coarse="10" color="ff8000">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB8" subattribute_user_name="Orange" attribute="COLORRGB8" attribute_user_name="Orange" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="10" attribute="COLORRGB9" feature="COLORRGB" preset="COLOR" coarse="11" color="ff4000">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB9" subattribute_user_name="Red Orange" attribute="COLORRGB9" attribute_user_name="Red Orange" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="11" attribute="COLORRGB10" feature="COLORRGB" preset="COLOR" coarse="12" color="8000ff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB10" subattribute_user_name="Purple" attribute="COLORRGB10" attribute_user_name="Purple" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="12" attribute="COLORRGB11" feature="COLORRGB" preset="COLOR" coarse="13" color="165fb8">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB11" subattribute_user_name="Indigo" attribute="COLORRGB11" attribute_user_name="Indigo" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="13" attribute="COLORRGB12" feature="COLORRGB" preset="COLOR" coarse="14" color="00ffff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB12" subattribute_user_name="Cyan" attribute="COLORRGB12" attribute_user_name="Cyan" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2021-11-28T21:24:27" showfile="new show 2021-09-15"/>
+	<FixtureType index="2" name="ATOMIC RGB BRIWAX BX 354-1911" mode="DALVINO LIGHT">
+		<InfoItems>
+			<Info date="2021-11-28T18:15:28">ESTE ATOMIC RGB FOI CRIADO POR DALVINO RODRIGUES  ESTA NO  MODO 16 CANAIS</Info>
+			<Info date="2021-11-28T18:13:44">ATOMIC CRIADO TESTADO E APROVADO POR DALVINO LIGHT</Info>
+			<Info type="Revision" date="2021-11-28T18:14:58">ESTE APARELHO POSSUI 3 MODOS DE CANAIS DMX 6 16 E 32</Info>
+			<Info date="2021-11-28T18:16:43">ATOMIC RGB DA EMPRESA BRIWAX BX-354-1911</Info>
+		<Info type="Revision" date="2022-04-04T21:16:17">ESTE APARELHO POSSUI 3 MODOS DE CANAIS DMX 6 16 E 32, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>ATOMIC RGB BRIWAX BX 354-1911</short_name>
+		<manufacturer>ATOMIC RGB BRIWAX BX354-1911</manufacturer>
+		<short_manufacturer>ATOMIC RGB BRIWAX BX354-1911</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="Conventional" beamtype="Wash" beam_angle="35" beam_intensity="90000">
+				<Body>
+					<Size x="0.5" y="0.5" z="0.5"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" default="254.999" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="CLOSE" from_dmx="0" to_dmx="10"/>
+						<ChannelSet index="1" name="CLOSE OPEN" from_dmx="13" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="2" fine="3">
+					<ChannelFunction index="0" name="CLOSE OPEN" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="CLOSE" from_dmx="4" to_dmx="0"/>
+						<ChannelSet index="1" name="RANDOM STROBE" from_dmx="54" to_dmx="3277"/>
+						<ChannelSet index="2" name="PULSE STROBE" from_dmx="104" to_dmx="36044"/>
+						<ChannelSet index="3" name="STROBE" from_dmx="255" to_dmx="65535"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="4" highlight_value="100" color="ff0000">
+					<ChannelFunction index="0" name="RED" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLOR1" subattribute_user_name="Select" attribute="COLOR1" attribute_user_name="C1" feature="COLOR1" feature_user_name="Color1" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="RED" from_dmx="0" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="5" highlight_value="100" color="00ff00">
+					<ChannelFunction index="0" name="GREE" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLOR1" subattribute_user_name="Select" attribute="COLOR1" attribute_user_name="C1" feature="COLOR1" feature_user_name="Color1" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="GREEN" from_dmx="0" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="6" highlight_value="100" color="0000ff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLOR1" subattribute_user_name="Select" attribute="COLOR1" attribute_user_name="C1" feature="COLOR1" feature_user_name="Color1" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="BLUE" from_dmx="0" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="SCROLLER" feature="COLORALL" preset="COLOR" coarse="7">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="COLOR1" subattribute_user_name="Select" attribute="COLOR1" attribute_user_name="C1" feature="COLOR1" feature_user_name="Color1" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="OFF SET" from_dmx="0" to_dmx="4"/>
+						<ChannelSet index="1" name="RED" from_dmx="5" to_dmx="14"/>
+						<ChannelSet index="2" name="GREE" from_dmx="15" to_dmx="24"/>
+						<ChannelSet index="3" name="BLUE" from_dmx="25" to_dmx="34"/>
+						<ChannelSet index="4" name="YELLOW" from_dmx="35" to_dmx="44"/>
+						<ChannelSet index="5" name="CYAN" from_dmx="45" to_dmx="54"/>
+						<ChannelSet index="6" name="MAGENTA" from_dmx="55" to_dmx="64"/>
+						<ChannelSet index="7" name="WITE" from_dmx="65" to_dmx="74"/>
+						<ChannelSet index="8" name="COLOR FAST" from_dmx="75" to_dmx="199"/>
+						<ChannelSet index="9" name="RANDON FAST" from_dmx="200" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="6" attribute="COLOR1" feature="COLOR1" preset="COLOR" coarse="8">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0.1" physto="1" physadditional="3" subattribute="COLOR1" subattribute_user_name="Select" attribute="COLOR1" attribute_user_name="C1" feature="COLOR1" feature_user_name="Color1" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="OFF SET" from_dmx="0" to_dmx="7"/>
+						<ChannelSet index="1" name="RED  YELLOW" from_dmx="8" to_dmx="39"/>
+						<ChannelSet index="2" name="YELLOW GREE" from_dmx="40" to_dmx="71"/>
+						<ChannelSet index="3" name="GREE CYAN" from_dmx="72" to_dmx="103"/>
+						<ChannelSet index="4" name="CYAN BLUE" from_dmx="104" to_dmx="135"/>
+						<ChannelSet index="5" name="BLUE MAGENTA" from_dmx="136" to_dmx="167"/>
+						<ChannelSet index="6" name="MAGENTA RED" from_dmx="168" to_dmx="199"/>
+						<ChannelSet index="7" name="GRADIENTE FAST" from_dmx="200" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="7" attribute="VIDEO_MODE" feature="V_PRESET" preset="VIDEO" coarse="9">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="VIDEO_MODE" subattribute_user_name="Mode" attribute="VIDEO_MODE" attribute_user_name="Mode" feature="V_PRESET" feature_user_name="VPreset" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="OFF SET" from_dmx="4" to_dmx="0"/>
+						<ChannelSet index="1" name="WATER FLOW" from_dmx="5" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="8" attribute="GOBO1" feature="GOBO1" preset="GOBO" coarse="10">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="GOBO1" subattribute_user_name="Select" attribute="GOBO1" attribute_user_name="G1" feature="GOBO1" feature_user_name="Gobo1" preset="GOBO" preset_user_name="Gobo">
+						<ChannelSet index="0" name="SLOW FAST" from_dmx="0" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="9" attribute="GOBO2" feature="GOBO2" preset="GOBO" coarse="11">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="360" subattribute="GOBO2" subattribute_user_name="Select2" attribute="GOBO2" attribute_user_name="G2" feature="GOBO2" feature_user_name="Gobo2" preset="GOBO" preset_user_name="Gobo">
+						<ChannelSet index="0" name="EFFECT GRADIENT" from_dmx="0" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="10" attribute="GOBO3" feature="GOBO3" preset="GOBO" coarse="12">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="GOBO3" subattribute_user_name="Select3" attribute="GOBO3" attribute_user_name="G3" feature="GOBO3" feature_user_name="Gobo3" preset="GOBO" preset_user_name="Gobo">
+						<ChannelSet index="0" name="EFFECT RED" from_dmx="0" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="11" attribute="GOBO1_POS" feature="GOBO1" preset="GOBO" coarse="13">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="360" subattribute="GOBO1_POS" subattribute_user_name="Index" attribute="GOBO1_POS" attribute_user_name="G1&lt;&gt;" feature="GOBO1" feature_user_name="Gobo1" preset="GOBO" preset_user_name="Gobo">
+						<ChannelSet index="0" name="EFFECT GREEN" from_dmx="0" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="12" attribute="GOBO2_POS" feature="GOBO2" preset="GOBO" coarse="14">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="360" subattribute="GOBO2_POS" subattribute_user_name="Index2" attribute="GOBO2_POS" attribute_user_name="G2&lt;&gt;" feature="GOBO2" feature_user_name="Gobo2" preset="GOBO" preset_user_name="Gobo">
+						<ChannelSet index="0" name="EFFECT BLUE" from_dmx="0" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="13" attribute="V_SLT_TIME" feature="V_OBJ" preset="VIDEO" coarse="15" highlight_value="100">
+					<ChannelFunction index="0" name="EFFECT DIMMER" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="V_SLT_TIME" subattribute_user_name="Transition Time" attribute="V_SLT_TIME" attribute_user_name="Transition Time" feature="V_OBJ" feature_user_name="VObj" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="EFFECT DIMMER" from_dmx="0" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="14" attribute="V_SLT" feature="V_OBJ" preset="VIDEO" coarse="16">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="V_SLT" subattribute_user_name="Transition" attribute="V_SLT" attribute_user_name="Transition" feature="V_OBJ" feature_user_name="VObj" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="BAC KGROUND DIMMER" from_dmx="0" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0" locked="false"/>
+		</Instances>
+		<Wheels index="2">
+			<Wheel index="0" subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR">
+				<Slot index="0" g="0" b="0"/>
+			</Wheel>
+			<Wheel index="1" subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR">
+				<Slot index="0" r="0" b="0"/>
+			</Wheel>
+			<Wheel index="2" subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR">
+				<Slot index="0" r="0" g="0"/>
+			</Wheel>
+			<Wheel index="3">
+				<Slot index="0" b="0"/>
+			</Wheel>
+			<Wheel index="4">
+				<Slot index="0" r="0"/>
+			</Wheel>
+			<Wheel index="5">
+				<Slot index="0" g="0"/>
+			</Wheel>
+			<Wheel index="6">
+				<Slot index="0"/>
+			</Wheel>
+		</Wheels>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

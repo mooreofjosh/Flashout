@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA major_vers="3" minor_vers="2" stream_vers="2">
+  <Info datetime="2022-11-22T14:53:54" showfile="ma fixture builder"/>
+  <FixtureType index="0" name="EvoWash730z Pix" mode="16">
+    <InfoItems>
+      <Info>Created using MA FixtureBuilder version v1.9.0</Info>
+    <Info type="Revision" date="2022-12-05T17:06:16">nice version and finally working, Uploaded to Fixture Share.</Info></InfoItems>
+    <short_name>EvoWash7</short_name>
+    <manufacturer>Evolite</manufacturer>
+    <short_manufacturer>Evolite</short_manufacturer>
+    <Modules index="0">
+      <Module index="0" name="Main" class="Headmover" beamtype="Wash" beam_angle="1" beam_intensity="10000">
+        <Body>
+          <Size x="0.5" y="0.5" z="0.5"/>
+        </Body>
+        <ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" default="0.000000" highlight_value="100.000000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER">
+            <ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="1" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="2" default="255" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+            <ChannelSet index="0" name="closed" from_dmx="0" to_dmx="31"/>
+            <ChannelSet index="1" name="open" from_dmx="32" to_dmx="63"/>
+            <ChannelSet index="2" name="strobe effect" from_dmx="64" to_dmx="95"/>
+            <ChannelSet index="3" name="open" from_dmx="96" to_dmx="127"/>
+            <ChannelSet index="4" name="pulse effect" from_dmx="128" to_dmx="159"/>
+            <ChannelSet index="5" name="open" from_dmx="160" to_dmx="191"/>
+            <ChannelSet index="6" name="strobe effect" from_dmx="192" to_dmx="223"/>
+            <ChannelSet index="7" name="open" from_dmx="224" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="2" attribute="PAN" feature="POSITION" preset="POSITION" coarse="3" fine="4" default="32768">
+          <ChannelFunction index="0" from="-180" to="180" min_dmx_24="0" max_dmx_24="16777215" physfrom="-180" physto="180" subattribute="PAN" attribute="PAN" feature="POSITION" preset="POSITION">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="home" from_dmx="32768" to_dmx="32768"/>
+            <ChannelSet index="2" name="max" from_dmx="65535" to_dmx="65535"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="3" attribute="TILT" feature="POSITION" preset="POSITION" coarse="5" fine="6" default="32768">
+          <ChannelFunction index="0" from="-135" to="135" min_dmx_24="0" max_dmx_24="16777215" physfrom="-135" physto="135" subattribute="TILT" attribute="TILT" feature="POSITION" preset="POSITION">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="home" from_dmx="32768" to_dmx="32768"/>
+            <ChannelSet index="2" name="max" from_dmx="65535" to_dmx="65535"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="4" attribute="ZOOM" feature="FOCUS" preset="FOCUS" coarse="7" default="0">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="60" physto="6" subattribute="ZOOM" attribute="ZOOM" feature="FOCUS" preset="FOCUS">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="5" attribute="TRACKINGSPEED" feature="TRACKING" preset="POSITION" coarse="8" default="0">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="TRACKINGSPEED" attribute="TRACKINGSPEED" feature="TRACKING" preset="POSITION">
+            <ChannelSet index="0" name="slow to fast" from_dmx="0" to_dmx="225"/>
+            <ChannelSet index="1" name="BO when mvmt" from_dmx="226" to_dmx="235"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="6" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="9" default="255.000000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="7" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="10" default="255.000000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="8" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="11" default="255.000000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="9" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" coarse="12" default="255.000000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="10" attribute="MACROS" feature="MACRO" preset="CONTROL" coarse="13" default="0.000000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="100" subattribute="MACROAUDIO" attribute="MACROS" feature="MACRO" preset="CONTROL">
+            <ChannelSet index="0" name="Red" from_dmx="16" to_dmx="31"/>
+            <ChannelSet index="1" name="Green" from_dmx="32" to_dmx="47"/>
+            <ChannelSet index="2" name="Bleu" from_dmx="48" to_dmx="63"/>
+            <ChannelSet index="3" name="White" from_dmx="64" to_dmx="79"/>
+            <ChannelSet index="4" name="R + G" from_dmx="80" to_dmx="95"/>
+            <ChannelSet index="5" name="R + B" from_dmx="96" to_dmx="111"/>
+            <ChannelSet index="6" name="G + B" from_dmx="128" to_dmx="143"/>
+            <ChannelSet index="7" name="G + W" from_dmx="144" to_dmx="159"/>
+            <ChannelSet index="10" name="B + W" from_dmx="160" to_dmx="175"/>
+            <ChannelSet index="11" name="R + G + B" from_dmx="176" to_dmx="191"/>
+            <ChannelSet index="12" name="R + G + B + W" from_dmx="192" to_dmx="207"/>
+            <ChannelSet index="11" name="Jump Effect" from_dmx="208" to_dmx="223"/>
+            <ChannelSet index="12" name="Fading Effect" from_dmx="224" to_dmx="239"/>
+            <ChannelSet index="13" name="Pulse Effect" from_dmx="240" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="11" attribute="MACRORATE" feature="MACRO" preset="CONTROL" coarse="14" default="0">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="MACRORATE" attribute="MACRORATE" feature="MACRO" preset="CONTROL">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="12" attribute="COLORTEMPERATURE" feature="COLORALL" preset="COLOR" coarse="15" default="0.000000">
+          <ChannelFunction index="0" from="16" to="45" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORTEMPERATURE" attribute="COLORTEMPERATURE" feature="COLORALL" preset="COLOR">
+            <ChannelSet index="0" name="Below 3200K" from_dmx="16" to_dmx="45"/>
+            <ChannelSet index="1" name="3200K - 3500K" from_dmx="46" to_dmx="75"/>
+            <ChannelSet index="2" name="3500k - 5000K" from_dmx="76" to_dmx="105"/>
+            <ChannelSet index="3" name="5000K - 5500K" from_dmx="106" to_dmx="135"/>
+            <ChannelSet index="4" name="5500K - 6000K" from_dmx="136" to_dmx="165"/>
+            <ChannelSet index="5" name="6000K - 6500K" from_dmx="166" to_dmx="195"/>
+            <ChannelSet index="6" name="6500K - 7000K" from_dmx="196" to_dmx="225"/>
+            <ChannelSet index="7" name="7000K - 8000K" from_dmx="226" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+      </Module>
+    </Modules>
+    <Instances index="1">
+      <Instance index="0" patch="1" module_index="0"/>
+    </Instances>
+    <Wheels index="2"/>
+    <FixtureMacroCollect index="5"/>
+  </FixtureType>
+</MA>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2017-04-07T13:48:29" showfile="nano scan libary"/>
+	<FixtureType index="2" name="Nanoscan 100" mode="8 Chan">
+		<InfoItems>
+			<Info date="2017-04-07T13:43:51">8 Channel Mode</Info>
+		<Info type="Revision" date="2017-05-19T01:05:58">2017 05 19, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>Nano100</short_name>
+		<manufacturer>Cameo</manufacturer>
+		<short_manufacturer>Cameo</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="None" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<ChannelType index="0" attribute="PAN" feature="POSITION" preset="POSITION" coarse="1" default="127.5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-180" physto="180" subattribute="PAN" subattribute_user_name="Pan" attribute="PAN" attribute_user_name="Pan" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="TILT" feature="POSITION" preset="POSITION" coarse="2" default="127.5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-90" physto="90" subattribute="TILT" subattribute_user_name="Tilt" attribute="TILT" attribute_user_name="Tilt" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="2" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="3" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+				<ChannelType index="3" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="4" highlight_value="0">
+					<ChannelFunction index="0" name="Strob" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="5"/>
+						<ChannelSet index="1" name="slow" from_dmx="6" to_dmx="30"/>
+						<ChannelSet index="2" name="mid" from_dmx="31" to_dmx="60"/>
+						<ChannelSet index="3" name="fast" from_dmx="61" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="COLOR1" feature="COLOR1" preset="COLOR" coarse="5" highlight_value="0">
+					<ChannelFunction index="0" name="Color" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" wheel="1" subattribute="COLOR1" subattribute_user_name="Select" attribute="COLOR1" attribute_user_name="C1" feature="COLOR1" feature_user_name="Color1" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="5" slot_index="0" slot_from="0"/>
+						<ChannelSet index="1" name="Rot" from_dmx="6" to_dmx="22" slot_index="1"/>
+						<ChannelSet index="2" name="Orange" from_dmx="23" to_dmx="39" slot_index="2"/>
+						<ChannelSet index="3" name="Gelb" from_dmx="40" to_dmx="56" slot_index="3"/>
+						<ChannelSet index="4" name="Gruen" from_dmx="57" to_dmx="73" slot_index="4"/>
+						<ChannelSet index="5" name="Cyan" from_dmx="74" to_dmx="90" slot_index="5"/>
+						<ChannelSet index="6" name="Magenta" from_dmx="91" to_dmx="107" slot_index="6"/>
+						<ChannelSet index="7" name="Blau" from_dmx="108" to_dmx="125" slot_index="7"/>
+						<ChannelSet index="8" name="Rot stop" from_dmx="126" to_dmx="128"/>
+						<ChannelSet index="9" name="Rot slow" from_dmx="129" to_dmx="130"/>
+						<ChannelSet index="10" name="Rot fast" from_dmx="181" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="GOBO1" feature="GOBO1" preset="GOBO" coarse="6" highlight_value="0">
+					<ChannelFunction index="0" name="Gobo" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" wheel="2" subattribute="GOBO1" subattribute_user_name="Select" attribute="GOBO1" attribute_user_name="G1" feature="GOBO1" feature_user_name="Gobo1" preset="GOBO" preset_user_name="Gobo">
+						<ChannelSet index="0" name="Gobo open" from_dmx="0" to_dmx="5" slot_index="0" slot_from="0"/>
+						<ChannelSet index="1" name="Gobo 1" from_dmx="6" to_dmx="15" slot_index="1"/>
+						<ChannelSet index="2" name="Gobo 2" from_dmx="16" to_dmx="25" slot_index="2"/>
+						<ChannelSet index="3" name="Gobo 3" from_dmx="26" to_dmx="35" slot_index="3"/>
+						<ChannelSet index="4" name="Gobo 4" from_dmx="36" to_dmx="45" slot_index="4"/>
+						<ChannelSet index="5" name="Gobo 5" from_dmx="46" to_dmx="55" slot_index="5"/>
+						<ChannelSet index="6" name="Gobo 6" from_dmx="56" to_dmx="65" slot_index="6"/>
+						<ChannelSet index="7" name="Gobo 7" from_dmx="66" to_dmx="75" slot_index="7"/>
+						<ChannelSet index="8" name="Gobo 1 shake" from_dmx="76" to_dmx="95" auto_create="false"/>
+						<ChannelSet index="9" name="Gobo 2 shake" from_dmx="96" to_dmx="115" auto_create="false"/>
+						<ChannelSet index="10" name="Gobo 3 shake" from_dmx="116" to_dmx="135" auto_create="false"/>
+						<ChannelSet index="11" name="Gobo 4 shake" from_dmx="136" to_dmx="155" auto_create="false"/>
+						<ChannelSet index="12" name="Gobo 5 shake" from_dmx="156" to_dmx="175" auto_create="false"/>
+						<ChannelSet index="13" name="Gobo 6 shake" from_dmx="176" to_dmx="195" auto_create="false"/>
+						<ChannelSet index="14" name="Gobo 7 shake" from_dmx="196" to_dmx="215" auto_create="false"/>
+						<ChannelSet index="15" name="Rot stop" from_dmx="216" to_dmx="220"/>
+						<ChannelSet index="16" name="Rot slow" from_dmx="221" to_dmx="230"/>
+						<ChannelSet index="17" name="Rot mid" from_dmx="231" to_dmx="240" auto_create="false"/>
+						<ChannelSet index="18" name="Rot fast" from_dmx="241" to_dmx="255" auto_create="false"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="6" attribute="VIRTUAL_POSITION_MODE" feature="POSITION" preset="POSITION" coarse="7">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="VIRTUAL_POSITION_MODE" subattribute_user_name="PosMode" attribute="VIRTUAL_POSITION_MODE" attribute_user_name="PosMode" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="default" from_dmx="0" to_dmx="5"/>
+						<ChannelSet index="1" name="P/T Speed&gt;" from_dmx="6" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="7" attribute="FIXTUREGLOBALRESET" feature="RESET" preset="CONTROL" coarse="8">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" subattribute="FIXTUREGLOBALRESET" subattribute_user_name="Reset" attribute="FIXTUREGLOBALRESET" attribute_user_name="FixtureGlobal" feature="RESET" feature_user_name="Reset" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Reset P/T" from_dmx="6" to_dmx="127"/>
+						<ChannelSet index="1" name="Reset Gobo" from_dmx="128" to_dmx="191"/>
+						<ChannelSet index="2" name="Reset All" from_dmx="192" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2">
+			<Wheel index="0" subattribute="COLOR1" attribute="COLOR1" feature="COLOR1" preset="COLOR">
+				<Slot index="0" media_name="open" g="252"/>
+				<Slot index="1" media_name="rot" g="0" b="0"/>
+				<Slot index="2" media_name="orange" g="190" b="0"/>
+				<Slot index="3" media_name="gelb" b="0"/>
+				<Slot index="4" media_name="gruen" r="0" b="0"/>
+				<Slot index="5" media_name="cyan" r="0"/>
+				<Slot index="6" media_name="magenta" g="0"/>
+				<Slot index="7" media_name="blau" r="0" g="0"/>
+			</Wheel>
+			<Wheel index="1" subattribute="GOBO1" attribute="GOBO1" feature="GOBO1" preset="GOBO">
+				<Slot index="0" media_name="open" media_filename="carallon/gobos/generic/00090004.png"/>
+				<Slot index="1" media_name="Gobo 1" media_filename="Martin/cone.bmp"/>
+				<Slot index="2" media_name="Gobo 2" media_filename="carallon/gobos/clay_paky/00591317.png"/>
+				<Slot index="3" media_name="Gobo 3" media_filename="Martin/phones.bmp"/>
+				<Slot index="4" media_name="Gobo 4" media_filename="Martin/machine.bmp"/>
+				<Slot index="5" media_name="Gobo 5" media_filename="Martin/droplets.bmp"/>
+				<Slot index="6" media_name="Gobo 6" media_filename="Clay Paky/MG-19.bmp"/>
+				<Slot index="7" media_name="Gobo 7" media_filename="Clay Paky/084614-001.bmp"/>
+			</Wheel>
+		</Wheels>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5">
+			<FixtureMacro index="0">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET" from_value="1" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="67" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="1">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET" from_value="1" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="159" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="2">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET" from_value="1" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="255" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+			</FixtureMacro>
+		</FixtureMacroCollect>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA major_vers="3" minor_vers="2" stream_vers="2">
+    <Info datetime="2018-8-26T18:6:6" showfile="ma fixture builder"/>
+    <FixtureType index="48" name="LEDbarPRO" mode="4ch">
+        <InfoItems>
+            <Info>Created using MA FixtureBuilder version v1.3.2.2</Info>
+            <Info type="Revision" date="2018-08-26T06:08:29">Firmware 1.00, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>LEDbarPR</short_name>
+        <manufacturer>CLF Lighting</manufacturer>
+        <short_manufacturer>CLF</short_manufacturer>
+        <Modules index="0">
+            <Module index="0" name="Main" class="Conventional" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+                <Body>
+                    <Size x="0.1" y="0.1" z="0.1"/>
+                </Body>
+                <ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" subattribute_user_name="Dim" attribute_user_name="Dim" feature_user_name="Dimmer" preset_user_name="Dimmer">
+                        <ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType index="1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="1" default="254.999" highlight_value="100" color="ff0000">
+                    <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" subattribute_user_name="R" attribute_user_name="R" feature_user_name="MixColor" preset_user_name="Color">
+                        <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType index="2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="2" default="254.999" highlight_value="100" color="00ff00">
+                    <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" subattribute_user_name="G" attribute_user_name="G" feature_user_name="MixColor" preset_user_name="Color">
+                        <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType index="3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="3" default="254.999" highlight_value="100" color="0000ff">
+                    <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" subattribute_user_name="B" attribute_user_name="B" feature_user_name="MixColor" preset_user_name="Color">
+                        <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType index="4" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" coarse="4" highlight_value="100" color="ffffff">
+                    <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" subattribute_user_name="White" attribute_user_name="White" feature_user_name="MixColor" preset_user_name="Color">
+                        <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances index="1">
+            <Instance index="0" module_index="0"/>
+        </Instances>
+        <Wheels index="2"/>
+        <FixtureMacroCollect index="5"/>
+    </FixtureType>
+</MA>

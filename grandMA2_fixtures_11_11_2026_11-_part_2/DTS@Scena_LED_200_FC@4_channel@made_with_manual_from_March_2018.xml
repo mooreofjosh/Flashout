@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.5.0/MA.xsd" major_vers="3" minor_vers="5" stream_vers="0">
+	<Info datetime="2019-01-11T09:38:19" showfile="dts"/>
+	<FixtureType index="17" name="Scena LED 200 FC" mode="4 channel">
+		<InfoItems>
+			<Info date="2019-01-11T09:34:25">made with manual from March 2018</Info>
+		<Info type="Revision" date="2019-01-11T09:01:51">made with manual from March 2018, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>Sc200FC</short_name>
+		<manufacturer>DTS</manufacturer>
+		<short_manufacturer>DTS</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="Conventional" beamtype="Wash" beam_angle="25" beam_intensity="10000">
+				<Body>
+					<Size x="0.213" y="0.213" z="0.415"/>
+				</Body>
+				<ChannelType index="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="1" default="254.999" highlight_value="100" color="ff0000">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" subattribute_user_name="R" attribute="COLORRGB1" attribute_user_name="R" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="2" default="254.999" highlight_value="100" color="00ff00">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" subattribute_user_name="G" attribute="COLORRGB2" attribute_user_name="G" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="3" default="254.999" highlight_value="100" color="0000ff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" subattribute_user_name="B" attribute="COLORRGB3" attribute_user_name="B" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" coarse="4" color="ffffff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB5" subattribute_user_name="White" attribute="COLORRGB5" attribute_user_name="White" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="16777214" to_dmx="16777215"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2">
+			<Wheel index="0" subattribute="COLOR1" attribute="COLOR1" feature="COLOR1" preset="COLOR">
+				<Slot index="0" media_name="open"/>
+				<Slot index="1" media_name="fire" r="187" g="85" b="15"/>
+				<Slot index="2" media_name="medium amber" r="226" g="203" b="36"/>
+				<Slot index="3" media_name="sunset red" r="200" g="130" b="42"/>
+				<Slot index="4" media_name="sky blue" r="33" g="92" b="139"/>
+				<Slot index="5" media_name="yellow" r="208" g="241" b="18"/>
+				<Slot index="6" media_name="deep amber" r="234" g="239" b="48"/>
+				<Slot index="7" media_name="orange" r="220" g="177" b="8"/>
+				<Slot index="8" media_name="primary red" r="153" g="47" b="9"/>
+				<Slot index="9" media_name="dark pink" r="206" g="140" b="170"/>
+				<Slot index="10" media_name="magenta" r="166" g="52" b="68"/>
+				<Slot index="11" media_name="steel blue" r="157" g="205" b="216"/>
+				<Slot index="12" media_name="light blue" r="56" g="135" b="166"/>
+				<Slot index="13" media_name="fern green" r="108" g="207" b="74"/>
+				<Slot index="14" media_name="mauve" r="109" g="40" b="126"/>
+				<Slot index="15" media_name="medium blue" r="26" g="85" b="131"/>
+				<Slot index="16" media_name="pale lavender" r="181" g="184" b="205"/>
+				<Slot index="17" media_name="lavender" r="60" g="80" b="139"/>
+				<Slot index="18" media_name="pale green" r="184" g="236" b="129"/>
+				<Slot index="19" media_name="primary green" r="33" g="139" b="15"/>
+				<Slot index="20" media_name="apricot" r="244" g="237" b="207"/>
+				<Slot index="21" media_name="gold tint" r="234" g="217" b="197"/>
+				<Slot index="22" media_name="pale rose" r="238" g="223" b="212"/>
+				<Slot index="23" media_name="chocolate" r="182" g="174" b="117"/>
+				<Slot index="24" media_name="congo blue" r="7" g="24" b="80"/>
+				<Slot index="25" media_name="double CTB" r="64" g="111" b="155"/>
+				<Slot index="26" media_name="full CTB" r="129" g="169" b="194"/>
+				<Slot index="27" media_name="full CTO" r="231" g="227" b="98"/>
+				<Slot index="28" media_name="plum" r="170" g="147" b="167"/>
+			</Wheel>
+		</Wheels>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5">
+			<FixtureMacro index="0">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="ZOOMRESET"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="118" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="1">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="LAMPPOWER" from_value="1" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="140" attribute="FUNCTION" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FUNCTION" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="2">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="LAMPPOWER" from_value="0" to_value="0"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="149" attribute="FUNCTION" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FUNCTION" instance_index="0"/>
+			</FixtureMacro>
+		</FixtureMacroCollect>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

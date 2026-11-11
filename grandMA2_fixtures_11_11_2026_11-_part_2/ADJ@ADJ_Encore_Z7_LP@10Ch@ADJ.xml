@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.60/MA.xsd" major_vers="3" minor_vers="9" stream_vers="60">
+	<Info datetime="2022-11-23T18:52:11" showfile="fr and profile"/>
+	<FixtureType index="20" name="ADJ Encore Z7 LP" mode="10Ch">
+		<InfoItems>
+			<Info date="2022-11-23T18:45:12">Set menu option DMX mode to 10 Channel for this personality</Info>
+			<Info type="Invisible" date="2020-11-06T00:00:00">generator_software_name="MA Importer",generator_software_version="d992b97cb7dbda8ecc892305f06c8a29b4ffc163"</Info>
+			<Info type="Revision" date="2022-11-23T18:40:12">ADJ</Info>
+		<Info type="Revision" date="2022-11-24T10:29:21">ADJ, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>LP7 LP</short_name>
+		<manufacturer>ADJ</manufacturer>
+		<short_manufacturer>LP7 LP</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="Conventional" beamtype="Wash" beam_angle="50" beam_intensity="15000">
+				<Body>
+					<Size x="0.2" y="0.2" z="0.28"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="1" fine="2" default="254.999" highlight_value="100" color="ff0000">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" subattribute_user_name="R" attribute="COLORRGB1" attribute_user_name="R" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="3" fine="4" default="254.999" highlight_value="100" color="00ff00">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" subattribute_user_name="G" attribute="COLORRGB2" attribute_user_name="G" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="5" fine="6" default="254.999" highlight_value="100" color="0000ff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" subattribute_user_name="B" attribute="COLORRGB3" attribute_user_name="B" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="4" attribute="COLORRGB19" feature="COLORRGB" preset="COLOR" coarse="7" fine="8" highlight_value="100" color="bae33d">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB19" subattribute_user_name="Mint Green" attribute="COLORRGB19" attribute_user_name="Lime" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="5" attribute="ZOOM" feature="FOCUS" preset="FOCUS" coarse="9">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0.2" physto="1" subattribute="ZOOM" subattribute_user_name="Zoom" attribute="ZOOM" attribute_user_name="Zoom" feature="FOCUS" feature_user_name="Focus" preset="FOCUS" preset_user_name="Focus"/>
+				</ChannelType>
+				<ChannelType index="6" attribute="ZOOMMODE" feature="FOCUS" preset="FOCUS" coarse="10">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="5" physto="50" subattribute="ZOOMMODESELECT" subattribute_user_name="Select" attribute="ZOOMMODE" attribute_user_name="ZoomMode" feature="FOCUS" feature_user_name="Focus" preset="FOCUS" preset_user_name="Focus">
+						<ChannelSet index="0" name="5 degres" from_dmx="0" to_dmx="20" slot_from="5" slot_to="5"/>
+						<ChannelSet index="1" name="6 degres" from_dmx="21" to_dmx="40" slot_from="6" slot_to="6"/>
+						<ChannelSet index="2" name="10 degres" from_dmx="41" to_dmx="60" slot_from="10" slot_to="10"/>
+						<ChannelSet index="3" name="30 degres" from_dmx="61" to_dmx="80" slot_from="30" slot_to="30"/>
+						<ChannelSet index="4" name="40 degres" from_dmx="81" to_dmx="100" slot_from="40" slot_to="40"/>
+						<ChannelSet index="5" name="50 degres" from_dmx="101" to_dmx="255" slot_from="50" slot_to="50"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2">
+			<Wheel index="0" subattribute="COLOR1" attribute="COLOR1" feature="COLOR1" preset="COLOR">
+				<Slot index="0" media_name="Pale Yellow" r="234" g="247" b="190"/>
+				<Slot index="1" media_name="Straw" r="241" g="245" b="179"/>
+				<Slot index="2" media_name="Gold Tint" r="234" g="217" b="197"/>
+				<Slot index="3" media_name="Spring Yellow" r="191" g="245" b="36"/>
+				<Slot index="4" media_name="Medium Yellow" r="199" g="246" b="27"/>
+				<Slot index="5" media_name="Yellow" r="208" g="241" b="18"/>
+				<Slot index="6" media_name="Deep Amber" r="234" g="239" b="48"/>
+				<Slot index="7" media_name="Deep Straw" r="236" g="230" b="31"/>
+				<Slot index="8" media_name="Loving Amber" r="227" g="210" b="10"/>
+				<Slot index="9" media_name="Gold Amber" r="207" g="149" b="15"/>
+				<Slot index="10" media_name="Orange" r="220" g="177" b="8"/>
+				<Slot index="11" media_name="Deep Orange" r="210" g="151" b="8"/>
+				<Slot index="12" media_name="Dark Amber" r="197" g="114" b="6"/>
+				<Slot index="13" media_name="Millenium Gold" r="204" g="133" b="12"/>
+				<Slot index="14" media_name="Deep Golden Amber" r="191" g="103" b="6"/>
+				<Slot index="15" media_name="Scarlet" r="155" g="48" b="9"/>
+				<Slot index="16" media_name="Primary Red" r="153" g="47" b="9"/>
+				<Slot index="17" media_name="Bright Red" r="161" g="98" b="86"/>
+				<Slot index="18" media_name="Medium Red" r="135" g="61" b="58"/>
+				<Slot index="19" media_name="Fire" r="187" g="85" b="15"/>
+				<Slot index="20" media_name="Pink" r="206" g="144" b="149"/>
+				<Slot index="21" media_name="Medium Pink" r="215" g="170" b="190"/>
+				<Slot index="22" media_name="Dark Pink" r="206" g="140" b="170"/>
+				<Slot index="23" media_name="Bright Pink" r="174" g="71" b="134"/>
+				<Slot index="24" media_name="Bright Rose" r="180" g="81" b="105"/>
+				<Slot index="25" media_name="Special Rose Pink" r="170" g="54" b="99"/>
+				<Slot index="26" media_name="Vanity Fair" r="170" g="57" b="118"/>
+				<Slot index="27" media_name="Magenta" r="166" g="52" b="68"/>
+				<Slot index="28" media_name="Dark MAgenta" r="139" g="54" b="72"/>
+				<Slot index="29" media_name="Rose Purple" r="156" g="100" b="163"/>
+				<Slot index="30" media_name="MAuve" r="109" g="40" b="126"/>
+				<Slot index="31" media_name="Medium Purple" r="122" g="47" b="131"/>
+				<Slot index="32" media_name="Lavender" r="60" g="80" b="139"/>
+				<Slot index="33" media_name="Palece Blue" r="52" g="83" b="139"/>
+				<Slot index="34" media_name="Dark Blue" r="11" g="53" b="106"/>
+				<Slot index="35" media_name="MEdium Blue" r="26" g="85" b="131"/>
+				<Slot index="36" media_name="Deep Blue" r="5" g="31" b="80"/>
+				<Slot index="37" media_name="Daylight Blue" r="59" g="123" b="163"/>
+				<Slot index="38" media_name="Slate Blue" r="78" g="137" b="174"/>
+				<Slot index="39" media_name="Light Blue" r="56" g="135" b="166"/>
+				<Slot index="40" media_name="Sky BLue" r="33" g="92" b="139"/>
+				<Slot index="41" media_name="Pale Navy Blue" r="68" g="125" b="150"/>
+				<Slot index="42" media_name="Marine Blue" r="114" g="195" b="196"/>
+				<Slot index="43" media_name="Peacock Blue" r="81" g="178" b="183"/>
+				<Slot index="44" media_name="Lagoon Blue" r="49" g="137" b="158"/>
+				<Slot index="45" media_name="Medium Blue Green" r="42" g="144" b="146"/>
+				<Slot index="46" media_name="Dark Yellow Green" r="33" g="135" b="27"/>
+				<Slot index="47" media_name="Primary Green" r="33" g="139" b="15"/>
+				<Slot index="48" media_name="Fern Green" r="108" g="207" b="74"/>
+				<Slot index="49" media_name="Moss Green" r="87" g="182" b="61"/>
+				<Slot index="50" media_name="Dark Green" r="57" g="174" b="62"/>
+				<Slot index="51" media_name="Lime Green" r="155" g="232" b="56"/>
+				<Slot index="52" media_name="Pale Green" r="184" g="236" b="129"/>
+				<Slot index="53" media_name="Q CT Blue" r="211" g="227" b="234"/>
+				<Slot index="54" media_name="H CT BLue" r="176" g="204" b="218"/>
+				<Slot index="55" media_name="F CT BLue" r="129" g="169" b="194"/>
+				<Slot index="56" media_name="D CT Blue" r="64" g="111" b="155"/>
+				<Slot index="57" media_name=" Q CT Orange" r="242" g="245" b="196"/>
+				<Slot index="58" media_name="H CT Orange" r="238" g="240" b="154"/>
+				<Slot index="59" media_name="F CT Orange" r="231" g="227" b="98"/>
+				<Slot index="60" media_name="F Red" g="0" b="0"/>
+				<Slot index="61" media_name="F Green" r="0" b="0"/>
+				<Slot index="62" media_name="F Blue" r="0" g="0"/>
+				<Slot index="63" media_name="F White"/>
+			</Wheel>
+		</Wheels>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5">
+			<FixtureMacro index="0">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET"/>
+					<PhysicalFeature subattribute="FIXTUREWAKEUP"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="8" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+				<FixtureMacroStep index="2" duration="20" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+			</FixtureMacro>
+			<FixtureMacro index="1">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTURESHUTDOWN"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="23" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+			</FixtureMacro>
+			<FixtureMacro index="2">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREDISPLAY" from_value="1" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="28" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+			</FixtureMacro>
+			<FixtureMacro index="3">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREDISPLAY" from_value="0" to_value="0"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="33" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+			</FixtureMacro>
+			<FixtureMacro index="4">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="DIMMERCURVE" from_value="1" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="38" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+			</FixtureMacro>
+			<FixtureMacro index="5">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="DIMMERCURVE" from_value="2" to_value="2"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="43" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+			</FixtureMacro>
+			<FixtureMacro index="6">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="DIMMERCURVE" from_value="0" to_value="0"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="48" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+			</FixtureMacro>
+			<FixtureMacro index="7">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="INTENSITYMODE" from_value="1" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="63" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+			</FixtureMacro>
+			<FixtureMacro index="8">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="INTENSITYMODE" from_value="0" to_value="0"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="68" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+			</FixtureMacro>
+			<FixtureMacro index="9">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="SETCALIBRATION" from_value="1" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="73" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+			</FixtureMacro>
+			<FixtureMacro index="10">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="SETCALIBRATION" from_value="0" to_value="0"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="78" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+			</FixtureMacro>
+			<FixtureMacro index="11">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MODE" from_value="0" to_value="0"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="83" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+			</FixtureMacro>
+			<FixtureMacro index="12">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MODE" from_value="1" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="88" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+			</FixtureMacro>
+			<FixtureMacro index="13">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MODE" from_value="2" to_value="2"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="95" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+			</FixtureMacro>
+			<FixtureMacro index="14">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FANSPEED" from_value="1" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="115" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+			</FixtureMacro>
+			<FixtureMacro index="15">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FANSAUTO"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="125" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+			</FixtureMacro>
+		</FixtureMacroCollect>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

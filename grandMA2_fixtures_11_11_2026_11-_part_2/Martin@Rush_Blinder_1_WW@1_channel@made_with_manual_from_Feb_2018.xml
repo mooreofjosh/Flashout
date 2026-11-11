@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2018-05-11T10:33:04" showfile="martin"/>
+	<FixtureType index="29" name="Rush Blinder 1 WW" mode="1 channel">
+		<InfoItems>
+			<Info date="2018-05-11T10:12:37">made with manual from Feb 2018</Info>
+		<Info type="Revision" date="2018-05-11T11:05:15">made with manual from Feb 2018, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>RB1WW1</short_name>
+		<manufacturer>Martin</manufacturer>
+		<short_manufacturer>Martin</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="Conventional" beamtype="Wash" beam_angle="70" beam_intensity="10000">
+				<Body>
+					<Size x="0.4" y="0.4" z="0.18"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" default="0.001" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2">
+			<Wheel index="0" subattribute="COLOR1" attribute="COLOR1" feature="COLOR1" preset="COLOR">
+				<Slot index="0" media_name="open"/>
+				<Slot index="1" media_name="LEE 26" r="161" g="98" b="86"/>
+				<Slot index="2" media_name="LEE 158" r="210" g="151" b="8"/>
+				<Slot index="3" media_name="LEE 105" r="220" g="177" b="8"/>
+				<Slot index="4" media_name="LEE 179" r="227" g="210" b="10"/>
+				<Slot index="5" media_name="LEE 15" r="236" g="230" b="31"/>
+				<Slot index="6" media_name="LEE 10" r="199" g="246" b="27"/>
+				<Slot index="7" media_name="LEE 101" r="208" g="241" b="18"/>
+				<Slot index="8" media_name="LEE 100" r="191" g="245" b="36"/>
+				<Slot index="9" media_name="LEE 88" r="155" g="232" b="56"/>
+				<Slot index="10" media_name="LEE 121" r="129" g="219" b="62"/>
+				<Slot index="11" media_name="LEE 738" r="106" g="210" b="36"/>
+				<Slot index="12" media_name="LEE 139" r="33" g="139" b="15"/>
+				<Slot index="13" media_name="LEE 124" r="57" g="174" b="62"/>
+				<Slot index="14" media_name="LEE 323" r="76" g="176" b="142"/>
+				<Slot index="15" media_name="LEE 115" r="81" g="178" b="183"/>
+				<Slot index="16" media_name="LEE 140" r="111" g="176" b="194"/>
+				<Slot index="17" media_name="LEE 144" r="86" g="158" b="182"/>
+				<Slot index="18" media_name="LEE 172" r="49" g="137" b="158"/>
+				<Slot index="19" media_name="LEE 183" r="45" g="124" b="155"/>
+				<Slot index="20" media_name="LEE 161" r="78" g="137" b="174"/>
+				<Slot index="21" media_name="LEE 165" r="59" g="123" b="163"/>
+				<Slot index="22" media_name="LEE 118" r="56" g="135" b="166"/>
+				<Slot index="23" media_name="LEE 68" r="33" g="92" b="139"/>
+				<Slot index="24" media_name="LEE 142" r="91" g="128" b="172"/>
+				<Slot index="25" media_name="LEE 194" r="122" g="140" b="176"/>
+				<Slot index="26" media_name="LEE 170" r="152" g="152" b="183"/>
+				<Slot index="27" media_name="LEE 2" r="202" g="135" b="187"/>
+				<Slot index="28" media_name="LEE 192" r="208" g="142" b="168"/>
+				<Slot index="29" media_name="LEE 111" r="206" g="140" b="170"/>
+				<Slot index="30" media_name="LEE 328" r="187" g="97" b="160"/>
+				<Slot index="31" media_name="LEE 128" r="174" g="71" b="134"/>
+				<Slot index="32" media_name="LEE 975" r="170" g="59" b="102"/>
+				<Slot index="33" media_name="LEE 793" r="170" g="57" b="118"/>
+				<Slot index="34" media_name="Lee 148" r="180" g="81" b="105"/>
+				<Slot index="35" media_name="Blackout" r="0" g="0" b="0"/>
+				<Slot index="36" media_name="LEE 130" r="248" g="249" b="245"/>
+			</Wheel>
+		</Wheels>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5">
+			<FixtureMacro index="0">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="12" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="-1"/>
+			</FixtureMacro>
+		</FixtureMacroCollect>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

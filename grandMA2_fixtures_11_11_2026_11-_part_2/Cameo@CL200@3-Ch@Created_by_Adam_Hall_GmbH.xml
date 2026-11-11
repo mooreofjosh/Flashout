@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.3.2/MA.xsd" major_vers="3" minor_vers="3" stream_vers="2">
+	<Info datetime="2017-09-13T14:12:48" showfile="hera cob"/>
+	<FixtureType index="3" name="CL200" mode="3-Ch">
+		<InfoItems>
+			<Info type="Revision" date="2016-02-10T00:00:00">Created by Adam Hall GmbH</Info>
+		<Info type="Revision" date="2017-09-21T12:09:15">Created by Adam Hall GmbH, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>CL200</short_name>
+		<manufacturer>Cameo</manufacturer>
+		<short_manufacturer>Cameo</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="Headmover" beamtype="Wash" beam_angle="50" beam_intensity="10000">
+				<Body>
+					<Size x="0.2" y="0.2" z="0.2"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="SHUTTER2" feature="SHUTTER" preset="BEAM" coarse="2" highlight_value="0" snap="true">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" physto="10" subattribute="STROBE2" subattribute_user_name="Strobe2" attribute="SHUTTER2" attribute_user_name="Shutter2" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Strobe Open" from_dmx="0" to_dmx="5" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="Strobe" from_dmx="6" to_dmx="255" slot_from="1" slot_to="10"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="CTC" feature="CTC" preset="COLOR" coarse="3" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="CTC" subattribute_user_name="CTC" attribute="CTC" attribute_user_name="CTC" feature="CTC" feature_user_name="CTC" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

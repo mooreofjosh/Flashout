@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+    <Info datetime="2018-02-20T12:02:03" showfile="robe"/>
+    <FixtureType index="29" name="UV Strobe" mode="Mode 2">
+        <InfoItems>
+            <Info>Set menu option DMX Presets to Mode 2 for this personality</Info>
+            <Info type="Revision" date="2017-11-13T00:00:00">Edited by Robe Lighting</Info>
+            <Info type="Revision" date="2017-11-14T09:11:04">Version 1.2</Info>
+            <Info type="Revision" date="2018-02-20T12:02:10">Edited by Robe Lighting, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>UVStrob2</short_name>
+        <manufacturer>Robe lighting</manufacturer>
+        <short_manufacturer>Robe</short_manufacturer>
+        <Modules index="0">
+            <Module index="0" name="Main Module" class="Conventional" beamtype="Wash" beam_angle="25" beam_intensity="10000">
+                <Body>
+                    <Size x="0.45" y="0.2" z="0.315"/>
+                </Body>
+                <ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" fine="2" highlight_value="100">
+                    <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+                        <ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet index="1" name="open" from_dmx="65535" to_dmx="65535"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType index="1" attribute="STROBEDURATION" feature="SHUTTER" preset="BEAM" coarse="3">
+                    <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0.01" physto="1" subattribute="STROBEDURATION" subattribute_user_name="Duration" attribute="STROBEDURATION" attribute_user_name="StrobeDuration" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="min Duration" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet index="1" name="max Duration" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType index="2" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="4" highlight_value="0">
+                    <ChannelFunction index="0" from="0" to="2.344" min_dmx_24="0" max_dmx_24="393215" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="open" from_dmx="0" to_dmx="5"/>
+                    </ChannelFunction>
+                    <ChannelFunction index="1" name="Strobe 1..100%" from="2.344" to="100" min_dmx_24="393216" max_dmx_24="16777215" physfrom="0.1" physto="10" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="min Strobe" from_dmx="6" to_dmx="6"/>
+                        <ChannelSet index="1" name="max Strobe" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType index="3" attribute="STROBEMODE" feature="SHUTTER" preset="BEAM" coarse="5">
+                    <ChannelFunction index="0" from="0" to="0.392" min_dmx_24="0" max_dmx_24="131071" subattribute="STROBEMODENONE" subattribute_user_name="None" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="None" from_dmx="0" to_dmx="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction index="1" from="0.784" to="1.961" min_dmx_24="131072" max_dmx_24="393215" subattribute="STROBEMODELIGHTNING" subattribute_user_name="Lightning" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="Lightning" from_dmx="2" to_dmx="5"/>
+                    </ChannelFunction>
+                    <ChannelFunction index="2" from="2.344" to="16.797" min_dmx_24="393216" max_dmx_24="2818047" subattribute="STROBEMODEPULSEOPEN" subattribute_user_name="Pulse Open" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="Pulse Open" from_dmx="6" to_dmx="42"/>
+                    </ChannelFunction>
+                    <ChannelFunction index="3" from="16.797" to="33.594" min_dmx_24="2818048" max_dmx_24="5636095" subattribute="STROBEMODEPULSECLOSE" subattribute_user_name="Pulse Close" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="Pulse Close" from_dmx="43" to_dmx="85"/>
+                    </ChannelFunction>
+                    <ChannelFunction index="4" from="33.594" to="50.391" min_dmx_24="5636096" max_dmx_24="8454143" subattribute="STROBEMODEPULSE" subattribute_user_name="Pulse" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="Pulse" from_dmx="86" to_dmx="128"/>
+                    </ChannelFunction>
+                    <ChannelFunction index="5" from="50.391" to="67.188" min_dmx_24="8454144" max_dmx_24="11272191" subattribute="STROBEMODERANDOM" subattribute_user_name="Rnd" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="Rnd" from_dmx="129" to_dmx="171"/>
+                    </ChannelFunction>
+                    <ChannelFunction index="6" from="67.188" to="83.984" min_dmx_24="11272192" max_dmx_24="14090239" subattribute="STROBEMODELIGHTNING" subattribute_user_name="Lightning" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="Lightning (2)" from_dmx="172" to_dmx="214" auto_create="false"/>
+                    </ChannelFunction>
+                    <ChannelFunction index="7" from="83.984" to="100" min_dmx_24="14090240" max_dmx_24="16777215" subattribute="STROBEMODESPIKES" subattribute_user_name="Spikes" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="Spikes" from_dmx="215" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType index="4" attribute="DIMMERCURVE" feature="DIMMER" preset="DIMMER" coarse="6">
+                    <ChannelFunction index="0" from="0" to="7.812" min_dmx_24="0" max_dmx_24="1310719" subattribute="RESERVED" subattribute_user_name="Reserved" attribute="DUMMY" attribute_user_name="Dummy" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control"/>
+                    <ChannelFunction index="1" from="7.812" to="11.719" min_dmx_24="1310720" max_dmx_24="1966079" subattribute="FIXTUREDISPLAY" subattribute_user_name="Display" attribute="FIXTUREDISPLAY" attribute_user_name="FixtureDisplay" feature="FIXTURE" feature_user_name="Fixture" preset="CONTROL" preset_user_name="Control">
+                        <ChannelSet index="0" name="Display 100%" from_dmx="20" to_dmx="24" slot_from="1" slot_to="1"/>
+                        <ChannelSet index="1" name="Display 0%" from_dmx="25" to_dmx="29" slot_from="0" slot_to="0"/>
+                    </ChannelFunction>
+                    <ChannelFunction index="2" from="11.719" to="23.137" min_dmx_24="1966080" max_dmx_24="3932159" subattribute="RESERVED" subattribute_user_name="Reserved" attribute="DUMMY" attribute_user_name="Dummy" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control"/>
+                    <ChannelFunction index="3" from="23.137" to="25.098" min_dmx_24="3932160" max_dmx_24="4259839" subattribute="FANSAUTO" subattribute_user_name="Auto" attribute="FANS" attribute_user_name="Fans" feature="FIXTURE" feature_user_name="Fixture" preset="CONTROL" preset_user_name="Control">
+                        <ChannelSet index="0" name="Fans mode: auto" from_dmx="60" to_dmx="64"/>
+                    </ChannelFunction>
+                    <ChannelFunction index="4" from="25.098" to="27.344" min_dmx_24="4259840" max_dmx_24="4587519" physfrom="1" physto="1" subattribute="FANSPEED" subattribute_user_name="Speed" attribute="FANS" attribute_user_name="Fans" feature="FIXTURE" feature_user_name="Fixture" preset="CONTROL" preset_user_name="Control">
+                        <ChannelSet index="0" name="Fans mode: high" from_dmx="65" to_dmx="69"/>
+                    </ChannelFunction>
+                    <ChannelFunction index="5" from="27.344" to="35.156" min_dmx_24="4587520" max_dmx_24="5898239" subattribute="MODE" subattribute_user_name="Normal" attribute="MODE" attribute_user_name="Mode" feature="FIXTURE" feature_user_name="Fixture" preset="CONTROL" preset_user_name="Control">
+                        <ChannelSet index="0" name="Douse on" from_dmx="70" to_dmx="79" slot_from="1" slot_to="1"/>
+                        <ChannelSet index="1" name="Douse off" from_dmx="80" to_dmx="89" slot_from="2" slot_to="2"/>
+                    </ChannelFunction>
+                    <ChannelFunction index="6" from="35.156" to="42.969" min_dmx_24="5898240" max_dmx_24="7208959" subattribute="DIMMERCURVE" subattribute_user_name="Curve" attribute="DIMMERCURVE" attribute_user_name="Curve" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+                        <ChannelSet index="0" name="Dimmer curve linear" from_dmx="90" to_dmx="99" slot_from="0" slot_to="0"/>
+                        <ChannelSet index="1" name="Dimmer curve square law" from_dmx="100" to_dmx="109" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction index="7" from="42.969" to="100" min_dmx_24="7208960" max_dmx_24="16777215" subattribute="RESERVED" subattribute_user_name="Reserved" attribute="DUMMY" attribute_user_name="Dummy" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control"/>
+                </ChannelType>
+                <ChannelType index="5" attribute="EFFECTMACROS" feature="EFFECTMACROS" preset="BEAM" coarse="7">
+                    <ChannelFunction index="0" name="Zone Effects" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="EFFECTMACROSELECT" subattribute_user_name="Select" attribute="EFFECTMACROS" attribute_user_name="EffectMacros" feature="EFFECTMACROS" feature_user_name="Macros" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="No function" from_dmx="0" to_dmx="2" slot_from="0" slot_to="0"/>
+                        <ChannelSet index="1" name="Effect 1" from_dmx="3" to_dmx="4" slot_from="1" slot_to="1"/>
+                        <ChannelSet index="2" name="Effect 2" from_dmx="5" to_dmx="6" slot_from="2" slot_to="2"/>
+                        <ChannelSet index="3" name="Effect 3" from_dmx="7" to_dmx="8" slot_from="3" slot_to="3"/>
+                        <ChannelSet index="4" name="Effect 4" from_dmx="9" to_dmx="10" slot_from="4" slot_to="4"/>
+                        <ChannelSet index="5" name="Effect 5" from_dmx="11" to_dmx="12" slot_from="5" slot_to="5"/>
+                        <ChannelSet index="6" name="Effect 6" from_dmx="13" to_dmx="14" slot_from="6" slot_to="6"/>
+                        <ChannelSet index="7" name="Effect 7" from_dmx="15" to_dmx="16" slot_from="7" slot_to="7"/>
+                        <ChannelSet index="8" name="Effect 8" from_dmx="17" to_dmx="18" slot_from="8" slot_to="8"/>
+                        <ChannelSet index="9" name="Effect 9" from_dmx="19" to_dmx="20" slot_from="9" slot_to="9"/>
+                        <ChannelSet index="10" name="Effect 10" from_dmx="21" to_dmx="22" slot_from="10" slot_to="10"/>
+                        <ChannelSet index="11" name="Effect 11" from_dmx="23" to_dmx="24" slot_from="11" slot_to="11"/>
+                        <ChannelSet index="12" name="Effect 12" from_dmx="25" to_dmx="26" slot_from="12" slot_to="12"/>
+                        <ChannelSet index="13" name="Effect 13" from_dmx="27" to_dmx="28" slot_from="13" slot_to="13"/>
+                        <ChannelSet index="14" name="Effect 14" from_dmx="29" to_dmx="30" slot_from="14" slot_to="14"/>
+                        <ChannelSet index="15" name="Effect 15" from_dmx="31" to_dmx="32" slot_from="15" slot_to="15"/>
+                        <ChannelSet index="16" name="Effect 16" from_dmx="33" to_dmx="34" slot_from="16" slot_to="16"/>
+                        <ChannelSet index="17" name="Effect 17" from_dmx="35" to_dmx="36" slot_from="17" slot_to="17"/>
+                        <ChannelSet index="18" name="Effect 18" from_dmx="37" to_dmx="38" slot_from="18" slot_to="18"/>
+                        <ChannelSet index="19" name="Effect 19" from_dmx="39" to_dmx="40" slot_from="19" slot_to="19"/>
+                        <ChannelSet index="20" name="Effect 20" from_dmx="41" to_dmx="42" slot_from="20" slot_to="20"/>
+                        <ChannelSet index="21" name="Effect 21" from_dmx="43" to_dmx="44" slot_from="21" slot_to="21"/>
+                        <ChannelSet index="22" name="Effect 22" from_dmx="45" to_dmx="46" slot_from="22" slot_to="22"/>
+                        <ChannelSet index="23" name="Effect 23" from_dmx="47" to_dmx="48" slot_from="23" slot_to="23"/>
+                        <ChannelSet index="24" name="Effect 24" from_dmx="49" to_dmx="50" slot_from="24" slot_to="24"/>
+                        <ChannelSet index="25" name="Effect 25" from_dmx="51" to_dmx="52" slot_from="25" slot_to="25"/>
+                        <ChannelSet index="26" name="Reserved" from_dmx="53" to_dmx="255" slot_from="0" slot_to="0" auto_create="false"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType index="6" attribute="EFFECTMACRORATE" feature="EFFECTMACROS" preset="BEAM" coarse="8">
+                    <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="EFFECTMACRORATE" subattribute_user_name="Rate" attribute="EFFECTMACRORATE" attribute_user_name="Rate" feature="EFFECTMACROS" feature_user_name="Macros" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="min Rate" from_dmx="0" to_dmx="0" slot_from="0.1" slot_to="0.1"/>
+                        <ChannelSet index="1" name="Rate 1..100%" from_dmx="1" to_dmx="62" slot_from="0.255" slot_to="9.691" auto_create="false"/>
+                        <ChannelSet index="2" name="max Rate" from_dmx="63" to_dmx="63" slot_from="9.845" slot_to="9.845"/>
+                        <ChannelSet index="3" name="max Rate (2)" from_dmx="64" to_dmx="64" slot_from="10" slot_to="10" auto_create="false"/>
+                        <ChannelSet index="4" name="Rate 100..1%" from_dmx="65" to_dmx="126" slot_from="9.845" slot_to="0.409" auto_create="false"/>
+                        <ChannelSet index="5" name="min Rate (2)" from_dmx="127" to_dmx="127" slot_from="0.255" slot_to="0.255" auto_create="false"/>
+                        <ChannelSet index="6" name="min Rate (3)" from_dmx="128" to_dmx="128" slot_from="0.1" slot_to="0.1" auto_create="false"/>
+                        <ChannelSet index="7" name="Rate 1..100% (2)" from_dmx="129" to_dmx="190" slot_from="0.255" slot_to="9.691" auto_create="false"/>
+                        <ChannelSet index="8" name="max Rate (3)" from_dmx="191" to_dmx="191" slot_from="9.845" slot_to="9.845" auto_create="false"/>
+                        <ChannelSet index="9" name="max Rate (4)" from_dmx="192" to_dmx="192" slot_from="10" slot_to="10" auto_create="false"/>
+                        <ChannelSet index="10" name="Rate 100..1% (2)" from_dmx="193" to_dmx="254" slot_from="9.845" slot_to="0.409" auto_create="false"/>
+                        <ChannelSet index="11" name="min Rate (4)" from_dmx="255" to_dmx="255" slot_from="0.255" slot_to="0.255" auto_create="false"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module index="1" name="Intensity" class="Conventional" beamtype="Wash" beam_angle="25" beam_intensity="10000">
+                <Body>
+                    <Size x="0.112" y="0.067" z="0.315"/>
+                </Body>
+                <ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="100">
+                    <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+                        <ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances index="1">
+            <Instance index="0" module_index="0"/>
+            <Instance index="1" module_index="1" patch="9" X="-0.169" Y="0.067" Z="0.158"/>
+            <Instance index="2" module_index="1" patch="10" X="-0.056" Y="0.067" Z="0.158"/>
+            <Instance index="3" module_index="1" patch="11" X="0.056" Y="0.067" Z="0.158"/>
+            <Instance index="4" module_index="1" patch="12" X="0.169" Y="0.067" Z="0.158"/>
+            <Instance index="5" module_index="1" patch="13" X="-0.169" Z="0.158"/>
+            <Instance index="6" module_index="1" patch="14" X="-0.056" Z="0.158"/>
+            <Instance index="7" module_index="1" patch="15" X="0.056" Z="0.158"/>
+            <Instance index="8" module_index="1" patch="16" X="0.169" Z="0.158"/>
+            <Instance index="9" module_index="1" patch="17" X="-0.169" Y="-0.067"/>
+            <Instance index="10" module_index="1" patch="18" X="-0.056" Y="-0.067"/>
+            <Instance index="11" module_index="1" patch="19" X="0.056" Y="-0.067"/>
+            <Instance index="12" module_index="1" patch="20" X="0.169" Y="-0.067"/>
+        </Instances>
+        <Wheels index="2"/>
+        <VirtualFunctionBlocks index="3"/>
+        <FixtureMacroCollect index="5">
+            <FixtureMacro index="0" name="Fixture Display">
+                <PhysicalFeatures>
+                    <PhysicalFeature subattribute="FIXTUREDISPLAY" from_value="1" to_value="1"/>
+                </PhysicalFeatures>
+                <FixtureMacroStep index="0" duration="3" dmx_value="22" attribute="DIMMERCURVE" instance_index="0"/>
+                <FixtureMacroStep index="1" duration="1" dmx_value="22" attribute="DIMMERCURVE" instance_index="0"/>
+            </FixtureMacro>
+            <FixtureMacro index="1" name="Fixture Display">
+                <PhysicalFeatures>
+                    <PhysicalFeature subattribute="FIXTUREDISPLAY" from_value="0" to_value="0"/>
+                </PhysicalFeatures>
+                <FixtureMacroStep index="0" duration="3" dmx_value="27" attribute="DIMMERCURVE" instance_index="0"/>
+                <FixtureMacroStep index="1" duration="1" dmx_value="27" attribute="DIMMERCURVE" instance_index="0"/>
+            </FixtureMacro>
+            <FixtureMacro index="2" name="Fixture Normal">
+                <PhysicalFeatures>
+                    <PhysicalFeature subattribute="MODE" from_value="1" to_value="1"/>
+                </PhysicalFeatures>
+                <FixtureMacroStep index="0" duration="3" dmx_value="74" attribute="DIMMERCURVE" instance_index="0"/>
+                <FixtureMacroStep index="1" duration="1" dmx_value="74" attribute="DIMMERCURVE" instance_index="0"/>
+            </FixtureMacro>
+            <FixtureMacro index="3" name="Fixture Normal">
+                <PhysicalFeatures>
+                    <PhysicalFeature subattribute="MODE" from_value="2" to_value="2"/>
+                </PhysicalFeatures>
+                <FixtureMacroStep index="0" duration="3" dmx_value="84" attribute="DIMMERCURVE" instance_index="0"/>
+                <FixtureMacroStep index="1" duration="1" dmx_value="84" attribute="DIMMERCURVE" instance_index="0"/>
+            </FixtureMacro>
+            <FixtureMacro index="4" name="Dimmer Curve">
+                <PhysicalFeatures>
+                    <PhysicalFeature subattribute="DIMMERCURVE" from_value="0" to_value="0"/>
+                </PhysicalFeatures>
+                <FixtureMacroStep index="0" duration="3" dmx_value="94" attribute="DIMMERCURVE" instance_index="0"/>
+                <FixtureMacroStep index="1" duration="1" dmx_value="94" attribute="DIMMERCURVE" instance_index="0"/>
+            </FixtureMacro>
+            <FixtureMacro index="5" name="Dimmer Curve">
+                <PhysicalFeatures>
+                    <PhysicalFeature subattribute="DIMMERCURVE" from_value="1" to_value="1"/>
+                </PhysicalFeatures>
+                <FixtureMacroStep index="0" duration="3" dmx_value="104" attribute="DIMMERCURVE" instance_index="0"/>
+                <FixtureMacroStep index="1" duration="1" dmx_value="104" attribute="DIMMERCURVE" instance_index="0"/>
+            </FixtureMacro>
+        </FixtureMacroCollect>
+        <Body/>
+        <AutoPresets index="4"/>
+        <RdmNotifications index="6">
+            <RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+        </RdmNotifications>
+    </FixtureType>
+</MA>

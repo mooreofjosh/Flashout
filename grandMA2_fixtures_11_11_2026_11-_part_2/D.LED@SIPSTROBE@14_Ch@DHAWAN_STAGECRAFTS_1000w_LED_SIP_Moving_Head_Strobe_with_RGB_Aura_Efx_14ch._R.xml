@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.7.0/MA.xsd" major_vers="3" minor_vers="7" stream_vers="0">
+	<Info datetime="2019-12-30T19:43:53" showfile="allanwalker-delhi2019v3"/>
+	<FixtureType index="8" name="SIPSTROBE" mode="14 Ch">
+		<InfoItems>
+			<Info date="2019-12-30T18:55:07">Created by Sandeep Dhawan&#xA;Dhawan Stagecrafts Pvt. Ltd.</Info>
+			<Info type="Revision" date="2017-11-21T00:00:00">Automated import from MA Lighting (C-RevNum: 0; Date: 2017-07-19)</Info>
+			<Info type="Invisible" date="2017-11-21T00:00:00">generator_software_name="MA Importer",generator_software_version="833ad0e197f44d8efe58cd693a50399e01a89009"</Info>
+		<Info type="Revision" date="2020-02-04T15:29:12">1000w LED SIP Moving Head Strobe with RGB Aura Efx 14ch. R, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>SIP_STRB</short_name>
+		<manufacturer>D.LED</manufacturer>
+		<short_manufacturer>D.LED</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="Headmover" beamtype="Wash" beam_angle="25" beam_intensity="10000">
+				<Body>
+					<Size x="0.5" y="0.42" z="0.66"/>
+				</Body>
+				<ChannelType index="0" attribute="TILT" feature="POSITION" preset="POSITION" coarse="1" fine="2" default="127.75">
+					<ChannelFunction index="0" name="TILT" from="0" to="100" min_dmx_24="0" max_dmx_24="65535" subattribute="TILT" subattribute_user_name="Tilt" attribute="TILT" attribute_user_name="Tilt" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="3">
+					<ChannelFunction index="0" name="Master Dimmer" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Master Dimmer" attribute="DIM" attribute_user_name="MasterDimmer" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+				<ChannelType index="2" attribute="STROBEINTENSITY2" feature="DIMMER2" preset="DIMMER" coarse="4" default="254.999" highlight_value="50">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="STROBEINTENSITY2" subattribute_user_name="Strobe Dimmer" attribute="STROBEINTENSITY2" attribute_user_name="Strobe Dimmer" feature="DIMMER2" feature_user_name="Dimmer2" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="STROBEMODE" feature="SHUTTER" preset="BEAM" coarse="5">
+					<ChannelFunction index="0" name="Strobe Mode" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="0.65" subattribute="STROBEMODE" subattribute_user_name="Normal" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="No Strobe" from_dmx="0" to_dmx="5"/>
+						<ChannelSet index="1" name="Strobe Mode-1" from_dmx="6" to_dmx="42"/>
+						<ChannelSet index="2" name="Strobe Mode-2" from_dmx="43" to_dmx="85"/>
+						<ChannelSet index="3" name="Strobe Mode-3" from_dmx="86" to_dmx="128"/>
+						<ChannelSet index="4" name="Strobe Mode-4" from_dmx="129" to_dmx="171"/>
+						<ChannelSet index="5" name="Strobe Mode-5" from_dmx="172" to_dmx="214"/>
+						<ChannelSet index="6" name="Strobe Mode-6" from_dmx="215" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="STROBEEFFECTRATE" feature="SHUTTER" preset="BEAM" coarse="6">
+					<ChannelFunction index="0" name="Strobe Time" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" physto="1" subattribute="STROBEEFFECTRATE" subattribute_user_name="Strobe Time" attribute="STROBEEFFECTRATE" attribute_user_name="Strobe Time" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Strobe Flash Time" from_dmx="0" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="FXSHUTTER" feature="SHUTTER" preset="BEAM" coarse="7">
+					<ChannelFunction index="0" name="Strobe Macros" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="FXSHUTTER" subattribute_user_name="FX Shutter" attribute="FXSHUTTER" attribute_user_name="Beam FX Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Tube Macro Off" from_dmx="0" to_dmx="15"/>
+						<ChannelSet index="1" name="Tube Macro-1" from_dmx="16" to_dmx="57"/>
+						<ChannelSet index="2" name="Tube Macro-2" from_dmx="58" to_dmx="99"/>
+						<ChannelSet index="3" name="Tube Macro-3" from_dmx="100" to_dmx="141"/>
+						<ChannelSet index="4" name="Tube Macro-4" from_dmx="142" to_dmx="183"/>
+						<ChannelSet index="5" name="Tube Macro-5" from_dmx="184" to_dmx="225"/>
+						<ChannelSet index="6" name="Tube Macro-6" from_dmx="226" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="6" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="8" color="ff0000">
+					<ChannelFunction index="0" name="ControlRange 0..100%" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" subattribute_user_name="R" attribute="COLORRGB1" attribute_user_name="R" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="Min ControlRange 0..100%" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="Max ControlRange 0..100%" from_dmx="255" to_dmx="255"/>
+						<ChannelSet index="2" name="Max ControlRange 0..100%1" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="7" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="9" color="00ff00">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" subattribute_user_name="G" attribute="COLORRGB2" attribute_user_name="G" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="Min G" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="Max G" from_dmx="255" to_dmx="255"/>
+						<ChannelSet index="2" name="Max G1" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="8" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="10" color="0000ff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="0.65" subattribute="COLORRGB3" subattribute_user_name="B" attribute="COLORRGB3" attribute_user_name="B" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="Min B" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="Max B" from_dmx="255" to_dmx="255"/>
+						<ChannelSet index="2" name="Max B1" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="9" attribute="SHUTTER1" feature="SHUTTER" preset="BEAM" coarse="11">
+					<ChannelFunction index="0" name="RGB Strobe" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" physto="10" subattribute="STROBE1" subattribute_user_name="Strobe" attribute="SHUTTER1" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="RGB Strobe OFF" from_dmx="0" to_dmx="9"/>
+						<ChannelSet index="1" name="RGB Strobe s-f" from_dmx="10" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="10" attribute="EFFECTMACROS" feature="EFFECTMACROS" preset="BEAM" coarse="12" default="0.001">
+					<ChannelFunction index="0" name="RGB Macro EFx" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="PLATEFXSHUTTER" subattribute_user_name="Plate FX Shutter" attribute="PLATEFXSHUTTER" attribute_user_name="Color FX Shutter" feature="BEAM2" feature_user_name="Color Strobe" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="RGB Macro OFF" from_dmx="0" to_dmx="4"/>
+						<ChannelSet index="1" name="RGB Macro-1" from_dmx="5" to_dmx="9"/>
+						<ChannelSet index="2" name="RGB Macro-2" from_dmx="10" to_dmx="14"/>
+						<ChannelSet index="3" name="RGB Macro-3" from_dmx="15" to_dmx="19"/>
+						<ChannelSet index="4" name="RGB Macro-4" from_dmx="20" to_dmx="24"/>
+						<ChannelSet index="5" name="RGB Macro-5" from_dmx="25" to_dmx="29"/>
+						<ChannelSet index="6" name="RGB Macro-6" from_dmx="30" to_dmx="34"/>
+						<ChannelSet index="7" name="RGB Macro-7" from_dmx="35" to_dmx="39"/>
+						<ChannelSet index="8" name="RGB Macro-8" from_dmx="40" to_dmx="44"/>
+						<ChannelSet index="9" name="RGB Macro-9" from_dmx="45" to_dmx="49"/>
+						<ChannelSet index="10" name="RGB Macro-10" from_dmx="50" to_dmx="54"/>
+						<ChannelSet index="11" name="RGB Macro-11" from_dmx="55" to_dmx="59"/>
+						<ChannelSet index="12" name="RGB Macro-12" from_dmx="60" to_dmx="64"/>
+						<ChannelSet index="13" name="RGB Macro-13" from_dmx="65" to_dmx="69"/>
+						<ChannelSet index="14" name="RGB Macro-14" from_dmx="70" to_dmx="74"/>
+						<ChannelSet index="15" name="RGB Macro-15" from_dmx="75" to_dmx="79"/>
+						<ChannelSet index="16" name="RGB Macro-16" from_dmx="80" to_dmx="84"/>
+						<ChannelSet index="17" name="RGB Macro-17" from_dmx="85" to_dmx="89"/>
+						<ChannelSet index="18" name="RGB Macro-18" from_dmx="90" to_dmx="94"/>
+						<ChannelSet index="19" name="RGB Macro-19" from_dmx="95" to_dmx="99"/>
+						<ChannelSet index="20" name="RGB Macro-20" from_dmx="100" to_dmx="104"/>
+						<ChannelSet index="21" name="RGB Macro-21" from_dmx="105" to_dmx="109"/>
+						<ChannelSet index="22" name="RGB Macro-22" from_dmx="110" to_dmx="114"/>
+						<ChannelSet index="23" name="RGB Macro-23" from_dmx="115" to_dmx="119"/>
+						<ChannelSet index="24" name="RGB Macro-24" from_dmx="120" to_dmx="124"/>
+						<ChannelSet index="25" name="RGB Macro-25" from_dmx="125" to_dmx="129"/>
+						<ChannelSet index="26" name="RGB Macro-26" from_dmx="130" to_dmx="134"/>
+						<ChannelSet index="27" name="RGB Macro-27" from_dmx="135" to_dmx="139"/>
+						<ChannelSet index="28" name="RGB Macro-28" from_dmx="140" to_dmx="144"/>
+						<ChannelSet index="29" name="RGB Macro-29" from_dmx="145" to_dmx="149"/>
+						<ChannelSet index="30" name="RGB Macro-30" from_dmx="150" to_dmx="154"/>
+						<ChannelSet index="31" name="RGB Macro-31" from_dmx="155" to_dmx="159"/>
+						<ChannelSet index="32" name="RGB Macro-32" from_dmx="160" to_dmx="164"/>
+						<ChannelSet index="33" name="RGB Macro-33" from_dmx="165" to_dmx="169"/>
+						<ChannelSet index="34" name="RGB Macro-34" from_dmx="170" to_dmx="174"/>
+						<ChannelSet index="35" name="RGB Macro-35" from_dmx="175" to_dmx="179"/>
+						<ChannelSet index="36" name="RGB Macro-36" from_dmx="180" to_dmx="184"/>
+						<ChannelSet index="37" name="RGB Macro-37" from_dmx="185" to_dmx="189"/>
+						<ChannelSet index="38" name="RGB Macro-38" from_dmx="190" to_dmx="194"/>
+						<ChannelSet index="39" name="RGB Macro-39" from_dmx="195" to_dmx="199"/>
+						<ChannelSet index="40" name="RGB Macro-40" from_dmx="200" to_dmx="204"/>
+						<ChannelSet index="41" name="RGB Macro-41" from_dmx="205" to_dmx="209"/>
+						<ChannelSet index="42" name="RGB Macro-42" from_dmx="210" to_dmx="214"/>
+						<ChannelSet index="43" name="RGB Macro-43" from_dmx="215" to_dmx="219"/>
+						<ChannelSet index="44" name="RGB Macro-44" from_dmx="220" to_dmx="224"/>
+						<ChannelSet index="45" name="Plate Macro-45" from_dmx="225" to_dmx="229"/>
+						<ChannelSet index="46" name="Plate Macro-46" from_dmx="230" to_dmx="234"/>
+						<ChannelSet index="47" name="Plate Macro-47" from_dmx="235" to_dmx="239"/>
+						<ChannelSet index="48" name="Plate Macro-48" from_dmx="240" to_dmx="244"/>
+						<ChannelSet index="49" name="Plate Macro-49" from_dmx="245" to_dmx="249"/>
+						<ChannelSet index="50" name="Plate Macro-50" from_dmx="250" to_dmx="254"/>
+						<ChannelSet index="51" name="Plate Macro-51" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="11" attribute="SCROLLER" feature="COLORALL" preset="COLOR" coarse="13">
+					<ChannelFunction index="0" name="RGB Col Scroll" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="SCROLLERSELECT" subattribute_user_name="Scroller" attribute="SCROLLER" attribute_user_name="Scroller" feature="COLORALL" feature_user_name="Color" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="12" attribute="EFFECTMACRORATE" feature="EFFECTMACROS" preset="BEAM" coarse="14" default="0.001">
+					<ChannelFunction index="0" name="RGB Strobe SPD" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="EFFECTMACRORATE" subattribute_user_name="Rate" attribute="EFFECTMACRORATE" attribute_user_name="Rate" feature="EFFECTMACROS" feature_user_name="Macros" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Min RGB Strobe SPD" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="Max RGB Strobe SPD" from_dmx="255" to_dmx="255"/>
+						<ChannelSet index="2" name="Max RGB Strobe SPD1" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5">
+			<FixtureMacro index="0">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MODE" from_value="1" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="52" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" dmx_value="52" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="1">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MODE" from_value="2" to_value="2"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="57" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" dmx_value="57" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="2">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="1" dmx_value="251" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" dmx_value="251" instance_index="0"/>
+				<FixtureMacroStep index="2" duration="10" dmx_value="251" instance_index="0"/>
+			</FixtureMacro>
+		</FixtureMacroCollect>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

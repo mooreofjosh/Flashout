@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.1.2/MA.xsd" major_vers="3" minor_vers="1" stream_vers="2">
+	<Info datetime="2016-09-20T15:08:40" showfile="new"/>
+	<FixtureType index="11" name="Big dipper ls90" mode="16 ch"><InfoItems><Info type="Revision" date="2017-06-28T05:06:35">spot LS90 bis dipper, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>Big dipper ls90</short_name>
+		<manufacturer>BIG DIPPER</manufacturer>
+		<short_manufacturer>Big</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="None" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<ChannelType index="0" attribute="PAN" feature="POSITION" preset="POSITION" coarse="1" fine="14">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-180" physto="180" subattribute="PAN" subattribute_user_name="Pan" attribute="PAN" attribute_user_name="Pan" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="TILT" feature="POSITION" preset="POSITION" coarse="2" fine="15">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-90" physto="90" subattribute="TILT" subattribute_user_name="Tilt" attribute="TILT" attribute_user_name="Tilt" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="2" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="3" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+				<ChannelType index="3" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="4" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam"/>
+				</ChannelType>
+				<ChannelType index="4" attribute="COLOR1" feature="COLOR1" preset="COLOR" coarse="5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="COLOR1" subattribute_user_name="Select" attribute="COLOR1" attribute_user_name="C1" feature="COLOR1" feature_user_name="Color1" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" from_dmx="0" to_dmx="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="GOBO1" feature="GOBO1" preset="GOBO" coarse="6">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="GOBO1" subattribute_user_name="Select" attribute="GOBO1" attribute_user_name="G1" feature="GOBO1" feature_user_name="Gobo1" preset="GOBO" preset_user_name="Gobo"/>
+				</ChannelType>
+				<ChannelType index="6" attribute="GOBO1_POS" feature="GOBO1" preset="GOBO" coarse="7">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="360" subattribute="GOBO1_POS" subattribute_user_name="Index" attribute="GOBO1_POS" attribute_user_name="G1&lt;&gt;" feature="GOBO1" feature_user_name="Gobo1" preset="GOBO" preset_user_name="Gobo"/>
+				</ChannelType>
+				<ChannelType index="7" attribute="DUMMY" feature="CONTROL" preset="CONTROL" coarse="8">
+					<ChannelFunction index="0" name="Gobo shake" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="RESERVED" subattribute_user_name="Reserved" attribute="DUMMY" attribute_user_name="Dummy" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control"/>
+				</ChannelType>
+				<ChannelType index="8" attribute="GOBO2" feature="GOBO2" preset="GOBO" coarse="9">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="GOBO2" subattribute_user_name="Select2" attribute="GOBO2" attribute_user_name="G2" feature="GOBO2" feature_user_name="Gobo2" preset="GOBO" preset_user_name="Gobo"/>
+				</ChannelType>
+				<ChannelType index="9" attribute="DUMMY" feature="CONTROL" preset="CONTROL" coarse="10">
+					<ChannelFunction index="0" name="Gobo skake2" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="RESERVED" subattribute_user_name="Reserved" attribute="DUMMY" attribute_user_name="Dummy" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control"/>
+				</ChannelType>
+				<ChannelType index="10" attribute="FOCUS" feature="FOCUS" preset="FOCUS" coarse="11">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="FOCUS" subattribute_user_name="Focus" attribute="FOCUS" attribute_user_name="Focus" feature="FOCUS" feature_user_name="Focus" preset="FOCUS" preset_user_name="Focus"/>
+				</ChannelType>
+				<ChannelType index="11" attribute="PRISMA1" feature="BEAM1" preset="BEAM" coarse="12">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="7" physadditional="3" subattribute="PRISMA1" subattribute_user_name="Prism1" attribute="PRISMA1" attribute_user_name="Prism1" feature="BEAM1" feature_user_name="Beam" preset="BEAM" preset_user_name="Beam"/>
+				</ChannelType>
+				<ChannelType index="12" attribute="VIRTUAL_POSITION_MODE" feature="POSITION" preset="POSITION" coarse="13">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-90" physto="90" subattribute="VIRTUAL_POSITION_MODE" subattribute_user_name="PosMode" attribute="VIRTUAL_POSITION_MODE" attribute_user_name="PosMode" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="13" attribute="CONTROL" feature="CONTROL" preset="CONTROL" coarse="16">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="CONTROL" subattribute_user_name="CONTROL" attribute="CONTROL" attribute_user_name="CONTROL" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="OPEN" from_dmx="0" to_dmx="150"/>
+						<ChannelSet index="1" name="RESET" from_dmx="151" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+	</FixtureType>
+</MA>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.60/MA.xsd" major_vers="3" minor_vers="9" stream_vers="60">
+	<Info datetime="2022-11-04T13:32:25" showfile="profile test"/>
+	<FixtureType index="16" name="BT-THEATRE400TW" mode="6Ch">
+		<InfoItems>
+			<Info>Created using MA FixtureBuilder version v1.9.0</Info>
+			<Info date="2022-11-04T13:32:20">Tested by BriteQ</Info>
+		<Info type="Revision" date="2022-11-04T13:32:46">Rev1, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>BT-THEAT</short_name>
+		<manufacturer>Briteq</manufacturer>
+		<short_manufacturer>BriteQ</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Body" class="Conventional" beamtype="Wash" beam_angle="1" beam_intensity="10000">
+				<Body>
+					<Size x="0.5" y="0.5" z="0.5"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" fine="2" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="65535" to_dmx="65535"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="CTC" feature="CTC" preset="COLOR" coarse="3" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="CTC" subattribute_user_name="CTC" attribute="CTC" attribute_user_name="CTC" feature="CTC" feature_user_name="CTC" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="ZOOM" feature="FOCUS" preset="FOCUS" coarse="5" default="128">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="11" physto="56" subattribute="ZOOM" subattribute_user_name="Zoom" attribute="ZOOM" attribute_user_name="Zoom" feature="FOCUS" feature_user_name="Focus" preset="FOCUS" preset_user_name="Focus">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="4" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="5" min_dmx_24="0" max_dmx_24="328965" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Open" from_dmx="0" to_dmx="5"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="6" to="50" min_dmx_24="394758" max_dmx_24="8224125" physfrom="0.5" physto="25" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Strobe Min" from_dmx="6" to_dmx="6"/>
+						<ChannelSet index="1" name="Strobe &lt;&gt;" from_dmx="7" to_dmx="124"/>
+						<ChannelSet index="2" name="Strobe Max" from_dmx="125" to_dmx="125"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" from="51" to="100" min_dmx_24="8947848" max_dmx_24="16777215" physfrom="0.5" physto="25" subattribute="STROBE_RANDOM" subattribute_user_name="Rnd" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Rnd Strobe Min" from_dmx="136" to_dmx="136"/>
+						<ChannelSet index="1" name="Rnd Strobe &lt;&gt;" from_dmx="137" to_dmx="254"/>
+						<ChannelSet index="2" name="Rnd Strobe Max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="FIXTUREGLOBALRESET" feature="RESET" preset="CONTROL" coarse="6" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="50" min_dmx_24="0" max_dmx_24="8224125" physfrom="0" physto="1" subattribute="FIXTUREGLOBALRESET" subattribute_user_name="Reset" attribute="FIXTUREGLOBALRESET" attribute_user_name="FixtureGlobal" feature="RESET" feature_user_name="Reset" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Safe" from_dmx="0" to_dmx="20"/>
+						<ChannelSet index="1" name="Dim curve Linear" from_dmx="21" to_dmx="25"/>
+						<ChannelSet index="2" name="Dim curve Square" from_dmx="26" to_dmx="30"/>
+						<ChannelSet index="3" name="Dim curve InvSquare" from_dmx="31" to_dmx="35"/>
+						<ChannelSet index="4" name="Dim curve S-Curve" from_dmx="36" to_dmx="40"/>
+						<ChannelSet index="5" name="Dim behavior LED" from_dmx="61" to_dmx="65"/>
+						<ChannelSet index="6" name="Dim behavior Dimmer speed" from_dmx="66" to_dmx="70"/>
+						<ChannelSet index="7" name="No DMX Freeze" from_dmx="91" to_dmx="95"/>
+						<ChannelSet index="8" name="No DMX Blackout" from_dmx="96" to_dmx="100"/>
+						<ChannelSet index="9" name="No DMX Manual" from_dmx="101" to_dmx="105"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="51" to="60" min_dmx_24="8289918" max_dmx_24="8882055" physfrom="0" physto="1" subattribute="DISPLAYONOFFTOGGLE" subattribute_user_name="On Off Toggle" attribute="FIXTUREGLOBALRESET" attribute_user_name="FixtureGlobal" feature="RESET" feature_user_name="Reset" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Display Blink On" from_dmx="126" to_dmx="130"/>
+						<ChannelSet index="1" name="Display Blink Off" from_dmx="131" to_dmx="135"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" from="61" to="70" min_dmx_24="10263708" max_dmx_24="11184810" physfrom="0" physto="1" subattribute="FANSMODESELECT" subattribute_user_name="FansModeSelect" attribute="FIXTUREGLOBALRESET" attribute_user_name="FixtureGlobal" feature="RESET" feature_user_name="Reset" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Silent mode" from_dmx="156" to_dmx="160"/>
+						<ChannelSet index="1" name="Auto mode" from_dmx="161" to_dmx="165"/>
+						<ChannelSet index="2" name="High Mode" from_dmx="166" to_dmx="170"/>
+					</ChannelFunction>
+					<ChannelFunction index="3" from="71" to="90" min_dmx_24="12566463" max_dmx_24="15132390" physfrom="0" physto="1" subattribute="PWMFREQUENCYSELECT" subattribute_user_name="PWMFrequencySelect" attribute="FIXTUREGLOBALRESET" attribute_user_name="FixtureGlobal" feature="RESET" feature_user_name="Reset" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="0.6kHz" from_dmx="191" to_dmx="195"/>
+						<ChannelSet index="1" name="1.2kHz" from_dmx="196" to_dmx="200"/>
+						<ChannelSet index="2" name="1.8kHz" from_dmx="201" to_dmx="205"/>
+						<ChannelSet index="3" name="2.4kHz" from_dmx="206" to_dmx="210"/>
+						<ChannelSet index="4" name="3.0kHz" from_dmx="211" to_dmx="215"/>
+						<ChannelSet index="5" name="3.6kHz" from_dmx="216" to_dmx="220"/>
+						<ChannelSet index="6" name="4.2kHz" from_dmx="221" to_dmx="225"/>
+						<ChannelSet index="7" name="4.8kHz" from_dmx="226" to_dmx="230"/>
+					</ChannelFunction>
+					<ChannelFunction index="4" from="91" to="100" min_dmx_24="15856113" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="RESET" subattribute_user_name="Reset" attribute="FIXTUREGLOBALRESET" attribute_user_name="FixtureGlobal" feature="RESET" feature_user_name="Reset" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Zoom reset" from_dmx="241" to_dmx="243"/>
+						<ChannelSet index="1" name="Safe" from_dmx="244" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5">
+			<FixtureMacro index="0" name="Safe">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET" from_value="0" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="1" name="Dim curve Linear">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET" from_value="0" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="23" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="2" name="Dim curve Square">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET" from_value="0" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="28" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="3" name="Dim curve InvSquare">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET" from_value="0" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="33" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="4" name="Dim curve S-Curve">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET" from_value="0" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="38" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="5" name="Dim behavior LED">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET" from_value="0" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="63" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="6" name="Dim behavior Dimmer speed">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET" from_value="0" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="68" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="7" name="No DMX Freeze">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET" from_value="0" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="93" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="8" name="No DMX Blackout">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET" from_value="0" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="98" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="9" name="No DMX Manual">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET" from_value="0" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="103" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="10" name="Zoom reset">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="RESET" from_value="0" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="11" name="Safe">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="RESET" from_value="0" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="135" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+			</FixtureMacro>
+		</FixtureMacroCollect>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

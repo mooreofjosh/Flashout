@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2017-08-24T09:00:15" showfile="xp show 2017-08-22"/>
+	<FixtureType index="59" name="MP-400Z" mode="9channel">
+		<InfoItems>
+			<Info>Set Menu option Chnd to 8Ch for this personality</Info>
+			<Info type="Revision" date="2015-12-07T00:00:00">Automated import from MA Lighting (C-RevNum: 0; Date: 2015-09-15)</Info>
+			<Info type="Invisible" date="2015-12-07T00:00:00">generator_software_name="MA Importer",generator_software_version="9f54f4b62519d7c623c7e8e9b20a0a67177041b6"</Info>
+		<Info type="Revision" date="2017-08-25T05:08:15">Initial, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>MP400Z</short_name>
+		<manufacturer>Acme</manufacturer>
+		<short_manufacturer>ACME</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="Conventional" beamtype="Wash" beam_angle="1" beam_intensity="10000">
+				<Body>
+					<Size x="0.197" y="0.197" z="0.316"/>
+				</Body>
+				<ChannelType index="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="1" default="255" color="ff0000">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" subattribute_user_name="R" attribute="COLORRGB1" attribute_user_name="R" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="2" default="255" color="00ff00">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" subattribute_user_name="G" attribute="COLORRGB2" attribute_user_name="G" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="2" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="3" default="255" color="0000ff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" subattribute_user_name="B" attribute="COLORRGB3" attribute_user_name="B" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="3" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" coarse="4" color="ffffff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB5" subattribute_user_name="White" attribute="COLORRGB5" attribute_user_name="White" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="4" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="5" fine="6" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+				<ChannelType index="5" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="7" default="9.915" highlight_value="4">
+					<ChannelFunction index="0" from="0" to="5.69" min_dmx_24="0" max_dmx_24="983039" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="14" slot_from="1" slot_to="1"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" name="Strobe 1..100%" from="5.69" to="16.67" min_dmx_24="983040" max_dmx_24="2818047" physfrom="20" physto="1" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="max Strobe" from_dmx="15" to_dmx="15"/>
+						<ChannelSet index="1" name="min Strobe" from_dmx="42" to_dmx="42"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" name="Pulse" from="16.67" to="27.65" min_dmx_24="2818048" max_dmx_24="4653055" physfrom="5" physto="0.001" subattribute="STROBE_PULSE" subattribute_user_name="Pulse" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="max Pulse" from_dmx="43" to_dmx="43"/>
+						<ChannelSet index="1" name="mim Pulse" from_dmx="70" to_dmx="70"/>
+					</ChannelFunction>
+					<ChannelFunction index="3" name="rnd Strobe" from="27.65" to="30.78" min_dmx_24="4653056" max_dmx_24="5177343" physfrom="12" physto="12" subattribute="STROBE_RANDOM" subattribute_user_name="Rnd" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="rnd Strobe" from_dmx="71" to_dmx="78"/>
+					</ChannelFunction>
+					<ChannelFunction index="4" name="Burst from" from="30.78" to="41.76" min_dmx_24="5177344" max_dmx_24="7012351" physfrom="5" physto="0.1" subattribute="STROBE_PULSE" subattribute_user_name="Pulse" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="max Burst from" from_dmx="79" to_dmx="79"/>
+						<ChannelSet index="1" name="min Burst from" from_dmx="106" to_dmx="106"/>
+					</ChannelFunction>
+					<ChannelFunction index="5" name="rnd Burst" from="41.76" to="44.9" min_dmx_24="7012352" max_dmx_24="7536639" physfrom="10" physto="10" subattribute="STROBE_RANDOM" subattribute_user_name="Rnd" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="rnd Burst" from_dmx="107" to_dmx="114"/>
+					</ChannelFunction>
+					<ChannelFunction index="6" name="Burst Pulse" from="44.9" to="55.88" min_dmx_24="7536640" max_dmx_24="9371647" physfrom="3" physto="1" subattribute="STROBE_RANDOM_PULSE" subattribute_user_name="Rnd Pulse" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="max Burst Pulse" from_dmx="115" to_dmx="115"/>
+						<ChannelSet index="1" name="min Burst Pulse" from_dmx="142" to_dmx="142"/>
+					</ChannelFunction>
+					<ChannelFunction index="7" name="rnd Burst Pu" from="55.88" to="59.02" min_dmx_24="9371648" max_dmx_24="9895935" physfrom="5" physto="5" subattribute="STROBE_RANDOM" subattribute_user_name="Rnd" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="max rnd Burst" from_dmx="143" to_dmx="143"/>
+						<ChannelSet index="1" name="min rnd Burst" from_dmx="150" to_dmx="150"/>
+					</ChannelFunction>
+					<ChannelFunction index="8" name="Pulse Close" from="59.02" to="70" min_dmx_24="9895936" max_dmx_24="11730943" physfrom="5" physto="1" subattribute="STROBE_PULSE_CLOSE" subattribute_user_name="Pulse Close" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="max Pulse Close" from_dmx="151" to_dmx="151"/>
+						<ChannelSet index="1" name="min Pulse Close" from_dmx="178" to_dmx="178"/>
+					</ChannelFunction>
+					<ChannelFunction index="9" name="Rnd Pulse Close" from="70" to="73.14" min_dmx_24="11730944" max_dmx_24="12255231" physfrom="1" physto="1" subattribute="STROBE_PULSE_CLOSE" subattribute_user_name="Pulse Close" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Rnd Pulse Close" from_dmx="179" to_dmx="186"/>
+					</ChannelFunction>
+					<ChannelFunction index="10" name="Pulse Open" from="73.14" to="84.12" min_dmx_24="12255232" max_dmx_24="14090239" physfrom="5" physto="1" subattribute="STROBE_PULSE_OPEN" subattribute_user_name="Pulse Open" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="max Pulse Open" from_dmx="187" to_dmx="187"/>
+						<ChannelSet index="1" name="min Pulse Open" from_dmx="214" to_dmx="214"/>
+					</ChannelFunction>
+					<ChannelFunction index="11" name="Rnd Pulse Open" from="84.12" to="86.86" min_dmx_24="14090240" max_dmx_24="14614527" physfrom="1" physto="1" subattribute="STROBE_PULSE_OPEN" subattribute_user_name="Pulse Open" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="rnd Pulse Open" from_dmx="215" to_dmx="222"/>
+					</ChannelFunction>
+					<ChannelFunction index="12" name="Burst" from="86.86" to="98.24" min_dmx_24="14614528" max_dmx_24="16515071" physfrom="2" physto="0.001" subattribute="STROBE_PULSE" subattribute_user_name="Pulse" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="max Burst" from_dmx="223" to_dmx="223"/>
+						<ChannelSet index="1" name="min Burst" from_dmx="251" to_dmx="251"/>
+					</ChannelFunction>
+					<ChannelFunction index="13" from="98.24" to="100" min_dmx_24="16515072" max_dmx_24="16777215" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open (2)" from_dmx="252" to_dmx="255" auto_create="false"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="6" attribute="ZOOM" feature="FOCUS" preset="FOCUS" coarse="8" default="127.5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="40" physto="6" subattribute="ZOOM" subattribute_user_name="Zoom" attribute="ZOOM" attribute_user_name="Zoom" feature="FOCUS" feature_user_name="Focus" preset="FOCUS" preset_user_name="Focus"/>
+				</ChannelType>
+				<ChannelType index="7" attribute="COLOR1" feature="COLOR1" preset="COLOR" coarse="9">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" wheel="1" subattribute="COLOR1" subattribute_user_name="Select" attribute="COLOR1" attribute_user_name="C1" feature="COLOR1" feature_user_name="Color1" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="Open" from_dmx="0" to_dmx="9" slot_index="0" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="LEE790" from_dmx="10" to_dmx="14" slot_index="1" slot_from="0" slot_to="0"/>
+						<ChannelSet index="2" name="LEE157" from_dmx="15" to_dmx="19" slot_index="2" slot_from="0" slot_to="0"/>
+						<ChannelSet index="3" name="LEE332" from_dmx="20" to_dmx="24" slot_index="3" slot_from="0" slot_to="0"/>
+						<ChannelSet index="4" name="LEE328" from_dmx="25" to_dmx="29" slot_index="4" slot_from="0" slot_to="0"/>
+						<ChannelSet index="5" name="LEE345" from_dmx="30" to_dmx="34" slot_index="5" slot_from="0" slot_to="0"/>
+						<ChannelSet index="6" name="LEE194" from_dmx="35" to_dmx="39" slot_index="6" slot_from="0" slot_to="0"/>
+						<ChannelSet index="7" name="LEE181" from_dmx="40" to_dmx="44" slot_index="7" slot_from="0" slot_to="0"/>
+						<ChannelSet index="8" name="LEE071" from_dmx="45" to_dmx="49" slot_index="8" slot_from="0" slot_to="0"/>
+						<ChannelSet index="9" name="LEE120" from_dmx="50" to_dmx="54" slot_index="9" slot_from="0" slot_to="0"/>
+						<ChannelSet index="10" name="LEE079" from_dmx="55" to_dmx="59" slot_index="10" slot_from="0" slot_to="0"/>
+						<ChannelSet index="11" name="LEE132" from_dmx="60" to_dmx="64" slot_index="11" slot_from="0" slot_to="0"/>
+						<ChannelSet index="12" name="LEE200" from_dmx="65" to_dmx="69" slot_index="12" slot_from="0" slot_to="0"/>
+						<ChannelSet index="13" name="LEE161" from_dmx="70" to_dmx="74" slot_index="13" slot_from="0" slot_to="0"/>
+						<ChannelSet index="14" name="LEE201" from_dmx="75" to_dmx="79" slot_index="14" slot_from="0" slot_to="0"/>
+						<ChannelSet index="15" name="LEE202" from_dmx="80" to_dmx="84" slot_index="15" slot_from="0" slot_to="0"/>
+						<ChannelSet index="16" name="LEE117" from_dmx="85" to_dmx="89" slot_index="16" slot_from="0" slot_to="0"/>
+						<ChannelSet index="17" name="LEE353" from_dmx="90" to_dmx="94" slot_index="17" slot_from="0" slot_to="0"/>
+						<ChannelSet index="18" name="LEE118" from_dmx="95" to_dmx="99" slot_index="18" slot_from="0" slot_to="0"/>
+						<ChannelSet index="19" name="LEE116" from_dmx="100" to_dmx="104" slot_index="19" slot_from="0" slot_to="0"/>
+						<ChannelSet index="20" name="LEE124" from_dmx="105" to_dmx="109" slot_index="20" slot_from="0" slot_to="0"/>
+						<ChannelSet index="21" name="LEE139" from_dmx="110" to_dmx="114" slot_index="21" slot_from="0" slot_to="0"/>
+						<ChannelSet index="22" name="LEE089" from_dmx="115" to_dmx="119" slot_index="22" slot_from="0" slot_to="0"/>
+						<ChannelSet index="23" name="LEE122" from_dmx="120" to_dmx="124" slot_index="23" slot_from="0" slot_to="0"/>
+						<ChannelSet index="24" name="LEE738" from_dmx="125" to_dmx="129" slot_index="24" slot_from="0" slot_to="0"/>
+						<ChannelSet index="25" name="LEE088" from_dmx="130" to_dmx="134" slot_index="25" slot_from="0" slot_to="0"/>
+						<ChannelSet index="26" name="LEE100" from_dmx="135" to_dmx="139" slot_index="26" slot_from="0" slot_to="0"/>
+						<ChannelSet index="27" name="LEE104" from_dmx="140" to_dmx="144" slot_index="27" slot_from="0" slot_to="0"/>
+						<ChannelSet index="28" name="LEE179" from_dmx="145" to_dmx="149" slot_index="28" slot_from="0" slot_to="0"/>
+						<ChannelSet index="29" name="LEE105" from_dmx="150" to_dmx="154" slot_index="29" slot_from="0" slot_to="0"/>
+						<ChannelSet index="30" name="LEE021" from_dmx="155" to_dmx="159" slot_index="30" slot_from="0" slot_to="0"/>
+						<ChannelSet index="31" name="LEE778" from_dmx="160" to_dmx="164" slot_index="31" slot_from="0" slot_to="0"/>
+						<ChannelSet index="32" name="LEE135" from_dmx="165" to_dmx="169" slot_index="32" slot_from="0" slot_to="0"/>
+						<ChannelSet index="33" name="LEE164" from_dmx="170" to_dmx="174" slot_index="33" slot_from="0" slot_to="0"/>
+						<ChannelSet index="34" name="3200K" from_dmx="175" to_dmx="179" slot_index="34" slot_from="0" slot_to="0"/>
+						<ChannelSet index="35" name="4000K" from_dmx="180" to_dmx="201" slot_index="35" slot_from="0" slot_to="0"/>
+						<ChannelSet index="36" name="6000K" from_dmx="202" to_dmx="207" slot_index="36" slot_from="0" slot_to="0"/>
+						<ChannelSet index="37" name="8000K" from_dmx="208" to_dmx="229" slot_index="37" slot_from="0" slot_to="0"/>
+						<ChannelSet index="38" name="10000K" from_dmx="230" to_dmx="234" slot_index="38" slot_from="0" slot_to="0"/>
+						<ChannelSet index="39" name="Fast" from_dmx="235" to_dmx="239" slot_from="0" slot_to="0"/>
+						<ChannelSet index="40" name="Medium" from_dmx="240" to_dmx="244" slot_from="0" slot_to="0"/>
+						<ChannelSet index="41" name="Slow" from_dmx="245" to_dmx="249" slot_from="0" slot_to="0"/>
+						<ChannelSet index="42" name="Open2" from_dmx="250" to_dmx="255" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2">
+			<Wheel index="0" subattribute="COLORMIXCOLOR" attribute="COLORMIXER" feature="COLORMIX" preset="COLOR">
+				<Slot index="0" media_name="Open"/>
+				<Slot index="1" media_name="c1" g="70" b="42"/>
+				<Slot index="2" media_name="c2" g="33" b="166"/>
+				<Slot index="3" media_name="c3" g="0" b="243"/>
+				<Slot index="4" media_name="c4" r="194" g="21"/>
+				<Slot index="5" media_name="C5" r="223" g="47"/>
+				<Slot index="6" media_name="C6" r="208" g="99"/>
+				<Slot index="7" media_name="C7" r="9" g="41"/>
+				<Slot index="8" media_name="C8" r="0" g="20"/>
+				<Slot index="9" media_name="C9" r="0" g="52"/>
+				<Slot index="10" media_name="C10" r="0" g="80"/>
+				<Slot index="11" media_name="C11" r="0" g="126"/>
+				<Slot index="12" media_name="C12" r="35" g="190"/>
+				<Slot index="13" media_name="C13" r="108" g="197"/>
+				<Slot index="14" media_name="C14" r="155" g="204"/>
+				<Slot index="15" media_name="C15" r="105" g="169"/>
+				<Slot index="16" media_name="C16" r="70" g="171"/>
+				<Slot index="17" media_name="C17" r="27" g="246"/>
+				<Slot index="18" media_name="C18" r="0" g="101"/>
+				<Slot index="19" media_name="C19" r="29" b="241"/>
+				<Slot index="20" media_name="C20" r="22" b="0"/>
+				<Slot index="21" media_name="C21" r="53" b="84"/>
+				<Slot index="22" media_name="C22" r="93" b="81"/>
+				<Slot index="23" media_name="C23" r="101" b="47"/>
+				<Slot index="24" media_name="C24" g="249" b="71"/>
+				<Slot index="25" media_name="C25" g="236" b="28"/>
+				<Slot index="26" media_name="C26" g="159" b="36"/>
+				<Slot index="27" media_name="C27" g="113" b="7"/>
+				<Slot index="28" media_name="C28" g="62" b="0"/>
+				<Slot index="29" media_name="C29" g="74" b="43"/>
+				<Slot index="30" media_name="C30" g="59" b="0"/>
+				<Slot index="31" media_name="C31" g="51" b="2"/>
+				<Slot index="32" media_name="C32" g="46" b="0"/>
+				<Slot index="33" media_name="C33" g="0" b="0"/>
+				<Slot index="34" media_name="C34" g="240" b="135"/>
+				<Slot index="35" media_name="C35" g="252" b="113"/>
+				<Slot index="36" media_name="C36" g="249" b="192"/>
+				<Slot index="37" media_name="C37" g="248" b="208"/>
+				<Slot index="38" media_name="C38" g="251" b="226"/>
+				<Slot index="39" media_name="C39" g="250" b="209"/>
+				<Slot index="40" media_name="C40"/>
+			</Wheel>
+		</Wheels>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

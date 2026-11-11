@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2018-03-21T10:10:43" showfile="look"/>
+	<FixtureType index="2" name="Viper nt" mode="00">
+		<InfoItems>
+			<Info date="2018-03-21T10:09:31">made without manual</Info>
+		<Info type="Revision" date="2018-03-21T11:03:08">made without manual, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>Vipernt</short_name>
+		<manufacturer>Look Solutions</manufacturer>
+		<short_manufacturer>Look Sol</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="None" beamtype="None" beam_angle="30" beam_intensity="10000">
+				<ChannelType index="0" attribute="FOG" feature="SPECIALFX" preset="CONTROL" coarse="1">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="FOG" subattribute_user_name="Fog" attribute="FOG" attribute_user_name="Fog" feature="SPECIALFX" feature_user_name="SpecialFX" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="min Fog" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max Fog" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

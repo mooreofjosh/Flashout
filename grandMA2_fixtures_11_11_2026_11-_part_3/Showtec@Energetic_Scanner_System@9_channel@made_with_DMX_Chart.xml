@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.0/MA.xsd" major_vers="3" minor_vers="9" stream_vers="0">
+	<Info datetime="2023-08-07T11:53:25" showfile="showtec"/>
+	<FixtureType index="66" name="Energetic Scanner System" mode="9 channel">
+		<InfoItems>
+			<Info date="2023-08-07T11:20:12">made with DMX Chart</Info>
+		<Info type="Revision" date="2023-08-07T11:55:31">made with DMX Chart, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>Energ</short_name>
+		<manufacturer>Showtec</manufacturer>
+		<short_manufacturer>Showtec</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="LED" beamtype="Wash" beam_angle="3" beam_intensity="10000">
+				<Body>
+					<Size x="0.1" y="0.1" z="0.1"/>
+				</Body>
+				<ChannelType index="0" attribute="MODE" feature="FIXTURE" preset="CONTROL" coarse="1">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="MODE" subattribute_user_name="Normal" attribute="MODE" attribute_user_name="Mode" feature="FIXTURE" feature_user_name="Fixture" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="no function" from_dmx="0" to_dmx="9"/>
+						<ChannelSet index="1" name="LED laser strobe" from_dmx="10" to_dmx="44"/>
+						<ChannelSet index="2" name="LED strobe" from_dmx="45" to_dmx="79"/>
+						<ChannelSet index="3" name="LED laser" from_dmx="80" to_dmx="114"/>
+						<ChannelSet index="4" name="Laser strobe" from_dmx="115" to_dmx="149"/>
+						<ChannelSet index="5" name="LEDs" from_dmx="150" to_dmx="184"/>
+						<ChannelSet index="6" name="Strobe" from_dmx="185" to_dmx="219"/>
+						<ChannelSet index="7" name="Laser" from_dmx="220" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="COLORMIXMACRORATE" feature="COLORMIX" preset="COLOR" coarse="2">
+					<ChannelFunction index="0" from="0" to="98.039" min_dmx_24="0" max_dmx_24="16449535" subattribute="COLORMIXMACRORATE" subattribute_user_name="Speed" attribute="COLORMIXMACRORATE" attribute_user_name="ColorMix Speed" feature="COLORMIX" feature_user_name="ColorMix" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min Speed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max Speed" from_dmx="250" to_dmx="250"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="98.431" to="100" min_dmx_24="16449536" max_dmx_24="16777215" subattribute="COLORMIXAUDIO" subattribute_user_name="Audio" attribute="COLORMIXER" attribute_user_name="ColorMix" feature="COLORMIX" feature_user_name="ColorMix" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="sound control" from_dmx="251" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="COLORMIXER" feature="COLORMIX" preset="COLOR" coarse="3">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="COLORMIXCOLOR" subattribute_user_name="Color" attribute="COLORMIXER" attribute_user_name="ColorMix" feature="COLORMIX" feature_user_name="ColorMix" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="no function" from_dmx="0" to_dmx="5"/>
+						<ChannelSet index="1" name="red" from_dmx="6" to_dmx="20"/>
+						<ChannelSet index="2" name="green" from_dmx="21" to_dmx="35"/>
+						<ChannelSet index="3" name="blue" from_dmx="36" to_dmx="50"/>
+						<ChannelSet index="4" name="white" from_dmx="51" to_dmx="65"/>
+						<ChannelSet index="5" name="RG" from_dmx="66" to_dmx="80"/>
+						<ChannelSet index="6" name="RB" from_dmx="81" to_dmx="95"/>
+						<ChannelSet index="7" name="RW" from_dmx="96" to_dmx="110"/>
+						<ChannelSet index="8" name="GB" from_dmx="111" to_dmx="125"/>
+						<ChannelSet index="9" name="GW" from_dmx="126" to_dmx="140"/>
+						<ChannelSet index="10" name="BW" from_dmx="141" to_dmx="155"/>
+						<ChannelSet index="11" name="RGB" from_dmx="156" to_dmx="170"/>
+						<ChannelSet index="12" name="RGW" from_dmx="171" to_dmx="185"/>
+						<ChannelSet index="13" name="GBW" from_dmx="186" to_dmx="200"/>
+						<ChannelSet index="14" name="RGBW" from_dmx="201" to_dmx="215"/>
+						<ChannelSet index="15" name="4 color chase" from_dmx="216" to_dmx="230"/>
+						<ChannelSet index="16" name="7 color chase" from_dmx="231" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="4">
+					<ChannelFunction index="0" from="0" to="1.961" min_dmx_24="0" max_dmx_24="393215" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="5" slot_from="1" slot_to="1"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="2.353" to="100" min_dmx_24="393216" max_dmx_24="16777215" physfrom="1" physto="30" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Strobe" from_dmx="6" to_dmx="6"/>
+						<ChannelSet index="1" name="max Strobe" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="EFFECTINDEXROTATE" feature="EFFECT" preset="BEAM" coarse="5">
+					<ChannelFunction index="0" from="0" to="50" min_dmx_24="0" max_dmx_24="8388607" subattribute="EFFECTINDEX" subattribute_user_name="Index" attribute="EFFECTINDEXROTATE" attribute_user_name="Effect&lt;&gt;" feature="EFFECT" feature_user_name="Effect" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="no function" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="motor index" from_dmx="1" to_dmx="127"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="50" to="100" min_dmx_24="8388608" max_dmx_24="16777215" subattribute="EFFECTROTATE" subattribute_user_name="Rotate" attribute="EFFECTINDEXROTATE" attribute_user_name="Effect&lt;&gt;" feature="EFFECT" feature_user_name="Effect" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Rotation" from_dmx="128" to_dmx="128"/>
+						<ChannelSet index="1" name="max Rotation" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="STROBEPATTERN" feature="SHUTTER" preset="BEAM" coarse="6">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="STROBEPATTERN" subattribute_user_name="Select" attribute="STROBEPATTERN" attribute_user_name="Strobe Pattern" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="no function" from_dmx="0" to_dmx="9"/>
+						<ChannelSet index="1" name="slow to fast pattern 1" from_dmx="10" to_dmx="19"/>
+						<ChannelSet index="2" name="slow to fast pattern 2" from_dmx="20" to_dmx="29"/>
+						<ChannelSet index="3" name="slow to fast pattern 3" from_dmx="30" to_dmx="39"/>
+						<ChannelSet index="4" name="slow to fast pattern 4" from_dmx="40" to_dmx="49"/>
+						<ChannelSet index="5" name="slow to fast pattern 5" from_dmx="50" to_dmx="59"/>
+						<ChannelSet index="6" name="slow to fast pattern 6" from_dmx="60" to_dmx="69"/>
+						<ChannelSet index="7" name="slow to fast pattern 7" from_dmx="70" to_dmx="79"/>
+						<ChannelSet index="8" name="slow to fast pattern 8" from_dmx="80" to_dmx="89"/>
+						<ChannelSet index="9" name="slow to fast pattern 9" from_dmx="90" to_dmx="99"/>
+						<ChannelSet index="10" name="slow to fast pattern 10" from_dmx="100" to_dmx="109"/>
+						<ChannelSet index="11" name="slow to fast pattern 11" from_dmx="110" to_dmx="119"/>
+						<ChannelSet index="12" name="slow to fast pattern 12" from_dmx="120" to_dmx="129"/>
+						<ChannelSet index="13" name="slow to fast pattern 13" from_dmx="130" to_dmx="139"/>
+						<ChannelSet index="14" name="slow to fast pattern 14" from_dmx="140" to_dmx="149"/>
+						<ChannelSet index="15" name="slow to fast pattern 15" from_dmx="150" to_dmx="159"/>
+						<ChannelSet index="16" name="slow to fast pattern 16" from_dmx="160" to_dmx="169"/>
+						<ChannelSet index="17" name="slow to fast pattern 17" from_dmx="170" to_dmx="179"/>
+						<ChannelSet index="18" name="strobe full On" from_dmx="180" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+			<Module index="1" name="Laser Module" class="LED" beamtype="Wash" beam_angle="3" beam_intensity="10000">
+				<Body>
+					<Size x="0.1" y="0.1" z="0.1"/>
+				</Body>
+				<ChannelType index="0" attribute="COLORMIXER" feature="COLORMIX" preset="COLOR" coarse="1">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="COLORMIXCOLOR" subattribute_user_name="Color" attribute="COLORMIXER" attribute_user_name="ColorMix" feature="COLORMIX" feature_user_name="ColorMix" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="no function" from_dmx="0" to_dmx="9"/>
+						<ChannelSet index="1" name="red laser on" from_dmx="10" to_dmx="49"/>
+						<ChannelSet index="2" name="green laser on" from_dmx="50" to_dmx="89"/>
+						<ChannelSet index="3" name="red green laser on" from_dmx="90" to_dmx="129"/>
+						<ChannelSet index="4" name="red laser on green flashes" from_dmx="130" to_dmx="169"/>
+						<ChannelSet index="5" name="red flashes green laser on" from_dmx="170" to_dmx="209"/>
+						<ChannelSet index="6" name="red green flashes" from_dmx="210" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="2">
+					<ChannelFunction index="0" from="0" to="3.529" min_dmx_24="0" max_dmx_24="655359" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="9" slot_from="1" slot_to="1"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="3.922" to="99.608" min_dmx_24="655360" max_dmx_24="16711679" physfrom="1" physto="30" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Strobe" from_dmx="10" to_dmx="10"/>
+						<ChannelSet index="1" name="max Strobe" from_dmx="254" to_dmx="254"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" from="100" to="100" min_dmx_24="16711680" max_dmx_24="16777215" physfrom="1" physto="1" subattribute="STROBESOUND" subattribute_user_name="sound" attribute="STROBESOUND" attribute_user_name="Strobe Sound" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="sound control" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="EFFECTINDEXROTATE" feature="EFFECT" preset="BEAM" coarse="3">
+					<ChannelFunction index="0" from="0" to="1.569" min_dmx_24="0" max_dmx_24="327679" subattribute="EFFECTINDEX" subattribute_user_name="Index" attribute="EFFECTINDEXROTATE" attribute_user_name="Effect&lt;&gt;" feature="EFFECT" feature_user_name="Effect" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="no function" from_dmx="0" to_dmx="4"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="1.961" to="100" min_dmx_24="327680" max_dmx_24="16777215" subattribute="EFFECTROTATE" subattribute_user_name="Rotate" attribute="EFFECTINDEXROTATE" attribute_user_name="Effect&lt;&gt;" feature="EFFECT" feature_user_name="Effect" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Rotation 1..100%" from_dmx="5" to_dmx="126" slot_from="0.3" slot_to="30" auto_create="false"/>
+						<ChannelSet index="1" name="&gt;&gt;" from_dmx="127" to_dmx="127" slot_from="30" slot_to="30"/>
+						<ChannelSet index="2" name="stop" from_dmx="128" to_dmx="133" slot_from="0" slot_to="0"/>
+						<ChannelSet index="3" name="Rotation -1..-100%" from_dmx="134" to_dmx="254" slot_from="-0.3" slot_to="-30" auto_create="false"/>
+						<ChannelSet index="4" name="&lt;&lt;" from_dmx="255" to_dmx="255" slot_from="-30" slot_to="-30"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+			<Instance index="1" module_index="1" patch="7"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.3.2/MA.xsd" major_vers="3" minor_vers="3" stream_vers="2">
+	<Info datetime="2017-07-27T12:28:18" showfile="fixturetypes_gerriets"/>
+	<FixtureType index="2" name="G-FRAME 54 Trac-Drive" mode="Variable Speed">
+		<InfoItems>
+			<Info date="2017-07-27T12:26:32">Fixture Type made for G-Frame controllers with variable speed control</Info>
+		<Info type="Revision" date="2017-07-27T12:07:58">no revision, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>TracDr</short_name>
+		<manufacturer>Gerriets</manufacturer>
+		<short_manufacturer>Gerriets</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="None" beamtype="None" beam_angle="35" beam_intensity="10000">
+				<ChannelType index="0" attribute="MOVEOPEN" feature="CONTROL" preset="CONTROL" coarse="1">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="OPEN" subattribute_user_name="Open" attribute="MOVEOPEN" attribute_user_name="MOVEOPEN" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="stop" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="MOVECLOSE" feature="CONTROL" preset="CONTROL" coarse="2">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="CLOSE" subattribute_user_name="Close" attribute="MOVECLOSE" attribute_user_name="MOVECLOSE" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="stop" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="close" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="MSPEED" feature="CONTROL" preset="CONTROL" coarse="3">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="MSPEEDTRACK" subattribute_user_name="MSpeedTrack" attribute="MSPEED" attribute_user_name="MSpeed" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="min speed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max speed" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

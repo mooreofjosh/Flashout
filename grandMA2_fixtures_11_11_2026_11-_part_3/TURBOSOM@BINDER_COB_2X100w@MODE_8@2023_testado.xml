@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.60/MA.xsd" major_vers="3" minor_vers="9" stream_vers="60">
+	<Info datetime="2023-09-06T21:18:37" showfile="2023 #gslight tudo"/>
+	<FixtureType index="14" name="BINDER COB 2X100w" mode="MODE 8">
+		<InfoItems>
+			<Info>Set menu option Ch to 8Ch for this personality</Info>
+			<Info type="Revision" date="2018-07-09T00:00:00">Automated import from MA Lighting (C-RevNum: 0; Date: 2018-04-05)</Info>
+			<Info type="Invisible" date="2018-07-09T00:00:00">generator_software_name="MA Importer",generator_software_version="acc7bcc655ac97870d6ff2670143cf8f18b1a131"</Info>
+		<Info type="Revision" date="2023-10-19T22:09:56">2023 testado, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>COB 8</short_name>
+		<manufacturer>TURBOSOM</manufacturer>
+		<short_manufacturer>MEU</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="Conventional" beamtype="Wash" beam_angle="25" beam_intensity="10000">
+				<Body>
+					<Size x="0.25" y="0.25" z="0.45"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" default="254.999" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="6" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="1.953" min_dmx_24="0" max_dmx_24="327679" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="4"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" name="Strobe 1..100%" from="1.953" to="76.172" min_dmx_24="327680" max_dmx_24="16646143" physfrom="0.1" physto="10" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Strobe" from_dmx="5" to_dmx="5"/>
+						<ChannelSet index="1" name="max Strobe" from_dmx="194" to_dmx="194"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" from="76.172" to="100" min_dmx_24="16646144" max_dmx_24="16777215" subattribute="STROBE_RANDOM" subattribute_user_name="Rnd" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Rnd" from_dmx="195" to_dmx="195" slot_from="0.1" slot_to="0.1"/>
+						<ChannelSet index="1" name="Rnd 1..100%" from_dmx="196" to_dmx="223" slot_from="0.43" slot_to="9.34" auto_create="false"/>
+						<ChannelSet index="2" name="max Rnd" from_dmx="224" to_dmx="224" slot_from="9.67" slot_to="9.67"/>
+						<ChannelSet index="3" name="min Rnd (2)" from_dmx="225" to_dmx="225" slot_from="0.1" slot_to="0.1" auto_create="false"/>
+						<ChannelSet index="4" name="Rnd 1..100% (2)" from_dmx="226" to_dmx="254" slot_from="0.419" slot_to="9.361" auto_create="false"/>
+						<ChannelSet index="5" name="max Rnd (2)" from_dmx="255" to_dmx="255" slot_from="9.681" slot_to="9.681" auto_create="false"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="MACROS" feature="MACRO" preset="CONTROL" coarse="7">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="MACROSELECT" subattribute_user_name="Select" attribute="MACROS" attribute_user_name="Macros" feature="MACRO" feature_user_name="Macro" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="CH 1-6" from_dmx="0" to_dmx="50" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="CHOICE 8CH" from_dmx="51" to_dmx="100" slot_from="1" slot_to="1"/>
+						<ChannelSet index="2" name="COLOR JUMP" from_dmx="101" to_dmx="150" slot_from="2" slot_to="2"/>
+						<ChannelSet index="3" name="COLOR CHANGER" from_dmx="151" to_dmx="200" slot_from="3" slot_to="3"/>
+						<ChannelSet index="4" name="COLOR CHANGER" from_dmx="201" to_dmx="250" slot_from="4" slot_to="4"/>
+						<ChannelSet index="5" name="SOUND" from_dmx="251" to_dmx="255" slot_from="5" slot_to="5"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="EFFECTMACRORATE" feature="EFFECTMACROS" preset="BEAM" coarse="8">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="EFFECTMACRORATE" subattribute_user_name="Rate" attribute="EFFECTMACRORATE" attribute_user_name="Rate" feature="EFFECTMACROS" feature_user_name="Macros" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="SPEED" from_dmx="0" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+			<Module index="1" name="Intensity A" class="Conventional" beamtype="Wash" beam_angle="25" beam_intensity="10000">
+				<Body>
+					<Size x="0.2" y="0.2" z="0.205"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" default="0.001" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+			<Instance index="1" module_index="1" patch="2" X="-0.1" Y="-0.1"/>
+			<Instance index="2" module_index="1" patch="3" X="0.1" Y="-0.1"/>
+			<Instance index="3" module_index="1" patch="4" X="-0.1" Y="0.1"/>
+			<Instance index="4" module_index="1" patch="5" X="0.1" Y="0.1"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5">
+			<FixtureMacro index="0">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="0"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="1">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="1" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="22" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="2">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="2" to_value="2"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="47" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="3">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="3" to_value="3"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="72" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="4">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="4" to_value="4"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="97" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="5">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="5" to_value="5"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="122" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="6">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="6" to_value="6"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="147" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="7">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="7" to_value="7"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="172" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="8">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="8" to_value="8"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="197" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="9">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="9" to_value="9"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="222" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="10">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="10" to_value="10"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="255" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+		</FixtureMacroCollect>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

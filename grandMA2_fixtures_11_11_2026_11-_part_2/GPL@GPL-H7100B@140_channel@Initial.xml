@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.60/MA.xsd" major_vers="3" minor_vers="9" stream_vers="60">
+	<Info datetime="2022-11-30T14:24:55" showfile="essais divers v2 thru v4"/>
+	<FixtureType index="18" name="GPL-H7100B" mode="140 channel"><InfoItems><Info type="Revision" date="2022-12-14T11:56:47">Initial, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>GPLH7100B_140</short_name>
+		<manufacturer>GPL</manufacturer>
+		<short_manufacturer>GPL</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Led COB" class="LED" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<Body>
+					<Size x="0.1" y="0.1" z="0.05"/>
+				</Body>
+				<ChannelType index="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" coarse="1" color="ffffff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB5" subattribute_user_name="White" attribute="COLORRGB5" attribute_user_name="White" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="COLORRGB4" feature="COLORRGB" preset="COLOR" coarse="2" default="254.999" highlight_value="100" color="ffbf00">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB4" subattribute_user_name="Amber" attribute="COLORRGB4" attribute_user_name="Amber" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="16777215" to_dmx="16777215"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+			<Module index="1" name="Led RGB" class="LED" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<Body>
+					<Size x="0.1" y="0.02" z="0.05"/>
+				</Body>
+				<ChannelType index="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="1" default="254.999" highlight_value="100" color="ff0000">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" subattribute_user_name="R" attribute="COLORRGB1" attribute_user_name="R" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="2" default="254.999" highlight_value="100" color="00ff00">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" subattribute_user_name="G" attribute="COLORRGB2" attribute_user_name="G" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="3" default="254.999" highlight_value="100" color="0000ff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" subattribute_user_name="B" attribute="COLORRGB3" attribute_user_name="B" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="16777215" to_dmx="16777215"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+			<Instance index="1" module_index="0" patch="3"/>
+			<Instance index="2" module_index="0" patch="5"/>
+			<Instance index="3" module_index="0" patch="7"/>
+			<Instance index="4" module_index="0" patch="9"/>
+			<Instance index="5" module_index="0" patch="11"/>
+			<Instance index="6" module_index="0" patch="13"/>
+			<Instance index="7" module_index="1" patch="15"/>
+			<Instance index="8" module_index="1" patch="18"/>
+			<Instance index="9" module_index="1" patch="21"/>
+			<Instance index="10" module_index="1" patch="24"/>
+			<Instance index="11" module_index="1" patch="27"/>
+			<Instance index="12" module_index="1" patch="30"/>
+			<Instance index="13" module_index="1" patch="33"/>
+			<Instance index="14" module_index="1" patch="36"/>
+			<Instance index="15" module_index="1" patch="39"/>
+			<Instance index="16" module_index="1" patch="42"/>
+			<Instance index="17" module_index="1" patch="45"/>
+			<Instance index="18" module_index="1" patch="48"/>
+			<Instance index="19" module_index="1" patch="51"/>
+			<Instance index="20" module_index="1" patch="54"/>
+			<Instance index="21" module_index="1" patch="57"/>
+			<Instance index="22" module_index="1" patch="60"/>
+			<Instance index="23" module_index="1" patch="63"/>
+			<Instance index="24" module_index="1" patch="66"/>
+			<Instance index="25" module_index="1" patch="69"/>
+			<Instance index="26" module_index="1" patch="72"/>
+			<Instance index="27" module_index="1" patch="75"/>
+			<Instance index="28" module_index="1" patch="78"/>
+			<Instance index="29" module_index="1" patch="81"/>
+			<Instance index="30" module_index="1" patch="84"/>
+			<Instance index="31" module_index="1" patch="87"/>
+			<Instance index="32" module_index="1" patch="90"/>
+			<Instance index="33" module_index="1" patch="93"/>
+			<Instance index="34" module_index="1" patch="96"/>
+			<Instance index="35" module_index="1" patch="99"/>
+			<Instance index="36" module_index="1" patch="102"/>
+			<Instance index="37" module_index="1" patch="105"/>
+			<Instance index="38" module_index="1" patch="108"/>
+			<Instance index="39" module_index="1" patch="111"/>
+			<Instance index="40" module_index="1" patch="114"/>
+			<Instance index="41" module_index="1" patch="117"/>
+			<Instance index="42" module_index="1" patch="120"/>
+			<Instance index="43" module_index="1" patch="123"/>
+			<Instance index="44" module_index="1" patch="126"/>
+			<Instance index="45" module_index="1" patch="129"/>
+			<Instance index="46" module_index="1" patch="132"/>
+			<Instance index="47" module_index="1" patch="135"/>
+			<Instance index="48" module_index="1" patch="138"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

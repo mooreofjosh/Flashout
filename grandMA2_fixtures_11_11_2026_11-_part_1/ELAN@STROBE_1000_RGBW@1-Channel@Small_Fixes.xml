@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.3.4/MA.xsd" major_vers="3" minor_vers="3" stream_vers="4">
+	<Info datetime="2017-12-27T12:27:00" showfile="newshow"/>
+	<FixtureType index="1" name="STROBE 1000 RGBW" mode="1-Channel">
+		<InfoItems>
+			<Info type="Revision" date="2017-05-16T15:24:39">Fixture created. Albadalejo.com</Info>
+			<Info date="2017-05-16T15:24:52">1-Channel Mode</Info>
+			<Info type="Revision" date="2017-05-16T04:05:59">Fixture created. Albadalejo.com, Uploaded to Fixture Share.</Info>
+			<Info type="Revision" date="2017-12-27T12:26:53">Small fixes</Info>
+		<Info type="Revision" date="2017-12-27T12:12:46">Small Fixes, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>STROBE 1000</short_name>
+		<manufacturer>ELAN</manufacturer>
+		<short_manufacturer>ELAN</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="MAIN" class="Conventional" beamtype="Effect" beam_angle="120" beam_intensity="40000">
+				<Body>
+					<Size x="0.435" y="0.26" z="0.116"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="Zero" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="Full" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

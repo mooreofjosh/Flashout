@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.3.4/MA.xsd" major_vers="3" minor_vers="3" stream_vers="4">
+	<Info datetime="2018-09-12T22:19:03" showfile="ll library ll thunder ll 7.1 ll"/>
+	<FixtureType index="24" name="ACED 4410 Wallwasher" mode="10 Chn">
+		<InfoItems>
+			<Info>Fixture has on/off switch
+Set menu option run to dn.co. to enable DMX control of fixture.
+Fixture has manual Zoom from 8-22 degrees</Info>
+			<Info type="Revision" date="2010-11-19T00:00:00">Automated import from MA Lighting (C-RevNum: 1; Date: 2010-03-25)</Info>
+			<Info type="Invisible" date="2010-11-19T00:00:00">generator_software_name="MA Importer",generator_software_version"95cb68c716af70bd9a52a13326be83c9155c1064"</Info>
+		<Info type="Revision" date="2024-09-09T10:21:06">V1, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>Led Washer</short_name>
+		<manufacturer>THUNDER</manufacturer>
+		<short_manufacturer>THUNDER 2018</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="LED" beamtype="Wash" beam_angle="35" beam_intensity="20000">
+				<Body>
+					<Size x="0.45" y="0.17" z="0.316"/>
+				</Body>
+				<ChannelType index="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="1" default="254.999" highlight_value="100" color="ff0000">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" subattribute_user_name="R" attribute="COLORRGB1" attribute_user_name="R" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="2" default="254.999" highlight_value="100" color="00ff00">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" subattribute_user_name="G" attribute="COLORRGB2" attribute_user_name="G" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="2" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="3" default="254.999" highlight_value="100" color="0000ff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" subattribute_user_name="B" attribute="COLORRGB3" attribute_user_name="B" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="3" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" coarse="4" highlight_value="100" color="ffffff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB5" subattribute_user_name="White" attribute="COLORRGB5" attribute_user_name="White" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="4" attribute="COLORCOLOR" feature="COLORALL" preset="COLOR" coarse="7">
+					<ChannelFunction index="0" name="Auto Macro" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="COLORSELECT" subattribute_user_name="Select" attribute="COLORCOLOR" attribute_user_name="Color" feature="COLORALL" feature_user_name="Color" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="No Function 1" from_dmx="0" to_dmx="9"/>
+						<ChannelSet index="1" name="Color Change" from_dmx="10" to_dmx="50"/>
+						<ChannelSet index="2" name="Color Fade" from_dmx="51" to_dmx="100"/>
+						<ChannelSet index="3" name="Color Fulse" from_dmx="101" to_dmx="150"/>
+						<ChannelSet index="4" name="Color Mix" from_dmx="151" to_dmx="200"/>
+						<ChannelSet index="5" name="No Function 2" from_dmx="201" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="COLORTEMPERATURE" feature="COLORALL" preset="COLOR" coarse="10">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="COLORTEMPERATURESELECT" subattribute_user_name="ColorTemperature" attribute="COLORTEMPERATURE" attribute_user_name="ColorTemperature" feature="COLORALL" feature_user_name="Color" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="1"/>
+						<ChannelSet index="1" name="Hot" from_dmx="2" to_dmx="3"/>
+						<ChannelSet index="2" name="Cold" from_dmx="4" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="6" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="5" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+				<ChannelType index="7" attribute="DIMMERCURVE" feature="DIMMER" preset="DIMMER" coarse="9">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="DIMMERCURVE" subattribute_user_name="Curve" attribute="DIMMERCURVE" attribute_user_name="Curve" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="Curve Menu" from_dmx="0" to_dmx="9"/>
+						<ChannelSet index="1" name="Curve 1" from_dmx="10" to_dmx="50"/>
+						<ChannelSet index="2" name="Curve 2" from_dmx="51" to_dmx="101"/>
+						<ChannelSet index="3" name="Curve 3" from_dmx="102" to_dmx="152"/>
+						<ChannelSet index="4" name="Curve 4" from_dmx="153" to_dmx="203"/>
+						<ChannelSet index="5" name="Curve 5" from_dmx="204" to_dmx="249"/>
+						<ChannelSet index="6" name="Curve 6" from_dmx="250" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="8" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="6">
+					<ChannelFunction index="0" from="0" to="1" min_dmx_24="0" max_dmx_24="262143" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="3"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="2" to="100" min_dmx_24="262144" max_dmx_24="16777215" physfrom="1" physto="7" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min stb" from_dmx="75" to_dmx="75"/>
+						<ChannelSet index="1" name="mid stb" from_dmx="203" to_dmx="204"/>
+						<ChannelSet index="2" name="max stb" from_dmx="249" to_dmx="250"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="9" attribute="SCROLLER" feature="COLORALL" preset="COLOR" coarse="8">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="SCROLLERSELECT" subattribute_user_name="Scroller" attribute="SCROLLER" attribute_user_name="Scroller" feature="COLORALL" feature_user_name="Color" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2">
+			<Wheel index="0" CITP_id0="0" CITP_id1="0" CITP_id2="0" CITP_id3="0">
+				<Slot index="0" media_name="open"/>
+				<Slot index="1" media_name="red" g="53" b="3"/>
+				<Slot index="2" media_name="yellow" r="235" b="8"/>
+				<Slot index="3" media_name="magenta" g="69" b="201"/>
+				<Slot index="4" media_name="green" r="57" b="78"/>
+				<Slot index="5" media_name="orange" g="133" b="3"/>
+				<Slot index="6" media_name="blue" r="33" g="142"/>
+				<Slot index="7" media_name="pink" g="172" b="229"/>
+				<Slot index="8" media_name="UV" r="101" g="20" b="199"/>
+			</Wheel>
+		</Wheels>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA major_vers="3" minor_vers="2" stream_vers="2">
+  <Info datetime="2022-11-13T19:46:59" showfile="ma fixture builder"/>
+  <FixtureType index="9" name="PIXEL_BAR_24_50ch" mode="50ch">
+    <InfoItems>
+      <Info>Created using MA FixtureBuilder version v1.9.0</Info>
+    <Info type="Revision" date="2022-12-03T03:14:35">Pixel_Bar_24_50ch, Uploaded to Fixture Share.</Info></InfoItems>
+    <short_name>PIXEL_BAR</short_name>
+    <manufacturer>Light4me</manufacturer>
+    <short_manufacturer>Light4ME</short_manufacturer>
+    <Modules index="0">
+      <Module index="0" name="RGB Cluster" class="LED" beamtype="Wash" beam_angle="25" beam_intensity="5000">
+        <Body>
+          <Size/>
+        </Body>
+        <ChannelType index="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="3" default="255" highlight_value="0" color="ff0000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" subattribute_user_name="R" attribute_user_name="R" feature_user_name="MixColor" preset_user_name="Color">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="1" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="4" default="255" highlight_value="0" color="00ff00">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" subattribute_user_name="G" attribute_user_name="G" feature_user_name="MixColor" preset_user_name="Color">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="2" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="5" default="255" highlight_value="0" color="0000ff">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" subattribute_user_name="B" attribute_user_name="B" feature_user_name="MixColor" preset_user_name="Color">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="3" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" default="255" highlight_value="0">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" subattribute_user_name="Dim" attribute_user_name="Dim" feature_user_name="Dimmer" preset_user_name="Dimmer">
+            <ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="4" attribute="STROBEINTENSITY" feature="DIMMER" preset="DIMMER" coarse="2" highlight_value="0">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="STROBEINTENSITY" attribute="STROBEINTENSITY" feature="DIMMER" preset="DIMMER" subattribute_user_name="StrobeIntensity" attribute_user_name="StrobeIntensity" feature_user_name="Dimmer" preset_user_name="Dimmer">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="5" attribute="COLORMACROS" feature="COLORALL" preset="COLOR" coarse="6" highlight_value="0">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORMACROAUDIO" attribute="COLORMACROS" feature="COLORALL" preset="COLOR" subattribute_user_name="Audio" attribute_user_name="Macros" feature_user_name="Color" preset_user_name="Color">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="15"/>
+            <ChannelSet index="1" name="max" from_dmx="16" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+      </Module>
+      <Module index="1" name="MACRO" class="None" beamtype="None" beam_angle="19" beam_intensity="10000">
+        <Body>
+          <Size/>
+        </Body>
+        <ChannelType index="0" attribute="MACROS" feature="MACRO" preset="CONTROL" coarse="1">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="MACROAUDIO" attribute="MACROS" feature="MACRO" preset="CONTROL" subattribute_user_name="Audio" attribute_user_name="Macros" feature_user_name="Macro" preset_user_name="Control">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="1" attribute="MACRORATE" feature="MACRO" preset="CONTROL" coarse="2">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="MACRORATE" attribute="MACRORATE" feature="MACRO" preset="CONTROL" subattribute_user_name="Rate" attribute_user_name="MacroRate" feature_user_name="Macro" preset_user_name="Control">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+      </Module>
+    </Modules>
+    <Instances index="1">
+      <Instance index="0" patch="1" X="-0.5" Y="0.06" Z="0.06" module_index="0"/>
+      <Instance index="1" patch="7" X="-0.37" Y="0.06" Z="0.06" module_index="0"/>
+      <Instance index="2" patch="13" X="-0.24" Y="0.06" Z="0.06" module_index="0"/>
+      <Instance index="3" patch="19" X="-0.11" Y="0.06" Z="0.06" module_index="0"/>
+      <Instance index="4" patch="25" X="0" Y="0.06" Z="0.06" module_index="0"/>
+      <Instance index="5" patch="31" X="0.11" Y="0.06" Z="0.06" module_index="0"/>
+      <Instance index="6" patch="37" X="0.24" Y="0.06" Z="0.06" module_index="0"/>
+      <Instance index="7" patch="43" X="0.37" Y="0.06" Z="0.06" module_index="0"/>
+      <Instance index="8" patch="49" X="-0.5" Y="0.06" Z="0.06" module_index="1"/>
+    </Instances>
+    <Wheels index="2"/>
+    <FixtureMacroCollect index="5"/>
+  </FixtureType>
+</MA>

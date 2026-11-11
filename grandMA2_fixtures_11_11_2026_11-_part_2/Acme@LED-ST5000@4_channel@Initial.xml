@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2017-08-28T13:53:46" showfile="xp show 2017-08-23"/>
+	<FixtureType index="55" name="LED-ST5000" mode="4 channel">
+		<InfoItems>
+			<Info>Set DIP switches 1-3 and 5 to OFF and switch 4 to ON for this personality&#xA;Set DIP switch 6 to OFF for high power mode, set switch to ON for low power mode&#xA;Ch 2 - Maximum flash duration is 650mSec with 50Hz mains supply, or 530mSec with 60Hz.&#xA;Ch 3 - Maximum strobe rate is 25Hz with 50Hz mains supply, or 30Hz with 60Hz supply.&#xA;For blinder effect (permanent on) increase strobe duration until it is longer than the interval between flashes.  Have not tried to model this.&#xA;For single flashes, set intensity and Strobe rate to 0.  The unit will flash once each time intensity is varied.  Have not tried to model this.</Info>
+			<Info type="Revision" date="2015-12-07T00:00:00">Automated import from MA Lighting (C-RevNum: 0; Date: 2013-08-12)</Info>
+			<Info type="Invisible" date="2015-12-07T00:00:00">generator_software_name="MA Importer",generator_software_version="9f54f4b62519d7c623c7e8e9b20a0a67177041b6"</Info>
+		<Info type="Revision" date="2017-08-30T03:08:27">Initial, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>ST5000 4</short_name>
+		<manufacturer>Acme</manufacturer>
+		<short_manufacturer>ACME</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="Conventional" beamtype="Wash" beam_angle="120" beam_intensity="10000">
+				<Body>
+					<Size x="0.472" y="0.255" z="0.255"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="5" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="Dim 0..100%" from_dmx="6" to_dmx="254" slot_from="0" slot_to="0.992" auto_create="false"/>
+						<ChannelSet index="2" name="open" from_dmx="255" to_dmx="255" slot_from="0.996" slot_to="0.996"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="STROBEDURATION" feature="SHUTTER" preset="BEAM" coarse="2" mode="STROBEMODE">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" mode_dmx_end="5" physto="1" subattribute="STROBEDURATION" subattribute_user_name="Duration" attribute="STROBEDURATION" attribute_user_name="StrobeDuration" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Duration" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max Duration" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="3" default="127.3" mode="STROBEMODE">
+					<ChannelFunction index="0" from="0" to="2.3" min_dmx_24="0" max_dmx_24="393215" mode_dmx_end="0" physfrom="0" physto="0" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="OFF" from_dmx="0" to_dmx="5"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="2.31" to="100" min_dmx_24="393216" max_dmx_24="16777215" mode_dmx_end="5" physfrom="0.4" physto="20" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Strobe" from_dmx="6" to_dmx="6"/>
+						<ChannelSet index="1" name="max Strobe" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" mode_dmx_start="6" mode_dmx_end="42" physfrom="0.1" physto="10" subattribute="STROBE_PULSE_OPEN" subattribute_user_name="Pulse Open" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Pulse Open" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max Pulse Open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+					<ChannelFunction index="3" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" mode_dmx_start="43" mode_dmx_end="85" physfrom="0.1" physto="10" subattribute="STROBE_PULSE_CLOSE" subattribute_user_name="Pulse Close" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Pulse Close" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max Pulse Close" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+					<ChannelFunction index="4" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" mode_dmx_start="86" mode_dmx_end="128" physfrom="0.1" physto="10" subattribute="STROBE_PULSE" subattribute_user_name="Pulse" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Pulse" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max Pulse" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+					<ChannelFunction index="5" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" mode_dmx_start="172" mode_dmx_end="214" physfrom="0.1" physto="10" subattribute="STROBE_RANDOM" subattribute_user_name="Rnd" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Rnd" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max Rnd" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+					<ChannelFunction index="6" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" mode_dmx_start="215" physfrom="0.1" physto="10" subattribute="STROBE_RANDOM" subattribute_user_name="Rnd" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Rnd" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max Rnd" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+					<ChannelFunction index="7" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" mode_dmx_start="129" mode_dmx_end="171" physfrom="0.1" physto="10" subattribute="LIGHTNINGRATE" subattribute_user_name="LightningRate" attribute="LIGHTNINGRATE" attribute_user_name="LightningRate" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min LightningRate" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max LightningRate" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="STROBEMODE" feature="SHUTTER" preset="BEAM" coarse="4">
+					<ChannelFunction index="0" from="0" to="2.344" min_dmx_24="0" max_dmx_24="393215" subattribute="STROBEMODE" subattribute_user_name="Normal" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Normal" from_dmx="0" to_dmx="5"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="2.344" to="16.797" min_dmx_24="393216" max_dmx_24="2818047" subattribute="STROBEMODEPULSEOPEN" subattribute_user_name="Pulse Open" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Pulse Open" from_dmx="6" to_dmx="42"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" from="16.797" to="33.594" min_dmx_24="2818048" max_dmx_24="5636095" subattribute="STROBEMODEPULSECLOSE" subattribute_user_name="Pulse Close" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Pulse Close" from_dmx="43" to_dmx="85"/>
+					</ChannelFunction>
+					<ChannelFunction index="3" from="33.594" to="50.391" min_dmx_24="5636096" max_dmx_24="8454143" subattribute="STROBEMODEPULSE" subattribute_user_name="Pulse" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Pulse" from_dmx="86" to_dmx="128"/>
+					</ChannelFunction>
+					<ChannelFunction index="4" from="50.391" to="67.188" min_dmx_24="8454144" max_dmx_24="11272191" subattribute="STROBEMODELIGHTNING" subattribute_user_name="Lightning" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Lightning" from_dmx="129" to_dmx="171"/>
+					</ChannelFunction>
+					<ChannelFunction index="5" from="67.188" to="100" min_dmx_24="11272192" max_dmx_24="16777215" subattribute="STROBEMODERANDOM" subattribute_user_name="Rnd" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Rnd" from_dmx="172" to_dmx="214"/>
+						<ChannelSet index="1" name="Rnd (2)" from_dmx="215" to_dmx="255" auto_create="false"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

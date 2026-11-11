@@ -1,0 +1,1787 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="Maverick Storm 3 Beamwash-2" mode="Dual Movement Mode: Advanced 46ch">
+        <InfoItems>
+            <Info type="Revision" date="2025-03-12T17:01:11">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2025-02-15T22:55:38">Rev 1.1.0</Info>
+            <Info>Maverick Storm 3 BeamWash creates new possibilities with two zones of zoom control. Both zones independently zoom from 4.6deg to 53.6deg allowing for beam and wash combinations from a single fixture. A 16-lens outer zone and 12-lens inner zone combine to deliver a massive 19,062 lumens of output from 28x45W RGBW LEDs. Built-in macros with foreground and background control easily generate stunning pixel eye candy. A unique lens design delivers excellent color blending, tight aerial beam effects and visual impact live or on camera. Dual mode operation enables pixel-mapped eye candy to run under ArtNet/sACN control with separate assignment of motorized functions to DMX. Housed in an advanced IP65-rated alloy body, Maverick Storm 3 BeamWash is built with the durability and versatility to perform in any venue, indoors or out.</Info>
+            <Info type="Revision" date="2025-03-12T17:01:57.679">Rev%201.1.0, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>Maverick Storm 3 Beamwash-2</short_name>
+        <manufacturer>Chauvet Professional</manufacturer>
+        <short_manufacturer>Chauvet Professional</short_manufacturer>
+        <Modules>
+            <Module name="Main Module" class="None" beamtype="None" beam_intensity="" index="0" beam_angle="">
+                <Model name="Base" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <ChannelType coarse="1" fine="2" default="32767" attribute="PAN" feature="POSITION" preset="POSITION">
+                    <ChannelFunction subattribute="PAN" attribute="PAN" feature="POSITION" preset="POSITION" from="-270" to="270" physfrom="-270" physto="270" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Home" from_dmx="32767" to_dmx="32767"/>
+                        <ChannelSet name="Max" from_dmx="65535" to_dmx="65535"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="3" fine="4" default="32767" attribute="TILT" feature="POSITION" preset="POSITION">
+                    <ChannelFunction subattribute="TILT" attribute="TILT" feature="POSITION" preset="POSITION" from="-130" to="130" physfrom="-130" physto="130" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Home" from_dmx="32767" to_dmx="32767"/>
+                        <ChannelSet name="Max" from_dmx="65535" to_dmx="65535"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="5" default="0" attribute="POSITIONMSPEED" feature="Control" preset="Control" highlight_value="0">
+                    <ChannelFunction subattribute="POSITIONMSPEED" attribute="POSITIONMSPEED" feature="Control" preset="Control" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="6" default="0" attribute="CTC" feature="CTC" preset="COLOR" highlight_value="0">
+                    <ChannelFunction subattribute="CTC" attribute="CTC" feature="CTC" preset="COLOR" from="0" to="0" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="0">
+                        <ChannelSet name=" Open" from_dmx="0" to_dmx="0" slot_from="0" slot_to="0"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="CTC" attribute="CTC" feature="CTC" preset="COLOR" from="0" to="100" physfrom="19000" physto="2700" min_dmx_24="65793" max_dmx_24="16777215">
+                        <ChannelSet name="19000K - CTC" from_dmx="1" to_dmx="1"/>
+                        <ChannelSet name="18900K - CTC" from_dmx="2" to_dmx="2"/>
+                        <ChannelSet name="18800K - CTC" from_dmx="4" to_dmx="4"/>
+                        <ChannelSet name="18700K - CTC" from_dmx="6" to_dmx="6"/>
+                        <ChannelSet name="18600K - CTC" from_dmx="7" to_dmx="7"/>
+                        <ChannelSet name="18500K - CTC" from_dmx="8" to_dmx="9"/>
+                        <ChannelSet name="18400K - CTC" from_dmx="10" to_dmx="10"/>
+                        <ChannelSet name="18300K - CTC" from_dmx="12" to_dmx="12"/>
+                        <ChannelSet name="18200K - CTC" from_dmx="13" to_dmx="13"/>
+                        <ChannelSet name="18100K - CTC" from_dmx="15" to_dmx="15"/>
+                        <ChannelSet name="18000K - CTC" from_dmx="16" to_dmx="16"/>
+                        <ChannelSet name="17900K - CTC" from_dmx="18" to_dmx="18"/>
+                        <ChannelSet name="17800K - CTC" from_dmx="19" to_dmx="19"/>
+                        <ChannelSet name="17700K - CTC" from_dmx="21" to_dmx="21"/>
+                        <ChannelSet name="17600K - CTC" from_dmx="22" to_dmx="22"/>
+                        <ChannelSet name="17500K - CTC" from_dmx="24" to_dmx="24"/>
+                        <ChannelSet name="17400K - CTC" from_dmx="26" to_dmx="26"/>
+                        <ChannelSet name="17300K - CTC" from_dmx="27" to_dmx="27"/>
+                        <ChannelSet name="17200K - CTC" from_dmx="29" to_dmx="29"/>
+                        <ChannelSet name="17100K - CTC" from_dmx="30" to_dmx="30"/>
+                        <ChannelSet name="17000K - CTC" from_dmx="32" to_dmx="32"/>
+                        <ChannelSet name="16900K - CTC" from_dmx="33" to_dmx="33"/>
+                        <ChannelSet name="16800K - CTC" from_dmx="35" to_dmx="35"/>
+                        <ChannelSet name="16700K - CTC" from_dmx="37" to_dmx="37"/>
+                        <ChannelSet name="16600K - CTC" from_dmx="38" to_dmx="38"/>
+                        <ChannelSet name="16500K - CTC" from_dmx="40" to_dmx="40"/>
+                        <ChannelSet name="16400K - CTC" from_dmx="41" to_dmx="41"/>
+                        <ChannelSet name="16300K - CTC" from_dmx="43" to_dmx="43"/>
+                        <ChannelSet name="16200K - CTC" from_dmx="44" to_dmx="44"/>
+                        <ChannelSet name="16100K - CTC" from_dmx="46" to_dmx="46"/>
+                        <ChannelSet name="16000K - CTC" from_dmx="47" to_dmx="47"/>
+                        <ChannelSet name="15900K - CTC" from_dmx="49" to_dmx="49"/>
+                        <ChannelSet name="15800K - CTC" from_dmx="51" to_dmx="51"/>
+                        <ChannelSet name="15700K - CTC" from_dmx="52" to_dmx="52"/>
+                        <ChannelSet name="157600K - CTC" from_dmx="54" to_dmx="54"/>
+                        <ChannelSet name="15500K - CTC" from_dmx="55" to_dmx="55"/>
+                        <ChannelSet name="15400K - CTC" from_dmx="57" to_dmx="57"/>
+                        <ChannelSet name="15300K - CTC" from_dmx="58" to_dmx="58"/>
+                        <ChannelSet name="15200K - CTC" from_dmx="60" to_dmx="60"/>
+                        <ChannelSet name="15100K - CTC" from_dmx="62" to_dmx="62"/>
+                        <ChannelSet name="15000K - CTC" from_dmx="63" to_dmx="63"/>
+                        <ChannelSet name="14900K - CTC" from_dmx="65" to_dmx="65"/>
+                        <ChannelSet name="14800K - CTC" from_dmx="66" to_dmx="66"/>
+                        <ChannelSet name="14700K - CTC" from_dmx="68" to_dmx="68"/>
+                        <ChannelSet name="14600K - CTC" from_dmx="69" to_dmx="69"/>
+                        <ChannelSet name="14500K - CTC" from_dmx="71" to_dmx="71"/>
+                        <ChannelSet name="14400K - CTC" from_dmx="72" to_dmx="72"/>
+                        <ChannelSet name="14300K - CTC" from_dmx="74" to_dmx="74"/>
+                        <ChannelSet name="14200K - CTC" from_dmx="76" to_dmx="76"/>
+                        <ChannelSet name="14100K - CTC" from_dmx="77" to_dmx="77"/>
+                        <ChannelSet name="14000K - CTC" from_dmx="79" to_dmx="79"/>
+                        <ChannelSet name="13900K - CTC" from_dmx="80" to_dmx="80"/>
+                        <ChannelSet name="13800K - CTC" from_dmx="82" to_dmx="82"/>
+                        <ChannelSet name="13700K - CTC" from_dmx="83" to_dmx="83"/>
+                        <ChannelSet name="13600K - CTC" from_dmx="85" to_dmx="85"/>
+                        <ChannelSet name="13500K - CTC" from_dmx="86" to_dmx="86"/>
+                        <ChannelSet name="13400K - CTC" from_dmx="88" to_dmx="88"/>
+                        <ChannelSet name="13300K - CTC" from_dmx="90" to_dmx="90"/>
+                        <ChannelSet name="13200K - CTC" from_dmx="91" to_dmx="91"/>
+                        <ChannelSet name="13100K - CTC" from_dmx="93" to_dmx="93"/>
+                        <ChannelSet name="13000K - CTC" from_dmx="94" to_dmx="94"/>
+                        <ChannelSet name="12900K - CTC" from_dmx="96" to_dmx="96"/>
+                        <ChannelSet name="12800K - CTC" from_dmx="97" to_dmx="97"/>
+                        <ChannelSet name="12700K - CTC" from_dmx="99" to_dmx="99"/>
+                        <ChannelSet name="12600K - CTC" from_dmx="101" to_dmx="101"/>
+                        <ChannelSet name="12500K - CTC" from_dmx="102" to_dmx="102"/>
+                        <ChannelSet name="12400K - CTC" from_dmx="104" to_dmx="104"/>
+                        <ChannelSet name="12300K - CTC" from_dmx="105" to_dmx="105"/>
+                        <ChannelSet name="12200K - CTC" from_dmx="107" to_dmx="107"/>
+                        <ChannelSet name="12100K - CTC" from_dmx="108" to_dmx="108"/>
+                        <ChannelSet name="12000K - CTC" from_dmx="110" to_dmx="110"/>
+                        <ChannelSet name="11900K - CTC" from_dmx="112" to_dmx="112"/>
+                        <ChannelSet name="11800K - CTC" from_dmx="113" to_dmx="113"/>
+                        <ChannelSet name="11700K - CTC" from_dmx="115" to_dmx="115"/>
+                        <ChannelSet name="11600K - CTC" from_dmx="116" to_dmx="116"/>
+                        <ChannelSet name="11500K - CTC" from_dmx="118" to_dmx="118"/>
+                        <ChannelSet name="11400K - CTC" from_dmx="119" to_dmx="119"/>
+                        <ChannelSet name="11300K - CTC" from_dmx="121" to_dmx="121"/>
+                        <ChannelSet name="11200K - CTC" from_dmx="122" to_dmx="122"/>
+                        <ChannelSet name="11100K - CTC" from_dmx="124" to_dmx="124"/>
+                        <ChannelSet name="11000K - CTC" from_dmx="125" to_dmx="125"/>
+                        <ChannelSet name="10900K - CTC" from_dmx="127" to_dmx="127"/>
+                        <ChannelSet name="10800K - CTC" from_dmx="129" to_dmx="129"/>
+                        <ChannelSet name="10700K - CTC" from_dmx="130" to_dmx="130"/>
+                        <ChannelSet name="10600K - CTC" from_dmx="132" to_dmx="132"/>
+                        <ChannelSet name="10500K - CTC" from_dmx="133" to_dmx="133"/>
+                        <ChannelSet name="10400K - CTC" from_dmx="135" to_dmx="135"/>
+                        <ChannelSet name="10300K - CTC" from_dmx="136" to_dmx="136"/>
+                        <ChannelSet name="10200K - CTC" from_dmx="138" to_dmx="138"/>
+                        <ChannelSet name="10100K - CTC" from_dmx="140" to_dmx="140"/>
+                        <ChannelSet name="10000K - CTC" from_dmx="141" to_dmx="141"/>
+                        <ChannelSet name="9900K - CTC" from_dmx="143" to_dmx="143"/>
+                        <ChannelSet name="9800K - CTC" from_dmx="144" to_dmx="144"/>
+                        <ChannelSet name="9700K - CTC" from_dmx="146" to_dmx="146"/>
+                        <ChannelSet name="9600K - CTC" from_dmx="147" to_dmx="147"/>
+                        <ChannelSet name="9500K - CTC" from_dmx="149" to_dmx="149"/>
+                        <ChannelSet name="9400K - CTC" from_dmx="150" to_dmx="150"/>
+                        <ChannelSet name="9300K - CTC" from_dmx="152" to_dmx="152"/>
+                        <ChannelSet name="9200K - CTC" from_dmx="154" to_dmx="154"/>
+                        <ChannelSet name="9100K - CTC" from_dmx="155" to_dmx="155"/>
+                        <ChannelSet name="9000K - CTC" from_dmx="157" to_dmx="157"/>
+                        <ChannelSet name="8900K - CTC" from_dmx="158" to_dmx="158"/>
+                        <ChannelSet name="8800K - CTC" from_dmx="160" to_dmx="160"/>
+                        <ChannelSet name="8700K - CTC" from_dmx="161" to_dmx="161"/>
+                        <ChannelSet name="8600K - CTC" from_dmx="163" to_dmx="163"/>
+                        <ChannelSet name="8500K - CTC" from_dmx="164" to_dmx="164"/>
+                        <ChannelSet name="8400K - CTC" from_dmx="166" to_dmx="166"/>
+                        <ChannelSet name="8300K - CTC" from_dmx="167" to_dmx="167"/>
+                        <ChannelSet name="8200K - CTC" from_dmx="169" to_dmx="169"/>
+                        <ChannelSet name="8100K - CTC" from_dmx="171" to_dmx="171"/>
+                        <ChannelSet name="8000K - CTC" from_dmx="172" to_dmx="172"/>
+                        <ChannelSet name="7900K - CTC" from_dmx="174" to_dmx="174"/>
+                        <ChannelSet name="7800K - CTC" from_dmx="175" to_dmx="175"/>
+                        <ChannelSet name="7700K - CTC" from_dmx="177" to_dmx="177"/>
+                        <ChannelSet name="7600K - CTC" from_dmx="178" to_dmx="178"/>
+                        <ChannelSet name="7500K - CTC" from_dmx="180" to_dmx="180"/>
+                        <ChannelSet name="7400K - CTC" from_dmx="182" to_dmx="182"/>
+                        <ChannelSet name="7300K - CTC" from_dmx="183" to_dmx="183"/>
+                        <ChannelSet name="7200K - CTC" from_dmx="185" to_dmx="185"/>
+                        <ChannelSet name="7100K - CTC" from_dmx="186" to_dmx="186"/>
+                        <ChannelSet name="7000K - CTC" from_dmx="188" to_dmx="188"/>
+                        <ChannelSet name="6900K - CTC" from_dmx="189" to_dmx="189"/>
+                        <ChannelSet name="6800K - CTC" from_dmx="191" to_dmx="191"/>
+                        <ChannelSet name="6700K - CTC" from_dmx="193" to_dmx="193"/>
+                        <ChannelSet name="6600K - CTC" from_dmx="194" to_dmx="194"/>
+                        <ChannelSet name="6500K - CTC" from_dmx="196" to_dmx="196"/>
+                        <ChannelSet name="6400K - CTC" from_dmx="197" to_dmx="197"/>
+                        <ChannelSet name="6300K - CTC" from_dmx="199" to_dmx="199"/>
+                        <ChannelSet name="6200K - CTC" from_dmx="200" to_dmx="200"/>
+                        <ChannelSet name="6100K - CTC" from_dmx="202" to_dmx="202"/>
+                        <ChannelSet name="6000K - CTC" from_dmx="203" to_dmx="203"/>
+                        <ChannelSet name="5900K - CTC" from_dmx="205" to_dmx="205"/>
+                        <ChannelSet name="5800K - CTC" from_dmx="207" to_dmx="207"/>
+                        <ChannelSet name="5700K - CTC" from_dmx="208" to_dmx="208"/>
+                        <ChannelSet name="5600K - CTC" from_dmx="210" to_dmx="210"/>
+                        <ChannelSet name="5500K - CTC" from_dmx="211" to_dmx="211"/>
+                        <ChannelSet name="5400K - CTC" from_dmx="213" to_dmx="213"/>
+                        <ChannelSet name="5300K - CTC" from_dmx="214" to_dmx="214"/>
+                        <ChannelSet name="5200K - CTC" from_dmx="216" to_dmx="216"/>
+                        <ChannelSet name="5100K - CTC" from_dmx="217" to_dmx="217"/>
+                        <ChannelSet name="5000K - CTC" from_dmx="219" to_dmx="219"/>
+                        <ChannelSet name="4900K - CTC" from_dmx="221" to_dmx="221"/>
+                        <ChannelSet name="4800K - CTC" from_dmx="222" to_dmx="222"/>
+                        <ChannelSet name="4700K - CTC" from_dmx="224" to_dmx="224"/>
+                        <ChannelSet name="4600K - CTC" from_dmx="225" to_dmx="225"/>
+                        <ChannelSet name="4500K - CTC" from_dmx="227" to_dmx="227"/>
+                        <ChannelSet name="4400K - CTC" from_dmx="228" to_dmx="228"/>
+                        <ChannelSet name="4300K - CTC" from_dmx="230" to_dmx="230"/>
+                        <ChannelSet name="4200K - CTC" from_dmx="232" to_dmx="232"/>
+                        <ChannelSet name="4100K - CTC" from_dmx="233" to_dmx="233"/>
+                        <ChannelSet name="4000K - CTC" from_dmx="235" to_dmx="235"/>
+                        <ChannelSet name="3900K - CTC" from_dmx="236" to_dmx="236"/>
+                        <ChannelSet name="3800K - CTC" from_dmx="238" to_dmx="238"/>
+                        <ChannelSet name="3700K - CTC" from_dmx="239" to_dmx="239"/>
+                        <ChannelSet name="3600K - CTC" from_dmx="241" to_dmx="241"/>
+                        <ChannelSet name="3500K - CTC" from_dmx="242" to_dmx="243"/>
+                        <ChannelSet name="3400K - CTC" from_dmx="244" to_dmx="244"/>
+                        <ChannelSet name="3300K - CTC" from_dmx="246" to_dmx="246"/>
+                        <ChannelSet name="3200K - CTC" from_dmx="247" to_dmx="247"/>
+                        <ChannelSet name="3100K - CTC" from_dmx="249" to_dmx="249"/>
+                        <ChannelSet name="3000K - CTC" from_dmx="250" to_dmx="250"/>
+                        <ChannelSet name="2900K - CTC" from_dmx="252" to_dmx="252"/>
+                        <ChannelSet name="2800K - CTC" from_dmx="253" to_dmx="253"/>
+                        <ChannelSet name="2700K - CTC" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="8" default="0" attribute="COLORMACROS" feature="Color" preset="Color" highlight_value="0">
+                    <ChannelFunction subattribute="COLORMACROS" attribute="COLORMACROS" feature="Color" preset="Color" from="0" to="0" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="0">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="0" slot_from="0" slot_to="0"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="CTC" attribute="COLORMACROS" feature="Color" preset="Color" from="0" to="5.49" physfrom="8000" physto="0" min_dmx_24="65793" max_dmx_24="921102" wheel="1">
+                        <ChannelSet name="White 2700K - CTC" from_dmx="1" to_dmx="2" slot_from="2700" slot_to="2700" slot_index="0"/>
+                        <ChannelSet name="White 3200K - CTC" from_dmx="3" to_dmx="4" slot_from="3200" slot_to="3200" slot_index="1"/>
+                        <ChannelSet name="White 4000K - CTC" from_dmx="5" to_dmx="6" slot_from="4000" slot_to="4000" slot_index="2"/>
+                        <ChannelSet name="White 4200K - CTC" from_dmx="7" to_dmx="8" slot_from="4200" slot_to="4200" slot_index="3"/>
+                        <ChannelSet name="White 5600K - CTC" from_dmx="9" to_dmx="10" slot_from="5600" slot_to="5600" slot_index="4"/>
+                        <ChannelSet name="White 6500K - CTC" from_dmx="11" to_dmx="12" slot_from="6500" slot_to="6500" slot_index="5"/>
+                        <ChannelSet name="White 7500K - CTC" from_dmx="13" to_dmx="14" slot_from="7500" slot_to="7500" slot_index="6"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="COLORMACROS" attribute="COLORMACROS" feature="Color" preset="Color" from="5.49" to="93.73" physfrom="0" physto="0" min_dmx_24="986895" max_dmx_24="15724527" wheel="1">
+                        <ChannelSet name="Blue" from_dmx="15" to_dmx="15" slot_from="0" slot_to="0" slot_index="7"/>
+                        <ChannelSet name="+Green" from_dmx="16" to_dmx="48" slot_index="8"/>
+                        <ChannelSet name="Cyan" from_dmx="52" to_dmx="52" slot_from="0" slot_to="0" slot_index="9"/>
+                        <ChannelSet name="-Blue" from_dmx="53" to_dmx="88" slot_index="10"/>
+                        <ChannelSet name="Green" from_dmx="89" to_dmx="89" slot_from="0" slot_to="0" slot_index="11"/>
+                        <ChannelSet name="+Red" from_dmx="90" to_dmx="124" slot_index="12"/>
+                        <ChannelSet name="Yellow" from_dmx="126" to_dmx="126" slot_from="0" slot_to="0" slot_index="13"/>
+                        <ChannelSet name="-Green" from_dmx="127" to_dmx="162" slot_index="14"/>
+                        <ChannelSet name="Red" from_dmx="163" to_dmx="163" slot_from="0" slot_to="0" slot_index="15"/>
+                        <ChannelSet name="+Blue" from_dmx="164" to_dmx="200" slot_index="16"/>
+                        <ChannelSet name="Magenta" from_dmx="201" to_dmx="201" slot_from="0" slot_to="0" slot_index="17"/>
+                        <ChannelSet name="-Red" from_dmx="202" to_dmx="238" slot_index="18"/>
+                        <ChannelSet name="Blue" from_dmx="239" to_dmx="239" slot_from="0" slot_to="0" slot_index="7"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="ColorControl" attribute="COLORMACROS" feature="Color" preset="Color" from="93.73" to="96.86" physfrom="10" physto="0.1" min_dmx_24="15790320" max_dmx_24="16250871">
+                        <ChannelSet name="Fast" from_dmx="240" to_dmx="240" slot_from="10" slot_to="10"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="241" to_dmx="246" slot_from="8.59" slot_to="1.51"/>
+                        <ChannelSet name="Slow" from_dmx="247" to_dmx="247" slot_from="0.1" slot_to="0.1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="ColorControl" attribute="COLORMACROS" feature="Color" preset="Color" from="96.86" to="100" physfrom="10" physto="0.1" min_dmx_24="16316664" max_dmx_24="16777215">
+                        <ChannelSet name="Fast" from_dmx="248" to_dmx="248" slot_from="10" slot_to="10"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="249" to_dmx="254" slot_from="8.59" slot_to="1.51"/>
+                        <ChannelSet name="Slow" from_dmx="255" to_dmx="255" slot_from="0.1" slot_to="0.1"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="10" default="0" snap="true" attribute="EFFECT" feature="EFFECT" preset="BEAM" highlight_value="0">
+                    <ChannelFunction subattribute="EFFECTSELECT" attribute="EFFECT" feature="EFFECT" preset="BEAM" from="0" to="1.57" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="263172">
+                        <ChannelSet name="Pattern Open" from_dmx="0" to_dmx="4"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="EFFECTSELECT" attribute="EFFECT" feature="EFFECT" preset="BEAM" from="1.57" to="100" physfrom="0" physto="1" min_dmx_24="328965" max_dmx_24="16777215">
+                        <ChannelSet name="Pattern 1" from_dmx="5" to_dmx="5"/>
+                        <ChannelSet name="Pattern 2" from_dmx="6" to_dmx="6"/>
+                        <ChannelSet name="Pattern 3" from_dmx="7" to_dmx="7"/>
+                        <ChannelSet name="Pattern 4" from_dmx="8" to_dmx="8"/>
+                        <ChannelSet name="Pattern 5" from_dmx="9" to_dmx="9"/>
+                        <ChannelSet name="Pattern 6" from_dmx="10" to_dmx="10"/>
+                        <ChannelSet name="Pattern 7" from_dmx="11" to_dmx="11"/>
+                        <ChannelSet name="Pattern 8" from_dmx="12" to_dmx="12"/>
+                        <ChannelSet name="Pattern 9" from_dmx="13" to_dmx="13"/>
+                        <ChannelSet name="Pattern 10" from_dmx="14" to_dmx="14"/>
+                        <ChannelSet name="Pattern 11" from_dmx="15" to_dmx="15"/>
+                        <ChannelSet name="Pattern 12" from_dmx="16" to_dmx="16"/>
+                        <ChannelSet name="Pattern 13" from_dmx="17" to_dmx="17"/>
+                        <ChannelSet name="Pattern 14" from_dmx="18" to_dmx="18"/>
+                        <ChannelSet name="Pattern 15" from_dmx="19" to_dmx="19"/>
+                        <ChannelSet name="Pattern 16" from_dmx="20" to_dmx="20"/>
+                        <ChannelSet name="Pattern 17" from_dmx="21" to_dmx="21"/>
+                        <ChannelSet name="Pattern 18" from_dmx="22" to_dmx="22"/>
+                        <ChannelSet name="Pattern 19" from_dmx="23" to_dmx="23"/>
+                        <ChannelSet name="Pattern 20" from_dmx="24" to_dmx="24"/>
+                        <ChannelSet name="Pattern 21" from_dmx="25" to_dmx="25"/>
+                        <ChannelSet name="Pattern 22" from_dmx="26" to_dmx="26"/>
+                        <ChannelSet name="Pattern 23" from_dmx="27" to_dmx="27"/>
+                        <ChannelSet name="Pattern 24" from_dmx="28" to_dmx="28"/>
+                        <ChannelSet name="Pattern 25" from_dmx="29" to_dmx="29"/>
+                        <ChannelSet name="Pattern 26" from_dmx="30" to_dmx="30"/>
+                        <ChannelSet name="Pattern 27" from_dmx="31" to_dmx="31"/>
+                        <ChannelSet name="Pattern 28" from_dmx="32" to_dmx="32"/>
+                        <ChannelSet name="Pattern 29" from_dmx="33" to_dmx="33"/>
+                        <ChannelSet name="Pattern 30" from_dmx="34" to_dmx="34"/>
+                        <ChannelSet name="Pattern 31" from_dmx="35" to_dmx="35"/>
+                        <ChannelSet name="Pattern 32" from_dmx="36" to_dmx="36"/>
+                        <ChannelSet name="Pattern 33" from_dmx="37" to_dmx="37"/>
+                        <ChannelSet name="Pattern 34" from_dmx="38" to_dmx="38"/>
+                        <ChannelSet name="Pattern 35" from_dmx="39" to_dmx="39"/>
+                        <ChannelSet name="Pattern 36" from_dmx="40" to_dmx="40"/>
+                        <ChannelSet name="Pattern 37" from_dmx="41" to_dmx="41"/>
+                        <ChannelSet name="Pattern 38" from_dmx="42" to_dmx="42"/>
+                        <ChannelSet name="Pattern 39" from_dmx="43" to_dmx="43"/>
+                        <ChannelSet name="Pattern 40" from_dmx="44" to_dmx="44"/>
+                        <ChannelSet name="Pattern 41" from_dmx="45" to_dmx="45"/>
+                        <ChannelSet name="Pattern 42" from_dmx="46" to_dmx="46"/>
+                        <ChannelSet name="Pattern 43" from_dmx="47" to_dmx="47"/>
+                        <ChannelSet name="Pattern 44" from_dmx="48" to_dmx="48"/>
+                        <ChannelSet name="Pattern 45" from_dmx="49" to_dmx="49"/>
+                        <ChannelSet name="Pattern 46" from_dmx="50" to_dmx="50"/>
+                        <ChannelSet name="Pattern 47" from_dmx="51" to_dmx="51"/>
+                        <ChannelSet name="Pattern 48" from_dmx="52" to_dmx="52"/>
+                        <ChannelSet name="Pattern 49" from_dmx="53" to_dmx="53"/>
+                        <ChannelSet name="Pattern 50" from_dmx="54" to_dmx="54"/>
+                        <ChannelSet name="Pattern 51" from_dmx="55" to_dmx="55"/>
+                        <ChannelSet name="Pattern 52" from_dmx="56" to_dmx="56"/>
+                        <ChannelSet name="Pattern 53" from_dmx="57" to_dmx="57"/>
+                        <ChannelSet name="Pattern 54" from_dmx="58" to_dmx="58"/>
+                        <ChannelSet name="Pattern 55" from_dmx="59" to_dmx="59"/>
+                        <ChannelSet name="Pattern 56" from_dmx="60" to_dmx="60"/>
+                        <ChannelSet name="Pattern 57" from_dmx="61" to_dmx="61"/>
+                        <ChannelSet name="Pattern 58" from_dmx="62" to_dmx="62"/>
+                        <ChannelSet name="Pattern 59" from_dmx="63" to_dmx="63"/>
+                        <ChannelSet name="Pattern 60" from_dmx="64" to_dmx="64"/>
+                        <ChannelSet name="Pattern 61" from_dmx="65" to_dmx="65"/>
+                        <ChannelSet name="Pattern 62" from_dmx="66" to_dmx="66"/>
+                        <ChannelSet name="Pattern 63" from_dmx="67" to_dmx="67"/>
+                        <ChannelSet name="Pattern 64" from_dmx="68" to_dmx="68"/>
+                        <ChannelSet name="Pattern 65" from_dmx="69" to_dmx="69"/>
+                        <ChannelSet name="Pattern 66" from_dmx="70" to_dmx="70"/>
+                        <ChannelSet name="Pattern 67" from_dmx="71" to_dmx="71"/>
+                        <ChannelSet name="Pattern 68" from_dmx="72" to_dmx="72"/>
+                        <ChannelSet name="Pattern 69" from_dmx="73" to_dmx="73"/>
+                        <ChannelSet name="Pattern 70" from_dmx="74" to_dmx="74"/>
+                        <ChannelSet name="Pattern 71" from_dmx="75" to_dmx="75"/>
+                        <ChannelSet name="Pattern 72" from_dmx="76" to_dmx="76"/>
+                        <ChannelSet name="Pattern 73" from_dmx="77" to_dmx="77"/>
+                        <ChannelSet name="Pattern 74" from_dmx="78" to_dmx="78"/>
+                        <ChannelSet name="Pattern 75" from_dmx="79" to_dmx="79"/>
+                        <ChannelSet name="Pattern 76" from_dmx="80" to_dmx="80"/>
+                        <ChannelSet name="Pattern 77" from_dmx="81" to_dmx="81"/>
+                        <ChannelSet name="Pattern 78" from_dmx="82" to_dmx="82"/>
+                        <ChannelSet name="Pattern 79" from_dmx="83" to_dmx="83"/>
+                        <ChannelSet name="Pattern 80" from_dmx="84" to_dmx="84"/>
+                        <ChannelSet name="Pattern 81" from_dmx="85" to_dmx="85"/>
+                        <ChannelSet name="Pattern 82" from_dmx="86" to_dmx="86"/>
+                        <ChannelSet name="Pattern 83" from_dmx="87" to_dmx="87"/>
+                        <ChannelSet name="Pattern 84" from_dmx="88" to_dmx="88"/>
+                        <ChannelSet name="Pattern 85" from_dmx="89" to_dmx="89"/>
+                        <ChannelSet name="Pattern 86" from_dmx="90" to_dmx="90"/>
+                        <ChannelSet name="Pattern 87" from_dmx="91" to_dmx="91"/>
+                        <ChannelSet name="Pattern 88" from_dmx="92" to_dmx="92"/>
+                        <ChannelSet name="Pattern 89" from_dmx="93" to_dmx="93"/>
+                        <ChannelSet name="Pattern 90" from_dmx="94" to_dmx="94"/>
+                        <ChannelSet name="Pattern 91" from_dmx="95" to_dmx="95"/>
+                        <ChannelSet name="Pattern 92" from_dmx="96" to_dmx="96"/>
+                        <ChannelSet name="Pattern 93" from_dmx="97" to_dmx="97"/>
+                        <ChannelSet name="Pattern 94" from_dmx="98" to_dmx="98"/>
+                        <ChannelSet name="Pattern 95" from_dmx="99" to_dmx="99"/>
+                        <ChannelSet name="Pattern 96" from_dmx="100" to_dmx="100"/>
+                        <ChannelSet name="Pattern 97" from_dmx="101" to_dmx="101"/>
+                        <ChannelSet name="Pattern 98" from_dmx="102" to_dmx="102"/>
+                        <ChannelSet name="Pattern 99" from_dmx="103" to_dmx="103"/>
+                        <ChannelSet name="Pattern 100" from_dmx="104" to_dmx="104"/>
+                        <ChannelSet name="Pattern 101" from_dmx="105" to_dmx="105"/>
+                        <ChannelSet name="Pattern 102" from_dmx="106" to_dmx="106"/>
+                        <ChannelSet name="Pattern 103" from_dmx="107" to_dmx="107"/>
+                        <ChannelSet name="Pattern 104" from_dmx="108" to_dmx="108"/>
+                        <ChannelSet name="Pattern 105" from_dmx="109" to_dmx="109"/>
+                        <ChannelSet name="Pattern 106" from_dmx="110" to_dmx="110"/>
+                        <ChannelSet name="Pattern 107" from_dmx="111" to_dmx="111"/>
+                        <ChannelSet name="Pattern 108" from_dmx="112" to_dmx="112"/>
+                        <ChannelSet name="Pattern 109" from_dmx="113" to_dmx="113"/>
+                        <ChannelSet name="Pattern 110" from_dmx="114" to_dmx="114"/>
+                        <ChannelSet name="Pattern 111" from_dmx="115" to_dmx="115"/>
+                        <ChannelSet name="Pattern 112" from_dmx="116" to_dmx="116"/>
+                        <ChannelSet name="Pattern 113" from_dmx="117" to_dmx="117"/>
+                        <ChannelSet name="Pattern 114" from_dmx="118" to_dmx="118"/>
+                        <ChannelSet name="Pattern 115" from_dmx="119" to_dmx="119"/>
+                        <ChannelSet name="Pattern 116" from_dmx="120" to_dmx="120"/>
+                        <ChannelSet name="Pattern 117" from_dmx="121" to_dmx="121"/>
+                        <ChannelSet name="Pattern 118" from_dmx="122" to_dmx="122"/>
+                        <ChannelSet name="Pattern 119" from_dmx="123" to_dmx="123"/>
+                        <ChannelSet name="Pattern 120" from_dmx="124" to_dmx="124"/>
+                        <ChannelSet name="Pattern 121" from_dmx="125" to_dmx="125"/>
+                        <ChannelSet name="Pattern 122" from_dmx="126" to_dmx="126"/>
+                        <ChannelSet name="Pattern 123" from_dmx="127" to_dmx="127"/>
+                        <ChannelSet name="Pattern 124" from_dmx="128" to_dmx="128"/>
+                        <ChannelSet name="Pattern 125" from_dmx="129" to_dmx="129"/>
+                        <ChannelSet name="Pattern 126" from_dmx="130" to_dmx="130"/>
+                        <ChannelSet name="Pattern 127" from_dmx="131" to_dmx="131"/>
+                        <ChannelSet name="Pattern 128" from_dmx="132" to_dmx="132"/>
+                        <ChannelSet name="Pattern 129" from_dmx="133" to_dmx="133"/>
+                        <ChannelSet name="Pattern 130" from_dmx="134" to_dmx="134"/>
+                        <ChannelSet name="Pattern 131" from_dmx="135" to_dmx="135"/>
+                        <ChannelSet name="Pattern 132" from_dmx="136" to_dmx="136"/>
+                        <ChannelSet name="Pattern 133" from_dmx="137" to_dmx="137"/>
+                        <ChannelSet name="Pattern 134" from_dmx="138" to_dmx="138"/>
+                        <ChannelSet name="Pattern 135" from_dmx="139" to_dmx="139"/>
+                        <ChannelSet name="Pattern 136" from_dmx="140" to_dmx="140"/>
+                        <ChannelSet name="Pattern 137" from_dmx="141" to_dmx="141"/>
+                        <ChannelSet name="Pattern 138" from_dmx="142" to_dmx="142"/>
+                        <ChannelSet name="Pattern 139" from_dmx="143" to_dmx="143"/>
+                        <ChannelSet name="Pattern 140" from_dmx="144" to_dmx="144"/>
+                        <ChannelSet name="Pattern 141" from_dmx="145" to_dmx="145"/>
+                        <ChannelSet name="Pattern 142" from_dmx="146" to_dmx="146"/>
+                        <ChannelSet name="Pattern 143" from_dmx="147" to_dmx="147"/>
+                        <ChannelSet name="Pattern 144" from_dmx="148" to_dmx="148"/>
+                        <ChannelSet name="Pattern 145" from_dmx="149" to_dmx="149"/>
+                        <ChannelSet name="Pattern 146" from_dmx="150" to_dmx="150"/>
+                        <ChannelSet name="Pattern 147" from_dmx="151" to_dmx="151"/>
+                        <ChannelSet name="Pattern 148" from_dmx="152" to_dmx="152"/>
+                        <ChannelSet name="Pattern 149" from_dmx="153" to_dmx="153"/>
+                        <ChannelSet name="Pattern 150" from_dmx="154" to_dmx="154"/>
+                        <ChannelSet name="Pattern 151" from_dmx="155" to_dmx="155"/>
+                        <ChannelSet name="Pattern 152" from_dmx="156" to_dmx="156"/>
+                        <ChannelSet name="Pattern 153" from_dmx="157" to_dmx="157"/>
+                        <ChannelSet name="Pattern 154" from_dmx="158" to_dmx="158"/>
+                        <ChannelSet name="Pattern 155" from_dmx="159" to_dmx="159"/>
+                        <ChannelSet name="Pattern 156" from_dmx="160" to_dmx="160"/>
+                        <ChannelSet name="Pattern 157" from_dmx="161" to_dmx="161"/>
+                        <ChannelSet name="Pattern 158" from_dmx="162" to_dmx="162"/>
+                        <ChannelSet name="Pattern 159" from_dmx="163" to_dmx="163"/>
+                        <ChannelSet name="Pattern 160" from_dmx="164" to_dmx="164"/>
+                        <ChannelSet name="Pattern 161" from_dmx="165" to_dmx="165"/>
+                        <ChannelSet name="Pattern 162" from_dmx="166" to_dmx="166"/>
+                        <ChannelSet name="Pattern 163" from_dmx="167" to_dmx="167"/>
+                        <ChannelSet name="Pattern 164" from_dmx="168" to_dmx="168"/>
+                        <ChannelSet name="Pattern 165" from_dmx="169" to_dmx="169"/>
+                        <ChannelSet name="Pattern 166" from_dmx="170" to_dmx="170"/>
+                        <ChannelSet name="Pattern 167" from_dmx="171" to_dmx="171"/>
+                        <ChannelSet name="Pattern 168" from_dmx="172" to_dmx="172"/>
+                        <ChannelSet name="Pattern 169" from_dmx="173" to_dmx="173"/>
+                        <ChannelSet name="Pattern 170" from_dmx="174" to_dmx="174"/>
+                        <ChannelSet name="Pattern 171" from_dmx="175" to_dmx="175"/>
+                        <ChannelSet name="Pattern 172" from_dmx="176" to_dmx="176"/>
+                        <ChannelSet name="Pattern 173" from_dmx="177" to_dmx="177"/>
+                        <ChannelSet name="Pattern 174" from_dmx="178" to_dmx="178"/>
+                        <ChannelSet name="Pattern 175" from_dmx="179" to_dmx="179"/>
+                        <ChannelSet name="Pattern 176" from_dmx="180" to_dmx="180"/>
+                        <ChannelSet name="Pattern 177" from_dmx="181" to_dmx="181"/>
+                        <ChannelSet name="Pattern 178" from_dmx="182" to_dmx="182"/>
+                        <ChannelSet name="Pattern 179" from_dmx="183" to_dmx="183"/>
+                        <ChannelSet name="Pattern 180" from_dmx="184" to_dmx="184"/>
+                        <ChannelSet name="Pattern 181" from_dmx="185" to_dmx="185"/>
+                        <ChannelSet name="Pattern 182" from_dmx="186" to_dmx="186"/>
+                        <ChannelSet name="Pattern 183" from_dmx="187" to_dmx="187"/>
+                        <ChannelSet name="Pattern 184" from_dmx="188" to_dmx="188"/>
+                        <ChannelSet name="Pattern 185" from_dmx="189" to_dmx="189"/>
+                        <ChannelSet name="Pattern 186" from_dmx="190" to_dmx="190"/>
+                        <ChannelSet name="Pattern 187" from_dmx="191" to_dmx="191"/>
+                        <ChannelSet name="Pattern 188" from_dmx="192" to_dmx="192"/>
+                        <ChannelSet name="Pattern 189" from_dmx="193" to_dmx="193"/>
+                        <ChannelSet name="Pattern 190" from_dmx="194" to_dmx="194"/>
+                        <ChannelSet name="Pattern 191" from_dmx="195" to_dmx="195"/>
+                        <ChannelSet name="Pattern 192" from_dmx="196" to_dmx="196"/>
+                        <ChannelSet name="Pattern 193" from_dmx="197" to_dmx="197"/>
+                        <ChannelSet name="Pattern 194" from_dmx="198" to_dmx="198"/>
+                        <ChannelSet name="Pattern 195" from_dmx="199" to_dmx="199"/>
+                        <ChannelSet name="Pattern 196" from_dmx="200" to_dmx="200"/>
+                        <ChannelSet name="Pattern 197" from_dmx="201" to_dmx="201"/>
+                        <ChannelSet name="Pattern 198" from_dmx="202" to_dmx="202"/>
+                        <ChannelSet name="Pattern 199" from_dmx="203" to_dmx="203"/>
+                        <ChannelSet name="Pattern 201" from_dmx="204" to_dmx="204"/>
+                        <ChannelSet name="Pattern 202" from_dmx="205" to_dmx="205"/>
+                        <ChannelSet name="Pattern 203" from_dmx="206" to_dmx="206"/>
+                        <ChannelSet name="Pattern 204" from_dmx="207" to_dmx="207"/>
+                        <ChannelSet name="Pattern 205" from_dmx="208" to_dmx="208"/>
+                        <ChannelSet name="Pattern 206" from_dmx="209" to_dmx="209"/>
+                        <ChannelSet name="Pattern 207" from_dmx="210" to_dmx="210"/>
+                        <ChannelSet name="Pattern 208" from_dmx="211" to_dmx="211"/>
+                        <ChannelSet name="Pattern 209" from_dmx="212" to_dmx="212"/>
+                        <ChannelSet name="Pattern 210" from_dmx="213" to_dmx="213"/>
+                        <ChannelSet name="Pattern 211" from_dmx="214" to_dmx="214"/>
+                        <ChannelSet name="Pattern 212" from_dmx="215" to_dmx="215"/>
+                        <ChannelSet name="Pattern 213" from_dmx="216" to_dmx="216"/>
+                        <ChannelSet name="Pattern 214" from_dmx="217" to_dmx="217"/>
+                        <ChannelSet name="Pattern 215" from_dmx="218" to_dmx="218"/>
+                        <ChannelSet name="Pattern 216" from_dmx="219" to_dmx="219"/>
+                        <ChannelSet name="Pattern 217" from_dmx="220" to_dmx="220"/>
+                        <ChannelSet name="Pattern 218" from_dmx="221" to_dmx="221"/>
+                        <ChannelSet name="Pattern 219" from_dmx="222" to_dmx="222"/>
+                        <ChannelSet name="Pattern 220" from_dmx="223" to_dmx="223"/>
+                        <ChannelSet name="Pattern 221" from_dmx="224" to_dmx="224"/>
+                        <ChannelSet name="Pattern 222" from_dmx="225" to_dmx="225"/>
+                        <ChannelSet name="Pattern 223" from_dmx="226" to_dmx="226"/>
+                        <ChannelSet name="Pattern 224" from_dmx="227" to_dmx="227"/>
+                        <ChannelSet name="Pattern 225" from_dmx="228" to_dmx="228"/>
+                        <ChannelSet name="Pattern 226" from_dmx="229" to_dmx="229"/>
+                        <ChannelSet name="Pattern 227" from_dmx="230" to_dmx="230"/>
+                        <ChannelSet name="Pattern 228" from_dmx="231" to_dmx="231"/>
+                        <ChannelSet name="Pattern 229" from_dmx="232" to_dmx="232"/>
+                        <ChannelSet name="Pattern 230" from_dmx="233" to_dmx="233"/>
+                        <ChannelSet name="Pattern 231" from_dmx="234" to_dmx="234"/>
+                        <ChannelSet name="Pattern 232" from_dmx="235" to_dmx="235"/>
+                        <ChannelSet name="Pattern 233" from_dmx="236" to_dmx="236"/>
+                        <ChannelSet name="Pattern 234" from_dmx="237" to_dmx="237"/>
+                        <ChannelSet name="Pattern 235" from_dmx="238" to_dmx="238"/>
+                        <ChannelSet name="Pattern 236" from_dmx="239" to_dmx="239"/>
+                        <ChannelSet name="Pattern 237" from_dmx="240" to_dmx="240"/>
+                        <ChannelSet name="Pattern 238" from_dmx="241" to_dmx="241"/>
+                        <ChannelSet name="Pattern 239" from_dmx="242" to_dmx="242"/>
+                        <ChannelSet name="Pattern 240" from_dmx="243" to_dmx="243"/>
+                        <ChannelSet name="Pattern 241" from_dmx="244" to_dmx="244"/>
+                        <ChannelSet name="Pattern 242" from_dmx="245" to_dmx="245"/>
+                        <ChannelSet name="Pattern 243" from_dmx="246" to_dmx="246"/>
+                        <ChannelSet name="Pattern 244" from_dmx="247" to_dmx="247"/>
+                        <ChannelSet name="Pattern 245" from_dmx="248" to_dmx="248"/>
+                        <ChannelSet name="Pattern 246" from_dmx="249" to_dmx="249"/>
+                        <ChannelSet name="Pattern 247" from_dmx="250" to_dmx="250"/>
+                        <ChannelSet name="Pattern 248" from_dmx="251" to_dmx="251"/>
+                        <ChannelSet name="Pattern 249" from_dmx="252" to_dmx="252"/>
+                        <ChannelSet name="Pattern 250" from_dmx="253" to_dmx="253"/>
+                        <ChannelSet name="Pattern 251" from_dmx="254" to_dmx="254"/>
+                        <ChannelSet name="Pattern 252" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="12" default="0" snap="true" attribute="EFFECT2" feature="Beam" preset="Beam" highlight_value="0">
+                    <ChannelFunction subattribute="EFFECTSELECT2" attribute="EFFECT2" feature="Beam" preset="Beam" from="0" to="1.96" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="328965">
+                        <ChannelSet name="LED Built-In Open" from_dmx="0" to_dmx="5"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="EFFECTSELECT2" attribute="EFFECT2" feature="Beam" preset="Beam" from="1.96" to="45.1" physfrom="0" physto="1" min_dmx_24="394758" max_dmx_24="7566195">
+                        <ChannelSet name="LED Built-In Movement - 1" from_dmx="6" to_dmx="10"/>
+                        <ChannelSet name="LED Built-In Movement - 2" from_dmx="11" to_dmx="15"/>
+                        <ChannelSet name="LED Built-In Movement - 3" from_dmx="16" to_dmx="20"/>
+                        <ChannelSet name="LED Built-In Movement - 4" from_dmx="21" to_dmx="25"/>
+                        <ChannelSet name="LED Built-In Movement - 5" from_dmx="26" to_dmx="30"/>
+                        <ChannelSet name="LED Built-In Movement - 6" from_dmx="31" to_dmx="35"/>
+                        <ChannelSet name="LED Built-In Movement - 7" from_dmx="36" to_dmx="40"/>
+                        <ChannelSet name="LED Built-In Movement - 8" from_dmx="41" to_dmx="45"/>
+                        <ChannelSet name="LED Built-In Movement - 9" from_dmx="46" to_dmx="50"/>
+                        <ChannelSet name="LED Built-In Movement - 10" from_dmx="51" to_dmx="55"/>
+                        <ChannelSet name="LED Built-In Movement - 11" from_dmx="56" to_dmx="60"/>
+                        <ChannelSet name="LED Built-In Movement - 12" from_dmx="61" to_dmx="65"/>
+                        <ChannelSet name="LED Built-In Movement - 13" from_dmx="66" to_dmx="70"/>
+                        <ChannelSet name="LED Built-In Movement - 14" from_dmx="71" to_dmx="75"/>
+                        <ChannelSet name="LED Built-In Movement - 15" from_dmx="76" to_dmx="80"/>
+                        <ChannelSet name="LED Built-In Movement - 16" from_dmx="81" to_dmx="85"/>
+                        <ChannelSet name="LED Built-In Movement - 17" from_dmx="86" to_dmx="90"/>
+                        <ChannelSet name="LED Built-In Movement - 18" from_dmx="91" to_dmx="95"/>
+                        <ChannelSet name="LED Built-In Movement - 19" from_dmx="96" to_dmx="100"/>
+                        <ChannelSet name="LED Built-In Movement - 20" from_dmx="101" to_dmx="105"/>
+                        <ChannelSet name="LED Built-In Movement - 21" from_dmx="106" to_dmx="110"/>
+                        <ChannelSet name="LED Built-In Movement - 22" from_dmx="111" to_dmx="115"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="EFFECTSELECT2" attribute="EFFECT2" feature="Beam" preset="Beam" from="45.1" to="84.31" physfrom="0" physto="1" min_dmx_24="7631988" max_dmx_24="14145495">
+                        <ChannelSet name="LED Built-In RGB - 1" from_dmx="116" to_dmx="120"/>
+                        <ChannelSet name="LED Built-In RGB - 2" from_dmx="121" to_dmx="125"/>
+                        <ChannelSet name="LED Built-In RGB - 3" from_dmx="126" to_dmx="130"/>
+                        <ChannelSet name="LED Built-In RGB - 4" from_dmx="131" to_dmx="135"/>
+                        <ChannelSet name="LED Built-In RGB - 5" from_dmx="136" to_dmx="140"/>
+                        <ChannelSet name="LED Built-In RGB - 6" from_dmx="141" to_dmx="145"/>
+                        <ChannelSet name="LED Built-In RGB - 7" from_dmx="146" to_dmx="150"/>
+                        <ChannelSet name="LED Built-In RGB - 8" from_dmx="151" to_dmx="155"/>
+                        <ChannelSet name="LED Built-In RGB - 9" from_dmx="156" to_dmx="160"/>
+                        <ChannelSet name="LED Built-In RGB - 10" from_dmx="161" to_dmx="165"/>
+                        <ChannelSet name="LED Built-In RGB - 11" from_dmx="166" to_dmx="170"/>
+                        <ChannelSet name="LED Built-In RGB - 12" from_dmx="171" to_dmx="175"/>
+                        <ChannelSet name="LED Built-In RGB - 13" from_dmx="176" to_dmx="180"/>
+                        <ChannelSet name="LED Built-In RGB - 14" from_dmx="181" to_dmx="185"/>
+                        <ChannelSet name="LED Built-In RGB - 15" from_dmx="186" to_dmx="190"/>
+                        <ChannelSet name="LED Built-In RGB - 16" from_dmx="191" to_dmx="195"/>
+                        <ChannelSet name="LED Built-In RGB - 17" from_dmx="196" to_dmx="200"/>
+                        <ChannelSet name="LED Built-In RGB - 18" from_dmx="201" to_dmx="205"/>
+                        <ChannelSet name="LED Built-In RGB - 19" from_dmx="206" to_dmx="210"/>
+                        <ChannelSet name="LED Built-In RGB - 20" from_dmx="211" to_dmx="215"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="EFFECTSELECT2" attribute="EFFECT2" feature="Beam" preset="Beam" from="84.31" to="100" physfrom="0" physto="1" min_dmx_24="14211288" max_dmx_24="16777215">
+                        <ChannelSet name="LED Built-In Open" from_dmx="216" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="13" default="128" attribute="EFFECTRATE2" feature="Beam" preset="Beam" highlight_value="0">
+                    <ChannelFunction subattribute="EFFECTRATE2" attribute="EFFECTRATE2" feature="Beam" preset="Beam" from="0" to="100" physfrom="0" physto="10" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="F > S - Speed" from_dmx="0" to_dmx="127" slot_from="10" slot_to="0.1"/>
+                        <ChannelSet name="Stop" from_dmx="128" to_dmx="128" slot_from="0" slot_to="0"/>
+                        <ChannelSet name="S > F - Speed" from_dmx="129" to_dmx="255" slot_from="0.1" slot_to="10"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="14" default="0" attribute="Effects2Adjust1" feature="Beam" preset="Beam" highlight_value="0">
+                    <ChannelFunction subattribute="Effects2Adjust1" attribute="Effects2Adjust1" feature="Beam" preset="Beam" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="18" default="0" attribute="COLORMACROS2" feature="Color" preset="Color" highlight_value="0">
+                    <ChannelFunction subattribute="COLORMACROS2" attribute="COLORMACROS2" feature="Color" preset="Color" from="0" to="0" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="0">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="0" slot_from="0" slot_to="0"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="CTC" attribute="COLORMACROS2" feature="Color" preset="Color" from="0" to="5.49" physfrom="8000" physto="0" min_dmx_24="65793" max_dmx_24="921102" wheel="1">
+                        <ChannelSet name="White 2700K - CTC" from_dmx="1" to_dmx="2" slot_from="2700" slot_to="2700" slot_index="0"/>
+                        <ChannelSet name="White 3200K - CTC" from_dmx="3" to_dmx="4" slot_from="3200" slot_to="3200" slot_index="1"/>
+                        <ChannelSet name="White 4000K - CTC" from_dmx="5" to_dmx="6" slot_from="4000" slot_to="4000" slot_index="2"/>
+                        <ChannelSet name="White 4200K - CTC" from_dmx="7" to_dmx="8" slot_from="4200" slot_to="4200" slot_index="3"/>
+                        <ChannelSet name="White 5600K - CTC" from_dmx="9" to_dmx="10" slot_from="5600" slot_to="5600" slot_index="4"/>
+                        <ChannelSet name="White 6500K - CTC" from_dmx="11" to_dmx="12" slot_from="6500" slot_to="6500" slot_index="5"/>
+                        <ChannelSet name="White 7500K - CTC" from_dmx="13" to_dmx="14" slot_from="7500" slot_to="7500" slot_index="6"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="COLORMACROS2" attribute="COLORMACROS2" feature="Color" preset="Color" from="5.49" to="93.73" physfrom="0" physto="0" min_dmx_24="986895" max_dmx_24="15724527" wheel="1">
+                        <ChannelSet name="Blue" from_dmx="15" to_dmx="15" slot_from="0" slot_to="0" slot_index="7"/>
+                        <ChannelSet name="+Green" from_dmx="16" to_dmx="51" slot_index="8"/>
+                        <ChannelSet name="Cyan" from_dmx="52" to_dmx="52" slot_from="0" slot_to="0" slot_index="9"/>
+                        <ChannelSet name="-Blue" from_dmx="53" to_dmx="88" slot_index="10"/>
+                        <ChannelSet name="Green" from_dmx="89" to_dmx="89" slot_from="0" slot_to="0" slot_index="11"/>
+                        <ChannelSet name="+Red" from_dmx="90" to_dmx="125" slot_index="12"/>
+                        <ChannelSet name="Yellow" from_dmx="126" to_dmx="126" slot_from="0" slot_to="0" slot_index="13"/>
+                        <ChannelSet name="-Green" from_dmx="127" to_dmx="162" slot_index="14"/>
+                        <ChannelSet name="Red" from_dmx="163" to_dmx="163" slot_from="0" slot_to="0" slot_index="15"/>
+                        <ChannelSet name="+Blue" from_dmx="164" to_dmx="200" slot_index="16"/>
+                        <ChannelSet name="Magenta" from_dmx="201" to_dmx="201" slot_from="0" slot_to="0" slot_index="17"/>
+                        <ChannelSet name="-Red" from_dmx="202" to_dmx="238" slot_index="18"/>
+                        <ChannelSet name="Blue" from_dmx="239" to_dmx="239" slot_from="0" slot_to="0" slot_index="7"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="ColorControl" attribute="COLORMACROS2" feature="Color" preset="Color" from="93.73" to="96.86" physfrom="10" physto="0.1" min_dmx_24="15790320" max_dmx_24="16250871">
+                        <ChannelSet name="Fast" from_dmx="240" to_dmx="240" slot_from="10" slot_to="10"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="241" to_dmx="246" slot_from="8.59" slot_to="1.51"/>
+                        <ChannelSet name="Slow" from_dmx="247" to_dmx="247" slot_from="0.1" slot_to="0.1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="ColorControl" attribute="COLORMACROS2" feature="Color" preset="Color" from="96.86" to="100" physfrom="10" physto="0.1" min_dmx_24="16316664" max_dmx_24="16777215">
+                        <ChannelSet name="Fast" from_dmx="248" to_dmx="248" slot_from="10" slot_to="10"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="249" to_dmx="254" slot_from="8.59" slot_to="1.51"/>
+                        <ChannelSet name="Slow" from_dmx="255" to_dmx="255" slot_from="0.1" slot_to="0.1"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="19" fine="20" default="0" react_to_master="1" attribute="BackgroundDimmer" feature="Dimmer" preset="Dimmer" highlight_value="0">
+                    <ChannelFunction subattribute="BackgroundDimmer" attribute="BackgroundDimmer" feature="Dimmer" preset="Dimmer" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="65534"/>
+                        <ChannelSet name="Max" from_dmx="65535" to_dmx="65535"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="24" fine="25" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="65534"/>
+                        <ChannelSet name="Max" from_dmx="65535" to_dmx="65535"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="28" default="22" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" highlight_value="100">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="9.41" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="1579032">
+                        <ChannelSet name="Shutter Closed" from_dmx="0" to_dmx="19" slot_from="0" slot_to="0"/>
+                        <ChannelSet name="Shutter Open" from_dmx="20" to_dmx="24" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="9.41" to="25.1" physfrom="20" physto="0.1" min_dmx_24="1644825" max_dmx_24="4210752">
+                        <ChannelSet name="Fast" from_dmx="25" to_dmx="25"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="26" to_dmx="63"/>
+                        <ChannelSet name="Slow" from_dmx="64" to_dmx="64"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="25.1" to="27.06" physfrom="1" physto="1" min_dmx_24="4276545" max_dmx_24="4539717">
+                        <ChannelSet name="Shutter Open" from_dmx="65" to_dmx="69" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_PULSE_CLOSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="27.06" to="32.94" physfrom="20" physto="0.1" min_dmx_24="4605510" max_dmx_24="5526612">
+                        <ChannelSet name="Fast" from_dmx="70" to_dmx="70"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="71" to_dmx="83"/>
+                        <ChannelSet name="Slow" from_dmx="84" to_dmx="84"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="32.94" to="34.9" physfrom="1" physto="1" min_dmx_24="5592405" max_dmx_24="5855577">
+                        <ChannelSet name="Shutter Open" from_dmx="85" to_dmx="89" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_PULSE_OPEN" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="34.9" to="40.78" physfrom="20" physto="0.1" min_dmx_24="5921370" max_dmx_24="6842472">
+                        <ChannelSet name="Fast" from_dmx="90" to_dmx="90"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="91" to_dmx="103"/>
+                        <ChannelSet name="Slow" from_dmx="104" to_dmx="104"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="40.78" to="42.75" physfrom="1" physto="1" min_dmx_24="6908265" max_dmx_24="7171437">
+                        <ChannelSet name="Shutter Open" from_dmx="105" to_dmx="109" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_RANDOM" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="42.75" to="48.63" physfrom="20" physto="0.1" min_dmx_24="7237230" max_dmx_24="8158332">
+                        <ChannelSet name="Fast" from_dmx="110" to_dmx="110"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="111" to_dmx="123"/>
+                        <ChannelSet name="Slow" from_dmx="124" to_dmx="124"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="48.63" to="50.59" physfrom="1" physto="1" min_dmx_24="8224125" max_dmx_24="8487297">
+                        <ChannelSet name="Shutter Open" from_dmx="125" to_dmx="129" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_RANDOM_PULSE_CLOSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="50.59" to="56.47" physfrom="20" physto="0.1" min_dmx_24="8553090" max_dmx_24="9474192">
+                        <ChannelSet name="Fast" from_dmx="130" to_dmx="130"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="131" to_dmx="143"/>
+                        <ChannelSet name="Slow" from_dmx="144" to_dmx="144"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="56.47" to="58.43" physfrom="1" physto="1" min_dmx_24="9539985" max_dmx_24="9803157">
+                        <ChannelSet name="Shutter Open" from_dmx="145" to_dmx="149" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_RANDOM_PULSE_OPEN" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="58.43" to="64.31" physfrom="20" physto="0.1" min_dmx_24="9868950" max_dmx_24="10790052">
+                        <ChannelSet name="Fast" from_dmx="150" to_dmx="150"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="151" to_dmx="163"/>
+                        <ChannelSet name="Slow" from_dmx="164" to_dmx="164"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="64.31" to="66.27" physfrom="1" physto="1" min_dmx_24="10855845" max_dmx_24="11119017">
+                        <ChannelSet name="Shutter Open" from_dmx="165" to_dmx="169" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_PULSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="66.27" to="72.16" physfrom="20" physto="0.1" min_dmx_24="11184810" max_dmx_24="12105912">
+                        <ChannelSet name="Fast" from_dmx="170" to_dmx="170"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="171" to_dmx="183"/>
+                        <ChannelSet name="Slow" from_dmx="184" to_dmx="184"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="72.16" to="74.12" physfrom="1" physto="1" min_dmx_24="12171705" max_dmx_24="12434877">
+                        <ChannelSet name="Shutter Open" from_dmx="185" to_dmx="189" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_RANDOM_PULSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="74.12" to="80" physfrom="20" physto="0.1" min_dmx_24="12500670" max_dmx_24="13421772">
+                        <ChannelSet name="Fast" from_dmx="190" to_dmx="190"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="191" to_dmx="203"/>
+                        <ChannelSet name="Slow" from_dmx="204" to_dmx="204"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="80" to="81.96" physfrom="1" physto="1" min_dmx_24="13487565" max_dmx_24="13750737">
+                        <ChannelSet name="Shutter Open" from_dmx="205" to_dmx="209" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="81.96" to="87.84" physfrom="20" physto="0.1" min_dmx_24="13816530" max_dmx_24="14737632">
+                        <ChannelSet name="Fast" from_dmx="210" to_dmx="210"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="211" to_dmx="223"/>
+                        <ChannelSet name="Slow" from_dmx="224" to_dmx="224"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="87.84" to="89.8" physfrom="1" physto="1" min_dmx_24="14803425" max_dmx_24="15066597">
+                        <ChannelSet name="Shutter Open" from_dmx="225" to_dmx="229" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_RANDOM_PULSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="89.8" to="95.69" physfrom="20" physto="0.1" min_dmx_24="15132390" max_dmx_24="16053492">
+                        <ChannelSet name="Fast" from_dmx="230" to_dmx="230"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="231" to_dmx="243"/>
+                        <ChannelSet name="Slow" from_dmx="244" to_dmx="244"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="95.69" to="100" physfrom="1" physto="1" min_dmx_24="16119285" max_dmx_24="16777215">
+                        <ChannelSet name="Shutter Open" from_dmx="245" to_dmx="255" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="32" default="0" attribute="CONTROL" feature="Control" preset="Control">
+                    <ChannelFunction subattribute="CONTROL" attribute="CONTROL" feature="Control" preset="Control" from="0" to="3.53" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="592137">
+                        <ChannelSet name="Control Off" from_dmx="0" to_dmx="9"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="BLACKOUT" attribute="CONTROL" feature="Control" preset="Control" from="3.53" to="5.49" physfrom="0" physto="1" min_dmx_24="657930" max_dmx_24="921102">
+                        <ChannelSet name="Blackout on P/T" from_dmx="10" to_dmx="14"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="CONTROL" feature="Control" preset="Control" from="5.49" to="7.45" physfrom="0" physto="1" min_dmx_24="986895" max_dmx_24="1250067">
+                        <ChannelSet name="Reserved" from_dmx="15" to_dmx="19"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="COLORMIXMODE" attribute="CONTROL" feature="Control" preset="Control" from="7.45" to="11.37" physfrom="0" physto="1" min_dmx_24="1315860" max_dmx_24="1907997">
+                        <ChannelSet name="RGBW (Additive) Color Mixing Mode" from_dmx="20" to_dmx="24"/>
+                        <ChannelSet name="CMY (Subtractive) Color Mixing Mode" from_dmx="25" to_dmx="29"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="MACROSELECT" attribute="CONTROL" feature="Control" preset="Control" from="11.37" to="15.29" physfrom="0" physto="1" min_dmx_24="1973790" max_dmx_24="2565927">
+                        <ChannelSet name="Combine Main and Ring" from_dmx="30" to_dmx="34"/>
+                        <ChannelSet name="Disable Combine Main and Ring" from_dmx="35" to_dmx="39"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="FANS" attribute="CONTROL" feature="Control" preset="Control" from="15.29" to="19.22" physfrom="0" physto="1" min_dmx_24="2631720" max_dmx_24="3223857">
+                        <ChannelSet name="Defrost Fan On" from_dmx="40" to_dmx="44"/>
+                        <ChannelSet name="Defrost Fan Off" from_dmx="45" to_dmx="49"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="PANRESET" attribute="CONTROL" feature="Control" preset="Control" from="19.22" to="21.18" physfrom="0" physto="1" min_dmx_24="3289650" max_dmx_24="3552822">
+                        <ChannelSet name="Pan Reset" from_dmx="50" to_dmx="54"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="TILTRESET" attribute="CONTROL" feature="Control" preset="Control" from="21.18" to="23.14" physfrom="0" physto="1" min_dmx_24="3618615" max_dmx_24="3881787">
+                        <ChannelSet name="Tilt  Reset" from_dmx="55" to_dmx="59"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="ZOOMRESET" attribute="CONTROL" feature="Control" preset="Control" from="23.14" to="25.1" physfrom="0" physto="1" min_dmx_24="3947580" max_dmx_24="4210752">
+                        <ChannelSet name="Zoom Reset" from_dmx="60" to_dmx="64"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="MACROSELECT" attribute="CONTROL" feature="Control" preset="Control" from="25.1" to="27.06" physfrom="0" physto="1" min_dmx_24="4276545" max_dmx_24="4539717">
+                        <ChannelSet name="TV Reset Mode" from_dmx="65" to_dmx="66"/>
+                        <ChannelSet name="Normal Reset Mode" from_dmx="67" to_dmx="69"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="FIXTUREGLOBALRESET" attribute="CONTROL" feature="Control" preset="Control" from="27.06" to="29.02" physfrom="0" physto="1" min_dmx_24="4605510" max_dmx_24="4868682">
+                        <ChannelSet name="Reset All" from_dmx="70" to_dmx="74"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="CONTROL" feature="Control" preset="Control" from="29.02" to="32.94" physfrom="0" physto="1" min_dmx_24="4934475" max_dmx_24="5526612">
+                        <ChannelSet name="Reserved" from_dmx="75" to_dmx="84"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="MACROSELECT" attribute="CONTROL" feature="Control" preset="Control" from="32.94" to="42.75" physfrom="0" physto="1" min_dmx_24="5592405" max_dmx_24="7171437">
+                        <ChannelSet name="Reverse Pan" from_dmx="85" to_dmx="89"/>
+                        <ChannelSet name="Reverse Tilt" from_dmx="90" to_dmx="94"/>
+                        <ChannelSet name="Disable Pan Reverse" from_dmx="95" to_dmx="99"/>
+                        <ChannelSet name="Disable Tilt Reverse" from_dmx="100" to_dmx="104"/>
+                        <ChannelSet name="Disable P/T Reverse" from_dmx="105" to_dmx="109"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="ColorControl" attribute="CONTROL" feature="Control" preset="Control" from="42.75" to="46.67" physfrom="0" physto="1" min_dmx_24="7237230" max_dmx_24="7829367">
+                        <ChannelSet name="Color Presets HTP On" from_dmx="110" to_dmx="114"/>
+                        <ChannelSet name="Color Presets HTP Off" from_dmx="115" to_dmx="119"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="FANSPEED" attribute="CONTROL" feature="Control" preset="Control" from="46.67" to="52.55" physfrom="0" physto="1" min_dmx_24="7895160" max_dmx_24="8816262">
+                        <ChannelSet name="Fan Mode ECO" from_dmx="120" to_dmx="124"/>
+                        <ChannelSet name="Full Fan Mode" from_dmx="125" to_dmx="129"/>
+                        <ChannelSet name="Auto Fan Mode" from_dmx="130" to_dmx="134"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="INTENSITYMSPEED" attribute="CONTROL" feature="Control" preset="Control" from="52.55" to="56.47" physfrom="10" physto="0" min_dmx_24="8882055" max_dmx_24="9474192">
+                        <ChannelSet name="Dimmer Fast" from_dmx="135" to_dmx="139" slot_from="10" slot_to="10"/>
+                        <ChannelSet name="Dimmer Smooth" from_dmx="140" to_dmx="144"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="DIMMERCURVE" attribute="CONTROL" feature="Control" preset="Control" from="56.47" to="64.31" physfrom="0" physto="1" min_dmx_24="9539985" max_dmx_24="10790052">
+                        <ChannelSet name="Dimmer Curve Linear" from_dmx="145" to_dmx="149"/>
+                        <ChannelSet name="Dimmer Curve Square" from_dmx="150" to_dmx="154"/>
+                        <ChannelSet name="Dimmer Curve Inverse Square" from_dmx="155" to_dmx="159"/>
+                        <ChannelSet name="Dimmer Curve S-Curve" from_dmx="160" to_dmx="164"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="ColorControl" attribute="CONTROL" feature="Control" preset="Control" from="64.31" to="68.24" physfrom="0" physto="1" min_dmx_24="10855845" max_dmx_24="11447982">
+                        <ChannelSet name="White Mode" from_dmx="165" to_dmx="169"/>
+                        <ChannelSet name="Full Mode" from_dmx="170" to_dmx="174"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="CustomColor" attribute="CONTROL" feature="Control" preset="Control" from="68.24" to="72.16" physfrom="0" physto="1" min_dmx_24="11513775" max_dmx_24="12105912">
+                        <ChannelSet name="Single-Color Calibration Off" from_dmx="175" to_dmx="179"/>
+                        <ChannelSet name="Single-Color Calibration On" from_dmx="180" to_dmx="184"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="LEDFrequency" attribute="CONTROL" feature="Control" preset="Control" from="72.16" to="76.86" physfrom="0" physto="1" min_dmx_24="12171705" max_dmx_24="12895428">
+                        <ChannelSet name="PWM 600Hz" from_dmx="185" to_dmx="186"/>
+                        <ChannelSet name="PWM 1200Hz" from_dmx="187" to_dmx="188"/>
+                        <ChannelSet name="PWM 2000Hz" from_dmx="189" to_dmx="190"/>
+                        <ChannelSet name="PWM 4000Hz" from_dmx="191" to_dmx="192"/>
+                        <ChannelSet name="PWM 6000Hz" from_dmx="193" to_dmx="194"/>
+                        <ChannelSet name="PWM 15000Hz" from_dmx="195" to_dmx="196"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="CONTROL" feature="Control" preset="Control" from="76.86" to="93.73" physfrom="0" physto="1" min_dmx_24="12961221" max_dmx_24="15724527">
+                        <ChannelSet name="No Func" from_dmx="197" to_dmx="239"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="CustomColor" attribute="CONTROL" feature="Control" preset="Control" from="93.73" to="100" physfrom="0" physto="1" min_dmx_24="15790320" max_dmx_24="16777215">
+                        <ChannelSet name="Calibration On" from_dmx="240" to_dmx="247"/>
+                        <ChannelSet name="Calibration Off" from_dmx="248" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="33" fine="34" default="0" attribute="R_Overwrite" feature="Color" preset="Color" highlight_value="100">
+                    <ChannelFunction subattribute="R_Overwrite" attribute="R_Overwrite" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="65534"/>
+                        <ChannelSet name="Max" from_dmx="65535" to_dmx="65535"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="37" fine="38" default="0" attribute="G_Overwrite" feature="Color" preset="Color" highlight_value="100">
+                    <ChannelFunction subattribute="G_Overwrite" attribute="G_Overwrite" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="65534"/>
+                        <ChannelSet name="Max" from_dmx="65535" to_dmx="65535"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="41" fine="42" default="0" attribute="B_Overwrite" feature="Color" preset="Color" highlight_value="100">
+                    <ChannelFunction subattribute="B_Overwrite" attribute="B_Overwrite" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="65534"/>
+                        <ChannelSet name="Max" from_dmx="65535" to_dmx="65535"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="Plate" class="None" beamtype="None" beam_intensity="" index="13" beam_angle="">
+                <Model/>
+                <ChannelType coarse="7" default="0" attribute="CTC" feature="CTC" preset="COLOR" highlight_value="0">
+                    <ChannelFunction subattribute="CTC" attribute="CTC" feature="CTC" preset="COLOR" from="0" to="0" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="0">
+                        <ChannelSet name=" Open" from_dmx="0" to_dmx="0" slot_from="0" slot_to="0"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="CTC" attribute="CTC" feature="CTC" preset="COLOR" from="0" to="100" physfrom="19000" physto="2700" min_dmx_24="65793" max_dmx_24="16777215">
+                        <ChannelSet name="19000K - CTC" from_dmx="1" to_dmx="1"/>
+                        <ChannelSet name="18900K - CTC" from_dmx="2" to_dmx="2"/>
+                        <ChannelSet name="18800K - CTC" from_dmx="4" to_dmx="4"/>
+                        <ChannelSet name="18700K - CTC" from_dmx="6" to_dmx="6"/>
+                        <ChannelSet name="18600K - CTC" from_dmx="7" to_dmx="7"/>
+                        <ChannelSet name="18500K - CTC" from_dmx="8" to_dmx="9"/>
+                        <ChannelSet name="18400K - CTC" from_dmx="10" to_dmx="10"/>
+                        <ChannelSet name="18300K - CTC" from_dmx="12" to_dmx="12"/>
+                        <ChannelSet name="18200K - CTC" from_dmx="13" to_dmx="13"/>
+                        <ChannelSet name="18100K - CTC" from_dmx="15" to_dmx="15"/>
+                        <ChannelSet name="18000K - CTC" from_dmx="16" to_dmx="16"/>
+                        <ChannelSet name="17900K - CTC" from_dmx="18" to_dmx="18"/>
+                        <ChannelSet name="17800K - CTC" from_dmx="19" to_dmx="19"/>
+                        <ChannelSet name="17700K - CTC" from_dmx="21" to_dmx="21"/>
+                        <ChannelSet name="17600K - CTC" from_dmx="22" to_dmx="22"/>
+                        <ChannelSet name="17500K - CTC" from_dmx="24" to_dmx="24"/>
+                        <ChannelSet name="17400K - CTC" from_dmx="26" to_dmx="26"/>
+                        <ChannelSet name="17300K - CTC" from_dmx="27" to_dmx="27"/>
+                        <ChannelSet name="17200K - CTC" from_dmx="29" to_dmx="29"/>
+                        <ChannelSet name="17100K - CTC" from_dmx="30" to_dmx="30"/>
+                        <ChannelSet name="17000K - CTC" from_dmx="32" to_dmx="32"/>
+                        <ChannelSet name="16900K - CTC" from_dmx="33" to_dmx="33"/>
+                        <ChannelSet name="16800K - CTC" from_dmx="35" to_dmx="35"/>
+                        <ChannelSet name="16700K - CTC" from_dmx="37" to_dmx="37"/>
+                        <ChannelSet name="16600K - CTC" from_dmx="38" to_dmx="38"/>
+                        <ChannelSet name="16500K - CTC" from_dmx="40" to_dmx="40"/>
+                        <ChannelSet name="16400K - CTC" from_dmx="41" to_dmx="41"/>
+                        <ChannelSet name="16300K - CTC" from_dmx="43" to_dmx="43"/>
+                        <ChannelSet name="16200K - CTC" from_dmx="44" to_dmx="44"/>
+                        <ChannelSet name="16100K - CTC" from_dmx="46" to_dmx="46"/>
+                        <ChannelSet name="16000K - CTC" from_dmx="47" to_dmx="47"/>
+                        <ChannelSet name="15900K - CTC" from_dmx="49" to_dmx="49"/>
+                        <ChannelSet name="15800K - CTC" from_dmx="51" to_dmx="51"/>
+                        <ChannelSet name="15700K - CTC" from_dmx="52" to_dmx="52"/>
+                        <ChannelSet name="157600K - CTC" from_dmx="54" to_dmx="54"/>
+                        <ChannelSet name="15500K - CTC" from_dmx="55" to_dmx="55"/>
+                        <ChannelSet name="15400K - CTC" from_dmx="57" to_dmx="57"/>
+                        <ChannelSet name="15300K - CTC" from_dmx="58" to_dmx="58"/>
+                        <ChannelSet name="15200K - CTC" from_dmx="60" to_dmx="60"/>
+                        <ChannelSet name="15100K - CTC" from_dmx="62" to_dmx="62"/>
+                        <ChannelSet name="15000K - CTC" from_dmx="63" to_dmx="63"/>
+                        <ChannelSet name="14900K - CTC" from_dmx="65" to_dmx="65"/>
+                        <ChannelSet name="14800K - CTC" from_dmx="66" to_dmx="66"/>
+                        <ChannelSet name="14700K - CTC" from_dmx="68" to_dmx="68"/>
+                        <ChannelSet name="14600K - CTC" from_dmx="69" to_dmx="69"/>
+                        <ChannelSet name="14500K - CTC" from_dmx="71" to_dmx="71"/>
+                        <ChannelSet name="14400K - CTC" from_dmx="72" to_dmx="72"/>
+                        <ChannelSet name="14300K - CTC" from_dmx="74" to_dmx="74"/>
+                        <ChannelSet name="14200K - CTC" from_dmx="76" to_dmx="76"/>
+                        <ChannelSet name="14100K - CTC" from_dmx="77" to_dmx="77"/>
+                        <ChannelSet name="14000K - CTC" from_dmx="79" to_dmx="79"/>
+                        <ChannelSet name="13900K - CTC" from_dmx="80" to_dmx="80"/>
+                        <ChannelSet name="13800K - CTC" from_dmx="82" to_dmx="82"/>
+                        <ChannelSet name="13700K - CTC" from_dmx="83" to_dmx="83"/>
+                        <ChannelSet name="13600K - CTC" from_dmx="85" to_dmx="85"/>
+                        <ChannelSet name="13500K - CTC" from_dmx="86" to_dmx="86"/>
+                        <ChannelSet name="13400K - CTC" from_dmx="88" to_dmx="88"/>
+                        <ChannelSet name="13300K - CTC" from_dmx="90" to_dmx="90"/>
+                        <ChannelSet name="13200K - CTC" from_dmx="91" to_dmx="91"/>
+                        <ChannelSet name="13100K - CTC" from_dmx="93" to_dmx="93"/>
+                        <ChannelSet name="13000K - CTC" from_dmx="94" to_dmx="94"/>
+                        <ChannelSet name="12900K - CTC" from_dmx="96" to_dmx="96"/>
+                        <ChannelSet name="12800K - CTC" from_dmx="97" to_dmx="97"/>
+                        <ChannelSet name="12700K - CTC" from_dmx="99" to_dmx="99"/>
+                        <ChannelSet name="12600K - CTC" from_dmx="101" to_dmx="101"/>
+                        <ChannelSet name="12500K - CTC" from_dmx="102" to_dmx="102"/>
+                        <ChannelSet name="12400K - CTC" from_dmx="104" to_dmx="104"/>
+                        <ChannelSet name="12300K - CTC" from_dmx="105" to_dmx="105"/>
+                        <ChannelSet name="12200K - CTC" from_dmx="107" to_dmx="107"/>
+                        <ChannelSet name="12100K - CTC" from_dmx="108" to_dmx="108"/>
+                        <ChannelSet name="12000K - CTC" from_dmx="110" to_dmx="110"/>
+                        <ChannelSet name="11900K - CTC" from_dmx="112" to_dmx="112"/>
+                        <ChannelSet name="11800K - CTC" from_dmx="113" to_dmx="113"/>
+                        <ChannelSet name="11700K - CTC" from_dmx="115" to_dmx="115"/>
+                        <ChannelSet name="11600K - CTC" from_dmx="116" to_dmx="116"/>
+                        <ChannelSet name="11500K - CTC" from_dmx="118" to_dmx="118"/>
+                        <ChannelSet name="11400K - CTC" from_dmx="119" to_dmx="119"/>
+                        <ChannelSet name="11300K - CTC" from_dmx="121" to_dmx="121"/>
+                        <ChannelSet name="11200K - CTC" from_dmx="122" to_dmx="122"/>
+                        <ChannelSet name="11100K - CTC" from_dmx="124" to_dmx="124"/>
+                        <ChannelSet name="11000K - CTC" from_dmx="125" to_dmx="125"/>
+                        <ChannelSet name="10900K - CTC" from_dmx="127" to_dmx="127"/>
+                        <ChannelSet name="10800K - CTC" from_dmx="129" to_dmx="129"/>
+                        <ChannelSet name="10700K - CTC" from_dmx="130" to_dmx="130"/>
+                        <ChannelSet name="10600K - CTC" from_dmx="132" to_dmx="132"/>
+                        <ChannelSet name="10500K - CTC" from_dmx="133" to_dmx="133"/>
+                        <ChannelSet name="10400K - CTC" from_dmx="135" to_dmx="135"/>
+                        <ChannelSet name="10300K - CTC" from_dmx="136" to_dmx="136"/>
+                        <ChannelSet name="10200K - CTC" from_dmx="138" to_dmx="138"/>
+                        <ChannelSet name="10100K - CTC" from_dmx="140" to_dmx="140"/>
+                        <ChannelSet name="10000K - CTC" from_dmx="141" to_dmx="141"/>
+                        <ChannelSet name="9900K - CTC" from_dmx="143" to_dmx="143"/>
+                        <ChannelSet name="9800K - CTC" from_dmx="144" to_dmx="144"/>
+                        <ChannelSet name="9700K - CTC" from_dmx="146" to_dmx="146"/>
+                        <ChannelSet name="9600K - CTC" from_dmx="147" to_dmx="147"/>
+                        <ChannelSet name="9500K - CTC" from_dmx="149" to_dmx="149"/>
+                        <ChannelSet name="9400K - CTC" from_dmx="150" to_dmx="150"/>
+                        <ChannelSet name="9300K - CTC" from_dmx="152" to_dmx="152"/>
+                        <ChannelSet name="9200K - CTC" from_dmx="154" to_dmx="154"/>
+                        <ChannelSet name="9100K - CTC" from_dmx="155" to_dmx="155"/>
+                        <ChannelSet name="9000K - CTC" from_dmx="157" to_dmx="157"/>
+                        <ChannelSet name="8900K - CTC" from_dmx="158" to_dmx="158"/>
+                        <ChannelSet name="8800K - CTC" from_dmx="160" to_dmx="160"/>
+                        <ChannelSet name="8700K - CTC" from_dmx="161" to_dmx="161"/>
+                        <ChannelSet name="8600K - CTC" from_dmx="163" to_dmx="163"/>
+                        <ChannelSet name="8500K - CTC" from_dmx="164" to_dmx="164"/>
+                        <ChannelSet name="8400K - CTC" from_dmx="166" to_dmx="166"/>
+                        <ChannelSet name="8300K - CTC" from_dmx="167" to_dmx="167"/>
+                        <ChannelSet name="8200K - CTC" from_dmx="169" to_dmx="169"/>
+                        <ChannelSet name="8100K - CTC" from_dmx="171" to_dmx="171"/>
+                        <ChannelSet name="8000K - CTC" from_dmx="172" to_dmx="172"/>
+                        <ChannelSet name="7900K - CTC" from_dmx="174" to_dmx="174"/>
+                        <ChannelSet name="7800K - CTC" from_dmx="175" to_dmx="175"/>
+                        <ChannelSet name="7700K - CTC" from_dmx="177" to_dmx="177"/>
+                        <ChannelSet name="7600K - CTC" from_dmx="178" to_dmx="178"/>
+                        <ChannelSet name="7500K - CTC" from_dmx="180" to_dmx="180"/>
+                        <ChannelSet name="7400K - CTC" from_dmx="182" to_dmx="182"/>
+                        <ChannelSet name="7300K - CTC" from_dmx="183" to_dmx="183"/>
+                        <ChannelSet name="7200K - CTC" from_dmx="185" to_dmx="185"/>
+                        <ChannelSet name="7100K - CTC" from_dmx="186" to_dmx="186"/>
+                        <ChannelSet name="7000K - CTC" from_dmx="188" to_dmx="188"/>
+                        <ChannelSet name="6900K - CTC" from_dmx="189" to_dmx="189"/>
+                        <ChannelSet name="6800K - CTC" from_dmx="191" to_dmx="191"/>
+                        <ChannelSet name="6700K - CTC" from_dmx="193" to_dmx="193"/>
+                        <ChannelSet name="6600K - CTC" from_dmx="194" to_dmx="194"/>
+                        <ChannelSet name="6500K - CTC" from_dmx="196" to_dmx="196"/>
+                        <ChannelSet name="6400K - CTC" from_dmx="197" to_dmx="197"/>
+                        <ChannelSet name="6300K - CTC" from_dmx="199" to_dmx="199"/>
+                        <ChannelSet name="6200K - CTC" from_dmx="200" to_dmx="200"/>
+                        <ChannelSet name="6100K - CTC" from_dmx="202" to_dmx="202"/>
+                        <ChannelSet name="6000K - CTC" from_dmx="203" to_dmx="203"/>
+                        <ChannelSet name="5900K - CTC" from_dmx="205" to_dmx="205"/>
+                        <ChannelSet name="5800K - CTC" from_dmx="207" to_dmx="207"/>
+                        <ChannelSet name="5700K - CTC" from_dmx="208" to_dmx="208"/>
+                        <ChannelSet name="5600K - CTC" from_dmx="210" to_dmx="210"/>
+                        <ChannelSet name="5500K - CTC" from_dmx="211" to_dmx="211"/>
+                        <ChannelSet name="5400K - CTC" from_dmx="213" to_dmx="213"/>
+                        <ChannelSet name="5300K - CTC" from_dmx="214" to_dmx="214"/>
+                        <ChannelSet name="5200K - CTC" from_dmx="216" to_dmx="216"/>
+                        <ChannelSet name="5100K - CTC" from_dmx="217" to_dmx="217"/>
+                        <ChannelSet name="5000K - CTC" from_dmx="219" to_dmx="219"/>
+                        <ChannelSet name="4900K - CTC" from_dmx="221" to_dmx="221"/>
+                        <ChannelSet name="4800K - CTC" from_dmx="222" to_dmx="222"/>
+                        <ChannelSet name="4700K - CTC" from_dmx="224" to_dmx="224"/>
+                        <ChannelSet name="4600K - CTC" from_dmx="225" to_dmx="225"/>
+                        <ChannelSet name="4500K - CTC" from_dmx="227" to_dmx="227"/>
+                        <ChannelSet name="4400K - CTC" from_dmx="228" to_dmx="228"/>
+                        <ChannelSet name="4300K - CTC" from_dmx="230" to_dmx="230"/>
+                        <ChannelSet name="4200K - CTC" from_dmx="232" to_dmx="232"/>
+                        <ChannelSet name="4100K - CTC" from_dmx="233" to_dmx="233"/>
+                        <ChannelSet name="4000K - CTC" from_dmx="235" to_dmx="235"/>
+                        <ChannelSet name="3900K - CTC" from_dmx="236" to_dmx="236"/>
+                        <ChannelSet name="3800K - CTC" from_dmx="238" to_dmx="238"/>
+                        <ChannelSet name="3700K - CTC" from_dmx="239" to_dmx="239"/>
+                        <ChannelSet name="3600K - CTC" from_dmx="241" to_dmx="241"/>
+                        <ChannelSet name="3500K - CTC" from_dmx="242" to_dmx="243"/>
+                        <ChannelSet name="3400K - CTC" from_dmx="244" to_dmx="244"/>
+                        <ChannelSet name="3300K - CTC" from_dmx="246" to_dmx="246"/>
+                        <ChannelSet name="3200K - CTC" from_dmx="247" to_dmx="247"/>
+                        <ChannelSet name="3100K - CTC" from_dmx="249" to_dmx="249"/>
+                        <ChannelSet name="3000K - CTC" from_dmx="250" to_dmx="250"/>
+                        <ChannelSet name="2900K - CTC" from_dmx="252" to_dmx="252"/>
+                        <ChannelSet name="2800K - CTC" from_dmx="253" to_dmx="253"/>
+                        <ChannelSet name="2700K - CTC" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="9" default="0" attribute="COLORMACROS" feature="Color" preset="Color" highlight_value="0">
+                    <ChannelFunction subattribute="COLORMACROS" attribute="COLORMACROS" feature="Color" preset="Color" from="0" to="0" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="0">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="0" slot_from="0" slot_to="0"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="CTC" attribute="COLORMACROS" feature="Color" preset="Color" from="0" to="5.49" physfrom="8000" physto="0" min_dmx_24="65793" max_dmx_24="921102" wheel="1">
+                        <ChannelSet name="White 2700K - CTC" from_dmx="1" to_dmx="2" slot_from="2700" slot_to="2700" slot_index="0"/>
+                        <ChannelSet name="White 3200K - CTC" from_dmx="3" to_dmx="4" slot_from="3200" slot_to="3200" slot_index="1"/>
+                        <ChannelSet name="White 4000K - CTC" from_dmx="5" to_dmx="6" slot_from="4000" slot_to="4000" slot_index="2"/>
+                        <ChannelSet name="White 4200K - CTC" from_dmx="7" to_dmx="8" slot_from="4200" slot_to="4200" slot_index="3"/>
+                        <ChannelSet name="White 5600K - CTC" from_dmx="9" to_dmx="10" slot_from="5600" slot_to="5600" slot_index="4"/>
+                        <ChannelSet name="White 6500K - CTC" from_dmx="11" to_dmx="12" slot_from="6500" slot_to="6500" slot_index="5"/>
+                        <ChannelSet name="White 7500K - CTC" from_dmx="13" to_dmx="14" slot_from="7500" slot_to="7500" slot_index="6"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="COLORMACROS" attribute="COLORMACROS" feature="Color" preset="Color" from="5.49" to="93.73" physfrom="0" physto="0" min_dmx_24="986895" max_dmx_24="15724527" wheel="1">
+                        <ChannelSet name="Blue" from_dmx="15" to_dmx="15" slot_from="0" slot_to="0" slot_index="7"/>
+                        <ChannelSet name="+Green" from_dmx="16" to_dmx="48" slot_index="8"/>
+                        <ChannelSet name="Cyan" from_dmx="52" to_dmx="52" slot_from="0" slot_to="0" slot_index="9"/>
+                        <ChannelSet name="-Blue" from_dmx="53" to_dmx="88" slot_index="10"/>
+                        <ChannelSet name="Green" from_dmx="89" to_dmx="89" slot_from="0" slot_to="0" slot_index="11"/>
+                        <ChannelSet name="+Red" from_dmx="90" to_dmx="124" slot_index="12"/>
+                        <ChannelSet name="Yellow" from_dmx="126" to_dmx="126" slot_from="0" slot_to="0" slot_index="13"/>
+                        <ChannelSet name="-Green" from_dmx="127" to_dmx="162" slot_index="14"/>
+                        <ChannelSet name="Red" from_dmx="163" to_dmx="163" slot_from="0" slot_to="0" slot_index="15"/>
+                        <ChannelSet name="+Blue" from_dmx="164" to_dmx="200" slot_index="16"/>
+                        <ChannelSet name="Magenta" from_dmx="201" to_dmx="201" slot_from="0" slot_to="0" slot_index="17"/>
+                        <ChannelSet name="-Red" from_dmx="202" to_dmx="238" slot_index="18"/>
+                        <ChannelSet name="Blue" from_dmx="239" to_dmx="239" slot_from="0" slot_to="0" slot_index="7"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="ColorControl" attribute="COLORMACROS" feature="Color" preset="Color" from="93.73" to="96.86" physfrom="10" physto="0.1" min_dmx_24="15790320" max_dmx_24="16250871">
+                        <ChannelSet name="Fast" from_dmx="240" to_dmx="240" slot_from="10" slot_to="10"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="241" to_dmx="246" slot_from="8.59" slot_to="1.51"/>
+                        <ChannelSet name="Slow" from_dmx="247" to_dmx="247" slot_from="0.1" slot_to="0.1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="ColorControl" attribute="COLORMACROS" feature="Color" preset="Color" from="96.86" to="100" physfrom="10" physto="0.1" min_dmx_24="16316664" max_dmx_24="16777215">
+                        <ChannelSet name="Fast" from_dmx="248" to_dmx="248" slot_from="10" slot_to="10"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="249" to_dmx="254" slot_from="8.59" slot_to="1.51"/>
+                        <ChannelSet name="Slow" from_dmx="255" to_dmx="255" slot_from="0.1" slot_to="0.1"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="11" default="0" snap="true" attribute="EFFECT" feature="EFFECT" preset="BEAM" highlight_value="0">
+                    <ChannelFunction subattribute="EFFECTSELECT" attribute="EFFECT" feature="EFFECT" preset="BEAM" from="0" to="0" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="0">
+                        <ChannelSet name="Pattern Open" from_dmx="0" to_dmx="0"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="EFFECTSELECT" attribute="EFFECT" feature="EFFECT" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="65793" max_dmx_24="16777215">
+                        <ChannelSet name="Pattern 1" from_dmx="1" to_dmx="1"/>
+                        <ChannelSet name="Pattern 2" from_dmx="2" to_dmx="2"/>
+                        <ChannelSet name="Pattern 3" from_dmx="3" to_dmx="3"/>
+                        <ChannelSet name="Pattern 4" from_dmx="4" to_dmx="4"/>
+                        <ChannelSet name="Pattern 5" from_dmx="5" to_dmx="5"/>
+                        <ChannelSet name="Pattern 6" from_dmx="6" to_dmx="6"/>
+                        <ChannelSet name="Pattern 7" from_dmx="7" to_dmx="7"/>
+                        <ChannelSet name="Pattern 8" from_dmx="8" to_dmx="8"/>
+                        <ChannelSet name="Pattern 9" from_dmx="9" to_dmx="9"/>
+                        <ChannelSet name="Pattern 10" from_dmx="10" to_dmx="10"/>
+                        <ChannelSet name="Pattern 11" from_dmx="11" to_dmx="11"/>
+                        <ChannelSet name="Pattern 12" from_dmx="12" to_dmx="12"/>
+                        <ChannelSet name="Pattern 13" from_dmx="13" to_dmx="13"/>
+                        <ChannelSet name="Pattern 14" from_dmx="14" to_dmx="14"/>
+                        <ChannelSet name="Pattern 15" from_dmx="15" to_dmx="15"/>
+                        <ChannelSet name="Pattern 16" from_dmx="16" to_dmx="16"/>
+                        <ChannelSet name="Pattern 17" from_dmx="17" to_dmx="17"/>
+                        <ChannelSet name="Pattern 18" from_dmx="18" to_dmx="18"/>
+                        <ChannelSet name="Pattern 19" from_dmx="19" to_dmx="19"/>
+                        <ChannelSet name="Pattern 20" from_dmx="20" to_dmx="20"/>
+                        <ChannelSet name="Pattern 21" from_dmx="21" to_dmx="21"/>
+                        <ChannelSet name="Pattern 22" from_dmx="22" to_dmx="22"/>
+                        <ChannelSet name="Pattern 23" from_dmx="23" to_dmx="23"/>
+                        <ChannelSet name="Pattern 24" from_dmx="24" to_dmx="24"/>
+                        <ChannelSet name="Pattern 25" from_dmx="25" to_dmx="25"/>
+                        <ChannelSet name="Pattern 26" from_dmx="26" to_dmx="26"/>
+                        <ChannelSet name="Pattern 27" from_dmx="27" to_dmx="27"/>
+                        <ChannelSet name="Pattern 28" from_dmx="28" to_dmx="28"/>
+                        <ChannelSet name="Pattern 29" from_dmx="29" to_dmx="29"/>
+                        <ChannelSet name="Pattern 30" from_dmx="30" to_dmx="30"/>
+                        <ChannelSet name="Pattern 31" from_dmx="31" to_dmx="31"/>
+                        <ChannelSet name="Pattern 32" from_dmx="32" to_dmx="32"/>
+                        <ChannelSet name="Pattern 33" from_dmx="33" to_dmx="33"/>
+                        <ChannelSet name="Pattern 34" from_dmx="34" to_dmx="34"/>
+                        <ChannelSet name="Pattern 35" from_dmx="35" to_dmx="35"/>
+                        <ChannelSet name="Pattern 36" from_dmx="36" to_dmx="36"/>
+                        <ChannelSet name="Pattern 37" from_dmx="37" to_dmx="37"/>
+                        <ChannelSet name="Pattern 38" from_dmx="38" to_dmx="38"/>
+                        <ChannelSet name="Pattern 39" from_dmx="39" to_dmx="39"/>
+                        <ChannelSet name="Pattern 40" from_dmx="40" to_dmx="40"/>
+                        <ChannelSet name="Pattern 41" from_dmx="41" to_dmx="41"/>
+                        <ChannelSet name="Pattern 42" from_dmx="42" to_dmx="42"/>
+                        <ChannelSet name="Pattern 43" from_dmx="43" to_dmx="43"/>
+                        <ChannelSet name="Pattern 44" from_dmx="44" to_dmx="44"/>
+                        <ChannelSet name="Pattern 45" from_dmx="45" to_dmx="45"/>
+                        <ChannelSet name="Pattern 46" from_dmx="46" to_dmx="46"/>
+                        <ChannelSet name="Pattern 47" from_dmx="47" to_dmx="47"/>
+                        <ChannelSet name="Pattern 48" from_dmx="48" to_dmx="48"/>
+                        <ChannelSet name="Pattern 49" from_dmx="49" to_dmx="49"/>
+                        <ChannelSet name="Pattern 50" from_dmx="50" to_dmx="50"/>
+                        <ChannelSet name="Pattern 51" from_dmx="51" to_dmx="51"/>
+                        <ChannelSet name="Pattern 52" from_dmx="52" to_dmx="52"/>
+                        <ChannelSet name="Pattern 53" from_dmx="53" to_dmx="53"/>
+                        <ChannelSet name="Pattern 54" from_dmx="54" to_dmx="54"/>
+                        <ChannelSet name="Pattern 55" from_dmx="55" to_dmx="55"/>
+                        <ChannelSet name="Pattern 56" from_dmx="56" to_dmx="56"/>
+                        <ChannelSet name="Pattern 57" from_dmx="57" to_dmx="57"/>
+                        <ChannelSet name="Pattern 58" from_dmx="58" to_dmx="58"/>
+                        <ChannelSet name="Pattern 59" from_dmx="59" to_dmx="59"/>
+                        <ChannelSet name="Pattern 60" from_dmx="60" to_dmx="60"/>
+                        <ChannelSet name="Pattern 61" from_dmx="61" to_dmx="61"/>
+                        <ChannelSet name="Pattern 62" from_dmx="62" to_dmx="62"/>
+                        <ChannelSet name="Pattern 63" from_dmx="63" to_dmx="63"/>
+                        <ChannelSet name="Pattern 64" from_dmx="64" to_dmx="64"/>
+                        <ChannelSet name="Pattern 65" from_dmx="65" to_dmx="65"/>
+                        <ChannelSet name="Pattern 66" from_dmx="66" to_dmx="66"/>
+                        <ChannelSet name="Pattern 67" from_dmx="67" to_dmx="67"/>
+                        <ChannelSet name="Pattern 68" from_dmx="68" to_dmx="68"/>
+                        <ChannelSet name="Pattern 69" from_dmx="69" to_dmx="69"/>
+                        <ChannelSet name="Pattern 70" from_dmx="70" to_dmx="70"/>
+                        <ChannelSet name="Pattern 71" from_dmx="71" to_dmx="71"/>
+                        <ChannelSet name="Pattern 72" from_dmx="72" to_dmx="72"/>
+                        <ChannelSet name="Pattern 73" from_dmx="73" to_dmx="73"/>
+                        <ChannelSet name="Pattern 74" from_dmx="74" to_dmx="74"/>
+                        <ChannelSet name="Pattern 75" from_dmx="75" to_dmx="75"/>
+                        <ChannelSet name="Pattern 76" from_dmx="76" to_dmx="76"/>
+                        <ChannelSet name="Pattern 77" from_dmx="77" to_dmx="77"/>
+                        <ChannelSet name="Pattern 78" from_dmx="78" to_dmx="78"/>
+                        <ChannelSet name="Pattern 79" from_dmx="79" to_dmx="79"/>
+                        <ChannelSet name="Pattern 80" from_dmx="80" to_dmx="80"/>
+                        <ChannelSet name="Pattern 81" from_dmx="81" to_dmx="81"/>
+                        <ChannelSet name="Pattern 82" from_dmx="82" to_dmx="82"/>
+                        <ChannelSet name="Pattern 83" from_dmx="83" to_dmx="83"/>
+                        <ChannelSet name="Pattern 84" from_dmx="84" to_dmx="84"/>
+                        <ChannelSet name="Pattern 85" from_dmx="85" to_dmx="85"/>
+                        <ChannelSet name="Pattern 86" from_dmx="86" to_dmx="86"/>
+                        <ChannelSet name="Pattern 87" from_dmx="87" to_dmx="87"/>
+                        <ChannelSet name="Pattern 88" from_dmx="88" to_dmx="88"/>
+                        <ChannelSet name="Pattern 89" from_dmx="89" to_dmx="89"/>
+                        <ChannelSet name="Pattern 90" from_dmx="90" to_dmx="90"/>
+                        <ChannelSet name="Pattern 91" from_dmx="91" to_dmx="91"/>
+                        <ChannelSet name="Pattern 92" from_dmx="92" to_dmx="92"/>
+                        <ChannelSet name="Pattern 93" from_dmx="93" to_dmx="93"/>
+                        <ChannelSet name="Pattern 94" from_dmx="94" to_dmx="94"/>
+                        <ChannelSet name="Pattern 95" from_dmx="95" to_dmx="95"/>
+                        <ChannelSet name="Pattern 96" from_dmx="96" to_dmx="96"/>
+                        <ChannelSet name="Pattern 97" from_dmx="97" to_dmx="97"/>
+                        <ChannelSet name="Pattern 98" from_dmx="98" to_dmx="98"/>
+                        <ChannelSet name="Pattern 99" from_dmx="99" to_dmx="99"/>
+                        <ChannelSet name="Pattern 100" from_dmx="100" to_dmx="100"/>
+                        <ChannelSet name="Pattern 101" from_dmx="101" to_dmx="101"/>
+                        <ChannelSet name="Pattern 102" from_dmx="102" to_dmx="102"/>
+                        <ChannelSet name="Pattern 103" from_dmx="103" to_dmx="103"/>
+                        <ChannelSet name="Pattern 104" from_dmx="104" to_dmx="104"/>
+                        <ChannelSet name="Pattern 105" from_dmx="105" to_dmx="105"/>
+                        <ChannelSet name="Pattern 106" from_dmx="106" to_dmx="106"/>
+                        <ChannelSet name="Pattern 107" from_dmx="107" to_dmx="107"/>
+                        <ChannelSet name="Pattern 108" from_dmx="108" to_dmx="108"/>
+                        <ChannelSet name="Pattern 109" from_dmx="109" to_dmx="109"/>
+                        <ChannelSet name="Pattern 110" from_dmx="110" to_dmx="110"/>
+                        <ChannelSet name="Pattern 111" from_dmx="111" to_dmx="111"/>
+                        <ChannelSet name="Pattern 112" from_dmx="112" to_dmx="112"/>
+                        <ChannelSet name="Pattern 113" from_dmx="113" to_dmx="113"/>
+                        <ChannelSet name="Pattern 114" from_dmx="114" to_dmx="114"/>
+                        <ChannelSet name="Pattern 115" from_dmx="115" to_dmx="115"/>
+                        <ChannelSet name="Pattern 116" from_dmx="116" to_dmx="116"/>
+                        <ChannelSet name="Pattern 117" from_dmx="117" to_dmx="117"/>
+                        <ChannelSet name="Pattern 118" from_dmx="118" to_dmx="118"/>
+                        <ChannelSet name="Pattern 119" from_dmx="119" to_dmx="119"/>
+                        <ChannelSet name="Pattern 120" from_dmx="120" to_dmx="120"/>
+                        <ChannelSet name="Pattern 121" from_dmx="121" to_dmx="121"/>
+                        <ChannelSet name="Pattern 122" from_dmx="122" to_dmx="122"/>
+                        <ChannelSet name="Pattern 123" from_dmx="123" to_dmx="123"/>
+                        <ChannelSet name="Pattern 124" from_dmx="124" to_dmx="124"/>
+                        <ChannelSet name="Pattern 125" from_dmx="125" to_dmx="125"/>
+                        <ChannelSet name="Pattern 126" from_dmx="126" to_dmx="126"/>
+                        <ChannelSet name="Pattern 127" from_dmx="127" to_dmx="127"/>
+                        <ChannelSet name="Pattern 128" from_dmx="128" to_dmx="128"/>
+                        <ChannelSet name="Pattern 129" from_dmx="129" to_dmx="129"/>
+                        <ChannelSet name="Pattern 130" from_dmx="130" to_dmx="130"/>
+                        <ChannelSet name="Pattern 131" from_dmx="131" to_dmx="131"/>
+                        <ChannelSet name="Pattern 132" from_dmx="132" to_dmx="132"/>
+                        <ChannelSet name="Pattern 133" from_dmx="133" to_dmx="133"/>
+                        <ChannelSet name="Pattern 134" from_dmx="134" to_dmx="134"/>
+                        <ChannelSet name="Pattern 135" from_dmx="135" to_dmx="135"/>
+                        <ChannelSet name="Pattern 136" from_dmx="136" to_dmx="136"/>
+                        <ChannelSet name="Pattern 137" from_dmx="137" to_dmx="137"/>
+                        <ChannelSet name="Pattern 138" from_dmx="138" to_dmx="138"/>
+                        <ChannelSet name="Pattern 139" from_dmx="139" to_dmx="139"/>
+                        <ChannelSet name="Pattern 140" from_dmx="140" to_dmx="140"/>
+                        <ChannelSet name="Pattern 141" from_dmx="141" to_dmx="141"/>
+                        <ChannelSet name="Pattern 142" from_dmx="142" to_dmx="142"/>
+                        <ChannelSet name="Pattern 143" from_dmx="143" to_dmx="143"/>
+                        <ChannelSet name="Pattern 144" from_dmx="144" to_dmx="144"/>
+                        <ChannelSet name="Pattern 145" from_dmx="145" to_dmx="145"/>
+                        <ChannelSet name="Pattern 146" from_dmx="146" to_dmx="146"/>
+                        <ChannelSet name="Pattern 147" from_dmx="147" to_dmx="147"/>
+                        <ChannelSet name="Pattern 148" from_dmx="148" to_dmx="148"/>
+                        <ChannelSet name="Pattern 149" from_dmx="149" to_dmx="149"/>
+                        <ChannelSet name="Pattern 150" from_dmx="150" to_dmx="150"/>
+                        <ChannelSet name="Pattern 151" from_dmx="151" to_dmx="151"/>
+                        <ChannelSet name="Pattern 152" from_dmx="152" to_dmx="152"/>
+                        <ChannelSet name="Pattern 153" from_dmx="153" to_dmx="153"/>
+                        <ChannelSet name="Pattern 154" from_dmx="154" to_dmx="154"/>
+                        <ChannelSet name="Pattern 155" from_dmx="155" to_dmx="155"/>
+                        <ChannelSet name="Pattern 156" from_dmx="156" to_dmx="156"/>
+                        <ChannelSet name="Pattern 157" from_dmx="157" to_dmx="157"/>
+                        <ChannelSet name="Pattern 158" from_dmx="158" to_dmx="158"/>
+                        <ChannelSet name="Pattern 159" from_dmx="159" to_dmx="159"/>
+                        <ChannelSet name="Pattern 160" from_dmx="160" to_dmx="160"/>
+                        <ChannelSet name="Pattern 161" from_dmx="161" to_dmx="161"/>
+                        <ChannelSet name="Pattern 162" from_dmx="162" to_dmx="162"/>
+                        <ChannelSet name="Pattern 163" from_dmx="163" to_dmx="163"/>
+                        <ChannelSet name="Pattern 164" from_dmx="164" to_dmx="164"/>
+                        <ChannelSet name="Pattern 165" from_dmx="165" to_dmx="165"/>
+                        <ChannelSet name="Pattern 166" from_dmx="166" to_dmx="166"/>
+                        <ChannelSet name="Pattern 167" from_dmx="167" to_dmx="167"/>
+                        <ChannelSet name="Pattern 168" from_dmx="168" to_dmx="168"/>
+                        <ChannelSet name="Pattern 169" from_dmx="169" to_dmx="169"/>
+                        <ChannelSet name="Pattern 170" from_dmx="170" to_dmx="170"/>
+                        <ChannelSet name="Pattern 171" from_dmx="171" to_dmx="171"/>
+                        <ChannelSet name="Pattern 172" from_dmx="172" to_dmx="172"/>
+                        <ChannelSet name="Pattern 173" from_dmx="173" to_dmx="173"/>
+                        <ChannelSet name="Pattern 174" from_dmx="174" to_dmx="174"/>
+                        <ChannelSet name="Pattern 175" from_dmx="175" to_dmx="175"/>
+                        <ChannelSet name="Pattern 176" from_dmx="176" to_dmx="176"/>
+                        <ChannelSet name="Pattern 177" from_dmx="177" to_dmx="177"/>
+                        <ChannelSet name="Pattern 178" from_dmx="178" to_dmx="178"/>
+                        <ChannelSet name="Pattern 179" from_dmx="179" to_dmx="179"/>
+                        <ChannelSet name="Pattern 180" from_dmx="180" to_dmx="180"/>
+                        <ChannelSet name="Pattern 181" from_dmx="181" to_dmx="181"/>
+                        <ChannelSet name="Pattern 182" from_dmx="182" to_dmx="182"/>
+                        <ChannelSet name="Pattern 183" from_dmx="183" to_dmx="183"/>
+                        <ChannelSet name="Pattern 184" from_dmx="184" to_dmx="184"/>
+                        <ChannelSet name="Pattern 185" from_dmx="185" to_dmx="185"/>
+                        <ChannelSet name="Pattern 186" from_dmx="186" to_dmx="186"/>
+                        <ChannelSet name="Pattern 187" from_dmx="187" to_dmx="187"/>
+                        <ChannelSet name="Pattern 188" from_dmx="188" to_dmx="188"/>
+                        <ChannelSet name="Pattern 189" from_dmx="189" to_dmx="189"/>
+                        <ChannelSet name="Pattern 190" from_dmx="190" to_dmx="190"/>
+                        <ChannelSet name="Pattern 191" from_dmx="191" to_dmx="191"/>
+                        <ChannelSet name="Pattern 192" from_dmx="192" to_dmx="192"/>
+                        <ChannelSet name="Pattern 193" from_dmx="193" to_dmx="193"/>
+                        <ChannelSet name="Pattern 194" from_dmx="194" to_dmx="194"/>
+                        <ChannelSet name="Pattern 195" from_dmx="195" to_dmx="195"/>
+                        <ChannelSet name="Pattern 196" from_dmx="196" to_dmx="196"/>
+                        <ChannelSet name="Pattern 197" from_dmx="197" to_dmx="197"/>
+                        <ChannelSet name="Pattern 198" from_dmx="198" to_dmx="198"/>
+                        <ChannelSet name="Pattern 199" from_dmx="199" to_dmx="199"/>
+                        <ChannelSet name="Pattern 200" from_dmx="200" to_dmx="200"/>
+                        <ChannelSet name="Pattern 201" from_dmx="201" to_dmx="201"/>
+                        <ChannelSet name="Pattern 202" from_dmx="202" to_dmx="202"/>
+                        <ChannelSet name="Pattern 203" from_dmx="203" to_dmx="203"/>
+                        <ChannelSet name="Pattern 204" from_dmx="204" to_dmx="204"/>
+                        <ChannelSet name="Pattern 205" from_dmx="205" to_dmx="205"/>
+                        <ChannelSet name="Pattern 206" from_dmx="206" to_dmx="206"/>
+                        <ChannelSet name="Pattern 207" from_dmx="207" to_dmx="207"/>
+                        <ChannelSet name="Pattern 208" from_dmx="208" to_dmx="208"/>
+                        <ChannelSet name="Pattern 209" from_dmx="209" to_dmx="209"/>
+                        <ChannelSet name="Pattern 210" from_dmx="210" to_dmx="210"/>
+                        <ChannelSet name="Pattern 211" from_dmx="211" to_dmx="211"/>
+                        <ChannelSet name="Pattern 212" from_dmx="212" to_dmx="212"/>
+                        <ChannelSet name="Pattern 213" from_dmx="213" to_dmx="213"/>
+                        <ChannelSet name="Pattern 214" from_dmx="214" to_dmx="214"/>
+                        <ChannelSet name="Pattern 215" from_dmx="215" to_dmx="215"/>
+                        <ChannelSet name="Pattern 216" from_dmx="216" to_dmx="216"/>
+                        <ChannelSet name="Pattern 217" from_dmx="217" to_dmx="217"/>
+                        <ChannelSet name="Pattern 218" from_dmx="218" to_dmx="218"/>
+                        <ChannelSet name="Pattern 219" from_dmx="219" to_dmx="219"/>
+                        <ChannelSet name="Pattern 220" from_dmx="220" to_dmx="220"/>
+                        <ChannelSet name="Pattern 221" from_dmx="221" to_dmx="221"/>
+                        <ChannelSet name="Pattern 222" from_dmx="222" to_dmx="222"/>
+                        <ChannelSet name="Pattern 223" from_dmx="223" to_dmx="223"/>
+                        <ChannelSet name="Pattern 224" from_dmx="224" to_dmx="224"/>
+                        <ChannelSet name="Pattern 225" from_dmx="225" to_dmx="225"/>
+                        <ChannelSet name="Pattern 226" from_dmx="226" to_dmx="226"/>
+                        <ChannelSet name="Pattern 227" from_dmx="227" to_dmx="227"/>
+                        <ChannelSet name="Pattern 228" from_dmx="228" to_dmx="228"/>
+                        <ChannelSet name="Pattern 229" from_dmx="229" to_dmx="229"/>
+                        <ChannelSet name="Pattern 230" from_dmx="230" to_dmx="230"/>
+                        <ChannelSet name="Pattern 231" from_dmx="231" to_dmx="231"/>
+                        <ChannelSet name="Pattern 232" from_dmx="232" to_dmx="232"/>
+                        <ChannelSet name="Pattern 233" from_dmx="233" to_dmx="233"/>
+                        <ChannelSet name="Pattern 234" from_dmx="234" to_dmx="234"/>
+                        <ChannelSet name="Pattern 235" from_dmx="235" to_dmx="235"/>
+                        <ChannelSet name="Pattern 236" from_dmx="236" to_dmx="236"/>
+                        <ChannelSet name="Pattern 237" from_dmx="237" to_dmx="237"/>
+                        <ChannelSet name="Pattern 238" from_dmx="238" to_dmx="238"/>
+                        <ChannelSet name="Pattern 239" from_dmx="239" to_dmx="239"/>
+                        <ChannelSet name="Pattern 240" from_dmx="240" to_dmx="240"/>
+                        <ChannelSet name="Pattern 241" from_dmx="241" to_dmx="241"/>
+                        <ChannelSet name="Pattern 242" from_dmx="242" to_dmx="242"/>
+                        <ChannelSet name="Pattern 243" from_dmx="243" to_dmx="243"/>
+                        <ChannelSet name="Pattern 244" from_dmx="244" to_dmx="244"/>
+                        <ChannelSet name="Pattern 245" from_dmx="245" to_dmx="245"/>
+                        <ChannelSet name="Pattern 246" from_dmx="246" to_dmx="246"/>
+                        <ChannelSet name="Pattern 247" from_dmx="247" to_dmx="247"/>
+                        <ChannelSet name="Pattern 248" from_dmx="248" to_dmx="248"/>
+                        <ChannelSet name="Pattern 249" from_dmx="249" to_dmx="249"/>
+                        <ChannelSet name="Pattern 250" from_dmx="250" to_dmx="250"/>
+                        <ChannelSet name="Pattern 251" from_dmx="251" to_dmx="251"/>
+                        <ChannelSet name="Pattern 252" from_dmx="252" to_dmx="252"/>
+                        <ChannelSet name="Pattern 253 " from_dmx="253" to_dmx="253"/>
+                        <ChannelSet name="Pattern 254" from_dmx="254" to_dmx="254"/>
+                        <ChannelSet name="Pattern 255" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="15" default="0" snap="true" attribute="EFFECT2" feature="Beam" preset="Beam" highlight_value="0">
+                    <ChannelFunction subattribute="EFFECTSELECT2" attribute="EFFECT2" feature="Beam" preset="Beam" from="0" to="5.88" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="986895">
+                        <ChannelSet name="LED Built-In Open" from_dmx="0" to_dmx="15"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="EFFECTSELECT2" attribute="EFFECT2" feature="Beam" preset="Beam" from="5.88" to="52.94" physfrom="0" physto="1" min_dmx_24="1052688" max_dmx_24="8882055">
+                        <ChannelSet name="LED Built-In Movement - 1" from_dmx="16" to_dmx="16"/>
+                        <ChannelSet name="LED Built-In Movement - 2" from_dmx="17" to_dmx="17"/>
+                        <ChannelSet name="LED Built-In Movement - 3" from_dmx="18" to_dmx="18"/>
+                        <ChannelSet name="LED Built-In Movement - 4" from_dmx="19" to_dmx="19"/>
+                        <ChannelSet name="LED Built-In Movement - 5" from_dmx="20" to_dmx="20"/>
+                        <ChannelSet name="LED Built-In Movement - 6" from_dmx="21" to_dmx="21"/>
+                        <ChannelSet name="LED Built-In Movement - 7" from_dmx="22" to_dmx="22"/>
+                        <ChannelSet name="LED Built-In Movement - 8" from_dmx="23" to_dmx="23"/>
+                        <ChannelSet name="LED Built-In Movement - 9" from_dmx="24" to_dmx="24"/>
+                        <ChannelSet name="LED Built-In Movement - 10" from_dmx="25" to_dmx="25"/>
+                        <ChannelSet name="LED Built-In Movement - 11" from_dmx="26" to_dmx="26"/>
+                        <ChannelSet name="LED Built-In Movement - 12" from_dmx="27" to_dmx="27"/>
+                        <ChannelSet name="LED Built-In Movement - 13" from_dmx="28" to_dmx="28"/>
+                        <ChannelSet name="LED Built-In Movement - 14" from_dmx="29" to_dmx="29"/>
+                        <ChannelSet name="LED Built-In Movement - 15" from_dmx="30" to_dmx="30"/>
+                        <ChannelSet name="LED Built-In Movement - 16" from_dmx="31" to_dmx="31"/>
+                        <ChannelSet name="LED Built-In Movement - 17" from_dmx="32" to_dmx="32"/>
+                        <ChannelSet name="LED Built-In Movement - 18" from_dmx="33" to_dmx="33"/>
+                        <ChannelSet name="LED Built-In Movement - 19" from_dmx="34" to_dmx="34"/>
+                        <ChannelSet name="LED Built-In Movement - 20" from_dmx="35" to_dmx="35"/>
+                        <ChannelSet name="LED Built-In Movement - 21" from_dmx="36" to_dmx="36"/>
+                        <ChannelSet name="LED Built-In Movement - 22" from_dmx="37" to_dmx="37"/>
+                        <ChannelSet name="LED Built-In Movement - 23" from_dmx="38" to_dmx="38"/>
+                        <ChannelSet name="LED Built-In Movement - 24" from_dmx="39" to_dmx="39"/>
+                        <ChannelSet name="LED Built-In Movement - 25" from_dmx="40" to_dmx="40"/>
+                        <ChannelSet name="LED Built-In Movement - 26" from_dmx="41" to_dmx="41"/>
+                        <ChannelSet name="LED Built-In Movement - 27" from_dmx="42" to_dmx="42"/>
+                        <ChannelSet name="LED Built-In Movement - 28" from_dmx="43" to_dmx="43"/>
+                        <ChannelSet name="LED Built-In Movement - 29" from_dmx="44" to_dmx="44"/>
+                        <ChannelSet name="LED Built-In Movement - 30" from_dmx="45" to_dmx="45"/>
+                        <ChannelSet name="LED Built-In Movement - 31" from_dmx="46" to_dmx="46"/>
+                        <ChannelSet name="LED Built-In Movement - 32" from_dmx="47" to_dmx="47"/>
+                        <ChannelSet name="LED Built-In Movement - 33" from_dmx="48" to_dmx="48"/>
+                        <ChannelSet name="LED Built-In Movement - 34" from_dmx="49" to_dmx="49"/>
+                        <ChannelSet name="LED Built-In Movement - 35" from_dmx="50" to_dmx="50"/>
+                        <ChannelSet name="LED Built-In Movement - 36" from_dmx="51" to_dmx="51"/>
+                        <ChannelSet name="LED Built-In Movement - 37" from_dmx="52" to_dmx="52"/>
+                        <ChannelSet name="LED Built-In Movement - 38" from_dmx="53" to_dmx="53"/>
+                        <ChannelSet name="LED Built-In Movement - 39" from_dmx="54" to_dmx="54"/>
+                        <ChannelSet name="LED Built-In Movement - 40" from_dmx="55" to_dmx="55"/>
+                        <ChannelSet name="LED Built-In Movement - 41" from_dmx="56" to_dmx="56"/>
+                        <ChannelSet name="LED Built-In Movement - 42" from_dmx="57" to_dmx="57"/>
+                        <ChannelSet name="LED Built-In Movement - 43" from_dmx="58" to_dmx="58"/>
+                        <ChannelSet name="LED Built-In Movement - 44" from_dmx="59" to_dmx="59"/>
+                        <ChannelSet name="LED Built-In Movement - 45" from_dmx="60" to_dmx="60"/>
+                        <ChannelSet name="LED Built-In Movement - 46" from_dmx="61" to_dmx="61"/>
+                        <ChannelSet name="LED Built-In Movement - 47" from_dmx="62" to_dmx="62"/>
+                        <ChannelSet name="LED Built-In Movement - 48" from_dmx="63" to_dmx="63"/>
+                        <ChannelSet name="LED Built-In Movement - 49" from_dmx="64" to_dmx="64"/>
+                        <ChannelSet name="LED Built-In Movement - 50" from_dmx="65" to_dmx="65"/>
+                        <ChannelSet name="LED Built-In Movement - 51" from_dmx="66" to_dmx="66"/>
+                        <ChannelSet name="LED Built-In Movement - 52" from_dmx="67" to_dmx="67"/>
+                        <ChannelSet name="LED Built-In Movement - 53" from_dmx="68" to_dmx="68"/>
+                        <ChannelSet name="LED Built-In Movement - 54" from_dmx="69" to_dmx="69"/>
+                        <ChannelSet name="LED Built-In Movement - 55" from_dmx="70" to_dmx="70"/>
+                        <ChannelSet name="LED Built-In Movement - 56" from_dmx="71" to_dmx="71"/>
+                        <ChannelSet name="LED Built-In Movement - 57" from_dmx="72" to_dmx="72"/>
+                        <ChannelSet name="LED Built-In Movement - 58" from_dmx="73" to_dmx="73"/>
+                        <ChannelSet name="LED Built-In Movement - 59" from_dmx="74" to_dmx="74"/>
+                        <ChannelSet name="LED Built-In Movement - 60" from_dmx="75" to_dmx="75"/>
+                        <ChannelSet name="LED Built-In Movement - 61" from_dmx="76" to_dmx="76"/>
+                        <ChannelSet name="LED Built-In Movement - 62" from_dmx="77" to_dmx="77"/>
+                        <ChannelSet name="LED Built-In Movement - 63" from_dmx="78" to_dmx="78"/>
+                        <ChannelSet name="LED Built-In Movement - 64" from_dmx="79" to_dmx="79"/>
+                        <ChannelSet name="LED Built-In Movement - 65" from_dmx="80" to_dmx="80"/>
+                        <ChannelSet name="LED Built-In Movement - 66" from_dmx="81" to_dmx="81"/>
+                        <ChannelSet name="LED Built-In Movement - 67" from_dmx="82" to_dmx="82"/>
+                        <ChannelSet name="LED Built-In Movement - 68" from_dmx="83" to_dmx="83"/>
+                        <ChannelSet name="LED Built-In Movement - 69" from_dmx="84" to_dmx="84"/>
+                        <ChannelSet name="LED Built-In Movement - 70" from_dmx="85" to_dmx="85"/>
+                        <ChannelSet name="LED Built-In Movement - 71" from_dmx="86" to_dmx="86"/>
+                        <ChannelSet name="LED Built-In Movement - 72" from_dmx="87" to_dmx="87"/>
+                        <ChannelSet name="LED Built-In Movement - 73" from_dmx="88" to_dmx="88"/>
+                        <ChannelSet name="LED Built-In Movement - 74" from_dmx="89" to_dmx="89"/>
+                        <ChannelSet name="LED Built-In Movement - 75" from_dmx="90" to_dmx="90"/>
+                        <ChannelSet name="LED Built-In Movement - 76" from_dmx="91" to_dmx="91"/>
+                        <ChannelSet name="LED Built-In Movement - 77" from_dmx="92" to_dmx="92"/>
+                        <ChannelSet name="LED Built-In Movement - 78" from_dmx="93" to_dmx="93"/>
+                        <ChannelSet name="LED Built-In Movement - 79" from_dmx="94" to_dmx="94"/>
+                        <ChannelSet name="LED Built-In Movement - 80" from_dmx="95" to_dmx="95"/>
+                        <ChannelSet name="LED Built-In Movement - 81" from_dmx="96" to_dmx="96"/>
+                        <ChannelSet name="LED Built-In Movement - 82" from_dmx="97" to_dmx="97"/>
+                        <ChannelSet name="LED Built-In Movement - 83" from_dmx="98" to_dmx="98"/>
+                        <ChannelSet name="LED Built-In Movement - 84" from_dmx="99" to_dmx="99"/>
+                        <ChannelSet name="LED Built-In Movement - 85" from_dmx="100" to_dmx="100"/>
+                        <ChannelSet name="LED Built-In Movement - 86" from_dmx="101" to_dmx="101"/>
+                        <ChannelSet name="LED Built-In Movement - 87" from_dmx="102" to_dmx="102"/>
+                        <ChannelSet name="LED Built-In Movement - 88" from_dmx="103" to_dmx="103"/>
+                        <ChannelSet name="LED Built-In Movement - 89" from_dmx="104" to_dmx="104"/>
+                        <ChannelSet name="LED Built-In Movement - 90" from_dmx="105" to_dmx="105"/>
+                        <ChannelSet name="LED Built-In Movement - 91" from_dmx="106" to_dmx="106"/>
+                        <ChannelSet name="LED Built-In Movement - 92" from_dmx="107" to_dmx="107"/>
+                        <ChannelSet name="LED Built-In Movement - 93" from_dmx="108" to_dmx="108"/>
+                        <ChannelSet name="LED Built-In Movement - 94" from_dmx="109" to_dmx="109"/>
+                        <ChannelSet name="LED Built-In Movement - 95" from_dmx="110" to_dmx="110"/>
+                        <ChannelSet name="LED Built-In Movement - 96" from_dmx="111" to_dmx="111"/>
+                        <ChannelSet name="LED Built-In Movement - 97" from_dmx="112" to_dmx="112"/>
+                        <ChannelSet name="LED Built-In Movement - 98" from_dmx="113" to_dmx="113"/>
+                        <ChannelSet name="LED Built-In Movement - 99" from_dmx="114" to_dmx="114"/>
+                        <ChannelSet name="LED Built-In Movement - 100" from_dmx="115" to_dmx="115"/>
+                        <ChannelSet name="LED Built-In Movement - 101" from_dmx="116" to_dmx="116"/>
+                        <ChannelSet name="LED Built-In Movement - 102" from_dmx="117" to_dmx="117"/>
+                        <ChannelSet name="LED Built-In Movement - 103" from_dmx="118" to_dmx="118"/>
+                        <ChannelSet name="LED Built-In Movement - 104" from_dmx="119" to_dmx="119"/>
+                        <ChannelSet name="LED Built-In Movement - 105" from_dmx="120" to_dmx="120"/>
+                        <ChannelSet name="LED Built-In Movement - 106" from_dmx="121" to_dmx="121"/>
+                        <ChannelSet name="LED Built-In Movement - 107" from_dmx="122" to_dmx="122"/>
+                        <ChannelSet name="LED Built-In Movement - 108" from_dmx="123" to_dmx="123"/>
+                        <ChannelSet name="LED Built-In Movement - 109" from_dmx="124" to_dmx="124"/>
+                        <ChannelSet name="LED Built-In Movement - 110" from_dmx="125" to_dmx="125"/>
+                        <ChannelSet name="LED Built-In Movement - 111" from_dmx="126" to_dmx="126"/>
+                        <ChannelSet name="LED Built-In Movement - 112" from_dmx="127" to_dmx="127"/>
+                        <ChannelSet name="LED Built-In Movement - 113" from_dmx="128" to_dmx="128"/>
+                        <ChannelSet name="LED Built-In Movement - 114" from_dmx="129" to_dmx="129"/>
+                        <ChannelSet name="LED Built-In Movement - 115" from_dmx="130" to_dmx="130"/>
+                        <ChannelSet name="LED Built-In Movement - 116" from_dmx="131" to_dmx="131"/>
+                        <ChannelSet name="LED Built-In Movement - 117" from_dmx="132" to_dmx="132"/>
+                        <ChannelSet name="LED Built-In Movement - 118" from_dmx="133" to_dmx="133"/>
+                        <ChannelSet name="LED Built-In Movement - 119" from_dmx="134" to_dmx="134"/>
+                        <ChannelSet name="LED Built-In Movement - 120" from_dmx="135" to_dmx="135"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="EFFECTSELECT2" attribute="EFFECT2" feature="Beam" preset="Beam" from="52.94" to="100" physfrom="0" physto="1" min_dmx_24="8947848" max_dmx_24="16777215">
+                        <ChannelSet name="LED Built-In RGB - 1" from_dmx="136" to_dmx="136"/>
+                        <ChannelSet name="LED Built-In RGB - 2" from_dmx="137" to_dmx="137"/>
+                        <ChannelSet name="LED Built-In RGB - 3" from_dmx="138" to_dmx="138"/>
+                        <ChannelSet name="LED Built-In RGB - 4" from_dmx="139" to_dmx="139"/>
+                        <ChannelSet name="LED Built-In RGB - 5" from_dmx="140" to_dmx="140"/>
+                        <ChannelSet name="LED Built-In RGB - 6" from_dmx="141" to_dmx="141"/>
+                        <ChannelSet name="LED Built-In RGB - 7" from_dmx="142" to_dmx="142"/>
+                        <ChannelSet name="LED Built-In RGB - 8" from_dmx="143" to_dmx="143"/>
+                        <ChannelSet name="LED Built-In RGB - 9" from_dmx="144" to_dmx="144"/>
+                        <ChannelSet name="LED Built-In RGB - 10" from_dmx="145" to_dmx="145"/>
+                        <ChannelSet name="LED Built-In RGB - 11" from_dmx="146" to_dmx="146"/>
+                        <ChannelSet name="LED Built-In RGB - 12" from_dmx="147" to_dmx="147"/>
+                        <ChannelSet name="LED Built-In RGB - 13" from_dmx="148" to_dmx="148"/>
+                        <ChannelSet name="LED Built-In RGB - 14" from_dmx="149" to_dmx="149"/>
+                        <ChannelSet name="LED Built-In RGB - 15" from_dmx="150" to_dmx="150"/>
+                        <ChannelSet name="LED Built-In RGB - 16" from_dmx="151" to_dmx="151"/>
+                        <ChannelSet name="LED Built-In RGB - 17" from_dmx="152" to_dmx="152"/>
+                        <ChannelSet name="LED Built-In RGB - 18" from_dmx="153" to_dmx="153"/>
+                        <ChannelSet name="LED Built-In RGB - 19" from_dmx="154" to_dmx="154"/>
+                        <ChannelSet name="LED Built-In RGB - 20" from_dmx="155" to_dmx="155"/>
+                        <ChannelSet name="LED Built-In RGB - 21" from_dmx="156" to_dmx="156"/>
+                        <ChannelSet name="LED Built-In RGB - 22" from_dmx="157" to_dmx="157"/>
+                        <ChannelSet name="LED Built-In RGB - 23" from_dmx="158" to_dmx="158"/>
+                        <ChannelSet name="LED Built-In RGB - 24" from_dmx="159" to_dmx="159"/>
+                        <ChannelSet name="LED Built-In RGB - 25" from_dmx="160" to_dmx="160"/>
+                        <ChannelSet name="LED Built-In RGB - 26" from_dmx="161" to_dmx="161"/>
+                        <ChannelSet name="LED Built-In RGB - 27" from_dmx="162" to_dmx="162"/>
+                        <ChannelSet name="LED Built-In RGB - 28" from_dmx="163" to_dmx="163"/>
+                        <ChannelSet name="LED Built-In RGB - 29" from_dmx="164" to_dmx="164"/>
+                        <ChannelSet name="LED Built-In RGB - 30" from_dmx="165" to_dmx="165"/>
+                        <ChannelSet name="LED Built-In RGB - 31" from_dmx="166" to_dmx="166"/>
+                        <ChannelSet name="LED Built-In RGB - 32" from_dmx="167" to_dmx="167"/>
+                        <ChannelSet name="LED Built-In RGB - 33" from_dmx="168" to_dmx="168"/>
+                        <ChannelSet name="LED Built-In RGB - 34" from_dmx="169" to_dmx="169"/>
+                        <ChannelSet name="LED Built-In RGB - 35" from_dmx="170" to_dmx="170"/>
+                        <ChannelSet name="LED Built-In RGB - 36" from_dmx="171" to_dmx="171"/>
+                        <ChannelSet name="LED Built-In RGB - 37" from_dmx="172" to_dmx="172"/>
+                        <ChannelSet name="LED Built-In RGB - 38" from_dmx="173" to_dmx="173"/>
+                        <ChannelSet name="LED Built-In RGB - 39" from_dmx="174" to_dmx="174"/>
+                        <ChannelSet name="LED Built-In RGB - 40" from_dmx="175" to_dmx="175"/>
+                        <ChannelSet name="LED Built-In RGB - 41" from_dmx="176" to_dmx="176"/>
+                        <ChannelSet name="LED Built-In RGB - 42" from_dmx="178" to_dmx="178"/>
+                        <ChannelSet name="LED Built-In RGB - 43" from_dmx="179" to_dmx="179"/>
+                        <ChannelSet name="LED Built-In RGB - 44" from_dmx="180" to_dmx="180"/>
+                        <ChannelSet name="LED Built-In RGB - 45" from_dmx="181" to_dmx="181"/>
+                        <ChannelSet name="LED Built-In RGB - 46" from_dmx="182" to_dmx="182"/>
+                        <ChannelSet name="LED Built-In RGB - 47" from_dmx="183" to_dmx="183"/>
+                        <ChannelSet name="LED Built-In RGB - 48" from_dmx="184" to_dmx="184"/>
+                        <ChannelSet name="LED Built-In RGB - 49" from_dmx="185" to_dmx="185"/>
+                        <ChannelSet name="LED Built-In RGB - 50" from_dmx="186" to_dmx="186"/>
+                        <ChannelSet name="LED Built-In RGB - 51" from_dmx="187" to_dmx="187"/>
+                        <ChannelSet name="LED Built-In RGB - 52" from_dmx="188" to_dmx="188"/>
+                        <ChannelSet name="LED Built-In RGB - 53" from_dmx="189" to_dmx="189"/>
+                        <ChannelSet name="LED Built-In RGB - 54" from_dmx="190" to_dmx="190"/>
+                        <ChannelSet name="LED Built-In RGB - 55" from_dmx="191" to_dmx="191"/>
+                        <ChannelSet name="LED Built-In RGB - 56" from_dmx="192" to_dmx="192"/>
+                        <ChannelSet name="LED Built-In RGB - 57" from_dmx="193" to_dmx="193"/>
+                        <ChannelSet name="LED Built-In RGB - 58" from_dmx="194" to_dmx="194"/>
+                        <ChannelSet name="LED Built-In RGB - 59" from_dmx="195" to_dmx="195"/>
+                        <ChannelSet name="LED Built-In RGB - 60" from_dmx="196" to_dmx="196"/>
+                        <ChannelSet name="LED Built-In RGB - 61" from_dmx="197" to_dmx="197"/>
+                        <ChannelSet name="LED Built-In RGB - 62" from_dmx="198" to_dmx="198"/>
+                        <ChannelSet name="LED Built-In RGB - 63" from_dmx="199" to_dmx="199"/>
+                        <ChannelSet name="LED Built-In RGB - 64" from_dmx="200" to_dmx="200"/>
+                        <ChannelSet name="LED Built-In RGB - 65" from_dmx="201" to_dmx="201"/>
+                        <ChannelSet name="LED Built-In RGB - 66" from_dmx="202" to_dmx="202"/>
+                        <ChannelSet name="LED Built-In RGB - 67" from_dmx="203" to_dmx="203"/>
+                        <ChannelSet name="LED Built-In RGB - 68" from_dmx="204" to_dmx="204"/>
+                        <ChannelSet name="LED Built-In RGB - 69" from_dmx="205" to_dmx="205"/>
+                        <ChannelSet name="LED Built-In RGB - 70" from_dmx="206" to_dmx="206"/>
+                        <ChannelSet name="LED Built-In RGB - 71" from_dmx="207" to_dmx="207"/>
+                        <ChannelSet name="LED Built-In RGB - 72" from_dmx="208" to_dmx="208"/>
+                        <ChannelSet name="LED Built-In RGB - 73" from_dmx="209" to_dmx="209"/>
+                        <ChannelSet name="LED Built-In RGB - 74" from_dmx="210" to_dmx="210"/>
+                        <ChannelSet name="LED Built-In RGB - 75" from_dmx="211" to_dmx="211"/>
+                        <ChannelSet name="LED Built-In RGB - 76" from_dmx="212" to_dmx="212"/>
+                        <ChannelSet name="LED Built-In RGB - 77" from_dmx="213" to_dmx="213"/>
+                        <ChannelSet name="LED Built-In RGB - 78" from_dmx="214" to_dmx="214"/>
+                        <ChannelSet name="LED Built-In RGB - 79" from_dmx="215" to_dmx="215"/>
+                        <ChannelSet name="LED Built-In RGB - 80" from_dmx="216" to_dmx="216"/>
+                        <ChannelSet name="LED Built-In RGB - 81" from_dmx="217" to_dmx="217"/>
+                        <ChannelSet name="LED Built-In RGB - 82" from_dmx="218" to_dmx="218"/>
+                        <ChannelSet name="LED Built-In RGB - 83" from_dmx="219" to_dmx="219"/>
+                        <ChannelSet name="LED Built-In RGB - 84" from_dmx="220" to_dmx="220"/>
+                        <ChannelSet name="LED Built-In RGB - 85" from_dmx="221" to_dmx="221"/>
+                        <ChannelSet name="LED Built-In RGB - 86" from_dmx="222" to_dmx="222"/>
+                        <ChannelSet name="LED Built-In RGB - 87" from_dmx="223" to_dmx="223"/>
+                        <ChannelSet name="LED Built-In RGB - 88" from_dmx="224" to_dmx="224"/>
+                        <ChannelSet name="LED Built-In RGB - 89" from_dmx="225" to_dmx="225"/>
+                        <ChannelSet name="LED Built-In RGB - 90" from_dmx="226" to_dmx="226"/>
+                        <ChannelSet name="LED Built-In RGB - 91" from_dmx="227" to_dmx="227"/>
+                        <ChannelSet name="LED Built-In RGB - 92" from_dmx="228" to_dmx="228"/>
+                        <ChannelSet name="LED Built-In RGB - 93" from_dmx="229" to_dmx="229"/>
+                        <ChannelSet name="LED Built-In RGB - 94" from_dmx="230" to_dmx="230"/>
+                        <ChannelSet name="LED Built-In RGB - 95" from_dmx="231" to_dmx="231"/>
+                        <ChannelSet name="LED Built-In RGB - 96" from_dmx="232" to_dmx="232"/>
+                        <ChannelSet name="LED Built-In RGB - 97" from_dmx="233" to_dmx="233"/>
+                        <ChannelSet name="LED Built-In RGB - 98" from_dmx="234" to_dmx="234"/>
+                        <ChannelSet name="LED Built-In RGB - 99" from_dmx="235" to_dmx="235"/>
+                        <ChannelSet name="LED Built-In RGB - 100" from_dmx="236" to_dmx="236"/>
+                        <ChannelSet name="LED Built-In RGB - 101" from_dmx="237" to_dmx="237"/>
+                        <ChannelSet name="LED Built-In RGB - 102" from_dmx="238" to_dmx="238"/>
+                        <ChannelSet name="LED Built-In RGB - 103" from_dmx="239" to_dmx="239"/>
+                        <ChannelSet name="LED Built-In RGB - 104" from_dmx="240" to_dmx="240"/>
+                        <ChannelSet name="LED Built-In RGB - 105" from_dmx="241" to_dmx="241"/>
+                        <ChannelSet name="LED Built-In RGB - 106" from_dmx="242" to_dmx="242"/>
+                        <ChannelSet name="LED Built-In RGB - 107" from_dmx="243" to_dmx="243"/>
+                        <ChannelSet name="LED Built-In RGB - 108" from_dmx="244" to_dmx="244"/>
+                        <ChannelSet name="LED Built-In RGB - 109" from_dmx="245" to_dmx="245"/>
+                        <ChannelSet name="LED Built-In RGB - 110" from_dmx="246" to_dmx="246"/>
+                        <ChannelSet name="LED Built-In RGB - 111" from_dmx="247" to_dmx="247"/>
+                        <ChannelSet name="LED Built-In RGB - 112" from_dmx="248" to_dmx="248"/>
+                        <ChannelSet name="LED Built-In RGB - 113" from_dmx="249" to_dmx="249"/>
+                        <ChannelSet name="LED Built-In RGB - 114" from_dmx="250" to_dmx="250"/>
+                        <ChannelSet name="LED Built-In RGB - 115" from_dmx="251" to_dmx="251"/>
+                        <ChannelSet name="LED Built-In RGB - 116" from_dmx="252" to_dmx="252"/>
+                        <ChannelSet name="LED Built-In RGB - 117" from_dmx="253" to_dmx="253"/>
+                        <ChannelSet name="LED Built-In RGB - 118" from_dmx="254" to_dmx="254"/>
+                        <ChannelSet name="LED Built-In RGB - 119" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="16" default="128" attribute="EFFECTRATE2" feature="Beam" preset="Beam" highlight_value="0">
+                    <ChannelFunction subattribute="EFFECTRATE2" attribute="EFFECTRATE2" feature="Beam" preset="Beam" from="0" to="100" physfrom="0" physto="10" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="F > S - Speed" from_dmx="0" to_dmx="127" slot_from="10" slot_to="0.1"/>
+                        <ChannelSet name="Stop" from_dmx="128" to_dmx="128" slot_from="0" slot_to="0"/>
+                        <ChannelSet name="S > F - Speed" from_dmx="129" to_dmx="255" slot_from="0.1" slot_to="10"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="17" default="0" attribute="Effects2Adjust1" feature="Beam" preset="Beam" highlight_value="0">
+                    <ChannelFunction subattribute="Effects2Adjust1" attribute="Effects2Adjust1" feature="Beam" preset="Beam" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="21" default="0" attribute="COLORMACROS2" feature="Color" preset="Color" highlight_value="0">
+                    <ChannelFunction subattribute="COLORMACROS2" attribute="COLORMACROS2" feature="Color" preset="Color" from="0" to="0" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="0">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="0" slot_from="0" slot_to="0"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="CTC" attribute="COLORMACROS2" feature="Color" preset="Color" from="0" to="5.49" physfrom="8000" physto="0" min_dmx_24="65793" max_dmx_24="921102" wheel="1">
+                        <ChannelSet name="White 2700K - CTC" from_dmx="1" to_dmx="2" slot_from="2700" slot_to="2700" slot_index="0"/>
+                        <ChannelSet name="White 3200K - CTC" from_dmx="3" to_dmx="4" slot_from="3200" slot_to="3200" slot_index="1"/>
+                        <ChannelSet name="White 4000K - CTC" from_dmx="5" to_dmx="6" slot_from="4000" slot_to="4000" slot_index="2"/>
+                        <ChannelSet name="White 4200K - CTC" from_dmx="7" to_dmx="8" slot_from="4200" slot_to="4200" slot_index="3"/>
+                        <ChannelSet name="White 5600K - CTC" from_dmx="9" to_dmx="10" slot_from="5600" slot_to="5600" slot_index="4"/>
+                        <ChannelSet name="White 6500K - CTC" from_dmx="11" to_dmx="12" slot_from="6500" slot_to="6500" slot_index="5"/>
+                        <ChannelSet name="White 7500K - CTC" from_dmx="13" to_dmx="14" slot_from="7500" slot_to="7500" slot_index="6"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="COLORMACROS2" attribute="COLORMACROS2" feature="Color" preset="Color" from="5.49" to="93.73" physfrom="0" physto="0" min_dmx_24="986895" max_dmx_24="15724527" wheel="1">
+                        <ChannelSet name="Blue" from_dmx="15" to_dmx="15" slot_from="0" slot_to="0" slot_index="7"/>
+                        <ChannelSet name="+Green" from_dmx="16" to_dmx="51" slot_index="8"/>
+                        <ChannelSet name="Cyan" from_dmx="52" to_dmx="52" slot_from="0" slot_to="0" slot_index="9"/>
+                        <ChannelSet name="-Blue" from_dmx="53" to_dmx="88" slot_index="10"/>
+                        <ChannelSet name="Green" from_dmx="89" to_dmx="89" slot_from="0" slot_to="0" slot_index="11"/>
+                        <ChannelSet name="+Red" from_dmx="90" to_dmx="125" slot_index="12"/>
+                        <ChannelSet name="Yellow" from_dmx="126" to_dmx="126" slot_from="0" slot_to="0" slot_index="13"/>
+                        <ChannelSet name="-Green" from_dmx="127" to_dmx="162" slot_index="14"/>
+                        <ChannelSet name="Red" from_dmx="163" to_dmx="163" slot_from="0" slot_to="0" slot_index="15"/>
+                        <ChannelSet name="+Blue" from_dmx="164" to_dmx="200" slot_index="16"/>
+                        <ChannelSet name="Magenta" from_dmx="201" to_dmx="201" slot_from="0" slot_to="0" slot_index="17"/>
+                        <ChannelSet name="-Red" from_dmx="202" to_dmx="238" slot_index="18"/>
+                        <ChannelSet name="Blue" from_dmx="239" to_dmx="239" slot_from="0" slot_to="0" slot_index="7"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="ColorControl" attribute="COLORMACROS2" feature="Color" preset="Color" from="93.73" to="96.86" physfrom="10" physto="0.1" min_dmx_24="15790320" max_dmx_24="16250871">
+                        <ChannelSet name="Fast" from_dmx="240" to_dmx="240" slot_from="10" slot_to="10"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="241" to_dmx="246" slot_from="8.59" slot_to="1.51"/>
+                        <ChannelSet name="Slow" from_dmx="247" to_dmx="247" slot_from="0.1" slot_to="0.1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="ColorControl" attribute="COLORMACROS2" feature="Color" preset="Color" from="96.86" to="100" physfrom="10" physto="0.1" min_dmx_24="16316664" max_dmx_24="16777215">
+                        <ChannelSet name="Fast" from_dmx="248" to_dmx="248" slot_from="10" slot_to="10"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="249" to_dmx="254" slot_from="8.59" slot_to="1.51"/>
+                        <ChannelSet name="Slow" from_dmx="255" to_dmx="255" slot_from="0.1" slot_to="0.1"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="22" fine="23" default="0" react_to_master="1" attribute="BackgroundDimmer" feature="Dimmer" preset="Dimmer" highlight_value="0">
+                    <ChannelFunction subattribute="BackgroundDimmer" attribute="BackgroundDimmer" feature="Dimmer" preset="Dimmer" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="65534"/>
+                        <ChannelSet name="Max" from_dmx="65535" to_dmx="65535"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="26" fine="27" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="65534"/>
+                        <ChannelSet name="Max" from_dmx="65535" to_dmx="65535"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="29" default="22" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" highlight_value="100">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="9.41" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="1579032">
+                        <ChannelSet name="Shutter Closed" from_dmx="0" to_dmx="19" slot_from="0" slot_to="0"/>
+                        <ChannelSet name="Shutter Open" from_dmx="20" to_dmx="24" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="9.41" to="25.1" physfrom="20" physto="0.1" min_dmx_24="1644825" max_dmx_24="4210752">
+                        <ChannelSet name="Fast" from_dmx="25" to_dmx="25"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="26" to_dmx="63"/>
+                        <ChannelSet name="Slow" from_dmx="64" to_dmx="64"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="25.1" to="27.06" physfrom="1" physto="1" min_dmx_24="4276545" max_dmx_24="4539717">
+                        <ChannelSet name="Shutter Open" from_dmx="65" to_dmx="69" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_PULSE_CLOSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="27.06" to="32.94" physfrom="20" physto="0.1" min_dmx_24="4605510" max_dmx_24="5526612">
+                        <ChannelSet name="Fast" from_dmx="70" to_dmx="70"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="71" to_dmx="83"/>
+                        <ChannelSet name="Slow" from_dmx="84" to_dmx="84"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="32.94" to="34.9" physfrom="1" physto="1" min_dmx_24="5592405" max_dmx_24="5855577">
+                        <ChannelSet name="Shutter Open" from_dmx="85" to_dmx="89" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_PULSE_OPEN" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="34.9" to="40.78" physfrom="20" physto="0.1" min_dmx_24="5921370" max_dmx_24="6842472">
+                        <ChannelSet name="Fast" from_dmx="90" to_dmx="90"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="91" to_dmx="103"/>
+                        <ChannelSet name="Slow" from_dmx="104" to_dmx="104"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="40.78" to="42.75" physfrom="1" physto="1" min_dmx_24="6908265" max_dmx_24="7171437">
+                        <ChannelSet name="Shutter Open" from_dmx="105" to_dmx="109" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_RANDOM" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="42.75" to="48.63" physfrom="20" physto="0.1" min_dmx_24="7237230" max_dmx_24="8158332">
+                        <ChannelSet name="Fast" from_dmx="110" to_dmx="110"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="111" to_dmx="123"/>
+                        <ChannelSet name="Slow" from_dmx="124" to_dmx="124"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="48.63" to="50.59" physfrom="1" physto="1" min_dmx_24="8224125" max_dmx_24="8487297">
+                        <ChannelSet name="Shutter Open" from_dmx="125" to_dmx="129" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_RANDOM_PULSE_CLOSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="50.59" to="56.47" physfrom="20" physto="0.1" min_dmx_24="8553090" max_dmx_24="9474192">
+                        <ChannelSet name="Fast" from_dmx="130" to_dmx="130"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="131" to_dmx="143"/>
+                        <ChannelSet name="Slow" from_dmx="144" to_dmx="144"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="56.47" to="58.43" physfrom="1" physto="1" min_dmx_24="9539985" max_dmx_24="9803157">
+                        <ChannelSet name="Shutter Open" from_dmx="145" to_dmx="149" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_RANDOM_PULSE_OPEN" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="58.43" to="64.31" physfrom="20" physto="0.1" min_dmx_24="9868950" max_dmx_24="10790052">
+                        <ChannelSet name="Fast" from_dmx="150" to_dmx="150"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="151" to_dmx="163"/>
+                        <ChannelSet name="Slow" from_dmx="164" to_dmx="164"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="64.31" to="66.27" physfrom="1" physto="1" min_dmx_24="10855845" max_dmx_24="11119017">
+                        <ChannelSet name="Shutter Open" from_dmx="165" to_dmx="169" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_PULSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="66.27" to="72.16" physfrom="20" physto="0.1" min_dmx_24="11184810" max_dmx_24="12105912">
+                        <ChannelSet name="Fast" from_dmx="170" to_dmx="170"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="171" to_dmx="183"/>
+                        <ChannelSet name="Slow" from_dmx="184" to_dmx="184"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="72.16" to="74.12" physfrom="1" physto="1" min_dmx_24="12171705" max_dmx_24="12434877">
+                        <ChannelSet name="Shutter Open" from_dmx="185" to_dmx="189" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_RANDOM_PULSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="74.12" to="80" physfrom="20" physto="0.1" min_dmx_24="12500670" max_dmx_24="13421772">
+                        <ChannelSet name="Fast" from_dmx="190" to_dmx="190"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="191" to_dmx="203"/>
+                        <ChannelSet name="Slow" from_dmx="204" to_dmx="204"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="80" to="81.96" physfrom="1" physto="1" min_dmx_24="13487565" max_dmx_24="13750737">
+                        <ChannelSet name="Shutter Open" from_dmx="205" to_dmx="209" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="81.96" to="87.84" physfrom="20" physto="0.1" min_dmx_24="13816530" max_dmx_24="14737632">
+                        <ChannelSet name="Fast" from_dmx="210" to_dmx="210"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="211" to_dmx="223"/>
+                        <ChannelSet name="Slow" from_dmx="224" to_dmx="224"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="87.84" to="89.8" physfrom="1" physto="1" min_dmx_24="14803425" max_dmx_24="15066597">
+                        <ChannelSet name="Shutter Open" from_dmx="225" to_dmx="229" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_RANDOM_PULSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="89.8" to="95.69" physfrom="20" physto="0.1" min_dmx_24="15132390" max_dmx_24="16053492">
+                        <ChannelSet name="Fast" from_dmx="230" to_dmx="230"/>
+                        <ChannelSet name="Fast > Slow" from_dmx="231" to_dmx="243"/>
+                        <ChannelSet name="Slow" from_dmx="244" to_dmx="244"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="95.69" to="100" physfrom="1" physto="1" min_dmx_24="16119285" max_dmx_24="16777215">
+                        <ChannelSet name="Shutter Open" from_dmx="245" to_dmx="255" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="35" fine="36" default="0" attribute="R_Overwrite" feature="Color" preset="Color" highlight_value="100">
+                    <ChannelFunction subattribute="R_Overwrite" attribute="R_Overwrite" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="65534"/>
+                        <ChannelSet name="Max" from_dmx="65535" to_dmx="65535"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="39" fine="40" default="0" attribute="G_Overwrite" feature="Color" preset="Color" highlight_value="100">
+                    <ChannelFunction subattribute="G_Overwrite" attribute="G_Overwrite" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="65534"/>
+                        <ChannelSet name="Max" from_dmx="65535" to_dmx="65535"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="43" fine="44" default="0" attribute="B_Overwrite" feature="Color" preset="Color" highlight_value="100">
+                    <ChannelFunction subattribute="B_Overwrite" attribute="B_Overwrite" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="65534"/>
+                        <ChannelSet name="Max" from_dmx="65535" to_dmx="65535"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="45" fine="46" default="0" attribute="W_Overwrite" feature="Color" preset="Color" highlight_value="100">
+                    <ChannelFunction subattribute="W_Overwrite" attribute="W_Overwrite" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="65534"/>
+                        <ChannelSet name="Max" from_dmx="65535" to_dmx="65535"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="Plate_1" class="None" beamtype="None" beam_intensity="" index="14" beam_angle="1">
+                <Model/>
+                <ChannelType coarse="30" default="127" attribute="ZOOM" feature="FOCUS" preset="FOCUS">
+                    <ChannelFunction subattribute="ZOOM" attribute="ZOOM" feature="FOCUS" preset="FOCUS" from="0" to="100" physfrom="47.7" physto="4.6" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Wide" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Wide > Narrow" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Narrow" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="Plate_2" class="None" beamtype="None" beam_intensity="" index="31" beam_angle="1">
+                <Model/>
+                <ChannelType coarse="31" default="127" attribute="ZOOM" feature="FOCUS" preset="FOCUS">
+                    <ChannelFunction subattribute="ZOOM" attribute="ZOOM" feature="FOCUS" preset="FOCUS" from="0" to="100" physfrom="47.7" physto="4.6" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Wide" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Wide > Narrow" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Narrow" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+            <Instance module_index="1" patch="1" locked="true"/>
+            <Instance module_index="2" patch="1" locked="true"/>
+            <Instance module_index="3" patch="1" locked="true"/>
+        </Instances>
+        <Wheels>
+            <Wheel index="0" preset="Color" feature="Color" attribute="COLORMACROS" subattribute="CTC">
+                <Slot index="0" media_name="2700K" r="255" g="138" b="39"/>
+                <Slot index="1" media_name="3200K" r="254" g="162" b="57"/>
+                <Slot index="2" media_name="4000K" r="255" g="208" b="99"/>
+                <Slot index="3" media_name="4200K" r="255" g="217" b="122"/>
+                <Slot index="4" media_name="5600K" r="247" g="255" b="182"/>
+                <Slot index="5" media_name="6500K" r="243" g="255" b="194"/>
+                <Slot index="6" media_name="7500K" r="236" g="234" b="214"/>
+                <Slot index="7" media_name="Blue" r="0" g="0" b="254"/>
+                <Slot index="8" media_name="+Green" r="0" g="126" b="255"/>
+                <Slot index="9" media_name="Cyan" r="0" g="254" b="254"/>
+                <Slot index="10" media_name="-Blue" r="0" g="255" b="127"/>
+                <Slot index="11" media_name="Green" r="0" g="254" b="0"/>
+                <Slot index="12" media_name="+Red" r="127" g="254" b="0"/>
+                <Slot index="13" media_name="Yellow" r="255" g="254" b="0"/>
+                <Slot index="14" media_name="-Green" r="255" g="126" b="0"/>
+                <Slot index="15" media_name="Red" r="255" g="0" b="0"/>
+                <Slot index="16" media_name="+Blue" r="255" g="0" b="126"/>
+                <Slot index="17" media_name="Magenta" r="254" g="0" b="254"/>
+                <Slot index="18" media_name="-Red" r="126" g="0" b="254"/>
+            </Wheel>
+        </Wheels>
+        <RDMKey ESTAId="8612" DeviceModelId="1994"/>
+    </FixtureType>
+</MA>

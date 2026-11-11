@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.7.0/MA.xsd" major_vers="3" minor_vers="7" stream_vers="0">
+	<Info datetime="2019-06-25T17:36:28" showfile="newshow"/>
+	<FixtureType index="1" name="ECO SLIM 180 5-IN-1" mode="2ch">
+		<InfoItems>
+			<Info>Created using MA FixtureBuilder version v1.5</Info>
+		<Info type="Revision" date="2020-03-31T08:10:58">new, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>ECO 180</short_name>
+		<manufacturer>PROLIGHT SPAIN</manufacturer>
+		<short_manufacturer>PROLIGHT</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="LED" beamtype="Wash" beam_angle="40" beam_intensity="12000">
+				<Body>
+					<Size x="0.5" y="0.5" z="0.5"/>
+				</Body>
+				<ChannelType index="0" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="2" default="0.001" mode="COLORMACROS">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" mode_dmx_end="179" physfrom="0.5" physto="20" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="No strobe" from_dmx="0" to_dmx="10"/>
+						<ChannelSet index="1" name="Strobe" from_dmx="11" to_dmx="255"/>
+						<ChannelSet index="2" name="Strobe min" from_dmx="11" to_dmx="11"/>
+						<ChannelSet index="3" name="Strobe med" from_dmx="132" to_dmx="132"/>
+						<ChannelSet index="4" name="Strobe max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" name="Speed" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" mode_dmx_start="180" mode_dmx_end="233" physfrom="1" subattribute="SCROLLERSELECT" subattribute_user_name="Scroller" attribute="SCROLLER" attribute_user_name="Scroller" feature="COLORALL" feature_user_name="Color" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="speed min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="speed med" from_dmx="128" to_dmx="128"/>
+						<ChannelSet index="2" name="speed max" from_dmx="255" to_dmx="255"/>
+						<ChannelSet index="3" name="macro speed" from_dmx="0" to_dmx="255"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" name="Sensivity" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" mode_dmx_start="234" physfrom="1" subattribute="COLORMACROAUDIO" subattribute_user_name="Audio" attribute="COLORMACROS" attribute_user_name="Macros" feature="COLORALL" feature_user_name="Color" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min sensivity" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="med sensivity" from_dmx="128" to_dmx="128"/>
+						<ChannelSet index="2" name="max sensivity" from_dmx="255" to_dmx="255"/>
+						<ChannelSet index="3" name="sound sensivity" from_dmx="0" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="COLORMACROS" feature="COLORALL" preset="COLOR" coarse="1">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16711684" physfrom="0" physto="1" subattribute="COLORMACROSELECT" subattribute_user_name="Select" attribute="COLORMACROS" attribute_user_name="Macros" feature="COLORALL" feature_user_name="Color" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="No function" from_dmx="0" to_dmx="5"/>
+						<ChannelSet index="1" name="Red" from_dmx="6" to_dmx="11"/>
+						<ChannelSet index="2" name="Green" from_dmx="12" to_dmx="17"/>
+						<ChannelSet index="3" name="Blue" from_dmx="18" to_dmx="23"/>
+						<ChannelSet index="4" name="White" from_dmx="24" to_dmx="29"/>
+						<ChannelSet index="5" name="Amber" from_dmx="30" to_dmx="35"/>
+						<ChannelSet index="6" name="Colour 1" from_dmx="36" to_dmx="41"/>
+						<ChannelSet index="7" name="Colour 2" from_dmx="42" to_dmx="47"/>
+						<ChannelSet index="8" name="Colour 3" from_dmx="48" to_dmx="53"/>
+						<ChannelSet index="9" name="Colour 4" from_dmx="54" to_dmx="59"/>
+						<ChannelSet index="10" name="Colour 5" from_dmx="60" to_dmx="65"/>
+						<ChannelSet index="11" name="Colour 6" from_dmx="66" to_dmx="71"/>
+						<ChannelSet index="12" name="Colour 7" from_dmx="72" to_dmx="77"/>
+						<ChannelSet index="13" name="Colour 8" from_dmx="78" to_dmx="83"/>
+						<ChannelSet index="14" name="Colour 9" from_dmx="84" to_dmx="89"/>
+						<ChannelSet index="15" name="Colour 10" from_dmx="90" to_dmx="95"/>
+						<ChannelSet index="16" name="Colour 11" from_dmx="96" to_dmx="101"/>
+						<ChannelSet index="17" name="Colour 12" from_dmx="102" to_dmx="107"/>
+						<ChannelSet index="18" name="Colour 13" from_dmx="108" to_dmx="113"/>
+						<ChannelSet index="19" name="Colour 14" from_dmx="114" to_dmx="119"/>
+						<ChannelSet index="20" name="Colour 15" from_dmx="120" to_dmx="125"/>
+						<ChannelSet index="21" name="Colour 16" from_dmx="126" to_dmx="131"/>
+						<ChannelSet index="22" name="Colour 17" from_dmx="132" to_dmx="137"/>
+						<ChannelSet index="23" name="Colour 18" from_dmx="138" to_dmx="143"/>
+						<ChannelSet index="24" name="Colour 19" from_dmx="144" to_dmx="149"/>
+						<ChannelSet index="25" name="Colour 20" from_dmx="150" to_dmx="155"/>
+						<ChannelSet index="26" name="Colour 21" from_dmx="156" to_dmx="161"/>
+						<ChannelSet index="27" name="Colour 22" from_dmx="162" to_dmx="167"/>
+						<ChannelSet index="28" name="Colour 23" from_dmx="168" to_dmx="179"/>
+						<ChannelSet index="29" name="Macro 1" from_dmx="180" to_dmx="185"/>
+						<ChannelSet index="30" name="Macro 2" from_dmx="186" to_dmx="191"/>
+						<ChannelSet index="31" name="Macro 3" from_dmx="192" to_dmx="197"/>
+						<ChannelSet index="32" name="Macro 4" from_dmx="198" to_dmx="203"/>
+						<ChannelSet index="33" name="Macro 5" from_dmx="204" to_dmx="209"/>
+						<ChannelSet index="34" name="Macro 6" from_dmx="210" to_dmx="215"/>
+						<ChannelSet index="35" name="Macro 7" from_dmx="216" to_dmx="221"/>
+						<ChannelSet index="36" name="Macro 8" from_dmx="222" to_dmx="227"/>
+						<ChannelSet index="37" name="Macro 9" from_dmx="228" to_dmx="233"/>
+						<ChannelSet index="38" name="Sound mode 1" from_dmx="234" to_dmx="239"/>
+						<ChannelSet index="39" name="Sound mode 2" from_dmx="240" to_dmx="245"/>
+						<ChannelSet index="40" name="Sound mode 3" from_dmx="246" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

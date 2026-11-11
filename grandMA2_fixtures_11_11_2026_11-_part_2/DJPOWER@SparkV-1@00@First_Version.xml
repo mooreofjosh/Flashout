@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA major_vers="3" minor_vers="2" stream_vers="2">
+  <Info datetime="2019-4-21T0:10:23" showfile="ma fixture builder"/>
+  <FixtureType index="1" name="SparkV-1" mode="00">
+    <InfoItems>
+      <Info>Created using MA FixtureBuilder version v1.5</Info>
+    <Info type="Revision" date="2019-04-21T12:11:14">First Version, Uploaded to Fixture Share.</Info></InfoItems>
+    <short_name>SparkV-1</short_name>
+    <manufacturer>DJPOWER</manufacturer>
+    <short_manufacturer>DJPOWER</short_manufacturer>
+    <Modules index="0">
+      <Module index="0" class="None" beamtype="Effect" beam_angle="10" beam_intensity="10000">
+        <Body>
+          <Size x="0.5" y="0.5" z="0.5"/>
+        </Body>
+        <ChannelType index="0" attribute="HEIGHT" feature="FOUNTAIN" preset="CONTROL" coarse="1">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="HEIGHT" attribute="HEIGHT" feature="FOUNTAIN" preset="CONTROL" subattribute_user_name="Height" attribute_user_name="Height" feature_user_name="Fountain" preset_user_name="Control">
+            <ChannelSet index="0" name="Off" from_dmx="0" to_dmx="9"/>
+            <ChannelSet index="1" name="Height 1" from_dmx="10" to_dmx="35"/>
+            <ChannelSet index="2" name="Height 2" from_dmx="36" to_dmx="60"/>
+            <ChannelSet index="3" name="Height 3" from_dmx="61" to_dmx="85"/>
+            <ChannelSet index="4" name="Height 4" from_dmx="85" to_dmx="110"/>
+            <ChannelSet index="5" name="Height 5" from_dmx="111" to_dmx="135"/>
+            <ChannelSet index="6" name="Height 6" from_dmx="136" to_dmx="160"/>
+            <ChannelSet index="7" name="Height 7" from_dmx="161" to_dmx="185"/>
+            <ChannelSet index="8" name="Height 8" from_dmx="186" to_dmx="210"/>
+            <ChannelSet index="9" name="Height 9" from_dmx="211" to_dmx="235"/>
+            <ChannelSet index="10" name="Height 10" from_dmx="236" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="1" attribute="CONTROL" feature="FOUNTAIN" preset="CONTROL" coarse="2">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="CONTROL" attribute="CONTROL" feature="FOUNTAIN" preset="CONTROL" subattribute_user_name="CONTROL" attribute_user_name="CONTROL" feature_user_name="Fountain" preset_user_name="Control">
+            <ChannelSet index="4" name="Normal" from_dmx="0" to_dmx="9"/>
+            <ChannelSet index="0" name="Cleaning" from_dmx="10" to_dmx="60"/>
+            <ChannelSet index="1" name="Emergency-Stop" from_dmx="61" to_dmx="120"/>
+            <ChannelSet index="2" name="Pre-Heat Off" from_dmx="121" to_dmx="182"/>
+            <ChannelSet index="3" name="Pre-Heat On" from_dmx="183" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+      </Module>
+    </Modules>
+    <Instances index="1">
+      <Instance index="0" patch="1" module_index="0"/>
+    </Instances>
+    <Wheels index="2"/>
+    <FixtureMacroCollect index="5"/>
+  </FixtureType>
+</MA>

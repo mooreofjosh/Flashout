@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.7.0/MA.xsd" major_vers="3" minor_vers="7" stream_vers="0">
+	<Info datetime="2019-12-26T21:20:38" showfile="test"/>
+	<FixtureType index="2" name="LASER MOVING HEAD BAR" mode="23 Ch. Mode"><InfoItems><Info type="Revision" date="2020-02-04T15:53:59">6-head Laser Moving Head Bar 23ch, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>MH LASER BAR</short_name>
+		<manufacturer>D.LED</manufacturer>
+		<short_manufacturer>D.LED</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="None" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1">
+					<ChannelFunction index="0" name="Dimmer" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dimmer" attribute="DIM" attribute_user_name="Dimmer" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="2" default="0.001">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Strobe" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="No Strobe" from_dmx="0" to_dmx="9"/>
+						<ChannelSet index="1" name="Strobe S&gt;F" from_dmx="10" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="GLOBALTILT" feature="PANTILTGLOBAL" preset="POSITION" coarse="3" default="127.5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-90" physto="90" subattribute="GLOBALTILT" subattribute_user_name="TILT - Bar" attribute="GLOBALTILT" attribute_user_name="TILT - All" feature="PANTILTGLOBAL" feature_user_name="PanTiltGlobal" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="3" attribute="TRACKINGSPEED" feature="PANTILTGLOBAL" preset="POSITION" coarse="4">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="TRACKINGSPEED" subattribute_user_name="TILT Speed" attribute="TRACKINGSPEED" attribute_user_name="TILT Speed" feature="PANTILTGLOBAL" feature_user_name="PanTiltGlobal" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="4" attribute="PAN2" feature="PANTILTGLOBAL" preset="POSITION" coarse="5" default="127.5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-180" physto="180" subattribute="PAN2" subattribute_user_name="PAN Head1" attribute="PAN2" attribute_user_name="PAN Head1" feature="PANTILTGLOBAL" feature_user_name="PanTiltGlobal" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="5" attribute="PAN3" feature="PANTILTGLOBAL" preset="POSITION" coarse="6" default="127.5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-180" physto="180" subattribute="PAN3" subattribute_user_name="PAN Head2" attribute="PAN3" attribute_user_name="PAN Head2" feature="PANTILTGLOBAL" feature_user_name="PanTiltGlobal" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="6" attribute="PAN4" feature="PANTILTGLOBAL" preset="POSITION" coarse="7" default="127.5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-180" physto="180" subattribute="PAN4" subattribute_user_name="PAN Head3" attribute="PAN4" attribute_user_name="PAN Head3" feature="PANTILTGLOBAL" feature_user_name="PanTiltGlobal" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="7" attribute="PAN5" feature="PANTILTGLOBAL" preset="POSITION" coarse="8" default="127.5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-180" physto="180" subattribute="PAN5" subattribute_user_name="PAN Head4" attribute="PAN5" attribute_user_name="PAN Head4" feature="PANTILTGLOBAL" feature_user_name="PanTiltGlobal" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="8" attribute="PAN6" feature="PANTILTGLOBAL" preset="POSITION" coarse="9" default="127.5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-180" physto="180" subattribute="PAN6" subattribute_user_name="PAN Head5" attribute="PAN6" attribute_user_name="PAN Head5" feature="PANTILTGLOBAL" feature_user_name="PanTiltGlobal" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="9" attribute="PAN7" feature="PANTILTGLOBAL" preset="POSITION" coarse="10" default="127.5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-180" physto="180" subattribute="PAN7" subattribute_user_name="PAN Head6" attribute="PAN7" attribute_user_name="PAN Head6" feature="PANTILTGLOBAL" feature_user_name="PanTiltGlobal" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="10" attribute="GLOBALPAN" feature="PANTILTGLOBAL" preset="POSITION" coarse="11" default="0.001">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="GLOBALPAN" subattribute_user_name="PAN - All Heads" attribute="GLOBALPAN" attribute_user_name="PAN - All Head" feature="PANTILTGLOBAL" feature_user_name="PanTiltGlobal" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="11" attribute="TRACKINGSPEED2" feature="PANTILTGLOBAL" preset="POSITION" coarse="12">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="TRACKINGSPEED2" subattribute_user_name="PAN Speed" attribute="TRACKINGSPEED2" attribute_user_name="PAN Speed" feature="PANTILTGLOBAL" feature_user_name="PanTiltGlobal" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="12" attribute="EFFECTMACROS" feature="EFFECTMACROS" preset="BEAM" coarse="13">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="EFFECTMACROSELECT" subattribute_user_name="Efx Macros" attribute="EFFECTMACROS" attribute_user_name="Efx Macros" feature="EFFECTMACROS" feature_user_name="Macros" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="No Func" from_dmx="0" to_dmx="15"/>
+						<ChannelSet index="1" name="Effect-1" from_dmx="16" to_dmx="27"/>
+						<ChannelSet index="2" name="Effect-2" from_dmx="28" to_dmx="39"/>
+						<ChannelSet index="3" name="Effect-3" from_dmx="40" to_dmx="51"/>
+						<ChannelSet index="4" name="Effect-4" from_dmx="52" to_dmx="63"/>
+						<ChannelSet index="5" name="Effect-5" from_dmx="64" to_dmx="75"/>
+						<ChannelSet index="6" name="Effect-6" from_dmx="76" to_dmx="87"/>
+						<ChannelSet index="7" name="Effect-7" from_dmx="88" to_dmx="99"/>
+						<ChannelSet index="8" name="Effect-8" from_dmx="100" to_dmx="111"/>
+						<ChannelSet index="9" name="Effect-9" from_dmx="112" to_dmx="123"/>
+						<ChannelSet index="10" name="Effect-10" from_dmx="124" to_dmx="135"/>
+						<ChannelSet index="11" name="Effect-11" from_dmx="136" to_dmx="147"/>
+						<ChannelSet index="12" name="Effect-12" from_dmx="148" to_dmx="159"/>
+						<ChannelSet index="13" name="Effect-13" from_dmx="160" to_dmx="171"/>
+						<ChannelSet index="14" name="Effect-14" from_dmx="172" to_dmx="183"/>
+						<ChannelSet index="15" name="Effect-15" from_dmx="184" to_dmx="195"/>
+						<ChannelSet index="16" name="Effect-16" from_dmx="196" to_dmx="207"/>
+						<ChannelSet index="17" name="Effect-17" from_dmx="208" to_dmx="219"/>
+						<ChannelSet index="18" name="Effect-18" from_dmx="220" to_dmx="231"/>
+						<ChannelSet index="19" name="Effect-19" from_dmx="232" to_dmx="243"/>
+						<ChannelSet index="20" name="Effect-20" from_dmx="244" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="13" attribute="EFFECTMACRORATE" feature="EFFECTMACROS" preset="BEAM" coarse="14">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="EFFECTMACRORATE" subattribute_user_name="Efx Macro Speed" attribute="EFFECTMACRORATE" attribute_user_name="Efx Macro Speed" feature="EFFECTMACROS" feature_user_name="Macros" preset="BEAM" preset_user_name="Beam"/>
+				</ChannelType>
+				<ChannelType index="14" attribute="POSITIONMACROS" feature="POSITIONMACRO" preset="POSITION" coarse="15">
+					<ChannelFunction index="0" name="POS Macros" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="POSITIONMACROSELECT" subattribute_user_name="POS Macros" attribute="POSITIONMACROS" attribute_user_name="POS Macros" feature="POSITIONMACRO" feature_user_name="Position Macro" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="No Function" from_dmx="0" to_dmx="55"/>
+						<ChannelSet index="1" name="PosMacro-1" from_dmx="56" to_dmx="80"/>
+						<ChannelSet index="2" name="PosMacro-2" from_dmx="81" to_dmx="105"/>
+						<ChannelSet index="3" name="PosMacro-3" from_dmx="106" to_dmx="130"/>
+						<ChannelSet index="4" name="PosMacro-4" from_dmx="131" to_dmx="155"/>
+						<ChannelSet index="5" name="PosMacro-5" from_dmx="156" to_dmx="180"/>
+						<ChannelSet index="6" name="Sound Mode" from_dmx="181" to_dmx="205"/>
+						<ChannelSet index="7" name="PosMacro-6" from_dmx="206" to_dmx="230"/>
+						<ChannelSet index="8" name="Sound Mode" from_dmx="231" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="15" attribute="POSITIONMACRORATE" feature="POSITIONMACRO" preset="POSITION" coarse="16">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="POSITIONMACRORATE" subattribute_user_name="POS Macro Speed" attribute="POSITIONMACRORATE" attribute_user_name="POS Macro Speed" feature="POSITIONMACRO" feature_user_name="Position Macro" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="16" attribute="LASER" feature="LASER" preset="DIMMER" coarse="17" default="254.999">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="LASER" subattribute_user_name="Laser-1" attribute="LASER" attribute_user_name="Laser-1" feature="LASER" feature_user_name="Laser" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="Close" from_dmx="0" to_dmx="127"/>
+						<ChannelSet index="1" name="Open" from_dmx="128" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="17" attribute="LASER2" feature="LASER" preset="DIMMER" coarse="18" default="254.999">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="LASER2" subattribute_user_name="Laser-2" attribute="LASER2" attribute_user_name="Laser-2" feature="LASER" feature_user_name="Laser" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="Close" from_dmx="0" to_dmx="127"/>
+						<ChannelSet index="1" name="Open" from_dmx="128" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="18" attribute="LASER3" feature="LASER" preset="DIMMER" coarse="19" default="254.999">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="LASER3" subattribute_user_name="Laser-3" attribute="LASER3" attribute_user_name="Laser-3" feature="LASER" feature_user_name="Laser" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="Close" from_dmx="0" to_dmx="127"/>
+						<ChannelSet index="1" name="Open" from_dmx="128" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="19" attribute="LASER4" feature="LASER" preset="DIMMER" coarse="20" default="254.999">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="LASER4" subattribute_user_name="Laser-4" attribute="LASER4" attribute_user_name="Laser-4" feature="LASER" feature_user_name="Laser" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="Close" from_dmx="0" to_dmx="127"/>
+						<ChannelSet index="1" name="Open" from_dmx="128" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="20" attribute="LASER5" feature="LASER" preset="DIMMER" coarse="21" default="254.999">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="LASER5" subattribute_user_name="Laser-5" attribute="LASER5" attribute_user_name="Laser-5" feature="LASER" feature_user_name="Laser" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="Close" from_dmx="0" to_dmx="127"/>
+						<ChannelSet index="1" name="Open" from_dmx="128" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="21" attribute="LASER6" feature="LASER" preset="DIMMER" coarse="22" default="254.999">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="LASER6" subattribute_user_name="Laser-6" attribute="LASER6" attribute_user_name="Laser-6" feature="LASER" feature_user_name="Laser" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="Close" from_dmx="0" to_dmx="127"/>
+						<ChannelSet index="1" name="Open" from_dmx="128" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="22" attribute="RESET" feature="RESET" preset="CONTROL" coarse="23">
+					<ChannelFunction index="0" name="RESET" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="RESET" subattribute_user_name="Reset" attribute="RESET" attribute_user_name="Reset" feature="RESET" feature_user_name="Reset" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Safe" from_dmx="0" to_dmx="249"/>
+						<ChannelSet index="1" name="RESET" from_dmx="250" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5">
+			<FixtureMacro index="0" name="Safe">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="RESET"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" attribute="RESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="RESET" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="1" name="RESET">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="255" attribute="RESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="RESET" instance_index="0"/>
+			</FixtureMacro>
+		</FixtureMacroCollect>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

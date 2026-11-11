@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.60/MA.xsd" major_vers="3" minor_vers="9" stream_vers="60">
+	<Info datetime="2023-11-13T17:39:45" showfile="faderwingson1"/>
+	<FixtureType index="6" name="Moka Cyro ( Co2) Jet" mode="2 channel">
+		<InfoItems>
+			<Info date="2023-02-27T15:35:05">made with manual from Sep 2019</Info>
+			<Info type="Revision" date="2023-02-27T15:58:01">made with manual from Sep 2019, Uploaded to Fixture Share.</Info>
+			<Info type="Revision" date="2023-11-13T17:38:11">Changes from administrator</Info>
+			<Info type="Revision" date="2023-11-13T17:38:32">Changes from onurgkbulut</Info>
+		<Info type="Revision" date="2023-11-13T14:45:21">fixture revision designer by onurgkbulut, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>Moka</short_name>
+		<manufacturer>MOKA SFX</manufacturer>
+		<short_manufacturer>OnurGökbulut</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="None" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<ChannelType index="0" attribute="SAFETY" feature="SPRAY" preset="BEAM" coarse="1" default="127.5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="SAFETY" subattribute_user_name="Safety" attribute="SAFETY" attribute_user_name="Safety" feature="SPRAY" feature_user_name="Spray" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Safety Channel" from_dmx="0" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="2">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

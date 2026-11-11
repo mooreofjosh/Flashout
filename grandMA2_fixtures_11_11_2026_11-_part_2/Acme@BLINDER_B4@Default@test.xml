@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="1" stream_vers="0">
+    <FixtureType name="BLINDER B4" mode="Default">
+        <InfoItems>
+            <Info type="Revision" date="2019-11-09T03:47:55">Converted GDTF  to GMA2 Fixturetype with Share converter version 1.2.3</Info>
+            <Info>TEXT</Info>
+            <Info type="Revision" date="2019-11-09T03:47:58.816">test, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>BLINDER B4</short_name>
+        <manufacturer>Acme</manufacturer>
+        <short_manufacturer>ACME</short_manufacturer>
+        <Modules>
+            <Module name="Main Module" class="Conventional" beamtype="Wash" beam_intensity="1000" beam_angle="25">
+                <Model name="Body" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                    <Model name="Beam" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                        <Offset>
+                            <Location x="0.000000" y="0.000000" z="-0.130000"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Beam" model_type="Beam">
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <BeamClippingDistance>-0.066</BeamClippingDistance>
+                            <BeamDiameterAtOffset>0.200000</BeamDiameterAtOffset>
+                        </Model>
+                    </Model>
+                </Model>
+                <Body>
+                    <Size x="0.37" y="0.25" z="0.3"/>
+                </Body>
+                <ChannelType coarse="1" default="255" attribute="ColorAdd_R" feature="Color" preset="Color" highlight_value="100">
+                    <ChannelFunction subattribute="ColorAdd_R" attribute="ColorAdd_R" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="2" default="255" attribute="ColorAdd_G" feature="Color" preset="Color" highlight_value="100">
+                    <ChannelFunction subattribute="ColorAdd_G" attribute="ColorAdd_G" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="3" default="255" attribute="ColorAdd_B" feature="Color" preset="Color" highlight_value="100">
+                    <ChannelFunction subattribute="ColorAdd_B" attribute="ColorAdd_B" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="4" default="0" attribute="ColorAdd_RY" feature="Color" preset="Color" highlight_value="0">
+                    <ChannelFunction subattribute="ColorAdd_RY" attribute="ColorAdd_RY" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="5" default="0" attribute="ColorAdd_W" feature="Color" preset="Color" highlight_value="0">
+                    <ChannelFunction subattribute="ColorAdd_W" attribute="ColorAdd_W" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="6" default="0" attribute="Dimmer" feature="Dimmer" preset="Dimmer" highlight_value="100">
+                    <ChannelFunction subattribute="Dimmer" attribute="Dimmer" feature="Dimmer" preset="Dimmer" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216">
+                        <ChannelSet name="Closed" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Open" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+        </Instances>
+        <Wheels/>
+    </FixtureType>
+</MA>

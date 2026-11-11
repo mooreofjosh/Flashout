@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA major_vers="3" minor_vers="2" stream_vers="2">
+  <Info datetime="2017-5-14T16:33:16" showfile="ma fixture builder"/>
+  <FixtureType index="0" name="Vega Spot 90" mode="16 channel">
+    <InfoItems>
+      <Info>Created using MA FixtureBuilder version v1.3.1</Info>
+    <Info type="Revision" date="2017-10-24T10:10:21">with right colors but without Gobo pictures. Only gobo names, Uploaded to Fixture Share.</Info></InfoItems>
+    <short_name>VEGASpot</short_name>
+    <manufacturer>Lightmaxx</manufacturer>
+    <short_manufacturer>lightmax</short_manufacturer>
+    <Modules index="0">
+      <Module index="0" name="Module" class="Headmover" beamtype="Spot" beam_angle="19" beam_intensity="10000">
+        <Body>
+          <Size x="0.5" y="0.5" z="0.5"/>
+        </Body>
+        <ChannelType index="0" attribute="PAN" feature="POSITION" preset="POSITION" coarse="1" fine="2" default="43690">
+          <ChannelFunction index="0" from="-270" to="270" min_dmx_24="0" max_dmx_24="16777215" physfrom="-270" physto="270" subattribute="PAN" attribute="PAN" feature="POSITION" preset="POSITION">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="home" from_dmx="32768" to_dmx="32768"/>
+            <ChannelSet index="2" name="max" from_dmx="65535" to_dmx="65535"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="1" attribute="TILT" feature="POSITION" preset="POSITION" coarse="3" fine="4" default="32896">
+          <ChannelFunction index="0" from="-105" to="105" min_dmx_24="0" max_dmx_24="16777215" physfrom="-105" physto="105" subattribute="TILT" attribute="TILT" feature="POSITION" preset="POSITION">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="home" from_dmx="32896" to_dmx="32896"/>
+            <ChannelSet index="2" name="max" from_dmx="65535" to_dmx="65535"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="2" attribute="VIRTUAL_POSITION_MODE" feature="POSITION" preset="POSITION" coarse="5">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="VIRTUAL_POSITION_MODE" attribute="VIRTUAL_POSITION_MODE" feature="POSITION" preset="POSITION">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="3" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="6" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER">
+            <ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="5" attribute="COLOR1" feature="COLOR1" preset="COLOR" coarse="8" default="0.000000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" wheel="1" subattribute="COLOR1" attribute="COLOR1" feature="COLOR1" preset="COLOR">
+            <ChannelSet index="0" name="White" from_dmx="0" to_dmx="4" slot_index="0" slot_from="0"/>
+            <ChannelSet index="1" name="Red" from_dmx="14" to_dmx="22" slot_index="1"/>
+            <ChannelSet index="2" name="Orange" from_dmx="32" to_dmx="40" slot_index="2"/>
+            <ChannelSet index="3" name="Green" from_dmx="50" to_dmx="58" slot_index="3"/>
+            <ChannelSet index="4" name="Blue" from_dmx="68" to_dmx="76" slot_index="4"/>
+            <ChannelSet index="5" name="Yellow" from_dmx="86" to_dmx="94" slot_index="5"/>
+            <ChannelSet index="6" name="Cyan" from_dmx="104" to_dmx="112" slot_index="6"/>
+            <ChannelSet index="7" name="Magenta" from_dmx="122" to_dmx="130" slot_index="7"/>
+            <ChannelSet index="8" name="White" from_dmx="131" to_dmx="139" slot_index="8" slot_to="0"/>
+            <ChannelSet index="9" name="Forward" from_dmx="140" to_dmx="194"/>
+            <ChannelSet index="10" name="Stop" from_dmx="195" to_dmx="199"/>
+            <ChannelSet index="10" name="Backwards" from_dmx="200" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="6" attribute="GOBO1" feature="GOBO1" preset="GOBO" coarse="9">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="GOBO1" attribute="GOBO1" feature="GOBO1" preset="GOBO">
+            <ChannelSet index="0" name="Open" from_dmx="0" to_dmx="5"/>
+            <ChannelSet index="1" name="Circle" from_dmx="6" to_dmx="21"/>
+            <ChannelSet index="2" name="Flames" from_dmx="22" to_dmx="37"/>
+            <ChannelSet index="3" name="Flower" from_dmx="38" to_dmx="53"/>
+            <ChannelSet index="4" name="Points" from_dmx="54" to_dmx="69"/>
+            <ChannelSet index="5" name="abstract spiral" from_dmx="70" to_dmx="85"/>
+            <ChannelSet index="6" name="mandala" from_dmx="86" to_dmx="101"/>
+            <ChannelSet index="7" name="stripes" from_dmx="102" to_dmx="117"/>
+            <ChannelSet index="8" name="stripes triangle" from_dmx="118" to_dmx="133"/>
+            <ChannelSet index="9" name="Forward" from_dmx="134" to_dmx="194"/>
+            <ChannelSet index="10" name="backwards" from_dmx="195" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="7" attribute="GOBO2" feature="GOBO2" preset="GOBO" coarse="10">
+          <ChannelFunction index="0" from="0" to="7" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="GOBO2" attribute="GOBO2" feature="GOBO2" preset="GOBO">
+            <ChannelSet index="0" name="Open" from_dmx="0" to_dmx="7"/>
+            <ChannelSet index="1" name="3 points" from_dmx="8" to_dmx="28"/>
+            <ChannelSet index="2" name="big dots" from_dmx="29" to_dmx="49"/>
+            <ChannelSet index="3" name="spiral" from_dmx="50" to_dmx="70"/>
+            <ChannelSet index="4" name="star" from_dmx="71" to_dmx="91"/>
+            <ChannelSet index="5" name="abstract triangle" from_dmx="92" to_dmx="112"/>
+            <ChannelSet index="6" name="triangle" from_dmx="113" to_dmx="133"/>
+            <ChannelSet index="7" name="forward" from_dmx="134" to_dmx="194"/>
+            <ChannelSet index="8" name="backwards" from_dmx="195" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="8" attribute="GOBO2_POS" feature="GOBO2" preset="GOBO" coarse="11">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="GOBO2_POS" attribute="GOBO2_POS" feature="GOBO2" preset="GOBO">
+            <ChannelSet index="0" name="stop" from_dmx="0" to_dmx="9"/>
+            <ChannelSet index="2" name="forward" from_dmx="10" to_dmx="129"/>
+            <ChannelSet index="2" name="stop" from_dmx="130" to_dmx="134"/>
+            <ChannelSet index="1" name="backwards" from_dmx="135" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="9" attribute="FOCUS" feature="FOCUS" preset="FOCUS" coarse="12">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="FOCUS" attribute="FOCUS" feature="FOCUS" preset="FOCUS">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="10" attribute="PRISMA1" feature="BEAM1" preset="BEAM" coarse="13">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="PRISMA1" attribute="PRISMA1" feature="BEAM1" preset="BEAM">
+            <ChannelSet index="0" name="open" from_dmx="0" to_dmx="7"/>
+            <ChannelSet index="2" name="3 facette" from_dmx="8" to_dmx="134"/>
+            <ChannelSet index="2" name="forward" from_dmx="135" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="11" attribute="BEAMMACROS" feature="GOBOBEAM" preset="GOBO" coarse="14">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="BEAMMACROAUDIO" attribute="BEAMMACROS" feature="GOBOBEAM" preset="GOBO">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="12" attribute="POSITIONMACROS" feature="POSITIONMACRO" preset="POSITION" coarse="15">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="POSITIONMACROAUDIO" attribute="POSITIONMACROS" feature="POSITIONMACRO" preset="POSITION">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="13" attribute="RESET" feature="RESET" preset="CONTROL" coarse="16">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="RESET" attribute="RESET" feature="RESET" preset="CONTROL">
+            <ChannelSet index="0" name="Safe" from_dmx="0" to_dmx="249"/>
+            <ChannelSet index="1" name="Reset 10sec" from_dmx="250" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="13" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="7" default="255.000000" highlight_value="100.000000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+            <ChannelSet index="0" name="Closed" from_dmx="0" to_dmx="4"/>
+            <ChannelSet index="2" name="Strobe" from_dmx="5" to_dmx="250"/>
+            <ChannelSet index="1" name="Open" from_dmx="251" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+      </Module>
+    </Modules>
+    <Instances index="1">
+      <Instance index="0" patch="1" module_index="0"/>
+    </Instances>
+    <Wheels index="2">
+      <Wheel index="0" subattribute="COLOR1" attribute="COLOR1" feature="COLOR1" preset="COLOR">
+        <Slot index="0" media_name="White" r="255" g="255" b="255"/>
+        <Slot index="1" media_name="Red" r="255" g="0" b="0"/>
+        <Slot index="2" media_name="Orange" r="255" g="128" b="0"/>
+        <Slot index="3" media_name="Green" r="0" g="255" b="0"/>
+        <Slot index="4" media_name="Blue" r="0" g="0" b="255"/>
+        <Slot index="5" media_name="Yellow" r="255" g="255" b="0"/>
+        <Slot index="6" media_name="Cyan" r="0" g="255" b="255"/>
+        <Slot index="7" media_name="Magenta" r="255" g="0" b="255"/>
+        <Slot index="8" media_name="White" r="255" g="255" b="255"/>
+      </Wheel>
+    </Wheels>
+    <FixtureMacroCollect index="5"/>
+  </FixtureType>
+</MA>

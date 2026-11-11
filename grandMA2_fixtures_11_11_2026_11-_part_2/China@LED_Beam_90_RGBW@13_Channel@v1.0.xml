@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA major_vers="3" minor_vers="2" stream_vers="2">
+  <Info datetime="2022-4-29T21:21:39" showfile="ma fixture builder"/>
+  <FixtureType index="0" name="LED Beam 90 RGBW" mode="13 Channel">
+    <InfoItems>
+      <Info>Created using MA FixtureBuilder version v1.9.0</Info>
+    <Info type="Revision" date="2022-04-29T21:25:52">v1.0, Uploaded to Fixture Share.</Info></InfoItems>
+    <short_name>LED Beam</short_name>
+    <manufacturer>China</manufacturer>
+    <short_manufacturer>Hyu</short_manufacturer>
+    <Modules index="0">
+      <Module index="0" name="Module" class="Headmover" beamtype="Spot" beam_angle="2" beam_intensity="5000">
+        <Body>
+          <Size x=".22" y=".15" z=".31"/>
+        </Body>
+        <ChannelType index="0" attribute="PAN" feature="POSITION" preset="POSITION" coarse="1" fine="2" default="32768">
+          <ChannelFunction index="0" from="-270" to="270" min_dmx_24="0" max_dmx_24="16777215" physfrom="-270" physto="270" phystime="1.9" subattribute="PAN" attribute="PAN" feature="POSITION" preset="POSITION">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="home" from_dmx="32768" to_dmx="32768"/>
+            <ChannelSet index="2" name="max" from_dmx="65535" to_dmx="65535"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="1" attribute="TILT" feature="POSITION" preset="POSITION" coarse="3" fine="4" default="32768">
+          <ChannelFunction index="0" from="-100" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-100" physto="100" phystime="1.0" subattribute="TILT" attribute="TILT" feature="POSITION" preset="POSITION">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="home" from_dmx="32768" to_dmx="32768"/>
+            <ChannelSet index="2" name="max" from_dmx="65535" to_dmx="65535"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="2" attribute="MSPEED" feature="MSPEED" preset="CONTROL" coarse="5" default="0.000000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="MSPEEDTRACK" attribute="MSPEED" feature="MSPEED" preset="CONTROL">
+            <ChannelSet index="0" name="max" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="half" from_dmx="128" to_dmx="128"/>
+            <ChannelSet index="2" name="min" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="3" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="6" default="0" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="4" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="7" default="0.000000" highlight_value="0.000000">
+          <ChannelFunction index="0" from="0" to="1" min_dmx_24="0" max_dmx_24="0" physfrom="1" physto="1" subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+            <ChannelSet index="0" name="open" from_dmx="0" to_dmx="0"/>
+          </ChannelFunction>
+          <ChannelFunction index="1" from="1" to="50" min_dmx_24="65793" max_dmx_24="11842740" physfrom="1" physto="3" subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+            <ChannelSet index="0" name="Strobe min" from_dmx="1" to_dmx="1"/>
+          </ChannelFunction>
+          <ChannelFunction index="2" from="50" to="100" min_dmx_24="11908533" max_dmx_24="16777215" physfrom="3" physto="25" subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+            <ChannelSet index="0" name="Strobe max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="5" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="8" default="255.000000" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="6" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="9" default="255.000000" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="7" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="10" default="255.000000" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="8" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" coarse="11" default="255.000000" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="9" attribute="MACROS" feature="MACRO" preset="CONTROL" coarse="12" default="0.000000" highlight_value="0.000000">
+          <ChannelFunction index="0" from="0" to="2" min_dmx_24="0" max_dmx_24="16777220" physfrom="0" physto="2" subattribute="MACROSELECT" attribute="MACROS" feature="MACRO" preset="CONTROL">
+            <ChannelSet index="0" name="DMX Mode" from_dmx="0" to_dmx="49"/>
+            <ChannelSet index="1" name="Auto Mode" from_dmx="50" to_dmx="149"/>
+            <ChannelSet index="2" name="Sound Mode" from_dmx="150" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="10" attribute="RESET" feature="RESET" preset="CONTROL" coarse="13" default="0" highlight_value="0">
+          <ChannelFunction index="0" from="0" to="50" min_dmx_24="0" max_dmx_24="15790320" physfrom="0" physto="1" attribute="RESET" feature="RESET" preset="CONTROL">
+            <ChannelSet index="0" name="-" from_dmx="0" to_dmx="240"/>
+          </ChannelFunction>
+          <ChannelFunction index="1" from="50" to="100" min_dmx_24="15856113" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="RESET" attribute="RESET" feature="RESET" preset="CONTROL">
+            <ChannelSet index="0" name="RESET" from_dmx="241" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+      </Module>
+    </Modules>
+    <Instances index="1">
+      <Instance index="0" patch="1" module_index="0"/>
+    </Instances>
+    <Wheels index="2"/>
+    <FixtureMacroCollect index="5"/>
+  </FixtureType>
+</MA>

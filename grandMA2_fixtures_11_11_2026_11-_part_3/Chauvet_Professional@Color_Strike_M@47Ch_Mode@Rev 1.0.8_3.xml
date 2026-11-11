@@ -1,0 +1,564 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="Color Strike M" mode="47Ch Mode">
+        <InfoItems>
+            <Info type="Revision" date="2024-07-11T10:06:32">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2024-03-25T19:57:13">Rev 1.0.8</Info>
+            <Info>Color STRIKE M is an IP65 rated strobe/blinder with two ultra-bright, white light tube elements surrounded by an electrifying, color-mixing, and pixel-mappable face. This versatile strobe light can double as a wash fixture with 180deg tilt range to throw bright saturated color wherever you need. The IP65 casing protects the fixture from any environmental factors or weather and has two omega-bracket attachments so you can mount the fixture horizontally or vertically without any hassle. Multiple programming personalities give you a varying amount of control from simple set ups with a multitude of built-in effects, or wider control options to take advantage of the pixel-mappable zones: 14 in the RGB face and 28 in the two tube elements. Built-in alignment pins insure perfectly straight linear arrays to create massive arrangements. DMX, Art-net, and sACN control. All LEDs feature 16-bit dimming for smooth fades and Pulse Width Modulation for on-camera use.</Info>
+            <Info type="Revision" date="2024-07-11T10:06:56.892">Rev%201.0.8, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>Color Strike M</short_name>
+        <manufacturer>Chauvet Professional</manufacturer>
+        <short_manufacturer>Chauvet Professional</short_manufacturer>
+        <Modules>
+            <Module name="Main Module" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model name="Base" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Model name="Body" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="Tilt">
+                        <AxisFactors x="-1" y="0" z="-0"/>
+                        <Offset>
+                            <Location x="0.000000" y="0.000000" z="-0.210157"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                    </Model>
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <ChannelType coarse="1" fine="2" default="32767" attribute="TILT" feature="POSITION" preset="POSITION">
+                    <ChannelFunction subattribute="TILT" attribute="TILT" feature="POSITION" preset="POSITION" from="-90" to="90" physfrom="-90" physto="90" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Home" from_dmx="32767" to_dmx="32767"/>
+                        <ChannelSet name="Max" from_dmx="65535" to_dmx="65535"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="3" default="255" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="47" default="0" attribute="CONTROL" feature="Control" preset="Control">
+                    <ChannelFunction subattribute="CONTROL" attribute="CONTROL" feature="Control" preset="Control" from="0" to="1.96" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="328965">
+                        <ChannelSet name="No Feature" from_dmx="0" to_dmx="5" slot_from="0" slot_to="0"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="INTENSITYMODE" attribute="CONTROL" feature="Control" preset="Control" from="1.96" to="9.8" physfrom="0" physto="0" min_dmx_24="394758" max_dmx_24="1644825">
+                        <ChannelSet name="Dimmer Off - Mode" from_dmx="6" to_dmx="10" slot_from="0" slot_to="0"/>
+                        <ChannelSet name="Dimmer 1 - Mode" from_dmx="11" to_dmx="15" slot_from="0" slot_to="0"/>
+                        <ChannelSet name="Dimmer 2 - Mode" from_dmx="16" to_dmx="20" slot_from="0" slot_to="0"/>
+                        <ChannelSet name="Dimmer 3 - Mode" from_dmx="21" to_dmx="25" slot_from="0" slot_to="0"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="LEDFrequency" attribute="CONTROL" feature="Control" preset="Control" from="9.8" to="21.57" physfrom="0" physto="0" min_dmx_24="1710618" max_dmx_24="3618615">
+                        <ChannelSet name="600Hz" from_dmx="26" to_dmx="30" slot_from="0" slot_to="0"/>
+                        <ChannelSet name="1200Hz" from_dmx="31" to_dmx="35" slot_from="0" slot_to="0"/>
+                        <ChannelSet name="2000Hz" from_dmx="36" to_dmx="40" slot_from="0" slot_to="0"/>
+                        <ChannelSet name="4000Hz" from_dmx="41" to_dmx="45" slot_from="0" slot_to="0"/>
+                        <ChannelSet name="6000Hz" from_dmx="46" to_dmx="50" slot_from="0" slot_to="0"/>
+                        <ChannelSet name="25kHz" from_dmx="51" to_dmx="55" slot_from="0" slot_to="0"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="FANSPEED" attribute="CONTROL" feature="Control" preset="Control" from="21.57" to="25.49" physfrom="0" physto="0" min_dmx_24="3684408" max_dmx_24="4276545">
+                        <ChannelSet name="Auto (Fan Mode)" from_dmx="56" to_dmx="60" slot_from="0" slot_to="0"/>
+                        <ChannelSet name="On (Fan Mode)" from_dmx="61" to_dmx="65" slot_from="0" slot_to="0"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="TILTRESET" attribute="CONTROL" feature="Control" preset="Control" from="25.49" to="27.45" physfrom="0" physto="0" min_dmx_24="4342338" max_dmx_24="4605510">
+                        <ChannelSet name="Tilt Reset" from_dmx="66" to_dmx="70" slot_from="0" slot_to="0"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="LEDZoneMode" attribute="CONTROL" feature="Control" preset="Control" from="27.45" to="58.82" physfrom="0" physto="1" min_dmx_24="4671303" max_dmx_24="9868950">
+                        <ChannelSet name="Plate 1 Invert Off" from_dmx="71" to_dmx="75" slot_from="0" slot_to="0"/>
+                        <ChannelSet name="Plate 1 Invert On" from_dmx="76" to_dmx="80"/>
+                        <ChannelSet name="Plate 2 Invert Off" from_dmx="81" to_dmx="85"/>
+                        <ChannelSet name="Plate 2 Invert On" from_dmx="86" to_dmx="90"/>
+                        <ChannelSet name="Beam 1 Invert Off" from_dmx="91" to_dmx="95"/>
+                        <ChannelSet name="Beam 1 Invert On" from_dmx="96" to_dmx="100"/>
+                        <ChannelSet name="Beam 2 Invert Off" from_dmx="101" to_dmx="105"/>
+                        <ChannelSet name="Beam 2 Invert On" from_dmx="106" to_dmx="110"/>
+                        <ChannelSet name="Plate Swap On" from_dmx="111" to_dmx="115"/>
+                        <ChannelSet name="Plate Swap Off" from_dmx="116" to_dmx="120"/>
+                        <ChannelSet name="Beam Swap On" from_dmx="121" to_dmx="125"/>
+                        <ChannelSet name="Beam Swap Off" from_dmx="126" to_dmx="130"/>
+                        <ChannelSet name="No Function" from_dmx="131" to_dmx="140"/>
+                        <ChannelSet name="FX Pattern Priority" from_dmx="141" to_dmx="150"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="COLORMIXMODE" attribute="CONTROL" feature="Control" preset="Control" from="58.82" to="66.67" physfrom="0" physto="1" min_dmx_24="9934743" max_dmx_24="11184810">
+                        <ChannelSet name="Color Mix HTP On" from_dmx="151" to_dmx="155"/>
+                        <ChannelSet name="Color Mix HTP Off" from_dmx="156" to_dmx="160"/>
+                        <ChannelSet name="Color Priority" from_dmx="161" to_dmx="170"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="CONTROL" feature="Control" preset="Control" from="66.67" to="100" physfrom="0" physto="1" min_dmx_24="11250603" max_dmx_24="16777215">
+                        <ChannelSet name="No Function" from_dmx="171" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="Plate" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType coarse="4" default="0" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="6" default="0" attribute="STROBEDURATION" feature="SHUTTER" preset="BEAM" highlight_value="0">
+                    <ChannelFunction subattribute="STROBEDURATION" attribute="STROBEDURATION" feature="SHUTTER" preset="BEAM" from="0" to="3.53" physfrom="1" physto="0.1" min_dmx_24="0" max_dmx_24="592137">
+                        <ChannelSet name="Classic Shutter Mode" from_dmx="0" to_dmx="9" slot_from="0" slot_to="0"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBEDURATION" attribute="STROBEDURATION" feature="SHUTTER" preset="BEAM" from="3.53" to="98.04" physfrom="0" physto="1" min_dmx_24="657930" max_dmx_24="16448250">
+                        <ChannelSet name="Slow" from_dmx="10" to_dmx="10"/>
+                        <ChannelSet name="Slow > Fast" from_dmx="11" to_dmx="249"/>
+                        <ChannelSet name="Fast" from_dmx="250" to_dmx="250"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBEDURATION" attribute="STROBEDURATION" feature="SHUTTER" preset="BEAM" from="98.04" to="100" physfrom="0" physto="0" min_dmx_24="16514043" max_dmx_24="16777215">
+                        <ChannelSet name="No Function - Strobe Off" from_dmx="251" to_dmx="255" slot_from="0" slot_to="0"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="7" default="0" attribute="STROBEEFFECTRATE" feature="SHUTTER" preset="BEAM" highlight_value="0">
+                    <ChannelFunction subattribute="STROBEEFFECTRATE" attribute="STROBEEFFECTRATE" feature="SHUTTER" preset="BEAM" from="0" to="3.53" physfrom="1" physto="1" min_dmx_24="0" max_dmx_24="592137">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="9" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBEEFFECTRATE" attribute="STROBEEFFECTRATE" feature="SHUTTER" preset="BEAM" from="3.53" to="98.04" physfrom="0.1" physto="30" min_dmx_24="657930" max_dmx_24="16448250">
+                        <ChannelSet name="Slow" from_dmx="10" to_dmx="10" slot_from="0.1" slot_to="30"/>
+                        <ChannelSet name="Slow > Fast" from_dmx="11" to_dmx="249"/>
+                        <ChannelSet name="Fast" from_dmx="250" to_dmx="250"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="STROBEEFFECTRATE" feature="SHUTTER" preset="BEAM" from="98.04" to="100" physfrom="1" physto="1" min_dmx_24="16514043" max_dmx_24="16777215">
+                        <ChannelSet name="Open" from_dmx="251" to_dmx="255" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="10" default="0" attribute="EFFECT" feature="EFFECT" preset="BEAM">
+                    <ChannelFunction subattribute="EFFECTSELECT" attribute="EFFECT" feature="EFFECT" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Normal Alignment" from_dmx="0" to_dmx="5"/>
+                        <ChannelSet name="Plate 1 > 2 Invert" from_dmx="6" to_dmx="124"/>
+                        <ChannelSet name="Plate 1 Invert: Plate 2 Normal" from_dmx="125" to_dmx="130"/>
+                        <ChannelSet name="Plate 1 Normal: Plate 2 Invert" from_dmx="131" to_dmx="249"/>
+                        <ChannelSet name="No Function" from_dmx="250" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Plate_Pixel_Group_1" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType default="4294967295" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="167772" to_dmx="16609443"/>
+                        <ChannelSet name="Max" from_dmx="16777216" to_dmx="16777216"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="12" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="13" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="14" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Plate_Pixel_Group_2" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType default="4294967295" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="167772" to_dmx="16609443"/>
+                        <ChannelSet name="Max" from_dmx="16777216" to_dmx="16777216"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="15" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="16" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="17" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Plate_Pixel_Group_3" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType default="4294967295" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="167772" to_dmx="16609443"/>
+                        <ChannelSet name="Max" from_dmx="16777216" to_dmx="16777216"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="18" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="19" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="20" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Plate_Pixel_Group_4" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType default="4294967295" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="167772" to_dmx="16609443"/>
+                        <ChannelSet name="Max" from_dmx="16777216" to_dmx="16777216"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="21" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="22" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="23" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Plate_Pixel_Group_5" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType default="4294967295" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="167772" to_dmx="16609443"/>
+                        <ChannelSet name="Max" from_dmx="16777216" to_dmx="16777216"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="24" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="25" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="26" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Plate_Pixel_Group_6" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType default="4294967295" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="167772" to_dmx="16609443"/>
+                        <ChannelSet name="Max" from_dmx="16777216" to_dmx="16777216"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="27" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="28" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="29" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Plate_Pixel_Group_7" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType default="4294967295" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="167772" to_dmx="16609443"/>
+                        <ChannelSet name="Max" from_dmx="16777216" to_dmx="16777216"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="30" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="31" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="32" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="Beam" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType coarse="5" default="0" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="8" default="0" attribute="STROBEDURATION" feature="SHUTTER" preset="BEAM" highlight_value="0">
+                    <ChannelFunction subattribute="STROBEDURATION" attribute="STROBEDURATION" feature="SHUTTER" preset="BEAM" from="0" to="3.53" physfrom="1" physto="0.1" min_dmx_24="0" max_dmx_24="592137">
+                        <ChannelSet name="Classic Shutter Mode" from_dmx="0" to_dmx="9" slot_from="0" slot_to="0"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBEDURATION" attribute="STROBEDURATION" feature="SHUTTER" preset="BEAM" from="3.53" to="98.04" physfrom="0" physto="1" min_dmx_24="657930" max_dmx_24="16448250">
+                        <ChannelSet name="Slow" from_dmx="10" to_dmx="10"/>
+                        <ChannelSet name="Slow > Fast" from_dmx="11" to_dmx="249"/>
+                        <ChannelSet name="Fast" from_dmx="250" to_dmx="250"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBEDURATION" attribute="STROBEDURATION" feature="SHUTTER" preset="BEAM" from="98.04" to="100" physfrom="0" physto="0" min_dmx_24="16514043" max_dmx_24="16777215">
+                        <ChannelSet name="No Function - Strobe Off" from_dmx="251" to_dmx="255" slot_from="0" slot_to="0"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="9" default="0" attribute="STROBEEFFECTRATE" feature="SHUTTER" preset="BEAM" highlight_value="0">
+                    <ChannelFunction subattribute="STROBEEFFECTRATE" attribute="STROBEEFFECTRATE" feature="SHUTTER" preset="BEAM" from="0" to="3.53" physfrom="1" physto="1" min_dmx_24="0" max_dmx_24="592137">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="9" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBEEFFECTRATE" attribute="STROBEEFFECTRATE" feature="SHUTTER" preset="BEAM" from="3.53" to="98.04" physfrom="0.1" physto="30" min_dmx_24="657930" max_dmx_24="16448250">
+                        <ChannelSet name="Slow" from_dmx="10" to_dmx="10" slot_from="0.1" slot_to="30"/>
+                        <ChannelSet name="Slow > Fast" from_dmx="11" to_dmx="249"/>
+                        <ChannelSet name="Fast" from_dmx="250" to_dmx="250"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="STROBEEFFECTRATE" feature="SHUTTER" preset="BEAM" from="98.04" to="100" physfrom="1" physto="1" min_dmx_24="16514043" max_dmx_24="16777215">
+                        <ChannelSet name="Open" from_dmx="251" to_dmx="255" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="11" default="0" attribute="EFFECT" feature="EFFECT" preset="BEAM">
+                    <ChannelFunction subattribute="EFFECTSELECT" attribute="EFFECT" feature="EFFECT" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Normal Alignment" from_dmx="0" to_dmx="5"/>
+                        <ChannelSet name="Plate 1 > 2 Invert" from_dmx="6" to_dmx="124"/>
+                        <ChannelSet name="Plate 1 Invert: Plate 2 Normal" from_dmx="125" to_dmx="130"/>
+                        <ChannelSet name="Plate 1 Normal: Plate 2 Invert" from_dmx="131" to_dmx="249"/>
+                        <ChannelSet name="No Function" from_dmx="250" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Beam_Pixel_Group_1" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType coarse="33" default="255" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Beam_Pixel_Group_2" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType coarse="34" default="255" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Beam_Pixel_Group_3" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType coarse="35" default="255" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Beam_Pixel_Group_4" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType coarse="36" default="255" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Beam_Pixel_Group_5" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType coarse="37" default="255" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Beam_Pixel_Group_6" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType coarse="38" default="255" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Beam_Pixel_Group_7" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType coarse="39" default="255" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Beam_Pixel_Group_8" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType coarse="40" default="255" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Beam_Pixel_Group_9" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType coarse="41" default="255" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Beam_Pixel_Group_10" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType coarse="42" default="255" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Beam_Pixel_Group_11" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType coarse="43" default="255" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Beam_Pixel_Group_12" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType coarse="44" default="255" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Beam_Pixel_Group_13" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType coarse="45" default="255" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="47ch_Beam_Pixel_Group_14" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model/>
+                <ChannelType coarse="46" default="255" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+            <Instance module_index="1" patch="1" locked="true"/>
+            <Instance module_index="2" patch="1" locked="true"/>
+            <Instance module_index="3" patch="1" locked="true"/>
+            <Instance module_index="4" patch="1" locked="true"/>
+            <Instance module_index="5" patch="1" locked="true"/>
+            <Instance module_index="6" patch="1" locked="true"/>
+            <Instance module_index="7" patch="1" locked="true"/>
+            <Instance module_index="8" patch="1" locked="true"/>
+            <Instance module_index="9" patch="1" locked="true"/>
+            <Instance module_index="10" patch="1" locked="true"/>
+            <Instance module_index="11" patch="1" locked="true"/>
+            <Instance module_index="12" patch="1" locked="true"/>
+            <Instance module_index="13" patch="1" locked="true"/>
+            <Instance module_index="14" patch="1" locked="true"/>
+            <Instance module_index="15" patch="1" locked="true"/>
+            <Instance module_index="16" patch="1" locked="true"/>
+            <Instance module_index="17" patch="1" locked="true"/>
+            <Instance module_index="18" patch="1" locked="true"/>
+            <Instance module_index="19" patch="1" locked="true"/>
+            <Instance module_index="20" patch="1" locked="true"/>
+            <Instance module_index="21" patch="1" locked="true"/>
+            <Instance module_index="22" patch="1" locked="true"/>
+            <Instance module_index="23" patch="1" locked="true"/>
+        </Instances>
+        <Wheels>
+            <Wheel index="0" preset="Color" feature="Color" attribute="COLORMACROS" subattribute="COLORMACROS">
+                <Slot index="0" media_name="White 2700K" r="255" g="138" b="39"/>
+                <Slot index="1" media_name="White 3200K" r="254" g="162" b="57"/>
+                <Slot index="2" media_name="White 4200K" r="255" g="217" b="122"/>
+                <Slot index="3" media_name="White 5600K" r="247" g="255" b="182"/>
+                <Slot index="4" media_name="White 8000K" r="226" g="235" b="235"/>
+                <Slot index="5" media_name="Blue" r="0" g="0" b="254"/>
+                <Slot index="6" media_name="Green+/Blue" r="0" g="126" b="255"/>
+                <Slot index="7" media_name="Cyan" r="1" g="254" b="254"/>
+                <Slot index="8" media_name="Green/Blue-" r="0" g="255" b="127"/>
+                <Slot index="9" media_name="Green" r="0" g="255" b="0"/>
+                <Slot index="10" media_name="Red+/Green" r="127" g="255" b="0"/>
+                <Slot index="11" media_name="Yellow" r="255" g="255" b="0"/>
+                <Slot index="12" media_name="Red/Green-" r="255" g="126" b="0"/>
+                <Slot index="13" media_name="Red" r="255" g="0" b="0"/>
+                <Slot index="14" media_name="Red/Blue-" r="255" g="0" b="126"/>
+                <Slot index="15" media_name="Magenta" r="254" g="0" b="254"/>
+                <Slot index="16" media_name="Red-/Blue" r="126" g="0" b="254"/>
+            </Wheel>
+        </Wheels>
+        <RDMKey ESTAId="8612" DeviceModelId="1799"/>
+    </FixtureType>
+</MA>

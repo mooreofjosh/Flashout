@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="LED COB 200 RGBW" mode="Mode 2 - 8CH">
+        <InfoItems>
+            <Info type="Revision" date="2025-11-10T09:32:26">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2025-10-30T09:14:47">New fixture type based on LED COB 200 RGBW from PRstage</Info>
+            <Info type="Revision" date="2025-10-30T09:20:13">Ver 1.0</Info>
+            <Info type="Revision" date="2025-11-10T09:25:42">Ver 1_01</Info>
+            <Info>PRstage. COB 200 RGBW official file.</Info>
+            <Info type="Revision" date="2025-11-10T09:32:36.011">Ver%201.01, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>LED COB 200 RGBW </short_name>
+        <manufacturer>PRstage</manufacturer>
+        <short_manufacturer>PRstage</short_manufacturer>
+        <Modules>
+            <Module name="Optic 1" class="Conventional" beamtype="Wash" beam_intensity="3400" index="2" beam_angle="60">
+                <Model/>
+                <Body>
+                    <Size x="0.185" y="0.185" z="0.325"/>
+                </Body>
+                <ChannelType coarse="1" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="100" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Close " from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Open " from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="2" default="0" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" highlight_value="0">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="3" default="0" attribute="COLORMACROS" feature="Color" preset="Color" highlight_value="0">
+                    <ChannelFunction subattribute="COLORMACROS" attribute="COLORMACROS" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="5"/>
+                        <ChannelSet name="Jump" from_dmx="6" to_dmx="100"/>
+                        <ChannelSet name="Gradient" from_dmx="101" to_dmx="150"/>
+                        <ChannelSet name="Explosion flash" from_dmx="151" to_dmx="200"/>
+                        <ChannelSet name="Voice Control" from_dmx="201" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="4" default="0" attribute="ColorMacro1Rate" feature="Color" preset="Color">
+                    <ChannelFunction subattribute="ColorMacro1Rate" attribute="ColorMacro1Rate" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Slow" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Fast" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="5" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="100" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="6" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="100" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max " from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="7" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="100" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="8" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="100" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+        </Instances>
+        <Wheels/>
+        <RDMKey ESTAId="1452" DeviceModelId="33313"/>
+    </FixtureType>
+</MA>

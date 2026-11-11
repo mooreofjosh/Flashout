@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="PAR 64 100W LED (manual ZOOM)" mode="2 ch">
+        <InfoItems>
+            <Info type="Revision" date="2026-07-04T00:25:09">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2023-06-22T10:14:34">N/A</Info>
+            <Info type="Revision" date="2026-07-04T00:22:47">PAR 64 100W LED to BlenderDMX wht model</Info>
+            <Info type="Revision" date="2026-07-04T00:25:13.914">LIGHT4ME%20PAR%2064%20100W%20LED%20ZOOM%20wht%20model%20to%20BlenderDMX, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>PAR 64 100W LED</short_name>
+        <manufacturer>Light4me</manufacturer>
+        <short_manufacturer>LIGHT4ME</short_manufacturer>
+        <Modules>
+            <Module name="Beam" class="Conventional" beamtype="Wash" beam_intensity="15800" index="2" beam_angle="1">
+                <Model/>
+                <Body>
+                    <Size x="0.284" y="0.284" z="0.412"/>
+                </Body>
+                <ChannelType coarse="1" default="0" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="2" default="0" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="3.53" physfrom="1" physto="1" min_dmx_24="0" max_dmx_24="592137">
+                        <ChannelSet name="OPEN" from_dmx="0" to_dmx="9"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="3.53" to="100" physfrom="1" physto="20" min_dmx_24="657930" max_dmx_24="16777215">
+                        <ChannelSet name="STROBE" from_dmx="11" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="3" default="128" snap="true" attribute="ZOOM" feature="FOCUS" preset="FOCUS">
+                    <ChannelFunction subattribute="ZOOM" attribute="ZOOM" feature="FOCUS" preset="FOCUS" from="0" to="100" physfrom="12" physto="50" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="12" from_dmx="0" to_dmx="63" slot_from="12" slot_to="12"/>
+                        <ChannelSet name="24" from_dmx="64" to_dmx="127" slot_from="24" slot_to="24"/>
+                        <ChannelSet name="32" from_dmx="128" to_dmx="191" slot_from="32" slot_to="32"/>
+                        <ChannelSet name="50" from_dmx="192" to_dmx="255" slot_from="50" slot_to="50"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+        </Instances>
+        <Wheels/>
+    </FixtureType>
+</MA>

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="Pocket Stormy" mode="08CH">
+        <InfoItems>
+            <Info type="Revision" date="2025-08-11T12:36:11">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2025-08-11T11:10:29">Reference by Manual</Info>
+            <Info type="Revision" date="2025-08-11T12:24:33">Tested - Real/3D</Info>
+            <Info type="Revision" date="2025-08-11T12:36:19.093">Tested_-_Real-3D_v1, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>Pocket Stormy</short_name>
+        <manufacturer>LPL</manufacturer>
+        <short_manufacturer>LPL</short_manufacturer>
+        <Modules>
+            <Module name="Beam" class="Conventional" beamtype="Wash" beam_intensity="10000" index="2" beam_angle="25">
+                <Model/>
+                <Body>
+                    <Size x="0.16" y="0.16" z="0.19"/>
+                </Body>
+                <ChannelType coarse="1" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Closed" from_dmx="0" to_dmx="254"/>
+                        <ChannelSet name="Full" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="2" default="0" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" highlight_value="0.39215686274509803">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="1.96" physfrom="1" physto="1" min_dmx_24="0" max_dmx_24="328965">
+                        <ChannelSet name="OPEN" from_dmx="0" to_dmx="5" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="1.96" to="100" physfrom="10" physto="0.1" min_dmx_24="394758" max_dmx_24="16777215">
+                        <ChannelSet name="Slow To Fast" from_dmx="6" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="3" default="255" attribute="CTO" feature="CTC" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="CTO" attribute="CTO" feature="CTC" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="4" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="5" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="6" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="7" default="0" attribute="EFFECT" feature="EFFECT" preset="BEAM">
+                    <ChannelFunction subattribute="EFFECTSELECT" attribute="EFFECT" feature="EFFECT" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="8" default="0" attribute="EFFECTRATE" feature="EFFECT" preset="BEAM">
+                    <ChannelFunction subattribute="EFFECTRATE" attribute="EFFECTRATE" feature="EFFECT" preset="BEAM" from="0" to="100" physfrom="0" physto="57.29578" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+        </Instances>
+        <Wheels/>
+    </FixtureType>
+</MA>

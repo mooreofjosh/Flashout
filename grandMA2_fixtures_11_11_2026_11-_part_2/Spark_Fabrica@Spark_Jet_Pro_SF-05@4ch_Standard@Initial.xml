@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.60/MA.xsd" major_vers="3" minor_vers="9" stream_vers="60">
+	<Info datetime="2022-02-24T21:13:01" showfile="#templ-lw-busking-22-03"/>
+	<FixtureType index="15" name="Spark Jet Pro SF-05" mode="4ch Standard">
+		<InfoItems>
+			<Info type="Revision" date="2022-02-24T20:30:13">Initial</Info>
+		<Info type="Revision" date="2022-02-24T21:39:05">Initial, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>SFSparkJet</short_name>
+		<manufacturer>Spark Fabrica</manufacturer>
+		<short_manufacturer>Spark Fabrica</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main" class="Conventional" beamtype="Fibre" beam_angle="35" beam_intensity="10000">
+				<Body>
+					<Size x="0.215" y="0.213" z="0.262"/>
+				</Body>
+				<ChannelType index="0" attribute="FOUNTAIN" feature="FIREWORKS" preset="PYRO" coarse="1">
+					<ChannelFunction index="0" from="0" to="0" min_dmx_24="0" max_dmx_24="720895" physfrom="0" physto="0" subattribute="FOUNTAINSTOP" subattribute_user_name="Fountain Stop" attribute="FOUNTAIN" attribute_user_name="Fountain" feature="FIREWORKS" feature_user_name="Fireworks" preset="PYRO" preset_user_name="Pyro">
+						<ChannelSet index="0" name="stop" from_dmx="0" to_dmx="10"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="1" to="100" min_dmx_24="720896" max_dmx_24="16777215" physfrom="1" physto="25" subattribute="FOUNTAINHEIGHT" subattribute_user_name="Fountain Height" attribute="FOUNTAIN" attribute_user_name="Fountain" feature="FIREWORKS" feature_user_name="Fireworks" preset="PYRO" preset_user_name="Pyro">
+						<ChannelSet index="0" name="min Height" from_dmx="11" to_dmx="11" slot_from="1" slot_to="1"/>
+						<ChannelSet index="1" name="med Height" from_dmx="132" to_dmx="132" slot_from="12.5" slot_to="12.5"/>
+						<ChannelSet index="2" name="max Height" from_dmx="255" to_dmx="255" slot_from="25" slot_to="25"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="HEAT" feature="FIREWORKS" preset="PYRO" coarse="2">
+					<ChannelFunction index="0" from="0" to="20" min_dmx_24="0" max_dmx_24="720895" subattribute="PREHEAT" subattribute_user_name="Preheat" attribute="HEAT" attribute_user_name="Heater" feature="FIREWORKS" feature_user_name="Fireworks" preset="PYRO" preset_user_name="Pyro">
+						<ChannelSet index="0" name="Preheat OFF" from_dmx="0" to_dmx="10"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="20" to="80" min_dmx_24="786431" max_dmx_24="13172735" subattribute="CONTROL" subattribute_user_name="Control" attribute="HEAT" attribute_user_name="Heater" feature="FIREWORKS" feature_user_name="Fireworks" preset="PYRO" preset_user_name="Pyro">
+						<ChannelSet index="0" name="Emergency STOP" from_dmx="11" to_dmx="39"/>
+						<ChannelSet index="1" name="Clear Material" from_dmx="56" to_dmx="200"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" from="80" to="100" min_dmx_24="15794175" max_dmx_24="16777215" subattribute="PREHEAT" subattribute_user_name="Preheat" attribute="HEAT" attribute_user_name="Heater" feature="FIREWORKS" feature_user_name="Fireworks" preset="PYRO" preset_user_name="Pyro">
+						<ChannelSet index="0" name="Preheat ON" from_dmx="240" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="DENSITY" feature="FIREWORKS" preset="PYRO" coarse="3" default="102">
+					<ChannelFunction index="0" from="100" to="0" min_dmx_24="0" max_dmx_24="16777215" subattribute="DENSITY" subattribute_user_name="Density" attribute="DENSITY" attribute_user_name="Density" feature="FIREWORKS" feature_user_name="Fireworks" preset="PYRO" preset_user_name="Pyro">
+						<ChannelSet index="0" name="highest" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="medium" from_dmx="127" to_dmx="128"/>
+						<ChannelSet index="2" name="lowest" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="FIXTUREMODE" feature="FIXTURE" preset="CONTROL" coarse="4">
+					<ChannelFunction index="0" name="Safety" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="FIXTUREMODE" subattribute_user_name="FixtureMode" attribute="FIXTUREMODE" attribute_user_name="FixtureMode" feature="FIXTURE" feature_user_name="Fixture" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Control OFF" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="Control on" from_dmx="201" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

@@ -1,0 +1,615 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="Neptune 400 Wash" mode="Pixel">
+        <InfoItems>
+            <Info type="Revision" date="2022-10-06T06:01:55">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.0</Info>
+            <Info type="Revision" date="2022-04-18T00:32:24">Draft 7</Info>
+            <Info type="Revision" date="2022-05-03T08:02:12">Draft 8</Info>
+            <Info>RGBW IP65 Moving Head (RBG Ring)</Info>
+            <Info type="Revision" date="2022-10-06T06:01:59.300">Draft%207, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>Neptune 400 Wash</short_name>
+        <manufacturer>Silver Star</manufacturer>
+        <short_manufacturer>Silver Star</short_manufacturer>
+        <Modules>
+            <Module name="Base_Neptune 400 Wash" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model name="Base_Neptune 400 Wash" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <ChannelType coarse="14" default="0" MIB_fade_frames="549755813888" dmx_change_time_limit="549755813888" attribute="CONTROL" feature="Control" preset="Control">
+                    <ChannelFunction subattribute="CONTROL" attribute="CONTROL" feature="Control" preset="Control" from="0" to="3.53" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="592137"/>
+                    <ChannelFunction subattribute="BLACKOUT" attribute="CONTROL" feature="Control" preset="Control" from="3.53" to="11.37" physfrom="0" physto="1" min_dmx_24="657930" max_dmx_24="1907997">
+                        <ChannelSet name="BO Active" from_dmx="10" to_dmx="19"/>
+                        <ChannelSet name="BO Inactive" from_dmx="20" to_dmx="29"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="DIMMERCURVE" attribute="CONTROL" feature="Control" preset="Control" from="11.37" to="38.82" physfrom="0" physto="1" min_dmx_24="1973790" max_dmx_24="6513507">
+                        <ChannelSet name="No Curve" from_dmx="30" to_dmx="59"/>
+                        <ChannelSet name="Curve 1" from_dmx="60" to_dmx="69"/>
+                        <ChannelSet name="Curve 2" from_dmx="70" to_dmx="79"/>
+                        <ChannelSet name="Curve 3" from_dmx="80" to_dmx="89"/>
+                        <ChannelSet name="Curve 4" from_dmx="90" to_dmx="99"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="LEDFrequency" attribute="CONTROL" feature="Control" preset="Control" from="38.82" to="70.2" physfrom="0" physto="1" min_dmx_24="6579300" max_dmx_24="11776947">
+                        <ChannelSet name="1200Hz" from_dmx="100" to_dmx="139"/>
+                        <ChannelSet name="2000Hz" from_dmx="140" to_dmx="149"/>
+                        <ChannelSet name="2400Hz" from_dmx="150" to_dmx="159"/>
+                        <ChannelSet name="6000Hz" from_dmx="160" to_dmx="169"/>
+                        <ChannelSet name="25000Hz" from_dmx="170" to_dmx="179"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="FANSPEED" attribute="CONTROL" feature="Control" preset="Control" from="70.2" to="81.96" physfrom="0" physto="1" min_dmx_24="11842740" max_dmx_24="13750737">
+                        <ChannelSet name="Studio" from_dmx="180" to_dmx="189"/>
+                        <ChannelSet name="Power" from_dmx="190" to_dmx="199"/>
+                        <ChannelSet name="Live" from_dmx="200" to_dmx="209"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="CONTROL" attribute="CONTROL" feature="Control" preset="Control" from="81.96" to="100" physfrom="0" physto="1" min_dmx_24="13816530" max_dmx_24="16777215">
+                        <ChannelSet name="PT Reset" from_dmx="210" to_dmx="219"/>
+                        <ChannelSet name="Zoom Reset" from_dmx="220" to_dmx="229"/>
+                        <ChannelSet name="Total Reset" from_dmx="230" to_dmx="239"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="Yoke_Neptune 400 Wash" class="Headmover" beamtype="Wash" beam_intensity="10000" beam_angle="1">
+                <Model>
+                    <Model name="Yoke_Neptune 400 Wash" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="Pan">
+                        <AxisFactors x="0" y="0" z="1"/>
+                        <Vertices>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</Vertices>
+                        <Faces>zAAAAAAAAQACAAMAAAACAAQABQAGAAcABAAGAAgABAAHAAkACAAHAAoACAAJAAsACgAJAAwADQAOABEADQAMABYAEwANAA0AFwAYABkADQAYAA0AKgAXACUAFgAmACoAKQAXAC8AFwApABcALwAyACoAJwApACcAKAApADAALwAxABIAEwAUABIAFQATABIAPwBAAGoAEgBAAD0APgA/AD4AQAA/ADYAPgA9ADYANwA4ADcANgA8AEcARgA8AE4ARwA8AE4APABPAEcARQBGAEUAOwBGADkAOgA7AFsAXQBOAFkAWgBbAFkAWwBcAGMAWgBkAGUAYwBkAF0AXgBfAF4AXQBgAGEAYgBgAA8AEAAOABoAGwAcAB0AGgAcABoAHgAbAB4AHwAbAB0AHAAgACEAHQAgACIAIwAkAG4AJABvACsALAAtAC4AKwAtADMANAA1AEEAQgBDAEQAQQBDAEEAVgBCAFYAVQBCAFYAVwBYAGgAaQBXAFMAVABVAGYAZwBTAEgASQBKAEsATABNAFAAUQBSAGsAbABtAA==</Faces>
+                        <SubSets>
+                            <SubSet3d material_index="0" FaceStart="0" FacesCount="68"/>
+                        </SubSets>
+                        <Materials>
+                            <Material3d name="black" specularPower="0.1">
+                                <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                <DiffuseInking x="0" y="0" z="0"/>
+                                <EmissiveInking x="0" y="0" z="0"/>
+                                <SurfaceTexture/>
+                                <AlphaTexture/>
+                            </Material3d>
+                        </Materials>
+                        <Offset>
+                            <Location x="0.000000" y="0.000000" z="-0.250000"/>
+                            <Rotation x="0.000000" y="-0.000000" z="-1.570796"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Head" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="Tilt">
+                            <AxisFactors x="-1" y="0" z="-0"/>
+                            <Vertices>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</Vertices>
+                            <Faces>2AAAAAAAAQACAAkAAAACAAEARQACAEUAQQACAEEAPQACAD0AOQACADkANQACADUAMQACADEALQACAC0AKQACACkAJQACACUAIQACACEAHQACAB0AGQACAA0ACQACABEADQACABUAEQACABkAFQACAAMABAAFAAoAAwALAAsAAwAFAA4ACgAPAA8ACgALABIADgATABMADgAPABYAEgAXABcAEgATABoAFgAbABsAFgAXAB4AGgAfAB8AGgAbACIAHgAjACMAHgAfACYAIgAnACcAIgAjACoAJgArACsAJgAnAC4AKgAvAC8AKgArADIALgAzADMALgAvADYAMgA3ADcAMgAzADoANgA7ADsANgA3AD4AOgA/AD8AOgA7AEIAPgBDAEMAPgA/AEYAQgBHAEcAQgBDAEkARgBKAEoARgBHAEsASQBKAAYABwAIAAwABwAGAAgABwBIAEgABwBEAEQABwBAAEAABwA8ADwABwA4ADgABwA0ADQABwAwADAABwAsACwABwAoACgABwAkACQABwAgABAABwAMABQABwAQABgABwAUABwABwAYACAABwAcAA==</Faces>
+                            <SubSets>
+                                <SubSet3d material_index="0" FaceStart="0" FacesCount="72"/>
+                            </SubSets>
+                            <Materials>
+                                <Material3d name="black" specularPower="0.1">
+                                    <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                    <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                    <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                    <DiffuseInking x="0" y="0" z="0"/>
+                                    <EmissiveInking x="0" y="0" z="0"/>
+                                    <SurfaceTexture/>
+                                    <AlphaTexture/>
+                                </Material3d>
+                            </Materials>
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="-0.100000"/>
+                                <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <Model name="Wash" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                                <Offset>
+                                    <Location x="0.000000" y="0.000000" z="-0.095000"/>
+                                    <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                                    <Scaling x="1" y="1" z="1"/>
+                                </Offset>
+                                <Model name="Beam" model_type="Beam">
+                                    <Offset>
+                                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                        <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                        <Scaling x="1" y="1" z="1"/>
+                                    </Offset>
+                                    <BeamClippingDistance>-0.066</BeamClippingDistance>
+                                    <BeamDiameterAtOffset>0.100000</BeamDiameterAtOffset>
+                                </Model>
+                            </Model>
+                        </Model>
+                    </Model>
+                </Model>
+                <Body>
+                    <Size x="0.25" y="0.25" z="1.11"/>
+                </Body>
+                <ChannelType coarse="1" fine="2" default="32767" dmx_change_time_limit="1" attribute="PAN" feature="POSITION" preset="POSITION">
+                    <ChannelFunction subattribute="PAN" attribute="PAN" feature="POSITION" preset="POSITION" from="-270" to="270" physfrom="-270" physto="270" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="3" fine="4" default="32767" dmx_change_time_limit="1" attribute="TILT" feature="POSITION" preset="POSITION">
+                    <ChannelFunction subattribute="TILT" attribute="TILT" feature="POSITION" preset="POSITION" from="135" to="-135" physfrom="135" physto="-135" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="5" default="0" dmx_change_time_limit="549755813888" attribute="POSITIONMSPEED" feature="Control" preset="Control">
+                    <ChannelFunction subattribute="POSITIONMSPEED" attribute="POSITIONMSPEED" feature="Control" preset="Control" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="6" default="128" MIB_fade_frames="549755813888" dmx_change_time_limit="549755813888" attribute="ZOOM" feature="FOCUS" preset="FOCUS">
+                    <ChannelFunction subattribute="ZOOM" attribute="ZOOM" feature="FOCUS" preset="FOCUS" from="0" to="100" physfrom="5" physto="35" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="15" default="0" MIB_fade_frames="549755813888" dmx_change_time_limit="549755813888" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="16" default="0" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" highlight_value="0">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="3.53" physfrom="1" physto="1" min_dmx_24="0" max_dmx_24="592137">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="9"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="3.53" to="38.82" physfrom="1" physto="25" min_dmx_24="657930" max_dmx_24="6513507">
+                        <ChannelSet name="Slow Strobe" from_dmx="10" to_dmx="49"/>
+                        <ChannelSet name="Med Strobe" from_dmx="50" to_dmx="74"/>
+                        <ChannelSet name="Fast Strobe" from_dmx="75" to_dmx="99"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="38.82" to="42.75" physfrom="0" physto="1" min_dmx_24="6579300" max_dmx_24="7171437"/>
+                    <ChannelFunction subattribute="STROBE_PULSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="42.75" to="70.2" physfrom="1" physto="25" min_dmx_24="7237230" max_dmx_24="11776947">
+                        <ChannelSet name="Lightning" from_dmx="110" to_dmx="179"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="70.2" to="74.12" physfrom="0" physto="1" min_dmx_24="11842740" max_dmx_24="12434877"/>
+                    <ChannelFunction subattribute="STROBE_RANDOM" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="74.12" to="100" physfrom="1" physto="25" min_dmx_24="12500670" max_dmx_24="16777215">
+                        <ChannelSet name="Random" from_dmx="190" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="Wash1" class="Conventional" beamtype="Wash" beam_intensity="500" beam_angle="25">
+                <Model/>
+                <ChannelType coarse="17" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="18" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="19" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="20" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Wash2" class="Conventional" beamtype="Wash" beam_intensity="500" beam_angle="25">
+                <Model/>
+                <ChannelType coarse="21" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="22" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="23" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="24" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Wash3" class="Conventional" beamtype="Wash" beam_intensity="500" beam_angle="25">
+                <Model/>
+                <ChannelType coarse="25" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="26" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="27" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="28" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Wash4" class="Conventional" beamtype="Wash" beam_intensity="500" beam_angle="25">
+                <Model/>
+                <ChannelType coarse="29" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="30" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="31" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="32" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Wash5" class="Conventional" beamtype="Wash" beam_intensity="500" beam_angle="25">
+                <Model/>
+                <ChannelType coarse="33" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="34" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="35" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="36" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Wash6" class="Conventional" beamtype="Wash" beam_intensity="500" beam_angle="25">
+                <Model/>
+                <ChannelType coarse="37" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="38" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="39" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="40" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Wash7" class="Conventional" beamtype="Wash" beam_intensity="500" beam_angle="25">
+                <Model/>
+                <ChannelType coarse="41" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="42" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="43" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="44" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Wash 8" class="Conventional" beamtype="Wash" beam_intensity="500" beam_angle="25">
+                <Model/>
+                <ChannelType coarse="45" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="46" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="47" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="48" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Wash 9" class="Conventional" beamtype="Wash" beam_intensity="500" beam_angle="25">
+                <Model/>
+                <ChannelType coarse="49" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="50" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="51" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="52" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Wash 10" class="Conventional" beamtype="Wash" beam_intensity="500" beam_angle="25">
+                <Model/>
+                <ChannelType coarse="53" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="54" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="55" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="56" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Wash 11" class="Conventional" beamtype="Wash" beam_intensity="500" beam_angle="25">
+                <Model/>
+                <ChannelType coarse="57" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="58" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="59" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="60" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Wash 12" class="Conventional" beamtype="Wash" beam_intensity="500" beam_angle="25">
+                <Model/>
+                <ChannelType coarse="61" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="62" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="63" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="64" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Wash 13" class="Conventional" beamtype="Wash" beam_intensity="500" beam_angle="25">
+                <Model/>
+                <ChannelType coarse="65" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="66" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="67" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="68" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Wash 14" class="Conventional" beamtype="Wash" beam_intensity="500" beam_angle="25">
+                <Model/>
+                <ChannelType coarse="69" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="70" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="71" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="72" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Wash 15" class="Conventional" beamtype="Wash" beam_intensity="500" beam_angle="25">
+                <Model/>
+                <ChannelType coarse="73" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="74" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="75" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="76" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Wash 16" class="Conventional" beamtype="Wash" beam_intensity="500" beam_angle="25">
+                <Model/>
+                <ChannelType coarse="77" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="78" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="79" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="80" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Wash 17" class="Conventional" beamtype="Wash" beam_intensity="500" beam_angle="25">
+                <Model/>
+                <ChannelType coarse="81" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="82" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="83" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="84" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Wash 18" class="Conventional" beamtype="Wash" beam_intensity="500" beam_angle="25">
+                <Model/>
+                <ChannelType coarse="85" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="86" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="87" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="88" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Wash 19" class="Conventional" beamtype="Wash" beam_intensity="500" beam_angle="25">
+                <Model/>
+                <ChannelType coarse="89" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="90" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="91" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="92" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Ring" class="Conventional" beamtype="None" beam_intensity="10000" beam_angle="10">
+                <Model/>
+                <ChannelType coarse="7" default="255" MIB_fade_frames="549755813888" dmx_change_time_limit="549755813888" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="8" default="255" MIB_fade_frames="549755813888" dmx_change_time_limit="549755813888" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="9" default="255" MIB_fade_frames="549755813888" dmx_change_time_limit="549755813888" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="10" default="0" MIB_fade_frames="549755813888" dmx_change_time_limit="549755813888" attribute="COLOR1" feature="Color" preset="Color" highlight_value="0">
+                    <ChannelFunction subattribute="COLOR1" attribute="COLOR1" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="35" min_dmx_24="0" max_dmx_24="16777215" wheel="2">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="9" slot_from="0" slot_to="1.24" slot_index="0"/>
+                        <ChannelSet name="Red" from_dmx="10" to_dmx="14" slot_from="1.37" slot_to="1.92" slot_index="1"/>
+                        <ChannelSet name="Green" from_dmx="15" to_dmx="19" slot_from="2.06" slot_to="2.61" slot_index="2"/>
+                        <ChannelSet name="Blue" from_dmx="20" to_dmx="24" slot_from="2.75" slot_to="3.29" slot_index="3"/>
+                        <ChannelSet name="Yellow" from_dmx="25" to_dmx="29" slot_from="3.43" slot_to="3.98" slot_index="4"/>
+                        <ChannelSet name="Magenta" from_dmx="30" to_dmx="34" slot_from="4.12" slot_to="4.67" slot_index="5"/>
+                        <ChannelSet name="Cyan" from_dmx="35" to_dmx="39" slot_from="4.8" slot_to="5.35" slot_index="6"/>
+                        <ChannelSet name="White" from_dmx="40" to_dmx="44" slot_from="5.49" slot_to="6.04" slot_index="7"/>
+                        <ChannelSet name="Violet Blue" from_dmx="45" to_dmx="49" slot_from="6.18" slot_to="6.73" slot_index="8"/>
+                        <ChannelSet name="Light Blue" from_dmx="50" to_dmx="54" slot_from="6.86" slot_to="7.41" slot_index="9"/>
+                        <ChannelSet name="Wine Red" from_dmx="55" to_dmx="59" slot_from="7.55" slot_to="8.1" slot_index="10"/>
+                        <ChannelSet name="May Green" from_dmx="60" to_dmx="64" slot_from="8.24" slot_to="8.78" slot_index="11"/>
+                        <ChannelSet name="Reseda Green" from_dmx="65" to_dmx="69" slot_from="8.92" slot_to="9.47" slot_index="12"/>
+                        <ChannelSet name="Blue Lilac" from_dmx="70" to_dmx="74" slot_from="9.61" slot_to="10.16" slot_index="13"/>
+                        <ChannelSet name="Moss Green" from_dmx="75" to_dmx="79" slot_from="10.29" slot_to="10.84" slot_index="14"/>
+                        <ChannelSet name="Signal Violet" from_dmx="80" to_dmx="84" slot_from="10.98" slot_to="11.53" slot_index="15"/>
+                        <ChannelSet name="Red Lilac" from_dmx="85" to_dmx="89" slot_from="11.67" slot_to="12.22" slot_index="16"/>
+                        <ChannelSet name="Purple Red" from_dmx="90" to_dmx="94" slot_from="12.35" slot_to="12.9" slot_index="17"/>
+                        <ChannelSet name="Green Brown" from_dmx="95" to_dmx="99" slot_from="13.04" slot_to="13.59" slot_index="18"/>
+                        <ChannelSet name="Pale Green" from_dmx="100" to_dmx="104" slot_from="13.73" slot_to="14.27" slot_index="19"/>
+                        <ChannelSet name="Ruby Red" from_dmx="105" to_dmx="109" slot_from="14.41" slot_to="14.96" slot_index="20"/>
+                        <ChannelSet name="Flame Red" from_dmx="110" to_dmx="114" slot_from="15.1" slot_to="15.65" slot_index="21"/>
+                        <ChannelSet name="Red Orange" from_dmx="115" to_dmx="119" slot_from="15.78" slot_to="16.33" slot_index="22"/>
+                        <ChannelSet name="Rose" from_dmx="120" to_dmx="124" slot_from="16.47" slot_to="17.02" slot_index="23"/>
+                        <ChannelSet name="Honey Yellow" from_dmx="125" to_dmx="129" slot_from="17.16" slot_to="17.71" slot_index="24"/>
+                        <ChannelSet name="Light Pink" from_dmx="130" to_dmx="134" slot_from="17.84" slot_to="18.39" slot_index="25"/>
+                        <ChannelSet name="Deep Orange" from_dmx="135" to_dmx="139" slot_from="18.53" slot_to="19.08" slot_index="26"/>
+                        <ChannelSet name="Lemon" from_dmx="140" to_dmx="144" slot_from="19.22" slot_to="19.76" slot_index="27"/>
+                        <ChannelSet name="Golden Yellow" from_dmx="145" to_dmx="149" slot_from="19.9" slot_to="20.45" slot_index="28"/>
+                        <ChannelSet name="Pastel Orange" from_dmx="150" to_dmx="154" slot_from="20.59" slot_to="21.14" slot_index="29"/>
+                        <ChannelSet name="Cream" from_dmx="155" to_dmx="159" slot_from="21.27" slot_to="21.82" slot_index="30"/>
+                        <ChannelSet name="Melon Yellow" from_dmx="160" to_dmx="164" slot_from="21.96" slot_to="22.51" slot_index="31"/>
+                        <ChannelSet name="Luminous Orange" from_dmx="165" to_dmx="169" slot_from="22.65" slot_to="23.2" slot_index="32"/>
+                        <ChannelSet name="Luminous Yellow" from_dmx="170" to_dmx="174" slot_from="23.33" slot_to="23.88" slot_index="33"/>
+                        <ChannelSet name="Black" from_dmx="175" to_dmx="255" slot_from="24.02" slot_to="35" slot_index="34"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="11" default="0" MIB_fade_frames="549755813888" dmx_change_time_limit="549755813888" attribute="COLORMACROS" feature="Color" preset="Color">
+                    <ChannelFunction subattribute="COLORMACROS" attribute="COLORMACROS" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="9"/>
+                        <ChannelSet name="FX 1" from_dmx="10" to_dmx="23"/>
+                        <ChannelSet name="Blue/White/Yel Waves" from_dmx="24" to_dmx="37"/>
+                        <ChannelSet name="Pastel Waves" from_dmx="38" to_dmx="51"/>
+                        <ChannelSet name="Rainbow Wipes" from_dmx="52" to_dmx="65"/>
+                        <ChannelSet name="Red/White Radar" from_dmx="66" to_dmx="79"/>
+                        <ChannelSet name="Red/Yel Pulse" from_dmx="80" to_dmx="93"/>
+                        <ChannelSet name="Green/Yel Circle" from_dmx="94" to_dmx="107"/>
+                        <ChannelSet name="Red/Blue/Yel Ring" from_dmx="108" to_dmx="121"/>
+                        <ChannelSet name="Blue/Pink Orb" from_dmx="122" to_dmx="135"/>
+                        <ChannelSet name="Pink/Green Zaps" from_dmx="136" to_dmx="149"/>
+                        <ChannelSet name="Blye/White/Yel" from_dmx="150" to_dmx="163"/>
+                        <ChannelSet name="Green/Cyan Waves" from_dmx="164" to_dmx="177"/>
+                        <ChannelSet name="Red/White Zones" from_dmx="178" to_dmx="191"/>
+                        <ChannelSet name="Watermelon" from_dmx="192" to_dmx="205"/>
+                        <ChannelSet name="White Bounce" from_dmx="206" to_dmx="219"/>
+                        <ChannelSet name="Red Ring" from_dmx="220" to_dmx="233"/>
+                        <ChannelSet name="FX 17" from_dmx="234" to_dmx="247"/>
+                        <ChannelSet name="Black" from_dmx="248" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="12" default="0" MIB_fade_frames="549755813888" dmx_change_time_limit="549755813888" attribute="ColorMacro1Rate" feature="Color" preset="Color">
+                    <ChannelFunction subattribute="ColorMacro1Rate" attribute="ColorMacro1Rate" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="13" default="0" MIB_fade_frames="549755813888" dmx_change_time_limit="549755813888" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+            <Instance module_index="1" patch="1" locked="true"/>
+            <Instance module_index="2" patch="1" locked="true"/>
+            <Instance module_index="3" patch="1" locked="true"/>
+            <Instance module_index="4" patch="1" locked="true"/>
+            <Instance module_index="5" patch="1" locked="true"/>
+            <Instance module_index="6" patch="1" locked="true"/>
+            <Instance module_index="7" patch="1" locked="true"/>
+            <Instance module_index="8" patch="1" locked="true"/>
+            <Instance module_index="9" patch="1" locked="true"/>
+            <Instance module_index="10" patch="1" locked="true"/>
+            <Instance module_index="11" patch="1" locked="true"/>
+            <Instance module_index="12" patch="1" locked="true"/>
+            <Instance module_index="13" patch="1" locked="true"/>
+            <Instance module_index="14" patch="1" locked="true"/>
+            <Instance module_index="15" patch="1" locked="true"/>
+            <Instance module_index="16" patch="1" locked="true"/>
+            <Instance module_index="17" patch="1" locked="true"/>
+            <Instance module_index="18" patch="1" locked="true"/>
+            <Instance module_index="19" patch="1" locked="true"/>
+            <Instance module_index="20" patch="1" locked="true"/>
+            <Instance module_index="21" patch="1" locked="true"/>
+        </Instances>
+        <Wheels>
+            <Wheel index="0" preset="Color" feature="Color" attribute="COLOR1" subattribute="COLOR1">
+                <Slot index="0" media_name="NoFeature" r="255" g="255" b="255"/>
+                <Slot index="1" media_name="Red" r="255" g="0" b="79"/>
+                <Slot index="2" media_name="Yellow" r="241" g="255" b="0"/>
+                <Slot index="3" media_name="Green" r="161" g="255" b="0"/>
+                <Slot index="4" media_name="Cyan" r="0" g="228" b="255"/>
+                <Slot index="5" media_name="Blue" r="0" g="106" b="255"/>
+                <Slot index="6" media_name="Magenta" r="255" g="0" b="242"/>
+                <Slot index="7" media_name="Pink" r="255" g="173" b="233"/>
+                <Slot index="8" media_name="Lavender" r="206" g="177" b="255"/>
+                <Slot index="9" media_name="White" r="242" g="252" b="255"/>
+                <Slot index="10" media_name="1800k" r="255" g="241" b="207"/>
+                <Slot index="11" media_name="2200k" r="255" g="242" b="222"/>
+                <Slot index="12" media_name="2700k" r="255" g="243" b="227"/>
+                <Slot index="13" media_name="3000k" r="255" g="246" b="234"/>
+                <Slot index="14" media_name="3200k" r="255" g="249" b="242"/>
+                <Slot index="15" media_name="3500k" r="255" g="252" b="249"/>
+                <Slot index="16" media_name="4000k" r="255" g="253" b="255"/>
+                <Slot index="17" media_name="4200k" r="251" g="255" b="254"/>
+                <Slot index="18" media_name="4500k" r="248" g="255" b="254"/>
+                <Slot index="19" media_name="5600k" r="243" g="255" b="254"/>
+                <Slot index="20" media_name="6000k" r="239" g="255" b="254"/>
+                <Slot index="21" media_name="6500k" r="234" g="255" b="254"/>
+                <Slot index="22" media_name="7200k" r="229" g="255" b="254"/>
+                <Slot index="23" media_name="8000k" r="220" g="255" b="253"/>
+            </Wheel>
+            <Wheel index="1" preset="Color" feature="Color" attribute="COLOR1" subattribute="COLOR1">
+                <Slot index="0" media_name="Open" r="255" g="255" b="255"/>
+                <Slot index="1" media_name="Red" r="255" g="56" b="0"/>
+                <Slot index="2" media_name="Green" r="110" g="255" b="0"/>
+                <Slot index="3" media_name="Bue" r="0" g="130" b="255"/>
+                <Slot index="4" media_name="Yellow" r="242" g="255" b="0"/>
+                <Slot index="5" media_name="Magenta" r="255" g="125" b="251"/>
+                <Slot index="6" media_name="Cyan" r="0" g="244" b="255"/>
+                <Slot index="7" media_name="White" r="255" g="255" b="255"/>
+                <Slot index="8" media_name="Violet Blue" r="222" g="231" b="255"/>
+                <Slot index="9" media_name="Light Blue" r="196" g="248" b="255"/>
+                <Slot index="10" media_name="Wine Red" r="255" g="210" b="212"/>
+                <Slot index="11" media_name="May Green" r="233" g="255" b="214"/>
+                <Slot index="12" media_name="Reseda Green" r="242" g="255" b="238"/>
+                <Slot index="13" media_name="Blue Lilac" r="244" g="246" b="255"/>
+                <Slot index="14" media_name="Moss Green" r="246" g="255" b="239"/>
+                <Slot index="15" media_name="Signal Violet" r="255" g="237" b="246"/>
+                <Slot index="16" media_name="Red Lilac" r="255" g="246" b="242"/>
+                <Slot index="17" media_name="Purpe Red" r="255" g="229" b="239"/>
+                <Slot index="18" media_name="Green Brown" r="255" g="247" b="231"/>
+                <Slot index="19" media_name="Pale Green" r="236" g="252" b="255"/>
+                <Slot index="20" media_name="Ruby Red" r="255" g="171" b="177"/>
+                <Slot index="21" media_name="Flame Red" r="255" g="193" b="179"/>
+                <Slot index="22" media_name="Red Orange" r="255" g="229" b="203"/>
+                <Slot index="23" media_name="Rose" r="255" g="221" b="219"/>
+                <Slot index="24" media_name="Honey Yellow" r="255" g="248" b="148"/>
+                <Slot index="25" media_name="Light Pink" r="255" g="234" b="235"/>
+                <Slot index="26" media_name="Deep Orange" r="255" g="224" b="199"/>
+                <Slot index="27" media_name="Lemon" r="255" g="252" b="210"/>
+                <Slot index="28" media_name="Golden Yellow" r="251" g="255" b="186"/>
+                <Slot index="29" media_name="Pastel Orange" r="255" g="224" b="202"/>
+                <Slot index="30" media_name="Cream" r="255" g="252" b="242"/>
+                <Slot index="31" media_name="Melon Yellow" r="255" g="241" b="150"/>
+                <Slot index="32" media_name="Liminous Orange" r="255" g="202" b="163"/>
+                <Slot index="33" media_name="Luminous Yellow" r="239" g="255" b="224"/>
+                <Slot index="34" media_name="Black" r="0" g="0" b="0"/>
+            </Wheel>
+        </Wheels>
+    </FixtureType>
+</MA>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2018-08-16T12:59:18" showfile="new show 2017-06-29"/>
+	<FixtureType index="2" name="BLINDER LED 2" mode="6ch">
+		<InfoItems>
+			<Info date="2018-06-29T14:34:02">Set to A001-A505, 8 ch mode</Info>
+		<Info type="Revision" date="2019-10-11T02:15:57">by kinson, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>BLINDER 2</short_name>
+		<manufacturer>PROLIGHT SPAIN</manufacturer>
+		<short_manufacturer>PROLIGHT SPAIN</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="LED" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<Body>
+					<Size x="0.15" y="0.15" z="0.05"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="2">
+					<ChannelFunction index="0" name="Strobe" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Strobe off" from_dmx="0" to_dmx="4"/>
+						<ChannelSet index="1" name="Strobe min" from_dmx="5" to_dmx="5"/>
+						<ChannelSet index="2" name="Strobe 1..100%" from_dmx="6" to_dmx="254"/>
+						<ChannelSet index="3" name="Strobe max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="ANIMATIONMODE" feature="EFFECTSANIMATION" preset="BEAM" coarse="3">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="ANIMATIONMODESELECT" subattribute_user_name="Mode" attribute="ANIMATIONMODE" attribute_user_name="AnimationMode" feature="EFFECTSANIMATION" feature_user_name="Animation" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Macro off" from_dmx="0" to_dmx="50"/>
+						<ChannelSet index="1" name="Macro 1" from_dmx="51" to_dmx="100"/>
+						<ChannelSet index="2" name="Macro 2" from_dmx="101" to_dmx="150"/>
+						<ChannelSet index="3" name="Macro 3" from_dmx="151" to_dmx="200"/>
+						<ChannelSet index="4" name="Sound mode" from_dmx="201" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="ANIMATIONSPEED" feature="EFFECTSANIMATION" preset="BEAM" coarse="4">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="ANIMATIONSPEED" subattribute_user_name="AnimationSpeed" attribute="ANIMATIONSPEED" attribute_user_name="AnimationSpeed" feature="EFFECTSANIMATION" feature_user_name="Animation" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min speed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="speed 1..100%" from_dmx="1" to_dmx="254"/>
+						<ChannelSet index="2" name="max speed" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+			<Module index="1" name="WHITE CELL" class="LED" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<Body>
+					<Size x="0.15" y="0.15" z="0.05"/>
+				</Body>
+				<ChannelType index="0" attribute="COLORRGB6" feature="COLORRGB" preset="COLOR" coarse="1" default="254.999" color="ffffcc">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB6" subattribute_user_name="Warm White" attribute="COLORRGB6" attribute_user_name="Warm White" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+			<Instance index="1" module_index="1" patch="5" X="-1"/>
+			<Instance index="2" module_index="1" patch="6" X="1"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

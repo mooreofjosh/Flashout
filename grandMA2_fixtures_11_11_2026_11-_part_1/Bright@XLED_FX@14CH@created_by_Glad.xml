@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2017-05-02T14:53:31" showfile="xledfx"/>
+	<FixtureType index="2" name="XLED FX" mode="14CH">
+		<InfoItems>
+			<Info type="Revision" date="2017-05-02T12:26:28">created by Glad</Info>
+		<Info type="Revision" date="2017-05-22T11:05:11">created by Glad, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>XLED FX</short_name>
+		<manufacturer>Bright</manufacturer>
+		<short_manufacturer>Bright</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="Conventional" beamtype="Wash" beam_angle="110" beam_intensity="30000">
+				<Body>
+					<Size x="0.424" y="0.239" z="0.234"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="5" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="Dim 0..100%" from_dmx="6" to_dmx="254" slot_from="0" slot_to="0.992" auto_create="false"/>
+						<ChannelSet index="2" name="open" from_dmx="255" to_dmx="255" slot_from="0.996" slot_to="0.996"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="2" default="12.917" highlight_value="5">
+					<ChannelFunction index="0" from="0" to="6" min_dmx_24="0" max_dmx_24="1048575" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="7" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="open" from_dmx="8" to_dmx="15" slot_from="1" slot_to="1"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" name="Strobe 1..100%" from="6" to="47" min_dmx_24="1048576" max_dmx_24="7864319" physfrom="1" physto="25" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Strobe" from_dmx="16" to_dmx="16"/>
+						<ChannelSet index="1" name="max Strobe" from_dmx="119" to_dmx="119"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" from="47" to="50" min_dmx_24="7864320" max_dmx_24="8388607" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open (2)" from_dmx="120" to_dmx="127" auto_create="false"/>
+					</ChannelFunction>
+					<ChannelFunction index="3" name="Rnd 1..100%" from="50" to="72" min_dmx_24="8388608" max_dmx_24="12058623" physfrom="1" physto="15" subattribute="STROBE_RANDOM" subattribute_user_name="Rnd" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Rnd" from_dmx="128" to_dmx="128"/>
+						<ChannelSet index="1" name="max Rnd" from_dmx="183" to_dmx="183"/>
+					</ChannelFunction>
+					<ChannelFunction index="4" from="72" to="75" min_dmx_24="12058624" max_dmx_24="12582911" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open (3)" from_dmx="184" to_dmx="191" auto_create="false"/>
+					</ChannelFunction>
+					<ChannelFunction index="5" name="Audio 1..100%" from="75" to="97" min_dmx_24="12582912" max_dmx_24="16252927" physfrom="1" physto="15" subattribute="SHUTTERAUDIO" subattribute_user_name="Audio" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Audio" from_dmx="192" to_dmx="192"/>
+						<ChannelSet index="1" name="max Audio" from_dmx="247" to_dmx="247"/>
+					</ChannelFunction>
+					<ChannelFunction index="6" from="97" to="100" min_dmx_24="16252928" max_dmx_24="16777215" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open (4)" from_dmx="248" to_dmx="255" auto_create="false"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="EFFECT" feature="EFFECT" preset="BEAM" coarse="3">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="EFFECTSELECT" subattribute_user_name="Select" attribute="EFFECT" attribute_user_name="Effect" feature="EFFECT" feature_user_name="Effect" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="No Effect" from_dmx="0" to_dmx="9"/>
+						<ChannelSet index="1" name="Effect 1" from_dmx="10" to_dmx="28"/>
+						<ChannelSet index="2" name="Effect 2" from_dmx="29" to_dmx="48"/>
+						<ChannelSet index="3" name="Effect 3" from_dmx="49" to_dmx="68"/>
+						<ChannelSet index="4" name="Effect 4" from_dmx="69" to_dmx="88"/>
+						<ChannelSet index="5" name="Effect 5" from_dmx="89" to_dmx="108"/>
+						<ChannelSet index="6" name="Effect 6" from_dmx="109" to_dmx="128"/>
+						<ChannelSet index="7" name="Effect 7" from_dmx="129" to_dmx="148"/>
+						<ChannelSet index="8" name="Effect 8" from_dmx="149" to_dmx="168"/>
+						<ChannelSet index="9" name="Effect 9" from_dmx="169" to_dmx="188"/>
+						<ChannelSet index="10" name="Effect 10" from_dmx="189" to_dmx="208"/>
+						<ChannelSet index="11" name="Effect 11" from_dmx="209" to_dmx="228"/>
+						<ChannelSet index="12" name="Effect 12" from_dmx="229" to_dmx="248"/>
+						<ChannelSet index="13" name="Audio" from_dmx="249" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="EFFECTRATE" feature="EFFECT" preset="BEAM" coarse="4">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="EFFECTRATE" subattribute_user_name="EffectRate" attribute="EFFECTRATE" attribute_user_name="EffectRate" feature="EFFECT" feature_user_name="Effect" preset="BEAM" preset_user_name="Beam"/>
+				</ChannelType>
+				<ChannelType index="4" attribute="LAMPMODE" feature="LAMP" preset="CONTROL" coarse="5" default="0.001" snap="true">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="LAMPMODESELECT" subattribute_user_name="LampModeSelect" attribute="LAMPMODE" attribute_user_name="LampMode" feature="LAMP" feature_user_name="Lamp" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Instant respons" from_dmx="0" to_dmx="31"/>
+						<ChannelSet index="1" name="Short risetime" from_dmx="32" to_dmx="63"/>
+						<ChannelSet index="2" name="Medium risetime" from_dmx="64" to_dmx="95"/>
+						<ChannelSet index="3" name="Long risetime" from_dmx="96" to_dmx="127"/>
+						<ChannelSet index="4" name="Extra-long risetime" from_dmx="128" to_dmx="159"/>
+						<ChannelSet index="5" name="*reserved" from_dmx="160" to_dmx="191" auto_create="false"/>
+						<ChannelSet index="6" name="*reserved" from_dmx="192" to_dmx="223" auto_create="false"/>
+						<ChannelSet index="7" name="*reserved" from_dmx="224" to_dmx="255" auto_create="false"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+			<Module index="1" name="Ring" class="Conventional" beamtype="Wash" beam_angle="110" beam_intensity="10000">
+				<Body>
+					<Size x="0.424" y="0.239" z="0.234"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" default="254.999" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="1"/>
+			<Instance index="1" module_index="1" patch="2"/>
+			<Instance index="2" module_index="1" patch="3"/>
+			<Instance index="3" module_index="1" patch="4"/>
+			<Instance index="4" module_index="1" patch="5"/>
+			<Instance index="5" module_index="1" patch="6"/>
+			<Instance index="6" module_index="1" patch="7"/>
+			<Instance index="7" module_index="1" patch="8"/>
+			<Instance index="8" module_index="1" patch="9"/>
+			<Instance index="9" module_index="0" patch="10"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

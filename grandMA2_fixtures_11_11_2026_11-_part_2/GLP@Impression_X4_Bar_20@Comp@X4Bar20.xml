@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="Impression X4 Bar 20" mode="Comp">
+        <InfoItems>
+            <Info type="Revision" date="2023-03-15T10:17:02">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.0</Info>
+            <Info type="Revision" date="2023-02-14T10:45:40">X4Bar20 based of X4Bar10</Info>
+            <Info type="Revision" date="2023-02-14T10:23:56">Final. Based of X4 Bar 10</Info>
+            <Info>RikartSTG tries to build an X4Bar20 out of an X4Bar10 file</Info>
+            <Info type="Revision" date="2023-03-15T10:17:19.588">X4Bar20, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>impression X4 Bar 20</short_name>
+        <manufacturer>GLP</manufacturer>
+        <short_manufacturer>GLP</short_manufacturer>
+        <Modules>
+            <Module name="Comp Base" class="Headmover" beamtype="Wash" beam_intensity="1920" beam_angle="1">
+                <Model name="Comp Base" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <Body>
+                    <Size/>
+                </Body>
+                <ChannelType coarse="3" fine="4" default="32767" attribute="TILT" feature="POSITION" preset="POSITION">
+                    <ChannelFunction subattribute="TILT" attribute="TILT" feature="POSITION" preset="POSITION" from="105" to="-105" physfrom="105" physto="-105" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Home" from_dmx="32768" to_dmx="32768"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="5" default="0" attribute="Color1WheelIndex" feature="Color" preset="Color">
+                    <ChannelFunction subattribute="Color1WheelIndex" attribute="Color1WheelIndex" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" wheel="1">
+                        <ChannelSet name="Color Adjustable Via RGB" from_dmx="0" to_dmx="7"/>
+                        <ChannelSet name="RED" from_dmx="8" to_dmx="15"/>
+                        <ChannelSet name="Amber" from_dmx="16" to_dmx="23"/>
+                        <ChannelSet name="Warm Yellow" from_dmx="24" to_dmx="31"/>
+                        <ChannelSet name="Yellow" from_dmx="32" to_dmx="39"/>
+                        <ChannelSet name="Green" from_dmx="40" to_dmx="47"/>
+                        <ChannelSet name="Turquoise" from_dmx="48" to_dmx="55"/>
+                        <ChannelSet name="Cyan" from_dmx="56" to_dmx="63"/>
+                        <ChannelSet name="Blue" from_dmx="64" to_dmx="71"/>
+                        <ChannelSet name="Lavender" from_dmx="72" to_dmx="79"/>
+                        <ChannelSet name="Malve" from_dmx="80" to_dmx="87"/>
+                        <ChannelSet name="Magenta" from_dmx="88" to_dmx="95"/>
+                        <ChannelSet name="Pink" from_dmx="96" to_dmx="103"/>
+                        <ChannelSet name="CTO" from_dmx="104" to_dmx="111"/>
+                        <ChannelSet name="White" from_dmx="112" to_dmx="119"/>
+                        <ChannelSet name="CTB" from_dmx="120" to_dmx="127"/>
+                        <ChannelSet name="Rainbow Effect Stop" from_dmx="128" to_dmx="128"/>
+                        <ChannelSet name="Rainbow Effect" from_dmx="129" to_dmx="223"/>
+                        <ChannelSet name="Rainbow Colors" from_dmx="224" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="6" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Red" from_dmx="0" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="7" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Green" from_dmx="0" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="8" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Blue" from_dmx="0" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="9" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="White" from_dmx="0" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="10" default="255" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" highlight_value="100">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="5.88" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="986895">
+                        <ChannelSet name="Shutter Closed" from_dmx="0" to_dmx="15"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_RANDOM_PULSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="5.88" to="18.43" physfrom="0.125" physto="10" min_dmx_24="1052688" max_dmx_24="3092271">
+                        <ChannelSet name="Pulse Random" from_dmx="16" to_dmx="47"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_PULSE_OPEN" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="18.43" to="30.98" physfrom="0" physto="1" min_dmx_24="3158064" max_dmx_24="5197647">
+                        <ChannelSet name="Fade On Snap Off" from_dmx="48" to_dmx="79"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_PULSE_CLOSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="30.98" to="43.53" physfrom="0" physto="1" min_dmx_24="5263440" max_dmx_24="7303023">
+                        <ChannelSet name="Snap On Fade Off" from_dmx="80" to_dmx="111"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_PULSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="43.53" to="56.08" physfrom="0" physto="1" min_dmx_24="7368816" max_dmx_24="9408399">
+                        <ChannelSet name="Fade on Fade Off" from_dmx="112" to_dmx="143"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_RANDOM" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="56.08" to="78.04" physfrom="5" physto="0.1" min_dmx_24="9474192" max_dmx_24="13092807">
+                        <ChannelSet name="Strobe Random" from_dmx="144" to_dmx="199"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBEEFFECT" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="78.04" to="93.73" physfrom="1" physto="10" min_dmx_24="13158600" max_dmx_24="15724527">
+                        <ChannelSet name="Strobe Effect " from_dmx="200" to_dmx="239"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="93.73" to="100" physfrom="0" physto="1" min_dmx_24="15790320" max_dmx_24="16777215">
+                        <ChannelSet name="Shutter Open" from_dmx="240" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="11" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Intensity" from_dmx="0" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="12" default="0" attribute="CTO" feature="CTC" preset="COLOR">
+                    <ChannelFunction subattribute="CTO" attribute="CTO" feature="CTC" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="No CTO" from_dmx="0" to_dmx="7"/>
+                        <ChannelSet name="Continuous Color Temperature Correction" from_dmx="8" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="13" default="0" attribute="FIXTUREGLOBALRESET" feature="RESET" preset="CONTROL">
+                    <ChannelFunction subattribute="FIXTUREGLOBALRESET" attribute="FIXTUREGLOBALRESET" feature="RESET" preset="CONTROL" from="0" to="46.67" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="7829367">
+                        <ChannelSet name="No Miror" from_dmx="0" to_dmx="3"/>
+                        <ChannelSet name="Miror Color Priority" from_dmx="4" to_dmx="7"/>
+                        <ChannelSet name="Miror Color Mixing" from_dmx="8" to_dmx="11"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="FIXTUREGLOBALRESET" attribute="FIXTUREGLOBALRESET" feature="RESET" preset="CONTROL" from="46.67" to="56.08" physfrom="0" physto="1" min_dmx_24="7895160" max_dmx_24="9408399">
+                        <ChannelSet name="Tilt Slow Mode Off" from_dmx="120" to_dmx="123"/>
+                        <ChannelSet name="Tilt Slow Mode On" from_dmx="124" to_dmx="127"/>
+                        <ChannelSet name="Tilt Current Off" from_dmx="128" to_dmx="131"/>
+                        <ChannelSet name="Tilt Current On" from_dmx="132" to_dmx="135"/>
+                        <ChannelSet name="Tilt Reset Off" from_dmx="136" to_dmx="139"/>
+                        <ChannelSet name="Tilt Reset On" from_dmx="140" to_dmx="143"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="FIXTUREGLOBALRESET" attribute="FIXTUREGLOBALRESET" feature="RESET" preset="CONTROL" from="56.08" to="59.22" physfrom="0" physto="1" min_dmx_24="9474192" max_dmx_24="9934743">
+                        <ChannelSet name="Display Flip Off" from_dmx="144" to_dmx="147"/>
+                        <ChannelSet name="Display Flip On" from_dmx="148" to_dmx="151"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="FIXTUREGLOBALRESET" attribute="FIXTUREGLOBALRESET" feature="RESET" preset="CONTROL" from="59.22" to="70.2" physfrom="0" physto="1" min_dmx_24="10000536" max_dmx_24="11776947">
+                        <ChannelSet name="DMX Mode DPixH" from_dmx="152" to_dmx="155"/>
+                        <ChannelSet name="DMX Mode SPixH" from_dmx="156" to_dmx="159"/>
+                        <ChannelSet name="DMX Mode High Resolution" from_dmx="160" to_dmx="163"/>
+                        <ChannelSet name="DMX Mode Normal" from_dmx="164" to_dmx="167"/>
+                        <ChannelSet name="DMX Mode Compressed" from_dmx="168" to_dmx="171"/>
+                        <ChannelSet name="DMX Mode DPix" from_dmx="172" to_dmx="175"/>
+                        <ChannelSet name="DMX Mode SPix" from_dmx="176" to_dmx="179"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="FIXTUREGLOBALRESET" attribute="FIXTUREGLOBALRESET" feature="RESET" preset="CONTROL" from="70.2" to="74.9" physfrom="0" physto="1" min_dmx_24="11842740" max_dmx_24="12566463">
+                        <ChannelSet name="Dim Curve ESoft" from_dmx="180" to_dmx="183"/>
+                        <ChannelSet name="Dim Curve Soft" from_dmx="184" to_dmx="187"/>
+                        <ChannelSet name="Dim Curve Lin" from_dmx="188" to_dmx="191"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="FIXTUREGLOBALRESET" attribute="FIXTUREGLOBALRESET" feature="RESET" preset="CONTROL" from="74.9" to="78.04" physfrom="0" physto="1" min_dmx_24="12632256" max_dmx_24="13092807">
+                        <ChannelSet name="X4 Compatibility Off" from_dmx="192" to_dmx="195"/>
+                        <ChannelSet name="X4 Compatibility On" from_dmx="196" to_dmx="199"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="FIXTUREGLOBALRESET" attribute="FIXTUREGLOBALRESET" feature="RESET" preset="CONTROL" from="78.04" to="81.18" physfrom="0" physto="1" min_dmx_24="13158600" max_dmx_24="13619151">
+                        <ChannelSet name="Silent Mode Off" from_dmx="200" to_dmx="203"/>
+                        <ChannelSet name="Silent Mode On" from_dmx="204" to_dmx="207"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="FIXTUREGLOBALRESET" attribute="FIXTUREGLOBALRESET" feature="RESET" preset="CONTROL" from="81.18" to="84.31" physfrom="0" physto="1" min_dmx_24="13684944" max_dmx_24="14145495">
+                        <ChannelSet name="Position Feedback Off" from_dmx="208" to_dmx="211"/>
+                        <ChannelSet name="Position Feedback On" from_dmx="212" to_dmx="215"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="FIXTUREGLOBALRESET" attribute="FIXTUREGLOBALRESET" feature="RESET" preset="CONTROL" from="84.31" to="87.45" physfrom="0" physto="1" min_dmx_24="14211288" max_dmx_24="14671839">
+                        <ChannelSet name="DMX Hold Off" from_dmx="216" to_dmx="219"/>
+                        <ChannelSet name="DMX Hold On" from_dmx="220" to_dmx="223"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="FIXTUREGLOBALRESET" attribute="FIXTUREGLOBALRESET" feature="RESET" preset="CONTROL" from="87.45" to="90.59" physfrom="0" physto="1" min_dmx_24="14737632" max_dmx_24="15198183">
+                        <ChannelSet name="Tilt Inverse Off" from_dmx="224" to_dmx="227"/>
+                        <ChannelSet name="Tilt Inverse On" from_dmx="228" to_dmx="231"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="FIXTUREGLOBALRESET" attribute="FIXTUREGLOBALRESET" feature="RESET" preset="CONTROL" from="90.59" to="93.73" physfrom="0" physto="1" min_dmx_24="15263976" max_dmx_24="15724527">
+                        <ChannelSet name="Pixel Inverse Off" from_dmx="232" to_dmx="235"/>
+                        <ChannelSet name="Pixel Inverse On" from_dmx="236" to_dmx="239"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="FIXTUREGLOBALRESET" attribute="FIXTUREGLOBALRESET" feature="RESET" preset="CONTROL" from="93.73" to="96.86" physfrom="0" physto="1" min_dmx_24="15790320" max_dmx_24="16250871">
+                        <ChannelSet name="Zoom inverse Off" from_dmx="240" to_dmx="243"/>
+                        <ChannelSet name="Zoom Inverse On" from_dmx="244" to_dmx="247"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="FIXTUREGLOBALRESET" attribute="FIXTUREGLOBALRESET" feature="RESET" preset="CONTROL" from="96.86" to="100" physfrom="0" physto="1" min_dmx_24="16316664" max_dmx_24="16777215">
+                        <ChannelSet name="Fixture Default" from_dmx="248" to_dmx="251"/>
+                        <ChannelSet name="Fixture Reset" from_dmx="252" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="14" default="0" attribute="ColorMixMSpeed" feature="Control" preset="Control">
+                    <ChannelFunction subattribute="ColorMixMSpeed" attribute="ColorMixMSpeed" feature="Control" preset="Control" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="0 to 2 Second Transition Time" from_dmx="0" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="15" default="0" attribute="Gobo1WheelSpin" feature="Gobo" preset="Gobo">
+                    <ChannelFunction subattribute="GOBO1_SPIN" attribute="Gobo1WheelSpin" feature="Gobo" preset="Gobo" from="0" to="100" physfrom="0" physto="0.16666666666666666" min_dmx_24="0" max_dmx_24="16777215" wheel="2">
+                        <ChannelSet name="Pattern 1 Movement" from_dmx="0" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="16" default="127" attribute="ZOOM" feature="FOCUS" preset="FOCUS">
+                    <ChannelFunction subattribute="ZOOM" attribute="ZOOM" feature="FOCUS" preset="FOCUS" from="0" to="100" physfrom="50" physto="7" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Narrow" from_dmx="0" to_dmx="1"/>
+                        <ChannelSet name="Wide" from_dmx="254" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="17" default="0" attribute="Gobo1WheelIndex" feature="Gobo" preset="Gobo">
+                    <ChannelFunction subattribute="Gobo1WheelIndex" attribute="Gobo1WheelIndex" feature="Gobo" preset="Gobo" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" wheel="2">
+                        <ChannelSet name="Patern 1 Select" from_dmx="0" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="18" default="0" attribute="ANIMATIONWHEEL" feature="Gobo" preset="Gobo">
+                    <ChannelFunction subattribute="ANIMATIONWHEEL" attribute="ANIMATIONWHEEL" feature="Gobo" preset="Gobo" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="19" default="0" attribute="ANIMATIONWHEEL2" feature="Gobo" preset="Gobo">
+                    <ChannelFunction subattribute="ANIMATIONWHEEL2" attribute="ANIMATIONWHEEL2" feature="Gobo" preset="Gobo" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+        </Instances>
+        <Wheels>
+            <Wheel index="0" preset="Color" feature="Color" attribute="Color1WheelIndex" subattribute="Color1WheelIndex">
+                <Slot index="0" media_name="RED" r="255" g="0" b="0"/>
+                <Slot index="1" media_name="Amber" r="255" g="160" b="0"/>
+                <Slot index="2" media_name="Warm Yellow" r="255" g="191" b="0"/>
+                <Slot index="3" media_name="Yellow" r="248" g="255" b="0"/>
+                <Slot index="4" media_name="Green" r="33" g="255" b="4"/>
+                <Slot index="5" media_name="Turquoise" r="0" g="255" b="188"/>
+                <Slot index="6" media_name="Cyan" r="55" g="255" b="255"/>
+                <Slot index="7" media_name="Blue" r="0" g="57" b="255"/>
+                <Slot index="8" media_name="Lavender" r="255" g="223" b="255"/>
+                <Slot index="9" media_name="Malve" r="255" g="105" b="255"/>
+                <Slot index="10" media_name="Magenta" r="255" g="0" b="255"/>
+                <Slot index="11" media_name="Pink" r="255" g="0" b="255"/>
+                <Slot index="12" media_name="CTO" r="255" g="239" b="236"/>
+                <Slot index="13" media_name="White" r="244" g="255" b="252"/>
+                <Slot index="14" media_name="CTB" r="205" g="255" b="255"/>
+            </Wheel>
+            <Wheel index="1" preset="Gobo" feature="Gobo" attribute="Gobo1WheelIndex" subattribute="Gobo1WheelIndex"/>
+            <Wheel index="2" preset="Gobo" feature="Gobo" attribute="Gobo2WheelIndex" subattribute="Gobo2WheelIndex"/>
+        </Wheels>
+    </FixtureType>
+</MA>

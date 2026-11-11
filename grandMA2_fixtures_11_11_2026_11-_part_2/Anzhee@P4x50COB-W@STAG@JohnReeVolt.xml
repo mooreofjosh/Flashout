@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA major_vers="3" minor_vers="2" stream_vers="2">
+  <Info datetime="2022-7-2T13:37:42" showfile="ma fixture builder"/>
+  <FixtureType index="0" name="P4x50COB-W" mode="STAG">
+    <InfoItems>
+      <Info>Created using MA FixtureBuilder version v1.5</Info>
+    <Info type="Revision" date="2022-07-04T09:31:02">JohnReeVolt, Uploaded to Fixture Share.</Info></InfoItems>
+    <short_name>P4x50COB</short_name>
+    <manufacturer>Anzhee</manufacturer>
+    <short_manufacturer>Anzhee</short_manufacturer>
+    <Modules index="0">
+      <Module index="0" name="Module" class="LED" beamtype="Spot" beam_angle="30" beam_intensity="10000">
+        <Body>
+          <Size x="0.255" y="0.255" z="0.380"/>
+        </Body>
+        <ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="100.000000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER">
+            <ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType/>
+        <ChannelType/>
+        <ChannelType index="3" attribute="COLORMIXER" feature="COLORMIX" preset="COLOR" coarse="6">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORMIXAUDIO" attribute="COLORMIXER" feature="COLORMIX" preset="COLOR">
+            <ChannelSet index="0" name="no" from_dmx="0" to_dmx="9"/>
+            <ChannelSet index="1" name="Macro Colors" from_dmx="10" to_dmx="255"/>
+            <ChannelSet/>
+            <ChannelSet/>
+          </ChannelFunction>
+          <ChannelFunction/>
+        </ChannelType>
+        <ChannelType index="4" attribute="COLORMODE" feature="COLORALL" preset="COLOR" coarse="8">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORMODESELECT" attribute="COLORMODE" feature="COLORALL" preset="COLOR">
+            <ChannelSet index="0" name="non func" from_dmx="0" to_dmx="9"/>
+            <ChannelSet index="1" name="HSV effect" from_dmx="10" to_dmx="99"/>
+            <ChannelSet index="2" name="Pulse FX 1" from_dmx="100" to_dmx="119"/>
+            <ChannelSet index="3" name="Pulse FX 2" from_dmx="120" to_dmx="139"/>
+            <ChannelSet index="4" name="Pulse FX 3" from_dmx="140" to_dmx="159"/>
+            <ChannelSet index="5" name="Speed ColorChange" from_dmx="160" to_dmx="179"/>
+            <ChannelSet index="6" name="Strobe FX 1" from_dmx="180" to_dmx="199"/>
+            <ChannelSet index="7" name="Strobe FX 2" from_dmx="200" to_dmx="219"/>
+            <ChannelSet index="8" name="ColorChange" from_dmx="220" to_dmx="239"/>
+            <ChannelSet index="9" name="Sound ColorChange" from_dmx="240" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="5" attribute="MSPEED" feature="MSPEED" preset="CONTROL" coarse="9">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="MSPEEDTRACK" attribute="MSPEED" feature="MSPEED" preset="CONTROL">
+            <ChannelSet/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="6" attribute="DIMMERCURVE" feature="DIMMER" preset="DIMMER" coarse="10">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIMMERCURVE" attribute="DIMMERCURVE" feature="DIMMER" preset="DIMMER">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+      </Module>
+    </Modules>
+    <Instances index="1">
+      <Instance index="0" patch="1" module_index="0"/>
+      <Instance index="1" patch="2" module_index="0"/>
+      <Instance index="2" patch="3" module_index="0"/>
+      <Instance index="3" patch="4" module_index="0"/>
+      <Instance index="4" patch="5" module_index="0"/>
+    </Instances>
+    <Wheels index="2"/>
+    <FixtureMacroCollect index="5"/>
+  </FixtureType>
+</MA>

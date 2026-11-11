@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.0.0/MA.xsd" major_vers="3" minor_vers="0" stream_vers="0">
+	<Info datetime="2016-05-30T15:42:24" showfile="new show 2016-05-27"/>
+	<FixtureType index="17" name="TX1910 w" mode="15CH">
+		<InfoItems>
+			<Info>Set menu option Chnd to 35Ch for this personality</Info>
+			<Info type="Revision" date="2014-03-20T00:00:00">Automated import from MA Lighting (C-RevNum: 0; Date: 2013-12-13)</Info>
+			<Info type="Invisible" date="2014-03-20T00:00:00">generator_software_name="MA Importer",generator_software_version="c5b59e51b613ce95dd9e0f1f8d84e6de90ec1140"</Info>
+		<Info type="Revision" date="2021-03-31T06:50:49">TX 1910wash, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>TX1910</short_name>
+		<manufacturer>LIGHT SKY</manufacturer>
+		<short_manufacturer>LIGHT SKY</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="TX1910" class="Headmover" beamtype="Wash" beam_angle="25" beam_intensity="10000">
+				<Body>
+					<Size x="0.32" y="0.33" z="0.24"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" fine="2" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="3" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="3" min_dmx_24="0" max_dmx_24="655359" subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+						<ChannelSet index="0" name="NO Function" from_dmx="0" to_dmx="9"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="4" to="19" min_dmx_24="655360" max_dmx_24="3276799" physfrom="0.1" physto="10" subattribute="STROBE_PULSE_CLOSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+						<ChannelSet index="0" name="Fast Closed" from_dmx="10" to_dmx="49"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" from="20" to="34" min_dmx_24="3276800" max_dmx_24="5898239" physfrom="10" physto="0.1" subattribute="STROBE_PULSE_OPEN" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+						<ChannelSet index="0" name="Slow Closed" from_dmx="50" to_dmx="89"/>
+					</ChannelFunction>
+					<ChannelFunction index="3" from="35" to="46" min_dmx_24="5898240" max_dmx_24="7864319" physfrom="1" physto="1" subattribute="STROBE_PULSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+						<ChannelSet index="0" name="Slow Closed Open" from_dmx="90" to_dmx="119"/>
+					</ChannelFunction>
+					<ChannelFunction index="4" from="47" to="70" min_dmx_24="7864320" max_dmx_24="11796479" physfrom="0.1" physto="10" subattribute="STROBE_RANDOM" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+						<ChannelSet index="0" name="Random Strobe" from_dmx="120" to_dmx="179"/>
+					</ChannelFunction>
+					<ChannelFunction index="5" from="71" to="98" min_dmx_24="11796480" max_dmx_24="16383999" physfrom="0.15" physto="15" subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+						<ChannelSet index="0" name="Strobe" from_dmx="180" to_dmx="249"/>
+					</ChannelFunction>
+					<ChannelFunction index="6" from="99" to="100" min_dmx_24="16384000" max_dmx_24="16777215" subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+						<ChannelSet index="0" name="NO Function" from_dmx="250" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="4" highlight_value="0" color="ff0000">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR"/>
+				</ChannelType>
+				<ChannelType index="3" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="5" highlight_value="0" color="00ff00">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR"/>
+				</ChannelType>
+				<ChannelType index="4" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="6" highlight_value="0" color="0000ff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR"/>
+				</ChannelType>
+				<ChannelType index="5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" coarse="7" default="255" color="ffffff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR"/>
+				</ChannelType>
+				<ChannelType index="6" attribute="MACRO" feature="CMYK" preset="COLOR" coarse="8" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="MACRO" attribute="MACRO" feature="CMYK" preset="COLOR">
+						<ChannelSet index="0" name="NO Function" from_dmx="0" to_dmx="1"/>
+						<ChannelSet index="1" name="Color" from_dmx="2" to_dmx="225"/>
+						<ChannelSet index="2" name="2700K" from_dmx="226" to_dmx="230"/>
+						<ChannelSet index="3" name="3200K" from_dmx="231" to_dmx="235"/>
+						<ChannelSet index="4" name="4200K" from_dmx="236" to_dmx="240"/>
+						<ChannelSet index="5" name="5600K" from_dmx="241" to_dmx="245"/>
+						<ChannelSet index="6" name="6500K" from_dmx="246" to_dmx="250"/>
+						<ChannelSet index="7" name="8000K" from_dmx="251" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="7" attribute="PAN" feature="POSITION" preset="POSITION" coarse="9" fine="10" default="21845">
+					<ChannelFunction index="0" from="-270" to="270" min_dmx_24="0" max_dmx_24="16777215" physfrom="-270" physto="270" subattribute="PAN" attribute="PAN" feature="POSITION" preset="POSITION"/>
+				</ChannelType>
+				<ChannelType index="8" attribute="TILT" feature="POSITION" preset="POSITION" coarse="11" fine="12" default="32767.5">
+					<ChannelFunction index="0" from="-135" to="135" min_dmx_24="0" max_dmx_24="16777215" physfrom="-135" physto="135" subattribute="TILT" attribute="TILT" feature="POSITION" preset="POSITION"/>
+				</ChannelType>
+				<ChannelType index="9" attribute="FUNCTION" feature="CONTROL" preset="CONTROL" coarse="13">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="FUNCTION" attribute="FUNCTION" feature="CONTROL" preset="CONTROL">
+						<ChannelSet index="0" name="NO Function" from_dmx="0" to_dmx="9"/>
+						<ChannelSet index="1" name="ALL Reset" from_dmx="10" to_dmx="14"/>
+						<ChannelSet index="2" name="Open LCD" from_dmx="15" to_dmx="19"/>
+						<ChannelSet index="3" name="Closed LCD" from_dmx="20" to_dmx="24"/>
+						<ChannelSet index="4" name="Open Fast" from_dmx="25" to_dmx="29"/>
+						<ChannelSet index="5" name="Closed Fast" from_dmx="30" to_dmx="34"/>
+						<ChannelSet index="6" name="NO Function" from_dmx="35" to_dmx="128"/>
+						<ChannelSet index="7" name="Simple11CH" from_dmx="129" to_dmx="133"/>
+						<ChannelSet index="8" name="Simple17CH" from_dmx="134" to_dmx="138"/>
+						<ChannelSet index="9" name="Simple21CH" from_dmx="139" to_dmx="143"/>
+						<ChannelSet index="10" name="Simple25CH" from_dmx="144" to_dmx="148"/>
+						<ChannelSet index="11" name="NO Function" from_dmx="149" to_dmx="239"/>
+						<ChannelSet index="12" name="Pan Calibration" from_dmx="240" to_dmx="244"/>
+						<ChannelSet index="13" name="TILT Calibration" from_dmx="245" to_dmx="249"/>
+						<ChannelSet index="14" name="NO Function" from_dmx="250" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="10" attribute="CALIBRATION" feature="CALIBRATION" preset="CONTROL" coarse="14">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="CALIBRATION" attribute="FUNCTION" feature="CONTROL" preset="CONTROL"/>
+				</ChannelType>
+				<ChannelType index="11" attribute="SLAVE" feature="CONTROL" preset="CONTROL" coarse="15">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="SLAVE" attribute="SLAVE" feature="CONTROL" preset="CONTROL"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0" RW="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<Body/>
+		<AutoPresets index="4"/>
+	</FixtureType>
+</MA>

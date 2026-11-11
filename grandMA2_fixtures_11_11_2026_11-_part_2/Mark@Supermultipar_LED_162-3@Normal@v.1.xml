@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.60/MA.xsd" major_vers="3" minor_vers="9" stream_vers="60">
+	<Info datetime="2021-03-19T06:58:46" showfile="rl-canadiens-june18-2021"/>
+	<FixtureType index="8" name="Supermultipar LED 162-3" mode="Normal"><InfoItems><Info type="Revision" date="2021-06-19T21:03:40">v.1, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>SuperParLED162</short_name>
+		<manufacturer>Mark</manufacturer>
+		<short_manufacturer>Mark</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="None" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<ChannelType index="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="1" highlight_value="100" color="ff0000">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" subattribute_user_name="R" attribute="COLORRGB1" attribute_user_name="R" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="2" highlight_value="100" color="00ff00">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" subattribute_user_name="G" attribute="COLORRGB2" attribute_user_name="G" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="2" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="3" highlight_value="100" color="0000ff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" subattribute_user_name="B" attribute="COLORRGB3" attribute_user_name="B" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="3" attribute="STROBE_RATIO" feature="SHUTTER" preset="BEAM" coarse="4" snap="true">
+					<ChannelFunction index="0" from="0" to="11.5" min_dmx_24="0" max_dmx_24="1835007" physfrom="0" physto="1" subattribute="NOFEATURE" subattribute_user_name="No Feature" attribute="DUMMY" attribute_user_name="Dummy" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control"/>
+					<ChannelFunction index="1" from="11.5" to="22.5" min_dmx_24="1835008" max_dmx_24="3670015" physfrom="0" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Single color strobe" from_dmx="28" to_dmx="55"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" from="22.5" to="33.5" min_dmx_24="3670016" max_dmx_24="5505023" physfrom="0" physto="1" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Multicolor strobe" from_dmx="56" to_dmx="83"/>
+					</ChannelFunction>
+					<ChannelFunction index="3" from="33.5" to="100" min_dmx_24="5505024" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLOR1" subattribute_user_name="Select" attribute="COLOR1" attribute_user_name="C1" feature="COLOR1" feature_user_name="Color1" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="Choose color" from_dmx="84" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="DIMMERCURVE" feature="DIMMER" preset="DIMMER" coarse="5" snap="true">
+					<ChannelFunction index="0" name="Single color dimmer" from="0" to="35" min_dmx_24="0" max_dmx_24="5963775" subattribute="DIMMERCURVE" subattribute_user_name="Curve" attribute="DIMMERCURVE" attribute_user_name="Curve" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+					<ChannelFunction index="1" name="Auto dimmer" from="35" to="81" min_dmx_24="5963776" max_dmx_24="13631487" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="auto dimmer 1" from_dmx="91" to_dmx="103"/>
+						<ChannelSet index="1" name="auto dimmer 2" from_dmx="104" to_dmx="116"/>
+						<ChannelSet index="2" name="auto dimmer 3" from_dmx="117" to_dmx="129"/>
+						<ChannelSet index="3" name="auto dimmer 4" from_dmx="130" to_dmx="142"/>
+						<ChannelSet index="4" name="color change 1" from_dmx="143" to_dmx="155"/>
+						<ChannelSet index="5" name="color change 2" from_dmx="156" to_dmx="168"/>
+						<ChannelSet index="6" name="multi color auto 1" from_dmx="169" to_dmx="181"/>
+						<ChannelSet index="7" name="multi color auto 2" from_dmx="182" to_dmx="194"/>
+						<ChannelSet index="8" name="multi color auto 3" from_dmx="195" to_dmx="207"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" name="Sound" from="81" to="100" min_dmx_24="13631488" max_dmx_24="16777215" subattribute="EFFECTTRIGGER" subattribute_user_name="Trigger" attribute="EFFECTTRIGGER" attribute_user_name="Trigger" feature="EFFECT" feature_user_name="Effect" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="sound 1" from_dmx="208" to_dmx="220"/>
+						<ChannelSet index="1" name="sound 2" from_dmx="221" to_dmx="233"/>
+						<ChannelSet index="2" name="sound 3" from_dmx="234" to_dmx="246"/>
+						<ChannelSet index="3" name="sound 4" from_dmx="247" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="COLORMIXMSPEED" feature="MSPEED" preset="CONTROL" coarse="6" snap="true">
+					<ChannelFunction index="0" name="Speed" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="COLORMIXMSPEEDTIME" subattribute_user_name="Time" attribute="COLORMIXMSPEED" attribute_user_name="ColorMix" feature="MSPEED" feature_user_name="Mspeed" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="speed" from_dmx="0" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="6" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

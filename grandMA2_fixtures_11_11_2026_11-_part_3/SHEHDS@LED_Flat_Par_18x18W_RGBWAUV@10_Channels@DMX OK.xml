@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="LED Flat Par 18x18W RGBWAUV" mode="10 Channels">
+        <InfoItems>
+            <Info type="Revision" date="2026-04-28T17:16:21">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2025-04-28T16:27:49">DMX OK</Info>
+            <Info type="Revision" date="2025-07-29T14:49:53">par led </Info>
+            <Info type="Revision" date="2026-04-28T17:16:30.903">DMX%20OK, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>LED Flat Par 18x18W RGBWAUV</short_name>
+        <manufacturer>SHEHDS</manufacturer>
+        <short_manufacturer>SHEHDS</short_manufacturer>
+        <Modules>
+            <Module name="LED" class="None" beamtype="None" beam_intensity="" index="6" beam_angle="">
+                <Model/>
+                <ChannelType coarse="1" default="0" react_to_master="2" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="2" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="3" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="4" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="5" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="6" default="0" attribute="COLORRGB4" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB4" attribute="COLORRGB4" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="7" default="0" attribute="COLORRGB15" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB15" attribute="COLORRGB15" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="8" default="0" attribute="StrobeModeStrobe" feature="Beam" preset="Beam">
+                    <ChannelFunction subattribute="StrobeModeStrobe" attribute="StrobeModeStrobe" feature="Beam" preset="Beam" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="9" default="0" attribute="EFFECT" feature="EFFECT" preset="BEAM">
+                    <ChannelFunction subattribute="EFFECTSELECT" attribute="EFFECT" feature="EFFECT" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Macro Mode" from_dmx="0" to_dmx="250"/>
+                        <ChannelSet name="Sound control mode" from_dmx="251" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="10" default="0" attribute="ColorMixMSpeed" feature="Control" preset="Control">
+                    <ChannelFunction subattribute="ColorMixMSpeed" attribute="ColorMixMSpeed" feature="Control" preset="Control" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+        </Instances>
+        <Wheels/>
+    </FixtureType>
+</MA>

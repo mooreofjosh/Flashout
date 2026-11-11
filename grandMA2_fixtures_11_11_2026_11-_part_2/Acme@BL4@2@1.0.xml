@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2021-06-03T10:41:18" showfile="newshow"/>
+	<FixtureType index="5" name="BL4" mode="2"><InfoItems><Info type="Revision" date="2021-06-03T15:48:04">1.0, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>BL4</short_name>
+		<manufacturer>Acme</manufacturer>
+		<short_manufacturer>Acme</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="BL4A Main" class="None" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="2" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Open" from_dmx="250" to_dmx="255"/>
+						<ChannelSet index="1" name="Random Strobe 2" from_dmx="191" to_dmx="249"/>
+						<ChannelSet index="2" name="Open" from_dmx="186" to_dmx="190"/>
+						<ChannelSet index="3" name="Random Strobe" from_dmx="128" to_dmx="185"/>
+						<ChannelSet index="4" name="Open" from_dmx="124" to_dmx="127"/>
+						<ChannelSet index="5" name="Strobe slow to fast" from_dmx="6" to_dmx="123"/>
+						<ChannelSet index="6" name="Open" from_dmx="0" to_dmx="5"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+			<Module index="1" name="BL4A 4 Cluster 1-4" class="None" beamtype="Wash" beam_angle="35" beam_intensity="10000"/>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+			<Instance index="1" module_index="1"/>
+			<Instance index="2" module_index="1"/>
+			<Instance index="3" module_index="1"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

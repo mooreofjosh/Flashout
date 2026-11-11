@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.60/MA.xsd" major_vers="3" minor_vers="9" stream_vers="60">
+	<Info datetime="2023-07-14T21:21:59" showfile="lsm-cscience-14juillet"/>
+	<FixtureType index="18" name="SPARKONE" mode="2CH">
+		<InfoItems>
+			<Info>Created using MA FixtureBuilder version v1.9.0</Info>
+			<Info date="2023-07-14T20:37:19">cREATED BY STEPH DEEPHAZED DI FAZIO</Info>
+			<Info date="2023-07-14T20:37:42">JULY 14 2023</Info>
+			<Info date="2023-07-14T20:37:59">514-926-8519</Info>
+		<Info type="Revision" date="2023-07-15T03:34:40">Created by DeePhazed, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>SPARKONE</short_name>
+		<manufacturer>SPARKTACULAR</manufacturer>
+		<short_manufacturer>SPARKTAC</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Module" class="Headmover" beamtype="Spot" beam_angle="19" beam_intensity="10000">
+				<Body>
+					<Size x="0.5" y="0.5" z="0.5"/>
+				</Body>
+				<ChannelType index="0" attribute="SPARK" feature="SPECIALFX" preset="CONTROL" coarse="1" highlight_value="0">
+					<ChannelFunction index="0" name="Height" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="SPARK" subattribute_user_name="Hight" attribute="SPARK" attribute_user_name="Spark" feature="SPECIALFX" feature_user_name="SpecialFX" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="STOP" from_dmx="0" to_dmx="39"/>
+						<ChannelSet index="1" name="BABY SIZED" from_dmx="40" to_dmx="90"/>
+						<ChannelSet index="2" name="LOW MEDIUM" from_dmx="91" to_dmx="140"/>
+						<ChannelSet index="3" name="MEDIUM HIGH" from_dmx="141" to_dmx="190"/>
+						<ChannelSet index="4" name="TO THE ROOF" from_dmx="191" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="PREHEAT" feature="CONTROL" preset="CONTROL" coarse="2">
+					<ChannelFunction index="0" from="0" to="10" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="PREHEAT" subattribute_user_name="Preheat" attribute="PREHEAT" attribute_user_name="Preheat" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="OFF" from_dmx="0" to_dmx="10"/>
+						<ChannelSet index="1" name="E-STOP" from_dmx="20" to_dmx="40"/>
+						<ChannelSet index="2" name="CLEAN" from_dmx="60" to_dmx="200"/>
+						<ChannelSet index="3" name="HEATON" from_dmx="240" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

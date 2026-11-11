@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2017-03-07T11:29:02" showfile="new show 2017-03-07"/>
+	<FixtureType index="1" name="P1 Retro Lamp" mode="7 channel">
+		<InfoItems>
+			<Info date="2017-03-07T11:28:43">Version 1.0 Created by Lukasz Sztejna</Info>
+		<Info type="Revision" date="2017-05-10T05:05:18">V1.0, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>P1</short_name>
+		<manufacturer>Portman Custom Lights</manufacturer>
+		<short_manufacturer>Portman</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Intensity" class="Conventional" beamtype="Wash" beam_angle="114" beam_intensity="10000">
+				<Body>
+					<Size x="0.18" y="0.2" z="0.06"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0" Y="-0.24"/>
+			<Instance index="1" module_index="0" patch="2" X="0.205" Y="-0.12"/>
+			<Instance index="2" module_index="0" patch="3" X="0.205" Y="0.12"/>
+			<Instance index="3" module_index="0" patch="4" Y="0.24"/>
+			<Instance index="4" module_index="0" patch="5" X="-0.205" Y="0.12"/>
+			<Instance index="5" module_index="0" patch="6" X="-0.2" Y="-0.12"/>
+			<Instance index="6" module_index="0" patch="7"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2016-12-16T12:39:00" showfile="lib wyg camera path"/>
+	<FixtureType index="2" name="Camera Path Wysiwyg" mode="Unknown mode"><InfoItems><Info type="Revision" date="2017-05-13T06:05:46">v1, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>Cam Path</short_name>
+		<manufacturer>Jul</manufacturer>
+		<short_manufacturer>Jul</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="None" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<ChannelType index="0" attribute="PLAYBACK" feature="CAMERAPATH" preset="CAMERA" coarse="1">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="PLAYBACK" subattribute_user_name="PLAYBACK" attribute="PLAYBACK" attribute_user_name="PLAYBACK" feature="CAMERAPATH" feature_user_name="CAMERAPATH" preset="CAMERA" preset_user_name="CAMERA"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="LOOP" feature="CAMERAPATH" preset="CAMERA" coarse="2">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="LOOP" subattribute_user_name="LOOP" attribute="LOOP" attribute_user_name="LOOP" feature="CAMERAPATH" feature_user_name="CAMERAPATH" preset="CAMERA" preset_user_name="CAMERA"/>
+				</ChannelType>
+				<ChannelType index="2" attribute="DIRECTION" feature="CAMERAPATH" preset="CAMERA" coarse="3">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="DIRECTION" subattribute_user_name="DIRECTION" attribute="DIRECTION" attribute_user_name="DIRECTION" feature="CAMERAPATH" feature_user_name="CAMERAPATH" preset="CAMERA" preset_user_name="CAMERA"/>
+				</ChannelType>
+				<ChannelType index="3" attribute="SPEED" feature="CAMERAPATH" preset="CAMERA" coarse="4">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="SPEED" subattribute_user_name="SPEED" attribute="SPEED" attribute_user_name="SPEED" feature="CAMERAPATH" feature_user_name="CAMERAPATH" preset="CAMERA" preset_user_name="CAMERA"/>
+				</ChannelType>
+				<ChannelType index="4" attribute="POSITION" feature="CAMERAPATH" preset="CAMERA" coarse="5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="POSITION" subattribute_user_name="POSITION" attribute="POSITION" attribute_user_name="POSITION" feature="CAMERAPATH" feature_user_name="CAMERAPATH" preset="CAMERA" preset_user_name="CAMERA"/>
+				</ChannelType>
+				<ChannelType index="5" attribute="DUMMY1" feature="CAMERAPATH" preset="CAMERA" coarse="6">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="DUMMY1" subattribute_user_name="Dummy 1" attribute="DUMMY1" attribute_user_name="Dummy 1" feature="CAMERAPATH" feature_user_name="CAMERAPATH" preset="CAMERA" preset_user_name="CAMERA"/>
+				</ChannelType>
+				<ChannelType index="6" attribute="DUMMY2" feature="CAMERAPATH" preset="CAMERA" coarse="7">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="DUMMY2" subattribute_user_name="Dummy 2" attribute="DUMMY2" attribute_user_name="Dummy 2" feature="CAMERAPATH" feature_user_name="CAMERAPATH" preset="CAMERA" preset_user_name="CAMERA"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4">
+			<AutoPreset index="0" name="STOP" preset_type_name="CAMERA">
+				<AutoPresetValues>
+					<AutoPresetValue channel_type_index="0"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="1" name="PAUSE" preset_type_name="CAMERA">
+				<AutoPresetValues>
+					<AutoPresetValue Value="40" channel_type_index="0"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="2" name="PLAY" preset_type_name="CAMERA">
+				<AutoPresetValues>
+					<AutoPresetValue Value="100" channel_type_index="0"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="3" name="LOOP ON" preset_type_name="CAMERA">
+				<AutoPresetValues>
+					<AutoPresetValue channel_type_index="1"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="4" name="LOOP OFF" preset_type_name="CAMERA">
+				<AutoPresetValues>
+					<AutoPresetValue Value="100" channel_type_index="1"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="5" name="Direction Forward" preset_type_name="CAMERA">
+				<AutoPresetValues>
+					<AutoPresetValue channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="6" name="Direction Reverse" preset_type_name="CAMERA">
+				<AutoPresetValues>
+					<AutoPresetValue Value="100" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="7" name="Speed x1" preset_type_name="CAMERA">
+				<AutoPresetValues>
+					<AutoPresetValue channel_type_index="3"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="8" name="Speed x0.25" preset_type_name="CAMERA">
+				<AutoPresetValues>
+					<AutoPresetValue Value="55" channel_type_index="3"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="9" name="Speed x0.5" preset_type_name="CAMERA">
+				<AutoPresetValues>
+					<AutoPresetValue Value="69" channel_type_index="3"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="10" name="Speed x2" preset_type_name="CAMERA">
+				<AutoPresetValues>
+					<AutoPresetValue Value="78" channel_type_index="3"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="11" name="Speed x4" preset_type_name="CAMERA">
+				<AutoPresetValues>
+					<AutoPresetValue Value="100" channel_type_index="3"/>
+				</AutoPresetValues>
+			</AutoPreset>
+		</AutoPresets>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

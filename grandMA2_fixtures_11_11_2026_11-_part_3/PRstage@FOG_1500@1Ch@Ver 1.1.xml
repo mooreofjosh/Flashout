@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="FOG 1500" mode="1Ch">
+        <InfoItems>
+            <Info type="Revision" date="2025-10-28T09:27:44">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2025-10-28T09:10:44">New fixture type based on FOG1500 from PRstage</Info>
+            <Info type="Revision" date="2025-10-28T09:21:07">Ver 1.0</Info>
+            <Info type="Revision" date="2025-10-28T09:26:13">Ver_1_1</Info>
+            <Info>Professional 1500W fogger with LED RGB color</Info>
+            <Info type="Revision" date="2025-10-28T09:27:47.083">Ver%201.1, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>FOG 1500</short_name>
+        <manufacturer>PRstage</manufacturer>
+        <short_manufacturer>PRstage</short_manufacturer>
+        <Modules>
+            <Module name="Fogger" class="None" beamtype="None" beam_intensity="" index="0" beam_angle="">
+                <Model name="Fogger" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Vertices>GAAAABSuh76uRyG+FK4Hvquqqr6rqiq/q6pKwgAAAAAAAAAAFK6Hvq5HIT4Urge+7AVRv+wF0T4MoknCAAAAAAAAAAAUroc+rkchPhSuB76rqqo+q6oqP6uqSsIAAAAAAAAAABSuhz6uRyG+FK4HvuwFUT/sBdG+DKJJwgAAAAAAAAAAFK6Hvq5HIb4Urgc+q6oqv6uqqr5VVUXCAAAAAAAAAAAUroc+rkchvhSuBz7sBdE+7AVRv/RdRsIAAAAAAAAAABSuhz6uRyE+FK4HPquqKj+rqqo+VVVFwgAAAAAAAAAAFK6Hvq5HIT4Urgc+7AXRvuwFUT/0XUbCAAAAAAAAAAAUroe+rkchvhSuB76rqqq+q6oqv6uqSsIAAAAAAAAAABSuhz6uRyG+FK4HvuwFUT/sBdG+DKJJwgAAAAAAAAAAFK6HPq5HIb4Urgc+7AXRPuwFUb/0XUbCAAAAAAAAAAAUroe+rkchvhSuBz6rqiq/q6qqvlVVRcIAAAAAAAAAABSuhz6uRyG+FK4HvuwFUT/sBdG+DKJJwgAAAAAAAAAAFK6HPq5HIT4Urge+q6qqPquqKj+rqkrCAAAAAAAAAAAUroc+rkchPhSuBz6rqio/q6qqPlVVRcIAAAAAAAAAABSuhz6uRyG+FK4HPuwF0T7sBVG/9F1GwgAAAAAAAAAAFK6HPq5HIT4Urge+q6qqPquqKj+rqkrCAAAAAAAAAAAUroe+rkchPhSuB77sBVG/7AXRPgyiScIAAAAAAAAAABSuh76uRyE+FK4HPuwF0b7sBVE/9F1GwgAAAAAAAAAAFK6HPq5HIT4Urgc+q6oqP6uqqj5VVUXCAAAAAAAAAAAUroe+rkchPhSuB77sBVG/7AXRPgyiScIAAAAAAAAAABSuh76uRyG+FK4Hvquqqr6rqiq/q6pKwgAAAAAAAAAAFK6Hvq5HIb4Urgc+q6oqv6uqqr5VVUXCAAAAAAAAAAAUroe+rkchPhSuBz7sBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                    <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                    <SubSets>
+                        <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                    </SubSets>
+                    <Materials>
+                        <Material3d name="black" specularPower="0.1">
+                            <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                            <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                            <EmissiveColor r="0" g="0" b="0" a="1"/>
+                            <DiffuseInking x="0" y="0" z="0"/>
+                            <EmissiveInking x="0" y="0" z="0"/>
+                            <SurfaceTexture/>
+                            <AlphaTexture/>
+                        </Material3d>
+                    </Materials>
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <ChannelType coarse="1" default="0" attribute="FOG" feature="SPECIALFX" preset="CONTROL">
+                    <ChannelFunction subattribute="FOG" attribute="FOG" feature="SPECIALFX" preset="CONTROL" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="No fog" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+        </Instances>
+        <Wheels/>
+        <RDMKey ESTAId="1452" DeviceModelId="0"/>
+    </FixtureType>
+</MA>

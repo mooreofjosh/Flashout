@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.3.4/MA.xsd" major_vers="3" minor_vers="3" stream_vers="4">
+	<Info datetime="2018-04-25T10:23:23" showfile="abigag18"/>
+	<FixtureType index="9" name="LED Gun I Pro" mode="4ch"><InfoItems><Info type="Revision" date="2018-04-25T10:04:12">Initial, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>LgmxxLedGun</short_name>
+		<manufacturer>Lightmaxx</manufacturer>
+		<short_manufacturer>Ltmxx</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="None" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<ChannelType index="0" attribute="DUMMY" feature="CONTROL" preset="CONTROL" coarse="1">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="9" subattribute="COLORMIXNORMAL" subattribute_user_name="Normal" attribute="COLORMIXER" attribute_user_name="ColorMix" feature="COLORMIX" feature_user_name="ColorMix" preset="COLOR" preset_user_name="Color"/>
+					<ChannelFunction index="1" name="SoundToLight" from="0" to="100" min_dmx_24="10" max_dmx_24="255" subattribute="COLORMIXAUDIO" subattribute_user_name="Audio" attribute="COLORMIXER" attribute_user_name="ColorMix" feature="COLORMIX" feature_user_name="ColorMix" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="EFFECTWHEEL" feature="EFFECT" preset="BEAM" coarse="2">
+					<ChannelFunction index="0" name="Prog" from="0" to="100" min_dmx_24="0" max_dmx_24="15" wheel="1" subattribute="EFFECTWHEELSELECT" subattribute_user_name="Select" attribute="EFFECTWHEEL" attribute_user_name="E" feature="EFFECT" feature_user_name="Effect" preset="BEAM" preset_user_name="Beam"/>
+					<ChannelFunction index="1" name="Single FX" from="0" to="100" min_dmx_24="16" max_dmx_24="255" subattribute="COLORMIXMACROSELECT" subattribute_user_name="Macro Select" attribute="COLORMIXER" attribute_user_name="ColorMix" feature="COLORMIX" feature_user_name="ColorMix" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="2" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="3">
+					<ChannelFunction index="0" name="Strobe" from="0" to="100" min_dmx_24="0" max_dmx_24="255" physfrom="0" physto="1" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam"/>
+				</ChannelType>
+				<ChannelType index="3" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="4">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2">
+			<Wheel index="0" subattribute="EFFECTWHEELSELECT" attribute="EFFECTWHEEL" feature="EFFECT" preset="BEAM">
+				<Slot index="0" media_name="P1" media_filename="question.bmp"/>
+				<Slot index="1" media_name="P2" media_filename="question.bmp"/>
+				<Slot index="2" media_name="P3" media_filename="question.bmp"/>
+				<Slot index="3" media_name="P4" media_filename="question.bmp"/>
+				<Slot index="4" media_name="P5" media_filename="question.bmp"/>
+				<Slot index="5" media_name="P6" media_filename="question.bmp"/>
+				<Slot index="6" media_name="P7" media_filename="question.bmp"/>
+				<Slot index="7" media_name="P8" media_filename="question.bmp"/>
+				<Slot index="8" media_name="P9" media_filename="question.bmp"/>
+				<Slot index="9" media_name="P10" media_filename="question.bmp"/>
+				<Slot index="10" media_name="P11" media_filename="question.bmp"/>
+				<Slot index="11" media_name="P12" media_filename="question.bmp"/>
+				<Slot index="12" media_name="P13" media_filename="question.bmp"/>
+				<Slot index="13" media_name="P14" media_filename="question.bmp"/>
+				<Slot index="14" media_name="P15" media_filename="question.bmp"/>
+			</Wheel>
+		</Wheels>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

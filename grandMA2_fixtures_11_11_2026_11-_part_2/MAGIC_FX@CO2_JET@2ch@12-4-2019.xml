@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.5.0/MA.xsd" major_vers="3" minor_vers="5" stream_vers="0">
+	<Info datetime="2019-04-12T12:05:07" showfile="fixture test"/>
+	<FixtureType index="1" name="CO2 JET" mode="2ch">
+		<InfoItems>
+			<Info date="2019-04-12T10:19:05">----- READ BEFORE USE -----&#xA;FIXTURE IS CREATED FOR USE IN COMBINATION WITH A MAGIC FX SWITCHPACK!&#xA;Focus         -&gt; Safety&#xA;Dimmer        -&gt; Effect trigger&#xA;---------------------------------------------------------------------&#xA;Fixture created by Niels Op ten Berg MAGICFX</Info>
+		<Info type="Revision" date="2019-04-12T01:25:36">12-4-2019, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>CO2</short_name>
+		<manufacturer>MAGIC FX</manufacturer>
+		<short_manufacturer>MFX</short_manufacturer>
+		<Profiles>
+			<DMX_Profile index="2" name="MFX SWITCH" display_spec_index="0">
+				<DMX_Profile_Point index="0" mode="linear"/>
+				<DMX_Profile_Point index="1" x="1" y="1" mode="linear"/>
+				<DMX_Profile_Point index="2" x="0.4964478" mode="linear"/>
+				<DMX_Profile_Point index="3" x="0.50059146" y="1" mode="linear"/>
+			</DMX_Profile>
+		</Profiles>
+		<Modules index="0">
+			<Module index="0" name="Module" class="Conventional" beamtype="Wash" beam_angle="10" beam_intensity="10000">
+				<Body>
+					<Size x="0.023" y="0.02" z="0.013"/>
+				</Body>
+				<ChannelType index="0" attribute="FOCUS" feature="FOCUS" preset="FOCUS" coarse="1">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="FOCUS" subattribute_user_name="Focus" attribute="FOCUS" attribute_user_name="Focus" feature="FOCUS" feature_user_name="Focus" preset="FOCUS" preset_user_name="Focus">
+						<ChannelSet index="0" name="Safety Off" from_dmx="0" to_dmx="99"/>
+						<ChannelSet index="1" name="Safety On" from_dmx="100" to_dmx="154"/>
+						<ChannelSet index="2" name="Safety Off1" from_dmx="155" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="DIM" feature="DIMMER" preset="DIMMER" part="2" coarse="1" fade_path="2">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="Off" from_dmx="0" to_dmx="127"/>
+						<ChannelSet index="1" name="On" from_dmx="128" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="Fractal Bar Led 24x3 W" mode="8CH Mode">
+        <InfoItems>
+            <Info type="Revision" date="2026-06-19T02:17:52">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2023-07-10T18:21:01">New fixture type based on Light4me PixelBar 24x3 from OGSON fixtures</Info>
+            <Info type="Revision" date="2023-07-10T18:40:55">ogi_v1</Info>
+            <Info type="Revision" date="2023-07-17T18:30:04">ogi_v2</Info>
+            <Info type="Revision" date="2023-07-17T18:31:31">ogi_v3</Info>
+            <Info type="Revision" date="2026-06-19T02:18:00.122">Fonestar%20Bar%2072%20L, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>Light4me PixelBar 24x3</short_name>
+        <manufacturer>OGSON fixtures</manufacturer>
+        <short_manufacturer>OGSON fixtures</short_manufacturer>
+        <Modules>
+            <Module name="Base_1px" class="None" beamtype="None" beam_intensity="" index="0" beam_angle="">
+                <Model name="Base_1px" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Vertices>GAAAAAAAAL8N4iO9zcxMvauqqr6rqiq/q6pKwgAAAAAAAAAAAAAAvw3iIz3NzEy97AVRv+wF0T4MoknCAAAAAAAAAAAAAAA/DeIjPc3MTL2rqqo+q6oqP6uqSsIAAAAAAAAAAAAAAD8N4iO9zcxMvewFUT/sBdG+DKJJwgAAAAAAAAAAAAAAvw3iI73NzEw9q6oqv6uqqr5VVUXCAAAAAAAAAAAAAAA/DeIjvc3MTD3sBdE+7AVRv/RdRsIAAAAAAAAAAAAAAD8N4iM9zcxMPauqKj+rqqo+VVVFwgAAAAAAAAAAAAAAvw3iIz3NzEw97AXRvuwFUT/0XUbCAAAAAAAAAAAAAAC/DeIjvc3MTL2rqqq+q6oqv6uqSsIAAAAAAAAAAAAAAD8N4iO9zcxMvewFUT/sBdG+DKJJwgAAAAAAAAAAAAAAPw3iI73NzEw97AXRPuwFUb/0XUbCAAAAAAAAAAAAAAC/DeIjvc3MTD2rqiq/q6qqvlVVRcIAAAAAAAAAAAAAAD8N4iO9zcxMvewFUT/sBdG+DKJJwgAAAAAAAAAAAAAAPw3iIz3NzEy9q6qqPquqKj+rqkrCAAAAAAAAAAAAAAA/DeIjPc3MTD2rqio/q6qqPlVVRcIAAAAAAAAAAAAAAD8N4iO9zcxMPewF0T7sBVG/9F1GwgAAAAAAAAAAAAAAPw3iIz3NzEy9q6qqPquqKj+rqkrCAAAAAAAAAAAAAAC/DeIjPc3MTL3sBVG/7AXRPgyiScIAAAAAAAAAAAAAAL8N4iM9zcxMPewF0b7sBVE/9F1GwgAAAAAAAAAAAAAAPw3iIz3NzEw9q6oqP6uqqj5VVUXCAAAAAAAAAAAAAAC/DeIjPc3MTL3sBVG/7AXRPgyiScIAAAAAAAAAAAAAAL8N4iO9zcxMvauqqr6rqiq/q6pKwgAAAAAAAAAAAAAAvw3iI73NzEw9q6oqv6uqqr5VVUXCAAAAAAAAAAAAAAC/DeIjPc3MTD3sBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                    <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                    <SubSets>
+                        <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                    </SubSets>
+                    <Materials>
+                        <Material3d name="black" specularPower="0.1">
+                            <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                            <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                            <EmissiveColor r="0" g="0" b="0" a="1"/>
+                            <DiffuseInking x="0" y="0" z="0"/>
+                            <EmissiveInking x="0" y="0" z="0"/>
+                            <SurfaceTexture/>
+                            <AlphaTexture/>
+                        </Material3d>
+                    </Materials>
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <ChannelType coarse="1" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Closed" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Open" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="2" default="0" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" highlight_value="0">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="3.92" physfrom="1" physto="1" min_dmx_24="0" max_dmx_24="657930">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="10"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="3.92" to="100" physfrom="1" physto="20" min_dmx_24="723723" max_dmx_24="16777215">
+                        <ChannelSet name="Min strobe" from_dmx="11" to_dmx="11"/>
+                        <ChannelSet name="Max strobe" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="3" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="4" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="5" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="6" default="0" attribute="COLOR1" feature="COLOR1" preset="COLOR" highlight_value="0">
+                    <ChannelFunction subattribute="COLOR1" attribute="COLOR1" feature="COLOR1" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" wheel="1"/>
+                </ChannelType>
+                <ChannelType coarse="7" default="0" attribute="COLORMACROS" feature="Color" preset="Color" highlight_value="0">
+                    <ChannelFunction subattribute="COLORMACROS" attribute="COLORMACROS" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="8" default="0" attribute="ColorMacro1Rate" feature="Color" preset="Color">
+                    <ChannelFunction subattribute="ColorMacro1Rate" attribute="ColorMacro1Rate" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+        </Instances>
+        <Wheels>
+            <Wheel index="0" preset="COLOR" feature="COLOR1" attribute="COLOR1" subattribute="COLOR1">
+                <Slot index="0" media_name="Open" r="254" g="255" b="255"/>
+                <Slot index="1" media_name="Red" r="254" g="0" b="0"/>
+                <Slot index="2" media_name="Green" r="0" g="255" b="0"/>
+                <Slot index="3" media_name="Blue" r="0" g="0" b="255"/>
+                <Slot index="4" media_name="Cyan" r="1" g="254" b="255"/>
+                <Slot index="5" media_name="Magenta" r="254" g="0" b="254"/>
+                <Slot index="6" media_name="Yellow" r="254" g="255" b="0"/>
+                <Slot index="7" media_name="Light red" r="255" g="127" b="127"/>
+                <Slot index="8" media_name="Light green" r="127" g="255" b="127"/>
+                <Slot index="9" media_name="Light blue" r="127" g="127" b="255"/>
+                <Slot index="10" media_name="Orange" r="254" g="127" b="0"/>
+                <Slot index="11" media_name="Mint" r="127" g="255" b="127"/>
+                <Slot index="12" media_name="Sky blue" r="67" g="212" b="255"/>
+                <Slot index="13" media_name="Light cyan" r="127" g="254" b="255"/>
+                <Slot index="14" media_name="Light magenta" r="254" g="127" b="254"/>
+                <Slot index="15" media_name="Light yellow" r="255" g="255" b="127"/>
+                <Slot index="16" media_name="White" r="254" g="255" b="255"/>
+                <Slot index="17" media_name="9000K" r="209" g="221" b="254"/>
+                <Slot index="18" media_name="6500K" r="255" g="254" b="249"/>
+                <Slot index="19" media_name="5600K" r="255" g="239" b="224"/>
+                <Slot index="20" media_name="5000K" r="254" g="226" b="206"/>
+                <Slot index="21" media_name="4500K" r="254" g="216" b="186"/>
+                <Slot index="22" media_name="3200K" r="254" g="183" b="122"/>
+                <Slot index="23" media_name="2500K" r="255" g="158" b="68"/>
+                <Slot index="24" media_name="2200K" r="254" g="145" b="30"/>
+            </Wheel>
+        </Wheels>
+    </FixtureType>
+</MA>

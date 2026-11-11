@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.1.2/MA.xsd" major_vers="3" minor_vers="1" stream_vers="2">
+	<Info datetime="2024-05-09T15:08:37" showfile="dlb_lib_240506"/>
+	<FixtureType index="21" name="Bar 54 Pixels" mode="168ch_54 Pixels_RGB">
+		<InfoItems>
+			<Info date="2023-12-12T12:31:21">Kinetic Bar 54 Pixels (120CM)</Info>
+			<Info date="2023-12-12T12:53:01">Channel mode :168ch</Info>
+			<Info date="2023-12-12T12:53:26">16bit Movement;Movement Speed;Reset;Dimmer;Shutter;54 group RGB</Info>
+			<Info type="Revision" date="2023-12-12T12:32:11">Created By FYL LIGHTING CO.,LTD</Info>
+			<Info type="Revision" date="2023-12-12T12:32:26">Jimmy@2023-12-12</Info>
+		<Info type="Revision" date="2024-05-09T09:15:34">Created By FYL LIGHTING CO.LTD, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>Bar 54 Pixels</short_name>
+		<manufacturer>DLB</manufacturer>
+		<short_manufacturer>DLB</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="Headmover" beamtype="Wash" beam_angle="2" beam_intensity="0">
+				<Body>
+					<Size x="0.5" y="0.42" z="0.66"/>
+				</Body>
+				<ChannelType index="0" attribute="MP_TR_Z" feature="MP_TR" preset="POSITION" coarse="1" fine="2">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="9" subattribute="MP_TR_Z" subattribute_user_name="Z" attribute="MP_TR_Z" attribute_user_name="Z" feature="MP_TR" feature_user_name="MP Trans" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="SPEED" feature="CONTROL" preset="CONTROL" coarse="3">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="SPEED" subattribute_user_name="SPEED" attribute="SPEED" attribute_user_name="SPEED" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control"/>
+				</ChannelType>
+				<ChannelType index="2" attribute="RESET" feature="CONTROL" preset="CONTROL" coarse="4">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="RESET" subattribute_user_name="Reset" attribute="RESET" attribute_user_name="Reset" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Reset" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="5" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="MIN" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="HALF" from_dmx="128" to_dmx="128"/>
+						<ChannelSet index="2" name="MAX" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="6">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="255" physfrom="0" physto="15" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam"/>
+				</ChannelType>
+			</Module>
+			<Module index="1" name="RGB" class="LED" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<Body>
+					<Size x="0.15" y="0.15" z="0.05"/>
+				</Body>
+				<ChannelType index="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="1" default="254.999" highlight_value="100" color="ff0000">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" subattribute_user_name="R" attribute="COLORRGB1" attribute_user_name="R" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="2" highlight_value="100" color="00ff00">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" subattribute_user_name="G" attribute="COLORRGB2" attribute_user_name="G" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="2" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="3" highlight_value="100" color="0000ff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" subattribute_user_name="B" attribute="COLORRGB3" attribute_user_name="B" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="3" attribute="DIM" feature="DIMMER" preset="DIMMER" default="16777215" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0" X="-0.2"/>
+			<Instance index="1" module_index="1" patch="7"/>
+			<Instance index="2" module_index="1" patch="10" X="0.059"/>
+			<Instance index="3" module_index="1" patch="13" X="0.118"/>
+			<Instance index="4" module_index="1" patch="16" X="0.176"/>
+			<Instance index="5" module_index="1" patch="19" X="0.235"/>
+			<Instance index="6" module_index="1" patch="22" X="0.294"/>
+			<Instance index="7" module_index="1" patch="25" X="0.353"/>
+			<Instance index="8" module_index="1" patch="28" X="0.412"/>
+			<Instance index="9" module_index="1" patch="31" X="0.471"/>
+			<Instance index="10" module_index="1" patch="34" X="0.529"/>
+			<Instance index="11" module_index="1" patch="37" X="0.588"/>
+			<Instance index="12" module_index="1" patch="40" X="0.647"/>
+			<Instance index="13" module_index="1" patch="43" X="0.706"/>
+			<Instance index="14" module_index="1" patch="46" X="0.765"/>
+			<Instance index="15" module_index="1" patch="49" X="0.824"/>
+			<Instance index="16" module_index="1" patch="52" X="0.882"/>
+			<Instance index="17" module_index="1" patch="55" X="0.941"/>
+			<Instance index="18" module_index="1" patch="58" X="1"/>
+			<Instance index="19" module_index="1" patch="61"/>
+			<Instance index="20" module_index="1" patch="64"/>
+			<Instance index="21" module_index="1" patch="67"/>
+			<Instance index="22" module_index="1" patch="70"/>
+			<Instance index="23" module_index="1" patch="73"/>
+			<Instance index="24" module_index="1" patch="76"/>
+			<Instance index="25" module_index="1" patch="79"/>
+			<Instance index="26" module_index="1" patch="82"/>
+			<Instance index="27" module_index="1" patch="85"/>
+			<Instance index="28" module_index="1" patch="88"/>
+			<Instance index="29" module_index="1" patch="91"/>
+			<Instance index="30" module_index="1" patch="94"/>
+			<Instance index="31" module_index="1" patch="97"/>
+			<Instance index="32" module_index="1" patch="100"/>
+			<Instance index="33" module_index="1" patch="103"/>
+			<Instance index="34" module_index="1" patch="106"/>
+			<Instance index="35" module_index="1" patch="109"/>
+			<Instance index="36" module_index="1" patch="112"/>
+			<Instance index="37" module_index="1" patch="115"/>
+			<Instance index="38" module_index="1" patch="118"/>
+			<Instance index="39" module_index="1" patch="121"/>
+			<Instance index="40" module_index="1" patch="124"/>
+			<Instance index="41" module_index="1" patch="127"/>
+			<Instance index="42" module_index="1" patch="130"/>
+			<Instance index="43" module_index="1" patch="133"/>
+			<Instance index="44" module_index="1" patch="136"/>
+			<Instance index="45" module_index="1" patch="139"/>
+			<Instance index="46" module_index="1" patch="142"/>
+			<Instance index="47" module_index="1" patch="145"/>
+			<Instance index="48" module_index="1" patch="148"/>
+			<Instance index="49" module_index="1" patch="151"/>
+			<Instance index="50" module_index="1" patch="154"/>
+			<Instance index="51" module_index="1" patch="157"/>
+			<Instance index="52" module_index="1" patch="160"/>
+			<Instance index="53" module_index="1" patch="163"/>
+			<Instance index="54" module_index="1" patch="166"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5">
+			<FixtureMacro index="0">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="RESET"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="255" attribute="RESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="RESET" instance_index="0"/>
+			</FixtureMacro>
+		</FixtureMacroCollect>
+		<Body/>
+		<AutoPresets index="4"/>
+	</FixtureType>
+</MA>

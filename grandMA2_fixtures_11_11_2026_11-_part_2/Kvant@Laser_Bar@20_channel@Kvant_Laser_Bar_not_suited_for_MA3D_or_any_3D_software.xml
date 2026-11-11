@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA major_vers="3" minor_vers="2" stream_vers="2">
+  <Info datetime="2018-2-25T3:19:10" showfile="ma fixture builder"/>
+  <FixtureType index="2" name="Laser Bar" mode="20 channel">
+    <InfoItems>
+      <Info>Created using MA FixtureBuilder version v1.3.2.2</Info>
+    <Info type="Revision" date="2018-02-26T09:02:14">Kvant Laser Bar not suited for MA3D or any 3D software, Uploaded to Fixture Share.</Info></InfoItems>
+    <short_name>LaserBar</short_name>
+    <manufacturer>Kvant</manufacturer>
+    <short_manufacturer>Kvant</short_manufacturer>
+    <Modules index="0">
+      <Module index="0" name="Blinder" class="Conventional" beamtype="Wash" beam_angle="25" beam_intensity="10000">
+        <Body>
+          <Size x="0.1" y="0.05" z="0.13"/>
+        </Body>
+        <ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" subattribute_user_name="Dim" attribute_user_name="Dim" feature_user_name="Dimmer" preset_user_name="Dimmer">
+            <ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+      </Module>
+      <Module index="1" name="Laser" class="Headmover" beamtype="Spot" beam_angle="19" beam_intensity="10000">
+        <Body>
+          <Size x="0.1" y="0.05" z="0.13"/>
+        </Body>
+        <ChannelType index="0" attribute="LASERINTENSITY" feature="LASER" preset="CONTROL" coarse="1">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="LASERINTENSITY" attribute="LASERINTENSITY" feature="LASER" preset="CONTROL">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+      </Module>
+    </Modules>
+    <Instances index="1">
+      <Instance index="0" X="-0.45" module_index="0"/>
+      <Instance index="1" patch="2" X="-0.35" module_index="0"/>
+      <Instance index="2" patch="3" X="-0.25" module_index="0"/>
+      <Instance index="3" patch="4" X="-0.15" module_index="0"/>
+      <Instance index="4" patch="5" X="-0.05" module_index="0"/>
+      <Instance index="5" patch="6" X="0.05" module_index="0"/>
+      <Instance index="6" patch="7" X="0.15" module_index="0"/>
+      <Instance index="7" patch="8" X="0.25" module_index="0"/>
+      <Instance index="8" patch="9" X="0.35" module_index="0"/>
+      <Instance index="9" patch="10" X="0.45" module_index="0"/>
+      <Instance index="10" patch="11" X="-40" module_index="1"/>
+      <Instance index="11" patch="12" X="-30" module_index="1"/>
+      <Instance index="12" patch="13" X="-20" module_index="1"/>
+      <Instance index="13" patch="14" X="-10" module_index="1"/>
+      <Instance index="14" patch="15" X="0" module_index="1"/>
+      <Instance index="15" patch="16" X="10" module_index="1"/>
+      <Instance index="16" patch="17" X="20" module_index="1"/>
+      <Instance index="17" patch="18" X="30" module_index="1"/>
+      <Instance index="18" patch="19" X="40" module_index="1"/>
+      <Instance index="19" patch="20" X="50" module_index="1"/>
+    </Instances>
+    <Wheels index="2"/>
+    <FixtureMacroCollect index="5"/>
+  </FixtureType>
+</MA>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2018-04-20T16:09:20" showfile="new show 2018-04-07"/>
+	<FixtureType index="9" name="DREAM 400C7 BLIGHT" mode="HSIC"><InfoItems><Info type="Revision" date="2018-09-14T10:09:55">DLW Light library center, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>DREAM 400C7 BLIGHT</short_name>
+		<manufacturer>DLW</manufacturer>
+		<short_manufacturer>DLW</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="LED" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<Body>
+					<Size x="1" y="0.4" z="0.41"/>
+				</Body>
+				<ChannelType index="0" attribute="INTENSITY" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="INTENSITY" subattribute_user_name="INTENSITY" attribute="INTENSITY" attribute_user_name="INTENSITY" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="HUE" feature="COLORHSB" preset="COLOR" coarse="2">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="360" subattribute="HUE" subattribute_user_name="Hue" attribute="HUE" attribute_user_name="Hue" feature="COLORHSB" feature_user_name="HSB" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="2" attribute="HUEFINE" feature="COLORHSB" preset="COLOR" coarse="3">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="HUEFINE" subattribute_user_name="HUEFINE" attribute="HUEFINE" attribute_user_name="HUEFINE" feature="COLORHSB" feature_user_name="HSB" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="3" attribute="SATURATION" feature="COLORHSB" preset="COLOR" coarse="4">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="SATURATION" subattribute_user_name="Saturation" attribute="SATURATION" attribute_user_name="Saturation" feature="COLORHSB" feature_user_name="HSB" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="4" attribute="CCT" feature="COLORHSB" preset="COLOR" coarse="5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="CCT" subattribute_user_name="CCT" attribute="CCT" attribute_user_name="CCT" feature="COLORHSB" feature_user_name="HSB" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="NO FUNCTION" from_dmx="0" to_dmx="10"/>
+						<ChannelSet index="1" name="2700K" from_dmx="11" to_dmx="30"/>
+						<ChannelSet index="2" name="3000K" from_dmx="31" to_dmx="50"/>
+						<ChannelSet index="3" name="3200K" from_dmx="51" to_dmx="70"/>
+						<ChannelSet index="4" name="3500K" from_dmx="71" to_dmx="90"/>
+						<ChannelSet index="5" name="4000K" from_dmx="91" to_dmx="110"/>
+						<ChannelSet index="6" name="4200K" from_dmx="111" to_dmx="130"/>
+						<ChannelSet index="7" name="4500K" from_dmx="131" to_dmx="150"/>
+						<ChannelSet index="8" name="5600K" from_dmx="151" to_dmx="170"/>
+						<ChannelSet index="9" name="6000K" from_dmx="171" to_dmx="190"/>
+						<ChannelSet index="10" name="6500K" from_dmx="191" to_dmx="210"/>
+						<ChannelSet index="11" name="7200K" from_dmx="211" to_dmx="230"/>
+						<ChannelSet index="12" name="8000K" from_dmx="231" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="6">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam"/>
+				</ChannelType>
+				<ChannelType index="6" attribute="DIMSPEED" feature="AUTO" preset="SHAPERS" coarse="7">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="DIMSPEED" subattribute_user_name="DIMSPEED" attribute="DIMSPEED" attribute_user_name="DIMSPEED" feature="AUTO" feature_user_name="AUTO" preset="SHAPERS" preset_user_name="Shapers">
+						<ChannelSet index="0" name="NO FUNCTION" from_dmx="0" to_dmx="9"/>
+						<ChannelSet index="1" name="DIM 0" from_dmx="10" to_dmx="29"/>
+						<ChannelSet index="2" name="DIM 1" from_dmx="30" to_dmx="69"/>
+						<ChannelSet index="3" name="DIM 2" from_dmx="70" to_dmx="129"/>
+						<ChannelSet index="4" name="DIM 3" from_dmx="130" to_dmx="189"/>
+						<ChannelSet index="5" name="DIM 4" from_dmx="190" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

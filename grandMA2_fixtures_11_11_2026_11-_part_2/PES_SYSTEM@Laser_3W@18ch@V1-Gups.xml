@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.60/MA.xsd" major_vers="3" minor_vers="9" stream_vers="60">
+	<Info datetime="2022-02-15T16:29:43" showfile="laser atlantid"/>
+	<FixtureType index="4" name="Laser 3W" mode="18ch"><InfoItems><Info type="Revision" date="2022-02-15T16:31:30">V1-Gups, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>Laser 3W</short_name>
+		<manufacturer>PES SYSTEM</manufacturer>
+		<short_manufacturer>PES</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="None" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" default="0.001" highlight_value="62.5" snap="true">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="5505023" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="Laser Off" from_dmx="0" to_dmx="41"/>
+						<ChannelSet index="1" name="Laser On" from_dmx="42" to_dmx="83"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="SD_ON_OFF" feature="SD" preset="LASER" coarse="2" snap="true">
+					<ChannelFunction index="0" from="0" to="255" min_dmx_24="0" max_dmx_24="16777215" subattribute="SD_ON_OFF" subattribute_user_name="PLAYLIST GROUP" attribute="SD_ON_OFF" attribute_user_name="PLAYLIST GROUP" feature="SD" feature_user_name="SD CARD" preset="LASER" preset_user_name="SD CARD">
+						<ChannelSet index="0" name="SD Off" from_dmx="0" to_dmx="9"/>
+						<ChannelSet index="1" name="Playlist Group 1" from_dmx="10" to_dmx="35"/>
+						<ChannelSet index="2" name="Playlist Group 2" from_dmx="36" to_dmx="60"/>
+						<ChannelSet index="3" name="Playlist Group 3" from_dmx="61" to_dmx="85"/>
+						<ChannelSet index="4" name="Playlist Group 4" from_dmx="86" to_dmx="110"/>
+						<ChannelSet index="5" name="Playlist Group 5" from_dmx="111" to_dmx="135"/>
+						<ChannelSet index="6" name="Playlist Group 6" from_dmx="136" to_dmx="160"/>
+						<ChannelSet index="7" name="Playlist Group 7" from_dmx="161" to_dmx="185"/>
+						<ChannelSet index="8" name="Playlist Group 8" from_dmx="186" to_dmx="220"/>
+						<ChannelSet index="9" name="Playlist Group 9" from_dmx="221" to_dmx="245"/>
+						<ChannelSet index="10" name="Playlist Group 10" from_dmx="246" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="SD_PLAYLIST" feature="SD" preset="LASER" coarse="3" snap="true">
+					<ChannelFunction index="0" from="0" to="255" min_dmx_24="0" max_dmx_24="16777215" subattribute="SD_PLAYLIST" subattribute_user_name="PLAYLIST" attribute="SD_PLAYLIST" attribute_user_name="PLAYLIST" feature="SD" feature_user_name="SD CARD" preset="LASER" preset_user_name="SD CARD">
+						<ChannelSet index="0" name="Playlist 1" from_dmx="0" to_dmx="9"/>
+						<ChannelSet index="1" name="Playlist 2" from_dmx="10" to_dmx="19"/>
+						<ChannelSet index="2" name="Playlist 3" from_dmx="20" to_dmx="29"/>
+						<ChannelSet index="3" name="Playlist 4" from_dmx="30" to_dmx="39"/>
+						<ChannelSet index="4" name="Playlist 5" from_dmx="40" to_dmx="49"/>
+						<ChannelSet index="5" name="Playlist 6" from_dmx="50" to_dmx="59"/>
+						<ChannelSet index="6" name="Playlist 7" from_dmx="60" to_dmx="69"/>
+						<ChannelSet index="7" name="Playlist 8" from_dmx="70" to_dmx="79"/>
+						<ChannelSet index="8" name="Playlist 9" from_dmx="80" to_dmx="89"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="SD_GROUP" feature="SD" preset="LASER" coarse="4" snap="true">
+					<ChannelFunction index="0" from="0" to="255" min_dmx_24="0" max_dmx_24="16777215" subattribute="SD_GROUP" subattribute_user_name="FILE GROUP" attribute="SD_GROUP" attribute_user_name="FILE GROUP" feature="SD" feature_user_name="SD CARD" preset="LASER" preset_user_name="SD CARD">
+						<ChannelSet index="0" name="File Group 1" from_dmx="0" to_dmx="25"/>
+						<ChannelSet index="1" name="File Group 2" from_dmx="26" to_dmx="50"/>
+						<ChannelSet index="2" name="File Group 3" from_dmx="51" to_dmx="75"/>
+						<ChannelSet index="3" name="File Group 4" from_dmx="76" to_dmx="100"/>
+						<ChannelSet index="4" name="File Group 5" from_dmx="101" to_dmx="125"/>
+						<ChannelSet index="5" name="File Group 6" from_dmx="126" to_dmx="150"/>
+						<ChannelSet index="6" name="File Group 7" from_dmx="151" to_dmx="175"/>
+						<ChannelSet index="7" name="File Group 8" from_dmx="176" to_dmx="200"/>
+						<ChannelSet index="8" name="File Group 9" from_dmx="201" to_dmx="225"/>
+						<ChannelSet index="9" name="File Group 10" from_dmx="226" to_dmx="250"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="SD_FILE" feature="SD" preset="LASER" coarse="5" snap="true">
+					<ChannelFunction index="0" from="0" to="255" min_dmx_24="0" max_dmx_24="16777215" subattribute="SD_FILE" subattribute_user_name="FILE" attribute="SD_FILE" attribute_user_name="FILE" feature="SD" feature_user_name="SD CARD" preset="LASER" preset_user_name="SD CARD">
+						<ChannelSet index="0" name="No File" from_dmx="0" to_dmx="9"/>
+						<ChannelSet index="1" name="File 1" from_dmx="10" to_dmx="19"/>
+						<ChannelSet index="2" name="File 2" from_dmx="20" to_dmx="29"/>
+						<ChannelSet index="3" name="File 3" from_dmx="30" to_dmx="39"/>
+						<ChannelSet index="4" name="File 4" from_dmx="40" to_dmx="49"/>
+						<ChannelSet index="5" name="File 5" from_dmx="50" to_dmx="59"/>
+						<ChannelSet index="6" name="File 6" from_dmx="60" to_dmx="69"/>
+						<ChannelSet index="7" name="File 7" from_dmx="70" to_dmx="79"/>
+						<ChannelSet index="8" name="File 8" from_dmx="80" to_dmx="89"/>
+						<ChannelSet index="9" name="File 9" from_dmx="90" to_dmx="99"/>
+						<ChannelSet index="10" name="File 10" from_dmx="100" to_dmx="109"/>
+						<ChannelSet index="11" name="File 11" from_dmx="110" to_dmx="119"/>
+						<ChannelSet index="12" name="File 12" from_dmx="120" to_dmx="129"/>
+						<ChannelSet index="13" name="File 13" from_dmx="130" to_dmx="139"/>
+						<ChannelSet index="14" name="File 14" from_dmx="140" to_dmx="149"/>
+						<ChannelSet index="15" name="File 15" from_dmx="150" to_dmx="159"/>
+						<ChannelSet index="16" name="File 16" from_dmx="160" to_dmx="169"/>
+						<ChannelSet index="17" name="File 17" from_dmx="170" to_dmx="179"/>
+						<ChannelSet index="18" name="File 18" from_dmx="180" to_dmx="189"/>
+						<ChannelSet index="19" name="File 19" from_dmx="190" to_dmx="199"/>
+						<ChannelSet index="20" name="File 20" from_dmx="200" to_dmx="209"/>
+						<ChannelSet index="21" name="File 21" from_dmx="210" to_dmx="219"/>
+						<ChannelSet index="22" name="File 22" from_dmx="220" to_dmx="229"/>
+						<ChannelSet index="23" name="File 23" from_dmx="230" to_dmx="239"/>
+						<ChannelSet index="24" name="File 24" from_dmx="240" to_dmx="249"/>
+						<ChannelSet index="25" name="File 25" from_dmx="250" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="SD_PLAY_MODE" feature="SD" preset="LASER" coarse="6" snap="true">
+					<ChannelFunction index="0" from="0" to="255" min_dmx_24="0" max_dmx_24="16777215" subattribute="SD_PLAY_MODE" subattribute_user_name="SD_PLAY_MODE" attribute="SD_PLAY_MODE" attribute_user_name="SD_PLAY_MODE" feature="SD" feature_user_name="SD CARD" preset="LASER" preset_user_name="SD CARD">
+						<ChannelSet index="0" name="Loop" from_dmx="0" to_dmx="51"/>
+						<ChannelSet index="1" name="Once" from_dmx="52" to_dmx="103"/>
+						<ChannelSet index="2" name="All Files" from_dmx="104" to_dmx="155"/>
+						<ChannelSet index="3" name="Unknown" from_dmx="156" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="6" attribute="SD_SPEED" feature="SD" preset="LASER" coarse="7">
+					<ChannelFunction index="0" from="0" to="255" min_dmx_24="0" max_dmx_24="16777215" subattribute="SD_SPEED" subattribute_user_name="SD_SPEED" attribute="SD_SPEED" attribute_user_name="SD_SPEED" feature="SD" feature_user_name="SD CARD" preset="LASER" preset_user_name="SD CARD"/>
+				</ChannelType>
+				<ChannelType index="7" attribute="GOBO1" feature="GOBO1" preset="GOBO" coarse="8" snap="true">
+					<ChannelFunction index="0" from="0" to="255" min_dmx_24="0" max_dmx_24="16777215" subattribute="GOBO1" subattribute_user_name="Select" attribute="GOBO1" attribute_user_name="G1" feature="GOBO1" feature_user_name="Gobo1" preset="GOBO" preset_user_name="Gobo">
+						<ChannelSet index="0" name="Circle" from_dmx="0" to_dmx="2"/>
+						<ChannelSet index="1" name="Square" from_dmx="3" to_dmx="5"/>
+						<ChannelSet index="2" name="&lt;" from_dmx="6" to_dmx="8"/>
+						<ChannelSet index="3" name="/" from_dmx="15" to_dmx="17"/>
+						<ChannelSet index="4" name="\" from_dmx="18" to_dmx="20"/>
+						<ChannelSet index="5" name="-" from_dmx="57" to_dmx="59"/>
+						<ChannelSet index="6" name="Wave" from_dmx="69" to_dmx="71"/>
+						<ChannelSet index="7" name="2 Circles" from_dmx="72" to_dmx="74"/>
+						<ChannelSet index="8" name="Triangle" from_dmx="84" to_dmx="86"/>
+						<ChannelSet index="9" name="l" from_dmx="93" to_dmx="95"/>
+						<ChannelSet index="10" name="Heart" from_dmx="180" to_dmx="182"/>
+						<ChannelSet index="11" name="1" from_dmx="216" to_dmx="218"/>
+						<ChannelSet index="12" name="2" from_dmx="219" to_dmx="221"/>
+						<ChannelSet index="13" name="3" from_dmx="222" to_dmx="224"/>
+						<ChannelSet index="14" name="4" from_dmx="225" to_dmx="228"/>
+						<ChannelSet index="15" name="5" from_dmx="229" to_dmx="231"/>
+						<ChannelSet index="16" name="6" from_dmx="232" to_dmx="234"/>
+						<ChannelSet index="17" name="7" from_dmx="235" to_dmx="237"/>
+						<ChannelSet index="18" name="8" from_dmx="238" to_dmx="240"/>
+						<ChannelSet index="19" name="9" from_dmx="241" to_dmx="243"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="8" attribute="MP_ROT_Z" feature="MP_ROT" preset="POSITION" coarse="9" default="64">
+					<ChannelFunction index="0" from="0" to="255" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="360" subattribute="MP_ROT_Z" subattribute_user_name="Z" attribute="MP_ROT_Z" attribute_user_name="Z" feature="MP_ROT" feature_user_name="MP Rot" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="-180 deg" from_dmx="1" to_dmx="1"/>
+						<ChannelSet index="1" name="0 deg" from_dmx="64" to_dmx="64"/>
+						<ChannelSet index="2" name="+180 deg" from_dmx="126" to_dmx="126"/>
+						<ChannelSet index="3" name="&gt;&gt;&lt;&lt;" from_dmx="128" to_dmx="254"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="9" attribute="MP_ROT_X" feature="MP_ROT" preset="POSITION" coarse="10" default="64">
+					<ChannelFunction index="0" from="0" to="255" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="360" subattribute="MP_ROT_X" subattribute_user_name="X" attribute="MP_ROT_X" attribute_user_name="X" feature="MP_ROT" feature_user_name="MP Rot" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="-180 deg" from_dmx="1" to_dmx="1"/>
+						<ChannelSet index="1" name="0 deg" from_dmx="64" to_dmx="64"/>
+						<ChannelSet index="2" name="+180 deg" from_dmx="127" to_dmx="127"/>
+						<ChannelSet index="3" name="&gt;&gt;&lt;&lt;" from_dmx="128" to_dmx="254"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="10" attribute="MP_ROT_Y" feature="MP_ROT" preset="POSITION" coarse="11" default="64">
+					<ChannelFunction index="0" from="0" to="255" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="360" subattribute="MP_ROT_Y" subattribute_user_name="Y" attribute="MP_ROT_Y" attribute_user_name="Y" feature="MP_ROT" feature_user_name="MP Rot" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="-180 deg" from_dmx="1" to_dmx="1"/>
+						<ChannelSet index="1" name="0 deg" from_dmx="64" to_dmx="64"/>
+						<ChannelSet index="2" name="+180 deg" from_dmx="127" to_dmx="127"/>
+						<ChannelSet index="3" name="&gt;&gt;&lt;&lt;" from_dmx="128" to_dmx="254"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="11" attribute="PAN" feature="POSITION" preset="POSITION" coarse="12" default="63">
+					<ChannelFunction index="0" from="0" to="255" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="PAN" subattribute_user_name="Pan" attribute="PAN" attribute_user_name="Pan" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="Pan Min" from_dmx="1" to_dmx="1"/>
+						<ChannelSet index="1" name="Pan Center" from_dmx="63" to_dmx="63"/>
+						<ChannelSet index="2" name="Pan Max" from_dmx="127" to_dmx="127"/>
+						<ChannelSet index="3" name="Pan &gt;&gt;&lt;&lt;" from_dmx="128" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="12" attribute="TILT" feature="POSITION" preset="POSITION" coarse="13" default="63">
+					<ChannelFunction index="0" from="0" to="255" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="TILT" subattribute_user_name="Tilt" attribute="TILT" attribute_user_name="Tilt" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="Tilt Min" from_dmx="1" to_dmx="1"/>
+						<ChannelSet index="1" name="Tilt Center" from_dmx="63" to_dmx="63"/>
+						<ChannelSet index="2" name="Tilt Max" from_dmx="127" to_dmx="127"/>
+						<ChannelSet index="3" name="Tilt &gt;&gt;&lt;&lt;" from_dmx="128" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="13" attribute="ZOOM" feature="FOCUS" preset="FOCUS" coarse="14">
+					<ChannelFunction index="0" from="0" to="255" min_dmx_24="0" max_dmx_24="16777215" physfrom="0.7" physto="1" subattribute="ZOOM" subattribute_user_name="Zoom" attribute="ZOOM" attribute_user_name="Zoom" feature="FOCUS" feature_user_name="Focus" preset="FOCUS" preset_user_name="Focus">
+						<ChannelSet index="0" name="Size 100%" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="Size 0%" from_dmx="63" to_dmx="63"/>
+						<ChannelSet index="2" name="&gt;&gt;&gt;" from_dmx="64" to_dmx="127"/>
+						<ChannelSet index="3" name="&lt;&lt;&lt;" from_dmx="128" to_dmx="191"/>
+						<ChannelSet index="4" name="&lt;&lt;&gt;&gt;" from_dmx="192" to_dmx="254"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="14" attribute="DRAW" feature="FOCUS" preset="FOCUS" coarse="15">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="DRAW" subattribute_user_name="Draw" attribute="DRAW" attribute_user_name="Draw" feature="FOCUS" feature_user_name="Focus" preset="FOCUS" preset_user_name="Focus"/>
+				</ChannelType>
+				<ChannelType index="15" attribute="SCAN" feature="FOCUS" preset="FOCUS" coarse="16">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="SCAN" subattribute_user_name="Scan" attribute="SCAN" attribute_user_name="Scan" feature="FOCUS" feature_user_name="Focus" preset="FOCUS" preset_user_name="Focus"/>
+				</ChannelType>
+				<ChannelType index="16" attribute="COLOR1" feature="COLOR1" preset="COLOR" coarse="17" snap="true">
+					<ChannelFunction index="0" from="0" to="255" min_dmx_24="0" max_dmx_24="16777215" subattribute="COLOR1WHEELRANDOM" subattribute_user_name="Rnd" attribute="COLOR1" attribute_user_name="C1" feature="COLOR1" feature_user_name="Color1" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="Original" from_dmx="0" to_dmx="17"/>
+						<ChannelSet index="1" name="White" from_dmx="18" to_dmx="35" slot_index="0"/>
+						<ChannelSet index="2" name="Red" from_dmx="36" to_dmx="53" slot_index="1"/>
+						<ChannelSet index="3" name="Yellow" from_dmx="54" to_dmx="71" slot_index="2"/>
+						<ChannelSet index="4" name="Green" from_dmx="72" to_dmx="89" slot_index="3"/>
+						<ChannelSet index="5" name="Magenta" from_dmx="90" to_dmx="107" slot_index="4"/>
+						<ChannelSet index="6" name="Blue" from_dmx="108" to_dmx="125" slot_index="5"/>
+						<ChannelSet index="7" name="Cyan" from_dmx="126" to_dmx="127" slot_index="6"/>
+						<ChannelSet index="8" name="&gt;&gt;&gt;" from_dmx="128" to_dmx="169"/>
+						<ChannelSet index="9" name="Rainbow Dots" from_dmx="170" to_dmx="211"/>
+						<ChannelSet index="10" name="Rainbow Fill" from_dmx="212" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="17" attribute="COLOR1ROT" feature="COLOR1" preset="COLOR" coarse="18">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="C1ANIM" subattribute_user_name="C1 &lt;&gt;" attribute="COLOR1ROT" attribute_user_name="C1 &lt;&gt;" feature="COLOR1" feature_user_name="Color1" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2">
+			<Wheel index="0" subattribute="COLOR1" attribute="COLOR1" feature="COLOR1" preset="COLOR">
+				<Slot index="0"/>
+				<Slot index="1" g="0" b="0"/>
+				<Slot index="2" g="234" b="0"/>
+				<Slot index="3" r="26" b="0"/>
+				<Slot index="4" r="247" g="0"/>
+				<Slot index="5" r="1" g="0"/>
+				<Slot index="6" r="0"/>
+				<Slot index="7"/>
+				<Slot index="8"/>
+				<Slot index="9"/>
+			</Wheel>
+		</Wheels>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

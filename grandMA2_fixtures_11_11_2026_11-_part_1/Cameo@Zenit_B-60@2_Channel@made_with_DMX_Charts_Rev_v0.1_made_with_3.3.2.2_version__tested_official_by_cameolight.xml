@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2017-05-16T16:51:09" showfile="ansari @ adamhall startshow v6.6 sw3.1.1.1"/>
+	<FixtureType index="6" name="Zenit B-60" mode="2 Channel">
+		<InfoItems>
+			<Info type="Revision" date="2016-08-18T00:00:00">Created by Adam Hall GmbH</Info>
+		<Info type="Revision" date="2017-06-22T02:06:43">made with DMX Charts Rev v0.1 made with 3.3.2.2 version  tested official by cameolight, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>B-60</short_name>
+		<manufacturer>Cameo</manufacturer>
+		<short_manufacturer>Cameo</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="LED" beamtype="Wash" beam_angle="11" beam_intensity="10000">
+				<Body>
+					<Size x="0.2" y="0.2" z="0.2"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="CTC" feature="CTC" preset="COLOR" coarse="2" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="CTC" subattribute_user_name="CTC" attribute="CTC" attribute_user_name="CTC" feature="CTC" feature_user_name="CTC" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2">
+			<Wheel index="0" subattribute="COLORMACROSELECT" attribute="COLORMACROS" feature="COLORALL" preset="COLOR">
+				<Slot index="0" media_name="open"/>
+				<Slot index="1" media_name="Red" g="0" b="0"/>
+				<Slot index="2" media_name="Amber" r="197" g="114" b="6"/>
+				<Slot index="3" media_name="Yellow warm" r="224" g="195" b="7"/>
+				<Slot index="4" media_name="Yellow" r="208" g="241" b="18"/>
+				<Slot index="5" media_name="Green" r="0" b="0"/>
+				<Slot index="6" media_name="Turquoise" r="81" g="178" b="183"/>
+				<Slot index="7" media_name="Cyan" r="0"/>
+				<Slot index="8" media_name="Blue" r="0" g="0"/>
+				<Slot index="9" media_name="Lavender" r="60" g="80" b="139"/>
+				<Slot index="10" media_name="Mauve" r="109" g="40" b="126"/>
+				<Slot index="11" media_name="MAgenta" r="166" g="52" b="68"/>
+				<Slot index="12" media_name="Pink" r="206" g="144" b="149"/>
+				<Slot index="13" media_name="Warm White" r="231" g="227" b="98"/>
+				<Slot index="14" media_name="White" r="144" g="181" b="202"/>
+				<Slot index="15" media_name="Cold White" r="64" g="111" b="155"/>
+			</Wheel>
+		</Wheels>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

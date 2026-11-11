@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA major_vers="3" minor_vers="2" stream_vers="2">
+  <Info datetime="2017-5-21T12:37:14" showfile="ma fixture builder"/>
+  <FixtureType index="0" name="Enterprise TC4" mode="00">
+    <InfoItems>
+      <Info>Created using MA FixtureBuilder version v1.3.1</Info>
+    <Info type="Revision" date="2017-05-21T12:05:19">Added mode 00, Uploaded to Fixture Share.</Info></InfoItems>
+    <short_name>EnterpriseTC4</short_name>
+    <manufacturer>Smoke Factory</manufacturer>
+    <short_manufacturer>SmokeFactory</short_manufacturer>
+    <Modules index="0">
+      <Module index="0" name="Main Module" class="Conventional" beamtype="None" beam_angle="0" beam_intensity="10000">
+        <Body>
+          <Size x="0.32" y="0.54" z="0.46"/>
+        </Body>
+        <ChannelType index="0" attribute="FOG" feature="SPECIALFX" preset="CONTROL" coarse="1" default="0.000000" highlight_value="100.000000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="FOG" attribute="FOG" feature="SPECIALFX" preset="CONTROL">
+            <ChannelSet index="0" name="Fog" from_dmx="0" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="1" attribute="BLOWER" feature="SPECIALFX" preset="CONTROL" coarse="2" default="0.000000" highlight_value="100.000000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="BLOWER" attribute="BLOWER" feature="SPECIALFX" preset="CONTROL">
+            <ChannelSet index="0" name="Blower" from_dmx="0" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+      </Module>
+    </Modules>
+    <Instances index="1">
+      <Instance index="0" patch="1" module_index="0"/>
+    </Instances>
+    <Wheels index="2"/>
+    <FixtureMacroCollect index="5"/>
+  </FixtureType>
+</MA>

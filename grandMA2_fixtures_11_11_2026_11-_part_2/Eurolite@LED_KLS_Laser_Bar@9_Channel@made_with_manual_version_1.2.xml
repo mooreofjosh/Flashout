@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.3.2/MA.xsd" major_vers="3" minor_vers="3" stream_vers="2">
+	<Info datetime="2017-12-27T22:27:39" showfile="fixture type eurolite"/>
+	<FixtureType index="2" name="LED KLS Laser Bar" mode="9 Channel">
+		<InfoItems>
+			<Info date="2017-12-27T22:27:34">no 3D visualisation!</Info>
+		<Info type="Revision" date="2017-12-27T10:12:12">made with manual version 1.2, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>LEDLaserBar</short_name>
+		<manufacturer>Eurolite</manufacturer>
+		<short_manufacturer>Eurolite</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="LED" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<Body>
+					<Size x="1.3" y="0.32" z="0.14"/>
+				</Body>
+				<ChannelType index="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="1" default="254.999" highlight_value="100" color="ff0000">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" subattribute_user_name="R" attribute="COLORRGB1" attribute_user_name="R" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="2" default="254.999" highlight_value="100" color="00ff00">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" subattribute_user_name="G" attribute="COLORRGB2" attribute_user_name="G" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="3" default="254.999" highlight_value="100" color="0000ff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" subattribute_user_name="B" attribute="COLORRGB3" attribute_user_name="B" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="4" highlight_value="74.902">
+					<ChannelFunction index="0" from="0" to="74.902" min_dmx_24="0" max_dmx_24="12582911" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="191" to_dmx="191"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="75.294" to="97.647" min_dmx_24="12582912" max_dmx_24="16383999" physfrom="0" physto="30" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="audio strobe" from_dmx="192" to_dmx="200"/>
+						<ChannelSet index="1" name="strb fx slow&gt;fast" from_dmx="201" to_dmx="249"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" name="Open" from="98.039" to="100" min_dmx_24="16384000" max_dmx_24="16777215" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="all colors on" from_dmx="250" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="EFFECTINDEXROTATE" feature="BEAM1" preset="BEAM" coarse="5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="EFFECTROTATE" subattribute_user_name="Rotate" attribute="EFFECTINDEXROTATE" attribute_user_name="Effect&lt;&gt;" feature="BEAM1" feature_user_name="Beam" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="stop" from_dmx="0" to_dmx="4"/>
+						<ChannelSet index="1" name="&gt;&gt;&gt;" from_dmx="5" to_dmx="127"/>
+						<ChannelSet index="2" name="stop (2)" from_dmx="128" to_dmx="133"/>
+						<ChannelSet index="3" name="&lt;&lt;&lt;" from_dmx="134" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="REDLASER" feature="CONTROL" preset="CONTROL" coarse="6">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="REDLASER" subattribute_user_name="RedLaser" attribute="REDLASER" attribute_user_name="RedLaser" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="laser off" from_dmx="0" to_dmx="4"/>
+						<ChannelSet index="1" name="laser on" from_dmx="5" to_dmx="9"/>
+						<ChannelSet index="2" name="laser strb" from_dmx="10" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="6" attribute="GREENLASER" feature="CONTROL" preset="CONTROL" coarse="7">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="GREENLASER" subattribute_user_name="GreenLaser" attribute="GREENLASER" attribute_user_name="GreenLaser" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="laser off" from_dmx="0" to_dmx="4"/>
+						<ChannelSet index="1" name="laser on" from_dmx="5" to_dmx="9"/>
+						<ChannelSet index="2" name="laser strb" from_dmx="10" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="7" attribute="LASERROTATION" feature="CONTROL" preset="CONTROL" coarse="8">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="LASERROTATION" subattribute_user_name="Laser Rot" attribute="LASERROTATION" attribute_user_name="Laser Rotation" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="stop" from_dmx="0" to_dmx="4"/>
+						<ChannelSet index="1" name="&gt;&gt;&gt;" from_dmx="5" to_dmx="12"/>
+						<ChannelSet index="2" name="stop (2)" from_dmx="128" to_dmx="133"/>
+						<ChannelSet index="3" name="&lt;&lt;&lt;" from_dmx="134" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="8" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="9">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="30" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="strb off" from_dmx="0" to_dmx="4"/>
+						<ChannelSet index="1" name="strb on" from_dmx="5" to_dmx="9"/>
+						<ChannelSet index="2" name="strb fx slow &gt; fast" from_dmx="10" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

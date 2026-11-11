@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.0.0/MA.xsd" major_vers="3" minor_vers="0" stream_vers="0">
+	<Info datetime="2015-06-30T18:23:35" showfile="ibero_2015"/>
+	<FixtureType index="16" name="Goya IP" mode="5 ch">
+		<InfoItems>
+			<Info date="2015-03-08T12:08:18">Created by Wodie with the poorly information from the owners manual.</Info>
+		<Info type="Revision" date="2017-11-19T05:11:30">Version 1.0, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>Goya IP</short_name>
+		<manufacturer>SM International</manufacturer>
+		<short_manufacturer>SM</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="None" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<ChannelType index="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="1" default="255" highlight_value="100" color="ff0000">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="360" subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="2" default="255" highlight_value="100" color="00ff00">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="3" default="255" highlight_value="100" color="0000ff">
+					<ChannelFunction index="0" name="B" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="4" highlight_value="100">
+					<ChannelFunction index="0" name="Dim" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER">
+						<ChannelSet index="0" name="Closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="Open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="5" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+						<ChannelSet index="0" name="On" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="Sound Control" from_dmx="1" to_dmx="5"/>
+						<ChannelSet index="2" name="Strobe" from_dmx="11" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0" RW="0"/>
+		</Instances>
+		<Wheels index="2">
+			<Wheel index="0" subattribute="COLOR1" attribute="COLOR1" feature="COLOR1" preset="COLOR">
+				<Slot index="0" media_name="Open"/>
+				<Slot index="1" media_name="Tan" r="218" g="153" b="98"/>
+				<Slot index="2" media_name="CTB" r="129" g="169" b="194"/>
+				<Slot index="3" media_name="Yellow" b="0"/>
+				<Slot index="4" media_name="Shallow Purple" r="66" g="33" b="114"/>
+				<Slot index="5" media_name="Brown" r="80" g="69" b="21"/>
+				<Slot index="6" media_name="Blue Green" r="42" g="144" b="146"/>
+				<Slot index="7" media_name="Purple Red" r="122" g="47" b="131"/>
+				<Slot index="8" media_name="Grass Green" r="33" g="135" b="27"/>
+				<Slot index="9" media_name="UV" r="0" g="0" b="127"/>
+				<Slot index="10" media_name="Magenta" g="0"/>
+				<Slot index="11" media_name="Green" r="0" b="0"/>
+				<Slot index="12" media_name="Orange" g="127" b="0"/>
+				<Slot index="13" media_name="Blue" r="0" g="0"/>
+				<Slot index="14" media_name="Red" g="0" b="0"/>
+			</Wheel>
+			<Wheel index="1" subattribute="GOBO1" attribute="GOBO1" feature="GOBO1" preset="GOBO">
+				<Slot index="0" media_name="Open" media_filename="Misc/Open.bmp"/>
+				<Slot index="1" media_name="Dot" media_filename="Clay Paky/085801-001.bmp"/>
+				<Slot index="2" media_name="Line" media_filename="Martin/bar.bmp"/>
+				<Slot index="3" media_name="Radioactive" media_filename="Rosco/965 radiation.bmp"/>
+				<Slot index="4" media_name="Fan" media_filename="Robe/G41.bmp"/>
+				<Slot index="5" media_name="Cross" media_filename="Martin/Cross2.bmp"/>
+				<Slot index="6" media_name="Tri" media_filename="carallon/gobos/elektralite/058901308.png"/>
+				<Slot index="7" media_name="4 Dots" media_filename="Clay Paky/MG-20.bmp"/>
+				<Slot index="8" media_name="Star" media_filename="Misc/Star.bmp"/>
+			</Wheel>
+			<Wheel index="2" subattribute="GOBO2" attribute="GOBO2" feature="GOBO2" preset="GOBO">
+				<Slot index="0" media_name="Open"/>
+				<Slot index="1"/>
+				<Slot index="2"/>
+				<Slot index="3"/>
+				<Slot index="4"/>
+				<Slot index="5"/>
+				<Slot index="6"/>
+				<Slot index="7"/>
+			</Wheel>
+		</Wheels>
+		<VirtualFunctionBlocks index="3"/>
+		<Body/>
+		<AutoPresets index="4"/>
+	</FixtureType>
+</MA>

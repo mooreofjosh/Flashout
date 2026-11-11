@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA major_vers="2" minor_vers="0" stream_vers="0">
+  <FixtureType name="Beam270Y" mode="270Y"><InfoItems><Info type="Revision" date="2023-03-12T23:16:38">BEAM 9R COM BORDA, Uploaded to Fixture Share.</Info></InfoItems>
+    <short_name>XY_Beam270Y</short_name>
+    <manufacturer>Showtec China</manufacturer>
+    <short_manufacturer>XY</short_manufacturer>
+    <notes>Created By YEL Lighting LTD</notes>
+    <revision date="2023/3/11" text="Generated with the Software developped by YEL."/>
+    <Modules>
+      <Module name="Main Module" class="Headmover" beamtype="Beam" beam_angle="1.00" beam_intensity="3000.00">
+        <ChannelType index="1" attribute="COLOR1" feature="Color1" preset="Color" coarse="1">
+          <ChannelFunction name="COLOR1" attribute="COLOR1" feature="Color1" preset="Color" subattribute="COLOR1" from="0" to="100" min_dmx="0" max_dmx="255" physfrom="0" physto="1"/>
+        </ChannelType>
+        <ChannelType index="2" attribute="STROBE" feature="SHUTTER" preset="BEAM" coarse="2" default="255">
+          <ChannelFunction name="STROBE" attribute="STROBE" feature="SHUTTER" preset="BEAM" subattribute="STROBE" from="0" to="100" min_dmx="0" max_dmx="255" physfrom="0.0" physto="25.0"/>
+        </ChannelType>
+        <ChannelType index="3" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="3" highlight_value="100.00">
+          <ChannelFunction name="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" subattribute="DIM" from="0" to="100" min_dmx="0" max_dmx="255" physfrom="0.0" physto="100.0"/>
+        </ChannelType>
+        <ChannelType index="4" attribute="GOBO1" feature="Gobo1" preset="Gobo" coarse="4">
+          <ChannelFunction name="GOBO1" attribute="GOBO1" feature="Gobo1" preset="Gobo" subattribute="GOBO1" from="0" to="100" min_dmx="0" max_dmx="255" physfrom="0" physto="1"/>
+        </ChannelType>
+        <ChannelType index="5" attribute="PRISMA1" feature="BEAM1" preset="Beam" coarse="5">
+          <ChannelFunction name="PRISMA1" attribute="PRISMA1" feature="BEAM1" preset="Beam" subattribute="PRISMA1" from="0" to="100" min_dmx="0" max_dmx="255" physfrom="0" physto="1"/>
+        </ChannelType>
+        <ChannelType index="6" attribute="PRISMA1_POS" feature="BEAM1" preset="Beam" coarse="6">
+          <ChannelFunction name="PRISMA1_POS" attribute="PRISMA1_POS" feature="BEAM1" preset="Beam" subattribute="PRISMA1_POS" from="0" to="100" min_dmx="0" max_dmx="255" physfrom="0" physto="1"/>
+        </ChannelType>
+        <ChannelType index="7" attribute="FROST" feature="BEAM1" preset="Beam" coarse="7">
+          <ChannelFunction name="FROST" attribute="FROST" feature="BEAM1" preset="Beam" subattribute="FROST" from="0" to="100" min_dmx="0" max_dmx="255" physfrom="0" physto="1"/>
+        </ChannelType>
+        <ChannelType index="8" attribute="FOCUS" feature="Focus" preset="Focus" coarse="8" fine="9">
+          <ChannelFunction name="FOCUS" attribute="FOCUS" feature="Focus" preset="Focus" subattribute="FOCUS" from="0" to="100" min_dmx="0" max_dmx="65535" physfrom="0" physto="1"/>
+        </ChannelType>
+        <ChannelType index="9" attribute="PAN" feature="POSITION" preset="POSITION" coarse="10" fine="11" default="32639">
+          <ChannelFunction name="PAN" attribute="PAN" feature="POSITION" preset="POSITION" subattribute="PAN" from="0" to="100" min_dmx="0" max_dmx="65535" physfrom="-270" physto="270"/>
+        </ChannelType>
+        <ChannelType index="10" attribute="TILT" feature="Position" preset="Position" coarse="12" fine="13" default="32639">
+          <ChannelFunction name="TILT" attribute="TILT" feature="Position" preset="Position" subattribute="TILT" from="0" to="100" min_dmx="0" max_dmx="65535" physfrom="-135" physto="135"/>
+        </ChannelType>
+        <ChannelType index="11" attribute="P/T SPEED" feature="CONTROL" preset="CONTROL" coarse="14">
+          <ChannelFunction name="P/T SPEED" attribute="P/T SPEED" feature="CONTROL" preset="CONTROL" subattribute="P/T SPEED" from="0" to="100" min_dmx="0" max_dmx="255" physfrom="0" physto="1"/>
+        </ChannelType>
+        <ChannelType index="12" attribute="MACRO" feature="Control" preset="CONTROL" coarse="15">
+          <ChannelFunction name="MACRO" attribute="MACRO" feature="Control" preset="CONTROL" subattribute="MACRO" from="0" to="100" min_dmx="0" max_dmx="255" physfrom="0" physto="1"/>
+        </ChannelType>
+        <ChannelType index="13" attribute="RESET" feature="CONTROL" preset="CONTROL" coarse="16">
+          <ChannelFunction name="RESET" attribute="RESET" feature="CONTROL" preset="CONTROL" subattribute="RESET" from="0" to="100" min_dmx="0" max_dmx="255" physfrom="0" physto="1">
+            <ChannelSet name="Lamp OFF" from_dmx="100" to_dmx="105"/>
+            <ChannelSet name="Lamp on" from_dmx="200" to_dmx="205"/>
+            <ChannelSet name="Effe Reset" from_dmx="220" to_dmx="235"/>
+            <ChannelSet name="Reset" from_dmx="240" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="14" attribute="Effe" feature="Control" preset="Control" coarse="17">
+          <ChannelFunction name="Effe" attribute="Effe" feature="Control" preset="Control" subattribute="Effe" from="0" to="100" min_dmx="0" max_dmx="255" physfrom="0" physto="1"/>
+        </ChannelType>
+        <ChannelType index="15" attribute="Effe Speed   " feature="Control" preset="CONTROL" coarse="18">
+          <ChannelFunction name="Effe Speed   " attribute="Effe Speed   " feature="Control" preset="CONTROL" subattribute="Effe Speed   " from="0" to="100" min_dmx="0" max_dmx="255" physfrom="0" physto="1"/>
+        </ChannelType>
+      </Module>
+    </Modules>
+  </FixtureType>
+</MA>

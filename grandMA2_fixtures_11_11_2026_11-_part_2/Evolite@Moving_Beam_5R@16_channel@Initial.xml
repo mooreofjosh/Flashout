@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.60/MA.xsd" major_vers="3" minor_vers="9" stream_vers="60">
+	<Info datetime="2022-09-29T23:55:31" showfile="new show 2022-09-29"/>
+	<FixtureType index="37" name="Moving Beam 5R" mode="16 channel"><InfoItems><Info type="Revision" date="2022-12-14T11:53:56">Initial, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>MovB5R</short_name>
+		<manufacturer>Evolite</manufacturer>
+		<short_manufacturer>Evolite</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main module" class="Headmover" beamtype="Spot" beam_angle="3" beam_intensity="10000">
+				<Body>
+					<Size x="0.49" y="0.32" z="0.4"/>
+				</Body>
+				<ChannelType index="0" attribute="PAN" feature="POSITION" preset="POSITION" coarse="1" fine="3" default="32767.5">
+					<ChannelFunction index="0" from="-270" to="270" min_dmx_24="0" max_dmx_24="16777215" physfrom="-270" physto="270" subattribute="PAN" subattribute_user_name="Pan" attribute="PAN" attribute_user_name="Pan" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="center" from_dmx="32768" to_dmx="32768"/>
+						<ChannelSet index="2" name="max" from_dmx="65535" to_dmx="65535"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="TILT" feature="POSITION" preset="POSITION" coarse="2" fine="4" default="32767.5">
+					<ChannelFunction index="0" from="-135" to="135" min_dmx_24="0" max_dmx_24="16777215" physfrom="-135" physto="135" subattribute="TILT" subattribute_user_name="Tilt" attribute="TILT" attribute_user_name="Tilt" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="center" from_dmx="32768" to_dmx="32768"/>
+						<ChannelSet index="2" name="max" from_dmx="65535" to_dmx="65535"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="POSITIONMSPEED" feature="MSPEED" preset="CONTROL" coarse="5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="POSITIONMSPEEDTIME" subattribute_user_name="Time" attribute="POSITIONMSPEED" attribute_user_name="Position" feature="MSPEED" feature_user_name="Mspeed" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="max track" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="min track" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="FROST" feature="BEAM1" preset="BEAM" coarse="6">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="FROST" subattribute_user_name="Frost" attribute="FROST" attribute_user_name="Frost" feature="BEAM1" feature_user_name="Beam" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min frost" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max frost" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="7" default="25.5">
+					<ChannelFunction index="0" from="0" to="19.804" min_dmx_24="0" max_dmx_24="3342335" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="1" to_dmx="50"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="19.804" to="94.314" min_dmx_24="3342336" max_dmx_24="15794175" physfrom="1" physto="33" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min strobe" from_dmx="51" to_dmx="51"/>
+						<ChannelSet index="1" name="max strobe" from_dmx="240" to_dmx="240"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" from="94.314" to="100" min_dmx_24="15794176" max_dmx_24="16777215" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open (2)" from_dmx="241" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="8" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="6" attribute="COLOR1" feature="COLOR1" preset="COLOR" coarse="9" highlight_value="0" snap="true">
+					<ChannelFunction index="0" from="0" to="50" min_dmx_24="0" max_dmx_24="8388607" wheel="2" subattribute="COLOR1" subattribute_user_name="Select" attribute="COLOR1" attribute_user_name="C1" feature="COLOR1" feature_user_name="Color1" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="7" slot_index="0"/>
+						<ChannelSet index="1" name="red" from_dmx="8" to_dmx="15" slot_index="1"/>
+						<ChannelSet index="2" name="yellow" from_dmx="16" to_dmx="23" slot_index="2"/>
+						<ChannelSet index="3" name="light blue" from_dmx="24" to_dmx="31" slot_index="3"/>
+						<ChannelSet index="4" name="green" from_dmx="32" to_dmx="39" slot_index="4"/>
+						<ChannelSet index="5" name="light purple" from_dmx="40" to_dmx="47" slot_index="5"/>
+						<ChannelSet index="6" name="pink" from_dmx="48" to_dmx="55" slot_index="6"/>
+						<ChannelSet index="7" name="yellow green" from_dmx="56" to_dmx="63" slot_index="7"/>
+						<ChannelSet index="8" name="deep purple" from_dmx="64" to_dmx="71" slot_index="8"/>
+						<ChannelSet index="9" name="blue" from_dmx="72" to_dmx="79" slot_index="9"/>
+						<ChannelSet index="10" name="deep yellow" from_dmx="80" to_dmx="87" slot_index="10"/>
+						<ChannelSet index="11" name="brown" from_dmx="88" to_dmx="95" slot_index="11"/>
+						<ChannelSet index="12" name="cold white" from_dmx="96" to_dmx="103" slot_index="12"/>
+						<ChannelSet index="13" name="UV" from_dmx="104" to_dmx="111" slot_index="13"/>
+						<ChannelSet index="14" name="lime" from_dmx="112" to_dmx="127" slot_index="14"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="50" to="100" min_dmx_24="8388608" max_dmx_24="16777215" subattribute="COLOR1_SPIN" subattribute_user_name="Spin" attribute="COLOR1" attribute_user_name="C1" feature="COLOR1" feature_user_name="Color1" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="&gt;&gt;&gt;" from_dmx="128" to_dmx="128" slot_from="30" slot_to="30"/>
+						<ChannelSet index="1" name="Spin 100..1%" from_dmx="129" to_dmx="191" slot_from="28.858" slot_to="1.442" auto_create="false"/>
+						<ChannelSet index="2" name="Spin -1..-100%" from_dmx="192" to_dmx="254" slot_from="-0.3" slot_to="-27.715" auto_create="false"/>
+						<ChannelSet index="3" name="&lt;&lt;&lt;" from_dmx="255" to_dmx="255" slot_from="-28.858" slot_to="-28.858"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="7" attribute="COLORMODE" feature="COLORALL" preset="COLOR" coarse="10" default="0.001">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="COLORMODE" subattribute_user_name="SelectMode" attribute="COLORMODE" attribute_user_name="Mode" feature="COLORALL" feature_user_name="Color" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="Continual positioning" from_dmx="0" to_dmx="127"/>
+						<ChannelSet index="1" name="Positioning" from_dmx="128" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="8" attribute="GOBO1" feature="GOBO1" preset="GOBO" coarse="11" snap="true">
+					<ChannelFunction index="0" from="0" to="50" min_dmx_24="0" max_dmx_24="8388607" wheel="1" subattribute="GOBO1" subattribute_user_name="Select" attribute="GOBO1" attribute_user_name="G1" feature="GOBO1" feature_user_name="Gobo1" preset="GOBO" preset_user_name="Gobo">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="6" slot_index="0"/>
+						<ChannelSet index="1" name="gobo 1" from_dmx="7" to_dmx="13" slot_index="1"/>
+						<ChannelSet index="2" name="gobo 2" from_dmx="14" to_dmx="20" slot_index="2"/>
+						<ChannelSet index="3" name="gobo 3" from_dmx="21" to_dmx="27" slot_index="3"/>
+						<ChannelSet index="4" name="gobo 4" from_dmx="28" to_dmx="34" slot_index="4"/>
+						<ChannelSet index="5" name="gobo 5" from_dmx="35" to_dmx="41" slot_index="5"/>
+						<ChannelSet index="6" name="gobo 6" from_dmx="42" to_dmx="48" slot_index="6"/>
+						<ChannelSet index="7" name="gobo 7" from_dmx="49" to_dmx="55" slot_index="7"/>
+						<ChannelSet index="8" name="gobo 8" from_dmx="56" to_dmx="62" slot_index="8"/>
+						<ChannelSet index="9" name="gobo 9" from_dmx="63" to_dmx="69" slot_index="9"/>
+						<ChannelSet index="10" name="gobo 10" from_dmx="70" to_dmx="76" slot_index="10"/>
+						<ChannelSet index="11" name="gobo 11" from_dmx="77" to_dmx="83" slot_index="11"/>
+						<ChannelSet index="12" name="gobo 12" from_dmx="84" to_dmx="90" slot_index="12"/>
+						<ChannelSet index="13" name="gobo 13" from_dmx="91" to_dmx="97" slot_index="13"/>
+						<ChannelSet index="14" name="gobo 14" from_dmx="98" to_dmx="104" slot_index="14"/>
+						<ChannelSet index="15" name="gobo 15" from_dmx="105" to_dmx="111" slot_index="15"/>
+						<ChannelSet index="16" name="gobo 16" from_dmx="112" to_dmx="118" slot_index="16"/>
+						<ChannelSet index="17" name="gobo 17" from_dmx="119" to_dmx="127" slot_index="17"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="50" to="100" min_dmx_24="8388608" max_dmx_24="16777215" subattribute="GOBO1_SPIN" subattribute_user_name="Spin" attribute="GOBO1" attribute_user_name="G1" feature="GOBO1" feature_user_name="Gobo1" preset="GOBO" preset_user_name="Gobo">
+						<ChannelSet index="0" name="&gt;&gt;&gt;" from_dmx="128" to_dmx="128" slot_from="30" slot_to="30"/>
+						<ChannelSet index="1" name="Spin 100..1%" from_dmx="129" to_dmx="191" slot_from="28.858" slot_to="1.442" auto_create="false"/>
+						<ChannelSet index="2" name="Spin -1..-100%" from_dmx="192" to_dmx="254" slot_from="-0.3" slot_to="-27.715" auto_create="false"/>
+						<ChannelSet index="3" name="&lt;&lt;&lt;" from_dmx="255" to_dmx="255" slot_from="-28.858" slot_to="-28.858"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="9" attribute="GOBO1SHAKE" feature="GOBO1" preset="GOBO" coarse="12">
+					<ChannelFunction index="0" from="0" to="75.098" min_dmx_24="0" max_dmx_24="12582911" subattribute="GOBO1SHAKE" subattribute_user_name="Shake" attribute="GOBO1SHAKE" attribute_user_name="G1*" feature="GOBO1" feature_user_name="Gobo1" preset="GOBO" preset_user_name="Gobo">
+						<ChannelSet index="0" name="no shake" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="min shake" from_dmx="1" to_dmx="1"/>
+						<ChannelSet index="2" name="max shake" from_dmx="191" to_dmx="191"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="75.098" to="100" min_dmx_24="12582912" max_dmx_24="16777215" subattribute="NOFEATURE" subattribute_user_name="No Feature" attribute="DUMMY" attribute_user_name="Dummy" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control"/>
+				</ChannelType>
+				<ChannelType index="10" attribute="FOCUS" feature="FOCUS" preset="FOCUS" coarse="13" default="127.5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="FOCUS" subattribute_user_name="Focus" attribute="FOCUS" attribute_user_name="Focus" feature="FOCUS" feature_user_name="Focus" preset="FOCUS" preset_user_name="Focus">
+						<ChannelSet index="0" name="min focus" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max focus" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="11" attribute="EFFECTWHEEL" feature="EFFECT" preset="BEAM" coarse="14" snap="true">
+					<ChannelFunction index="0" from="0" to="12.353" min_dmx_24="0" max_dmx_24="2097151" wheel="3" subattribute="EFFECTWHEELSELECT" subattribute_user_name="Select" attribute="EFFECTWHEEL" attribute_user_name="E" feature="EFFECT" feature_user_name="Effect" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="0" slot_index="0"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="12.353" to="100" min_dmx_24="2097152" max_dmx_24="16777215" physfrom="10" physto="10" physadditional="8" wheel="3" subattribute="PRISMA1" subattribute_user_name="Prism1" attribute="PRISMA1" attribute_user_name="Prism1" feature="BEAM1" feature_user_name="Beam" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="prism 8" from_dmx="32" to_dmx="255" slot_index="1"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="12" attribute="EFFECTINDEXROTATE" feature="EFFECT" preset="BEAM" coarse="15">
+					<ChannelFunction index="0" from="0" to="50" min_dmx_24="0" max_dmx_24="8388607" physfrom="0" physto="360" subattribute="PRISMA1_POS" subattribute_user_name="Pos" attribute="PRISMA1_POS" attribute_user_name="Pos1" feature="BEAM1" feature_user_name="Beam" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="zero" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max CW" from_dmx="127" to_dmx="127"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="50" to="100" min_dmx_24="8388608" max_dmx_24="16777215" subattribute="PRISMA1_ROT" subattribute_user_name="Rot" attribute="PRISMA1_POS" attribute_user_name="Pos1" feature="BEAM1" feature_user_name="Beam" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="stop" from_dmx="128" to_dmx="128" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="Rotate 1..100%" from_dmx="129" to_dmx="129" slot_from="0.1" slot_to="29.9"/>
+						<ChannelSet index="2" name="&gt;&gt;&gt;" from_dmx="255" to_dmx="255" slot_from="30" slot_to="30"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="13" attribute="LAMPCONTROL" feature="LAMP" preset="CONTROL" coarse="16">
+					<ChannelFunction index="0" from="0" to="39.02" min_dmx_24="0" max_dmx_24="6553599" subattribute="NOFEATURE" subattribute_user_name="No Feature" attribute="DUMMY" attribute_user_name="Dummy" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control"/>
+					<ChannelFunction index="1" from="39.02" to="41.373" min_dmx_24="6553600" max_dmx_24="6946815" subattribute="LAMPOFF" subattribute_user_name="Lamp Off" attribute="LAMPCONTROL" attribute_user_name="LampControl" feature="LAMP" feature_user_name="Lamp" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Lamp off" from_dmx="100" to_dmx="105"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" from="41.373" to="78.236" min_dmx_24="6946816" max_dmx_24="13107199" subattribute="NOFEATURE" subattribute_user_name="No Feature" attribute="DUMMY" attribute_user_name="Dummy" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control"/>
+					<ChannelFunction index="3" from="78.236" to="80.588" min_dmx_24="13107200" max_dmx_24="13500415" subattribute="LAMPON" subattribute_user_name="Lamp On" attribute="LAMPCONTROL" attribute_user_name="LampControl" feature="LAMP" feature_user_name="Lamp" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Lamp on" from_dmx="200" to_dmx="205"/>
+					</ChannelFunction>
+					<ChannelFunction index="4" from="80.588" to="100" min_dmx_24="13500416" max_dmx_24="16777215" subattribute="FIXTUREGLOBALRESET" subattribute_user_name="Reset" attribute="FIXTUREGLOBALRESET" attribute_user_name="FixtureGlobal" feature="RESET" feature_user_name="Reset" preset="CONTROL" preset_user_name="Control"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2">
+			<Wheel index="0" subattribute="GOBO1" attribute="GOBO1" feature="GOBO1" preset="GOBO">
+				<Slot index="0" media_name="open"/>
+				<Slot index="1" media_name="gobo 1"/>
+				<Slot index="2" media_name="gobo 2"/>
+				<Slot index="3" media_name="gobo 3"/>
+				<Slot index="4" media_name="gobo 4"/>
+				<Slot index="5" media_name="gobo 5"/>
+				<Slot index="6" media_name="gobo 6"/>
+				<Slot index="7" media_name="gobo 7"/>
+				<Slot index="8" media_name="gobo 8"/>
+				<Slot index="9" media_name="gobo 9"/>
+				<Slot index="10" media_name="gobo 10"/>
+				<Slot index="11" media_name="gobo 11"/>
+				<Slot index="12" media_name="gobo 12"/>
+				<Slot index="13" media_name="gobo 13"/>
+				<Slot index="14" media_name="gobo 14"/>
+				<Slot index="15" media_name="gobo 15"/>
+				<Slot index="16" media_name="gobo 16"/>
+				<Slot index="17" media_name="gobo 17"/>
+			</Wheel>
+			<Wheel index="1" subattribute="COLOR1" attribute="COLOR1" feature="COLOR1" preset="COLOR">
+				<Slot index="0" media_name="open"/>
+				<Slot index="1" media_name="red" g="0" b="0"/>
+				<Slot index="2" media_name="yellow" b="0"/>
+				<Slot index="3" media_name="light blue" r="185" g="127"/>
+				<Slot index="4" media_name="green" r="0" b="0"/>
+				<Slot index="5" media_name="light purple" g="127"/>
+				<Slot index="6" media_name="pink" g="0" b="127"/>
+				<Slot index="7" media_name="yellow green" r="177" b="0"/>
+				<Slot index="8" media_name="deep purple" r="94" g="0" b="180"/>
+				<Slot index="9" media_name="blue" r="0" g="0"/>
+				<Slot index="10" media_name="deep yellow" r="191" b="0"/>
+				<Slot index="11" media_name="brown" r="86" g="39" b="0"/>
+				<Slot index="12" media_name="cold white" r="208" g="208"/>
+				<Slot index="13" media_name="UV" r="82" g="0" b="176"/>
+				<Slot index="14" media_name="lime" g="186" b="0"/>
+			</Wheel>
+			<Wheel index="2" subattribute="EFFECTWHEELSELECT" attribute="EFFECTWHEEL" feature="EFFECT" preset="BEAM">
+				<Slot index="0" media_name="open"/>
+				<Slot index="1" media_name="prism 8" media_filename="carallon/effects/generic/000900012.png">
+					<media width="64" height="64">
+						<Image>
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wwMDP8kJCT/ODg4/z8/P/8SEhL/Kioq/0BAQP8uLi7/GBgY/wMDA/8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/xcXF/9GRkb/cXFx/5WVlf+0tLT/zs7O/+Li4v/Z2dn/Ozs7/4uLi//q6ur/2NjY/8LCwv+lpaX/
+							g4OD/1xcXP8uLi7/BwcH/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8TExP/TExM/4mJif+/v7//7e3t////////////////////////////5+fn/z09Pf+SkpL/
+							///////////////////////////6+vr/2NjY/6Wlpf9ra2v/LCws/wQEBP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/x4eHv9paWn/tLS0/+7u7v//////////////////////////////////////
+							/////+fn5/89PT3/kpKS////////////////////////////////////////////+/v7/9bW1v+QkJD/
+							QkJC/wkJCf8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/GBgY/2lpaf/BwcH/+Pj4////////////////////////////
+							///////////////////////////n5+f/PT09/5KSkv//////////////////////////////////////
+							/////////////////////+Xl5f+YmJj/PT09/wUFBf8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8ICAj/S0tL/7W1tf/29vb/////////////////
+							////////////////////////////////////////////////5+fn/z09Pf+SkpL/////////////////
+							/////////////////////////////////////////////////////97e3v+AgID/ICAg/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8cHBz/g4OD/+bm5v//////
+							/////////////////////////////////////////////////////////////////////+fn5/89PT3/
+							kpKS////////////////////////////////////////////////////////////////////////////
+							+vr6/729vf9ISEj/BQUF/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP82Njb/
+							tLS0//n5+f//////////////////////////////////////////////////////////////////////
+							///////////n5+f/PT09/5KSkv//////////////////////////////////////////////////////
+							////////////////////////////////4uLi/3R0dP8PDw//AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wEBAf9GRkb/zMzM////////////////////////////////////////////////////////////
+							////////////////////////////////5+fn/z09Pf+SkpL/////////////////////////////////
+							///////////////////////////////////////////////////////////y8vL/jY2N/xcXF/8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wEBAf8EBAT/d3d3//X19f//////////////////////////////////////
+							/////////////////////////////////////////////////////+fn5/89PT3/kpKS////////////
+							////////////////////////////////////////////////////////////////////////////////
+							/////8nJyf8rKyv/AgIC/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP9GRkb/d3d3/ygoKP+Pj4//9fX1////////////
+							///////////////////////////////////////////////////////////////////////////n5+f/
+							PT09/5KSkv//////////////////////////////////////////////////////////////////////
+							/////////////////////9DQ0P9ERET/RERE/3Z2dv8TExP/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP82Njb/zMzM//X19f+Pj4//
+							KCgo/4+Pj//19fX/////////////////////////////////////////////////////////////////
+							////////////////5+fn/z09Pf+SkpL/////////////////////////////////////////////////
+							/////////////////////////////////////9DQ0P9ERET/RERE/9DQ0P/19fX/goKC/woKCv8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8cHBz/
+							tLS0////////////9fX1/4+Pj/8oKCj/jo6O//X19f//////////////////////////////////////
+							/////////////////////////////////////+fn5/89PT3/kpKS////////////////////////////
+							/////////////////////////////////////////////////////9DQ0P9ERET/RERE/9DQ0P//////
+							/////+3t7f9fX1//AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8ICAj/g4OD//n5+f/////////////////19fX/jo6O/ygoKP+Pj4//9fX1////////////
+							///////////////////////////////////////////////////////////n5+f/PT09/5KSkv//////
+							/////////////////////////////////////////////////////////////////////9DQ0P9ERET/
+							RERE/9DQ0P//////////////////////0NDQ/zQ0NP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/S0tL/+bm5v////////////////////////////X19f+Pj4//
+							KCgo/4+Pj//19fX/////////////////////////////////////////////////////////////////
+							5+fn/z09Pf+RkZH/////////////////////////////////////////////////////////////////
+							/////9DQ0P9ERET/RERE/9DQ0P////////////////////////////////+goKD/Dg4O/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/GBgY/7W1tf//////////////////////
+							////////////////9fX1/4+Pj/8oKCj/j4+P//X19f//////////////////////////////////////
+							/////////////////////+fn5/89PT3/kZGR////////////////////////////////////////////
+							/////////////////////9DQ0P9ERET/RERE/9DQ0P//////////////////////////////////////
+							8fHx/2BgYP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/2lpaf/29vb/
+							///////////////////////////////////////////19fX/j4+P/ygoKP+Pj4//9fX1////////////
+							///////////////////////////////////////////n5+f/PT09/5KSkv//////////////////////
+							/////////////////////////////////////9DQ0P9ERET/RERE/9DQ0P//////////////////////
+							//////////////////////////++vr7/HR0d/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/x4eHv/BwcH///////////////////////////////////////////////////////X19f+Pj4//
+							KCgo/4+Pj//19fX/////////////////////////////////////////////////5+fn/z09Pf+SkpL/
+							/////////////////////////////////////////////////////9DQ0P9ERET/RERE/9DQ0P//////
+							////////////////////////////////////////////////+Pj4/2xsbP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP9paWn/+Pj4////////////////////////////////////////////
+							////////////////9fX1/4+Pj/8oKCj/jo6O//X19f//////////////////////////////////////
+							/////+fn5/89PT3/kpKS/////////////////////////////////////////////////9DQ0P9ERET/
+							RERE/9DQ0P////////////////////////////////////////////////////////////////++vr7/
+							Gxsb/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8TExP/tLS0////////////////////////////
+							///////////////////////////////////////////19fX/jo6O/ycnJ/+Ojo7/9fX1////////////
+							///////////////////////////n5+f/PT09/5KSkv//////////////////////////////////////
+							/////9DQ0P9ERET/Q0ND/9DQ0P//////////////////////////////////////////////////////
+							////////////////9vb2/19fX/8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/TExM/+7u7v//////
+							//////////////////////////////////////////////////////////////////////X19f+Pj4//
+							KCgo/4+Pj//19fX/////////////////////////////////5+fn/z09Pf+SkpL/////////////////
+							/////////////////////9DQ0P9ERET/RERE/9DQ0P//////////////////////////////////////
+							//////////////////////////////////////////+hoaH/CAgI/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/4mJif//////////////////////////////////////////////////////////////////////
+							////////////////9fX1/4+Pj/8oKCj/j4+P//X19f///////////////////////////+fn5/89PT3/
+							kpKS/////////////////////////////////9DQ0P9ERET/RERE/9DQ0P//////////////////////
+							////////////////////////////////////////////////////////////////3t7e/zQ0NP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/xcXF/+/v7//////////////////////////////////////////////////
+							///////////////////////////////////////////19fX/j4+P/ygoKP+Pj4//9fX1////////////
+							///////////n5+f/PT09/5KSkv///////////////////////////9DQ0P9ERET/RERE/9DQ0P//////
+							////////////////////////////////////////////////////////////////////////////////
+							//////39/f9qamr/AAAA/wAAAP8AAAD/AAAA/wAAAP9GRkb/7e3t////////////////////////////
+							//////////////////////////////////////////////////////////////////////X19f+Pj4//
+							KCgo/4+Pj//19fX/////////////////5+fn/z09Pf+SkpL//////////////////////9DQ0P9ERET/
+							RERE/9DQ0P//////////////////////////////////////////////////////////////////////
+							////////////////////////////////m5ub/wMDA/8AAAD/AAAA/wAAAP8AAAD/cXFx////////////
+							////////////////////////////////////////////////////////////////////////////////
+							////////////////9fX1/4+Pj/8oKCj/j4+P//X19f///////////+fn5/89PT3/kpKS////////////
+							/////9DQ0P9ERET/RERE/9DQ0P//////////////////////////////////////////////////////
+							/////////////////////////////////////////////////////8bGxv8cHBz/AAAA/wAAAP8AAAD/
+							AAAA/5WVlf//////////////////////////////////////////////////////////////////////
+							///////////////////////////////////////////19fX/j4+P/ygoKP+Pj4//9fX1///////n5+f/
+							PT09/5KSkv///////////9DQ0P9ERET/RERE/9DQ0P//////////////////////////////////////
+							///////////////////////////////////////////////////////////////////////////q6ur/
+							QEBA/wAAAP8AAAD/AAAA/wwMDP+0tLT/////////////////////////////////////////////////
+							//////////////////////////////////////////////////////////////////////X19f+Pj4//
+							KCgo/4+Pj//19fX/5+fn/z09Pf+SkpL//////9DQ0P9ERET/RERE/9DQ0P//////////////////////
+							////////////////////////////////////////////////////////////////////////////////
+							/////////////////f39/19fX/8AAAD/AAAA/wAAAP8kJCT/zs7O////////////////////////////
+							////////////////////////////////////////////////////////////////////////////////
+							////////////////9fX1/4+Pj/8oKCj/j4+P/93d3f89PT3/kpKS/9DQ0P9ERET/RERE/9DQ0P//////
+							////////////////////////////////////////////////////////////////////////////////
+							//////////////////////////////////////////95eXn/AAAA/wAAAP8AAAD/ODg4/+Li4v//////
+							////////////////////////////////////////////////////////////////////////////////
+							///////////////////////////////////////////19fX/j4+P/ygoKP93d3f/NDQ0/2NjY/9ERET/
+							RERE/9DQ0P//////////////////////////////////////////////////////////////////////
+							////////////////////////////////////////////////////////////////jY2N/wAAAP8AAAD/
+							AAAA/z8/P//Z2dn/5+fn/+fn5//n5+f/5+fn/+fn5//n5+f/5+fn/+fn5//n5+f/5+fn/+fn5//n5+f/
+							5ubm/+bm5v/n5+f/5+fn/+fn5//n5+f/5+fn/+fn5//n5+f/5+fn/+fn5//n5+f/5+fn/93d3f93d3f/
+							FxcX/wsLC/8LCwv/NDQ0/7i4uP/n5+f/5+fn/+fn5//n5+f/5+fn/+fn5//n5+f/5+fn/+fn5//n5+f/
+							5+fn/+fn5//n5+f/5+fn/+fn5//n5+f/5+fn/+fn5//n5+f/5+fn/+fn5//n5+f/5+fn/+fn5//n5+f/
+							5+fn/4yMjP8AAAD/AAAA/wAAAP8SEhL/Ozs7/z09Pf89PT3/PT09/z09Pf89PT3/PT09/z09Pf89PT3/
+							PT09/z09Pf89PT3/PT09/zw8PP88PDz/PT09/z09Pf89PT3/PT09/z09Pf89PT3/PT09/z09Pf89PT3/
+							PT09/z09Pf89PT3/NDQ0/wsLC/8AAAD/AAAA/x8fH/89PT3/PT09/z09Pf89PT3/PT09/z09Pf89PT3/
+							PT09/z09Pf89PT3/PT09/z09Pf89PT3/PT09/z09Pf89PT3/PT09/z09Pf89PT3/PT09/z09Pf89PT3/
+							PT09/z09Pf89PT3/PT09/z09Pf8mJib/AAAA/wAAAP8AAAD/Kioq/4uLi/+SkpL/kpKS/5KSkv+SkpL/
+							kpKS/5KSkv+SkpL/kpKS/5KSkv+SkpL/kpKS/5KSkv+SkpL/kpKS/5KSkv+SkpL/kpKS/5KSkv+SkpL/
+							kpKS/5KSkv+SkpL/kpKS/5KSkv+SkpL/kpKS/2NjY/8LCwv/AAAA/wAAAP8zMzP/iIiI/5KSkv+SkpL/
+							kpKS/5KSkv+SkpL/kpKS/5KSkv+SkpL/kpKS/5KSkv+SkpL/kpKS/5GRkf+RkZH/kpKS/5KSkv+SkpL/
+							kpKS/5KSkv+SkpL/kpKS/5KSkv+SkpL/kpKS/5KSkv+SkpL/Wlpa/wAAAP8AAAD/AAAA/0BAQP/q6ur/
+							////////////////////////////////////////////////////////////////////////////////
+							/////////////////////////////////////////////////////9DQ0P9ERET/NDQ0/x8fH/8zMzP/
+							KCgo/4+Pj//19fX/////////////////////////////////////////////////////////////////
+							/////////////////////////////////////////////////////////////////////5WVlf8AAAD/
+							AAAA/wAAAP8uLi7/2NjY////////////////////////////////////////////////////////////
+							/////////////////////////////////////////////////////////////////////9DQ0P9ERET/
+							RERE/7i4uP89PT3/iIiI/4+Pj/8oKCj/j4+P//X19f//////////////////////////////////////
+							////////////////////////////////////////////////////////////////////////////////
+							//////////+Dg4P/AAAA/wAAAP8AAAD/GBgY/8LCwv//////////////////////////////////////
+							////////////////////////////////////////////////////////////////////////////////
+							/////9DQ0P9ERET/RERE/9DQ0P/n5+f/PT09/5KSkv/19fX/j4+P/ygoKP+Pj4//9fX1////////////
+							////////////////////////////////////////////////////////////////////////////////
+							////////////////////////////////bW1t/wAAAP8AAAD/AAAA/wMDA/+lpaX/////////////////
+							////////////////////////////////////////////////////////////////////////////////
+							/////////////////////9DQ0P9ERET/RERE/9DQ0P//////5+fn/z09Pf+SkpL///////X19f+Pj4//
+							KCgo/4+Pj//19fX/////////////////////////////////////////////////////////////////
+							////////////////////////////////////////////////9vb2/1BQUP8AAAD/AAAA/wAAAP8AAAD/
+							g4OD////////////////////////////////////////////////////////////////////////////
+							/////////////////////////////////////9DQ0P9ERET/RERE/9DQ0P///////////+fn5/89PT3/
+							kpKS////////////9fX1/4+Pj/8oKCj/j4+P//X19f//////////////////////////////////////
+							/////////////////////////////////////////////////////////////////////9jY2P8uLi7/
+							AAAA/wAAAP8AAAD/AAAA/1xcXP/6+vr/////////////////////////////////////////////////
+							/////////////////////////////////////////////////////9DQ0P9ERET/RERE/9DQ0P//////
+							///////////n5+f/PT09/5KSkv/////////////////19fX/j4+P/ygoKP+Pj4//9fX1////////////
+							////////////////////////////////////////////////////////////////////////////////
+							//////////+xsbH/DAwM/wAAAP8AAAD/AAAA/wAAAP8uLi7/2NjY////////////////////////////
+							/////////////////////////////////////////////////////////////////////9DQ0P9ERET/
+							RERE/9DQ0P//////////////////////5+fn/z09Pf+SkpL///////////////////////X19f+Pj4//
+							KCgo/4+Pj//19fX/////////////////////////////////////////////////////////////////
+							////////////////////////////////g4OD/wAAAP8AAAD/AAAA/wAAAP8AAAD/BwcH/6Wlpf//////
+							////////////////////////////////////////////////////////////////////////////////
+							/////9DQ0P9ERET/RERE/9DQ0P///////////////////////////+fn5/89PT3/kpKS////////////
+							////////////////9fX1/4+Pj/8oKCj/j4+P//X19f//////////////////////////////////////
+							////////////////////////////////////////////////8vLy/1BQUP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP9ra2v/+/v7////////////////////////////////////////////////////////////
+							/////////////////////9DQ0P9ERET/RERE/9DQ0P/////////////////////////////////n5+f/
+							PT09/5KSkv/////////////////////////////////19fX/j4+P/ygoKP+Pj4//9fX1////////////
+							/////////////////////////////////////////////////////////////////////8DAwP8ZGRn/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/LCws/9bW1v//////////////////////////////////////
+							/////////////////////////////////////8/Pz/9ERET/RERE/9DQ0P//////////////////////
+							////////////////5+fn/z09Pf+SkpL///////////////////////////////////////X19f+Pj4//
+							KCgo/46Ojv/19fX/////////////////////////////////////////////////////////////////
+							//////////+BgYH/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wQEBP+QkJD/////////////////
+							/////////////////////////////////////////////////////9DQ0P9ERET/RERE/9DQ0P//////
+							/////////////////////////////////////+fn5/89PT3/kpKS////////////////////////////
+							////////////////9fX1/46Ojv8oKCj/j4+P//X19f//////////////////////////////////////
+							///////////////////////////h4eH/Ozs7/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							QkJC/+Xl5f///////////////////////////////////////////////////////////9DQ0P9ERET/
+							RERE/9DQ0P/////////////////////////////////////////////////n5+f/PT09/5KSkv//////
+							///////////////////////////////////////////19fX/j4+P/ygoKP+Pj4//9fX1////////////
+							////////////////////////////////////////////////l5eX/wcHB/8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wkJCf+YmJj/////////////////////////////////////////////////
+							/////9DQ0P9ERET/RERE/9DQ0P//////////////////////////////////////////////////////
+							5+fn/z09Pf+SkpL///////////////////////////////////////////////////////X19f+Pj4//
+							KCgo/4+Pj//19fX/////////////////////////////////////////////////5OTk/0NDQ/8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/PT09/97e3v//////////////////////
+							/////////////////////9DQ0P9ERET/RERE/9DQ0P//////////////////////////////////////
+							/////////////////////+fn5/89PT3/kpKS////////////////////////////////////////////
+							////////////////9fX1/4+Pj/8oKCj/j4+P//X19f//////////////////////////////////////
+							/////5KSkv8ICAj/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wUFBf+AgID/
+							+vr6/////////////////////////////////9DQ0P9ERET/RERE/9DQ0P//////////////////////
+							///////////////////////////////////////////m5ub/PDw8/5KSkv//////////////////////
+							///////////////////////////////////////////19fX/j4+P/ygoKP+Pj4//9fX1////////////
+							/////////////////////9DQ0P8wMDD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/ICAg/729vf///////////////////////////9DQ0P9ERET/RERE/9DQ0P//////
+							////////////////////////////////////////////////////////////////5ubm/zw8PP+SkpL/
+							//////////////////////////////////////////////////////////////////////X19f+Pj4//
+							KCgo/4+Pj//19fX///////////////////////Ly8v9oaGj/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP9ISEj/4uLi/////////////////9DQ0P9ERET/
+							RERE/9DQ0P//////////////////////////////////////////////////////////////////////
+							/////+fn5/89PT3/kpKS////////////////////////////////////////////////////////////
+							////////////////9fX1/4+Pj/8oKCj/jo6O//X19f////////////7+/v+dnZ3/Dw8P/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/BQUF/3R0dP/y8vL/
+							/////9DQ0P9ERET/RERE/9DQ0P//////////////////////////////////////////////////////
+							///////////////////////////n5+f/PT09/5KSkv//////////////////////////////////////
+							///////////////////////////////////////////19fX/jo6O/ygoKP+Pj4//9fX1///////ExMT/
+							LCws/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8PDw//jY2N/8nJyf9ERET/RERE/9DQ0P//////////////////////////////////////
+							////////////////////////////////////////////////5+fn/z09Pf+SkpL/////////////////
+							//////////////////////////////////////////////////////////////////////X19f+Pj4//
+							KCgo/4+Pj//Jycn/Pj4+/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/xcXF/8rKyv/RERE/9DQ0P//////////////////////
+							/////////////////////////////////////////////////////////////////////+fn5/89PT3/
+							kpKS////////////////////////////////////////////////////////////////////////////
+							////////////////9fX1/4+Pj/8oKCj/Kysr/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AgIC/3Z2dv/19fX/
+							////////////////////////////////////////////////////////////////////////////////
+							///////////n5+f/PT09/5KSkv//////////////////////////////////////////////////////
+							///////////////////////////////////////////Jycn/Kysr/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8TExP/goKC/+3t7f//////////////////////////////////////////////////////
+							////////////////////////////////5+fn/z09Pf+SkpL/////////////////////////////////
+							//////////////////////////////////////////////////////7+/v/ExMT/Pj4+/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/woKCv9fX1//0NDQ////////////////////////////
+							/////////////////////////////////////////////////////+fn5/89PT3/kpKS////////////
+							//////////////////////////////////////////////////////////////////////Ly8v+dnZ3/
+							LCws/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/zQ0NP+goKD/
+							8fHx///////////////////////////////////////////////////////////////////////n5+f/
+							PT09/5KSkv//////////////////////////////////////////////////////////////////////
+							/////9DQ0P9oaGj/Dw8P/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/Dg4O/2BgYP++vr7/+Pj4////////////////////////////////////////////
+							////////////////5+fn/z09Pf+SkpL/////////////////////////////////////////////////
+							////////////////5OTk/5KSkv8wMDD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/HR0d/2xsbP++vr7/9vb2////////////
+							/////////////////////////////////////+fn5/89PT3/kpKS////////////////////////////
+							///////////////////////////h4eH/l5eX/0NDQ/8ICAj/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							Gxsb/19fX/+hoaH/3t7e//39/f/////////////////////////////////n5+f/PT09/5KSkv//////
+							////////////////////////////////8vLy/8DAwP+BgYH/Ozs7/wcHB/8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/CAgI/zQ0NP9qamr/m5ub/8bGxv/q6ur//f39////////////
+							5+fn/z09Pf+SkpL/////////////////9vb2/9jY2P+xsbH/g4OD/1BQUP8ZGRn/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wMDA/8cHBz/
+							QEBA/19fX/95eXn/jY2N/4yMjP8mJib/Wlpa/5WVlf+Dg4P/bW1t/1BQUP8uLi7/DAwM/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/
+							AAAA/w==
+						</Image>
+					</media>
+				</Slot>
+			</Wheel>
+		</Wheels>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5">
+			<FixtureMacro index="0" name="Lamp off">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="LAMPOFF"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="99" attribute="LAMPCONTROL" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="LAMPCONTROL" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="1" name="Lamp on">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="LAMPON"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="199" attribute="LAMPCONTROL" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="LAMPCONTROL" instance_index="0"/>
+			</FixtureMacro>
+		</FixtureMacroCollect>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

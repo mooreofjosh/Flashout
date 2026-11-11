@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="Cuepix Blinder WW2" mode="2 CH">
+        <InfoItems>
+            <Info type="Revision" date="2023-06-26T17:30:31">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.0</Info>
+            <Info type="Revision" date="2023-06-26T17:25:55">2023-26-06 First Release</Info>
+            <Info>The CUEPIX Blinder WW2™ features (2) long life 100W Warm White 3,200K COB LEDs, a 60° beam angle, RDM (Remote Device Management), individual control of each COB module including manual pan focus, variable and selectable dimming curves, strobe effects, flicker free operation for TV and Film, 3pin and 5pin DMX and Locking Power Cable in/out connections, LCD menu display with 4 button control panel, integrated rigging bracket, and a multi-voltage universal auto switching power supply (100-250v).</Info>
+            <Info type="Revision" date="2023-06-26T17:30:35.122">2023-26-06%20First%20Release, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>Cuepix Blinder WW2</short_name>
+        <manufacturer>Elation</manufacturer>
+        <short_manufacturer>Elation Professional</short_manufacturer>
+        <Modules>
+            <Module name="Left Cob" class="Conventional" beamtype="None" beam_intensity="5900" beam_angle="60">
+                <Model/>
+                <ChannelType coarse="1" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Left Cob Min Dimmer" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Left Cob Max Dimmer" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="Right Cob" class="Conventional" beamtype="None" beam_intensity="5900" beam_angle="60">
+                <Model/>
+                <ChannelType coarse="2" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Right Cob Min Dimmer" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Right Cob Max Dimmer" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+            <Instance module_index="1" patch="1" locked="true"/>
+        </Instances>
+        <Wheels/>
+        <RDMKey ESTAId="8870" DeviceModelId="21"/>
+    </FixtureType>
+</MA>

@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="Strike Array 4C" mode="7Ch Mode">
+        <InfoItems>
+            <Info type="Revision" date="2024-04-01T21:50:10">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2024-04-01T21:46:28">Rev 1.0.8</Info>
+            <Info>STRIKE Array 4C is an IP65-rated audience blinder with four independently focusable pods.  Intense RGBA-WW LED output delivers a full range of color as well as a wide choice of white color temperatures with exceptional color rendering.  Offering the industry leading low end dimming performance our STRIKE Array fixtures are known for as well as Red Shift that warms the color temperature of the light as it dims to emulate a classic tungsten look. Variable PWM and high CRI make this the ideal blinder for broadcast applications. Its proprietary Tool-Free interlocking system enables STRIKE Array 4C to be easily interconnected with multiple Array units for scalable configurations. Omega-Bracket locks are also installed on both the yoke and the rear of the fixture to streamline the truss mounting process.</Info>
+            <Info type="Revision" date="2024-04-01T21:50:24.577">Rev%201.0.8, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>Strike Array 4C</short_name>
+        <manufacturer>Chauvet Professional</manufacturer>
+        <short_manufacturer>Chauvet Professional</short_manufacturer>
+        <Modules>
+            <Module name="Yoke" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model name="Yoke" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <ChannelType coarse="1" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="2" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="3" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="4" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="5" default="0" attribute="COLORRGB4" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB4" attribute="COLORRGB4" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="6" default="255" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="7" default="0" snap="true" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" highlight_value="0">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="3.92" physfrom="1" physto="1" min_dmx_24="0" max_dmx_24="657930">
+                        <ChannelSet name="Shutter Open" from_dmx="0" to_dmx="10" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="3.92" to="100" physfrom="0.1" physto="30" min_dmx_24="723723" max_dmx_24="16777215">
+                        <ChannelSet name="Slow" from_dmx="11" to_dmx="11" slot_from="0.1" slot_to="30"/>
+                        <ChannelSet name="Slow > Fast" from_dmx="12" to_dmx="254"/>
+                        <ChannelSet name="Fast" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+        </Instances>
+        <Wheels>
+            <Wheel index="0" preset="Color" feature="Color" attribute="COLORMACROS" subattribute="COLORMACROS">
+                <Slot index="0" media_name="Medium Yellow" r="255" g="242" b="12"/>
+                <Slot index="1" media_name="Light Yellow" r="255" g="236" b="12"/>
+                <Slot index="2" media_name="Amber Yellow" r="255" g="150" b="1"/>
+                <Slot index="3" media_name="Very Light Amber" r="255" g="219" b="95"/>
+                <Slot index="4" media_name="Light Amber" r="255" g="195" b="124"/>
+                <Slot index="5" media_name="Medium Amber" r="254" g="139" b="0"/>
+                <Slot index="6" media_name="Dark Amber" r="255" g="104" b="0"/>
+                <Slot index="7" media_name="Light Red" r="181" g="26" b="0"/>
+                <Slot index="8" media_name="Medium Red" r="137" g="1" b="0"/>
+                <Slot index="9" media_name="No Color Pink" r="236" g="187" b="208"/>
+                <Slot index="10" media_name="Medium Pink" r="255" g="110" b="157"/>
+                <Slot index="11" media_name="Dark Pink" r="255" g="98" b="164"/>
+                <Slot index="12" media_name="Medium Red Amber" r="239" g="76" b="56"/>
+                <Slot index="13" media_name="Dark Red Amber" r="181" g="23" b="42"/>
+                <Slot index="14" media_name="Magenta" r="254" g="0" b="254"/>
+                <Slot index="15" media_name="Dark Magenta" r="196" g="0" b="78"/>
+                <Slot index="16" media_name="Light Lavender" r="214" g="186" b="254"/>
+                <Slot index="17" media_name="Light Blue" r="0" g="183" b="254"/>
+                <Slot index="18" media_name="Very Light Blue" r="0" g="227" b="240"/>
+                <Slot index="19" media_name="Light Blue 2" r="0" g="183" b="254"/>
+                <Slot index="20" media_name="Blue" r="0" g="0" b="254"/>
+                <Slot index="21" media_name="Medium Blue" r="81" g="134" b="254"/>
+                <Slot index="22" media_name="Dark Blue" r="51" g="0" b="217"/>
+                <Slot index="23" media_name="Indigo" r="0" g="37" b="85"/>
+                <Slot index="24" media_name="Very Dark Blue" r="0" g="71" b="130"/>
+                <Slot index="25" media_name="Very Dark Blue 2" r="0" g="65" b="124"/>
+                <Slot index="26" media_name="Yellow Green" r="150" g="226" b="0"/>
+                <Slot index="27" media_name="Green" r="0" g="254" b="0"/>
+                <Slot index="28" media_name="Turquoise" r="0" g="180" b="171"/>
+                <Slot index="29" media_name="Aqua" r="171" g="232" b="254"/>
+                <Slot index="30" media_name="Blue Green" r="1" g="162" b="159"/>
+            </Wheel>
+        </Wheels>
+        <RDMKey ESTAId="8612" DeviceModelId="2065"/>
+    </FixtureType>
+</MA>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="CUEPIX BLINDER WW4" mode="01 CH ">
+        <InfoItems>
+            <Info type="Revision" date="2023-06-19T20:39:11">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.0</Info>
+            <Info type="Revision" date="2023-06-19T20:34:01">2023-19-06 First Release</Info>
+            <Info>The CUEPIX Blinder WW4™ features (4) long life 100W Warm White 3,200K COB LEDs, a 62° beam angle, RDM (Remote Device Management), individual control of each COB module, manual pan focus, variable and selectable dimming curves, strobe effects, flicker free operation for TV and Film, 3pin and 5pin DMX and Locking Power Cable in/out connections, LCD menu display with 4 button control panel, integrated yoke and side mounting brackets, and a multi-voltage universal auto switching power supply (100-250v).</Info>
+            <Info type="Revision" date="2023-06-19T20:39:17.080">2023-19-06%20First%20Release, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>CUEPIX BLINDER WW4</short_name>
+        <manufacturer>Elation</manufacturer>
+        <short_manufacturer>Elation Professional</short_manufacturer>
+        <Modules>
+            <Module name="Connected Beams" class="Conventional" beamtype="None" beam_intensity="10000" beam_angle="65">
+                <Model/>
+                <Body>
+                    <Size x="0.4" y="0.4" z="0.262"/>
+                </Body>
+                <ChannelType coarse="1" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min Dimmer" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max Dimmer" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+        </Instances>
+        <Wheels/>
+        <RDMKey ESTAId="8870" DeviceModelId="38"/>
+    </FixtureType>
+</MA>

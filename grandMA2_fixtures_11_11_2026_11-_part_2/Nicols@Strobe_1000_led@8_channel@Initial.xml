@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.60/MA.xsd" major_vers="3" minor_vers="9" stream_vers="60">
+	<Info datetime="2022-09-29T23:55:33" showfile="new show 2022-09-29"/>
+	<FixtureType index="24" name="Strobe 1000 led" mode="8 channel"><InfoItems><Info type="Revision" date="2022-12-14T12:01:50">Initial, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>Strb1000</short_name>
+		<manufacturer>Nicols</manufacturer>
+		<short_manufacturer>Nicols</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="Conventional" beamtype="Wash" beam_angle="60" beam_intensity="10000">
+				<Body>
+					<Size x="0.4" y="0.2" z="0.2"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="2" default="254.999" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="1.765" min_dmx_24="0" max_dmx_24="327679" physfrom="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="4"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="1.765" to="99.418" min_dmx_24="327680" max_dmx_24="16646143" physfrom="1" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min strobe" from_dmx="5" to_dmx="5"/>
+						<ChannelSet index="1" name="max strobe" from_dmx="253" to_dmx="253"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" from="99.418" to="100" min_dmx_24="16646144" max_dmx_24="16777215" physfrom="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open" from_dmx="254" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="CHASE" feature="CHASE" preset="CONTROL" coarse="3">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="CHASESELECT" subattribute_user_name="Select" attribute="CHASE" attribute_user_name="Chase" feature="CHASE" feature_user_name="Chase" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Chase close" from_dmx="0" to_dmx="4"/>
+						<ChannelSet index="1" name="min chase" from_dmx="5" to_dmx="5"/>
+						<ChannelSet index="2" name="max chase" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="EFFECT" feature="EFFECT" preset="BEAM" coarse="4">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="EFFECT" subattribute_user_name="Effect" attribute="EFFECT" attribute_user_name="Effect" feature="EFFECT" feature_user_name="Effect" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Effect close" from_dmx="0" to_dmx="4"/>
+						<ChannelSet index="1" name="Dancing" from_dmx="5" to_dmx="46"/>
+						<ChannelSet index="2" name="Lightning" from_dmx="47" to_dmx="89"/>
+						<ChannelSet index="3" name="Random strobe" from_dmx="90" to_dmx="130"/>
+						<ChannelSet index="4" name="Ramp up" from_dmx="131" to_dmx="170"/>
+						<ChannelSet index="5" name="Ramp up-down" from_dmx="171" to_dmx="214"/>
+						<ChannelSet index="6" name="Ramp down" from_dmx="215" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="EFFECTSPEED" feature="MACRO" preset="CONTROL" coarse="5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="EFFECTSPEED" subattribute_user_name="Effect Speed" attribute="EFFECTSPEED" attribute_user_name="Effect Speed" feature="MACRO" feature_user_name="Macro" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="effect speed close" from_dmx="0" to_dmx="4"/>
+						<ChannelSet index="1" name="min effect speed" from_dmx="5" to_dmx="5"/>
+						<ChannelSet index="2" name="max effect speed" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="AUTO" feature="CONTROL" preset="CONTROL" coarse="6">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="AUTO" subattribute_user_name="Auto" attribute="AUTO" attribute_user_name="Auto" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Auto close" from_dmx="0" to_dmx="4"/>
+						<ChannelSet index="1" name="Auto open" from_dmx="5" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="6" attribute="SOUND" feature="CONTROL" preset="CONTROL" coarse="7">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="SOUND" subattribute_user_name="Sound" attribute="SOUND" attribute_user_name="Sound" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Sound close" from_dmx="0" to_dmx="4"/>
+						<ChannelSet index="1" name="Sound open" from_dmx="5" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="7" attribute="LIGHTING" feature="MACRO" preset="CONTROL" coarse="8">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="LIGHTING" subattribute_user_name="Lighting" attribute="LIGHTING" attribute_user_name="Lighting" feature="MACRO" feature_user_name="Macro" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Lighting close" from_dmx="0" to_dmx="4"/>
+						<ChannelSet index="1" name="min lighting" from_dmx="5" to_dmx="5"/>
+						<ChannelSet index="2" name="max lighting" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

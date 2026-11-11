@@ -1,0 +1,445 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="DJ Solo" mode="24ch">
+        <InfoItems>
+            <Info type="Revision" date="2024-06-06T09:47:21">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2023-12-14T23:31:36">New fixture type based on DJ Solo from FLASH</Info>
+            <Info type="Revision" date="2023-12-15T00:03:30">FLASH_v1</Info>
+            <Info type="Revision" date="2024-03-05T11:50:04">FLASH_v2</Info>
+            <Info type="Revision" date="2024-03-05T11:51:36">FLASH_v3</Info>
+            <Info type="Revision" date="2024-03-05T12:09:48">FLASH_v4</Info>
+            <Info type="Revision" date="2024-03-05T12:20:59">FLASH_v5</Info>
+            <Info type="Revision" date="2024-03-05T17:11:11">FLASH_v6</Info>
+            <Info type="Revision" date="2024-06-06T09:47:30.399">New%20fixture%20type%20based%20on%20DJ%20Solo%20from%20FLASH, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>DJ Solo</short_name>
+        <manufacturer>Flash</manufacturer>
+        <short_manufacturer>FLASH</short_manufacturer>
+        <Modules>
+            <Module name="Main Module" class="None" beamtype="None" beam_intensity="" beam_angle="1">
+                <Model name="Base" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="Pan">
+                    <AxisFactors x="0" y="0" z="1"/>
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <ChannelType coarse="1" fine="2" default="37348" attribute="PAN" feature="POSITION" preset="POSITION">
+                    <ChannelFunction subattribute="PAN" attribute="PAN" feature="POSITION" preset="POSITION" from="-360" to="270" physfrom="-360" physto="270" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Home" from_dmx="37348" to_dmx="37348"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="5" default="0" attribute="COLOR1" feature="COLOR1" preset="COLOR" highlight_value="0">
+                    <ChannelFunction subattribute="COLOR1" attribute="COLOR1" feature="COLOR1" preset="COLOR" from="0" to="49.8" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="8355711" wheel="1">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="9" slot_from="0" slot_to="0.1" slot_index="0"/>
+                        <ChannelSet name="Red" from_dmx="10" to_dmx="19" slot_from="0.1" slot_to="0.2" slot_index="1"/>
+                        <ChannelSet name="Light blue" from_dmx="20" to_dmx="29" slot_from="0.2" slot_to="0.3" slot_index="2"/>
+                        <ChannelSet name="Green" from_dmx="30" to_dmx="39" slot_from="0.3" slot_to="0.4" slot_index="3"/>
+                        <ChannelSet name="Yellow" from_dmx="40" to_dmx="49" slot_from="0.4" slot_to="0.5" slot_index="4"/>
+                        <ChannelSet name="Magenta" from_dmx="50" to_dmx="59" slot_from="0.5" slot_to="0.6" slot_index="5"/>
+                        <ChannelSet name="Blue" from_dmx="60" to_dmx="69" slot_from="0.6" slot_to="0.7" slot_index="6"/>
+                        <ChannelSet name="Orange" from_dmx="70" to_dmx="79" slot_from="0.7" slot_to="0.8" slot_index="7"/>
+                        <ChannelSet name="CTO" from_dmx="80" to_dmx="89" slot_from="0.8" slot_to="0.9" slot_index="8"/>
+                        <ChannelSet name="CTB" from_dmx="90" to_dmx="127" slot_from="0.9" slot_to="1" slot_index="9"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="COLOR1_SPIN" attribute="COLOR1" feature="COLOR1" preset="COLOR" from="49.8" to="100" physfrom="0" physto="0.16666666666666666" min_dmx_24="8421504" max_dmx_24="16777215" wheel="1">
+                        <ChannelSet name="spin CW" from_dmx="128" to_dmx="189"/>
+                        <ChannelSet name="spin stop" from_dmx="190" to_dmx="193"/>
+                        <ChannelSet name="spin CCW" from_dmx="194" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="6" default="0" attribute="GOBO1" feature="GOBO1" preset="GOBO">
+                    <ChannelFunction subattribute="GOBO1" attribute="GOBO1" feature="GOBO1" preset="GOBO" from="0" to="30.98" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="5197647" wheel="2">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="9" slot_from="0" slot_to="0.125" slot_index="0"/>
+                        <ChannelSet name="Gobo 1" from_dmx="10" to_dmx="19" slot_from="0.125" slot_to="0.25" slot_index="1"/>
+                        <ChannelSet name="Gobo 2" from_dmx="20" to_dmx="29" slot_from="0.25" slot_to="0.375" slot_index="2"/>
+                        <ChannelSet name="Gobo 3" from_dmx="30" to_dmx="39" slot_from="0.375" slot_to="0.5" slot_index="3"/>
+                        <ChannelSet name="Gobo 4" from_dmx="40" to_dmx="49" slot_from="0.5" slot_to="0.625" slot_index="4"/>
+                        <ChannelSet name="Gobo 5" from_dmx="50" to_dmx="59" slot_from="0.625" slot_to="0.75" slot_index="5"/>
+                        <ChannelSet name="Gobo 6" from_dmx="60" to_dmx="69" slot_from="0.75" slot_to="0.875" slot_index="6"/>
+                        <ChannelSet name="Gobo 7" from_dmx="70" to_dmx="79" slot_from="0.875" slot_to="1" slot_index="7"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="Gobo1WheelShake" attribute="GOBO1" feature="GOBO1" preset="GOBO" from="30.98" to="85.88" physfrom="0" physto="1" min_dmx_24="5263440" max_dmx_24="14408667" wheel="2">
+                        <ChannelSet name="Gobo 1 shake" from_dmx="80" to_dmx="99" slot_index="1"/>
+                        <ChannelSet name="Gobo 2 shake" from_dmx="100" to_dmx="119" slot_index="2"/>
+                        <ChannelSet name="Gobo 3 shake" from_dmx="120" to_dmx="139" slot_index="3"/>
+                        <ChannelSet name="Gobo 4 shake" from_dmx="140" to_dmx="159" slot_index="4"/>
+                        <ChannelSet name="Gobo 5 shake" from_dmx="160" to_dmx="179" slot_index="5"/>
+                        <ChannelSet name="Gobo 6 shake" from_dmx="180" to_dmx="199" slot_index="6"/>
+                        <ChannelSet name="Gobo 7 shake" from_dmx="200" to_dmx="219" slot_index="7"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="GOBO1_SPIN" attribute="GOBO1" feature="GOBO1" preset="GOBO" from="85.88" to="100" physfrom="0" physto="0.16666666666666666" min_dmx_24="14474460" max_dmx_24="16777215" wheel="2">
+                        <ChannelSet name="spin slow" from_dmx="220" to_dmx="220"/>
+                        <ChannelSet name="spin fast" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="7" default="129" attribute="GOBO1_POS" feature="GOBO1" preset="GOBO">
+                    <ChannelFunction subattribute="GOBO1_POS" attribute="GOBO1_POS" feature="GOBO1" preset="GOBO" from="0" to="1.18" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="197379" wheel="2"/>
+                    <ChannelFunction subattribute="GOBO1_ROT" attribute="GOBO1_POS" feature="GOBO1" preset="GOBO" from="1.18" to="100" physfrom="0" physto="0.16666666666666666" min_dmx_24="263172" max_dmx_24="16777215" wheel="2">
+                        <ChannelSet name="<<<" from_dmx="4" to_dmx="127"/>
+                        <ChannelSet name="><" from_dmx="128" to_dmx="131"/>
+                        <ChannelSet name=">>>" from_dmx="132" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="8" default="0" attribute="GOBO2" feature="GOBO2" preset="GOBO">
+                    <ChannelFunction subattribute="GOBO2" attribute="GOBO2" feature="GOBO2" preset="GOBO" from="0" to="45.49" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="7631988" wheel="3">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="8" slot_from="0" slot_to="0.076923" slot_index="0"/>
+                        <ChannelSet name="Gobo 1" from_dmx="9" to_dmx="17" slot_from="0.076923" slot_to="0.153846" slot_index="1"/>
+                        <ChannelSet name="Gobo 2" from_dmx="18" to_dmx="26" slot_from="0.153846" slot_to="0.230769" slot_index="2"/>
+                        <ChannelSet name="Gobo 3" from_dmx="27" to_dmx="35" slot_from="0.230769" slot_to="0.307692" slot_index="3"/>
+                        <ChannelSet name="Gobo 4" from_dmx="36" to_dmx="44" slot_from="0.307692" slot_to="0.384615" slot_index="4"/>
+                        <ChannelSet name="Gobo 5" from_dmx="45" to_dmx="53" slot_from="0.384615" slot_to="0.461538" slot_index="5"/>
+                        <ChannelSet name="Gobo 6" from_dmx="54" to_dmx="62" slot_from="0.461538" slot_to="0.538462" slot_index="6"/>
+                        <ChannelSet name="Gobo 7" from_dmx="63" to_dmx="71" slot_from="0.538462" slot_to="0.615385" slot_index="7"/>
+                        <ChannelSet name="Gobo 8" from_dmx="72" to_dmx="80" slot_from="0.615385" slot_to="0.692308" slot_index="8"/>
+                        <ChannelSet name="Gobo 9" from_dmx="81" to_dmx="89" slot_from="0.692308" slot_to="0.769231" slot_index="9"/>
+                        <ChannelSet name="Gobo 10" from_dmx="90" to_dmx="98" slot_from="0.769231" slot_to="0.846154" slot_index="10"/>
+                        <ChannelSet name="Gobo 11" from_dmx="99" to_dmx="107" slot_from="0.846154" slot_to="0.923077" slot_index="11"/>
+                        <ChannelSet name="Gobo 12" from_dmx="108" to_dmx="116" slot_from="0.923077" slot_to="1" slot_index="12"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="Gobo2WheelShake" attribute="GOBO2" feature="GOBO2" preset="GOBO" from="45.49" to="87.84" physfrom="0" physto="1" min_dmx_24="7697781" max_dmx_24="14737632" wheel="3">
+                        <ChannelSet name="Gobo 1 shake" from_dmx="117" to_dmx="125" slot_index="1"/>
+                        <ChannelSet name="Gobo 2 shake" from_dmx="126" to_dmx="134" slot_index="2"/>
+                        <ChannelSet name="Gobo 3 shake" from_dmx="135" to_dmx="143" slot_index="3"/>
+                        <ChannelSet name="Gobo 4 shake" from_dmx="144" to_dmx="152" slot_index="4"/>
+                        <ChannelSet name="Gobo 5 shake" from_dmx="153" to_dmx="161" slot_index="5"/>
+                        <ChannelSet name="Gobo 6 shake" from_dmx="162" to_dmx="170" slot_index="6"/>
+                        <ChannelSet name="Gobo 7 shake" from_dmx="171" to_dmx="179" slot_index="7"/>
+                        <ChannelSet name="Gobo 8 shake" from_dmx="180" to_dmx="188" slot_index="8"/>
+                        <ChannelSet name="Gobo 9 shake" from_dmx="189" to_dmx="197" slot_index="9"/>
+                        <ChannelSet name="Gobo 10 shake" from_dmx="198" to_dmx="206" slot_index="10"/>
+                        <ChannelSet name="Gobo 11 shake" from_dmx="207" to_dmx="215" slot_index="11"/>
+                        <ChannelSet name="Gobo 12 shake" from_dmx="216" to_dmx="224" slot_index="12"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="GOBO2_SPIN" attribute="GOBO2" feature="GOBO2" preset="GOBO" from="87.84" to="100" physfrom="0" physto="0.16666666666666666" min_dmx_24="14803425" max_dmx_24="16777215" wheel="3">
+                        <ChannelSet name="spin slow" from_dmx="225" to_dmx="225"/>
+                        <ChannelSet name="spin fast" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="9" default="255" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" highlight_value="100">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="24.71" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="4144959">
+                        <ChannelSet name="Closed" from_dmx="0" to_dmx="31" slot_from="0" slot_to="0"/>
+                        <ChannelSet name="Open" from_dmx="32" to_dmx="63" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="24.71" to="37.25" physfrom="1" physto="20" min_dmx_24="4210752" max_dmx_24="6250335">
+                        <ChannelSet name="str >" from_dmx="64" to_dmx="64"/>
+                        <ChannelSet name="str >>>" from_dmx="95" to_dmx="95"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="37.25" to="49.8" physfrom="1" physto="1" min_dmx_24="6316128" max_dmx_24="8355711">
+                        <ChannelSet name="Open" from_dmx="96" to_dmx="127"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_PULSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="49.8" to="62.35" physfrom="1" physto="20" min_dmx_24="8421504" max_dmx_24="10461087">
+                        <ChannelSet name="pulse" from_dmx="128" to_dmx="159"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="62.35" to="74.9" physfrom="1" physto="1" min_dmx_24="10526880" max_dmx_24="12566463">
+                        <ChannelSet name="Open" from_dmx="160" to_dmx="191"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_RANDOM" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="74.9" to="87.45" physfrom="1" physto="20" min_dmx_24="12632256" max_dmx_24="14671839">
+                        <ChannelSet name="rnd " from_dmx="192" to_dmx="223"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="87.45" to="100" physfrom="1" physto="1" min_dmx_24="14737632" max_dmx_24="16777215">
+                        <ChannelSet name="Open" from_dmx="224" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="11" default="127" attribute="FOCUS" feature="FOCUS" preset="FOCUS">
+                    <ChannelFunction subattribute="FOCUS" attribute="FOCUS" feature="FOCUS" preset="FOCUS" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="12" default="127" attribute="ZOOM" feature="FOCUS" preset="FOCUS">
+                    <ChannelFunction subattribute="ZOOM" attribute="ZOOM" feature="FOCUS" preset="FOCUS" from="0" to="100" physfrom="2.5" physto="14" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="13" default="0" attribute="PRISMA1" feature="BEAM1" preset="BEAM">
+                    <ChannelFunction subattribute="PRISMA1" attribute="PRISMA1" feature="BEAM1" preset="BEAM" from="0" to="1.96" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="328965" wheel="4">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="5" slot_from="0" slot_to="0" slot_index="0"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="PRISMA1" attribute="PRISMA1" feature="BEAM1" preset="BEAM" from="2" to="49.8" physfrom="11.99" physto="11.99" min_dmx_24="394758" max_dmx_24="8355711" wheel="4" physadditional="3">
+                        <ChannelSet name="Prism" from_dmx="6" to_dmx="127" slot_from="1" slot_to="1" slot_index="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="PRISMA1_ROT" attribute="PRISMA1" feature="BEAM1" preset="BEAM" from="49.8" to="100" physfrom="-60" physto="60" min_dmx_24="8421504" max_dmx_24="16777215" wheel="4">
+                        <ChannelSet name="<<<" from_dmx="128" to_dmx="189"/>
+                        <ChannelSet name="><" from_dmx="190" to_dmx="193"/>
+                        <ChannelSet name=">>>" from_dmx="194" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="14" default="0" attribute="FROST" feature="BEAM1" preset="BEAM">
+                    <ChannelFunction subattribute="FROST" attribute="FROST" feature="BEAM1" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="199"/>
+                        <ChannelSet name="Frost" from_dmx="200" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="15" default="0" attribute="POSITIONMSPEED" feature="Control" preset="Control">
+                    <ChannelFunction subattribute="POSITIONMSPEED" attribute="POSITIONMSPEED" feature="Control" preset="Control" from="0" to="88.24" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="14803425">
+                        <ChannelSet name="fast" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="slow" from_dmx="225" to_dmx="225"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="BLACKOUT" attribute="POSITIONMSPEED" feature="Control" preset="Control" from="88.24" to="96.08" physfrom="0" physto="1" min_dmx_24="14869218" max_dmx_24="16119285">
+                        <ChannelSet name="B/O on movement" from_dmx="226" to_dmx="235"/>
+                        <ChannelSet name="B/O on all functions" from_dmx="236" to_dmx="245"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="POSITIONMSPEED" feature="Control" preset="Control" from="96.08" to="100" physfrom="0" physto="1" min_dmx_24="16185078" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="16" default="0" snap="true" attribute="CONTROL" feature="Control" preset="Control">
+                    <ChannelFunction subattribute="CONTROL" attribute="CONTROL" feature="Control" preset="Control" from="0" to="7.45" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="1250067"/>
+                    <ChannelFunction subattribute="FANSPEED" attribute="CONTROL" feature="Control" preset="Control" from="7.45" to="15.29" physfrom="0" physto="1" min_dmx_24="1315860" max_dmx_24="2565927">
+                        <ChannelSet name="Fan auto" from_dmx="20" to_dmx="20"/>
+                        <ChannelSet name="Fan slow-fast" from_dmx="21" to_dmx="38"/>
+                        <ChannelSet name="Fan slowest" from_dmx="39" to_dmx="39"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="FIXTUREGLOBALRESET" attribute="CONTROL" feature="Control" preset="Control" from="15.29" to="32.94" physfrom="0" physto="1" min_dmx_24="2631720" max_dmx_24="5526612">
+                        <ChannelSet name="Total reset" from_dmx="80" to_dmx="84"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="POSITIONRESET" attribute="CONTROL" feature="Control" preset="Control" from="32.94" to="34.12" physfrom="0" physto="1" min_dmx_24="5592405" max_dmx_24="5723991">
+                        <ChannelSet name="P/T reset" from_dmx="85" to_dmx="87"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="COLORWHEELRESET" attribute="CONTROL" feature="Control" preset="Control" from="34.12" to="35.29" physfrom="0" physto="1" min_dmx_24="5789784" max_dmx_24="5921370">
+                        <ChannelSet name="Color reset" from_dmx="88" to_dmx="90"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="GOBOWHEELRESET" attribute="CONTROL" feature="Control" preset="Control" from="35.29" to="36.47" physfrom="0" physto="1" min_dmx_24="5987163" max_dmx_24="6118749">
+                        <ChannelSet name="Gobo reset" from_dmx="91" to_dmx="93"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="NOFEATURE" attribute="CONTROL" feature="Control" preset="Control" from="36.47" to="37.65" physfrom="0" physto="1" min_dmx_24="6184542" max_dmx_24="6316128"/>
+                    <ChannelFunction subattribute="BEAMRESET" attribute="CONTROL" feature="Control" preset="Control" from="37.65" to="38.82" physfrom="0" physto="1" min_dmx_24="6381921" max_dmx_24="6513507">
+                        <ChannelSet name="Beam reset" from_dmx="97" to_dmx="99"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="CONTROL" attribute="CONTROL" feature="Control" preset="Control" from="38.82" to="100" physfrom="0" physto="1" min_dmx_24="6579300" max_dmx_24="16777215">
+                        <ChannelSet name="Program 1" from_dmx="100" to_dmx="108"/>
+                        <ChannelSet name="Program 2" from_dmx="109" to_dmx="117"/>
+                        <ChannelSet name="Program 3" from_dmx="118" to_dmx="126"/>
+                        <ChannelSet name="Program 4" from_dmx="127" to_dmx="135"/>
+                        <ChannelSet name="Program 5" from_dmx="136" to_dmx="144"/>
+                        <ChannelSet name="Program 6" from_dmx="145" to_dmx="153"/>
+                        <ChannelSet name="Program 7" from_dmx="154" to_dmx="162"/>
+                        <ChannelSet name="Program 8" from_dmx="163" to_dmx="171"/>
+                        <ChannelSet name="Program 9" from_dmx="172" to_dmx="180"/>
+                        <ChannelSet name="Sound program 1" from_dmx="181" to_dmx="189"/>
+                        <ChannelSet name="Sound program 2" from_dmx="190" to_dmx="198"/>
+                        <ChannelSet name="Sound program 3" from_dmx="199" to_dmx="207"/>
+                        <ChannelSet name="Sound program 4" from_dmx="208" to_dmx="216"/>
+                        <ChannelSet name="Sound program 5" from_dmx="217" to_dmx="225"/>
+                        <ChannelSet name="Sound program 6" from_dmx="226" to_dmx="234"/>
+                        <ChannelSet name="Sound program 7" from_dmx="235" to_dmx="243"/>
+                        <ChannelSet name="Sound program 8" from_dmx="244" to_dmx="252"/>
+                        <ChannelSet name="Sound program 9" from_dmx="253" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="Yoke" class="Headmover" beamtype="Wash" beam_intensity="1000" beam_angle="25">
+                <Model>
+                    <Model name="Yoke" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                        <Vertices>cAAAAJaHrLwGEeq8Z7PXPcBaZ7/AMNu+I1vfvgAAAAAAAAAAJxWoPAYR6rxns9c9PDl+PzvZ8L1LXN++AAAAAAAAAAAnFag87RDqvDUG4T2/Wmc/uDDbvi5b374AAAAAAAAAAJWHrLztEOq8NQbhPTw5fr852fC9P1zfvgAAAAAAAAAAloesvBY3wDxDs9c9LDl+v4Xd8D1VXd++AAAAAAAAAACWh6y8BhHqvGez1z3AWme/wDDbviNb374AAAAAAAAAAJWHrLztEOq8NQbhPTw5fr852fC9P1zfvgAAAAAAAAAAlYesvD43wDw8BuE9wlpnv7gw2z4ZX9++AAAAAAAAAAAnFag8FjfAPEOz1z29Wmc/vzDbPiRf374AAAAAAAAAACcVqDw+N8A8PAbhPSs5fj+D3fA9Yl3fvgAAAAAAAAAAJxWoPAYR6rxns9c9PDl+PzvZ8L1LXN++AAAAAAAAAAAnFag87RDqvDUG4T2/Wmc/uDDbvi5b374AAAAAAAAAAHgSD76e4Ck9PCm9vLepeb/y+TA+BP4SvwAAAAAAAAAAB5ewvZ7gKT08Kb28ud58P592Hz7ipdu+AAAAAAAAAAAIl7C9nuApPRyJ4b0Memg/Zvx2PgpOR78AAAAAAAAAAMdX272e4Ck9HonhvRR3br//Og495F5MvwAAAAAAAAAAeBIPvp7gKT08Kb28t6l5v/L5MD4E/hK/AAAAAAAAAAB3Eg++nuApPd2MxDxKpWu/pEgSPiiPlL0AAAAAAAAAAAojsr2e4Ck91bHXPTUzzb70kYI+Ky7jPgAAAAAAAAAAYy61vZ7gKT3l1C49QgB8P2J4KT71Hf6+AAAAAAAAAAB3Eg++nuApPd2MxDxKpWu/pEgSPiiPlL0AAAAAAAAAAANCkr2e4Ck91nGVPZp9bj6kN589GOyzvwAAAAAAAAAAdxIPvp7gKT3djMQ8SqVrv6RIEj4oj5S9AAAAAAAAAAAHl7C9MBcqvTwpvbypn3w/O/Ukvh84174AAAAAAAAAAAiXsL0wFyq9HInhvRayfj836Re9Qq4HvwAAAAAAAAAACJewvZ7gKT0cieG9DHpoP2b8dj4KTke/AAAAAAAAAADHV9u9nuApPR6J4b0Ud26//zoOPeReTL8AAAAAAAAAAMdX270wFyq9HonhvSGOT79Ggly+bgd7vwAAAAAAAAAAeBIPvjAXKr08Kb28DwB2v/U9KL5rsii/AAAAAAAAAAB4Eg++nuApPTwpvby3qXm/8vkwPgT+Er8AAAAAAAAAAAiXsL2e4Ck9HInhvQx6aD9m/HY+Ck5HvwAAAAAAAAAACJewvTAXKr0cieG9FrJ+PzfpF71Crge/AAAAAAAAAAB3Eg++MBcqvd2MxDwLone/2ZbhvSHYVL4AAAAAAAAAAHcSD76e4Ck93YzEPEqla7+kSBI+KI+UvQAAAAAAAAAAdxIPvp7gKT3djMQ8SqVrv6RIEj4oj5S9AAAAAAAAAAB3Eg++MBcqvd2MxDwLone/2ZbhvSHYVL4AAAAAAAAAAAojsr0wFyq91bHXPXde074k4ba9n7nwPgAAAAAAAAAACiOyvZ7gKT3Vsdc9NTPNvvSRgj4rLuM+AAAAAAAAAAAKI7K9MBcqvdWx1z13XtO+JOG2vZ+58D4AAAAAAAAAAANCkr2e4Ck91nGVPZp9bj6kN589GOyzvwAAAAAAAAAAA0KSvTAXKr3WcZU9Y2RkPpRCmL4Qq66/AAAAAAAAAABjLrW9MBcqveXULj0CwHE/jIqKvgKVH78AAAAAAAAAAGMutb2e4Ck95dQuPUIAfD9ieCk+9R3+vgAAAAAAAAAAYy61vTAXKr3l1C49AsBxP4yKir4ClR+/AAAAAAAAAAADQpK9MBcqvdZxlT1jZGQ+lEKYvhCrrr8AAAAAAAAAAAojsr0wFyq91bHXPXde074k4ba9n7nwPgAAAAAAAAAAdxIPvjAXKr3djMQ8C6J3v9mW4b0h2FS+AAAAAAAAAAB4Eg++MBcqvTwpvbwPAHa/9T0ovmuyKL8AAAAAAAAAAHcSD74wFyq93YzEPAuid7/ZluG9IdhUvgAAAAAAAAAAYy61vTAXKr3l1C49AsBxP4yKir4ClR+/AAAAAAAAAADHV9u9MBcqvR6J4b0hjk+/RoJcvm4He78AAAAAAAAAAAiXsL0wFyq9HInhvRayfj836Re9Qq4HvwAAAAAAAAAAB5ewvTAXKr08Kb28qZ98Pzv1JL4fONe+AAAAAAAAAADHV9u9MBcqvR6J4b0hjk+/RoJcvm4He78AAAAAAAAAAMu9sT2e4Ck9Qym9vBreer9HYEs+lkbXvgAAAAAAAAAA2aUPPp7gKT1DKb281NB3P52y5T0mHim/AAAAAAAAAACKftw9nuApPR6J4b0cjk8/R4JcPnAHe78AAAAAAAAAAMq9sT2e4Ck9IInhvRiyfr886Rc9QK4HvwAAAAAAAAAAy72xPZ7gKT1DKb28Gt56v0dgSz6WRte+AAAAAAAAAACKftw9nuApPR6J4b0cjk8/R4JcPnAHe78AAAAAAAAAANqlDz6e4Ck9z4zEPLkvdT+/5zU+tSdXvgAAAAAAAAAA2qUPPp7gKT3PjMQ8uS91P7/nNT61J1e+AAAAAAAAAAApVbY9nuApPejULj02snW/J6NTPildIL8AAAAAAAAAANVJsz2e4Ck91bHXPXle0z4i4bY9m7nwPgAAAAAAAAAAymiTPZ7gKT3WcZU9dGRkvpRCmD4Qq66/AAAAAAAAAADLvbE9MBcqvUMpvby73ny/n3Yfvt2l274AAAAAAAAAAMu9sT2e4Ck9Qym9vBreer9HYEs+lkbXvgAAAAAAAAAAyr2xPZ7gKT0gieG9GLJ+vzzpFz1Arge/AAAAAAAAAADKvbE9MBcqvSCJ4b0Qemi/Z/x2vgpOR78AAAAAAAAAAIp+3D0wFyq9HonhvRF3bj8COw695l5MvwAAAAAAAAAA2aUPPp7gKT1DKb281NB3P52y5T0mHim/AAAAAAAAAADZpQ8+MBcqvUMpvby1qXk/8vkwvgb+Er8AAAAAAAAAAMq9sT0wFyq9IInhvRB6aL9n/Ha+Ck5HvwAAAAAAAAAAyr2xPZ7gKT0gieG9GLJ+vzzpFz1Arge/AAAAAAAAAACKftw9nuApPR6J4b0cjk8/R4JcPnAHe78AAAAAAAAAAIp+3D0wFyq9HonhvRF3bj8COw695l5MvwAAAAAAAAAAyr2xPTAXKr0gieG9EHpov2f8dr4KTke/AAAAAAAAAACKftw9nuApPR6J4b0cjk8/R4JcPnAHe78AAAAAAAAAANqlDz4wFyq9z4zEPEqlaz+kSBK+QI+UvQAAAAAAAAAA1UmzPZ7gKT3Vsdc9eV7TPiLhtj2bufA+AAAAAAAAAADVSbM9MBcqvdWx1z03M80+9ZGCviUu4z4AAAAAAAAAANqlDz4wFyq9z4zEPEqlaz+kSBK+QI+UvQAAAAAAAAAA1UmzPZ7gKT3Vsdc9eV7TPiLhtj2bufA+AAAAAAAAAADKaJM9MBcqvdZxlT2rfW6+pDefvRfss78AAAAAAAAAAMpokz2e4Ck91nGVPXRkZL6UQpg+EKuuvwAAAAAAAAAAKVW2PZ7gKT3o1C49NrJ1vyejUz4pXSC/AAAAAAAAAAApVbY9MBcqvejULj1GAHy/Y3gpvu8d/r4AAAAAAAAAAMpokz0wFyq91nGVPat9br6kN5+9F+yzvwAAAAAAAAAAKVW2PZ7gKT3o1C49NrJ1vyejUz4pXSC/AAAAAAAAAADVSbM9MBcqvdWx1z03M80+9ZGCviUu4z4AAAAAAAAAAMpokz0wFyq91nGVPat9br6kN5+9F+yzvwAAAAAAAAAAKVW2PTAXKr3o1C49RgB8v2N4Kb7vHf6+AAAAAAAAAADapQ8+MBcqvc+MxDxKpWs/pEgSvkCPlL0AAAAAAAAAAMu9sT0wFyq9Qym9vLvefL+fdh++3aXbvgAAAAAAAAAA2aUPPjAXKr1DKb28tal5P/L5ML4G/hK/AAAAAAAAAADapQ8+MBcqvc+MxDxKpWs/pEgSvkCPlL0AAAAAAAAAAMq9sT0wFyq9IInhvRB6aL9n/Ha+Ck5HvwAAAAAAAAAAin7cPTAXKr0eieG9EXduPwI7Dr3mXky/AAAAAAAAAADZpQ8+MBcqvUMpvby1qXk/8vkwvgb+Er8AAAAAAAAAAANCkr0wFyq91nGVPWNkZD6UQpi+EKuuvwAAAAAAAAAA1UmzPTAXKr3Vsdc9NzPNPvWRgr4lLuM+AAAAAAAAAAAKI7K9MBcqvdWx1z13XtO+JOG2vZ+58D4AAAAAAAAAAANCkr2e4Ck91nGVPZp9bj6kN589GOyzvwAAAAAAAAAAymiTPZ7gKT3WcZU9dGRkvpRCmD4Qq66/AAAAAAAAAAADQpK9MBcqvdZxlT1jZGQ+lEKYvhCrrr8AAAAAAAAAAANCkr2e4Ck91nGVPZp9bj6kN589GOyzvwAAAAAAAAAAA0KSvZ7gKT3WcZU9mn1uPqQ3nz0Y7LO/AAAAAAAAAAAKI7K9MBcqvdWx1z13XtO+JOG2vZ+58D4AAAAAAAAAANVJsz0wFyq91bHXPTczzT71kYK+JS7jPgAAAAAAAAAA1UmzPZ7gKT3Vsdc9eV7TPiLhtj2bufA+AAAAAAAAAAAKI7K9nuApPdWx1z01M82+9JGCPisu4z4AAAAAAAAAANVJsz2e4Ck91bHXPXle0z4i4bY9m7nwPgAAAAAAAAAA</Vertices>
+                        <Faces>zAAAAAAAAQACAAMAAAACAAQABQAGAAcABAAGAAgABAAHAAkACAAHAAoACAAJAAsACgAJAAwADQAOABEADQAMABYAEwANAA0AFwAYABkADQAYAA0AKgAXACUAFgAmACoAKQAXAC8AFwApABcALwAyACoAJwApACcAKAApADAALwAxABIAEwAUABIAFQATABIAPwBAAGoAEgBAAD0APgA/AD4AQAA/ADYAPgA9ADYANwA4ADcANgA8AEcARgA8AE4ARwA8AE4APABPAEcARQBGAEUAOwBGADkAOgA7AFsAXQBOAFkAWgBbAFkAWwBcAGMAWgBkAGUAYwBkAF0AXgBfAF4AXQBgAGEAYgBgAA8AEAAOABoAGwAcAB0AGgAcABoAHgAbAB4AHwAbAB0AHAAgACEAHQAgACIAIwAkAG4AJABvACsALAAtAC4AKwAtADMANAA1AEEAQgBDAEQAQQBDAEEAVgBCAFYAVQBCAFYAVwBYAGgAaQBXAFMAVABVAGYAZwBTAEgASQBKAEsATABNAFAAUQBSAGsAbABtAA==</Faces>
+                        <SubSets>
+                            <SubSet3d material_index="0" FaceStart="0" FacesCount="68"/>
+                        </SubSets>
+                        <Materials>
+                            <Material3d name="black" specularPower="0.1">
+                                <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                <DiffuseInking x="0" y="0" z="0"/>
+                                <EmissiveInking x="0" y="0" z="0"/>
+                                <SurfaceTexture/>
+                                <AlphaTexture/>
+                            </Material3d>
+                        </Materials>
+                        <Offset>
+                            <Location x="0.000000" y="0.000000" z="-0.192275"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Head" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="Tilt">
+                            <AxisFactors x="-1" y="0" z="-0"/>
+                            <Vertices>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</Vertices>
+                            <Faces>8AAAAAAAAQACAAMABAAFAAYABwAIAAkACgALAAwADQAOAA8AEAARABIAEwAUABUAFgAXABgAGQAaABsAHAAdAB4AHwAgACEAIgAjACQAJQAmACcAKAApACoAKwAsAC0ALgAvADAAMQAyADMANAA1ADYANwA4ADkAOgA7ADwAPQA+AD8AQABBAEIAQwBEAEUARgBHAEgASQBKAEsATABNAE4ATwBQAFEAUgBTAFQAVQBWAFcAWABZAFoAWwBcAF0AXgBfAGAAYQBiAIsAYABiAIsAYgCMAIoAiwCMAGMAZABlAGYAZwBoAGkAagBrAGwAbQBuAG8AcABxAHIAcwB0AHUAdgB3AHgAeQB6AHsAfAB9AH4AfwCAAIEAggCDAIQAhQCGAIcAiACJAI0AjgCPAJAAkQCSAJMAlACVAJYAlwCYAJkAmgCbAJwAnQCeAJ8AoAChAKIAowCkAKUApgCnAKgAqQCqAKsArACtAK4ArwCwALEAsgCzALQAtQC2ALcAuAC5ALoAuwC8AL0AvgC/AMAAwQDCAMMAxADFAMYAxwDIAMkAygDLAMwAzQDOAM8A0ADRANIA0wDUANUA1gDXANgA2QDaANsA3ADdAN4A3wDgAOEA4gDjAOQA5QDmAOcA6ADpAA==</Faces>
+                            <SubSets>
+                                <SubSet3d material_index="0" FaceStart="0" FacesCount="80"/>
+                            </SubSets>
+                            <Materials>
+                                <Material3d name="black" specularPower="0.1">
+                                    <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                    <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                    <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                    <DiffuseInking x="0" y="0" z="0"/>
+                                    <EmissiveInking x="0" y="0" z="0"/>
+                                    <SurfaceTexture/>
+                                    <AlphaTexture/>
+                                </Material3d>
+                            </Materials>
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="-0.067518"/>
+                                <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <Model name="Beam" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                                <Vertices>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</Vertices>
+                                <Faces>2AAAAAAAAQACAAkAAAACAAEAVAACAFQATwACAE8ASgACAEoARQACAEUAQAACAEAAOwACADsANgACADYAMQACADEALAACACwAJwACACcAIgACACIAHQACAA4ACQACABMADgACABgAEwACAB0AGAACAAMABAAFAFwAAwAFAAYABwAIAA0ABwAGAAgABwBYAFgABwBTAFMABwBOAE4ABwBJAEkABwBEAEQABwA/AD8ABwA6ADoABwA1ADUABwAwADAABwArACsABwAmABIABwANABcABwASABwABwAXACEABwAcACYABwAhAAoACwAMAF0ACgAMAA8AEAARAF4ADwARABQAFQAWAF8AFAAWABkAGgAbAGAAGQAbAB4AHwAgAGEAHgAgACMAJAAlAGIAIwAlACgAKQAqAGMAKAAqAC0ALgAvAGQALQAvADIAMwA0AGUAMgA0ADcAOAA5AGYANwA5ADwAPQA+AGcAPAA+AEEAQgBDAGgAQQBDAEYARwBIAGkARgBIAEsATABNAGoASwBNAFAAUQBSAGsAUABSAFUAVgBXAGwAVQBXAFkAWgBbAG0AWQBbAA==</Faces>
+                                <SubSets>
+                                    <SubSet3d material_index="0" FaceStart="0" FacesCount="72"/>
+                                </SubSets>
+                                <Materials>
+                                    <Material3d name="black" specularPower="0.1">
+                                        <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                        <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                        <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                        <DiffuseInking x="0" y="0" z="0"/>
+                                        <EmissiveInking x="0" y="0" z="0"/>
+                                        <SurfaceTexture/>
+                                        <AlphaTexture/>
+                                    </Material3d>
+                                </Materials>
+                                <Offset>
+                                    <Location x="0.000000" y="0.000000" z="-0.106967"/>
+                                    <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                                    <Scaling x="1" y="1" z="1"/>
+                                </Offset>
+                                <Model name="Beam" model_type="Beam">
+                                    <Offset>
+                                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                        <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                        <Scaling x="1" y="1" z="1"/>
+                                    </Offset>
+                                    <BeamClippingDistance>-0.066</BeamClippingDistance>
+                                    <BeamDiameterAtOffset>0.080000</BeamDiameterAtOffset>
+                                </Model>
+                            </Model>
+                        </Model>
+                    </Model>
+                </Model>
+                <Body>
+                    <Size x="0.16" y="0.16" z="1.17"/>
+                </Body>
+                <ChannelType coarse="3" fine="4" default="32768" attribute="TILT" feature="POSITION" preset="POSITION">
+                    <ChannelFunction subattribute="TILT" attribute="TILT" feature="POSITION" preset="POSITION" from="-110" to="110" physfrom="-110" physto="110" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Home" from_dmx="32768" to_dmx="32768"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="10" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Closed" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Open" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="Ring" class="Conventional" beamtype="Wash" beam_intensity="500" beam_angle="25">
+                <Model/>
+                <ChannelType coarse="17" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="18" default="0" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="19" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="20" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="21" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="22" default="0" attribute="COLOREFFECT" feature="Color" preset="Color">
+                    <ChannelFunction subattribute="COLOREFFECT" attribute="COLOREFFECT" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="23" default="0" attribute="GOBO3" feature="GOBO3" preset="GOBO">
+                    <ChannelFunction subattribute="GOBO3" attribute="GOBO3" feature="GOBO3" preset="GOBO" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" wheel="5">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="15" slot_from="0" slot_to="0.055556" slot_index="0"/>
+                        <ChannelSet name="Shape 1" from_dmx="16" to_dmx="29" slot_from="0.055556" slot_to="0.111111" slot_index="1"/>
+                        <ChannelSet name="Shape 2" from_dmx="30" to_dmx="43" slot_from="0.111111" slot_to="0.166667" slot_index="2"/>
+                        <ChannelSet name="Shape 3" from_dmx="44" to_dmx="57" slot_from="0.166667" slot_to="0.222222" slot_index="3"/>
+                        <ChannelSet name="Shape 4" from_dmx="58" to_dmx="71" slot_from="0.222222" slot_to="0.277778" slot_index="4"/>
+                        <ChannelSet name="Shape 5" from_dmx="72" to_dmx="85" slot_from="0.277778" slot_to="0.333333" slot_index="5"/>
+                        <ChannelSet name="Shape 6" from_dmx="86" to_dmx="99" slot_from="0.333333" slot_to="0.388889" slot_index="6"/>
+                        <ChannelSet name="Shape 7" from_dmx="100" to_dmx="113" slot_from="0.388889" slot_to="0.444444" slot_index="7"/>
+                        <ChannelSet name="Shape 8" from_dmx="114" to_dmx="127" slot_from="0.444444" slot_to="0.5" slot_index="8"/>
+                        <ChannelSet name="Shape 9" from_dmx="128" to_dmx="143" slot_from="0.5" slot_to="0.555556" slot_index="9"/>
+                        <ChannelSet name="Shape 10" from_dmx="144" to_dmx="155" slot_from="0.555556" slot_to="0.611111" slot_index="10"/>
+                        <ChannelSet name="Shape 11" from_dmx="156" to_dmx="169" slot_from="0.611111" slot_to="0.666667" slot_index="11"/>
+                        <ChannelSet name="Shape 12" from_dmx="170" to_dmx="183" slot_from="0.666667" slot_to="0.722222" slot_index="12"/>
+                        <ChannelSet name="Shape 13" from_dmx="184" to_dmx="197" slot_from="0.722222" slot_to="0.777778" slot_index="13"/>
+                        <ChannelSet name="Shape 14" from_dmx="198" to_dmx="211" slot_from="0.777778" slot_to="0.833333" slot_index="14"/>
+                        <ChannelSet name="Shape 15" from_dmx="212" to_dmx="225" slot_from="0.833333" slot_to="0.888889" slot_index="15"/>
+                        <ChannelSet name="Shape 16" from_dmx="226" to_dmx="239" slot_from="0.888889" slot_to="0.944444" slot_index="16"/>
+                        <ChannelSet name="Shape 17" from_dmx="240" to_dmx="255" slot_from="0.944444" slot_to="1" slot_index="17"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="24" default="0" attribute="GOBO1_POS" feature="GOBO1" preset="GOBO">
+                    <ChannelFunction subattribute="GOBO1_ROT" attribute="GOBO1_POS" feature="GOBO1" preset="GOBO" from="0" to="100" physfrom="0" physto="0.16666666666666666" min_dmx_24="0" max_dmx_24="16777215" wheel="5"/>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+            <Instance module_index="1" patch="1" locked="true"/>
+            <Instance module_index="2" patch="1" locked="true"/>
+        </Instances>
+        <Wheels>
+            <Wheel index="0" preset="COLOR" feature="COLOR1" attribute="COLOR1" subattribute="COLOR1">
+                <Slot index="0" media_name="Open" r="254" g="249" b="255"/>
+                <Slot index="1" media_name="Red" r="138" g="0" b="2"/>
+                <Slot index="2" media_name="Light blue" r="0" g="192" b="255"/>
+                <Slot index="3" media_name="Green" r="0" g="152" b="0"/>
+                <Slot index="4" media_name="Yellow" r="255" g="227" b="0"/>
+                <Slot index="5" media_name="Magenta" r="252" g="0" b="255"/>
+                <Slot index="6" media_name="Blue" r="54" g="0" b="255"/>
+                <Slot index="7" media_name="Orange" r="255" g="139" b="0"/>
+                <Slot index="8" media_name="CTO" r="248" g="221" b="233"/>
+                <Slot index="9" media_name="CTB" r="147" g="176" b="255"/>
+            </Wheel>
+            <Wheel index="1" preset="GOBO" feature="GOBO1" attribute="GOBO1" subattribute="GOBO1">
+                <Slot index="0" media_name="Open"/>
+                <Slot index="1" media_name="Gobo 1"/>
+                <Slot index="2" media_name="Gobo 2"/>
+                <Slot index="3" media_name="Gobo 3"/>
+                <Slot index="4" media_name="Gobo 4"/>
+                <Slot index="5" media_name="Gobo 5"/>
+                <Slot index="6" media_name="Gobo 6"/>
+                <Slot index="7" media_name="Gobo 7"/>
+            </Wheel>
+            <Wheel index="2" preset="GOBO" feature="GOBO2" attribute="GOBO2" subattribute="GOBO2">
+                <Slot index="0" media_name="Open"/>
+                <Slot index="1" media_name="Gobo 1"/>
+                <Slot index="2" media_name="Gobo 2"/>
+                <Slot index="3" media_name="Gobo 3"/>
+                <Slot index="4" media_name="Gobo 4"/>
+                <Slot index="5" media_name="Gobo 5"/>
+                <Slot index="6" media_name="Gobo 6"/>
+                <Slot index="7" media_name="Gobo 7"/>
+                <Slot index="8" media_name="Gobo 8"/>
+                <Slot index="9" media_name="Gobo 9"/>
+                <Slot index="10" media_name="Gobo 10"/>
+                <Slot index="11" media_name="Gobo 11"/>
+                <Slot index="12" media_name="Gobo 12"/>
+            </Wheel>
+            <Wheel index="3" preset="BEAM" feature="BEAM1" attribute="PRISMA1" subattribute="PRISMA1">
+                <Slot index="0" media_name="Open"/>
+                <Slot index="1" media_name="Prism"/>
+            </Wheel>
+            <Wheel index="4" preset="Color" feature="Color" attribute="COLORMACROS" subattribute="COLORMACROS">
+                <Slot index="0" media_name="Open" r="254" g="255" b="255"/>
+                <Slot index="1" media_name="Shape 1" r="254" g="255" b="255"/>
+                <Slot index="2" media_name="Shape 2" r="254" g="255" b="255"/>
+                <Slot index="3" media_name="Shape 3" r="254" g="255" b="255"/>
+                <Slot index="4" media_name="Shape 4" r="254" g="255" b="255"/>
+                <Slot index="5" media_name="Shape 5" r="254" g="255" b="255"/>
+                <Slot index="6" media_name="Shape 6" r="254" g="255" b="255"/>
+                <Slot index="7" media_name="Shape 7" r="254" g="255" b="255"/>
+                <Slot index="8" media_name="Shape 8" r="254" g="255" b="255"/>
+                <Slot index="9" media_name="Shape 9" r="254" g="255" b="255"/>
+                <Slot index="10" media_name="Shape 10" r="254" g="255" b="255"/>
+                <Slot index="11" media_name="Shape 11" r="254" g="255" b="255"/>
+                <Slot index="12" media_name="Shape 12" r="254" g="255" b="255"/>
+                <Slot index="13" media_name="Shape 13" r="254" g="255" b="255"/>
+                <Slot index="14" media_name="Shape 14" r="254" g="255" b="255"/>
+                <Slot index="15" media_name="Shape 15" r="254" g="255" b="255"/>
+                <Slot index="16" media_name="Shape 16" r="254" g="255" b="255"/>
+                <Slot index="17" media_name="Shape 17" r="254" g="255" b="255"/>
+            </Wheel>
+        </Wheels>
+    </FixtureType>
+</MA>

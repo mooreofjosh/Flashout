@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.5.0/MA.xsd" major_vers="3" minor_vers="5" stream_vers="0">
+	<Info datetime="2018-12-13T10:23:00" showfile="fixturetype_showven"/>
+	<FixtureType index="1" name="Sparkular BT01" mode="00"><InfoItems><Info type="Revision" date="2018-12-13T10:12:16">made for version 1.1, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>Spklr</short_name>
+		<manufacturer>Showven</manufacturer>
+		<short_manufacturer>Showven</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="None" beamtype="Effect" beam_angle="10" beam_intensity="10000">
+				<ChannelType index="0" attribute="HEIGHT" feature="FOUNTAIN" preset="CONTROL" coarse="1">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="HEIGHT" subattribute_user_name="Height" attribute="HEIGHT" attribute_user_name="Height" feature="FOUNTAIN" feature_user_name="Fountain" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Off" from_dmx="0" to_dmx="15"/>
+						<ChannelSet index="1" name="Height 1" from_dmx="16" to_dmx="39"/>
+						<ChannelSet index="2" name="Height 2" from_dmx="40" to_dmx="63"/>
+						<ChannelSet index="3" name="Height 3" from_dmx="64" to_dmx="87"/>
+						<ChannelSet index="4" name="Height 4" from_dmx="88" to_dmx="111"/>
+						<ChannelSet index="5" name="Height 5" from_dmx="112" to_dmx="135"/>
+						<ChannelSet index="6" name="Height 6" from_dmx="136" to_dmx="159"/>
+						<ChannelSet index="7" name="Height 7" from_dmx="160" to_dmx="183"/>
+						<ChannelSet index="8" name="Height 8" from_dmx="184" to_dmx="207"/>
+						<ChannelSet index="9" name="Height 9" from_dmx="208" to_dmx="231"/>
+						<ChannelSet index="10" name="Height 10" from_dmx="232" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="CONTROL" feature="FOUNTAIN" preset="CONTROL" coarse="2">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="CONTROL" subattribute_user_name="CONTROL" attribute="CONTROL" attribute_user_name="CONTROL" feature="FOUNTAIN" feature_user_name="Fountain" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Cleaning" from_dmx="60" to_dmx="80"/>
+						<ChannelSet index="1" name="Emergency-Stop" from_dmx="20" to_dmx="40"/>
+						<ChannelSet index="2" name="Pre-Heat Off" from_dmx="0" to_dmx="10"/>
+						<ChannelSet index="3" name="Pre-Heat On" from_dmx="240" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

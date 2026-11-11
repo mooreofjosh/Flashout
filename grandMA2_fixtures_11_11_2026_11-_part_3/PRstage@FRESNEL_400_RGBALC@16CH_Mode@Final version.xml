@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="FRESNEL 400 RGBALC" mode="16CH Mode">
+        <InfoItems>
+            <Info type="Revision" date="2025-05-20T08:40:37">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2023-06-22T10:14:34">N/A</Info>
+            <Info type="Revision" date="2025-05-16T10:48:15">ver1</Info>
+            <Info type="Revision" date="2025-05-19T12:50:02">Release 1</Info>
+            <Info type="Revision" date="2025-05-20T04:53:51">Final</Info>
+            <Info type="Revision" date="2025-05-20T04:54:07">Release 2</Info>
+            <Info type="Revision" date="2025-05-20T08:36:46">Final</Info>
+            <Info>Professional stage light Fresnel 400 RGBALC by PRstage. 
+Have 3 mode: 6CH, 9CH,16CH</Info>
+            <Info type="Revision" date="2025-05-20T08:40:41.328">Final%20version, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>FRESNEL 400 RGBALC</short_name>
+        <manufacturer>PRstage</manufacturer>
+        <short_manufacturer>PRstage</short_manufacturer>
+        <Modules>
+            <Module name="FR 400 RGBALC" class="None" beamtype="None" beam_intensity="" index="0" beam_angle="1">
+                <Model name="FR 400 RGBALC" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <ChannelType coarse="1" fine="2" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="3" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="4" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="5" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="6" default="255" attribute="COLORRGB4" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB4" attribute="COLORRGB4" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="7" default="255" attribute="COLORRGB19" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB19" attribute="COLORRGB19" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="8" default="255" attribute="COLORRGB12" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB12" attribute="COLORRGB12" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="9" default="0" attribute="CTO" feature="CTC" preset="COLOR">
+                    <ChannelFunction subattribute="CTO" attribute="CTO" feature="CTC" preset="COLOR" from="0" to="0" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="0">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="0"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="CTO" attribute="CTO" feature="CTC" preset="COLOR" from="0" to="100" physfrom="2000" physto="10000" min_dmx_24="65793" max_dmx_24="16777215">
+                        <ChannelSet name="2000 k" from_dmx="1" to_dmx="1"/>
+                        <ChannelSet name="10000 k" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="10" default="0" snap="true" attribute="COLOR1" feature="COLOR1" preset="COLOR">
+                    <ChannelFunction subattribute="COLOR1" attribute="COLOR1" feature="COLOR1" preset="COLOR" from="0" to="100" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="16777215" wheel="1">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="0" slot_index="0"/>
+                        <ChannelSet name="Red" from_dmx="1" to_dmx="5" slot_index="1"/>
+                        <ChannelSet name="Green" from_dmx="6" to_dmx="11" slot_index="2"/>
+                        <ChannelSet name="Blue" from_dmx="12" to_dmx="17" slot_index="3"/>
+                        <ChannelSet name="Medium Yellow" from_dmx="18" to_dmx="23" slot_index="4"/>
+                        <ChannelSet name="Magenta" from_dmx="24" to_dmx="29" slot_index="5"/>
+                        <ChannelSet name="Azure Blue" from_dmx="30" to_dmx="35" slot_index="6"/>
+                        <ChannelSet name="White" from_dmx="36" to_dmx="41" slot_index="7"/>
+                        <ChannelSet name="Light Chocolate" from_dmx="42" to_dmx="47" slot_index="8"/>
+                        <ChannelSet name="Blue Green" from_dmx="48" to_dmx="53" slot_index="9"/>
+                        <ChannelSet name="Sky Blue" from_dmx="54" to_dmx="59" slot_index="10"/>
+                        <ChannelSet name="Medium Straw" from_dmx="60" to_dmx="65" slot_index="11"/>
+                        <ChannelSet name="Straw Tint" from_dmx="66" to_dmx="71" slot_index="12"/>
+                        <ChannelSet name="Dark Bastard Amber" from_dmx="72" to_dmx="83" slot_index="13"/>
+                        <ChannelSet name="White 1" from_dmx="84" to_dmx="89" slot_index="14"/>
+                        <ChannelSet name="Medium Yellow 1" from_dmx="90" to_dmx="101" slot_index="15"/>
+                        <ChannelSet name="Medium Amber" from_dmx="102" to_dmx="107" slot_index="16"/>
+                        <ChannelSet name="Medium Chocolate" from_dmx="108" to_dmx="113" slot_index="17"/>
+                        <ChannelSet name="Scarlet" from_dmx="114" to_dmx="119" slot_index="18"/>
+                        <ChannelSet name="Deep Salmon" from_dmx="120" to_dmx="125" slot_index="19"/>
+                        <ChannelSet name="Deep Golden Amber" from_dmx="126" to_dmx="131" slot_index="20"/>
+                        <ChannelSet name="Golden Amber" from_dmx="132" to_dmx="137" slot_index="21"/>
+                        <ChannelSet name="Salmon" from_dmx="138" to_dmx="143" slot_index="22"/>
+                        <ChannelSet name="Henna Sky" from_dmx="144" to_dmx="149" slot_index="23"/>
+                        <ChannelSet name="Medium Purple" from_dmx="150" to_dmx="155" slot_index="24"/>
+                        <ChannelSet name="Brodway Purple" from_dmx="156" to_dmx="161" slot_index="25"/>
+                        <ChannelSet name="Dark Red" from_dmx="162" to_dmx="167" slot_index="26"/>
+                        <ChannelSet name="Red 1" from_dmx="168" to_dmx="173" slot_index="27"/>
+                        <ChannelSet name="Rose Pink" from_dmx="174" to_dmx="179" slot_index="28"/>
+                        <ChannelSet name="Rose Purple" from_dmx="180" to_dmx="185" slot_index="29"/>
+                        <ChannelSet name="Dark Rose Purple" from_dmx="186" to_dmx="191" slot_index="30"/>
+                        <ChannelSet name="Tropikal Mager" from_dmx="192" to_dmx="197" slot_index="31"/>
+                        <ChannelSet name="Storaro Magenta" from_dmx="198" to_dmx="203" slot_index="32"/>
+                        <ChannelSet name="Storaro Cyan" from_dmx="204" to_dmx="209" slot_index="33"/>
+                        <ChannelSet name="Storaro Indigo" from_dmx="210" to_dmx="215" slot_index="34"/>
+                        <ChannelSet name="Kelly Green" from_dmx="216" to_dmx="221" slot_index="35"/>
+                        <ChannelSet name="White 2" from_dmx="222" to_dmx="255" slot_index="36"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="11" default="0" attribute="COLORHSB2" feature="COLORHSB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORHSB2" attribute="COLORHSB2" feature="COLORHSB" preset="COLOR" from="0" to="100" physfrom="100" physto="0" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="100 Saturation" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="0 Saturation" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="12" default="0" attribute="COLORMACROS" feature="Color" preset="Color">
+                    <ChannelFunction subattribute="COLORMACROS" attribute="COLORMACROS" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="4" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="5"/>
+                        <ChannelSet name="Strong Color Spin" from_dmx="6" to_dmx="55"/>
+                        <ChannelSet name="Color Pulse" from_dmx="56" to_dmx="155"/>
+                        <ChannelSet name="Soft Color Spin" from_dmx="156" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="13" default="128" attribute="ColorMacro1Rate" feature="Color" preset="Color">
+                    <ChannelFunction subattribute="ColorMacro1Rate" attribute="ColorMacro1Rate" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="14" default="0" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="1.96" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="328965">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="5" slot_from="0" slot_to="0"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="1.96" to="100" physfrom="0" physto="25" min_dmx_24="394758" max_dmx_24="16777215">
+                        <ChannelSet name="Strobe" from_dmx="6" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="15" default="128" attribute="ZOOM" feature="FOCUS" preset="FOCUS">
+                    <ChannelFunction subattribute="ZOOM" attribute="ZOOM" feature="FOCUS" preset="FOCUS" from="0" to="100" physfrom="50" physto="15" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Max Zoom" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min Zoom" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="16" default="0" attribute="ZOOMRESET" feature="RESET" preset="CONTROL">
+                    <ChannelFunction subattribute="ZOOMRESET" attribute="ZOOMRESET" feature="RESET" preset="CONTROL" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="No Feature" from_dmx="0" to_dmx="199"/>
+                        <ChannelSet name="Reset" from_dmx="200" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+        </Instances>
+        <Wheels>
+            <Wheel index="0" preset="COLOR" feature="COLOR1" attribute="COLOR1" subattribute="COLOR1">
+                <Slot index="0" media_name="Open" r="254" g="255" b="255"/>
+                <Slot index="1" media_name="Red" r="255" g="0" b="0"/>
+                <Slot index="2" media_name="Green" r="0" g="255" b="0"/>
+                <Slot index="3" media_name="Blue" r="0" g="0" b="254"/>
+                <Slot index="4" media_name="Medium Yellow" r="195" g="244" b="25"/>
+                <Slot index="5" media_name="Magenta" r="254" g="0" b="254"/>
+                <Slot index="6" media_name="Azure Blue" r="105" g="173" b="190"/>
+                <Slot index="7" media_name="White" r="254" g="255" b="255"/>
+                <Slot index="8" media_name="Light Chocolate" r="203" g="182" b="24"/>
+                <Slot index="9" media_name="Blue Green" r="96" g="170" b="141"/>
+                <Slot index="10" media_name="Sky Blue" r="29" g="87" b="135"/>
+                <Slot index="11" media_name="Medium Straw" r="213" g="216" b="34"/>
+                <Slot index="12" media_name="Straw Tint" r="218" g="223" b="112"/>
+                <Slot index="13" media_name="Dark Bastard Amber" r="185" g="167" b="109"/>
+                <Slot index="14" media_name="White 1" r="254" g="255" b="255"/>
+                <Slot index="15" media_name="Medium Yellow 1" r="188" g="229" b="21"/>
+                <Slot index="16" media_name="Medium Amber" r="255" g="181" b="25"/>
+                <Slot index="17" media_name="Medium Chocolate" r="187" g="129" b="9"/>
+                <Slot index="18" media_name="Scarlet" r="162" g="76" b="58"/>
+                <Slot index="19" media_name="Deep Salmon" r="168" g="73" b="76"/>
+                <Slot index="20" media_name="Deep Golden Amber" r="194" g="104" b="5"/>
+                <Slot index="21" media_name="Golden Amber" r="209" g="19" b="0"/>
+                <Slot index="22" media_name="Salmon" r="196" g="105" b="65"/>
+                <Slot index="23" media_name="Henna Sky" r="153" g="6" b="0"/>
+                <Slot index="24" media_name="Medium Purple" r="120" g="37" b="117"/>
+                <Slot index="25" media_name="Brodway Purple" r="168" g="61" b="121"/>
+                <Slot index="26" media_name="Dark Red" r="191" g="0" b="0"/>
+                <Slot index="27" media_name="Red 1" r="255" g="0" b="0"/>
+                <Slot index="28" media_name="Rose Pink" r="162" g="49" b="82"/>
+                <Slot index="29" media_name="Rose Purple" r="154" g="106" b="165"/>
+                <Slot index="30" media_name="Dark Rose Purple" r="112" g="93" b="138"/>
+                <Slot index="31" media_name="Tropikal Mager" r="176" g="75" b="163"/>
+                <Slot index="32" media_name="Storaro Magenta" r="176" g="99" b="165"/>
+                <Slot index="33" media_name="Storaro Cyan" r="73" g="157" b="160"/>
+                <Slot index="34" media_name="Storaro Indigo" r="23" g="37" b="94"/>
+                <Slot index="35" media_name="Kelly Green" r="75" g="157" b="97"/>
+                <Slot index="36" media_name="White 2" r="254" g="255" b="255"/>
+            </Wheel>
+        </Wheels>
+        <RDMKey ESTAId="1452" DeviceModelId="33281"/>
+    </FixtureType>
+</MA>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.1.2/MA.xsd" major_vers="3" minor_vers="1" stream_vers="2">
+	<Info datetime="2024-11-18T19:46:25" showfile="star-7-23"/>
+	<FixtureType index="3" name="12TILT" mode="53CH"><InfoItems><Info type="Revision" date="2025-09-02T05:13:22">KOOL 12 TILT, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>12*60</short_name>
+		<manufacturer>VLTG</manufacturer>
+		<short_manufacturer>VLTG</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Y1 Thru 12" class="Headmover" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<Body>
+					<Size x="0.5" y="0.42" z="0.66"/>
+				</Body>
+				<ChannelType index="0" attribute="TILT" feature="POSITION" preset="POSITION" coarse="1" fine="2" default="32767.5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-90" physto="90" subattribute="TILT" subattribute_user_name="Tilt" attribute="TILT" attribute_user_name="Tilt" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+			</Module>
+			<Module index="1" name="ZOOM-3" class="None" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<ChannelType index="0" attribute="ZOOM" feature="FOCUS" preset="FOCUS" coarse="1" default="254.999">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0.7" physto="1" subattribute="ZOOM" subattribute_user_name="Zoom" attribute="ZOOM" attribute_user_name="Zoom" feature="FOCUS" feature_user_name="Focus" preset="FOCUS" preset_user_name="Focus"/>
+				</ChannelType>
+			</Module>
+			<Module index="2" name="ZK2" class="None" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<ChannelType index="0" attribute="V_VSPEED" feature="V_VIDEO" preset="VIDEO" coarse="25">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="V_VSPEED" subattribute_user_name="Speed" attribute="V_VSPEED" attribute_user_name="Speed" feature="V_VIDEO" feature_user_name="VPlayer" preset="VIDEO" preset_user_name="Video"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="STAGEY" feature="STAGE" preset="POSITION" coarse="26">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="360" subattribute="STAGEY" subattribute_user_name="Y" attribute="STAGEY" attribute_user_name="Y" feature="STAGE" feature_user_name="Stage" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="2" attribute="COLORRGB15" feature="COLORRGB" preset="COLOR" coarse="27" color="000000">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB15" subattribute_user_name="UV" attribute="COLORRGB15" attribute_user_name="UV" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="3" attribute="COLOR1" feature="COLOR1" preset="COLOR" coarse="28">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="COLOR1" subattribute_user_name="Select" attribute="COLOR1" attribute_user_name="C1" feature="COLOR1" feature_user_name="Color1" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="4" attribute="GOBO1" feature="GOBO1" preset="GOBO" coarse="29">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="GOBO1" subattribute_user_name="Select" attribute="GOBO1" attribute_user_name="G1" feature="GOBO1" feature_user_name="Gobo1" preset="GOBO" preset_user_name="Gobo"/>
+				</ChannelType>
+				<ChannelType index="5" attribute="GOBO2" feature="GOBO2" preset="GOBO" coarse="30">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="GOBO2" subattribute_user_name="Select2" attribute="GOBO2" attribute_user_name="G2" feature="GOBO2" feature_user_name="Gobo2" preset="GOBO" preset_user_name="Gobo"/>
+				</ChannelType>
+				<ChannelType index="6" attribute="GOBO2_POS" feature="GOBO2" preset="GOBO" coarse="31">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="360" subattribute="GOBO2_POS" subattribute_user_name="Index2" attribute="GOBO2_POS" attribute_user_name="G2&lt;&gt;" feature="GOBO2" feature_user_name="Gobo2" preset="GOBO" preset_user_name="Gobo"/>
+				</ChannelType>
+				<ChannelType index="7" attribute="GOBO3_POS" feature="GOBO3" preset="GOBO" coarse="32">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="360" subattribute="GOBO3_POS" subattribute_user_name="Index3" attribute="GOBO3_POS" attribute_user_name="G3&lt;&gt;" feature="GOBO3" feature_user_name="Gobo3" preset="GOBO" preset_user_name="Gobo"/>
+				</ChannelType>
+				<ChannelType index="8" attribute="COLOR2" feature="COLOR2" preset="COLOR" coarse="33">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="COLOR2" subattribute_user_name="Select2" attribute="COLOR2" attribute_user_name="C2" feature="COLOR2" feature_user_name="Color2" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="9" attribute="COLOR3" feature="COLOR3" preset="COLOR" coarse="34">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="COLOR3" subattribute_user_name="Select3" attribute="COLOR3" attribute_user_name="C3" feature="COLOR3" feature_user_name="Color3" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="10" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="35" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+				<ChannelType index="11" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="36">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam"/>
+				</ChannelType>
+				<ChannelType index="12" attribute="BLADE1A" feature="SHAPER" preset="SHAPERS" coarse="49">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="360" subattribute="BLADE1A" subattribute_user_name="1A" attribute="BLADE1A" attribute_user_name="1A" feature="SHAPER" feature_user_name="Frames" preset="SHAPERS" preset_user_name="Shapers"/>
+				</ChannelType>
+				<ChannelType index="13" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="50" default="255" highlight_value="100" color="ff0000">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" subattribute_user_name="R" attribute="COLORRGB1" attribute_user_name="R" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="14" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="51" color="00ff00">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" subattribute_user_name="G" attribute="COLORRGB2" attribute_user_name="G" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="15" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="52" color="0000ff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" subattribute_user_name="B" attribute="COLORRGB3" attribute_user_name="B" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="16" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" coarse="53" color="ffffff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB5" subattribute_user_name="White" attribute="COLORRGB5" attribute_user_name="White" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="2"/>
+			<Instance index="1" module_index="0"/>
+			<Instance index="2" module_index="0" patch="3"/>
+			<Instance index="3" module_index="0" patch="5"/>
+			<Instance index="4" module_index="0" patch="7"/>
+			<Instance index="5" module_index="0" patch="9"/>
+			<Instance index="6" module_index="0" patch="11"/>
+			<Instance index="7" module_index="0" patch="13"/>
+			<Instance index="8" module_index="0" patch="15"/>
+			<Instance index="9" module_index="0" patch="17"/>
+			<Instance index="10" module_index="0" patch="19"/>
+			<Instance index="11" module_index="0" patch="21"/>
+			<Instance index="12" module_index="0" patch="23"/>
+			<Instance index="13" module_index="1" patch="37"/>
+			<Instance index="14" module_index="1" patch="38"/>
+			<Instance index="15" module_index="1" patch="39"/>
+			<Instance index="16" module_index="1" patch="40"/>
+			<Instance index="17" module_index="1" patch="41"/>
+			<Instance index="18" module_index="1" patch="42"/>
+			<Instance index="19" module_index="1" patch="43"/>
+			<Instance index="20" module_index="1" patch="44"/>
+			<Instance index="21" module_index="1" patch="45"/>
+			<Instance index="22" module_index="1" patch="46"/>
+			<Instance index="23" module_index="1" patch="47"/>
+			<Instance index="24" module_index="1" patch="48"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+	</FixtureType>
+</MA>

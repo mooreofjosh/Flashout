@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.0/MA.xsd" major_vers="3" minor_vers="9" stream_vers="0">
+	<Info datetime="2022-06-21T10:31:08" showfile="showtec"/>
+	<FixtureType index="60" name="Six Eye Laser Lamp" mode="24 channel">
+		<InfoItems>
+			<Info date="2022-06-21T09:56:15">made with manual from April 2020</Info>
+		<Info type="Revision" date="2022-06-21T10:32:50">made with manual from April 2020, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>SixELL</short_name>
+		<manufacturer>Generic</manufacturer>
+		<short_manufacturer>Generic</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Tilt Module" class="LED" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<Body>
+					<Size x="1" y="0.1" z="0.1"/>
+				</Body>
+				<ChannelType index="0" attribute="TILT" feature="POSITION" preset="POSITION" coarse="1" fine="2" default="32767.5">
+					<ChannelFunction index="0" from="-95" to="95" min_dmx_24="0" max_dmx_24="16777215" physfrom="-95" physto="95" subattribute="TILT" subattribute_user_name="Tilt" attribute="TILT" attribute_user_name="Tilt" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="center" from_dmx="32768" to_dmx="32768"/>
+						<ChannelSet index="2" name="max" from_dmx="65535" to_dmx="65535"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="TILTMSPEED" feature="MSPEED" preset="CONTROL" coarse="3">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0.01" physto="10" subattribute="TILTMSPEEDTIME" subattribute_user_name="Time" attribute="TILTMSPEED" attribute_user_name="Tilt" feature="MSPEED" feature_user_name="Mspeed" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="min Time" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max Time" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="PAN" feature="POSITION" preset="POSITION" coarse="10" default="127.5">
+					<ChannelFunction index="0" from="-45" to="45" min_dmx_24="0" max_dmx_24="16777215" physfrom="-45" physto="45" subattribute="PAN" subattribute_user_name="Pan" attribute="PAN" attribute_user_name="Pan" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="center" from_dmx="128" to_dmx="128"/>
+						<ChannelSet index="2" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="PANMSPEED" feature="MSPEED" preset="CONTROL" coarse="11">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0.01" physto="10" subattribute="PANMSPEEDTIME" subattribute_user_name="Time" attribute="PANMSPEED" attribute_user_name="Pan" feature="MSPEED" feature_user_name="Mspeed" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="min Time" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max Time" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="LASER" feature="LASER" preset="CONTROL" coarse="12">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="LASER" subattribute_user_name="Laser" attribute="LASER" attribute_user_name="Laser" feature="LASER" feature_user_name="Laser" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Total Laser Off" from_dmx="0" to_dmx="132"/>
+						<ChannelSet index="1" name="Total Laser On" from_dmx="133" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="13">
+					<ChannelFunction index="0" from="0" to="0" min_dmx_24="0" max_dmx_24="65535" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="0" slot_from="1" slot_to="1"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="0.392" to="100" min_dmx_24="65536" max_dmx_24="16777215" physfrom="1" physto="20" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Strobe" from_dmx="1" to_dmx="1"/>
+						<ChannelSet index="1" name="max Strobe" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="6" attribute="LASERPATTERN" feature="LASER" preset="CONTROL" coarse="20">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="LASERPATTERNSELECT" subattribute_user_name="LaserPatternSelect" attribute="LASERPATTERN" attribute_user_name="LaserPattern" feature="LASER" feature_user_name="Laser" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="no function" from_dmx="0" to_dmx="14" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="Laser effect auto mode 1" from_dmx="15" to_dmx="27" slot_from="1" slot_to="1"/>
+						<ChannelSet index="2" name="Laser effect auto mode 2" from_dmx="28" to_dmx="39" slot_from="2" slot_to="2"/>
+						<ChannelSet index="3" name="Laser effect auto mode 3" from_dmx="40" to_dmx="51" slot_from="3" slot_to="3"/>
+						<ChannelSet index="4" name="Laser effect auto mode 4" from_dmx="52" to_dmx="63" slot_from="4" slot_to="4"/>
+						<ChannelSet index="5" name="Laser effect auto mode 5" from_dmx="64" to_dmx="75" slot_from="5" slot_to="5"/>
+						<ChannelSet index="6" name="Laser effect auto mode 6" from_dmx="76" to_dmx="87" slot_from="6" slot_to="6"/>
+						<ChannelSet index="7" name="Laser effect auto mode 7" from_dmx="88" to_dmx="99" slot_from="7" slot_to="7"/>
+						<ChannelSet index="8" name="Laser effect auto mode 8" from_dmx="100" to_dmx="123" slot_from="8" slot_to="8"/>
+						<ChannelSet index="9" name="Laser effect auto mode 9" from_dmx="124" to_dmx="135" slot_from="9" slot_to="9"/>
+						<ChannelSet index="10" name="Laser effect auto mode 10" from_dmx="136" to_dmx="147" slot_from="10" slot_to="10"/>
+						<ChannelSet index="11" name="Laser effect auto mode 11" from_dmx="148" to_dmx="159" slot_from="11" slot_to="11"/>
+						<ChannelSet index="12" name="Laser effect auto mode 12" from_dmx="160" to_dmx="171" slot_from="12" slot_to="12"/>
+						<ChannelSet index="13" name="Laser effect auto mode 13" from_dmx="172" to_dmx="183" slot_from="13" slot_to="13"/>
+						<ChannelSet index="14" name="Laser effect auto mode 14" from_dmx="184" to_dmx="195" slot_from="14" slot_to="14"/>
+						<ChannelSet index="15" name="Laser effect auto mode 15" from_dmx="196" to_dmx="207" slot_from="15" slot_to="15"/>
+						<ChannelSet index="16" name="Laser effect auto mode 16" from_dmx="208" to_dmx="219" slot_from="16" slot_to="16"/>
+						<ChannelSet index="17" name="Laser effect auto mode 17" from_dmx="220" to_dmx="231" slot_from="17" slot_to="17"/>
+						<ChannelSet index="18" name="Laser effect auto mode 18" from_dmx="232" to_dmx="243" slot_from="18" slot_to="18"/>
+						<ChannelSet index="19" name="Laser effect auto mode 19" from_dmx="244" to_dmx="255" slot_from="19" slot_to="19"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="7" attribute="LASERPATTERNSPEED" feature="LASER" preset="CONTROL" coarse="21">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0.01" physto="10" subattribute="LASERPATTERNSPEED" subattribute_user_name="Speed" attribute="LASERPATTERNSPEED" attribute_user_name="LaserPattern Speed" feature="LASER" feature_user_name="Laser" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="min Speed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max Speed" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="8" attribute="POSITIONMACROS" feature="POSITIONMACRO" preset="POSITION" coarse="22">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="POSITIONMACROSELECT" subattribute_user_name="Select" attribute="POSITIONMACROS" attribute_user_name="Macros" feature="POSITIONMACRO" feature_user_name="Macro" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="no function" from_dmx="0" to_dmx="15" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="Motor auto run mode 1" from_dmx="16" to_dmx="45" slot_from="1" slot_to="1"/>
+						<ChannelSet index="2" name="Motor auto run mode 2" from_dmx="46" to_dmx="75" slot_from="2" slot_to="2"/>
+						<ChannelSet index="3" name="Motor auto run mode 3" from_dmx="76" to_dmx="105" slot_from="3" slot_to="3"/>
+						<ChannelSet index="4" name="Motor auto run mode 4" from_dmx="106" to_dmx="135" slot_from="4" slot_to="4"/>
+						<ChannelSet index="5" name="Motor auto run mode 5" from_dmx="136" to_dmx="165" slot_from="5" slot_to="5"/>
+						<ChannelSet index="6" name="Motor auto run mode 6" from_dmx="166" to_dmx="195" slot_from="6" slot_to="6"/>
+						<ChannelSet index="7" name="Motor auto run mode 7" from_dmx="196" to_dmx="225" slot_from="7" slot_to="7"/>
+						<ChannelSet index="8" name="sound control mode 1" from_dmx="226" to_dmx="240" slot_from="8" slot_to="8"/>
+						<ChannelSet index="9" name="sound control mode 2" from_dmx="241" to_dmx="255" slot_from="9" slot_to="9"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="9" attribute="POSITIONMACRORATE" feature="POSITIONMACRO" preset="POSITION" coarse="23">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0.01" physto="10" subattribute="POSITIONMACRORATE" subattribute_user_name="MacroRate" attribute="POSITIONMACRORATE" attribute_user_name="MacroRate" feature="POSITIONMACRO" feature_user_name="Macro" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="min Speed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max Speed" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="10" attribute="FIXTUREGLOBALRESET" feature="RESET" preset="CONTROL" coarse="24">
+					<ChannelFunction index="0" from="0" to="50" min_dmx_24="0" max_dmx_24="8388607" subattribute="NOFEATURE" subattribute_user_name="No Feature" attribute="DUMMY" attribute_user_name="Dummy" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="no function" from_dmx="0" to_dmx="127"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="50" to="100" min_dmx_24="8388608" max_dmx_24="16777215" subattribute="FIXTUREGLOBALRESET" subattribute_user_name="Reset" attribute="FIXTUREGLOBALRESET" attribute_user_name="FixtureGlobal" feature="RESET" feature_user_name="Reset" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Reset" from_dmx="128" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+			<Module index="1" name="Pan Module" class="LED" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<Body>
+					<Size x="0.1" y="0.1" z="0.1"/>
+				</Body>
+				<ChannelType index="0" attribute="PAN" feature="POSITION" preset="POSITION" coarse="1" default="127.5">
+					<ChannelFunction index="0" from="-45" to="45" min_dmx_24="0" max_dmx_24="16777215" physfrom="-45" physto="45" subattribute="PAN" subattribute_user_name="Pan" attribute="PAN" attribute_user_name="Pan" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="center" from_dmx="128" to_dmx="128"/>
+						<ChannelSet index="2" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+			<Module index="2" name="Laser Module" class="LED" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<Body>
+					<Size x="0.1" y="0.1" z="0.1"/>
+				</Body>
+				<ChannelType index="0" attribute="LASERINTENSITY" feature="LASER" preset="CONTROL" coarse="1">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="LASERINTENSITY" subattribute_user_name="Intensity" attribute="LASERINTENSITY" attribute_user_name="LaserIntensity" feature="LASER" feature_user_name="Laser" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Laser Off" from_dmx="0" to_dmx="132"/>
+						<ChannelSet index="1" name="Laser On" from_dmx="133" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+			<Instance index="1" module_index="1" patch="4"/>
+			<Instance index="2" module_index="1" patch="5"/>
+			<Instance index="3" module_index="1" patch="6"/>
+			<Instance index="4" module_index="1" patch="7"/>
+			<Instance index="5" module_index="1" patch="8"/>
+			<Instance index="6" module_index="1" patch="9"/>
+			<Instance index="7" module_index="2" patch="14"/>
+			<Instance index="8" module_index="2" patch="15"/>
+			<Instance index="9" module_index="2" patch="16"/>
+			<Instance index="10" module_index="2" patch="17"/>
+			<Instance index="11" module_index="2" patch="18"/>
+			<Instance index="12" module_index="2" patch="19"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5">
+			<FixtureMacro index="0" name="Reset">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="255" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+			</FixtureMacro>
+		</FixtureMacroCollect>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.3.4/MA.xsd" major_vers="3" minor_vers="3" stream_vers="4">
+	<Info datetime="2018-01-19T14:33:47" showfile="new show 2018-01-18t18-37-59"/>
+	<FixtureType index="2" name="Arena 6.0.4" mode="6 Layers">
+		<InfoItems>
+			<Info type="Revision" date="2018-01-15T13:17:36">MODE 1 : Created On 1/15/18 By AD3</Info>
+			<Info date="2018-01-15T13:17:23">Requires Resolume 6.0.4 or newer (otherwise your deck selection will not work). Free upgrade (55MB) by auto update in app (click, check for updates in the drop-down menu), or online at (http://www.resolume.com/download)&#xA;.&#xA;This is 6 layer composition with an additional layer for strobe and a Chaser.&#xA;If you do not have the Chaser plugin (chaser.hybridvisuals.nl) the Chaser features will do nothing.&#xA;.&#xA;Be sure to download the composition file, along with the DMX mapping .xml (https://www.dropbox.com/sh/3k21zfs38shanfy/AACrUoKd5t1yvtH3kyou4Z1Ga?dl=0) and place both of those files in your Resolume 6 folder under your documents folder.&#xA;.&#xA;Resolume runs and operates differently for each user and user's work flow.&#xA;This is a very basic 40 channel profile that will have your desk up and running for basic playback features.&#xA;If you require more features than what is on this profile, you're probably at the level in your career to build your own profile haha.&#xA;.&#xA;I would recommend each LD to dig into Resolume 6 and try to make a custom patch suited for your needs.&#xA;But if you need a profile.... Here's a very basic one for you.&#xA;.&#xA;(don't mind the 2 extra dead channels at the end, they're in place as a spacer, so you get a nice even 40 channel number.... Or feel free to name and map them to whatever you want. The last 2 channels are currently mapped to the last two dashboard knobs in the composition.)&#xA;.&#xA;Enjoy!&#xA;.&#xA;~A</Info>
+		<Info type="Revision" date="2018-01-19T09:01:16">MODE 1 Created On 115/18 By AD3, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>Arena 6</short_name>
+		<manufacturer>Resolume</manufacturer>
+		<short_manufacturer>Resolume</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Arena 6" class="Video Output" beamtype="None" beam_angle="0" beam_intensity="0">
+				<ChannelType index="0" attribute="DIM5" feature="DIMMER" preset="DIMMER" coarse="1" default="0.001">
+					<ChannelFunction index="0" name="Master Intensity" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM5" subattribute_user_name="Mstr Vid Intsty" attribute="DIM5" attribute_user_name="Mstr Vid Intsty" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="Master Intnsty On" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="Master Intnsty Off" from_dmx="0" to_dmx="0" slot_index="1" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="V_VSPEED2" feature="V_OBJ2" preset="VIDEO" coarse="2" default="26.265">
+					<ChannelFunction index="0" name="Master Clip Speed" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="V_VSPEED2" subattribute_user_name="Video Speed" attribute="V_VSPEED2" attribute_user_name="Video Speed" feature="V_OBJ2" feature_user_name="Video Playback" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Normal Play Speed" from_dmx="26" to_dmx="26" slot_index="0" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="V_PLAYMODE2" feature="V_OBJ2" preset="VIDEO" coarse="3" default="108.375" snap="true">
+					<ChannelFunction index="0" name="Clip Play Mode" from="0" to="4" min_dmx_24="65536" max_dmx_24="14483455" subattribute="V_PLAYMODE2" subattribute_user_name="Play Direction" attribute="V_PLAYMODE2" attribute_user_name="Play Direction" feature="V_OBJ2" feature_user_name="Video Playback" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Clip Play Forward" from_dmx="80" to_dmx="110" slot_index="0" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="Clip Play Reverse" from_dmx="9" to_dmx="56" slot_index="1" slot_from="0" slot_to="0"/>
+						<ChannelSet index="2" name="Clip Pause" from_dmx="140" to_dmx="170" slot_index="2" slot_from="0" slot_to="0"/>
+						<ChannelSet index="3" name="Clip Play Random" from_dmx="210" to_dmx="240" slot_index="3" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="V_SLT_TIME3" feature="V_OBJ3" preset="VIDEO" coarse="4">
+					<ChannelFunction index="0" name="Transition Speed" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="V_SLT_TIME3" subattribute_user_name="Trans Speed" attribute="V_SLT_TIME3" attribute_user_name="Trans Speed" feature="V_OBJ3" feature_user_name="Transition Time" preset="VIDEO" preset_user_name="Video"/>
+				</ChannelType>
+				<ChannelType index="4" attribute="INTENSITYADJUST2" feature="DIMMER2" preset="DIMMER" coarse="5" default="255">
+					<ChannelFunction index="0" name="Layer 1 Intensity" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="INTENSITYADJUST2" subattribute_user_name="Layer 1" attribute="INTENSITYADJUST2" attribute_user_name="Layer 1" feature="DIMMER2" feature_user_name="Video Layers" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="Layer 1 On" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="Layer 1 Off" from_dmx="0" to_dmx="0" slot_index="1" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="INTENSITYADJUST3" feature="DIMMER2" preset="DIMMER" coarse="6" default="254.999">
+					<ChannelFunction index="0" name="Layer 2 Intensity" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="360" subattribute="INTENSITYADJUST3" subattribute_user_name="Layer 2" attribute="INTENSITYADJUST3" attribute_user_name="Layer 2" feature="DIMMER2" feature_user_name="Video Layers" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="Layer 2 On" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="Layer 2 Off" from_dmx="0" to_dmx="0" slot_index="1" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="6" attribute="INTENSITYADJUST4" feature="DIMMER2" preset="DIMMER" coarse="7" default="254.999">
+					<ChannelFunction index="0" name="Layer 3 Intensity" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="INTENSITYADJUST4" subattribute_user_name="Layer 3" attribute="INTENSITYADJUST4" attribute_user_name="Layer 3" feature="DIMMER2" feature_user_name="Video Layers" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="Layer 3 On" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="Layer 3 Off" from_dmx="0" to_dmx="0" slot_index="1" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="7" attribute="INTENSITYADJUST5" feature="DIMMER2" preset="DIMMER" coarse="8" default="254.999">
+					<ChannelFunction index="0" name="Layer 4 Intensity" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="360" subattribute="INTENSITYADJUST5" subattribute_user_name="Layer 4" attribute="INTENSITYADJUST5" attribute_user_name="Layer 4" feature="DIMMER2" feature_user_name="Video Layers" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="Layer 4 On" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="Layer 4 Off" from_dmx="0" to_dmx="0" slot_index="1" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="8" attribute="INTENSITYADJUST6" feature="DIMMER2" preset="DIMMER" coarse="9" default="254.999">
+					<ChannelFunction index="0" name="Layer 5 Intensity" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="INTENSITYADJUST6" subattribute_user_name="Layer 5" attribute="INTENSITYADJUST6" attribute_user_name="Layer 5" feature="DIMMER2" feature_user_name="Video Layers" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="Layer 5 On" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="Layer 5 Off" from_dmx="0" to_dmx="0" slot_index="1" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="9" attribute="INTENSITYADJUST7" feature="DIMMER2" preset="DIMMER" coarse="10" default="254.999">
+					<ChannelFunction index="0" name="Layer 6 Intensity" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="360" subattribute="INTENSITYADJUST7" subattribute_user_name="Layer 6" attribute="INTENSITYADJUST7" attribute_user_name="Layer 6" feature="DIMMER2" feature_user_name="Video Layers" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="Layer 6 On" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="Layer 6 Off" from_dmx="0" to_dmx="0" slot_index="1" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="10" attribute="PATCH" feature="V_OBJ4" preset="VIDEO" coarse="11">
+					<ChannelFunction index="0" name="Layer 1 Clip Select" from="0" to="100" min_dmx_24="0" max_dmx_24="16711935" subattribute="PATCH" subattribute_user_name="Layer 1" attribute="PATCH" attribute_user_name="Layer 1" feature="V_OBJ4" feature_user_name="Clip Select" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Blackout" from_dmx="0" to_dmx="0" slot_index="0" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="11" attribute="PATCH2" feature="V_OBJ4" preset="VIDEO" coarse="12">
+					<ChannelFunction index="0" name="Layer 2 Clip Select" from="0" to="100" min_dmx_24="0" max_dmx_24="16711935" subattribute="PATCH2" subattribute_user_name="Layer 2" attribute="PATCH2" attribute_user_name="Layer 2" feature="V_OBJ4" feature_user_name="Clip Select" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Blackout" from_dmx="0" to_dmx="0" slot_index="0" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="12" attribute="PATCH4" feature="V_OBJ4" preset="VIDEO" coarse="13">
+					<ChannelFunction index="0" name="Layer 3 Clip Select" from="0" to="100" min_dmx_24="0" max_dmx_24="16711935" subattribute="PATCH4" subattribute_user_name="Layer 3" attribute="PATCH4" attribute_user_name="Layer 3" feature="V_OBJ4" feature_user_name="Clip Select" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Blackout" from_dmx="0" to_dmx="0" slot_index="0" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="13" attribute="PATCH5" feature="V_OBJ4" preset="VIDEO" coarse="14">
+					<ChannelFunction index="0" name="Layer 4 Clip Select" from="0" to="100" min_dmx_24="0" max_dmx_24="16711935" subattribute="PATCH5" subattribute_user_name="Layer 4" attribute="PATCH5" attribute_user_name="Layer 4" feature="V_OBJ4" feature_user_name="Clip Select" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Blackout" from_dmx="0" to_dmx="0" slot_index="0" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="14" attribute="PATCH6" feature="V_OBJ4" preset="VIDEO" coarse="15">
+					<ChannelFunction index="0" name="Layer 5 Clip Select" from="0" to="100" min_dmx_24="0" max_dmx_24="16711935" subattribute="PATCH6" subattribute_user_name="Layer 5" attribute="PATCH6" attribute_user_name="Layer 5" feature="V_OBJ4" feature_user_name="Clip Select" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Blackout" from_dmx="0" to_dmx="0" slot_index="0" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="15" attribute="PATCH7" feature="V_OBJ4" preset="VIDEO" coarse="16">
+					<ChannelFunction index="0" name="Layer 6 Clip Select" from="0" to="100" min_dmx_24="0" max_dmx_24="16711935" subattribute="PATCH7" subattribute_user_name="Layer 6" attribute="PATCH7" attribute_user_name="Layer 6" feature="V_OBJ4" feature_user_name="Clip Select" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Blackout" from_dmx="0" to_dmx="0" slot_index="0" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="16" attribute="V_VINDEX5" feature="V_OBJ5" preset="VIDEO" coarse="17" snap="true">
+					<ChannelFunction index="0" name="Layer 1 Clip Clear" from="0" to="1" min_dmx_24="0" max_dmx_24="16711935" subattribute="V_VINDEX5" subattribute_user_name="Layer 1" attribute="V_VINDEX5" attribute_user_name="Layer 1" feature="V_OBJ5" feature_user_name="Clip Clear" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Clip Clear" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="17" attribute="V_VINDEX7" feature="V_OBJ5" preset="VIDEO" coarse="18" snap="true">
+					<ChannelFunction index="0" name="Layer 2 Clip Clear" from="0" to="1" min_dmx_24="0" max_dmx_24="16711935" subattribute="V_VINDEX7" subattribute_user_name="Layer 2" attribute="V_VINDEX7" attribute_user_name="Layer 2" feature="V_OBJ5" feature_user_name="Clip Clear" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Clip Clear" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="18" attribute="V_VINDEX8" feature="V_OBJ5" preset="VIDEO" coarse="19" snap="true">
+					<ChannelFunction index="0" name="Layer 3 Clip Clear" from="0" to="1" min_dmx_24="0" max_dmx_24="16711935" subattribute="V_VINDEX8" subattribute_user_name="Layer 3" attribute="V_VINDEX8" attribute_user_name="Layer 3" feature="V_OBJ5" feature_user_name="Clip Clear" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Clip Clear" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="19" attribute="V_VINDEX9" feature="V_OBJ5" preset="VIDEO" coarse="20" snap="true">
+					<ChannelFunction index="0" name="Layer 4 Clip Clear" from="0" to="1" min_dmx_24="0" max_dmx_24="16711935" subattribute="V_VINDEX9" subattribute_user_name="Layer 4" attribute="V_VINDEX9" attribute_user_name="Layer 4" feature="V_OBJ5" feature_user_name="Clip Clear" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Clip Clear" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="20" attribute="V_VINDEX10" feature="V_OBJ5" preset="VIDEO" coarse="21" snap="true">
+					<ChannelFunction index="0" name="Layer 5 Clip Clear" from="0" to="1" min_dmx_24="0" max_dmx_24="16711935" subattribute="V_VINDEX10" subattribute_user_name="Layer 5" attribute="V_VINDEX10" attribute_user_name="Layer 5" feature="V_OBJ5" feature_user_name="Clip Clear" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Clip Clear" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="21" attribute="V_VINDEX11" feature="V_OBJ5" preset="VIDEO" coarse="22" snap="true">
+					<ChannelFunction index="0" name="Layer 6 Clip Clear" from="0" to="1" min_dmx_24="0" max_dmx_24="16711935" subattribute="V_VINDEX11" subattribute_user_name="Layer 6" attribute="V_VINDEX11" attribute_user_name="Layer 6" feature="V_OBJ5" feature_user_name="Clip Clear" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Clip Clear" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="22" attribute="V_VINDEX12" feature="V_OBJ5" preset="VIDEO" coarse="23" default="0.001" snap="true">
+					<ChannelFunction index="0" name="All Layers  Clip Clear" from="0" to="1" min_dmx_24="0" max_dmx_24="16711935" subattribute="V_VINDEX12" subattribute_user_name="All Layers" attribute="V_VINDEX12" attribute_user_name="All Layers" feature="V_OBJ5" feature_user_name="Clip Clear" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Clear All Clips" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="23" attribute="STROBEMODE2" feature="SHUTTER2" preset="STROBE" coarse="24">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16711935" subattribute="STROBEMODE2" subattribute_user_name="Strobe Color" attribute="STROBEMODE2" attribute_user_name="Strobe Color" feature="SHUTTER2" feature_user_name="Video Strobe" preset="STROBE" preset_user_name="Strobe"/>
+				</ChannelType>
+				<ChannelType index="24" attribute="V_VINDEX15" feature="SHUTTER2" preset="STROBE" coarse="25" snap="true">
+					<ChannelFunction index="0" from="0" to="1" min_dmx_24="0" max_dmx_24="16711935" subattribute="V_VINDEX15" subattribute_user_name="Strobe Clear" attribute="V_VINDEX15" attribute_user_name="Strobe Clear" feature="SHUTTER2" feature_user_name="Video Strobe" preset="STROBE" preset_user_name="Strobe">
+						<ChannelSet index="0" name="Strobe Clear" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="25" attribute="OUTPUTSTROBE2" feature="SHUTTER2" preset="STROBE" coarse="26" default="254.999">
+					<ChannelFunction index="0" name="Strobe Intsty" from="0" to="100" min_dmx_24="0" max_dmx_24="16711935" subattribute="OUTPUTSTROBE2" subattribute_user_name="Strobe Intsty" attribute="OUTPUTSTROBE2" attribute_user_name="Strobe Intsty" feature="SHUTTER2" feature_user_name="Video Strobe" preset="STROBE" preset_user_name="Strobe">
+						<ChannelSet index="0" name="Full Strobe" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="26" attribute="V_VINDEX4" feature="SHUTTER2" preset="STROBE" coarse="27" snap="true">
+					<ChannelFunction index="0" from="0" to="1" min_dmx_24="0" max_dmx_24="16711935" subattribute="V_VINDEX4" subattribute_user_name="Strobe On/Off" attribute="V_VINDEX4" attribute_user_name="Strobe On/Off" feature="SHUTTER2" feature_user_name="Video Strobe" preset="STROBE" preset_user_name="Strobe">
+						<ChannelSet index="0" name="Strobe On" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="Strobe Off" from_dmx="0" to_dmx="0" slot_index="1" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="27" attribute="STROBEBPM2" feature="SHUTTER2" preset="STROBE" coarse="28" default="254.5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16646397" subattribute="STROBEBPM2" subattribute_user_name="Strobe Speed" attribute="STROBEBPM2" attribute_user_name="Strobe Speed" feature="SHUTTER2" feature_user_name="Video Strobe" preset="STROBE" preset_user_name="Strobe"/>
+				</ChannelType>
+				<ChannelType index="28" attribute="STROBEMODE4" feature="SHUTTER3" preset="STROBE" coarse="29">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16711935" subattribute="STROBEMODE4" subattribute_user_name="Chaser Color" attribute="STROBEMODE4" attribute_user_name="Chaser Color" feature="SHUTTER3" feature_user_name="Video Chaser" preset="STROBE" preset_user_name="Strobe"/>
+				</ChannelType>
+				<ChannelType index="29" attribute="V_VINDEX14" feature="SHUTTER3" preset="STROBE" coarse="30" snap="true">
+					<ChannelFunction index="0" from="0" to="1" min_dmx_24="0" max_dmx_24="16711935" subattribute="V_VINDEX14" subattribute_user_name="Chaser Clear" attribute="V_VINDEX14" attribute_user_name="Chaser Clear" feature="SHUTTER3" feature_user_name="Video Chaser" preset="STROBE" preset_user_name="Strobe">
+						<ChannelSet index="0" name="Chaser Clear" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="30" attribute="OUTPUTSTROBE3" feature="SHUTTER3" preset="STROBE" coarse="31" default="254.999">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16711935" subattribute="OUTPUTSTROBE3" subattribute_user_name="Chaser Intnsty" attribute="OUTPUTSTROBE3" attribute_user_name="Chaser Intnsty" feature="SHUTTER3" feature_user_name="Video Chaser" preset="STROBE" preset_user_name="Strobe">
+						<ChannelSet index="0" name="Full Chaser" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="31" attribute="V_VINDEX13" feature="SHUTTER3" preset="STROBE" coarse="32" snap="true">
+					<ChannelFunction index="0" from="0" to="1" min_dmx_24="0" max_dmx_24="16711935" subattribute="V_VINDEX13" subattribute_user_name="Chaser On/Off" attribute="V_VINDEX13" attribute_user_name="Chaser On/Off" feature="SHUTTER3" feature_user_name="Video Chaser" preset="STROBE" preset_user_name="Strobe">
+						<ChannelSet index="0" name="Chaser On" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="Chaser Off" from_dmx="0" to_dmx="0" slot_index="1" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="32" attribute="STROBEBPM3" feature="SHUTTER3" preset="STROBE" coarse="33" default="53.04">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16711935" subattribute="STROBEBPM3" subattribute_user_name="Chaser Speed" attribute="STROBEBPM3" attribute_user_name="Chaser Speed" feature="SHUTTER3" feature_user_name="Video Chaser" preset="STROBE" preset_user_name="Strobe">
+						<ChannelSet index="0" name="Normal 120 BPM" from_dmx="53" to_dmx="53" slot_index="0" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="33" attribute="STROBEMODE3" feature="SHUTTER3" preset="STROBE" coarse="34">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16711935" subattribute="STROBEMODE3" subattribute_user_name="Chaser Seq" attribute="STROBEMODE3" attribute_user_name="Chaser Seq" feature="SHUTTER3" feature_user_name="Video Chaser" preset="STROBE" preset_user_name="Strobe"/>
+				</ChannelType>
+				<ChannelType index="34" attribute="V_VINDEX2" feature="V_OBJ6" preset="VIDEO" coarse="35">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16711935" subattribute="V_VINDEX2" subattribute_user_name="Mstr Clr Chng" attribute="V_VINDEX2" attribute_user_name="Mstr Clr Chng" feature="V_OBJ6" feature_user_name="Video FX" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Normal Color" from_dmx="0" to_dmx="0" slot_index="0" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="35" attribute="V_VINDEX3" feature="V_OBJ6" preset="VIDEO" coarse="36" default="254.999">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16711935" subattribute="V_VINDEX3" subattribute_user_name="Mstr Audio Lvl" attribute="V_VINDEX3" attribute_user_name="Mstr Audio Lvl" feature="V_OBJ6" feature_user_name="Video FX" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Audio On" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="Audio Off" from_dmx="0" to_dmx="0" slot_index="1" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="36" attribute="V_VINDEX6" feature="V_OBJ6" preset="VIDEO" coarse="37" snap="true">
+					<ChannelFunction index="0" from="0" to="1" min_dmx_24="0" max_dmx_24="16711935" subattribute="V_VINDEX6" subattribute_user_name="B&amp;W On/Off" attribute="V_VINDEX6" attribute_user_name="B&amp;W On/Off" feature="V_OBJ6" feature_user_name="Video FX" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="B&amp;W On" from_dmx="255" to_dmx="255" slot_index="0" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="B&amp;W Off" from_dmx="0" to_dmx="0" slot_index="1" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="37" attribute="PATCHFOLDER7" feature="V_OBJ7" preset="VIDEO" coarse="38">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16711935" subattribute="PATCHFOLDER7" subattribute_user_name="Deck Select" attribute="PATCHFOLDER7" attribute_user_name="Deck Select" feature="V_OBJ7" feature_user_name="Deck Select" preset="VIDEO" preset_user_name="Video"/>
+				</ChannelType>
+				<ChannelType index="38" attribute="OUTPUT3" feature="V_OBJ8" preset="VIDEO" coarse="39">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16711935" subattribute="OUTPUT3" subattribute_user_name="Spacer 2" attribute="OUTPUT3" attribute_user_name="Spacer 2" feature="V_OBJ8" feature_user_name="Video Spacer" preset="VIDEO" preset_user_name="Video"/>
+				</ChannelType>
+				<ChannelType index="39" attribute="OUTPUT8" feature="V_OBJ8" preset="VIDEO" coarse="40">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16711935" subattribute="OUTPUT8" subattribute_user_name="Spacer 3" attribute="OUTPUT8" attribute_user_name="Spacer 3" feature="V_OBJ8" feature_user_name="Video Spacer" preset="VIDEO" preset_user_name="Video"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

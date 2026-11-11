@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.60/MA.xsd" major_vers="3" minor_vers="9" stream_vers="60">
+	<Info datetime="2021-06-07T12:48:27" showfile="test capture camera v1.1"/>
+	<FixtureType index="21" name="Capture Video Player" mode="2ch."><InfoItems><Info type="Revision" date="2021-06-07T14:51:29">2021, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>CaptureVidPlayer JV</short_name>
+		<manufacturer>Capture</manufacturer>
+		<short_manufacturer>Capture JV</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="None" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<ChannelType index="0" attribute="CAPPLAYMODE" feature="CAPTUREVID" preset="VIDEO" coarse="1">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="CAPPLAYMODE" subattribute_user_name="CAPPLAYMODE" attribute="CAPPLAYMODE" attribute_user_name="Playmode" feature="CAPTUREVID" feature_user_name="CAPTUREVID" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Pause" from_dmx="0" to_dmx="7"/>
+						<ChannelSet index="1" name="Play" from_dmx="8" to_dmx="15"/>
+						<ChannelSet index="2" name="Replay" from_dmx="16" to_dmx="23"/>
+						<ChannelSet index="3" name="Stop" from_dmx="24" to_dmx="31"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="CAPSELECTION" feature="CAPTUREVID" preset="VIDEO" coarse="2">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="CAPSELECTION" subattribute_user_name="Playmode" attribute="CAPSELECTION" attribute_user_name="Selection" feature="CAPTUREVID" feature_user_name="CAPTUREVID" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Content 1" from_dmx="0" to_dmx="31"/>
+						<ChannelSet index="1" name="Content 2" from_dmx="32" to_dmx="63"/>
+						<ChannelSet index="2" name="Content 3" from_dmx="64" to_dmx="95"/>
+						<ChannelSet index="3" name="Content 4" from_dmx="96" to_dmx="127"/>
+						<ChannelSet index="4" name="Content 5" from_dmx="128" to_dmx="159"/>
+						<ChannelSet index="5" name="Content 6" from_dmx="160" to_dmx="191"/>
+						<ChannelSet index="6" name="Content 7" from_dmx="192" to_dmx="223"/>
+						<ChannelSet index="7" name="Content 8" from_dmx="224" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

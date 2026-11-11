@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.7.0/MA.xsd" major_vers="2" minor_vers="7" stream_vers="0">
+	<Info datetime="2012-11-10T19:44:16" showfile="new show 2012-11-09"/>
+	<FixtureType index="12" name="COLOR MIX 5000" mode="12 CH"><InfoItems><Info type="Revision" date="2017-11-01T08:11:46">, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>COLOR MIX 5000</short_name>
+		<manufacturer>Showco</manufacturer>
+		<short_manufacturer>Showco</short_manufacturer>
+		<notes>Fixture has on/off switch&#xA;Set menu option RUN to Off for this personality&#xA;Ch 7 - Set menu option Col1 to NO for this channel to work correctly&#xA;Ch 8 - Set menu option Col2 to NO for this channel to work correctly&#xA;Ch 10, 11  - Set menu option Gobo to NO for this channel to work correctly</notes>
+		<revision date="2012-04-26" text="Automated import from MA Lighting (C-RevNum: 5; Date: 2012-02-29)" generator_software_name="MA Importer" generator_software_version="36b9d2c4774db638903816e671e200436e838995"/>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="Headmover" beamtype="Spot" beam_angle="1.000" beam_intensity="10000.000">
+				<Body>
+					<Size x="0.500" y="0.420" z="0.660"/>
+				</Body>
+				<ChannelType index="0" attribute="PAN" feature="POSITION" preset="POSITION" coarse="1" fine="3" default="32768.000">
+					<ChannelFunction index="0" name="Pan -100..100%" from="-265.000" to="265.000" min_dmx_24="0" max_dmx_24="16777215" physfrom="-265.000" physto="265.000" subattribute="PAN" attribute="PAN" feature="POSITION" preset="POSITION">
+						<ChannelSet index="0" name="center" from_dmx="32768" to_dmx="32768"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="TILT" feature="POSITION" preset="POSITION" coarse="2" fine="4" default="32768.000">
+					<ChannelFunction index="0" name="Tilt -100..100%" from="-140.000" to="140.000" min_dmx_24="0" max_dmx_24="16777215" physfrom="-140.000" physto="140.000" subattribute="TILT" attribute="TILT" feature="POSITION" preset="POSITION">
+						<ChannelSet index="0" name="center" from_dmx="32768" to_dmx="32768"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="POSITIONMSPEED" feature="MSPEED" preset="CONTROL" coarse="5">
+					<ChannelFunction index="0" name="Track 100..1%" from="0.000" to="100.000" min_dmx_24="0" max_dmx_24="16777215" physfrom="1.000" physto="0.010" subattribute="POSITIONMSPEEDTRACK" attribute="POSITIONMSPEED" feature="MSPEED" preset="CONTROL"/>
+				</ChannelType>
+				<ChannelType index="3" attribute="LAMPCONTROL" feature="LAMP" preset="CONTROL" coarse="6">
+					<ChannelFunction index="0" from="0.000" to="100.000" min_dmx_24="0" max_dmx_24="16777215" subattribute="LAMPOFF" attribute="LAMPCONTROL" feature="LAMP" preset="CONTROL"/>
+				</ChannelType>
+				<ChannelType index="4" attribute="COLORMIX1" feature="COLORMIX" preset="COLOR" coarse="7">
+					<ChannelFunction index="0" from="0.000" to="100.000" min_dmx_24="0" max_dmx_24="16777215" physfrom="0.000" physto="1.000" subattribute="COLORMIX1" attribute="COLORMIX1" feature="COLORMIX" preset="COLOR"/>
+				</ChannelType>
+				<ChannelType index="5" attribute="COLORMIX2" feature="COLORMIX" preset="COLOR" coarse="8">
+					<ChannelFunction index="0" from="0.000" to="100.000" min_dmx_24="0" max_dmx_24="16777215" physfrom="0.000" physto="1.000" subattribute="COLORMIX2" attribute="COLORMIX2" feature="COLORMIX" preset="COLOR"/>
+				</ChannelType>
+				<ChannelType index="6" attribute="COLORMIX3" feature="COLORMIX" preset="COLOR" coarse="9">
+					<ChannelFunction index="0" from="0.000" to="100.000" min_dmx_24="0" max_dmx_24="16777215" physfrom="0.000" physto="1.000" subattribute="COLORMIX3" attribute="COLORMIX3" feature="COLORMIX" preset="COLOR"/>
+				</ChannelType>
+				<ChannelType index="7" attribute="COLORMIXMSPEED" feature="MSPEED" preset="CONTROL" coarse="10">
+					<ChannelFunction index="0" from="0.000" to="100.000" min_dmx_24="0" max_dmx_24="16777215" subattribute="COLORMIXMSPEEDTIME" attribute="COLORMIXMSPEED" feature="MSPEED" preset="CONTROL"/>
+				</ChannelType>
+				<ChannelType index="8" attribute="DUMMY" feature="CONTROL" preset="CONTROL" coarse="11">
+					<ChannelFunction index="0" from="0.000" to="100.000" min_dmx_24="0" max_dmx_24="16777215" subattribute="RESERVED" attribute="DUMMY" feature="CONTROL" preset="CONTROL"/>
+				</ChannelType>
+				<ChannelType index="9" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="12" highlight_value="50.000" grandmaster="true" is_dimmer="true">
+					<ChannelFunction index="0" from="0.000" to="50.000" min_dmx_24="0" max_dmx_24="8388607" physfrom="0.000" physto="1.000" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER"/>
+					<ChannelFunction index="1" from="51.000" to="100.000" min_dmx_24="8388608" max_dmx_24="16777215" physfrom="0.000" physto="1.000" subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" type="Main Module" patch="1"/>
+		</Instances>
+		<Wheels index="2">
+			<Wheel index="0" subattribute="COLOR1" attribute="COLOR1" feature="COLOR1" preset="COLOR" CITP_id0="208" CITP_id1="24" CITP_id2="65" CITP_id3="27">
+				<Slot index="0" media_name="open"/>
+				<Slot index="1" media_name="red" g="53" b="3"/>
+				<Slot index="2" media_name="yellow" r="235" b="8"/>
+				<Slot index="3" media_name="rose"/>
+				<Slot index="4" media_name="green" r="57" b="78"/>
+				<Slot index="5" media_name="orange" g="133" b="3"/>
+				<Slot index="6" media_name="blue" r="33" g="142"/>
+				<Slot index="7" media_name="pink" g="172" b="229"/>
+				<Slot index="8" media_name="firefly light" r="101" g="20" b="199"/>
+				<Slot index="9" media_name="dark orange"/>
+			</Wheel>
+			<Wheel index="1" subattribute="COLOR2" attribute="COLOR2" feature="COLOR2" preset="COLOR" CITP_id0="208" CITP_id1="24" CITP_id2="65" CITP_id3="27">
+				<Slot index="0" media_name="open"/>
+				<Slot index="1" media_name="light red"/>
+				<Slot index="2" media_name="pale yellow" r="246" b="142"/>
+				<Slot index="3" media_name="light purple"/>
+				<Slot index="4" media_name="pale green" r="145" b="157"/>
+				<Slot index="5" media_name="light orange" g="235" b="4"/>
+				<Slot index="6" media_name="sky blue" r="57" g="190"/>
+				<Slot index="7" media_name="light blue" r="113" g="242"/>
+				<Slot index="8" media_name="CTC 3200K" g="250" b="108"/>
+				<Slot index="9" media_name="CTC 6000K" r="170" g="222"/>
+			</Wheel>
+			<Wheel index="2" subattribute="EFFECTWHEELSELECT" attribute="EFFECTWHEEL" feature="EFFECT" preset="BEAM" CITP_id0="0" CITP_id1="0" CITP_id2="0" CITP_id3="0">
+				<Slot index="0" media_name="open"/>
+				<Slot index="1" media_name="3 facet prism" media_filename="carallon/effects/generic/000900002.png"/>
+			</Wheel>
+			<Wheel index="3" subattribute="GOBO1" attribute="GOBO1" feature="GOBO1" preset="GOBO" CITP_id0="120" CITP_id1="82" CITP_id2="161" CITP_id3="27">
+				<Slot index="0" media_name="open"/>
+				<Slot index="1" media_name="gobo 1.1" media_filename="carallon/gobos/showco/15490001.png"/>
+				<Slot index="2" media_name="gobo 1.2" media_filename="carallon/gobos/showco/15490002.png"/>
+				<Slot index="3" media_name="gobo 1.3" media_filename="carallon/gobos/showco/15490003.png"/>
+				<Slot index="4" media_name="gobo 1.4" media_filename="carallon/gobos/showco/15490004.png"/>
+				<Slot index="5" media_name="gobo 1.5" media_filename="carallon/gobos/showco/15490005.png"/>
+				<Slot index="6" media_name="gobo 1.6" media_filename="carallon/gobos/showco/15490006.png"/>
+				<Slot index="7" media_name="gobo 1.7" media_filename="carallon/gobos/showco/15490007.png"/>
+				<Slot index="8" media_name="gobo 1.8" media_filename="carallon/gobos/showco/15490008.png"/>
+				<Slot index="9" media_name="gobo 1.9" media_filename="carallon/gobos/showco/15490009.png"/>
+			</Wheel>
+			<Wheel index="4" subattribute="GOBO2" attribute="GOBO2" feature="GOBO2" preset="GOBO" CITP_id0="120" CITP_id1="82" CITP_id2="161" CITP_id3="27">
+				<Slot index="0" media_name="open"/>
+				<Slot index="1" media_name="gobo 2.1" media_filename="carallon/gobos/robe/037901172.png"/>
+				<Slot index="2" media_name="gobo 2.2" media_filename="carallon/gobos/robe/037901157.png"/>
+				<Slot index="3" media_name="gobo 2.3" media_filename="carallon/gobos/robe/037901152.png"/>
+				<Slot index="4" media_name="gobo 2.4" media_filename="carallon/gobos/showco/15490013.png"/>
+				<Slot index="5" media_name="gobo 2.5" media_filename="carallon/gobos/showco/15490014.png"/>
+				<Slot index="6" media_name="gobo 2.6" media_filename="carallon/effects/showco/15490001.png"/>
+			</Wheel>
+		</Wheels>
+		<VirtualFunctionBlocks index="3"/>
+		<Body/>
+	</FixtureType>
+</MA>

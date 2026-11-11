@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="AF80 PlutoFresnel" mode="147: DIM RGB FAN">
+        <InfoItems>
+            <Info type="Revision" date="2025-03-18T10:15:09">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2023-11-28T09:14:46">New fixture type based on PlutoFresnel from Astera LED Technology</Info>
+            <Info type="Revision" date="2024-02-22T09:42:06">Version 1</Info>
+            <Info type="Revision" date="2024-03-06T12:21:31">tested by Astera / V1</Info>
+            <Info type="Revision" date="2024-03-20T13:19:38">tested by Astera / V2</Info>
+            <Info type="Revision" date="2024-04-30T13:49:21">tested by Astera / V3</Info>
+            <Info>Astera’s PlutoFresnel is an exceptional solution for film, studio, and event lighting. PlutoFresnel boasts an impressive output comparable to a traditional 300 W Tungsten Fresnel. With a beam angle of 15° to 60° without color fringing, wireless and wired DMX control, these lights offer impressive performance while consuming only 80 W. Easy to mount and adjust with removable handles and YokeBases, they enhance creativity and productivity on any set.</Info>
+            <Info type="Revision" date="2025-03-18T10:15:39.887">New%20fixture%20type%20based%20on%20PlutoFresnel%20from%20Astera%20LED%20Technology, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>AF80 PlutoFresnel</short_name>
+        <manufacturer>Astera LED Technology</manufacturer>
+        <short_manufacturer>Astera LED Technology</short_manufacturer>
+        <Modules>
+            <Module name="Base 1 LED 1" class="Conventional" beamtype="Wash" beam_intensity="2430" index="0" beam_angle="60">
+                <Model name="Base 1 LED 1" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <Body>
+                    <Size x="0.161" y="0.153263" z="0.283"/>
+                </Body>
+                <ChannelType coarse="1" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Closed" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Open" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="2" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="3" default="211" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="4" default="150" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="5" default="2" attribute="FANS" feature="Control" preset="Control">
+                    <ChannelFunction subattribute="FANS" attribute="FANS" feature="Control" preset="Control" from="0" to="50.2" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="8421504">
+                        <ChannelSet name="Fan Auto Speed" from_dmx="0" to_dmx="4"/>
+                        <ChannelSet name="Fan Slow Speed" from_dmx="5" to_dmx="35"/>
+                        <ChannelSet name="Fan Medium Speed" from_dmx="36" to_dmx="70"/>
+                        <ChannelSet name="Fan Fast Speed" from_dmx="71" to_dmx="100"/>
+                        <ChannelSet name="Fan Off" from_dmx="101" to_dmx="128"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="FANSPEED" attribute="FANS" feature="Control" preset="Control" from="50.2" to="100" physfrom="0" physto="1" min_dmx_24="8487297" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+        </Instances>
+        <Wheels>
+            <Wheel index="0" preset="COLOR" feature="COLOR1" attribute="COLOR1" subattribute="COLOR1">
+                <Slot index="0" media_name="No effect" r="254" g="255" b="255"/>
+                <Slot index="1" media_name="Rose Pink" r="235" g="101" b="226"/>
+                <Slot index="2" media_name="Lavender Tint" r="232" g="220" b="248"/>
+                <Slot index="3" media_name="Medium Bastard Amber" r="255" g="194" b="188"/>
+                <Slot index="4" media_name="Pale Yellow" r="246" g="238" b="205"/>
+                <Slot index="5" media_name="Dark Salmon" r="255" g="117" b="98"/>
+                <Slot index="6" media_name="Pale Amber Gold" r="255" g="211" b="171"/>
+                <Slot index="7" media_name="Medium Yellow" r="250" g="246" b="0"/>
+                <Slot index="8" media_name="Straw Tint" r="255" g="213" b="151"/>
+                <Slot index="9" media_name="Deep Straw" r="255" g="184" b="0"/>
+                <Slot index="10" media_name="Surprise Peach" r="169" g="107" b="78"/>
+                <Slot index="11" media_name="Fire" r="255" g="0" b="2"/>
+                <Slot index="12" media_name="Medium Amber" r="255" g="157" b="17"/>
+                <Slot index="13" media_name="Gold Amber" r="255" g="103" b="0"/>
+                <Slot index="14" media_name="Dark Amber" r="255" g="19" b="0"/>
+                <Slot index="15" media_name="Scarlet" r="233" g="27" b="78"/>
+                <Slot index="16" media_name="Sunset Red" r="245" g="86" b="46"/>
+                <Slot index="17" media_name="Bright Red" r="199" g="0" b="0"/>
+                <Slot index="18" media_name="Medium Red" r="139" g="0" b="6"/>
+                <Slot index="19" media_name="Plasa Red" r="157" g="0" b="0"/>
+                <Slot index="20" media_name="Light Pink" r="250" g="186" b="225"/>
+                <Slot index="21" media_name="Medium Pink" r="250" g="145" b="204"/>
+                <Slot index="22" media_name="Dark Magenta" r="165" g="0" b="66"/>
+                <Slot index="23" media_name="Rose Purple" r="108" g="88" b="189"/>
+                <Slot index="24" media_name="Medium Purple" r="126" g="0" b="149"/>
+                <Slot index="25" media_name="Light Lavender" r="163" g="142" b="230"/>
+                <Slot index="26" media_name="Paler Lavender" r="201" g="203" b="244"/>
+                <Slot index="27" media_name="Lavender" r="115" g="21" b="210"/>
+                <Slot index="28" media_name="Mist Blue" r="180" g="209" b="248"/>
+                <Slot index="29" media_name="Pale Blue" r="155" g="198" b="247"/>
+                <Slot index="30" media_name="Sky Blue" r="0" g="100" b="228"/>
+                <Slot index="31" media_name="Tokyo Blue" r="28" g="0" b="146"/>
+                <Slot index="32" media_name="Evening Blue" r="0" g="90" b="231"/>
+                <Slot index="33" media_name="Just Blue" r="0" g="39" b="209"/>
+                <Slot index="34" media_name="Deeper Blue" r="0" g="18" b="153"/>
+                <Slot index="35" media_name="Lime Green" r="173" g="238" b="78"/>
+                <Slot index="36" media_name="Moss Green" r="0" g="174" b="68"/>
+                <Slot index="37" media_name="Dark Yellow Green" r="0" g="33" b="3"/>
+                <Slot index="38" media_name="Spring Yellow" r="238" g="245" b="41"/>
+                <Slot index="39" media_name="Yellow" r="255" g="229" b="146"/>
+                <Slot index="40" media_name="Light Amber" r="255" g="217" b="95"/>
+                <Slot index="41" media_name="Straw" r="240" g="233" b="204"/>
+                <Slot index="42" media_name="Deep Amber" r="255" g="193" b="0"/>
+                <Slot index="43" media_name="Orange" r="255" g="136" b="0"/>
+                <Slot index="44" media_name="Primary Red" r="202" g="0" b="0"/>
+                <Slot index="45" media_name="Light Rose" r="255" g="138" b="186"/>
+                <Slot index="46" media_name="English Rose" r="255" g="176" b="154"/>
+                <Slot index="47" media_name="Light Salmon" r="255" g="159" b="195"/>
+                <Slot index="48" media_name="Middle Rose" r="255" g="142" b="224"/>
+                <Slot index="49" media_name="Dark Pink" r="255" g="71" b="201"/>
+                <Slot index="50" media_name="Magenta" r="216" g="0" b="93"/>
+                <Slot index="51" media_name="Peacock Blue" r="0" g="197" b="165"/>
+                <Slot index="52" media_name="Medium Blue-Green" r="0" g="139" b="159"/>
+                <Slot index="53" media_name="Steel Blue" r="88" g="209" b="251"/>
+                <Slot index="54" media_name="Light Blue" r="0" g="121" b="255"/>
+                <Slot index="55" media_name="Medium Blue" r="0" g="79" b="201"/>
+                <Slot index="56" media_name="Golden Amber" r="255" g="129" b="84"/>
+                <Slot index="57" media_name="Deep Golden Amber" r="253" g="0" b="0"/>
+                <Slot index="58" media_name="Pale Lavender" r="193" g="163" b="226"/>
+                <Slot index="59" media_name="Special Lavender" r="143" g="122" b="244"/>
+                <Slot index="60" media_name="Pale Green" r="193" g="246" b="155"/>
+                <Slot index="61" media_name="Primary Green" r="0" g="121" b="0"/>
+                <Slot index="62" media_name="Summer Blue" r="0" g="185" b="246"/>
+                <Slot index="63" media_name="Bright Blue" r="0" g="131" b="233"/>
+                <Slot index="64" media_name="Pale Violet" r="116" g="103" b="243"/>
+                <Slot index="65" media_name="Pale Navy Blue" r="0" g="121" b="186"/>
+                <Slot index="66" media_name="No Colour Blue" r="0" g="167" b="235"/>
+                <Slot index="67" media_name="Apricot" r="255" g="170" b="117"/>
+                <Slot index="68" media_name="Bright Rose" r="209" g="0" b="113"/>
+                <Slot index="69" media_name="Gold Tint" r="255" g="199" b="207"/>
+                <Slot index="70" media_name="Pale Gold" r="255" g="201" b="198"/>
+                <Slot index="71" media_name="Pale Salmon" r="255" g="186" b="213"/>
+                <Slot index="72" media_name="Pale Rose" r="255" g="207" b="218"/>
+                <Slot index="73" media_name="Chocolate" r="168" g="133" b="111"/>
+                <Slot index="74" media_name="Pink" r="255" g="91" b="158"/>
+                <Slot index="75" media_name="Deep Orange" r="249" g="103" b="0"/>
+                <Slot index="76" media_name="No Colour Straw" r="251" g="240" b="232"/>
+                <Slot index="77" media_name="Slate Blue" r="0" g="140" b="246"/>
+                <Slot index="78" media_name="Bastard Amber" r="255" g="216" b="217"/>
+                <Slot index="79" media_name="Flame Red" r="253" g="0" b="24"/>
+                <Slot index="80" media_name="Daylight Blue" r="0" g="128" b="241"/>
+                <Slot index="81" media_name="Lilac Tint" r="211" g="195" b="239"/>
+                <Slot index="82" media_name="Deep Lavender" r="168" g="117" b="207"/>
+                <Slot index="83" media_name="Lagoon Blue" r="0" g="159" b="222"/>
+                <Slot index="84" media_name="Dark Steel Blue" r="77" g="150" b="239"/>
+                <Slot index="85" media_name="Loving Amber" r="255" g="158" b="166"/>
+                <Slot index="86" media_name="Chrome Orange" r="255" g="173" b="0"/>
+                <Slot index="87" media_name="Dark Lavender" r="100" g="0" b="219"/>
+                <Slot index="88" media_name="Congo Blue" r="29" g="0" b="122"/>
+                <Slot index="89" media_name="Light Red" r="202" g="0" b="0"/>
+                <Slot index="90" media_name="Moonlight Blue" r="0" g="135" b="230"/>
+                <Slot index="91" media_name="Cosmetic Peach" r="216" g="196" b="197"/>
+                <Slot index="92" media_name="Cosmetic Silver Rose" r="225" g="194" b="213"/>
+                <Slot index="93" media_name="Cosmetic Rouge" r="224" g="194" b="195"/>
+                <Slot index="94" media_name="Cosmetic Highlight" r="231" g="207" b="208"/>
+                <Slot index="95" media_name="Cosmetic Silver Moss" r="224" g="220" b="203"/>
+                <Slot index="96" media_name="Cosmetic Aqua Blue" r="204" g="213" b="222"/>
+                <Slot index="97" media_name="Flesh Pink" r="255" g="85" b="189"/>
+                <Slot index="98" media_name="Surprise Pink" r="138" g="112" b="219"/>
+                <Slot index="99" media_name="Zenith Blue" r="0" g="0" b="188"/>
+                <Slot index="100" media_name="True Blue" r="0" g="150" b="238"/>
+                <Slot index="101" media_name="Alice Blue" r="0" g="80" b="211"/>
+                <Slot index="102" media_name="Palace Blue" r="20" g="1" b="126"/>
+                <Slot index="103" media_name="Regal Blue" r="42" g="16" b="206"/>
+                <Slot index="104" media_name="Double CT Blue" r="25" g="108" b="219"/>
+                <Slot index="105" media_name="Full CT Blue" r="119" g="156" b="235"/>
+                <Slot index="106" media_name="1/2 CT Blue" r="167" g="197" b="244"/>
+                <Slot index="107" media_name="1/4 CT Blue" r="205" g="216" b="248"/>
+                <Slot index="108" media_name="Full CT Orange" r="255" g="178" b="116"/>
+                <Slot index="109" media_name="1/2 CT Orange" r="255" g="209" b="176"/>
+                <Slot index="110" media_name="1/4 CT Orange" r="255" g="222" b="211"/>
+                <Slot index="111" media_name="Full CT Orange + *3ND" r="205" g="139" b="94"/>
+                <Slot index="112" media_name="Full CT Orange + *6ND" r="147" g="99" b="60"/>
+                <Slot index="113" media_name="0*3 Neutral Density" r="217" g="217" b="217"/>
+                <Slot index="114" media_name="0*6 Neutral Density" r="169" g="169" b="169"/>
+                <Slot index="115" media_name="0*9 Neutral Density" r="89" g="89" b="89"/>
+                <Slot index="116" media_name="LCT Yellow" r="251" g="242" b="208"/>
+                <Slot index="117" media_name="White Flame Green" r="217" g="236" b="209"/>
+                <Slot index="118" media_name="White Diffusion" r="161" g="161" b="161"/>
+                <Slot index="119" media_name="Blue Diffusion" r="166" g="159" b="168"/>
+                <Slot index="120" media_name="1/8 CT Blue" r="230" g="231" b="252"/>
+                <Slot index="121" media_name="LEE Fluorescent Green" r="0" g="169" b="167"/>
+                <Slot index="122" media_name="White Frost" r="167" g="167" b="167"/>
+                <Slot index="123" media_name="Blue Frost" r="179" g="170" b="180"/>
+                <Slot index="124" media_name="1/8 CT Orange" r="253" g="233" b="230"/>
+                <Slot index="125" media_name="Daylight Blue Frost" r="110" g="127" b="197"/>
+                <Slot index="126" media_name="LEE ND Frost" r="141" g="135" b="137"/>
+                <Slot index="127" media_name="LEE UV" r="252" g="242" b="250"/>
+                <Slot index="128" media_name="Brushed Silk" r="203" g="203" b="203"/>
+                <Slot index="129" media_name="1/4 Tough Spun" r="203" g="203" b="203"/>
+                <Slot index="130" media_name="Super Correction LCT" r="197" g="168" b="138"/>
+                <Slot index="131" media_name="Super White Flame Green" r="212" g="151" b="105"/>
+                <Slot index="132" media_name="HMI (To Tungsten)" r="255" g="181" b="134"/>
+                <Slot index="133" media_name="CID (To Tungsten)" r="227" g="146" b="116"/>
+                <Slot index="134" media_name="CSI (To Tungsten)" r="186" g="135" b="134"/>
+                <Slot index="135" media_name="Polariser" r="187" g="187" b="187"/>
+                <Slot index="136" media_name="LEE Fluorescent 5700 K" r="69" g="153" b="176"/>
+                <Slot index="137" media_name="LEE Fluorescent 4300 K" r="101" g="177" b="166"/>
+                <Slot index="138" media_name="LEE Fluorescent 3600 K" r="131" g="192" b="164"/>
+                <Slot index="139" media_name="LEE Plus Green" r="202" g="232" b="181"/>
+                <Slot index="140" media_name="1/2 Plus Green" r="224" g="237" b="213"/>
+                <Slot index="141" media_name="1/4 Plus Green" r="234" g="238" b="230"/>
+                <Slot index="142" media_name="LEE Minus Green" r="241" g="181" b="229"/>
+                <Slot index="143" media_name="1/2 Minus Green" r="245" g="210" b="241"/>
+                <Slot index="144" media_name="1/4 Minus Green" r="247" g="228" b="250"/>
+                <Slot index="145" media_name="1/2 White Diffusion" r="203" g="203" b="203"/>
+                <Slot index="146" media_name="1/4 White Diffusion" r="231" g="231" b="231"/>
+                <Slot index="147" media_name="1/8 White Diffusion" r="243" g="243" b="243"/>
+                <Slot index="148" media_name="Hampshire Frost" r="254" g="255" b="255"/>
+                <Slot index="149" media_name="New Hampshire Frost" r="254" g="255" b="255"/>
+                <Slot index="150" media_name="Hollywood Frost" r="234" g="234" b="234"/>
+            </Wheel>
+        </Wheels>
+        <RDMKey ESTAId="16755" DeviceModelId="1"/>
+    </FixtureType>
+</MA>

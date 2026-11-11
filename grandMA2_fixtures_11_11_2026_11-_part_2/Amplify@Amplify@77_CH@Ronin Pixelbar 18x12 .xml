@@ -1,0 +1,997 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="Amplify" mode="77 CH ">
+        <InfoItems>
+            <Info type="Revision" date="2023-04-11T17:07:51">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.0</Info>
+            <Info type="Revision" date="2023-04-08T15:19:25">New fixture type based on Ronin Pixelbar 18x12 from Led Pixel bar</Info>
+            <Info type="Revision" date="2023-04-08T13:19:27">Ronin Pixelbar 18x12</Info>
+            <Info type="Revision" date="2023-04-10T09:38:21">Ronin Pixelbar 18x12</Info>
+            <Info type="Revision" date="2023-04-11T17:07:57.230">Ronin%20Pixelbar%2018x12%20, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>Ronin Pixelbar 18x12</short_name>
+        <manufacturer>Amplify</manufacturer>
+        <short_manufacturer>Led Pixel bar</short_manufacturer>
+        <Modules>
+            <Module name="Main Strip" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model name="Main Strip" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Vertices>GAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdTyQwnW87AVRv+wF0T4MoknCAAAAAAAAAADNzEw9kMJ1PJDCdbyrqqo+q6oqP6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEw9kMJ1vJDCdTzsBdE+7AVRv/RdRsIAAAAAAAAAAM3MTD2QwnU8kMJ1PKuqKj+rqqo+VVVFwgAAAAAAAAAAzcxMvZDCdTyQwnU87AXRvuwFUT/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdbyrqqq+q6oqv6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdbyQwnU87AXRPuwFUb/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdTyrqiq/q6qqvlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEw9kMJ1PJDCdTyrqio/q6qqPlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1POwF0T7sBVG/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnU8kMJ1POwF0b7sBVE/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnU8q6oqP6uqqj5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdTzsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                    <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                    <SubSets>
+                        <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                    </SubSets>
+                    <Materials>
+                        <Material3d name="black" specularPower="0.1">
+                            <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                            <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                            <EmissiveColor r="0" g="0" b="0" a="1"/>
+                            <DiffuseInking x="0" y="0" z="0"/>
+                            <EmissiveInking x="0" y="0" z="0"/>
+                            <SurfaceTexture/>
+                            <AlphaTexture/>
+                        </Material3d>
+                    </Materials>
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <ChannelType coarse="1" default="255" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="2" default="0" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="75" default="0" attribute="COLORMACROS" feature="Color" preset="Color">
+                    <ChannelFunction subattribute="COLORMACROS" attribute="COLORMACROS" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="76" default="0" attribute="COLOREFFECT" feature="Color" preset="Color">
+                    <ChannelFunction subattribute="COLOREFFECT" attribute="COLOREFFECT" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="77" default="0" attribute="ColorMacro1Rate" feature="Color" preset="Color">
+                    <ChannelFunction subattribute="ColorMacro1Rate" attribute="ColorMacro1Rate" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Pixel 1" class="Conventional" beamtype="Wash" beam_intensity="10000" beam_angle="25">
+                <Model>
+                    <Model name="Pixel 1" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                        <Vertices>GAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdTyQwnW87AVRv+wF0T4MoknCAAAAAAAAAADNzEw9kMJ1PJDCdbyrqqo+q6oqP6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEw9kMJ1vJDCdTzsBdE+7AVRv/RdRsIAAAAAAAAAAM3MTD2QwnU8kMJ1PKuqKj+rqqo+VVVFwgAAAAAAAAAAzcxMvZDCdTyQwnU87AXRvuwFUT/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdbyrqqq+q6oqv6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdbyQwnU87AXRPuwFUb/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdTyrqiq/q6qqvlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEw9kMJ1PJDCdTyrqio/q6qqPlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1POwF0T7sBVG/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnU8kMJ1POwF0b7sBVE/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnU8q6oqP6uqqj5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdTzsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                        <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                        <SubSets>
+                            <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                        </SubSets>
+                        <Materials>
+                            <Material3d name="black" specularPower="0.1">
+                                <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                <DiffuseInking x="0" y="0" z="0"/>
+                                <EmissiveInking x="0" y="0" z="0"/>
+                                <SurfaceTexture/>
+                                <AlphaTexture/>
+                            </Material3d>
+                        </Materials>
+                        <Offset>
+                            <Location x="-0.450000" y="0.000000" z="0.000000"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Beam" model_type="Beam">
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <BeamClippingDistance>-0.066</BeamClippingDistance>
+                            <BeamDiameterAtOffset>0.100000</BeamDiameterAtOffset>
+                        </Model>
+                    </Model>
+                </Model>
+                <ChannelType coarse="3" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="4" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="5" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="6" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="1677721600">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216"/>
+                </ChannelType>
+            </Module>
+            <Module name="Pixel 2" class="Conventional" beamtype="Wash" beam_intensity="10000" beam_angle="25">
+                <Model>
+                    <Model name="Pixel 2" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                        <Vertices>GAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdTyQwnW87AVRv+wF0T4MoknCAAAAAAAAAADNzEw9kMJ1PJDCdbyrqqo+q6oqP6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEw9kMJ1vJDCdTzsBdE+7AVRv/RdRsIAAAAAAAAAAM3MTD2QwnU8kMJ1PKuqKj+rqqo+VVVFwgAAAAAAAAAAzcxMvZDCdTyQwnU87AXRvuwFUT/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdbyrqqq+q6oqv6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdbyQwnU87AXRPuwFUb/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdTyrqiq/q6qqvlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEw9kMJ1PJDCdTyrqio/q6qqPlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1POwF0T7sBVG/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnU8kMJ1POwF0b7sBVE/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnU8q6oqP6uqqj5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdTzsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                        <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                        <SubSets>
+                            <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                        </SubSets>
+                        <Materials>
+                            <Material3d name="black" specularPower="0.1">
+                                <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                <DiffuseInking x="0" y="0" z="0"/>
+                                <EmissiveInking x="0" y="0" z="0"/>
+                                <SurfaceTexture/>
+                                <AlphaTexture/>
+                            </Material3d>
+                        </Materials>
+                        <Offset>
+                            <Location x="-0.400000" y="0.000000" z="0.000000"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Beam" model_type="Beam">
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <BeamClippingDistance>-0.066</BeamClippingDistance>
+                            <BeamDiameterAtOffset>0.100000</BeamDiameterAtOffset>
+                        </Model>
+                    </Model>
+                </Model>
+                <ChannelType coarse="7" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="8" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="9" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="10" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="1677721600">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216"/>
+                </ChannelType>
+            </Module>
+            <Module name="Pixel 3" class="Conventional" beamtype="Wash" beam_intensity="10000" beam_angle="25">
+                <Model>
+                    <Model name="Pixel 3" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                        <Vertices>GAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdTyQwnW87AVRv+wF0T4MoknCAAAAAAAAAADNzEw9kMJ1PJDCdbyrqqo+q6oqP6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEw9kMJ1vJDCdTzsBdE+7AVRv/RdRsIAAAAAAAAAAM3MTD2QwnU8kMJ1PKuqKj+rqqo+VVVFwgAAAAAAAAAAzcxMvZDCdTyQwnU87AXRvuwFUT/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdbyrqqq+q6oqv6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdbyQwnU87AXRPuwFUb/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdTyrqiq/q6qqvlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEw9kMJ1PJDCdTyrqio/q6qqPlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1POwF0T7sBVG/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnU8kMJ1POwF0b7sBVE/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnU8q6oqP6uqqj5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdTzsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                        <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                        <SubSets>
+                            <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                        </SubSets>
+                        <Materials>
+                            <Material3d name="black" specularPower="0.1">
+                                <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                <DiffuseInking x="0" y="0" z="0"/>
+                                <EmissiveInking x="0" y="0" z="0"/>
+                                <SurfaceTexture/>
+                                <AlphaTexture/>
+                            </Material3d>
+                        </Materials>
+                        <Offset>
+                            <Location x="-0.350000" y="0.000000" z="0.000000"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Beam" model_type="Beam">
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <BeamClippingDistance>-0.066</BeamClippingDistance>
+                            <BeamDiameterAtOffset>0.100000</BeamDiameterAtOffset>
+                        </Model>
+                    </Model>
+                </Model>
+                <ChannelType coarse="11" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="12" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="13" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="14" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216"/>
+                </ChannelType>
+            </Module>
+            <Module name="Pixel 4" class="Conventional" beamtype="Wash" beam_intensity="10000" beam_angle="25">
+                <Model>
+                    <Model name="Pixel 4" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                        <Vertices>GAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdTyQwnW87AVRv+wF0T4MoknCAAAAAAAAAADNzEw9kMJ1PJDCdbyrqqo+q6oqP6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEw9kMJ1vJDCdTzsBdE+7AVRv/RdRsIAAAAAAAAAAM3MTD2QwnU8kMJ1PKuqKj+rqqo+VVVFwgAAAAAAAAAAzcxMvZDCdTyQwnU87AXRvuwFUT/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdbyrqqq+q6oqv6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdbyQwnU87AXRPuwFUb/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdTyrqiq/q6qqvlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEw9kMJ1PJDCdTyrqio/q6qqPlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1POwF0T7sBVG/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnU8kMJ1POwF0b7sBVE/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnU8q6oqP6uqqj5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdTzsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                        <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                        <SubSets>
+                            <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                        </SubSets>
+                        <Materials>
+                            <Material3d name="black" specularPower="0.1">
+                                <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                <DiffuseInking x="0" y="0" z="0"/>
+                                <EmissiveInking x="0" y="0" z="0"/>
+                                <SurfaceTexture/>
+                                <AlphaTexture/>
+                            </Material3d>
+                        </Materials>
+                        <Offset>
+                            <Location x="-0.300000" y="0.000000" z="0.000000"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Beam" model_type="Beam">
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <BeamClippingDistance>-0.066</BeamClippingDistance>
+                            <BeamDiameterAtOffset>0.100000</BeamDiameterAtOffset>
+                        </Model>
+                    </Model>
+                </Model>
+                <ChannelType coarse="15" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="16" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="17" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="18" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216"/>
+                </ChannelType>
+            </Module>
+            <Module name="Pixel 5" class="Conventional" beamtype="Wash" beam_intensity="10000" beam_angle="25">
+                <Model>
+                    <Model name="Pixel 5" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                        <Vertices>GAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdTyQwnW87AVRv+wF0T4MoknCAAAAAAAAAADNzEw9kMJ1PJDCdbyrqqo+q6oqP6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEw9kMJ1vJDCdTzsBdE+7AVRv/RdRsIAAAAAAAAAAM3MTD2QwnU8kMJ1PKuqKj+rqqo+VVVFwgAAAAAAAAAAzcxMvZDCdTyQwnU87AXRvuwFUT/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdbyrqqq+q6oqv6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdbyQwnU87AXRPuwFUb/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdTyrqiq/q6qqvlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEw9kMJ1PJDCdTyrqio/q6qqPlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1POwF0T7sBVG/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnU8kMJ1POwF0b7sBVE/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnU8q6oqP6uqqj5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdTzsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                        <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                        <SubSets>
+                            <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                        </SubSets>
+                        <Materials>
+                            <Material3d name="black" specularPower="0.1">
+                                <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                <DiffuseInking x="0" y="0" z="0"/>
+                                <EmissiveInking x="0" y="0" z="0"/>
+                                <SurfaceTexture/>
+                                <AlphaTexture/>
+                            </Material3d>
+                        </Materials>
+                        <Offset>
+                            <Location x="-0.250000" y="0.000000" z="0.000000"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Beam" model_type="Beam">
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <BeamClippingDistance>-0.066</BeamClippingDistance>
+                            <BeamDiameterAtOffset>0.100000</BeamDiameterAtOffset>
+                        </Model>
+                    </Model>
+                </Model>
+                <ChannelType coarse="19" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="20" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="21" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="22" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216"/>
+                </ChannelType>
+            </Module>
+            <Module name="Pixel 6" class="Conventional" beamtype="Wash" beam_intensity="10000" beam_angle="25">
+                <Model>
+                    <Model name="Pixel 6" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                        <Vertices>GAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdTyQwnW87AVRv+wF0T4MoknCAAAAAAAAAADNzEw9kMJ1PJDCdbyrqqo+q6oqP6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEw9kMJ1vJDCdTzsBdE+7AVRv/RdRsIAAAAAAAAAAM3MTD2QwnU8kMJ1PKuqKj+rqqo+VVVFwgAAAAAAAAAAzcxMvZDCdTyQwnU87AXRvuwFUT/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdbyrqqq+q6oqv6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdbyQwnU87AXRPuwFUb/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdTyrqiq/q6qqvlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEw9kMJ1PJDCdTyrqio/q6qqPlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1POwF0T7sBVG/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnU8kMJ1POwF0b7sBVE/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnU8q6oqP6uqqj5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdTzsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                        <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                        <SubSets>
+                            <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                        </SubSets>
+                        <Materials>
+                            <Material3d name="black" specularPower="0.1">
+                                <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                <DiffuseInking x="0" y="0" z="0"/>
+                                <EmissiveInking x="0" y="0" z="0"/>
+                                <SurfaceTexture/>
+                                <AlphaTexture/>
+                            </Material3d>
+                        </Materials>
+                        <Offset>
+                            <Location x="-0.200000" y="0.000000" z="0.000000"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Beam" model_type="Beam">
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <BeamClippingDistance>-0.066</BeamClippingDistance>
+                            <BeamDiameterAtOffset>0.100000</BeamDiameterAtOffset>
+                        </Model>
+                    </Model>
+                </Model>
+                <ChannelType coarse="23" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="24" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="25" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="26" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216"/>
+                </ChannelType>
+            </Module>
+            <Module name="Pixel 7" class="Conventional" beamtype="Wash" beam_intensity="10000" beam_angle="25">
+                <Model>
+                    <Model name="Pixel 7" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                        <Vertices>GAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdTyQwnW87AVRv+wF0T4MoknCAAAAAAAAAADNzEw9kMJ1PJDCdbyrqqo+q6oqP6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEw9kMJ1vJDCdTzsBdE+7AVRv/RdRsIAAAAAAAAAAM3MTD2QwnU8kMJ1PKuqKj+rqqo+VVVFwgAAAAAAAAAAzcxMvZDCdTyQwnU87AXRvuwFUT/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdbyrqqq+q6oqv6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdbyQwnU87AXRPuwFUb/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdTyrqiq/q6qqvlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEw9kMJ1PJDCdTyrqio/q6qqPlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1POwF0T7sBVG/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnU8kMJ1POwF0b7sBVE/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnU8q6oqP6uqqj5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdTzsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                        <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                        <SubSets>
+                            <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                        </SubSets>
+                        <Materials>
+                            <Material3d name="black" specularPower="0.1">
+                                <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                <DiffuseInking x="0" y="0" z="0"/>
+                                <EmissiveInking x="0" y="0" z="0"/>
+                                <SurfaceTexture/>
+                                <AlphaTexture/>
+                            </Material3d>
+                        </Materials>
+                        <Offset>
+                            <Location x="-0.150000" y="0.000000" z="0.000000"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Beam" model_type="Beam">
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <BeamClippingDistance>-0.066</BeamClippingDistance>
+                            <BeamDiameterAtOffset>0.100000</BeamDiameterAtOffset>
+                        </Model>
+                    </Model>
+                </Model>
+                <ChannelType coarse="27" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="28" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="29" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="30" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216"/>
+                </ChannelType>
+            </Module>
+            <Module name="Pixel 8" class="Conventional" beamtype="Wash" beam_intensity="10000" beam_angle="25">
+                <Model>
+                    <Model name="Pixel 8" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                        <Vertices>GAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdTyQwnW87AVRv+wF0T4MoknCAAAAAAAAAADNzEw9kMJ1PJDCdbyrqqo+q6oqP6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEw9kMJ1vJDCdTzsBdE+7AVRv/RdRsIAAAAAAAAAAM3MTD2QwnU8kMJ1PKuqKj+rqqo+VVVFwgAAAAAAAAAAzcxMvZDCdTyQwnU87AXRvuwFUT/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdbyrqqq+q6oqv6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdbyQwnU87AXRPuwFUb/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdTyrqiq/q6qqvlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEw9kMJ1PJDCdTyrqio/q6qqPlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1POwF0T7sBVG/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnU8kMJ1POwF0b7sBVE/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnU8q6oqP6uqqj5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdTzsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                        <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                        <SubSets>
+                            <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                        </SubSets>
+                        <Materials>
+                            <Material3d name="black" specularPower="0.1">
+                                <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                <DiffuseInking x="0" y="0" z="0"/>
+                                <EmissiveInking x="0" y="0" z="0"/>
+                                <SurfaceTexture/>
+                                <AlphaTexture/>
+                            </Material3d>
+                        </Materials>
+                        <Offset>
+                            <Location x="-0.100000" y="0.000000" z="0.000000"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Beam" model_type="Beam">
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <BeamClippingDistance>-0.066</BeamClippingDistance>
+                            <BeamDiameterAtOffset>0.100000</BeamDiameterAtOffset>
+                        </Model>
+                    </Model>
+                </Model>
+                <ChannelType coarse="31" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="32" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="33" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="34" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216"/>
+                </ChannelType>
+            </Module>
+            <Module name="Pixel 9" class="Conventional" beamtype="Wash" beam_intensity="10000" beam_angle="25">
+                <Model>
+                    <Model name="Pixel 9" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                        <Vertices>GAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdTyQwnW87AVRv+wF0T4MoknCAAAAAAAAAADNzEw9kMJ1PJDCdbyrqqo+q6oqP6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEw9kMJ1vJDCdTzsBdE+7AVRv/RdRsIAAAAAAAAAAM3MTD2QwnU8kMJ1PKuqKj+rqqo+VVVFwgAAAAAAAAAAzcxMvZDCdTyQwnU87AXRvuwFUT/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdbyrqqq+q6oqv6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdbyQwnU87AXRPuwFUb/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdTyrqiq/q6qqvlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEw9kMJ1PJDCdTyrqio/q6qqPlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1POwF0T7sBVG/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnU8kMJ1POwF0b7sBVE/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnU8q6oqP6uqqj5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdTzsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                        <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                        <SubSets>
+                            <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                        </SubSets>
+                        <Materials>
+                            <Material3d name="black" specularPower="0.1">
+                                <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                <DiffuseInking x="0" y="0" z="0"/>
+                                <EmissiveInking x="0" y="0" z="0"/>
+                                <SurfaceTexture/>
+                                <AlphaTexture/>
+                            </Material3d>
+                        </Materials>
+                        <Offset>
+                            <Location x="-0.050000" y="0.000000" z="0.000000"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Beam" model_type="Beam">
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <BeamClippingDistance>-0.066</BeamClippingDistance>
+                            <BeamDiameterAtOffset>0.100000</BeamDiameterAtOffset>
+                        </Model>
+                    </Model>
+                </Model>
+                <ChannelType coarse="35" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="36" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="37" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="38" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216"/>
+                </ChannelType>
+            </Module>
+            <Module name="Pixel 10" class="Conventional" beamtype="Wash" beam_intensity="10000" beam_angle="25">
+                <Model>
+                    <Model name="Pixel 10" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                        <Vertices>GAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdTyQwnW87AVRv+wF0T4MoknCAAAAAAAAAADNzEw9kMJ1PJDCdbyrqqo+q6oqP6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEw9kMJ1vJDCdTzsBdE+7AVRv/RdRsIAAAAAAAAAAM3MTD2QwnU8kMJ1PKuqKj+rqqo+VVVFwgAAAAAAAAAAzcxMvZDCdTyQwnU87AXRvuwFUT/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdbyrqqq+q6oqv6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdbyQwnU87AXRPuwFUb/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdTyrqiq/q6qqvlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEw9kMJ1PJDCdTyrqio/q6qqPlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1POwF0T7sBVG/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnU8kMJ1POwF0b7sBVE/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnU8q6oqP6uqqj5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdTzsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                        <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                        <SubSets>
+                            <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                        </SubSets>
+                        <Materials>
+                            <Material3d name="black" specularPower="0.1">
+                                <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                <DiffuseInking x="0" y="0" z="0"/>
+                                <EmissiveInking x="0" y="0" z="0"/>
+                                <SurfaceTexture/>
+                                <AlphaTexture/>
+                            </Material3d>
+                        </Materials>
+                        <Offset>
+                            <Location x="0.050000" y="0.000000" z="0.000000"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Beam" model_type="Beam">
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <BeamClippingDistance>-0.066</BeamClippingDistance>
+                            <BeamDiameterAtOffset>0.100000</BeamDiameterAtOffset>
+                        </Model>
+                    </Model>
+                </Model>
+                <ChannelType coarse="39" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="40" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="41" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="42" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216"/>
+                </ChannelType>
+            </Module>
+            <Module name="Pixel 11" class="Conventional" beamtype="Wash" beam_intensity="10000" beam_angle="25">
+                <Model>
+                    <Model name="Pixel 11" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                        <Vertices>GAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdTyQwnW87AVRv+wF0T4MoknCAAAAAAAAAADNzEw9kMJ1PJDCdbyrqqo+q6oqP6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEw9kMJ1vJDCdTzsBdE+7AVRv/RdRsIAAAAAAAAAAM3MTD2QwnU8kMJ1PKuqKj+rqqo+VVVFwgAAAAAAAAAAzcxMvZDCdTyQwnU87AXRvuwFUT/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdbyrqqq+q6oqv6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdbyQwnU87AXRPuwFUb/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdTyrqiq/q6qqvlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEw9kMJ1PJDCdTyrqio/q6qqPlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1POwF0T7sBVG/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnU8kMJ1POwF0b7sBVE/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnU8q6oqP6uqqj5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdTzsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                        <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                        <SubSets>
+                            <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                        </SubSets>
+                        <Materials>
+                            <Material3d name="black" specularPower="0.1">
+                                <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                <DiffuseInking x="0" y="0" z="0"/>
+                                <EmissiveInking x="0" y="0" z="0"/>
+                                <SurfaceTexture/>
+                                <AlphaTexture/>
+                            </Material3d>
+                        </Materials>
+                        <Offset>
+                            <Location x="0.100000" y="0.000000" z="0.000000"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Beam" model_type="Beam">
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <BeamClippingDistance>-0.066</BeamClippingDistance>
+                            <BeamDiameterAtOffset>0.100000</BeamDiameterAtOffset>
+                        </Model>
+                    </Model>
+                </Model>
+                <ChannelType coarse="43" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="44" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="45" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="46" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216"/>
+                </ChannelType>
+            </Module>
+            <Module name="Pixel 12" class="Conventional" beamtype="Wash" beam_intensity="10000" beam_angle="25">
+                <Model>
+                    <Model name="Pixel 12" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                        <Vertices>GAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdTyQwnW87AVRv+wF0T4MoknCAAAAAAAAAADNzEw9kMJ1PJDCdbyrqqo+q6oqP6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEw9kMJ1vJDCdTzsBdE+7AVRv/RdRsIAAAAAAAAAAM3MTD2QwnU8kMJ1PKuqKj+rqqo+VVVFwgAAAAAAAAAAzcxMvZDCdTyQwnU87AXRvuwFUT/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdbyrqqq+q6oqv6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdbyQwnU87AXRPuwFUb/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdTyrqiq/q6qqvlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEw9kMJ1PJDCdTyrqio/q6qqPlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1POwF0T7sBVG/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnU8kMJ1POwF0b7sBVE/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnU8q6oqP6uqqj5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdTzsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                        <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                        <SubSets>
+                            <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                        </SubSets>
+                        <Materials>
+                            <Material3d name="black" specularPower="0.1">
+                                <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                <DiffuseInking x="0" y="0" z="0"/>
+                                <EmissiveInking x="0" y="0" z="0"/>
+                                <SurfaceTexture/>
+                                <AlphaTexture/>
+                            </Material3d>
+                        </Materials>
+                        <Offset>
+                            <Location x="0.150000" y="0.000000" z="0.000000"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Beam" model_type="Beam">
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <BeamClippingDistance>-0.066</BeamClippingDistance>
+                            <BeamDiameterAtOffset>0.100000</BeamDiameterAtOffset>
+                        </Model>
+                    </Model>
+                </Model>
+                <ChannelType coarse="47" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="48" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="49" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="50" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216"/>
+                </ChannelType>
+            </Module>
+            <Module name="Pixel 13" class="Conventional" beamtype="Wash" beam_intensity="10000" beam_angle="25">
+                <Model>
+                    <Model name="Pixel 13" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                        <Vertices>GAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdTyQwnW87AVRv+wF0T4MoknCAAAAAAAAAADNzEw9kMJ1PJDCdbyrqqo+q6oqP6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEw9kMJ1vJDCdTzsBdE+7AVRv/RdRsIAAAAAAAAAAM3MTD2QwnU8kMJ1PKuqKj+rqqo+VVVFwgAAAAAAAAAAzcxMvZDCdTyQwnU87AXRvuwFUT/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdbyrqqq+q6oqv6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdbyQwnU87AXRPuwFUb/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdTyrqiq/q6qqvlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEw9kMJ1PJDCdTyrqio/q6qqPlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1POwF0T7sBVG/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnU8kMJ1POwF0b7sBVE/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnU8q6oqP6uqqj5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdTzsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                        <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                        <SubSets>
+                            <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                        </SubSets>
+                        <Materials>
+                            <Material3d name="black" specularPower="0.1">
+                                <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                <DiffuseInking x="0" y="0" z="0"/>
+                                <EmissiveInking x="0" y="0" z="0"/>
+                                <SurfaceTexture/>
+                                <AlphaTexture/>
+                            </Material3d>
+                        </Materials>
+                        <Offset>
+                            <Location x="0.200000" y="0.000000" z="0.000000"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Beam" model_type="Beam">
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <BeamClippingDistance>-0.066</BeamClippingDistance>
+                            <BeamDiameterAtOffset>0.100000</BeamDiameterAtOffset>
+                        </Model>
+                    </Model>
+                </Model>
+                <ChannelType coarse="51" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="52" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="53" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="54" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216"/>
+                </ChannelType>
+            </Module>
+            <Module name="Pixel 14" class="Conventional" beamtype="Wash" beam_intensity="10000" beam_angle="25">
+                <Model>
+                    <Model name="Pixel 14" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                        <Vertices>GAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdTyQwnW87AVRv+wF0T4MoknCAAAAAAAAAADNzEw9kMJ1PJDCdbyrqqo+q6oqP6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEw9kMJ1vJDCdTzsBdE+7AVRv/RdRsIAAAAAAAAAAM3MTD2QwnU8kMJ1PKuqKj+rqqo+VVVFwgAAAAAAAAAAzcxMvZDCdTyQwnU87AXRvuwFUT/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdbyrqqq+q6oqv6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdbyQwnU87AXRPuwFUb/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdTyrqiq/q6qqvlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEw9kMJ1PJDCdTyrqio/q6qqPlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1POwF0T7sBVG/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnU8kMJ1POwF0b7sBVE/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnU8q6oqP6uqqj5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdTzsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                        <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                        <SubSets>
+                            <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                        </SubSets>
+                        <Materials>
+                            <Material3d name="black" specularPower="0.1">
+                                <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                <DiffuseInking x="0" y="0" z="0"/>
+                                <EmissiveInking x="0" y="0" z="0"/>
+                                <SurfaceTexture/>
+                                <AlphaTexture/>
+                            </Material3d>
+                        </Materials>
+                        <Offset>
+                            <Location x="0.250000" y="0.000000" z="0.000000"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Beam" model_type="Beam">
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <BeamClippingDistance>-0.066</BeamClippingDistance>
+                            <BeamDiameterAtOffset>0.100000</BeamDiameterAtOffset>
+                        </Model>
+                    </Model>
+                </Model>
+                <ChannelType coarse="55" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="56" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="57" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="58" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216"/>
+                </ChannelType>
+            </Module>
+            <Module name="Pixel 15" class="Conventional" beamtype="Wash" beam_intensity="10000" beam_angle="25">
+                <Model>
+                    <Model name="Pixel 15" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                        <Vertices>GAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdTyQwnW87AVRv+wF0T4MoknCAAAAAAAAAADNzEw9kMJ1PJDCdbyrqqo+q6oqP6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEw9kMJ1vJDCdTzsBdE+7AVRv/RdRsIAAAAAAAAAAM3MTD2QwnU8kMJ1PKuqKj+rqqo+VVVFwgAAAAAAAAAAzcxMvZDCdTyQwnU87AXRvuwFUT/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdbyrqqq+q6oqv6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdbyQwnU87AXRPuwFUb/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdTyrqiq/q6qqvlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEw9kMJ1PJDCdTyrqio/q6qqPlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1POwF0T7sBVG/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnU8kMJ1POwF0b7sBVE/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnU8q6oqP6uqqj5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdTzsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                        <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                        <SubSets>
+                            <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                        </SubSets>
+                        <Materials>
+                            <Material3d name="black" specularPower="0.1">
+                                <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                <DiffuseInking x="0" y="0" z="0"/>
+                                <EmissiveInking x="0" y="0" z="0"/>
+                                <SurfaceTexture/>
+                                <AlphaTexture/>
+                            </Material3d>
+                        </Materials>
+                        <Offset>
+                            <Location x="0.300000" y="0.000000" z="0.000000"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Beam" model_type="Beam">
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <BeamClippingDistance>-0.066</BeamClippingDistance>
+                            <BeamDiameterAtOffset>0.100000</BeamDiameterAtOffset>
+                        </Model>
+                    </Model>
+                </Model>
+                <ChannelType coarse="59" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="60" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="61" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="62" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216"/>
+                </ChannelType>
+            </Module>
+            <Module name="Pixel 16" class="Conventional" beamtype="Wash" beam_intensity="10000" beam_angle="25">
+                <Model>
+                    <Model name="Pixel 16" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                        <Vertices>GAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdTyQwnW87AVRv+wF0T4MoknCAAAAAAAAAADNzEw9kMJ1PJDCdbyrqqo+q6oqP6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEw9kMJ1vJDCdTzsBdE+7AVRv/RdRsIAAAAAAAAAAM3MTD2QwnU8kMJ1PKuqKj+rqqo+VVVFwgAAAAAAAAAAzcxMvZDCdTyQwnU87AXRvuwFUT/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdbyrqqq+q6oqv6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdbyQwnU87AXRPuwFUb/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdTyrqiq/q6qqvlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEw9kMJ1PJDCdTyrqio/q6qqPlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1POwF0T7sBVG/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnU8kMJ1POwF0b7sBVE/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnU8q6oqP6uqqj5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdTzsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                        <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                        <SubSets>
+                            <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                        </SubSets>
+                        <Materials>
+                            <Material3d name="black" specularPower="0.1">
+                                <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                <DiffuseInking x="0" y="0" z="0"/>
+                                <EmissiveInking x="0" y="0" z="0"/>
+                                <SurfaceTexture/>
+                                <AlphaTexture/>
+                            </Material3d>
+                        </Materials>
+                        <Offset>
+                            <Location x="0.350000" y="0.000000" z="0.000000"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Beam" model_type="Beam">
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <BeamClippingDistance>-0.066</BeamClippingDistance>
+                            <BeamDiameterAtOffset>0.100000</BeamDiameterAtOffset>
+                        </Model>
+                    </Model>
+                </Model>
+                <ChannelType coarse="63" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="64" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="65" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="66" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216"/>
+                </ChannelType>
+            </Module>
+            <Module name="Pixel 17" class="Conventional" beamtype="Wash" beam_intensity="10000" beam_angle="25">
+                <Model>
+                    <Model name="Pixel 17" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                        <Vertices>GAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdTyQwnW87AVRv+wF0T4MoknCAAAAAAAAAADNzEw9kMJ1PJDCdbyrqqo+q6oqP6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEw9kMJ1vJDCdTzsBdE+7AVRv/RdRsIAAAAAAAAAAM3MTD2QwnU8kMJ1PKuqKj+rqqo+VVVFwgAAAAAAAAAAzcxMvZDCdTyQwnU87AXRvuwFUT/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdbyrqqq+q6oqv6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdbyQwnU87AXRPuwFUb/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdTyrqiq/q6qqvlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEw9kMJ1PJDCdTyrqio/q6qqPlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1POwF0T7sBVG/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnU8kMJ1POwF0b7sBVE/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnU8q6oqP6uqqj5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdTzsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                        <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                        <SubSets>
+                            <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                        </SubSets>
+                        <Materials>
+                            <Material3d name="black" specularPower="0.1">
+                                <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                <DiffuseInking x="0" y="0" z="0"/>
+                                <EmissiveInking x="0" y="0" z="0"/>
+                                <SurfaceTexture/>
+                                <AlphaTexture/>
+                            </Material3d>
+                        </Materials>
+                        <Offset>
+                            <Location x="0.400000" y="0.000000" z="0.000000"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Beam" model_type="Beam">
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <BeamClippingDistance>-0.066</BeamClippingDistance>
+                            <BeamDiameterAtOffset>0.100000</BeamDiameterAtOffset>
+                        </Model>
+                    </Model>
+                </Model>
+                <ChannelType coarse="67" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="68" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="69" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="70" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216"/>
+                </ChannelType>
+            </Module>
+            <Module name="Pixel 18" class="Conventional" beamtype="Wash" beam_intensity="10000" beam_angle="25">
+                <Model>
+                    <Model name="Pixel 18" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                        <Vertices>GAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdTyQwnW87AVRv+wF0T4MoknCAAAAAAAAAADNzEw9kMJ1PJDCdbyrqqo+q6oqP6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEw9kMJ1vJDCdTzsBdE+7AVRv/RdRsIAAAAAAAAAAM3MTD2QwnU8kMJ1PKuqKj+rqqo+VVVFwgAAAAAAAAAAzcxMvZDCdTyQwnU87AXRvuwFUT/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdbyrqqq+q6oqv6uqSsIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdbyQwnU87AXRPuwFUb/0XUbCAAAAAAAAAADNzEy9kMJ1vJDCdTyrqiq/q6qqvlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1vOwFUT/sBdG+DKJJwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEw9kMJ1PJDCdTyrqio/q6qqPlVVRcIAAAAAAAAAAM3MTD2QwnW8kMJ1POwF0T7sBVG/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnW8q6qqPquqKj+rqkrCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnU8kMJ1POwF0b7sBVE/9F1GwgAAAAAAAAAAzcxMPZDCdTyQwnU8q6oqP6uqqj5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdbzsBVG/7AXRPgyiScIAAAAAAAAAAM3MTL2QwnW8kMJ1vKuqqr6rqiq/q6pKwgAAAAAAAAAAzcxMvZDCdbyQwnU8q6oqv6uqqr5VVUXCAAAAAAAAAADNzEy9kMJ1PJDCdTzsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                        <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                        <SubSets>
+                            <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                        </SubSets>
+                        <Materials>
+                            <Material3d name="black" specularPower="0.1">
+                                <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                                <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                                <EmissiveColor r="0" g="0" b="0" a="1"/>
+                                <DiffuseInking x="0" y="0" z="0"/>
+                                <EmissiveInking x="0" y="0" z="0"/>
+                                <SurfaceTexture/>
+                                <AlphaTexture/>
+                            </Material3d>
+                        </Materials>
+                        <Offset>
+                            <Location x="0.450000" y="0.000000" z="0.000000"/>
+                            <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <Model name="Beam" model_type="Beam">
+                            <Offset>
+                                <Location x="0.000000" y="0.000000" z="0.000000"/>
+                                <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                                <Scaling x="1" y="1" z="1"/>
+                            </Offset>
+                            <BeamClippingDistance>-0.066</BeamClippingDistance>
+                            <BeamDiameterAtOffset>0.100000</BeamDiameterAtOffset>
+                        </Model>
+                    </Model>
+                </Model>
+                <ChannelType coarse="71" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="72" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="73" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="74" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216"/>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+            <Instance module_index="1" patch="1" locked="true"/>
+            <Instance module_index="2" patch="1" locked="true"/>
+            <Instance module_index="3" patch="1" locked="true"/>
+            <Instance module_index="4" patch="1" locked="true"/>
+            <Instance module_index="5" patch="1" locked="true"/>
+            <Instance module_index="6" patch="1" locked="true"/>
+            <Instance module_index="7" patch="1" locked="true"/>
+            <Instance module_index="8" patch="1" locked="true"/>
+            <Instance module_index="9" patch="1" locked="true"/>
+            <Instance module_index="10" patch="1" locked="true"/>
+            <Instance module_index="11" patch="1" locked="true"/>
+            <Instance module_index="12" patch="1" locked="true"/>
+            <Instance module_index="13" patch="1" locked="true"/>
+            <Instance module_index="14" patch="1" locked="true"/>
+            <Instance module_index="15" patch="1" locked="true"/>
+            <Instance module_index="16" patch="1" locked="true"/>
+            <Instance module_index="17" patch="1" locked="true"/>
+            <Instance module_index="18" patch="1" locked="true"/>
+        </Instances>
+        <Wheels/>
+    </FixtureType>
+</MA>

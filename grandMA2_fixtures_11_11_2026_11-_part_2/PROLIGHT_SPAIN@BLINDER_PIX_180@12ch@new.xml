@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.4.0/MA.xsd" major_vers="3" minor_vers="4" stream_vers="0">
+	<Info datetime="2020-03-27T12:39:46" showfile="newshow"/>
+	<FixtureType index="2" name="BLINDER PIX 180" mode="12ch"><InfoItems><Info type="Revision" date="2020-03-31T08:06:49">new, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>BLPIX180</short_name>
+		<manufacturer>PROLIGHT SPAIN</manufacturer>
+		<short_manufacturer>PROLIGHT</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="LED" class="LED" beamtype="Wash" beam_angle="90" beam_intensity="10000">
+				<Body>
+					<Size x="0.05" y="0.05" z="0.05"/>
+				</Body>
+				<ChannelType index="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" coarse="1" default="254.999" color="ffffff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB5" subattribute_user_name="White" attribute="COLORRGB5" attribute_user_name="White" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="DIM" feature="DIMMER" preset="DIMMER">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0" X="-0.28"/>
+			<Instance index="1" module_index="0" patch="2" X="-0.23"/>
+			<Instance index="2" module_index="0" patch="3" X="-0.18"/>
+			<Instance index="3" module_index="0" patch="4" X="-0.13"/>
+			<Instance index="4" module_index="0" patch="5" X="-0.08"/>
+			<Instance index="5" module_index="0" patch="6" X="-0.025"/>
+			<Instance index="6" module_index="0" patch="7" X="0.025"/>
+			<Instance index="7" module_index="0" patch="8" X="0.075"/>
+			<Instance index="8" module_index="0" patch="9" X="0.125"/>
+			<Instance index="9" module_index="0" patch="10" X="0.18"/>
+			<Instance index="10" module_index="0" patch="11" X="0.23"/>
+			<Instance index="11" module_index="0" patch="12" X="0.28"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

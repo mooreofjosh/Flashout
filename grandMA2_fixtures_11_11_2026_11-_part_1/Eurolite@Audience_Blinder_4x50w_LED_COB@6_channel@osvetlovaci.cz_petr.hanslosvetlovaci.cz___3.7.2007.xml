@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.3.2/MA.xsd" major_vers="3" minor_vers="3" stream_vers="2">
+	<Info datetime="2017-07-07T09:46:51" showfile="brno konf"/>
+	<FixtureType index="7" name="Audience Blinder 4x50w LED COB" mode="6 channel">
+		<InfoItems>
+			<Info date="2017-07-04T14:25:24">www.osvetllvac.cz</Info>
+			<Info type="Revision" date="2017-07-04T14:26:44">osvetlovaci.cz / petr.hansl@osvetlovaci.cz / 3.7.2007</Info>
+			<Info type="Invisible" date="2015-12-07T00:00:00">generator_software_name="MA Importer",generator_software_version="9f54f4b62519d7c623c7e8e9b20a0a67177041b6"</Info>
+		<Info type="Revision" date="2017-07-07T09:07:35">osvetlovaci.cz petr.hanslosvetlovaci.cz / 3.7.2007, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>BlinderAudience</short_name>
+		<manufacturer>Eurolite</manufacturer>
+		<short_manufacturer>Eurolite</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="Conventional" beamtype="Wash" beam_angle="60" beam_intensity="10000">
+				<Body>
+					<Size x="0.42" y="0.24" z="0.12"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="DIM2" feature="DIMMER" preset="DIMMER" coarse="2" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM2" subattribute_user_name="Dim2" attribute="DIM2" attribute_user_name="Dim2" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="DIM3" feature="DIMMER" preset="DIMMER" coarse="3" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM3" subattribute_user_name="Dim3" attribute="DIM3" attribute_user_name="Dim3" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="DIM4" feature="DIMMER" preset="DIMMER" coarse="4" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM4" subattribute_user_name="Dim4" attribute="DIM4" attribute_user_name="Dim4" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="5" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="0.391" min_dmx_24="0" max_dmx_24="65535" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="0"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" name="Strobe 1..100%" from="0.391" to="100" min_dmx_24="65536" max_dmx_24="16777215" physfrom="1" physto="20" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Strobe" from_dmx="1" to_dmx="1"/>
+						<ChannelSet index="1" name="max Strobe" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="DIMMERCURVE" feature="DIMMER" preset="DIMMER" coarse="6" default="254.999">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="DIMMERCURVE" subattribute_user_name="Curve" attribute="DIMMERCURVE" attribute_user_name="Curve" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="Control Board setting dimmer curve" from_dmx="0" to_dmx="15" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="Linear dimmer curve halogen response" from_dmx="16" to_dmx="45" slot_from="1" slot_to="1"/>
+						<ChannelSet index="2" name="Square dimmer curve halogen response" from_dmx="46" to_dmx="75" slot_from="2" slot_to="2"/>
+						<ChannelSet index="3" name="Inverse square dimmer curve halogen response" from_dmx="76" to_dmx="105" slot_from="3" slot_to="3"/>
+						<ChannelSet index="4" name="S-shaped dimmer curve halogen response" from_dmx="106" to_dmx="135" slot_from="4" slot_to="4"/>
+						<ChannelSet index="5" name="Linear dimmer curve LED response" from_dmx="136" to_dmx="165" slot_from="5" slot_to="5"/>
+						<ChannelSet index="6" name="Square dimmer curve LED response" from_dmx="166" to_dmx="195" slot_from="6" slot_to="6"/>
+						<ChannelSet index="7" name="Inverse square dimmer curve LED response" from_dmx="196" to_dmx="225" slot_from="7" slot_to="7"/>
+						<ChannelSet index="8" name="S-shaped dimmer curve LED response" from_dmx="226" to_dmx="255" slot_from="8" slot_to="8"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

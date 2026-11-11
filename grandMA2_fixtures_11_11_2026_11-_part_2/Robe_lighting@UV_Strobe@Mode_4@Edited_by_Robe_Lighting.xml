@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+    <Info datetime="2018-02-20T12:02:06" showfile="robe"/>
+    <FixtureType index="31" name="UV Strobe" mode="Mode 4">
+        <InfoItems>
+            <Info>Set menu option DMX Presets to Mode 1 for this personality</Info>
+            <Info type="Revision" date="2017-11-13T00:00:00">Edited by Robe Lighting</Info>
+            <Info type="Revision" date="2017-11-14T09:11:03">Version 1.2</Info>
+            <Info type="Revision" date="2018-02-20T12:02:46">Edited by Robe Lighting, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>UVStrob4</short_name>
+        <manufacturer>Robe lighting</manufacturer>
+        <short_manufacturer>Robe</short_manufacturer>
+        <Modules index="0">
+            <Module index="0" name="Main Module" class="Conventional" beamtype="Wash" beam_angle="25" beam_intensity="10000">
+                <Body>
+                    <Size x="0.463" y="0.321" z="0.185"/>
+                </Body>
+                <ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="100">
+                    <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+                        <ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType index="1" attribute="STROBEDURATION" feature="SHUTTER" preset="BEAM" coarse="2">
+                    <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0.01" physto="1" subattribute="STROBEDURATION" subattribute_user_name="Duration" attribute="STROBEDURATION" attribute_user_name="StrobeDuration" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="min Duration" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet index="1" name="max Duration" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType index="2" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="3" highlight_value="0">
+                    <ChannelFunction index="0" from="0" to="2.344" min_dmx_24="0" max_dmx_24="393215" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="open" from_dmx="0" to_dmx="5"/>
+                    </ChannelFunction>
+                    <ChannelFunction index="1" name="Strobe 1..100%" from="2.344" to="100" min_dmx_24="393216" max_dmx_24="16777215" physfrom="0.1" physto="10" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="min Strobe" from_dmx="6" to_dmx="6"/>
+                        <ChannelSet index="1" name="max Strobe" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType index="3" attribute="STROBEMODE" feature="SHUTTER" preset="BEAM" coarse="4">
+                    <ChannelFunction index="0" from="0" to="1.961" min_dmx_24="0" max_dmx_24="393215" subattribute="STROBEMODENONE" subattribute_user_name="None" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="None" from_dmx="0" to_dmx="5"/>
+                    </ChannelFunction>
+                    <ChannelFunction index="1" from="2.344" to="16.797" min_dmx_24="393216" max_dmx_24="2818047" subattribute="STROBEMODEPULSEOPEN" subattribute_user_name="Pulse Open" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="Pulse Open" from_dmx="6" to_dmx="42"/>
+                    </ChannelFunction>
+                    <ChannelFunction index="2" from="16.797" to="33.594" min_dmx_24="2818048" max_dmx_24="5636095" subattribute="STROBEMODEPULSECLOSE" subattribute_user_name="Pulse Close" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="Pulse Close" from_dmx="43" to_dmx="85"/>
+                    </ChannelFunction>
+                    <ChannelFunction index="3" from="33.594" to="50.391" min_dmx_24="5636096" max_dmx_24="8454143" subattribute="STROBEMODEPULSE" subattribute_user_name="Pulse" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="Pulse" from_dmx="86" to_dmx="128"/>
+                    </ChannelFunction>
+                    <ChannelFunction index="4" from="50.391" to="67.188" min_dmx_24="8454144" max_dmx_24="11272191" subattribute="STROBEMODERANDOM" subattribute_user_name="Rnd" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="Rnd" from_dmx="129" to_dmx="171"/>
+                    </ChannelFunction>
+                    <ChannelFunction index="5" from="67.188" to="83.984" min_dmx_24="11272192" max_dmx_24="14090239" subattribute="STROBEMODELIGHTNING" subattribute_user_name="Lightning" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="Lightning" from_dmx="172" to_dmx="214" auto_create="false"/>
+                    </ChannelFunction>
+                    <ChannelFunction index="6" from="83.984" to="100" min_dmx_24="14090240" max_dmx_24="16777215" subattribute="STROBEMODESPIKES" subattribute_user_name="Spikes" attribute="STROBEMODE" attribute_user_name="StrobeMode" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+                        <ChannelSet index="0" name="Spikes" from_dmx="215" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances index="1">
+            <Instance index="0" module_index="0"/>
+        </Instances>
+        <Wheels index="2"/>
+        <VirtualFunctionBlocks index="3"/>
+        <FixtureMacroCollect index="5">
+            <FixtureMacro index="0" name="Fixture Display">
+                <PhysicalFeatures>
+                    <PhysicalFeature subattribute="FIXTUREDISPLAY" from_value="1" to_value="1"/>
+                </PhysicalFeatures>
+                <FixtureMacroStep index="0" duration="3" dmx_value="22" attribute="DIMMERCURVE" instance_index="0"/>
+                <FixtureMacroStep index="1" duration="1" dmx_value="22" attribute="DIMMERCURVE" instance_index="0"/>
+            </FixtureMacro>
+            <FixtureMacro index="1" name="Fixture Display">
+                <PhysicalFeatures>
+                    <PhysicalFeature subattribute="FIXTUREDISPLAY" from_value="0" to_value="0"/>
+                </PhysicalFeatures>
+                <FixtureMacroStep index="0" duration="3" dmx_value="27" attribute="DIMMERCURVE" instance_index="0"/>
+                <FixtureMacroStep index="1" duration="1" dmx_value="27" attribute="DIMMERCURVE" instance_index="0"/>
+            </FixtureMacro>
+            <FixtureMacro index="2" name="Fixture Normal">
+                <PhysicalFeatures>
+                    <PhysicalFeature subattribute="MODE" from_value="1" to_value="1"/>
+                </PhysicalFeatures>
+                <FixtureMacroStep index="0" duration="3" dmx_value="74" attribute="DIMMERCURVE" instance_index="0"/>
+                <FixtureMacroStep index="1" duration="1" dmx_value="74" attribute="DIMMERCURVE" instance_index="0"/>
+            </FixtureMacro>
+            <FixtureMacro index="3" name="Fixture Normal">
+                <PhysicalFeatures>
+                    <PhysicalFeature subattribute="MODE" from_value="2" to_value="2"/>
+                </PhysicalFeatures>
+                <FixtureMacroStep index="0" duration="3" dmx_value="84" attribute="DIMMERCURVE" instance_index="0"/>
+                <FixtureMacroStep index="1" duration="1" dmx_value="84" attribute="DIMMERCURVE" instance_index="0"/>
+            </FixtureMacro>
+            <FixtureMacro index="4" name="Dimmer Curve">
+                <PhysicalFeatures>
+                    <PhysicalFeature subattribute="DIMMERCURVE" from_value="0" to_value="0"/>
+                </PhysicalFeatures>
+                <FixtureMacroStep index="0" duration="3" dmx_value="94" attribute="DIMMERCURVE" instance_index="0"/>
+                <FixtureMacroStep index="1" duration="1" dmx_value="94" attribute="DIMMERCURVE" instance_index="0"/>
+            </FixtureMacro>
+            <FixtureMacro index="5" name="Dimmer Curve">
+                <PhysicalFeatures>
+                    <PhysicalFeature subattribute="DIMMERCURVE" from_value="1" to_value="1"/>
+                </PhysicalFeatures>
+                <FixtureMacroStep index="0" duration="3" dmx_value="104" attribute="DIMMERCURVE" instance_index="0"/>
+                <FixtureMacroStep index="1" duration="1" dmx_value="104" attribute="DIMMERCURVE" instance_index="0"/>
+            </FixtureMacro>
+        </FixtureMacroCollect>
+        <Body/>
+        <AutoPresets index="4"/>
+        <RdmNotifications index="6">
+            <RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+        </RdmNotifications>
+    </FixtureType>
+</MA>

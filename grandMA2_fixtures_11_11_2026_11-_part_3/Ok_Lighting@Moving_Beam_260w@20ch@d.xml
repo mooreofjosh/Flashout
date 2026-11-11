@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="Moving Beam 260w" mode="20ch">
+        <InfoItems>
+            <Info type="Revision" date="2026-03-16T05:43:02">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2025-12-16T09:26:11">Created by Admin </Info>
+            <Info type="Revision" date="2026-03-16T05:43:07.506">d, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>Moving Beam 260w</short_name>
+        <manufacturer>Ok Lighting</manufacturer>
+        <short_manufacturer>Ok Lighting</short_manufacturer>
+        <Modules>
+            <Module name="Geometry" class="None" beamtype="None" beam_intensity="" index="0" beam_angle="">
+                <Model name="Geometry" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="Tilt">
+                    <AxisFactors x="-1" y="0" z="-0"/>
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <ChannelType coarse="1" default="0" attribute="Color1WheelIndex" feature="Color" preset="Color">
+                    <ChannelFunction subattribute="Color1WheelIndex" attribute="Color1WheelIndex" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="2" default="105" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+                    <ChannelFunction subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Storbe Off" from_dmx="0" to_dmx="3"/>
+                        <ChannelSet name="Strobe slow-fast" from_dmx="4" to_dmx="103"/>
+                        <ChannelSet name="Strobe Open" from_dmx="104" to_dmx="107"/>
+                        <ChannelSet name="Pulse Strobe Speed Up" from_dmx="108" to_dmx="207"/>
+                        <ChannelSet name="Strobe Open" from_dmx="208" to_dmx="212"/>
+                        <ChannelSet name="Pulse Strobe Speed Up" from_dmx="213" to_dmx="251"/>
+                        <ChannelSet name="Strobe Open" from_dmx="252" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="3" default="0" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="4" default="0" attribute="GOBO1" feature="GOBO1" preset="GOBO">
+                    <ChannelFunction subattribute="GOBO1" attribute="GOBO1" feature="GOBO1" preset="GOBO" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="-" from_dmx="0" to_dmx="3"/>
+                        <ChannelSet name="Gobo 1" from_dmx="4" to_dmx="7"/>
+                        <ChannelSet name="Gobo 2" from_dmx="8" to_dmx="11"/>
+                        <ChannelSet name="Gobo 3" from_dmx="12" to_dmx="15"/>
+                        <ChannelSet name="Gobo 4" from_dmx="16" to_dmx="19"/>
+                        <ChannelSet name="Gobo 5" from_dmx="20" to_dmx="23"/>
+                        <ChannelSet name="Gobo 6" from_dmx="24" to_dmx="27"/>
+                        <ChannelSet name="Gobo 7" from_dmx="28" to_dmx="31"/>
+                        <ChannelSet name="Gobo 8" from_dmx="32" to_dmx="35"/>
+                        <ChannelSet name="Gobo 9" from_dmx="36" to_dmx="39"/>
+                        <ChannelSet name="Gobo 10" from_dmx="40" to_dmx="43"/>
+                        <ChannelSet name="Gobo 11" from_dmx="44" to_dmx="47"/>
+                        <ChannelSet name="Gobo 12" from_dmx="48" to_dmx="51"/>
+                        <ChannelSet name="Gobo 13" from_dmx="52" to_dmx="55"/>
+                        <ChannelSet name="Effect gpbp slow-fast" from_dmx="56" to_dmx="71"/>
+                        <ChannelSet name="Gobo clockwise fast slow" from_dmx="72" to_dmx="113"/>
+                        <ChannelSet name="White" from_dmx="114" to_dmx="117"/>
+                        <ChannelSet name="Gobo anti-clockwise fast-slow" from_dmx="118" to_dmx="159"/>
+                        <ChannelSet name="Gobo 1" from_dmx="160" to_dmx="166"/>
+                        <ChannelSet name="Gobo 2" from_dmx="167" to_dmx="172"/>
+                        <ChannelSet name="Gobo 3" from_dmx="173" to_dmx="179"/>
+                        <ChannelSet name="Gobo 4" from_dmx="180" to_dmx="185"/>
+                        <ChannelSet name="Gobo 5" from_dmx="186" to_dmx="191"/>
+                        <ChannelSet name="Gobo 6" from_dmx="192" to_dmx="198"/>
+                        <ChannelSet name="Gobo 7" from_dmx="199" to_dmx="204"/>
+                        <ChannelSet name="Gobo 8" from_dmx="205" to_dmx="211"/>
+                        <ChannelSet name="Gobo 9" from_dmx="212" to_dmx="217"/>
+                        <ChannelSet name="Gobo 10" from_dmx="218" to_dmx="223"/>
+                        <ChannelSet name="Gobo 11" from_dmx="224" to_dmx="230"/>
+                        <ChannelSet name="Gobo 12" from_dmx="231" to_dmx="236"/>
+                        <ChannelSet name="Gobo 13" from_dmx="237" to_dmx="243"/>
+                        <ChannelSet name="Effect gobo slow-fast move" from_dmx="244" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="5" default="0" attribute="PRISMA1" feature="BEAM1" preset="BEAM">
+                    <ChannelFunction subattribute="PRISMA1" attribute="PRISMA1" feature="BEAM1" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="6" default="0" attribute="PRISMA1_POS" feature="BEAM1" preset="BEAM">
+                    <ChannelFunction subattribute="PRISMA1_ROT" attribute="PRISMA1_POS" feature="BEAM1" preset="BEAM" from="0" to="100" physfrom="0" physto="9.549296666666667" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="7" default="0" attribute="EFFECT" feature="EFFECT" preset="BEAM">
+                    <ChannelFunction subattribute="EFFECTSELECT" attribute="EFFECT" feature="EFFECT" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="8" default="0" attribute="FROST" feature="BEAM1" preset="BEAM">
+                    <ChannelFunction subattribute="FROST" attribute="FROST" feature="BEAM1" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="9" default="128" attribute="FOCUS" feature="FOCUS" preset="FOCUS">
+                    <ChannelFunction subattribute="FOCUS" attribute="FOCUS" feature="FOCUS" preset="FOCUS" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="10" fine="11" default="32896" attribute="PAN" feature="POSITION" preset="POSITION">
+                    <ChannelFunction subattribute="PAN" attribute="PAN" feature="POSITION" preset="POSITION" from="0" to="1" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="12" fine="13" default="32896" attribute="TILT" feature="POSITION" preset="POSITION">
+                    <ChannelFunction subattribute="TILT" attribute="TILT" feature="POSITION" preset="POSITION" from="0" to="1" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="14" default="0" attribute="" feature="" preset="">
+                    <ChannelFunction subattribute="" attribute="" feature="" preset="" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="15" default="0" attribute="_3" feature="" preset="">
+                    <ChannelFunction subattribute="Reset" attribute="Reset" feature="Control" preset="Control" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="-" from_dmx="0" to_dmx="25"/>
+                        <ChannelSet name="Effect Reset" from_dmx="26" to_dmx="76"/>
+                        <ChannelSet name="XY reset" from_dmx="77" to_dmx="127"/>
+                        <ChannelSet name="Fixture Reset" from_dmx="128" to_dmx="255"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="" attribute="" feature="" preset="" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                    <ChannelFunction subattribute="" attribute="" feature="" preset="" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                    <ChannelFunction subattribute="" attribute="" feature="" preset="" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="16" default="0" attribute="LAMPCONTROL" feature="Control" preset="Control">
+                    <ChannelFunction subattribute="LAMPCONTROL" attribute="LAMPCONTROL" feature="Control" preset="Control" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Safe" from_dmx="0" to_dmx="25"/>
+                        <ChannelSet name="Lamp Off" from_dmx="26" to_dmx="100"/>
+                        <ChannelSet name="Lamp On" from_dmx="101" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="17" default="0" attribute="POSITIONMSPEED" feature="Control" preset="Control">
+                    <ChannelFunction subattribute="POSITIONMSPEED" attribute="POSITIONMSPEED" feature="Control" preset="Control" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="18" default="0" attribute="_4" feature="" preset="">
+                    <ChannelFunction subattribute="" attribute="" feature="" preset="" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="19" default="0" attribute="_5" feature="" preset="">
+                    <ChannelFunction subattribute="" attribute="" feature="" preset="" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="20" default="0" attribute="_6" feature="" preset="">
+                    <ChannelFunction subattribute="" attribute="" feature="" preset="" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+        </Instances>
+        <Wheels/>
+    </FixtureType>
+</MA>

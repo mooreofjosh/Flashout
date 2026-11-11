@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="BS 1200 Combi Strobe" mode="7 Ch">
+        <InfoItems>
+            <Info type="Revision" date="2026-07-27T13:31:59">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2026-05-02T23:23:46">New fixture type based on BS 1200 Combi Strobe from BeamZ</Info>
+            <Info type="Revision" date="2026-05-02T23:38:02">rev057</Info>
+            <Info type="Revision" date="2026-05-02T23:47:21">rev058</Info>
+            <Info type="Revision" date="2026-05-02T23:50:12">rev100 RELEASE</Info>
+            <Info>Hybrid Strobe / Wash ::  IP20 / 600 x SMD LED RGB (2 x 10 x 30) / 320 x SMB LED wWcW (4 x 10 x 8) / 240 x SMD LED ColdWhite (1 x 10 x 24) / beam agle 45 degree / field angle 100 degree</Info>
+            <Info type="Revision" date="2026-07-27T13:32:10.156">BS1200%20Combi%20Strobe, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>BS 1200 Combi Strobe</short_name>
+        <manufacturer>BeamZ</manufacturer>
+        <short_manufacturer>BeamZ</short_manufacturer>
+        <Modules>
+            <Module name="Yoke 2" class="None" beamtype="None" beam_intensity="" index="0" beam_angle="">
+                <Model name="Yoke 2" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <ChannelType coarse="1" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="000" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="025" from_dmx="64" to_dmx="64"/>
+                        <ChannelSet name="050" from_dmx="128" to_dmx="128"/>
+                        <ChannelSet name="075" from_dmx="192" to_dmx="192"/>
+                        <ChannelSet name="100" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="2" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="000" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="025" from_dmx="64" to_dmx="64"/>
+                        <ChannelSet name="050" from_dmx="128" to_dmx="128"/>
+                        <ChannelSet name="075" from_dmx="192" to_dmx="192"/>
+                        <ChannelSet name="100" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="3" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="000" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="025" from_dmx="64" to_dmx="64"/>
+                        <ChannelSet name="050" from_dmx="128" to_dmx="128"/>
+                        <ChannelSet name="075" from_dmx="192" to_dmx="192"/>
+                        <ChannelSet name="100" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="7" default="0" react_to_master="1" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" highlight_value="0">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="0" physfrom="1" physto="1" min_dmx_24="0" max_dmx_24="0">
+                        <ChannelSet name="000" from_dmx="0" to_dmx="0"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="100" physfrom="1" physto="20" min_dmx_24="65793" max_dmx_24="16777215">
+                        <ChannelSet name="001" from_dmx="1" to_dmx="1"/>
+                        <ChannelSet name="025" from_dmx="64" to_dmx="65"/>
+                        <ChannelSet name="050" from_dmx="128" to_dmx="129"/>
+                        <ChannelSet name="075" from_dmx="192" to_dmx="193"/>
+                        <ChannelSet name="100" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="Plate_02 wWcW  2" class="None" beamtype="None" beam_intensity="" index="2" beam_angle="">
+                <Model/>
+                <ChannelType coarse="5" default="0" attribute="COLORRGB7" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB7" attribute="COLORRGB7" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="000" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="025" from_dmx="64" to_dmx="64"/>
+                        <ChannelSet name="050" from_dmx="128" to_dmx="128"/>
+                        <ChannelSet name="075" from_dmx="192" to_dmx="192"/>
+                        <ChannelSet name="100" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="6" default="255" attribute="COLORRGB6" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB6" attribute="COLORRGB6" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="000" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="025" from_dmx="64" to_dmx="64"/>
+                        <ChannelSet name="050" from_dmx="128" to_dmx="128"/>
+                        <ChannelSet name="075" from_dmx="192" to_dmx="192"/>
+                        <ChannelSet name="100" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="Plate_03 cW Strobe 2" class="None" beamtype="None" beam_intensity="" index="3" beam_angle="">
+                <Model/>
+                <ChannelType coarse="4" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="000" from_dmx="0" to_dmx="1"/>
+                        <ChannelSet name="025" from_dmx="64" to_dmx="65"/>
+                        <ChannelSet name="050" from_dmx="128" to_dmx="129"/>
+                        <ChannelSet name="075" from_dmx="192" to_dmx="193"/>
+                        <ChannelSet name="100" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+            <Instance module_index="1" patch="1" locked="true"/>
+            <Instance module_index="2" patch="1" locked="true"/>
+        </Instances>
+        <Wheels>
+            <Wheel index="0" preset="BEAM" feature="EFFECT" attribute="EFFECT" subattribute="EFFECTSELECT">
+                <Slot index="0" media_name="Wheel Slot 0 Open"/>
+                <Slot index="1" media_name="Wheel Slot 1"/>
+                <Slot index="2" media_name="Wheel Slot 2"/>
+                <Slot index="3" media_name="Wheel Slot 3"/>
+                <Slot index="4" media_name="Wheel Slot 4"/>
+                <Slot index="5" media_name="Wheel Slot 5"/>
+                <Slot index="6" media_name="Wheel Slot 6"/>
+                <Slot index="7" media_name="Wheel Slot 7"/>
+                <Slot index="8" media_name="Wheel Slot 8"/>
+                <Slot index="9" media_name="Wheel Slot 9"/>
+                <Slot index="10" media_name="Wheel Slot 10"/>
+                <Slot index="11" media_name="Wheel Slot 11"/>
+                <Slot index="12" media_name="Wheel Slot 12"/>
+                <Slot index="13" media_name="Wheel Slot 13"/>
+                <Slot index="14" media_name="Wheel Slot 14"/>
+                <Slot index="15" media_name="Wheel Slot 15"/>
+                <Slot index="16" media_name="Wheel Slot 16"/>
+                <Slot index="17" media_name="Wheel Slot 17"/>
+                <Slot index="18" media_name="Wheel Slot 18"/>
+                <Slot index="19" media_name="Wheel Slot 19"/>
+                <Slot index="20" media_name="Wheel Slot 20"/>
+                <Slot index="21" media_name="Wheel Slot 21"/>
+                <Slot index="22" media_name="Wheel Slot 22"/>
+                <Slot index="23" media_name="Wheel Slot 23"/>
+                <Slot index="24" media_name="Wheel Slot 24"/>
+                <Slot index="25" media_name="Wheel Slot 25"/>
+                <Slot index="26" media_name="Wheel Slot 26"/>
+                <Slot index="27" media_name="Wheel Slot 27"/>
+                <Slot index="28" media_name="Wheel Slot 28"/>
+                <Slot index="29" media_name="Wheel Slot 29"/>
+                <Slot index="30" media_name="Wheel Slot 30"/>
+                <Slot index="31" media_name="Wheel Slot 31"/>
+            </Wheel>
+        </Wheels>
+        <RDMKey ESTAId="1898" DeviceModelId="0"/>
+    </FixtureType>
+</MA>

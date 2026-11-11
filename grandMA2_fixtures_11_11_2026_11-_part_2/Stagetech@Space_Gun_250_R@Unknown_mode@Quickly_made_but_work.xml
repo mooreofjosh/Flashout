@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.1.2/MA.xsd" major_vers="3" minor_vers="1" stream_vers="2">
+	<Info datetime="2019-06-10T17:24:10" showfile="tests"/>
+	<FixtureType index="2" name="Space Gun 250 R" mode="Unknown mode"><InfoItems><Info type="Revision" date="2019-06-10T05:28:27">Quickly made but work, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>Space Gun</short_name>
+		<manufacturer>Stagetech</manufacturer>
+		<short_manufacturer>Stagetech</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="None" beamtype="Spot" beam_angle="35" beam_intensity="10000">
+				<ChannelType index="0" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="1" default="29.5">
+					<ChannelFunction index="0" name="Close" from="0" to="19" min_dmx_24="0" max_dmx_24="1310719" physfrom="0" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam"/>
+					<ChannelFunction index="1" name="Open" from="20" to="29" min_dmx_24="1310720" max_dmx_24="1966079" physfrom="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam"/>
+					<ChannelFunction index="2" from="30" to="255" min_dmx_24="1966080" max_dmx_24="16777215" physfrom="1" physto="1000" subattribute="IRIS_STROBE" subattribute_user_name="Strobe" attribute="IRIS" attribute_user_name="Iris" feature="BEAM1" feature_user_name="Beam" preset="BEAM" preset_user_name="Beam"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="GOBO2" feature="GOBO2" preset="GOBO" coarse="2">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" wheel="1" subattribute="GOBO2" subattribute_user_name="Select2" attribute="GOBO2" attribute_user_name="G2" feature="GOBO2" feature_user_name="Gobo2" preset="GOBO" preset_user_name="Gobo">
+						<ChannelSet index="0" name="None" from_dmx="0" to_dmx="21" slot_index="0"/>
+						<ChannelSet index="1" name="Dot" from_dmx="22" to_dmx="42" slot_index="1"/>
+						<ChannelSet index="2" name="Bar" from_dmx="43" to_dmx="63" slot_index="2"/>
+						<ChannelSet index="3" name="Etoile" from_dmx="64" to_dmx="84" slot_index="3"/>
+						<ChannelSet index="4" name="Tringle" from_dmx="85" to_dmx="106" slot_index="4"/>
+						<ChannelSet index="5" name="Circle" from_dmx="107" to_dmx="127" slot_index="5"/>
+						<ChannelSet index="6" name="Dots" from_dmx="128" to_dmx="148" slot_index="6"/>
+						<ChannelSet index="7" name="Tribal" from_dmx="149" to_dmx="169" slot_index="7"/>
+						<ChannelSet index="8" name="Wheel Stries" from_dmx="170" to_dmx="191" slot_index="8"/>
+						<ChannelSet index="9" name="Weed" from_dmx="192" to_dmx="212" slot_index="9"/>
+						<ChannelSet index="10" name="60s" from_dmx="213" to_dmx="233" slot_index="10"/>
+						<ChannelSet index="11" name="Star Retro" from_dmx="234" to_dmx="255" slot_index="11"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="COLOR2" feature="COLOR2" preset="COLOR" coarse="3">
+					<ChannelFunction index="0" from="0" to="50" min_dmx_24="0" max_dmx_24="5898239" wheel="3" subattribute="COLOR1" subattribute_user_name="Select" attribute="COLOR1" attribute_user_name="C1" feature="COLOR1" feature_user_name="Color1" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="White" from_dmx="0" to_dmx="8" slot_index="0"/>
+						<ChannelSet index="1" name="Pink" from_dmx="9" to_dmx="17" slot_index="1"/>
+						<ChannelSet index="2" name="Cyan" from_dmx="18" to_dmx="26" slot_index="2"/>
+						<ChannelSet index="3" name="Red" from_dmx="27" to_dmx="35" slot_index="3"/>
+						<ChannelSet index="4" name="Congo Blue" from_dmx="36" to_dmx="44" slot_index="4"/>
+						<ChannelSet index="5" name="Yellow" from_dmx="45" to_dmx="53" slot_index="5"/>
+						<ChannelSet index="6" name="Green" from_dmx="54" to_dmx="62" slot_index="6"/>
+						<ChannelSet index="7" name="Orange" from_dmx="63" to_dmx="71" slot_index="7"/>
+						<ChannelSet index="8" name="Purple" from_dmx="72" to_dmx="80" slot_index="8"/>
+						<ChannelSet index="9" name="Blue" from_dmx="81" to_dmx="89" slot_index="9"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="51" to="100" min_dmx_24="5898240" max_dmx_24="16777215" physfrom="100" physto="1" wheel="3" subattribute="COLOR1_SPIN" subattribute_user_name="Spin" attribute="COLOR1" attribute_user_name="C1" feature="COLOR1" feature_user_name="Color1" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="Mix" from_dmx="90" to_dmx="189"/>
+						<ChannelSet index="1" name="Spin" from_dmx="190" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="DIST" feature="POSITION" preset="POSITION" coarse="4" default="255">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIST" subattribute_user_name="Dist" attribute="DIST" attribute_user_name="Dist" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="4" attribute="PAN" feature="POSITION" preset="POSITION" coarse="5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-180" physto="180" subattribute="PAN" subattribute_user_name="Pan" attribute="PAN" attribute_user_name="Pan" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="5" attribute="TILT" feature="POSITION" preset="POSITION" coarse="6">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-90" physto="90" subattribute="TILT" subattribute_user_name="Tilt" attribute="TILT" attribute_user_name="Tilt" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="6" attribute="FROST" feature="BEAM1" preset="BEAM" coarse="7">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="FROST" subattribute_user_name="Frost" attribute="FROST" attribute_user_name="Frost" feature="BEAM1" feature_user_name="Beam" preset="BEAM" preset_user_name="Beam"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2">
+			<Wheel index="0" subattribute="GOBO2" attribute="GOBO2" feature="GOBO2" preset="GOBO">
+				<Slot index="0" media_name="None"/>
+				<Slot index="1" media_name="Dot" media_filename="Robotech Space Gun/dot.bmp"/>
+				<Slot index="2" media_name="Bar" media_filename="Robotech Space Gun/bar.bmp"/>
+				<Slot index="3" media_name="Etoile" media_filename="Robotech Space Gun/etoile.bmp"/>
+				<Slot index="4" media_name="Triangle" media_filename="Robotech Space Gun/triangle.bmp"/>
+				<Slot index="5" media_name="Circle" media_filename="Robotech Space Gun/circle.bmp"/>
+				<Slot index="6" media_name="Dots" media_filename="Robotech Space Gun/dots.bmp"/>
+				<Slot index="7" media_name="Tribal" media_filename="Robotech Space Gun/tribal.bmp"/>
+				<Slot index="8" media_name="Weel strie" media_filename="Robotech Space Gun/weel-stries.bmp"/>
+				<Slot index="9" media_name="Weed" media_filename="Robotech Space Gun/weed.bmp"/>
+				<Slot index="10" media_name="60s" media_filename="Robotech Space Gun/60s.bmp"/>
+				<Slot index="11" media_name="Star Retro" media_filename="Robotech Space Gun/star-retro.bmp"/>
+			</Wheel>
+			<Wheel index="1" subattribute="GOBO1" attribute="GOBO1" feature="GOBO1" preset="GOBO">
+				<Slot index="0" media_name="None"/>
+				<Slot index="1" media_name="weel strie" media_filename="Robotech Space Gun/weel-stries.bmp"/>
+				<Slot index="2" media_name="triangle" media_filename="Robotech Space Gun/triangle.bmp"/>
+				<Slot index="3" media_name="star" media_filename="Robotech Space Gun/etoile.bmp"/>
+				<Slot index="4" media_name="circle" media_filename="Robotech Space Gun/circle.bmp"/>
+				<Slot index="5" media_name="60s" media_filename="Robotech Space Gun/60s.bmp"/>
+				<Slot index="6" media_name="bar" media_filename="Robotech Space Gun/bar.bmp"/>
+			</Wheel>
+			<Wheel index="2" subattribute="COLOR1" attribute="COLOR1" feature="COLOR1" preset="COLOR">
+				<Slot index="0" media_name="White"/>
+				<Slot index="1" media_name="Pink" g="0" b="127"/>
+				<Slot index="2" media_name="Cyan" r="0"/>
+				<Slot index="3" media_name="Red" g="0" b="0"/>
+				<Slot index="4" media_name="Congo Blue" r="7" g="28" b="80"/>
+				<Slot index="5" media_name="Yellow" b="0"/>
+				<Slot index="6" media_name="Green" r="0" b="0"/>
+				<Slot index="7" media_name="Orange" g="127" b="0"/>
+				<Slot index="8" media_name="Purple" r="127" g="0"/>
+				<Slot index="9" media_name="Blue" r="0" g="0"/>
+			</Wheel>
+		</Wheels>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+	</FixtureType>
+</MA>

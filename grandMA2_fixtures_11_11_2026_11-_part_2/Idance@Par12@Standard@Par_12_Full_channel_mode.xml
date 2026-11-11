@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA major_vers="3" minor_vers="2" stream_vers="2">
+  <Info datetime="2023-2-2T16:25:6" showfile="ma fixture builder"/>
+  <FixtureType index="0" name="Par12" mode="Standard">
+    <InfoItems>
+      <Info>Created using MA FixtureBuilder version v1.9.0</Info>
+    <Info type="Revision" date="2023-03-23T17:29:45">Par 12 Full channel mode, Uploaded to Fixture Share.</Info></InfoItems>
+    <short_name>Par12</short_name>
+    <manufacturer>Idance</manufacturer>
+    <short_manufacturer>Idance</short_manufacturer>
+    <Modules index="0">
+      <Module index="0" name="Module" class="LED" beamtype="Wash" beam_angle="19" beam_intensity="10000">
+        <Body>
+          <Size x="0.5" y="0.5" z="0.5"/>
+        </Body>
+        <ChannelType index="0" attribute="MACROS" feature="MACRO" preset="CONTROL" coarse="1" default="0.000000" highlight_value="0.000000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="MACROAUDIO" attribute="MACROS" feature="MACRO" preset="CONTROL">
+            <ChannelSet index="0" name="No function" from_dmx="0" to_dmx="10"/>
+            <ChannelSet index="1" name="macro a1" from_dmx="11" to_dmx="50"/>
+            <ChannelSet index="2" name="macro a2" from_dmx="51" to_dmx="100"/>
+            <ChannelSet index="3" name="macro a3" from_dmx="101" to_dmx="150"/>
+            <ChannelSet index="4" name="macro a4" from_dmx="151" to_dmx="201"/>
+            <ChannelSet index="5" name="macro a5" from_dmx="201" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="1" attribute="COLORCOLOR" feature="COLORALL" preset="COLOR" coarse="2">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORCOLOR" attribute="COLORCOLOR" feature="COLORALL" preset="COLOR">
+            <ChannelSet index="0" name="all color" from_dmx="0" to_dmx="39"/>
+            <ChannelSet index="1" name="red" from_dmx="40" to_dmx="49"/>
+            <ChannelSet index="2" name="green" from_dmx="50" to_dmx="59"/>
+            <ChannelSet index="3" name="blue" from_dmx="60" to_dmx="69"/>
+            <ChannelSet index="7" name="yellow" from_dmx="70" to_dmx="79"/>
+            <ChannelSet index="7" name="cyan" from_dmx="80" to_dmx="89"/>
+            <ChannelSet index="6" name="purple" from_dmx="90" to_dmx="99"/>
+            <ChannelSet index="7" name="white" from_dmx="100" to_dmx="109"/>
+            <ChannelSet index="8" name="red+green" from_dmx="110" to_dmx="119"/>
+            <ChannelSet index="9" name="red+blue" from_dmx="120" to_dmx="129"/>
+            <ChannelSet index="10" name="red+white" from_dmx="130" to_dmx="139"/>
+            <ChannelSet index="11" name="green+blue" from_dmx="140" to_dmx="149"/>
+            <ChannelSet index="12" name="green+white" from_dmx="150" to_dmx="159"/>
+            <ChannelSet index="13" name="blue+white" from_dmx="160" to_dmx="169"/>
+            <ChannelSet index="14" name="red+green+white" from_dmx="170" to_dmx="179"/>
+            <ChannelSet index="15" name="red+blue+white" from_dmx="180" to_dmx="189"/>
+            <ChannelSet index="16" name="green+blue+white" from_dmx="190" to_dmx="199"/>
+            <ChannelSet index="17" name="red+green+blue" from_dmx="200" to_dmx="209"/>
+            <ChannelSet index="18" name="red+green+blue+white" from_dmx="210" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="2" attribute="SHUTTERMSPEED" feature="MSPEED" preset="CONTROL" coarse="3">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="SHUTTERMSPEEDTIME" attribute="SHUTTERMSPEED" feature="MSPEED" preset="CONTROL">
+            <ChannelSet index="0" name="Speed adjustable" from_dmx="0" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="3" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="4">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER">
+            <ChannelSet index="0" name="open" from_dmx="0" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="4" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="5" default="255.000000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR">
+            <ChannelSet index="0" name="red dimming" from_dmx="0" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="5" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="6" default="255.000000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR">
+            <ChannelSet index="0" name="Green dimming" from_dmx="0" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="6" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="7" default="255.000000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR">
+            <ChannelSet index="0" name="Blue dimming" from_dmx="0" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="7" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" coarse="8" default="255.000000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+            <ChannelSet index="1" name="White dimming" from_dmx="0" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+      </Module>
+    </Modules>
+    <Instances index="1">
+      <Instance index="0" patch="1" module_index="0"/>
+    </Instances>
+    <Wheels index="2"/>
+    <FixtureMacroCollect index="5"/>
+  </FixtureType>
+</MA>

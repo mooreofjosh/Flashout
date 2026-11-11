@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.0/MA.xsd" major_vers="3" minor_vers="9" stream_vers="0">
+	<Info datetime="2020-05-06T12:09:49" showfile="create fixtures"/>
+	<FixtureType index="7" name="LED SPOT124" mode="Unknown mode"><InfoItems><Info type="Revision" date="2020-05-06T11:19:54">Led, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>LESPOT124</short_name>
+		<manufacturer>Involight</manufacturer>
+		<short_manufacturer>CHINA</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="Conventional" beamtype="Wash" beam_angle="25" beam_intensity="10000">
+				<Body>
+					<Size x="0.3" y="0.3" z="0.2"/>
+				</Body>
+				<ChannelType index="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="1" default="254.999" highlight_value="100" color="ff0000">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" subattribute_user_name="R" attribute="COLORRGB1" attribute_user_name="R" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="2" default="254.999" highlight_value="100" color="00ff00">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" subattribute_user_name="G" attribute="COLORRGB2" attribute_user_name="G" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="3" default="254.999" highlight_value="100" color="0000ff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" subattribute_user_name="B" attribute="COLORRGB3" attribute_user_name="B" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" coarse="4" color="ffffff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB5" subattribute_user_name="White" attribute="COLORRGB5" attribute_user_name="White" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="5" highlight_value="100">
+					<ChannelFunction index="0" name="Dim 0..100%" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="close" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="6">
+					<ChannelFunction index="0" from="0" to="4.12" min_dmx_24="0" max_dmx_24="720895" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="0"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" name="Strobe 1..100%" from="4.12" to="100" min_dmx_24="720896" max_dmx_24="16777215" physfrom="0.1" physto="10" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Strobe" from_dmx="11" to_dmx="11"/>
+						<ChannelSet index="1" name="max Strobe" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="6" attribute="COLORMIXER" feature="COLORMIX" preset="COLOR" coarse="7">
+					<ChannelFunction index="0" from="0" to="80.2" min_dmx_24="0" max_dmx_24="13434879" subattribute="COLORMIXCOLOR" subattribute_user_name="Color" attribute="COLORMIXER" attribute_user_name="ColorMix" feature="COLORMIX" feature_user_name="ColorMix" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="no function" from_dmx="0" to_dmx="13" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="R" from_dmx="14" to_dmx="26" slot_from="1" slot_to="1"/>
+						<ChannelSet index="2" name="G" from_dmx="27" to_dmx="38" slot_from="2" slot_to="2"/>
+						<ChannelSet index="3" name="B" from_dmx="39" to_dmx="51" slot_from="3" slot_to="3"/>
+						<ChannelSet index="4" name="W" from_dmx="52" to_dmx="64" slot_from="4" slot_to="4"/>
+						<ChannelSet index="5" name="R + G" from_dmx="65" to_dmx="76" slot_from="5" slot_to="5"/>
+						<ChannelSet index="6" name="R + B" from_dmx="77" to_dmx="89" slot_from="6" slot_to="6"/>
+						<ChannelSet index="7" name="R + W" from_dmx="90" to_dmx="102" slot_from="7" slot_to="7"/>
+						<ChannelSet index="8" name="G + B" from_dmx="103" to_dmx="114" slot_from="8" slot_to="8"/>
+						<ChannelSet index="9" name="G + W" from_dmx="115" to_dmx="127" slot_from="9" slot_to="9"/>
+						<ChannelSet index="10" name="B + W" from_dmx="128" to_dmx="140" slot_from="10" slot_to="10"/>
+						<ChannelSet index="11" name="R + G + B" from_dmx="141" to_dmx="152" slot_from="11" slot_to="11"/>
+						<ChannelSet index="12" name="R + G + w" from_dmx="153" to_dmx="165" slot_from="12" slot_to="12"/>
+						<ChannelSet index="13" name="R + B + W" from_dmx="166" to_dmx="178" slot_from="13" slot_to="13"/>
+						<ChannelSet index="14" name="G + B +W" from_dmx="179" to_dmx="190" slot_from="14" slot_to="14"/>
+						<ChannelSet index="15" name="R + G + B + W" from_dmx="191" to_dmx="204" slot_from="15" slot_to="15"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="80.59" to="100" min_dmx_24="13434880" max_dmx_24="16777215" subattribute="COLOURMIXMODESELECT" subattribute_user_name="ColourMixModeSelect" attribute="COLORMIXMODE" attribute_user_name="ColorMixMode" feature="COLORMIX" feature_user_name="ColorMix" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="color change" from_dmx="205" to_dmx="217" slot_from="1" slot_to="1"/>
+						<ChannelSet index="1" name="color dreaming" from_dmx="218" to_dmx="230" slot_from="2" slot_to="2"/>
+						<ChannelSet index="2" name="auto run" from_dmx="231" to_dmx="241" slot_from="3" slot_to="3"/>
+						<ChannelSet index="3" name="sound active" from_dmx="242" to_dmx="255" slot_from="4" slot_to="4"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

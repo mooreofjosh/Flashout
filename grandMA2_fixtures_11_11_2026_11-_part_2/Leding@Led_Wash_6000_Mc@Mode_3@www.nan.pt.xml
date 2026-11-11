@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.2.2/MA.xsd" major_vers="3" minor_vers="2" stream_vers="2">
+	<Info datetime="2016-11-14T22:58:14" showfile="leding fixture type check"/>
+	<FixtureType index="10" name="Led Wash 6000 Mc" mode="Mode 3">
+		<InfoItems>
+			<Info type="Invisible" date="2016-01-13T00:00:00">generator_software_name="MA Importer",generator_software_version="4b6fe879728cb3bf7fd2824f7c885f76da52599c"</Info>
+		<Info type="Revision" date="2018-12-18T07:12:43">www.nan.pt, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>6000 Mc</short_name>
+		<manufacturer>Leding</manufacturer>
+		<short_manufacturer>Leding</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="Headmover" beamtype="Wash" beam_angle="1" beam_intensity="10000">
+				<Body>
+					<Size x="0.27" y="0.27" z="0.368"/>
+				</Body>
+				<ChannelType index="0" attribute="PAN" feature="POSITION" preset="POSITION" coarse="1" default="127" mode="MODE">
+					<ChannelFunction index="0" from="-270" to="270" min_dmx_24="0" max_dmx_24="16777215" mode_dmx_end="139" physfrom="-270" physto="270" subattribute="PAN" subattribute_user_name="Pan" attribute="PAN" attribute_user_name="Pan" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="center" from_dmx="128" to_dmx="128"/>
+						<ChannelSet index="2" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="TILT" feature="POSITION" preset="POSITION" coarse="2" default="127" mode="MODE">
+					<ChannelFunction index="0" from="-135" to="135" min_dmx_24="0" max_dmx_24="16777215" mode_dmx_end="139" physfrom="-135" physto="135" subattribute="TILT" subattribute_user_name="Tilt" attribute="TILT" attribute_user_name="Tilt" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="center" from_dmx="128" to_dmx="128"/>
+						<ChannelSet index="2" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="HUE" feature="COLORHSBC" preset="COLOR" coarse="3" mode="MODE">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" mode_dmx_end="139" physfrom="0" physto="360" subattribute="HUE" subattribute_user_name="Hue" attribute="HUE" attribute_user_name="Hue" feature="COLORHSBC" feature_user_name="HSBC" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="SATURATION" feature="COLORHSBC" preset="COLOR" coarse="4" highlight_value="0" mode="MODE">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" mode_dmx_end="139" physfrom="0" physto="1" subattribute="SATURATION" subattribute_user_name="Saturation" attribute="SATURATION" attribute_user_name="Saturation2" feature="COLORHSBC" feature_user_name="HSBC" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="5" highlight_value="100" mode="MODE">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" mode_dmx_end="139" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="6" highlight_value="0" mode="MODE">
+					<ChannelFunction index="0" from="0" to="3.906" min_dmx_24="0" max_dmx_24="655359" mode_dmx_end="139" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="9"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" name="Strobe 1..100%" from="3.906" to="100" min_dmx_24="655360" max_dmx_24="16777215" mode_dmx_end="139" physfrom="0.2" physto="20" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Strobe" from_dmx="10" to_dmx="10"/>
+						<ChannelSet index="1" name="max Strobe" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="6" attribute="ZOOM" feature="FOCUS" preset="FOCUS" coarse="7" default="128">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="7" physto="30" subattribute="ZOOM" subattribute_user_name="Zoom" attribute="ZOOM" attribute_user_name="Zoom" feature="FOCUS" feature_user_name="Focus" preset="FOCUS" preset_user_name="Focus">
+						<ChannelSet index="0" name="narrow" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="normal" from_dmx="128" to_dmx="128"/>
+						<ChannelSet index="2" name="wide" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="7" attribute="MODE" feature="FIXTURE" preset="CONTROL" coarse="8">
+					<ChannelFunction index="0" from="0" to="7.812" min_dmx_24="0" max_dmx_24="1310719" physfrom="0" physto="0" subattribute="MODE" subattribute_user_name="Normal" attribute="MODE" attribute_user_name="Mode" feature="FIXTURE" feature_user_name="Fixture" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="no function" from_dmx="0" to_dmx="19"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="7.812" to="23.438" min_dmx_24="1310720" max_dmx_24="3932159" subattribute="POSITIONBLINK" subattribute_user_name="Blink" attribute="POSITIONBLINK" attribute_user_name="Blink" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="P/T BO on" from_dmx="20" to_dmx="39" slot_from="1" slot_to="1"/>
+						<ChannelSet index="1" name="P/T BO off" from_dmx="40" to_dmx="59" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" from="23.438" to="31.25" min_dmx_24="3932160" max_dmx_24="5242879" subattribute="FANSASMENU" subattribute_user_name="As Menu" attribute="FANS" attribute_user_name="Fans" feature="FIXTURE" feature_user_name="Fixture" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Fan As Menu" from_dmx="60" to_dmx="79"/>
+					</ChannelFunction>
+					<ChannelFunction index="3" from="31.25" to="54.688" min_dmx_24="5242880" max_dmx_24="9175039" subattribute="FANSPEED" subattribute_user_name="Speed" attribute="FANS" attribute_user_name="Fans" feature="FIXTURE" feature_user_name="Fixture" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Fan Slow" from_dmx="80" to_dmx="99" slot_from="0.01" slot_to="0.01"/>
+						<ChannelSet index="1" name="Fan Normal" from_dmx="100" to_dmx="119" slot_from="0.5" slot_to="0.5"/>
+						<ChannelSet index="2" name="Fan Fast" from_dmx="120" to_dmx="139" slot_from="1" slot_to="1"/>
+					</ChannelFunction>
+					<ChannelFunction index="4" from="54.688" to="78.125" min_dmx_24="9175040" max_dmx_24="13107199" subattribute="MODE" subattribute_user_name="Normal" attribute="MODE" attribute_user_name="Mode" feature="FIXTURE" feature_user_name="Fixture" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Auto 1" from_dmx="140" to_dmx="149" slot_from="1" slot_to="1"/>
+						<ChannelSet index="1" name="Auto 2" from_dmx="150" to_dmx="159" slot_from="2" slot_to="2"/>
+						<ChannelSet index="2" name="Test" from_dmx="160" to_dmx="169" slot_from="3" slot_to="3"/>
+						<ChannelSet index="3" name="Custom" from_dmx="170" to_dmx="179" slot_from="4" slot_to="4"/>
+						<ChannelSet index="4" name="no function" from_dmx="180" to_dmx="199" slot_from="0" slot_to="0" auto_create="false"/>
+					</ChannelFunction>
+					<ChannelFunction index="5" from="78.125" to="85.938" min_dmx_24="13107200" max_dmx_24="14417919" subattribute="FIXTUREGLOBALRESET" subattribute_user_name="Reset" attribute="FIXTUREGLOBALRESET" attribute_user_name="FixtureGlobal" feature="RESET" feature_user_name="Reset" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Reset" from_dmx="200" to_dmx="219"/>
+					</ChannelFunction>
+					<ChannelFunction index="6" from="85.938" to="100" min_dmx_24="14417920" max_dmx_24="16777215" subattribute="DIMMERCURVE" subattribute_user_name="Curve" attribute="DIMMERCURVE" attribute_user_name="Curve" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="no function" from_dmx="220" to_dmx="235" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="1" name="DIM0" from_dmx="236" to_dmx="239" slot_from="1" slot_to="1"/>
+						<ChannelSet index="2" name="DIM1" from_dmx="240" to_dmx="243" slot_from="2" slot_to="2"/>
+						<ChannelSet index="3" name="DIM2" from_dmx="244" to_dmx="247" slot_from="3" slot_to="3"/>
+						<ChannelSet index="4" name="DIM3" from_dmx="248" to_dmx="251" slot_from="4" slot_to="4"/>
+						<ChannelSet index="5" name="DIM4" from_dmx="252" to_dmx="255" slot_from="5" slot_to="5"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5">
+			<FixtureMacro index="0">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="1" dmx_value="209" attribute="MODE" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="3" dmx_value="209" attribute="MODE" instance_index="0"/>
+				<FixtureMacroStep index="2" duration="30" dmx_value="209" attribute="MODE" instance_index="0"/>
+			</FixtureMacro>
+		</FixtureMacroCollect>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="RGBW LedPAR 14x10" mode="Standard mode">
+        <InfoItems>
+            <Info type="Revision" date="2026-07-02T15:58:52">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2023-06-22T10:14:34">N/A</Info>
+            <Info type="Revision" date="2026-07-02T13:38:27">LIGHT4ME RGBW LedPAR 14x10 in progress</Info>
+            <Info type="Revision" date="2026-07-02T15:04:26">in progress 2 </Info>
+            <Info type="Revision" date="2026-07-02T15:36:57">in progress 2 </Info>
+            <Info type="Revision" date="2026-07-02T15:53:32">in progress 2 </Info>
+            <Info>14x10W RGBW LED PAR, 8 channel mode</Info>
+            <Info type="Revision" date="2026-07-02T15:59:00.814">14x10W%20RGBW%20LED%20PAR%208%20channel%20mode, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>RGBW LedPAR 14x10</short_name>
+        <manufacturer>Light4me</manufacturer>
+        <short_manufacturer>LIGHT4ME</short_manufacturer>
+        <Modules>
+            <Module name="Beam" class="Conventional" beamtype="Wash" beam_intensity="1700" index="2" beam_angle="15">
+                <Model/>
+                <Body>
+                    <Size x="0.19" y="0.19" z="0.075"/>
+                </Body>
+                <ChannelType coarse="1" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="39.21568627450981">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="2" default="0" attribute="COLORRGB1" feature="Color" preset="Color">
+                    <ChannelFunction subattribute="ColorRGB_Red" attribute="COLORRGB1" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="3" default="0" attribute="COLORRGB2" feature="Color" preset="Color">
+                    <ChannelFunction subattribute="ColorRGB_Green" attribute="COLORRGB2" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="4" default="0" attribute="COLORRGB3" feature="Color" preset="Color">
+                    <ChannelFunction subattribute="ColorRGB_Blue" attribute="COLORRGB3" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="5" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="39.21568627450981">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="6" default="0" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+                    <ChannelFunction subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="7" default="0" attribute="EFFECT" feature="EFFECT" preset="BEAM">
+                    <ChannelFunction subattribute="EFFECTSELECT" attribute="EFFECT" feature="EFFECT" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="No Function" from_dmx="0" to_dmx="3"/>
+                        <ChannelSet name="Static Colors" from_dmx="4" to_dmx="127"/>
+                        <ChannelSet name="Color Jump" from_dmx="128" to_dmx="169"/>
+                        <ChannelSet name="Color Gradient" from_dmx="170" to_dmx="210"/>
+                        <ChannelSet name="Sound Mode 1" from_dmx="211" to_dmx="229"/>
+                        <ChannelSet name="Sound Mode 2" from_dmx="230" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="8" default="0" attribute="EFFECTRATE" feature="EFFECT" preset="BEAM">
+                    <ChannelFunction subattribute="EFFECTRATE" attribute="EFFECTRATE" feature="EFFECT" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+        </Instances>
+        <Wheels/>
+    </FixtureType>
+</MA>

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="LOWFOG 3000" mode="2CH">
+        <InfoItems>
+            <Info type="Revision" date="2025-08-19T07:12:04">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2025-08-19T07:00:05">Ver_1_0</Info>
+            <Info type="Revision" date="2025-08-19T07:09:30">ver 12</Info>
+            <Info>PRstage Low Fog 3000 — a professional low fog machine with 3000 W power. It produces a dense ground-hugging fog for stunning stage effects and events. Warm-up time is 8 minutes, with an output of up to 115 m³/min. Equipped with an LCD display, 2-channel DMX control, and wireless remote. Tanks: 2 L for fluid, 10 L for water. Perfect for concerts, theaters, and live shows</Info>
+            <Info type="Revision" date="2025-08-19T07:12:12.740">ver%201.2, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>LOWFOG 3000</short_name>
+        <manufacturer>PRstage</manufacturer>
+        <short_manufacturer>PRstage</short_manufacturer>
+        <Modules>
+            <Module name="Body" class="None" beamtype="None" beam_intensity="" index="0" beam_angle="">
+                <Model name="Body" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Vertices>GAAAADQzs75xPYq+rkdhvquqqr6rqiq/q6pKwgAAAAAAAAAANDOzvnE9ij6uR2G+7AVRv+wF0T4MoknCAAAAAAAAAAA0M7M+cT2KPq5HYb6rqqo+q6oqP6uqSsIAAAAAAAAAADQzsz5xPYq+rkdhvuwFUT/sBdG+DKJJwgAAAAAAAAAANDOzvnE9ir6uR2E+q6oqv6uqqr5VVUXCAAAAAAAAAAA0M7M+cT2Kvq5HYT7sBdE+7AVRv/RdRsIAAAAAAAAAADQzsz5xPYo+rkdhPquqKj+rqqo+VVVFwgAAAAAAAAAANDOzvnE9ij6uR2E+7AXRvuwFUT/0XUbCAAAAAAAAAAA0M7O+cT2Kvq5HYb6rqqq+q6oqv6uqSsIAAAAAAAAAADQzsz5xPYq+rkdhvuwFUT/sBdG+DKJJwgAAAAAAAAAANDOzPnE9ir6uR2E+7AXRPuwFUb/0XUbCAAAAAAAAAAA0M7O+cT2Kvq5HYT6rqiq/q6qqvlVVRcIAAAAAAAAAADQzsz5xPYq+rkdhvuwFUT/sBdG+DKJJwgAAAAAAAAAANDOzPnE9ij6uR2G+q6qqPquqKj+rqkrCAAAAAAAAAAA0M7M+cT2KPq5HYT6rqio/q6qqPlVVRcIAAAAAAAAAADQzsz5xPYq+rkdhPuwF0T7sBVG/9F1GwgAAAAAAAAAANDOzPnE9ij6uR2G+q6qqPquqKj+rqkrCAAAAAAAAAAA0M7O+cT2KPq5HYb7sBVG/7AXRPgyiScIAAAAAAAAAADQzs75xPYo+rkdhPuwF0b7sBVE/9F1GwgAAAAAAAAAANDOzPnE9ij6uR2E+q6oqP6uqqj5VVUXCAAAAAAAAAAA0M7O+cT2KPq5HYb7sBVG/7AXRPgyiScIAAAAAAAAAADQzs75xPYq+rkdhvquqqr6rqiq/q6pKwgAAAAAAAAAANDOzvnE9ir6uR2E+q6oqv6uqqr5VVUXCAAAAAAAAAAA0M7O+cT2KPq5HYT7sBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                    <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                    <SubSets>
+                        <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                    </SubSets>
+                    <Materials>
+                        <Material3d name="black" specularPower="0.1">
+                            <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                            <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                            <EmissiveColor r="0" g="0" b="0" a="1"/>
+                            <DiffuseInking x="0" y="0" z="0"/>
+                            <EmissiveInking x="0" y="0" z="0"/>
+                            <SurfaceTexture/>
+                            <AlphaTexture/>
+                        </Material3d>
+                    </Materials>
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <ChannelType coarse="1" default="0" attribute="FOG" feature="SPECIALFX" preset="CONTROL">
+                    <ChannelFunction subattribute="FOG" attribute="FOG" feature="SPECIALFX" preset="CONTROL" from="0" to="100" physfrom="1" physto="110" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="2" default="0" attribute="BLOWER" feature="SPECIALFX" preset="CONTROL">
+                    <ChannelFunction subattribute="BLOWER" attribute="BLOWER" feature="SPECIALFX" preset="CONTROL" from="0" to="100" physfrom="0" physto="110" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+        </Instances>
+        <Wheels/>
+    </FixtureType>
+</MA>

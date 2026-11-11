@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.5.0/MA.xsd" major_vers="3" minor_vers="5" stream_vers="0">
+	<Info datetime="2019-08-19T18:25:51" showfile="favolite vader700"/>
+	<FixtureType index="4" name="LED-Spot F-500S Pro" mode="Basic">
+		<InfoItems>
+			<Info date="2019-08-19T18:24:25">Created by: T.L.S. - www-TomLevin.net</Info>
+			<Info type="Revision" date="2019-08-19T18:25:42">Created: 19/08/2019 in Oehringen, Germany</Info>
+			<Info type="Invisible" date="2015-06-30T00:00:00">generator_software_name="MA Importer",generator_software_version="1b64e2961539f8104297a57234d4d05aa7a5922d"</Info>
+			<Info date="2019-08-19T18:25:32">Created for: media:system - www.mediasystem.de</Info>
+			<Info date="2019-08-19T18:25:21"># With working Gobos &amp; Prism</Info>
+		<Info type="Revision" date="2019-08-19T06:28:12">Created 1908/2019 in Oehringen Germany, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>F-500S PRO</short_name>
+		<manufacturer>Favolite</manufacturer>
+		<short_manufacturer>Favolite</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="Headmover" beamtype="Spot" beam_angle="30" beam_intensity="10000">
+				<Body>
+					<Size x="0.411" y="0.411" z="0.606"/>
+				</Body>
+				<ChannelType index="0" attribute="PAN" feature="POSITION" preset="POSITION" coarse="1" fine="2" default="32767.5">
+					<ChannelFunction index="0" from="-270" to="270" min_dmx_24="0" max_dmx_24="16777215" physfrom="-270" physto="270" subattribute="PAN" subattribute_user_name="Pan" attribute="PAN" attribute_user_name="Pan" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="center" from_dmx="32768" to_dmx="32768"/>
+						<ChannelSet index="2" name="max" from_dmx="65535" to_dmx="65535"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="TILT" feature="POSITION" preset="POSITION" coarse="3" fine="4" default="32767.5">
+					<ChannelFunction index="0" from="-135" to="135" min_dmx_24="0" max_dmx_24="16777215" physfrom="135" physto="-135" subattribute="TILT" subattribute_user_name="Tilt" attribute="TILT" attribute_user_name="Tilt" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="center" from_dmx="32768" to_dmx="32768"/>
+						<ChannelSet index="2" name="max" from_dmx="65535" to_dmx="65535"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="COLOR1" feature="COLOR1" preset="COLOR" coarse="5" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="85.938" min_dmx_24="0" max_dmx_24="14548991" wheel="1" subattribute="COLOR1" subattribute_user_name="Select" attribute="COLOR1" attribute_user_name="C1" feature="COLOR1" feature_user_name="Color1" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="7" slot_index="0" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="red" from_dmx="8" to_dmx="16" slot_index="1" slot_from="0" slot_to="0"/>
+						<ChannelSet index="2" name="yellow" from_dmx="17" to_dmx="23" slot_index="2" slot_from="0" slot_to="0"/>
+						<ChannelSet index="3" name="blue" from_dmx="24" to_dmx="31" slot_index="3" slot_from="0" slot_to="0"/>
+						<ChannelSet index="4" name="green" from_dmx="32" to_dmx="39" slot_index="4" slot_from="0" slot_to="0"/>
+						<ChannelSet index="5" name="orange" from_dmx="40" to_dmx="47" slot_index="5" slot_from="0" slot_to="0"/>
+						<ChannelSet index="6" name="magenta" from_dmx="48" to_dmx="57" slot_index="6" slot_from="0" slot_to="0"/>
+						<ChannelSet index="7" name="lemon" from_dmx="58" to_dmx="63" slot_index="7" slot_from="0" slot_to="0"/>
+						<ChannelSet index="8" name="open" from_dmx="64" to_dmx="65" slot_index="0" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="9" name="white/red" from_dmx="75" to_dmx="75" slot_index="8" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="10" name="red/yellow" from_dmx="91" to_dmx="91" slot_index="9" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="11" name="yellow/blue" from_dmx="113" to_dmx="113" slot_index="10" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="12" name="blue/green" from_dmx="134" to_dmx="134" slot_index="11" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="13" name="green/orange" from_dmx="152" to_dmx="152" slot_index="12" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="14" name="orange/magenta" from_dmx="171" to_dmx="171" slot_index="13" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="15" name="magenta/lemon" from_dmx="191" to_dmx="191" slot_index="14" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="16" name="lemon/white" from_dmx="210" to_dmx="210" slot_index="15"/>
+						<ChannelSet index="17" name="open" from_dmx="221" to_dmx="221" slot_index="0" slot_from="0" slot_to="0" auto_create="false"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" name="Spin 1..100%" from="85.938" to="100" min_dmx_24="14548992" max_dmx_24="16777215" physfrom="-60" physto="60" wheel="1" subattribute="COLOR1" subattribute_user_name="Select" attribute="COLOR1" attribute_user_name="C1" feature="COLOR1" feature_user_name="Color1" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="&lt;&lt;&lt;" from_dmx="222" to_dmx="222"/>
+						<ChannelSet index="1" name="&gt;&gt;&gt;" from_dmx="223" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="GOBO1" feature="GOBO1" preset="GOBO" coarse="10" highlight_value="0" snap="true">
+					<ChannelFunction index="0" from="0" to="72.656" min_dmx_24="0" max_dmx_24="9437183" wheel="2" subattribute="GOBO1" subattribute_user_name="Select" attribute="GOBO1" attribute_user_name="G1" feature="GOBO1" feature_user_name="Gobo1" preset="GOBO" preset_user_name="Gobo">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="8" slot_index="0" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="gobo 1.1" from_dmx="9" to_dmx="17" slot_index="1" slot_from="0" slot_to="0"/>
+						<ChannelSet index="2" name="gobo 1.2" from_dmx="18" to_dmx="23" slot_index="2" slot_from="0" slot_to="0"/>
+						<ChannelSet index="3" name="gobo 1.3" from_dmx="24" to_dmx="32" slot_index="3" slot_from="0" slot_to="0"/>
+						<ChannelSet index="4" name="gobo 1.4" from_dmx="33" to_dmx="39" slot_index="4" slot_from="0" slot_to="0"/>
+						<ChannelSet index="5" name="gobo 1.5" from_dmx="40" to_dmx="47" slot_index="5" slot_from="0" slot_to="0"/>
+						<ChannelSet index="6" name="gobo 1.6" from_dmx="48" to_dmx="55" slot_index="6" slot_from="0" slot_to="0"/>
+						<ChannelSet index="7" name="gobo 1.7" from_dmx="56" to_dmx="63" slot_index="7" slot_from="0" slot_to="0"/>
+						<ChannelSet index="8" name="gobo 1.8" from_dmx="64" to_dmx="71" slot_index="8" slot_from="0" slot_to="0"/>
+						<ChannelSet index="9" name="open" from_dmx="72" to_dmx="72" slot_index="0" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="10" name="gobo 1.1*" from_dmx="80" to_dmx="80" slot_index="1" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="11" name="gobo 1.2*" from_dmx="88" to_dmx="88" slot_index="2" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="12" name="gobo 1.3*" from_dmx="96" to_dmx="96" slot_index="3" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="13" name="gobo 1.4*" from_dmx="103" to_dmx="103" slot_index="4" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="14" name="gobo 1.5*" from_dmx="111" to_dmx="111" slot_index="5" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="15" name="gobo 1.6*" from_dmx="119" to_dmx="119" slot_index="6" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="16" name="gobo 1.7*" from_dmx="127" to_dmx="127" slot_index="7" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="17" name="gobo 1.8*" from_dmx="135" to_dmx="135" slot_index="8" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="18" name="open" from_dmx="143" to_dmx="143" slot_index="0" slot_from="0" slot_to="0" auto_create="false"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" name="Spin 1..100%" from="72.656" to="100" min_dmx_24="9437184" max_dmx_24="16777215" physfrom="-60" physto="60" subattribute="GOBO1_SPIN" subattribute_user_name="Spin" attribute="GOBO1" attribute_user_name="G1" feature="GOBO1" feature_user_name="Gobo1" preset="GOBO" preset_user_name="Gobo">
+						<ChannelSet index="0" name="&lt;&lt;&lt;" from_dmx="144" to_dmx="144"/>
+						<ChannelSet index="1" name="&gt;&gt;&gt;" from_dmx="145" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="GOBO2" feature="GOBO2" preset="GOBO" coarse="11" highlight_value="0" snap="true">
+					<ChannelFunction index="0" from="0" to="62.891" min_dmx_24="0" max_dmx_24="8912895" wheel="3" subattribute="GOBO2" subattribute_user_name="Select2" attribute="GOBO2" attribute_user_name="G2" feature="GOBO2" feature_user_name="Gobo2" preset="GOBO" preset_user_name="Gobo">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="7" slot_index="0" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="gobo 2.1" from_dmx="8" to_dmx="16" slot_index="1" slot_from="0" slot_to="0"/>
+						<ChannelSet index="2" name="gobo 2.2" from_dmx="17" to_dmx="23" slot_index="2" slot_from="0" slot_to="0"/>
+						<ChannelSet index="3" name="gobo 2.3" from_dmx="24" to_dmx="31" slot_index="3" slot_from="0" slot_to="0"/>
+						<ChannelSet index="4" name="gobo 2.4" from_dmx="32" to_dmx="39" slot_index="4" slot_from="0" slot_to="0"/>
+						<ChannelSet index="5" name="gobo 2.5" from_dmx="40" to_dmx="47" slot_index="5" slot_from="0" slot_to="0"/>
+						<ChannelSet index="6" name="gobo 2.6" from_dmx="48" to_dmx="55" slot_index="6" slot_from="0" slot_to="0"/>
+						<ChannelSet index="7" name="gobo 2.7" from_dmx="56" to_dmx="63" slot_index="7" slot_from="0" slot_to="0"/>
+						<ChannelSet index="8" name="open" from_dmx="64" to_dmx="64" slot_index="0" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="9" name="gobo 2.1*" from_dmx="73" to_dmx="73" slot_index="1" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="10" name="gobo 2.2*" from_dmx="82" to_dmx="82" slot_index="2" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="11" name="gobo 2.3*" from_dmx="91" to_dmx="91" slot_index="3" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="12" name="gobo 2.4*" from_dmx="100" to_dmx="100" slot_index="4" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="13" name="gobo 2.5*" from_dmx="108" to_dmx="108" slot_index="5" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="14" name="gobo 2.6*" from_dmx="117" to_dmx="117" slot_index="6" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="15" name="gobo 2.7*" from_dmx="126" to_dmx="126" slot_index="7" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="16" name="open" from_dmx="135" to_dmx="135" slot_index="0" slot_from="0" slot_to="0" auto_create="false"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" name="Spin2 1..100%" from="62.891" to="100" min_dmx_24="8912896" max_dmx_24="16777215" physfrom="-60" physto="60" subattribute="GOBO2_SPIN" subattribute_user_name="Spin2" attribute="GOBO2" attribute_user_name="G2" feature="GOBO2" feature_user_name="Gobo2" preset="GOBO" preset_user_name="Gobo">
+						<ChannelSet index="0" name="&lt;&lt;&lt;" from_dmx="136" to_dmx="136"/>
+						<ChannelSet index="1" name="&gt;&gt;&gt;" from_dmx="137" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="GOBO2_POS" feature="GOBO2" preset="GOBO" coarse="12">
+					<ChannelFunction index="0" name="0...360" from="0" to="23.828" min_dmx_24="0" max_dmx_24="8388607" physfrom="3.6" physto="360" subattribute="GOBO2_POS" subattribute_user_name="Index2" attribute="GOBO2_POS" attribute_user_name="G2&lt;&gt;" feature="GOBO2" feature_user_name="Gobo2" preset="GOBO" preset_user_name="Gobo">
+						<ChannelSet index="0" name="0...360" from_dmx="0" to_dmx="127" auto_create="false"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="23.828" to="100" min_dmx_24="8388608" max_dmx_24="16777215" subattribute="GOBO2_ROT" subattribute_user_name="Rotate2" attribute="GOBO2_POS" attribute_user_name="G2&lt;&gt;" feature="GOBO2" feature_user_name="Gobo2" preset="GOBO" preset_user_name="Gobo">
+						<ChannelSet index="0" name="&gt;&gt;&gt;" from_dmx="128" to_dmx="128" slot_from="29.67" slot_to="29.67"/>
+						<ChannelSet index="1" name="stop" from_dmx="171" to_dmx="172" slot_from="0" slot_to="0"/>
+						<ChannelSet index="2" name="&lt;&lt;&lt;" from_dmx="215" to_dmx="215" slot_from="-29.67" slot_to="-29.67"/>
+						<ChannelSet index="3" name="shaking" from_dmx="216" to_dmx="255" slot_from="29.67" slot_to="-29.67"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="6" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="13" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="close" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="7" attribute="PRISMA1" feature="BEAM1" preset="BEAM" coarse="16" default="0.001" highlight_value="0" snap="true" mode="PRISMA1_POS">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" physto="3.4" physadditional="3" wheel="4" subattribute="PRISMA1" subattribute_user_name="Prism1" attribute="PRISMA1" attribute_user_name="Prism1" feature="BEAM1" feature_user_name="Beam" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="77" slot_index="0" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="3 facet prism" from_dmx="78" to_dmx="255" slot_index="1" slot_from="0.5"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="8" attribute="PRISMA1_POS" feature="BEAM1" preset="BEAM" coarse="17" default="0.001" mode="PRISMA1">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" mode_dmx_start="9" physfrom="-30" physto="30" wheel="4" subattribute="PRISMA1_ROT" subattribute_user_name="Rot" attribute="PRISMA1_POS" attribute_user_name="Pos1" feature="BEAM1" feature_user_name="Beam" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="stop (2)" from_dmx="0" to_dmx="12" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="1" name="&gt;&gt;&gt;" from_dmx="13" to_dmx="13" slot_from="50" slot_to="50"/>
+						<ChannelSet index="2" name="stop" from_dmx="129" to_dmx="129" slot_from="0" slot_to="0" auto_create="false"/>
+						<ChannelSet index="3" name="&lt;&lt;&lt;" from_dmx="130" to_dmx="255" slot_from="-50" slot_to="-50"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="9" attribute="DIMMERCURVE" feature="DIMMER" preset="DIMMER" coarse="15">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="DIMMERCURVE" subattribute_user_name="Curve" attribute="DIMMERCURVE" attribute_user_name="Curve" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="normal" from_dmx="0" to_dmx="31"/>
+						<ChannelSet index="1" name="slow 1" from_dmx="32" to_dmx="63" auto_create="false"/>
+						<ChannelSet index="2" name="slow 2" from_dmx="64" to_dmx="95" auto_create="false"/>
+						<ChannelSet index="3" name="slow 3" from_dmx="96" to_dmx="127" auto_create="false"/>
+						<ChannelSet index="4" name="fast 1" from_dmx="128" to_dmx="159" auto_create="false"/>
+						<ChannelSet index="5" name="fast 2" from_dmx="160" to_dmx="191" auto_create="false"/>
+						<ChannelSet index="6" name="fast 3" from_dmx="192" to_dmx="223" auto_create="false"/>
+						<ChannelSet index="7" name="fatest" from_dmx="224" to_dmx="255" auto_create="false"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="10" attribute="IRIS" feature="BEAM1" preset="BEAM" coarse="20" default="0.001" highlight_value="0">
+					<ChannelFunction index="0" name="Iris 100..1%" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" physto="0.109" subattribute="IRIS" subattribute_user_name="Iris" attribute="IRIS" attribute_user_name="Iris" feature="BEAM1" feature_user_name="Beam" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Iris 100...0" from_dmx="0" to_dmx="127"/>
+						<ChannelSet index="1" name="Iris small" from_dmx="128" to_dmx="135"/>
+						<ChannelSet index="2" name="Iris change 1" from_dmx="136" to_dmx="173"/>
+						<ChannelSet index="3" name="Iris change 2" from_dmx="174" to_dmx="211"/>
+						<ChannelSet index="4" name="iris change 3" from_dmx="212" to_dmx="249"/>
+						<ChannelSet index="5" name="Iris small (2)" from_dmx="250" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="11" attribute="FOCUS" feature="FOCUS" preset="FOCUS" coarse="19" default="128.01">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0.01" physto="1" subattribute="FOCUS" subattribute_user_name="Focus" attribute="FOCUS" attribute_user_name="Focus" feature="FOCUS" feature_user_name="Focus" preset="FOCUS" preset_user_name="Focus">
+						<ChannelSet index="0" name="min Focus" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max Focus" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="12" attribute="ZOOM" feature="FOCUS" preset="FOCUS" coarse="18" default="128.01" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0.25" physto="1" subattribute="ZOOM" subattribute_user_name="Zoom" attribute="ZOOM" attribute_user_name="Zoom" feature="FOCUS" feature_user_name="Focus" preset="FOCUS" preset_user_name="Focus">
+						<ChannelSet index="0" name="narrow" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="normal" from_dmx="128" to_dmx="128"/>
+						<ChannelSet index="2" name="wide" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="13" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="14" default="0.001" highlight_value="0">
+					<ChannelFunction index="0" name="shutter" from="0" to="2.34" min_dmx_24="0" max_dmx_24="393215" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="2" slot_from="1" slot_to="1"/>
+						<ChannelSet index="1" name="closed" from_dmx="3" to_dmx="5" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="2.34" to="5.08" min_dmx_24="393216" max_dmx_24="851967" subattribute="STROBE_RANDOM" subattribute_user_name="Rnd" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Rnd" from_dmx="6" to_dmx="7" slot_from="0.1" slot_to="0.1"/>
+						<ChannelSet index="1" name="Rnd 50%" from_dmx="8" to_dmx="10" slot_from="5" slot_to="5"/>
+						<ChannelSet index="2" name="max Rnd" from_dmx="11" to_dmx="12" slot_from="10" slot_to="10"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" from="5.08" to="100" min_dmx_24="851968" max_dmx_24="16777215" physfrom="0.1" physto="10" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Strobe" from_dmx="13" to_dmx="13"/>
+						<ChannelSet index="1" name="max Strobe" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="14" attribute="FROST" feature="BEAM1" preset="BEAM" coarse="21">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="FROST" subattribute_user_name="Frost" attribute="FROST" attribute_user_name="Frost" feature="BEAM1" feature_user_name="Beam" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Forst off" from_dmx="0" to_dmx="31"/>
+						<ChannelSet index="1" name="Frost on" from_dmx="32" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="15" attribute="POSITIONMSPEED" feature="MSPEED" preset="CONTROL" coarse="22">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="POSITIONMSPEEDTIME" subattribute_user_name="Time" attribute="POSITIONMSPEED" attribute_user_name="Position" feature="MSPEED" feature_user_name="Mspeed" preset="CONTROL" preset_user_name="Control"/>
+				</ChannelType>
+				<ChannelType index="16" attribute="VIRTUAL_POSITION_MODE" feature="POSITION" preset="POSITION" coarse="23">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="VIRTUAL_POSITION_MODE" subattribute_user_name="PosMode" attribute="VIRTUAL_POSITION_MODE" attribute_user_name="PosMode" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="17" attribute="RESET" feature="RESET" preset="CONTROL" coarse="24">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="RESET" subattribute_user_name="Reset" attribute="RESET" attribute_user_name="Reset" feature="RESET" feature_user_name="Reset" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="reset ALL" from_dmx="20" to_dmx="29"/>
+						<ChannelSet index="1" name="reset Pan" from_dmx="30" to_dmx="39"/>
+						<ChannelSet index="2" name="reset Tilt" from_dmx="40" to_dmx="49"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="18" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="6" highlight_value="100" color="ff0000">
+					<ChannelFunction index="0" from="100" to="0" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" physto="0" subattribute="COLORRGB1" subattribute_user_name="R" attribute="COLORRGB1" attribute_user_name="R" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="19" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="7" highlight_value="100" color="00ff00">
+					<ChannelFunction index="0" from="100" to="0" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" physto="0" subattribute="COLORRGB2" subattribute_user_name="G" attribute="COLORRGB2" attribute_user_name="G" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="20" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="8" highlight_value="100" color="0000ff">
+					<ChannelFunction index="0" from="100" to="0" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" physto="0" subattribute="COLORRGB3" subattribute_user_name="B" attribute="COLORRGB3" attribute_user_name="B" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+				<ChannelType index="21" attribute="CTO" feature="CTC" preset="COLOR" coarse="9">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="CTO" subattribute_user_name="CTO" attribute="CTO" attribute_user_name="CTO" feature="CTC" feature_user_name="CTC" preset="COLOR" preset_user_name="Color"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2">
+			<Wheel index="0" subattribute="COLOR1" attribute="COLOR1" feature="COLOR1" preset="COLOR">
+				<Slot index="0" media_name="open"/>
+				<Slot index="1" media_name="red" g="0" b="0"/>
+				<Slot index="2" media_name="yellow" b="0"/>
+				<Slot index="3" media_name="blue" r="0" g="0"/>
+				<Slot index="4" media_name="green" r="0" b="0"/>
+				<Slot index="5" media_name="orange" g="167" b="4"/>
+				<Slot index="6" media_name="magenta" g="0" b="127"/>
+				<Slot index="7" media_name="lemon" b="127"/>
+				<Slot index="8" media_name="white/red" media_filename="carallon/gobos/generic/0009012000205.png"/>
+				<Slot index="9" media_name="red/yellow" media_filename="carallon/gobos/generic/0009012102205.png"/>
+				<Slot index="10" media_name="yellow/blue" media_filename="carallon/gobos/generic/0009012102407.png"/>
+				<Slot index="11" media_name="blue/green" media_filename="carallon/gobos/generic/0009012303407.png"/>
+				<Slot index="12" media_name="gerrn/orange" media_filename="carallon/gobos/generic/0009012105303.png"/>
+				<Slot index="13" media_name="orange/magenta" media_filename="carallon/gobos/generic/0009012105208.png"/>
+				<Slot index="14" media_name="magenta/lemon" media_filename="carallon/gobos/generic/0009012208601.png"/>
+				<Slot index="15" media_name="lemon/white" media_filename="carallon/gobos/generic/0009012000601.png"/>
+			</Wheel>
+			<Wheel index="1" subattribute="GOBO1" attribute="GOBO1" feature="GOBO1" preset="GOBO">
+				<Slot index="0" media_name="open"/>
+				<Slot index="1" media_name="gobo 1.1" media_filename="Rosco/7760-Internal ReflectionsU.bmp"/>
+				<Slot index="2" media_name="gobo 1.2" media_filename="carallon/gobos/prolights/640900112.png"/>
+				<Slot index="3" media_name="gobo 1.3" media_filename="carallon/gobos/chauvet/06790088.png"/>
+				<Slot index="4" media_name="gobo 1.4" media_filename="carallon/gobos/elation/014900023.png"/>
+				<Slot index="5" media_name="gobo 1.5" media_filename="carallon/gobos/jb_lighting/02590045.png"/>
+				<Slot index="6" media_name="gobo 1.6" media_filename="carallon/gobos/martin/030901182.png"/>
+				<Slot index="7" media_name="gobo 1.7" media_filename="Rosco/8122 Stars 7.bmp"/>
+				<Slot index="8" media_name="gobo 1.8" media_filename="carallon/gobos/generic/00090009.png"/>
+			</Wheel>
+			<Wheel index="2" subattribute="GOBO2" attribute="GOBO2" feature="GOBO2" preset="GOBO">
+				<Slot index="0" media_name="open"/>
+				<Slot index="1" media_name="gobo 2.1" media_filename="carallon/gobos/high_end_systems/023900082.png"/>
+				<Slot index="2" media_name="gobo 2.2" media_filename="carallon/gobos/martin/030916003.png"/>
+				<Slot index="3" media_name="gobo 2.3" media_filename="carallon/gobos/martin/030916005.png"/>
+				<Slot index="4" media_name="gobo 2.4" media_filename="carallon/gobos/clay_paky/005926005.png"/>
+				<Slot index="5" media_name="gobo 2.5" media_filename="carallon/gobos/goboland/1139002221019.png"/>
+				<Slot index="6" media_name="gobo 2.6" media_filename="carallon/gobos/goboland/1139002170024.png"/>
+				<Slot index="7" media_name="gobo 2.8" media_filename="carallon/gobos/martin/030901175.png"/>
+			</Wheel>
+			<Wheel index="3" subattribute="PRISMA1" attribute="PRISMA1" feature="BEAM1" preset="BEAM">
+				<Slot index="0" media_name="open"/>
+				<Slot index="1" media_name="3 facet prism" media_filename="carallon/effects/generic/000900002.png"/>
+			</Wheel>
+		</Wheels>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5">
+			<FixtureMacro index="0">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MODE" from_value="1" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="144" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" dmx_value="144" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="1">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MODE" from_value="2" to_value="2"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="154" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" dmx_value="154" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="2">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MODE" from_value="3" to_value="3"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="164" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" dmx_value="164" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="3">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MODE" from_value="4" to_value="4"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="174" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" dmx_value="174" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="4">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="209" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" dmx_value="209" instance_index="0"/>
+				<FixtureMacroStep index="2" duration="30" dmx_value="209" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="5">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="DIMMERCURVE" from_value="0" to_value="0"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="237" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" dmx_value="237" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="6">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="DIMMERCURVE" from_value="1" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="241" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" dmx_value="241" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="7">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="DIMMERCURVE" from_value="2" to_value="2"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="245" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" dmx_value="245" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="8">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="DIMMERCURVE" from_value="3" to_value="3"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="249" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" dmx_value="249" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="9">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="DIMMERCURVE" from_value="4" to_value="4"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="3" dmx_value="253" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" dmx_value="253" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="10">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="1" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="184" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="11">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="2" to_value="2"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="195" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="12">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="RESET"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="25" attribute="RESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="RESET" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="13">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="RESET"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="34" attribute="RESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="RESET" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="14">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="RESET"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="45" attribute="RESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="RESET" instance_index="0"/>
+			</FixtureMacro>
+		</FixtureMacroCollect>
+		<Body/>
+		<AutoPresets index="4">
+			<AutoPreset index="0" name="closed Dim" preset_type_name="DIMMER">
+				<AutoPresetValues>
+					<AutoPresetValue Value="0" channel_type_index="6"/>
+					<AutoPresetValue Value="0" channel_type_index="6"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="1" name="open Dim" preset_type_name="DIMMER">
+				<AutoPresetValues>
+					<AutoPresetValue Value="100" channel_type_index="6"/>
+					<AutoPresetValue Value="100" channel_type_index="6"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="2" name="Curve Normal" preset_type_name="DIMMER">
+				<AutoPresetValues>
+					<AutoPresetValue Value="0" channel_type_index="9"/>
+					<AutoPresetValue Value="0" channel_type_index="9"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="3" name="Curve Slow1" preset_type_name="DIMMER">
+				<AutoPresetValues>
+					<AutoPresetValue Value="18.627451" channel_type_index="9"/>
+					<AutoPresetValue Value="18.627451" channel_type_index="9"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="4" name="Curve Slow2" preset_type_name="DIMMER">
+				<AutoPresetValues>
+					<AutoPresetValue Value="31.176472" channel_type_index="9"/>
+					<AutoPresetValue Value="31.176472" channel_type_index="9"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="5" name="Curve Slowest" preset_type_name="DIMMER">
+				<AutoPresetValues>
+					<AutoPresetValue Value="74.823532" channel_type_index="9"/>
+					<AutoPresetValue Value="74.823532" channel_type_index="9"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="6" name="Curve Fast3" preset_type_name="DIMMER">
+				<AutoPresetValues>
+					<AutoPresetValue Value="81.372543" channel_type_index="9"/>
+					<AutoPresetValue Value="81.372543" channel_type_index="9"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="7" name="Curve FastMax" preset_type_name="DIMMER">
+				<AutoPresetValues>
+					<AutoPresetValue Value="100" channel_type_index="9"/>
+					<AutoPresetValue Value="100" channel_type_index="9"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="8" name="open" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="0" channel_type_index="2"/>
+					<AutoPresetValue Value="0" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="9" name="yellow" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="7.7596388" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="10" name="orange" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="16.877216" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="11" name="red" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="4.6557837" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="12" name="green" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="13.773359" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="13" name="blau" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="10.669504" channel_type_index="2"/>
+					<AutoPresetValue Value="10.669504" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="14" name="White" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="0" channel_type_index="2"/>
+					<AutoPresetValue Value="0" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="15" name="red" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="4.6557837" channel_type_index="2"/>
+					<AutoPresetValue Value="4.6557837" channel_type_index="2"/>
+					<AutoPresetValue Value="4.6557837" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="16" name="yellow" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="7.7596388" channel_type_index="2"/>
+					<AutoPresetValue Value="7.7596388" channel_type_index="2"/>
+					<AutoPresetValue Value="7.7596388" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="17" name="blue" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="10.669504" channel_type_index="2"/>
+					<AutoPresetValue Value="10.669504" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="18" name="green" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="13.773359" channel_type_index="2"/>
+					<AutoPresetValue Value="13.773359" channel_type_index="2"/>
+					<AutoPresetValue Value="13.773359" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="19" name="orange" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="16.877216" channel_type_index="2"/>
+					<AutoPresetValue Value="16.877216" channel_type_index="2"/>
+					<AutoPresetValue Value="16.877216" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="20" name="pink" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="20.369053" channel_type_index="2"/>
+					<AutoPresetValue Value="20.369053" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="21" name="UV" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="23.472908" channel_type_index="2"/>
+					<AutoPresetValue Value="23.472908" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="22" name="CTO 0" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="0" channel_type_index="21"/>
+					<AutoPresetValue Value="0" channel_type_index="21"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="23" name="CTO 50" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="50" channel_type_index="21"/>
+					<AutoPresetValue Value="50" channel_type_index="21"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="24" name="CTO 100" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="100" channel_type_index="21"/>
+					<AutoPresetValue Value="100" channel_type_index="21"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="25" name="CMY White" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="0" channel_type_index="18"/>
+					<AutoPresetValue Value="0" channel_type_index="19"/>
+					<AutoPresetValue Value="0" channel_type_index="20"/>
+					<AutoPresetValue Value="0" channel_type_index="18"/>
+					<AutoPresetValue Value="0" channel_type_index="19"/>
+					<AutoPresetValue Value="0" channel_type_index="20"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="26" name="CMY Yellow" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="0" channel_type_index="18"/>
+					<AutoPresetValue Value="0" channel_type_index="19"/>
+					<AutoPresetValue Value="100" channel_type_index="20"/>
+					<AutoPresetValue Value="0" channel_type_index="18"/>
+					<AutoPresetValue Value="0" channel_type_index="19"/>
+					<AutoPresetValue Value="100" channel_type_index="20"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="27" name="CMY Orange" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="0" channel_type_index="18"/>
+					<AutoPresetValue Value="71" channel_type_index="19"/>
+					<AutoPresetValue Value="100" channel_type_index="20"/>
+					<AutoPresetValue Value="0" channel_type_index="18"/>
+					<AutoPresetValue Value="71" channel_type_index="19"/>
+					<AutoPresetValue Value="100" channel_type_index="20"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="28" name="CMY Red" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="0" channel_type_index="18"/>
+					<AutoPresetValue Value="100" channel_type_index="19"/>
+					<AutoPresetValue Value="100" channel_type_index="20"/>
+					<AutoPresetValue Value="0" channel_type_index="18"/>
+					<AutoPresetValue Value="100" channel_type_index="19"/>
+					<AutoPresetValue Value="100" channel_type_index="20"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="29" name="CMY Deep Red" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="0" channel_type_index="18"/>
+					<AutoPresetValue Value="100" channel_type_index="19"/>
+					<AutoPresetValue Value="100" channel_type_index="20"/>
+					<AutoPresetValue Value="0" channel_type_index="18"/>
+					<AutoPresetValue Value="100" channel_type_index="19"/>
+					<AutoPresetValue Value="100" channel_type_index="20"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="30" name="CMY Hell Green" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="82.5" channel_type_index="18"/>
+					<AutoPresetValue Value="15.5" channel_type_index="19"/>
+					<AutoPresetValue Value="80.5" channel_type_index="20"/>
+					<AutoPresetValue Value="82.5" channel_type_index="18"/>
+					<AutoPresetValue Value="15.5" channel_type_index="19"/>
+					<AutoPresetValue Value="80.5" channel_type_index="20"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="31" name="CMY Green" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="100" channel_type_index="18"/>
+					<AutoPresetValue Value="0" channel_type_index="19"/>
+					<AutoPresetValue Value="100" channel_type_index="20"/>
+					<AutoPresetValue Value="100" channel_type_index="18"/>
+					<AutoPresetValue Value="0" channel_type_index="19"/>
+					<AutoPresetValue Value="100" channel_type_index="20"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="32" name="CMY Aqua" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="100" channel_type_index="18"/>
+					<AutoPresetValue Value="0" channel_type_index="19"/>
+					<AutoPresetValue Value="67.5" channel_type_index="20"/>
+					<AutoPresetValue Value="100" channel_type_index="18"/>
+					<AutoPresetValue Value="0" channel_type_index="19"/>
+					<AutoPresetValue Value="67.5" channel_type_index="20"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="33" name="CMY Cyan" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="100" channel_type_index="18"/>
+					<AutoPresetValue Value="0" channel_type_index="19"/>
+					<AutoPresetValue Value="51" channel_type_index="20"/>
+					<AutoPresetValue Value="100" channel_type_index="18"/>
+					<AutoPresetValue Value="0" channel_type_index="19"/>
+					<AutoPresetValue Value="51" channel_type_index="20"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="34" name="CMY Light Blue" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="100" channel_type_index="18"/>
+					<AutoPresetValue Value="0" channel_type_index="19"/>
+					<AutoPresetValue Value="0" channel_type_index="20"/>
+					<AutoPresetValue Value="100" channel_type_index="18"/>
+					<AutoPresetValue Value="0" channel_type_index="19"/>
+					<AutoPresetValue Value="0" channel_type_index="20"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="35" name="CMY Blue" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="99.5" channel_type_index="18"/>
+					<AutoPresetValue Value="50" channel_type_index="19"/>
+					<AutoPresetValue Value="0" channel_type_index="20"/>
+					<AutoPresetValue Value="99.5" channel_type_index="18"/>
+					<AutoPresetValue Value="50" channel_type_index="19"/>
+					<AutoPresetValue Value="0" channel_type_index="20"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="36" name="CMY Deep Blue" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="100" channel_type_index="18"/>
+					<AutoPresetValue Value="60" channel_type_index="19"/>
+					<AutoPresetValue Value="0" channel_type_index="20"/>
+					<AutoPresetValue Value="100" channel_type_index="18"/>
+					<AutoPresetValue Value="60" channel_type_index="19"/>
+					<AutoPresetValue Value="0" channel_type_index="20"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="37" name="CMY Lavendel" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="72.5" channel_type_index="18"/>
+					<AutoPresetValue Value="66.5" channel_type_index="19"/>
+					<AutoPresetValue Value="44" channel_type_index="20"/>
+					<AutoPresetValue Value="72.5" channel_type_index="18"/>
+					<AutoPresetValue Value="66.5" channel_type_index="19"/>
+					<AutoPresetValue Value="44" channel_type_index="20"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="38" name="CMY Pink" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="50" channel_type_index="18"/>
+					<AutoPresetValue Value="68" channel_type_index="19"/>
+					<AutoPresetValue Value="0" channel_type_index="20"/>
+					<AutoPresetValue Value="50" channel_type_index="18"/>
+					<AutoPresetValue Value="68" channel_type_index="19"/>
+					<AutoPresetValue Value="0" channel_type_index="20"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="39" name="CMY Magenta" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="27" channel_type_index="18"/>
+					<AutoPresetValue Value="100" channel_type_index="19"/>
+					<AutoPresetValue Value="0" channel_type_index="20"/>
+					<AutoPresetValue Value="27" channel_type_index="18"/>
+					<AutoPresetValue Value="100" channel_type_index="19"/>
+					<AutoPresetValue Value="0" channel_type_index="20"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="40" name="CMY Rose" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="0" channel_type_index="18"/>
+					<AutoPresetValue Value="100" channel_type_index="19"/>
+					<AutoPresetValue Value="50" channel_type_index="20"/>
+					<AutoPresetValue Value="0" channel_type_index="18"/>
+					<AutoPresetValue Value="100" channel_type_index="19"/>
+					<AutoPresetValue Value="50" channel_type_index="20"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="41" name="open Select" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="0" channel_type_index="2"/>
+					<AutoPresetValue Value="0" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="42" name="red Select" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="4.6557837" channel_type_index="2"/>
+					<AutoPresetValue Value="4.6557837" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="43" name="yellow Select" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="7.7596388" channel_type_index="2"/>
+					<AutoPresetValue Value="7.7596388" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="44" name="blue Select" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="10.669504" channel_type_index="2"/>
+					<AutoPresetValue Value="10.669504" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="45" name="green Select" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="13.773359" channel_type_index="2"/>
+					<AutoPresetValue Value="13.773359" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="46" name="orange Select" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="16.877216" channel_type_index="2"/>
+					<AutoPresetValue Value="16.877216" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="47" name="magenta Select" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="20.369053" channel_type_index="2"/>
+					<AutoPresetValue Value="20.369053" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="48" name="lemon Select" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="23.472908" channel_type_index="2"/>
+					<AutoPresetValue Value="23.472908" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="49" name="lemon/white Select" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="81.476212" channel_type_index="2"/>
+					<AutoPresetValue Value="81.476212" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="50" name="&lt;&lt;&lt; Select" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="86.147888" channel_type_index="2"/>
+					<AutoPresetValue Value="86.147888" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="51" name="&gt;&gt;&gt; Select" preset_type_name="COLOR">
+				<AutoPresetValues>
+					<AutoPresetValue Value="100" channel_type_index="2"/>
+					<AutoPresetValue Value="100" channel_type_index="2"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="52" name="Prism Open" preset_type_name="BEAM">
+				<AutoPresetValues>
+					<AutoPresetValue Value="0" channel_type_index="7"/>
+					<AutoPresetValue Value="0" channel_type_index="7"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="53" name="Prism ON" preset_type_name="BEAM">
+				<AutoPresetValues>
+					<AutoPresetValue Value="100" channel_type_index="7"/>
+					<AutoPresetValue Value="100" channel_type_index="7"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="54" name="Prism Stop" preset_type_name="BEAM">
+				<AutoPresetValues>
+					<AutoPresetValue Value="50.588234" channel_type_index="8"/>
+					<AutoPresetValue Value="50.588234" channel_type_index="8"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="55" name="&lt;&lt;&lt;" preset_type_name="BEAM">
+				<AutoPresetValues>
+					<AutoPresetValue Value="100" channel_type_index="8"/>
+					<AutoPresetValue Value="100" channel_type_index="8"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="56" name="&lt;" preset_type_name="BEAM">
+				<AutoPresetValues>
+					<AutoPresetValue Value="41" channel_type_index="8"/>
+					<AutoPresetValue Value="41" channel_type_index="8"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="57" name="&gt;&gt;&gt;" preset_type_name="BEAM">
+				<AutoPresetValues>
+					<AutoPresetValue Value="5.0980392" channel_type_index="8"/>
+					<AutoPresetValue Value="5.0980392" channel_type_index="8"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="58" name="&gt;" preset_type_name="BEAM">
+				<AutoPresetValues>
+					<AutoPresetValue Value="59" channel_type_index="8"/>
+					<AutoPresetValue Value="59" channel_type_index="8"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="59" name="Frost Off" preset_type_name="BEAM">
+				<AutoPresetValues>
+					<AutoPresetValue Value="0" channel_type_index="14"/>
+					<AutoPresetValue Value="0" channel_type_index="14"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="60" name="Frost Full" preset_type_name="BEAM">
+				<AutoPresetValues>
+					<AutoPresetValue Value="100" channel_type_index="14"/>
+					<AutoPresetValue Value="100" channel_type_index="14"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="61" name="Frost 50%" preset_type_name="BEAM">
+				<AutoPresetValues>
+					<AutoPresetValue Value="50" channel_type_index="14"/>
+					<AutoPresetValue Value="50" channel_type_index="14"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="62" name="Iris Full" preset_type_name="BEAM">
+				<AutoPresetValues>
+					<AutoPresetValue Value="0" channel_type_index="10"/>
+					<AutoPresetValue Value="0" channel_type_index="10"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="63" name="Iris Mid" preset_type_name="BEAM">
+				<AutoPresetValues>
+					<AutoPresetValue Value="33.068626" channel_type_index="10"/>
+					<AutoPresetValue Value="33.068626" channel_type_index="10"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="64" name="Iris Small" preset_type_name="BEAM">
+				<AutoPresetValues>
+					<AutoPresetValue Value="100" channel_type_index="10"/>
+					<AutoPresetValue Value="100" channel_type_index="10"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="65" name="Iris Change 2" preset_type_name="BEAM">
+				<AutoPresetValues>
+					<AutoPresetValue Value="75.490196" channel_type_index="10"/>
+					<AutoPresetValue Value="75.490196" channel_type_index="10"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="66" name="Iris Change 3" preset_type_name="BEAM">
+				<AutoPresetValues>
+					<AutoPresetValue Value="90.392159" channel_type_index="10"/>
+					<AutoPresetValue Value="90.392159" channel_type_index="10"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="67" name="Zoom Narrow" preset_type_name="FOCUS">
+				<AutoPresetValues>
+					<AutoPresetValue Value="0" channel_type_index="12"/>
+					<AutoPresetValue Value="0" channel_type_index="12"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="68" name="Zoom Normal" preset_type_name="FOCUS">
+				<AutoPresetValues>
+					<AutoPresetValue Value="50.196079" channel_type_index="12"/>
+					<AutoPresetValue Value="50.196079" channel_type_index="12"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="69" name="Zoom Wide" preset_type_name="FOCUS">
+				<AutoPresetValues>
+					<AutoPresetValue Value="100" channel_type_index="12"/>
+					<AutoPresetValue Value="100" channel_type_index="12"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="70" name="Focus G1 Narrow" preset_type_name="FOCUS">
+				<AutoPresetValues>
+					<AutoPresetValue Value="51" channel_type_index="11"/>
+					<AutoPresetValue Value="45.5" channel_type_index="11"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="71" name="Focus G1 Normal" preset_type_name="FOCUS">
+				<AutoPresetValues>
+					<AutoPresetValue Value="63.699997" channel_type_index="11"/>
+					<AutoPresetValue Value="60" channel_type_index="11"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="72" name="Focus G1 Wide" preset_type_name="FOCUS">
+				<AutoPresetValues>
+					<AutoPresetValue Value="55.199997" channel_type_index="11"/>
+					<AutoPresetValue Value="51.199997" channel_type_index="11"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="73" name="Focus G2 Narrow" preset_type_name="FOCUS">
+				<AutoPresetValues>
+					<AutoPresetValue Value="19" channel_type_index="11"/>
+					<AutoPresetValue Value="10" channel_type_index="11"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="74" name="Focus G2 Normal" preset_type_name="FOCUS">
+				<AutoPresetValues>
+					<AutoPresetValue Value="36.699997" channel_type_index="11"/>
+					<AutoPresetValue Value="30.199997" channel_type_index="11"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="75" name="Focus G2 Wide" preset_type_name="FOCUS">
+				<AutoPresetValues>
+					<AutoPresetValue Value="28.199997" channel_type_index="11"/>
+					<AutoPresetValue Value="21.699997" channel_type_index="11"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="76" name="open" preset_type_name="GOBO">
+				<AutoPresetValues>
+					<AutoPresetValue Value="0" channel_type_index="3"/>
+					<AutoPresetValue Value="0" channel_type_index="4"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="77" name="gobo 1.1 Select" preset_type_name="GOBO">
+				<AutoPresetValues>
+					<AutoPresetValue Value="6.582077" channel_type_index="3"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="78" name="gobo 1.2 Select" preset_type_name="GOBO">
+				<AutoPresetValues>
+					<AutoPresetValue Value="10.379429" channel_type_index="3"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="79" name="gobo 1.3 Select" preset_type_name="GOBO">
+				<AutoPresetValues>
+					<AutoPresetValue Value="14.176781" channel_type_index="3"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="80" name="gobo 1.4 Select" preset_type_name="GOBO">
+				<AutoPresetValues>
+					<AutoPresetValue Value="18.227287" channel_type_index="3"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="81" name="gobo 1.5 Select" preset_type_name="GOBO">
+				<AutoPresetValues>
+					<AutoPresetValue Value="22.024639" channel_type_index="3"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="82" name="gobo 1.6 Select" preset_type_name="GOBO">
+				<AutoPresetValues>
+					<AutoPresetValue Value="26.07515" channel_type_index="3"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="83" name="gobo 1.7 Select" preset_type_name="GOBO">
+				<AutoPresetValues>
+					<AutoPresetValue Value="30.125656" channel_type_index="3"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="84" name="gobo 1.8 Select" preset_type_name="GOBO">
+				<AutoPresetValues>
+					<AutoPresetValue Value="34.176163" channel_type_index="3"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="85" name="&lt;&lt;&lt;" preset_type_name="GOBO">
+				<AutoPresetValues>
+					<AutoPresetValue Value="72.778618" channel_type_index="3"/>
+					<AutoPresetValue Value="63.046265" channel_type_index="4"/>
+					<AutoPresetValue Value="76.102898" channel_type_index="5"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="86" name="&gt;&gt;&gt;" preset_type_name="GOBO">
+				<AutoPresetValues>
+					<AutoPresetValue Value="100" channel_type_index="3"/>
+					<AutoPresetValue Value="100" channel_type_index="4"/>
+					<AutoPresetValue Value="24.126713" channel_type_index="5"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="87" name="gobo 2.1 Select2" preset_type_name="GOBO">
+				<AutoPresetValues>
+					<AutoPresetValue Value="5.5696826" channel_type_index="4"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="88" name="gobo 2.2 Select2" preset_type_name="GOBO">
+				<AutoPresetValues>
+					<AutoPresetValue Value="9.2828045" channel_type_index="4"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="89" name="gobo 2.3 Select2" preset_type_name="GOBO">
+				<AutoPresetValues>
+					<AutoPresetValue Value="12.763856" channel_type_index="4"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="90" name="gobo 2.4 Select2" preset_type_name="GOBO">
+				<AutoPresetValues>
+					<AutoPresetValue Value="16.476978" channel_type_index="4"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="91" name="gobo 2.5 Select2" preset_type_name="GOBO">
+				<AutoPresetValues>
+					<AutoPresetValue Value="20.1901" channel_type_index="4"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="92" name="gobo 2.6 Select2" preset_type_name="GOBO">
+				<AutoPresetValues>
+					<AutoPresetValue Value="23.903221" channel_type_index="4"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="93" name="gobo 2.7 Select2" preset_type_name="GOBO">
+				<AutoPresetValues>
+					<AutoPresetValue Value="27.616343" channel_type_index="4"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="94" name="stop Rotate2" preset_type_name="GOBO">
+				<AutoPresetValues>
+					<AutoPresetValue Value="50.114807" channel_type_index="5"/>
+				</AutoPresetValues>
+			</AutoPreset>
+			<AutoPreset index="95" name="shaking Rotate2" preset_type_name="GOBO">
+				<AutoPresetValues>
+					<AutoPresetValue Value="100" channel_type_index="5"/>
+				</AutoPresetValues>
+			</AutoPreset>
+		</AutoPresets>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

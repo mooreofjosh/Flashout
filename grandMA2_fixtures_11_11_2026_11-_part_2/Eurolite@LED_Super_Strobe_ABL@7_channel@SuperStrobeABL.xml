@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" major_vers="2" minor_vers="8" stream_vers="123">
+	<FixtureType name="LED Super Strobe ABL" mode="7 channel">
+		<InfoItems>
+			<Info>Set menu option DMX Channel Mode to 7Ch for this personality</Info>
+			<Info type="Revision" date="2020-11-06">Automated import from MA Lighting (C-RevNum: 1; Date: 2020-03-10)</Info>
+			<Info type="Invisible" date="2020-11-06">generator_software_name="MA Importer",generator_software_version="d992b97cb7dbda8ecc892305f06c8a29b4ffc163"</Info>
+		<Info type="Revision" date="2021-03-26T05:02:58">SuperStrobeABL, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>LSSABL7</short_name>
+		<manufacturer>Eurolite</manufacturer>
+		<short_manufacturer>Eurolt</short_manufacturer>
+		<Modules>
+			<Module name="Main Module" class="LED" beamtype="Wash" beam_angle="25" beam_intensity="10000">
+				<ChannelType attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="5" default="255" highlight_value="100">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR">
+						<ChannelSet name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="6" default="255" highlight_value="100">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR">
+						<ChannelSet name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="7" default="255" highlight_value="100">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR">
+						<ChannelSet name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER">
+						<ChannelSet name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet name="open" from_dmx="16777215" to_dmx="16777215"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+			<Module name="Intensity Strobe" class="Conventional" beamtype="Wash" beam_angle="25" beam_intensity="10000">
+				<ChannelType attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" default="255" highlight_value="100">
+					<ChannelFunction from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER">
+						<ChannelSet name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="2" highlight_value="0">
+					<ChannelFunction from="0" to="3.516" min_dmx_24="0" max_dmx_24="589823" physfrom="1" physto="1" subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+						<ChannelSet name="open" from_dmx="0" to_dmx="8"/>
+					</ChannelFunction>
+					<ChannelFunction name="Strobe 1..100%" from="3.516" to="100" min_dmx_24="589824" max_dmx_24="16777215" physfrom="0.1" physto="10" subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+						<ChannelSet name="min Strobe" from_dmx="9" to_dmx="9"/>
+						<ChannelSet name="max Strobe" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances>
+			<Instance module_index="0" patch="1" locked="true"/>
+			<Instance module_index="1" patch="1" locked="true"/>
+			<Instance module_index="1" patch="3" locked="true"/>
+		</Instances>
+		<Wheels/>
+	</FixtureType>
+</MA>

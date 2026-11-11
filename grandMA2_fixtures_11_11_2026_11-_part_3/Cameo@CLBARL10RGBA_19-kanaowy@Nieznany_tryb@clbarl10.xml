@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA major_vers="3" minor_vers="2" stream_vers="2">
+  <Info datetime="2018-3-20T23:47:16" showfile="ma fixture builder"/>
+  <FixtureType index="2" name="CLBARL10RGBA 19-kanaowy" mode="Nieznany tryb">
+    <InfoItems>
+      <Info>Created using MA FixtureBuilder version v1.3.2.2</Info>
+    <Info type="Revision" date="2024-10-30T18:08:17">clbarl10, Uploaded to Fixture Share.</Info></InfoItems>
+    <short_name>CLBARL10</short_name>
+    <manufacturer>Cameo</manufacturer>
+    <short_manufacturer>Cameo</short_manufacturer>
+    <Modules index="0">
+      <Module index="0" name="Main Module" class="LED" beamtype="Wash" beam_angle="30" beam_intensity="1000">
+        <Body>
+          <Size x="0" y="0" z="0"/>
+        </Body>
+        <ChannelType index="0" attribute="MODE" feature="CONTROL" preset="CONTROL" coarse="1" default="33.15">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="MODE1" attribute="MODE" feature="CONTROL" preset="CONTROL" subattribute_user_name="Normal" attribute_user_name="Mode" feature_user_name="Control" preset_user_name="Control"/>
+        </ChannelType>
+        <ChannelType index="1" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="2" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" subattribute_user_name="Dim" attribute_user_name="Dim" feature_user_name="Dimmer" preset_user_name="Dimmer"/>
+        </ChannelType>
+        <ChannelType index="2" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="3" highlight_value="0">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" subattribute_user_name="Shutter" attribute_user_name="Shutter" feature_user_name="Shutter" preset_user_name="Beam"/>
+        </ChannelType>
+      </Module>
+      <Module index="1" name="RGBA Module" class="LED" beamtype="Wash" beam_angle="30" beam_intensity="1000">
+        <Body>
+          <Size x="0" y="0" z="0"/>
+        </Body>
+        <ChannelType index="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="1" color="ff0000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" subattribute_user_name="R" attribute_user_name="R" feature_user_name="MixColor" preset_user_name="Color"/>
+        </ChannelType>
+        <ChannelType index="1" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="2" color="00ff00">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" subattribute_user_name="G" attribute_user_name="G" feature_user_name="MixColor" preset_user_name="Color"/>
+        </ChannelType>
+        <ChannelType index="2" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="3" color="0000ff">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" subattribute_user_name="B" attribute_user_name="B" feature_user_name="MixColor" preset_user_name="Color"/>
+        </ChannelType>
+        <ChannelType index="3" attribute="COLORRGB4" feature="COLORRGB" preset="COLOR" coarse="4" color="ffbf00">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB4" attribute="COLORRGB4" feature="COLORRGB" preset="COLOR" subattribute_user_name="Amber" attribute_user_name="Amber" feature_user_name="MixColor" preset_user_name="Color"/>
+        </ChannelType>
+      </Module>
+    </Modules>
+    <Instances index="1">
+      <Instance index="0" module_index="0"/>
+      <Instance index="1" patch="4" module_index="1"/>
+      <Instance index="2" patch="8" module_index="1"/>
+      <Instance index="3" patch="12" module_index="1"/>
+      <Instance index="4" patch="16" module_index="1"/>
+    </Instances>
+    <Wheels index="2"/>
+    <FixtureMacroCollect index="5"/>
+  </FixtureType>
+</MA>

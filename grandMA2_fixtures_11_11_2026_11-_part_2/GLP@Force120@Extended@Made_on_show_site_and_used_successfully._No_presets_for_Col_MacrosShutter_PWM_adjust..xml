@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA major_vers="3" minor_vers="2" stream_vers="2">
+  <Info datetime="2019-12-14T13:57:58" showfile="ma fixture builder"/>
+  <FixtureType index="0" name="Force120" mode="Extended">
+    <InfoItems>
+      <Info>Created using MA FixtureBuilder version v1.5</Info>
+    <Info type="Revision" date="2019-12-17T08:56:05">Made on show site and used successfully. No presets for Col MacrosShutter/PWM adjust., Uploaded to Fixture Share.</Info></InfoItems>
+    <short_name>Force120</short_name>
+    <manufacturer>GLP</manufacturer>
+    <short_manufacturer>GLP</short_manufacturer>
+    <Modules index="0">
+      <Module index="0" name="Main" class="Headmover" beamtype="Spot" beam_angle="19" beam_intensity="10000">
+        <Body>
+          <Size x="0.5" y="0.5" z="0.5"/>
+        </Body>
+        <ChannelType index="0" attribute="WIND" feature="SPECIALFX" preset="CONTROL" coarse="1" default="0.000000" highlight_value="0.000000">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="WIND" attribute="WIND" feature="SPECIALFX" preset="CONTROL">
+            <ChannelSet index="0" name="Stop" from_dmx="0" to_dmx="3"/>
+            <ChannelSet index="1" name="Forward" from_dmx="4" to_dmx="128"/>
+            <ChannelSet index="2" name="Stop" from_dmx="129" to_dmx="133"/>
+            <ChannelSet index="3" name="Reverse" from_dmx="133" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="1" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="2" default="0" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER">
+            <ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="2" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="3" default="255" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+            <ChannelSet index="0" name="Closed" from_dmx="0" to_dmx="15"/>
+            <ChannelSet index="1" name="Random Strobe" from_dmx="16" to_dmx="47"/>
+            <ChannelSet index="2" name="Random Ramp Up" from_dmx="48" to_dmx="79"/>
+            <ChannelSet index="3" name="Random Ramp Down" from_dmx="80" to_dmx="111"/>
+            <ChannelSet index="4" name="Random Sine" from_dmx="112" to_dmx="143"/>
+            <ChannelSet index="5" name="Strobe with Pause" from_dmx="144" to_dmx="199"/>
+            <ChannelSet index="6" name="Sync Strobe" from_dmx="200" to_dmx="239"/>
+            <ChannelSet index="7" name="Shutter Open" from_dmx="240" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="3" attribute="DUMMY" feature="CONTROL" preset="CONTROL" coarse="4">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DUMMY" attribute="DUMMY" feature="CONTROL" preset="CONTROL">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+      </Module>
+      <Module index="1" name="Color" class="Headmover" beamtype="Spot" beam_angle="19" beam_intensity="10000">
+        <Body>
+          <Size x="0.5" y="0.5" z="0.5"/>
+        </Body>
+        <ChannelType index="0" attribute="COLOR1" feature="COLOR1" preset="COLOR" coarse="1" default="0" highlight_value="0">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLOR1" attribute="COLOR1" feature="COLOR1" preset="COLOR">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="2" default="0" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="3" default="0" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="4" default="0" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+      </Module>
+    </Modules>
+    <Instances index="1">
+      <Instance index="0" patch="1" module_index="0"/>
+      <Instance index="1" patch="5" module_index="1"/>
+      <Instance index="2" patch="9" module_index="1"/>
+      <Instance index="3" patch="13" module_index="1"/>
+    </Instances>
+    <Wheels index="2"/>
+    <FixtureMacroCollect index="5"/>
+  </FixtureType>
+</MA>

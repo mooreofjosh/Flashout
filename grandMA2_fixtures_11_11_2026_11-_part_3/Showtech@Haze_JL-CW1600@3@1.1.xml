@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.61/MA.xsd" major_vers="3" minor_vers="9" stream_vers="61">
+	<Info datetime="2026-03-16T12:19:56" showfile="espaco"/>
+	<FixtureType index="7" name="Haze JL-CW1600" mode="3">
+		<InfoItems>
+			<Info type="Revision" date="2026-03-15T00:00:00">Created on MA 2 version v3.9.61.5 by t.me/FabioCarpi</Info>
+			<Info type="Revision" date="2026-03-16T12:16:34">Attributes following the manual</Info>
+		<Info type="Revision" date="2026-03-16T16:20:48">1.1, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>JL-CW1600</short_name>
+		<manufacturer>Showtech</manufacturer>
+		<short_manufacturer>Showtech</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="LED" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<Body>
+					<Size x="0.44" y="0.395" z="0.25"/>
+				</Body>
+				<ChannelType index="0" attribute="HAZE" feature="SPECIALFX" preset="CONTROL" coarse="1" highlight_value="100">
+					<ChannelFunction index="0" name="Haze" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="HAZE" subattribute_user_name="Haze" attribute="HAZE" attribute_user_name="Haze" feature="SPECIALFX" feature_user_name="SpecialFX" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="off" from_dmx="0" to_dmx="127"/>
+						<ChannelSet index="1" name="on" from_dmx="128" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="BLOWER" feature="SPECIALFX" preset="CONTROL" coarse="2" default="254.999" highlight_value="100">
+					<ChannelFunction index="0" name="Fan" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="BLOWER" subattribute_user_name="Blower" attribute="BLOWER" attribute_user_name="Blower" feature="SPECIALFX" feature_user_name="SpecialFX" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="3" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

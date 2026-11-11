@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="Fractal Bar Led 24x3 W" mode="12 ch (L001)">
+        <InfoItems>
+            <Info type="Revision" date="2025-01-12T13:08:19">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2024-01-13T17:26:35">New fixture type based on Fractal Bar Led 24x3 W from OGSON fixtures</Info>
+            <Info type="Revision" date="2024-01-13T17:26:38">ogi_v1</Info>
+            <Info type="Revision" date="2025-01-12T13:08:29.301">New%20fixture%20type%20based%20on%20Fractal%20Bar%20Led%2024x3%20W%20from%20OGSON%20fixtures, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>Fractal Bar Led 24x3 W</short_name>
+        <manufacturer>OGSON fixtures</manufacturer>
+        <short_manufacturer>OGSON fixtures</short_manufacturer>
+        <Modules>
+            <Module name="Beam" class="Conventional" beamtype="Wash" beam_intensity="1000" index="1" beam_angle="25">
+                <Model name="Beam" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Vertices>GAAAAAAAgL3NzEy8bhIDuquqqr6rqiq/q6pKwgAAAAAAAAAAAACAvc3MTDxuEgO67AVRv+wF0T4MoknCAAAAAAAAAAAAAIA9zcxMPG4SA7qrqqo+q6oqP6uqSsIAAAAAAAAAAAAAgD3NzEy8bhIDuuwFUT/sBdG+DKJJwgAAAAAAAAAAAACAvc3MTLxuEgM6q6oqv6uqqr5VVUXCAAAAAAAAAAAAAIA9zcxMvG4SAzrsBdE+7AVRv/RdRsIAAAAAAAAAAAAAgD3NzEw8bhIDOquqKj+rqqo+VVVFwgAAAAAAAAAAAACAvc3MTDxuEgM67AXRvuwFUT/0XUbCAAAAAAAAAAAAAIC9zcxMvG4SA7qrqqq+q6oqv6uqSsIAAAAAAAAAAAAAgD3NzEy8bhIDuuwFUT/sBdG+DKJJwgAAAAAAAAAAAACAPc3MTLxuEgM67AXRPuwFUb/0XUbCAAAAAAAAAAAAAIC9zcxMvG4SAzqrqiq/q6qqvlVVRcIAAAAAAAAAAAAAgD3NzEy8bhIDuuwFUT/sBdG+DKJJwgAAAAAAAAAAAACAPc3MTDxuEgO6q6qqPquqKj+rqkrCAAAAAAAAAAAAAIA9zcxMPG4SAzqrqio/q6qqPlVVRcIAAAAAAAAAAAAAgD3NzEy8bhIDOuwF0T7sBVG/9F1GwgAAAAAAAAAAAACAPc3MTDxuEgO6q6qqPquqKj+rqkrCAAAAAAAAAAAAAIC9zcxMPG4SA7rsBVG/7AXRPgyiScIAAAAAAAAAAAAAgL3NzEw8bhIDOuwF0b7sBVE/9F1GwgAAAAAAAAAAAACAPc3MTDxuEgM6q6oqP6uqqj5VVUXCAAAAAAAAAAAAAIC9zcxMPG4SA7rsBVG/7AXRPgyiScIAAAAAAAAAAAAAgL3NzEy8bhIDuquqqr6rqiq/q6pKwgAAAAAAAAAAAACAvc3MTLxuEgM6q6oqv6uqqr5VVUXCAAAAAAAAAAAAAIC9zcxMPG4SAzrsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                    <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                    <SubSets>
+                        <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                    </SubSets>
+                    <Materials>
+                        <Material3d name="black" specularPower="0.1">
+                            <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                            <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                            <EmissiveColor r="0" g="0" b="0" a="1"/>
+                            <DiffuseInking x="0" y="0" z="0"/>
+                            <EmissiveInking x="0" y="0" z="0"/>
+                            <SurfaceTexture/>
+                            <AlphaTexture/>
+                        </Material3d>
+                    </Materials>
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <ChannelType default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216">
+                        <ChannelSet name="Closed" from_dmx="0" to_dmx="65535"/>
+                        <ChannelSet name="Open" from_dmx="16777216" to_dmx="16777216"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="1" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="2" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="3" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true" X="-0.438" Z="-0.026"/>
+            <Instance module_index="0" patch="4" locked="true" X="-0.15475" Z="-0.026"/>
+            <Instance module_index="0" patch="7" locked="true" X="0.155" Z="-0.026"/>
+            <Instance module_index="0" patch="10" locked="true" X="0.438" Z="-0.026"/>
+        </Instances>
+        <Wheels/>
+    </FixtureType>
+</MA>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA major_vers="3" minor_vers="0" stream_vers="0">
+  <Info datetime="2014-04-05T22:30:00" showfile="ma fixture builder"/>
+  <FixtureType index="1" name="TwinBeam2400" mode="18ch">
+    <InfoItems>
+      <Info>Created using MA FixtureBuilder version v1.1.0.4</Info>
+    <Info type="Revision" date="2017-06-03T07:06:04">ASL, Uploaded to Fixture Share.</Info></InfoItems>
+    <short_name>TwinBeam</short_name>
+    <manufacturer>Involight</manufacturer>
+    <short_manufacturer>IL</short_manufacturer>
+    <Modules index="0">
+      <Module index="0" name="Main Module" class="LED" beamtype="Effect" beam_angle="35" beam_intensity="10000">
+        <Body>
+          <Size x="0.5" y="0.5" z="0.5"/>
+        </Body>
+        <ChannelType index="0" attribute="MACROS" feature="MACRO" preset="CONTROL" coarse="1">
+          <ChannelFunction index="0" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" subattribute="MACROAUDIO" attribute="MACROS" feature="MACRO" preset="CONTROL">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="1" attribute="MACROPOSITION" feature="MACRO" preset="CONTROL" coarse="2">
+          <ChannelFunction index="0" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" subattribute="MACROPOSITION" attribute="MACROPOSITION" feature="MACRO" preset="CONTROL">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="2" attribute="INTENSITYMACROS" feature="DIMMER" preset="DIMMER" coarse="3">
+          <ChannelFunction index="0" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" subattribute="INTENSITYMACROAUDIO" attribute="INTENSITYMACROS" feature="DIMMER" preset="DIMMER">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="3" attribute="INTENSITYMACRORATE" feature="DIMMER" preset="DIMMER" coarse="4">
+          <ChannelFunction index="0" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" subattribute="INTENSITYMACRORATE" attribute="INTENSITYMACRORATE" feature="DIMMER" preset="DIMMER">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="4" attribute="PAN" feature="POSITION" preset="POSITION" coarse="5" default="128">
+          <ChannelFunction index="0" from="-270" to="270" physfrom="-270" physto="270" min_dmx_24="0" max_dmx_24="16777215" subattribute="PAN" attribute="PAN" feature="POSITION" preset="POSITION">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="home" from_dmx="128" to_dmx="128"/>
+            <ChannelSet index="2" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="5" attribute="TILT" feature="POSITION" preset="POSITION" coarse="6" default="128">
+          <ChannelFunction index="0" from="-135" to="135" physfrom="-135" physto="135" min_dmx_24="0" max_dmx_24="16777215" subattribute="TILT" attribute="TILT" feature="POSITION" preset="POSITION">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="home" from_dmx="128" to_dmx="128"/>
+            <ChannelSet index="2" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="6" attribute="VIRTUAL_POSITION_MODE" feature="POSITION" preset="POSITION" coarse="7">
+          <ChannelFunction index="0" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" subattribute="VIRTUAL_POSITION_MODE" attribute="VIRTUAL_POSITION_MODE" feature="POSITION" preset="POSITION">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="7" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="8" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER">
+            <ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="8" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="9">
+          <ChannelFunction index="0" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+          </ChannelFunction>
+          <ChannelFunction index="1" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+            <ChannelSet index="0" name="max" from_dmx="0" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="9" attribute="BLADE1A" feature="SHAPER" preset="SHAPERS" coarse="10" default="255" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" subattribute="BLADE1A" attribute="BLADE1A" feature="SHAPER" preset="SHAPERS">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="10" attribute="BLADE1B" feature="SHAPER" preset="SHAPERS" coarse="11" default="255" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" subattribute="BLADE1B" attribute="BLADE1B" feature="SHAPER" preset="SHAPERS">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="11" attribute="BLADE2A" feature="SHAPER" preset="SHAPERS" coarse="12" default="255" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" subattribute="BLADE2A" attribute="BLADE2A" feature="SHAPER" preset="SHAPERS">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="12" attribute="BLADE2B" feature="SHAPER" preset="SHAPERS" coarse="13" default="255" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" subattribute="BLADE2B" attribute="BLADE2B" feature="SHAPER" preset="SHAPERS">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="13" attribute="BLADE3A" feature="SHAPER" preset="SHAPERS" coarse="14" default="255" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" subattribute="BLADE3A" attribute="BLADE3A" feature="SHAPER" preset="SHAPERS">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="14" attribute="BLADE3B" feature="SHAPER" preset="SHAPERS" coarse="15" default="255" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" subattribute="BLADE3B" attribute="BLADE3B" feature="SHAPER" preset="SHAPERS">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="15" attribute="BLADE4A" feature="SHAPER" preset="SHAPERS" coarse="16" default="255" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" subattribute="BLADE4A" attribute="BLADE4A" feature="SHAPER" preset="SHAPERS">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="16" attribute="BLADE4B" feature="SHAPER" preset="SHAPERS" coarse="17" default="255" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" subattribute="BLADE4B" attribute="BLADE4B" feature="SHAPER" preset="SHAPERS">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="17" attribute="RESET" feature="RESET" preset="CONTROL" coarse="18">
+          <ChannelFunction index="0" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215" subattribute="RESET" attribute="RESET" feature="RESET" preset="CONTROL">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="149"/>
+            <ChannelSet index="1" name="Reset" from_dmx="150" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+      </Module>
+    </Modules>
+    <Instances index="1">
+      <Instance index="0" module_index="0"/>
+    </Instances>
+    <Wheels index="2"/>
+  </FixtureType>
+</MA>

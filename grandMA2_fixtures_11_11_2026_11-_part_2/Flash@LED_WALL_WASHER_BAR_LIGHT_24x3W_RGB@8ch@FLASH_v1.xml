@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="LED WALL WASHER BAR LIGHT 24x3W RGB" mode="8ch">
+        <InfoItems>
+            <Info type="Revision" date="2023-04-04T15:09:42">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.0</Info>
+            <Info type="Revision" date="2023-04-04T16:42:04">New fixture type based on  from </Info>
+            <Info type="Revision" date="2023-04-04T15:09:00">FLASH_v1</Info>
+            <Info>F7200208_LED WALL WASHER BAR LIGHT 24x3W RGB
+
+https://flash-butrym.pl/pl/p/LED-BAR-24x3W-RGB-8-Section/707</Info>
+            <Info type="Revision" date="2023-04-04T15:09:49.937">FLASH_v1, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>LED WALL WASHER BAR LIGHT 24x3W RGB</short_name>
+        <manufacturer>Flash</manufacturer>
+        <short_manufacturer>FLASH</short_manufacturer>
+        <Modules>
+            <Module name="Base 1" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model name="Base 1" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Vertices>GAAAAAAAAL+uR2G961G4vauqqr6rqiq/q6pKwgAAAAAAAAAAAAAAv65HYT3rUbi97AVRv+wF0T4MoknCAAAAAAAAAAAAAAA/rkdhPetRuL2rqqo+q6oqP6uqSsIAAAAAAAAAAAAAAD+uR2G961G4vewFUT/sBdG+DKJJwgAAAAAAAAAAAAAAv65HYb3rUbg9q6oqv6uqqr5VVUXCAAAAAAAAAAAAAAA/rkdhvetRuD3sBdE+7AVRv/RdRsIAAAAAAAAAAAAAAD+uR2E961G4PauqKj+rqqo+VVVFwgAAAAAAAAAAAAAAv65HYT3rUbg97AXRvuwFUT/0XUbCAAAAAAAAAAAAAAC/rkdhvetRuL2rqqq+q6oqv6uqSsIAAAAAAAAAAAAAAD+uR2G961G4vewFUT/sBdG+DKJJwgAAAAAAAAAAAAAAP65HYb3rUbg97AXRPuwFUb/0XUbCAAAAAAAAAAAAAAC/rkdhvetRuD2rqiq/q6qqvlVVRcIAAAAAAAAAAAAAAD+uR2G961G4vewFUT/sBdG+DKJJwgAAAAAAAAAAAAAAP65HYT3rUbi9q6qqPquqKj+rqkrCAAAAAAAAAAAAAAA/rkdhPetRuD2rqio/q6qqPlVVRcIAAAAAAAAAAAAAAD+uR2G961G4PewF0T7sBVG/9F1GwgAAAAAAAAAAAAAAP65HYT3rUbi9q6qqPquqKj+rqkrCAAAAAAAAAAAAAAC/rkdhPetRuL3sBVG/7AXRPgyiScIAAAAAAAAAAAAAAL+uR2E961G4PewF0b7sBVE/9F1GwgAAAAAAAAAAAAAAP65HYT3rUbg9q6oqP6uqqj5VVUXCAAAAAAAAAAAAAAC/rkdhPetRuL3sBVG/7AXRPgyiScIAAAAAAAAAAAAAAL+uR2G961G4vauqqr6rqiq/q6pKwgAAAAAAAAAAAAAAv65HYb3rUbg9q6oqv6uqqr5VVUXCAAAAAAAAAAAAAAC/rkdhPetRuD3sBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                    <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                    <SubSets>
+                        <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                    </SubSets>
+                    <Materials>
+                        <Material3d name="black" specularPower="0.1">
+                            <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                            <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                            <EmissiveColor r="0" g="0" b="0" a="1"/>
+                            <DiffuseInking x="0" y="0" z="0"/>
+                            <EmissiveInking x="0" y="0" z="0"/>
+                            <SurfaceTexture/>
+                            <AlphaTexture/>
+                        </Material3d>
+                    </Materials>
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <ChannelType coarse="1" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Closed" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Open" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="2" default="0" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" highlight_value="0">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="3" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="4" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="5" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="6" default="0" attribute="COLORMACROS" feature="Color" preset="Color" highlight_value="0">
+                    <ChannelFunction subattribute="COLORMACROS" attribute="COLORMACROS" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="No function" from_dmx="0" to_dmx="7"/>
+                        <ChannelSet name="Color chase 1" from_dmx="8" to_dmx="22"/>
+                        <ChannelSet name="Color chase 2" from_dmx="23" to_dmx="37"/>
+                        <ChannelSet name="Color chase 3" from_dmx="38" to_dmx="52"/>
+                        <ChannelSet name="Color chase 4" from_dmx="53" to_dmx="67"/>
+                        <ChannelSet name="Color chase 5" from_dmx="68" to_dmx="82"/>
+                        <ChannelSet name="Color chase 6" from_dmx="83" to_dmx="97"/>
+                        <ChannelSet name="Color chase 7" from_dmx="98" to_dmx="112"/>
+                        <ChannelSet name="Color chase 8" from_dmx="113" to_dmx="127"/>
+                        <ChannelSet name="Color chase 9" from_dmx="128" to_dmx="142"/>
+                        <ChannelSet name="Color chase 10" from_dmx="143" to_dmx="157"/>
+                        <ChannelSet name="Color chase 11" from_dmx="158" to_dmx="172"/>
+                        <ChannelSet name="Color chase 12" from_dmx="173" to_dmx="187"/>
+                        <ChannelSet name="Color chase 13" from_dmx="188" to_dmx="202"/>
+                        <ChannelSet name="Color chase 14" from_dmx="203" to_dmx="217"/>
+                        <ChannelSet name="Color chase 15" from_dmx="218" to_dmx="232"/>
+                        <ChannelSet name="Color chase 16" from_dmx="233" to_dmx="247"/>
+                        <ChannelSet name="Sound mode" from_dmx="248" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="7" default="0" attribute="COLOREFFECT" feature="Color" preset="Color" highlight_value="0">
+                    <ChannelFunction subattribute="COLOREFFECT" attribute="COLOREFFECT" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="8" default="0" attribute="ColorMacro1Rate" feature="Color" preset="Color">
+                    <ChannelFunction subattribute="ColorMacro1Rate" attribute="ColorMacro1Rate" feature="Color" preset="Color" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Slow" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Fast" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+        </Instances>
+        <Wheels/>
+    </FixtureType>
+</MA>

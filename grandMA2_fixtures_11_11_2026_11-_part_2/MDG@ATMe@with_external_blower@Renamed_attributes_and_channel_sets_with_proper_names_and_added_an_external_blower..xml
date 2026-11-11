@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.3.4/MA.xsd" major_vers="3" minor_vers="3" stream_vers="4">
+	<Info datetime="2017-09-19T14:57:30" showfile="wacken_bhc_2017_05082017"/>
+	<FixtureType index="2" name="ATMe" mode="with external blower">
+		<InfoItems>
+			<Info>Set menu option INTERFACE/COMM.to DMX for DMX control of the fixture</Info>
+			<Info type="Revision" date="2015-12-07T00:00:00">Automated import from MA Lighting (C-RevNum: 1; Date: 2014-03-07)</Info>
+			<Info type="Invisible" date="2015-12-07T00:00:00">generator_software_name="MA Importer",generator_software_version="9f54f4b62519d7c623c7e8e9b20a0a67177041b6"</Info>
+		<Info type="Revision" date="2017-09-19T03:09:04">Renamed attributes and channel sets with proper names and added an external blower., Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>ATMe</short_name>
+		<manufacturer>MDG</manufacturer>
+		<short_manufacturer>MDG</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="None" beamtype="None" beam_angle="30" beam_intensity="10000">
+				<ChannelType index="0" attribute="UNIT_SWITCH" feature="CONTROL" preset="CONTROL" coarse="1" default="255" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="UNIT_SWITCH" subattribute_user_name="Unit Switch" attribute="UNIT_SWITCH" attribute_user_name="Unit Switch" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Unit Off" from_dmx="0" to_dmx="127"/>
+						<ChannelSet index="1" name="Unit On" from_dmx="128" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="2" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0.01" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="min Haze" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max Haze" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="HAZE_SWITCH" feature="CONTROL" preset="CONTROL" coarse="3" default="254.999" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="HAZE_SWITCH" subattribute_user_name="Haze Switch" attribute="HAZE_SWITCH" attribute_user_name="Haze Switch" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Haze off" from_dmx="0" to_dmx="127" slot_from="0" slot_to="0"/>
+						<ChannelSet index="1" name="Haze on" from_dmx="128" to_dmx="255" slot_from="1" slot_to="1"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="BLOWER" feature="CONTROL" preset="CONTROL" coarse="4" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="BLOWER" subattribute_user_name="Blower" attribute="BLOWER" attribute_user_name="Blower" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="min Blower" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max Blower" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5">
+			<FixtureMacro index="0">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="0"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="1">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="1" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="255" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" instance_index="0"/>
+			</FixtureMacro>
+		</FixtureMacroCollect>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RDMKey ESTAId="4d44" DeviceModelId="5" DmxPersonalityId="1"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

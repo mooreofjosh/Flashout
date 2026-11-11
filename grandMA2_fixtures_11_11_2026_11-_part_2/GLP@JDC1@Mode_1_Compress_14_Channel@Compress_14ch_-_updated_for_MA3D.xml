@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.3.4/MA.xsd" major_vers="3" minor_vers="3" stream_vers="4">
+	<Info datetime="2017-11-13T18:02:51" showfile="new show 2017-11-13"/>
+	<FixtureType index="2" name="JDC1" mode="Mode 1 Compress 14 Channel">
+		<InfoItems>
+			<Info>Created using MA FixtureBuilder version v1.3.2.2</Info>
+			<Info type="Revision" date="2017-08-31T10:08:28">Compress 14 channel tested by GLP with control and shutter fx commands, Uploaded to Fixture Share.</Info>
+			<Info type="Revision" date="2017-11-13T18:02:24">Fixed Beam intensity by Will at ACT Lighting</Info>
+			<Info type="Revision" date="2017-11-13T18:02:43">Changed color Attribute to ColorRGB so it works with color picker by Will at ACT Lighting</Info>
+		<Info type="Revision" date="2017-11-14T03:11:46">Compress 14ch - updated for MA3D, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>JDC1-14c</short_name>
+		<manufacturer>GLP</manufacturer>
+		<short_manufacturer>GLP</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="Headmover" beamtype="Wash" beam_angle="1" beam_intensity="10000">
+				<Body>
+					<Size x="0.4" y="0.4" z="0.3"/>
+				</Body>
+				<ChannelType index="0" attribute="TILT" feature="POSITION" preset="POSITION" coarse="1" fine="2" default="32767.5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-91" physto="91" subattribute="TILT" subattribute_user_name="Tilt" attribute="TILT" attribute_user_name="Tilt" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="3" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+				<ChannelType index="2" attribute="STROBEDURATION" feature="SHUTTER" preset="BEAM" coarse="4" default="128" highlight_value="61.176">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0.1" physto="1" subattribute="STROBEDURATION" subattribute_user_name="Duration" attribute="STROBEDURATION" attribute_user_name="StrobeDuration" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="7msec" from_dmx="2" to_dmx="2"/>
+						<ChannelSet index="1" name="53msec" from_dmx="20" to_dmx="20"/>
+						<ChannelSet index="2" name="78msec" from_dmx="30" to_dmx="30"/>
+						<ChannelSet index="3" name="104msec" from_dmx="40" to_dmx="40"/>
+						<ChannelSet index="4" name="129msec" from_dmx="50" to_dmx="50"/>
+						<ChannelSet index="5" name="154msec" from_dmx="60" to_dmx="60"/>
+						<ChannelSet index="6" name="180msec" from_dmx="70" to_dmx="70"/>
+						<ChannelSet index="7" name="205msec" from_dmx="80" to_dmx="80"/>
+						<ChannelSet index="8" name="231msec" from_dmx="90" to_dmx="90"/>
+						<ChannelSet index="9" name="256msec" from_dmx="100" to_dmx="100"/>
+						<ChannelSet index="10" name="281msec" from_dmx="110" to_dmx="110"/>
+						<ChannelSet index="11" name="307msec" from_dmx="120" to_dmx="120"/>
+						<ChannelSet index="12" name="332msec" from_dmx="130" to_dmx="130"/>
+						<ChannelSet index="13" name="358msec" from_dmx="140" to_dmx="140"/>
+						<ChannelSet index="14" name="383msec" from_dmx="150" to_dmx="150"/>
+						<ChannelSet index="15" name="408msec" from_dmx="160" to_dmx="160"/>
+						<ChannelSet index="16" name="434msec" from_dmx="170" to_dmx="170"/>
+						<ChannelSet index="17" name="459msec" from_dmx="180" to_dmx="180"/>
+						<ChannelSet index="18" name="484msec" from_dmx="190" to_dmx="190"/>
+						<ChannelSet index="19" name="510msec" from_dmx="200" to_dmx="200"/>
+						<ChannelSet index="20" name="535msec" from_dmx="210" to_dmx="210"/>
+						<ChannelSet index="21" name="561msec" from_dmx="220" to_dmx="220"/>
+						<ChannelSet index="22" name="586msec" from_dmx="230" to_dmx="230"/>
+						<ChannelSet index="23" name="611msec" from_dmx="240" to_dmx="240"/>
+						<ChannelSet index="24" name="637msec" from_dmx="250" to_dmx="250"/>
+						<ChannelSet index="25" name="650msec" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="5" default="50" highlight_value="51.373">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0.289" physto="16.67" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="1 flash per sec" from_dmx="16" to_dmx="17"/>
+						<ChannelSet index="1" name="10 flash per sec" from_dmx="146" to_dmx="146"/>
+						<ChannelSet index="2" name="25 flash per sec" from_dmx="254" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="FXSHUTTER" feature="SHUTTER" preset="BEAM" coarse="6">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="FXSHUTTER" subattribute_user_name="FX Shutter" attribute="FXSHUTTER" attribute_user_name="FX Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Ramp Up" from_dmx="37" to_dmx="40"/>
+						<ChannelSet index="1" name="ramp up random" from_dmx="41" to_dmx="44"/>
+						<ChannelSet index="2" name="ramp down" from_dmx="45" to_dmx="48"/>
+						<ChannelSet index="3" name="ramp down random" from_dmx="53" to_dmx="56"/>
+						<ChannelSet index="4" name="ramp up down" from_dmx="53" to_dmx="56"/>
+						<ChannelSet index="5" name="ramp up down random" from_dmx="57" to_dmx="60"/>
+						<ChannelSet index="6" name="random white beam" from_dmx="61" to_dmx="64"/>
+						<ChannelSet index="7" name="random single pixel of the white beam" from_dmx="65" to_dmx="68"/>
+						<ChannelSet index="8" name="lightning" from_dmx="69" to_dmx="72"/>
+						<ChannelSet index="9" name="spikes (flash over low light)" from_dmx="73" to_dmx="76"/>
+						<ChannelSet index="10" name="zigzag" from_dmx="125" to_dmx="128"/>
+						<ChannelSet index="11" name="double flash" from_dmx="180" to_dmx="183"/>
+						<ChannelSet index="12" name="double flash, random" from_dmx="184" to_dmx="187"/>
+						<ChannelSet index="13" name="double flash, beam-color" from_dmx="188" to_dmx="191"/>
+						<ChannelSet index="14" name="double flash, beam-color, random" from_dmx="192" to_dmx="195"/>
+						<ChannelSet index="15" name="double flash, color-beam" from_dmx="196" to_dmx="199"/>
+						<ChannelSet index="16" name="double flash, color-beam, random" from_dmx="200" to_dmx="203"/>
+						<ChannelSet index="17" name="triple flash" from_dmx="208" to_dmx="211"/>
+						<ChannelSet index="18" name="triple flash, random" from_dmx="208" to_dmx="211"/>
+						<ChannelSet index="19" name="triple flash, beam-color-beam" from_dmx="212" to_dmx="215"/>
+						<ChannelSet index="20" name="triple flash, b-c-b, random" from_dmx="216" to_dmx="219"/>
+						<ChannelSet index="21" name="triple flash, c-b-c" from_dmx="220" to_dmx="223"/>
+						<ChannelSet index="22" name="triple flash, c-b-c, random" from_dmx="224" to_dmx="227"/>
+						<ChannelSet index="23" name="quad flsh" from_dmx="232" to_dmx="235"/>
+						<ChannelSet index="24" name="quad flash, random" from_dmx="232" to_dmx="235"/>
+						<ChannelSet index="25" name="quad flash, b-c-b-c" from_dmx="236" to_dmx="239"/>
+						<ChannelSet index="26" name="quad flash, b-c-b-c, random" from_dmx="240" to_dmx="243"/>
+						<ChannelSet index="27" name="quad flash, c-b-c-b" from_dmx="244" to_dmx="247"/>
+						<ChannelSet index="28" name="quad flash, c-b-c-b, random" from_dmx="248" to_dmx="251"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="CONTROL" feature="CONTROL" preset="CONTROL" coarse="7">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="CONTROL" subattribute_user_name="Control" attribute="CONTROL" attribute_user_name="Control" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Position Feedback On" from_dmx="40" to_dmx="44"/>
+						<ChannelSet index="1" name="Position Feedback Off" from_dmx="45" to_dmx="49"/>
+						<ChannelSet index="2" name="Normal Tilt Control" from_dmx="70" to_dmx="74"/>
+						<ChannelSet index="3" name="Inverse Tilt Control" from_dmx="75" to_dmx="79"/>
+						<ChannelSet index="4" name="Norm Pixel Orientation" from_dmx="80" to_dmx="84"/>
+						<ChannelSet index="5" name="Inverse Pixel Orientation" from_dmx="85" to_dmx="89"/>
+						<ChannelSet index="6" name="Normal Orientation, 2nd Pixel Line" from_dmx="90" to_dmx="94"/>
+						<ChannelSet index="7" name="Inverse Orientation, 2nd Pixel Line" from_dmx="95" to_dmx="99"/>
+						<ChannelSet index="8" name="582 Hz" from_dmx="100" to_dmx="102"/>
+						<ChannelSet index="9" name="600 Hz" from_dmx="147" to_dmx="149"/>
+						<ChannelSet index="10" name="618 Hz" from_dmx="194" to_dmx="194"/>
+						<ChannelSet index="11" name="1200 Hz" from_dmx="195" to_dmx="197"/>
+						<ChannelSet index="12" name="2400 Hz" from_dmx="198" to_dmx="200"/>
+						<ChannelSet index="13" name="Duration Percentage Mode On" from_dmx="210" to_dmx="214"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="6" attribute="PLATEDIM" feature="DIMMER" preset="DIMMER" coarse="8" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="PLATEDIM" subattribute_user_name="Plate Dim" attribute="PLATEDIM" attribute_user_name="Plate Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+				<ChannelType index="7" attribute="PLATEDURATION" feature="BEAM2" preset="BEAM" coarse="9" default="128" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0.1" physto="1" subattribute="PLATEDURATION" subattribute_user_name="Plate Duration" attribute="PLATEDURATION" attribute_user_name="Plate Duration" feature="BEAM2" feature_user_name="Beam2" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="40 msec" from_dmx="15" to_dmx="15"/>
+						<ChannelSet index="1" name="66 msec" from_dmx="25" to_dmx="25"/>
+						<ChannelSet index="2" name="91 msec" from_dmx="35" to_dmx="35"/>
+						<ChannelSet index="3" name="116 msec" from_dmx="45" to_dmx="45"/>
+						<ChannelSet index="4" name="142 msec" from_dmx="55" to_dmx="55"/>
+						<ChannelSet index="5" name="167 msec" from_dmx="65" to_dmx="65"/>
+						<ChannelSet index="6" name="192 msec" from_dmx="75" to_dmx="75"/>
+						<ChannelSet index="7" name="218 msec" from_dmx="85" to_dmx="85"/>
+						<ChannelSet index="8" name="243 msec" from_dmx="95" to_dmx="95"/>
+						<ChannelSet index="9" name="269 msec" from_dmx="105" to_dmx="105"/>
+						<ChannelSet index="10" name="294 msec" from_dmx="115" to_dmx="115"/>
+						<ChannelSet index="11" name="319 msec" from_dmx="125" to_dmx="125"/>
+						<ChannelSet index="12" name="345 msec" from_dmx="135" to_dmx="135"/>
+						<ChannelSet index="13" name="370 msec" from_dmx="145" to_dmx="145"/>
+						<ChannelSet index="14" name="396 msec" from_dmx="155" to_dmx="155"/>
+						<ChannelSet index="15" name="421 msec" from_dmx="165" to_dmx="165"/>
+						<ChannelSet index="16" name="446 msec" from_dmx="175" to_dmx="175"/>
+						<ChannelSet index="17" name="472 msec" from_dmx="185" to_dmx="185"/>
+						<ChannelSet index="18" name="497 msec" from_dmx="195" to_dmx="195"/>
+						<ChannelSet index="19" name="523 msec" from_dmx="205" to_dmx="205"/>
+						<ChannelSet index="20" name="548 msec" from_dmx="215" to_dmx="215"/>
+						<ChannelSet index="21" name="573 msec" from_dmx="225" to_dmx="225"/>
+						<ChannelSet index="22" name="599 msec" from_dmx="235" to_dmx="235"/>
+						<ChannelSet index="23" name="624 msec" from_dmx="245" to_dmx="245"/>
+						<ChannelSet index="24" name="650 msec" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="8" attribute="PLATESHUTTER" feature="BEAM2" preset="BEAM" coarse="10" default="50" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0.289" physto="16.67" subattribute="PLATESHUTTER" subattribute_user_name="Plate Shutter" attribute="PLATESHUTTER" attribute_user_name="Plate Shutter" feature="BEAM2" feature_user_name="Beam2" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="1 flash per sec" from_dmx="16" to_dmx="17"/>
+						<ChannelSet index="1" name="10 flash per sec" from_dmx="146" to_dmx="146"/>
+						<ChannelSet index="2" name="25 flash per sec" from_dmx="254" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="9" attribute="PLATEFXSHUTTER" feature="Feature" preset="PresetType" coarse="11">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="PLATEFXSHUTTER" subattribute_user_name="PLATEFXSHUTTER" attribute="PLATEFXSHUTTER" attribute_user_name="PLATEFXSHUTTER" feature="Feature" preset="PresetType">
+						<ChannelSet index="0" name="Color Plate Offset 360 deg" from_dmx="36" to_dmx="36"/>
+						<ChannelSet index="1" name="ramp up (fade on, snap off)" from_dmx="37" to_dmx="40"/>
+						<ChannelSet index="2" name="ramp up, random" from_dmx="41" to_dmx="44"/>
+						<ChannelSet index="3" name="ramp down" from_dmx="45" to_dmx="48"/>
+						<ChannelSet index="4" name="ramp down, random" from_dmx="49" to_dmx="52"/>
+						<ChannelSet index="5" name="ramp up / down" from_dmx="53" to_dmx="56"/>
+						<ChannelSet index="6" name="ramp up / down, random" from_dmx="57" to_dmx="60"/>
+						<ChannelSet index="7" name="random single pixel" from_dmx="65" to_dmx="68"/>
+						<ChannelSet index="8" name="lightning" from_dmx="69" to_dmx="72"/>
+						<ChannelSet index="9" name="spikes (flash over low light)" from_dmx="73" to_dmx="76"/>
+						<ChannelSet index="10" name="double flash" from_dmx="180" to_dmx="191"/>
+						<ChannelSet index="11" name="double flash, random" from_dmx="192" to_dmx="203"/>
+						<ChannelSet index="12" name="triple flash" from_dmx="204" to_dmx="215"/>
+						<ChannelSet index="13" name="triple flash ramdom" from_dmx="216" to_dmx="227"/>
+						<ChannelSet index="14" name="quad flash" from_dmx="228" to_dmx="239"/>
+						<ChannelSet index="15" name="quad flash, random" from_dmx="240" to_dmx="251"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="10" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="12" default="255" highlight_value="100" color="ff0000">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" subattribute_user_name="R" attribute="COLORRGB1" attribute_user_name="R" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min Red" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max Red" from_dmx="65535" to_dmx="65535"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="11" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="13" default="255" highlight_value="100" color="00ff00">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" subattribute_user_name="G" attribute="COLORRGB2" attribute_user_name="G" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min Green" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max Green" from_dmx="65535" to_dmx="65535"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="12" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="14" default="255" highlight_value="100" color="0000ff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" subattribute_user_name="B" attribute="COLORRGB3" attribute_user_name="B" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min Blue" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max Blue" from_dmx="65535" to_dmx="65535"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

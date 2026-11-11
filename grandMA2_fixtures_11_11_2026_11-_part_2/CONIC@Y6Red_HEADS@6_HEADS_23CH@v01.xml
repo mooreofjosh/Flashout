@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.3.4/MA.xsd" major_vers="3" minor_vers="3" stream_vers="4">
+	<Info datetime="2018-11-08T20:39:09" showfile="moderato auditorio2"/>
+	<FixtureType index="37" name="Y6Red HEADS" mode="6 HEADS 23CH">
+		<InfoItems>
+			<Info>Created using MA FixtureBuilder version v1.3.2.2</Info>
+		<Info type="Revision" date="2019-01-10T11:01:43">v01, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>Y6Red HEADS</short_name>
+		<manufacturer>CONIC</manufacturer>
+		<short_manufacturer>CONIC</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="HEAD" class="Headmover" beamtype="Spot" beam_angle="2" beam_intensity="10000">
+				<Body>
+					<Size x="1" y="0.2" z="0.3"/>
+				</Body>
+				<ChannelType index="0" attribute="INTENSITYMODE" feature="DIMMER" preset="DIMMER" coarse="1" default="254.999">
+					<ChannelFunction index="0" name="OFF" from="0" to="10" min_dmx_24="0" max_dmx_24="524287" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="7"/>
+						<ChannelSet index="1" name="open" from_dmx="8" to_dmx="255"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" name="ON" from="20" to="100" min_dmx_24="524288" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="2" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="EFFECTWHEEL" feature="EFFECT" preset="BEAM" coarse="3" default="0.001">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-90" physto="90" subattribute="EFFECTWHEELSELECT" subattribute_user_name="Select" attribute="EFFECTWHEEL" attribute_user_name="E" feature="EFFECT" feature_user_name="Effect" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="INVALID" from_dmx="0" to_dmx="7" slot_index="0"/>
+						<ChannelSet index="1" name="AXIS ACTTION 1" from_dmx="8" to_dmx="22" slot_index="1"/>
+						<ChannelSet index="2" name="AXIS ACTTION 2" from_dmx="23" to_dmx="37" slot_index="2"/>
+						<ChannelSet index="3" name="AXIS ACTTION 3" from_dmx="38" to_dmx="52" slot_index="3"/>
+						<ChannelSet index="4" name="AXIS ACTTION 4" from_dmx="53" to_dmx="67" slot_index="4"/>
+						<ChannelSet index="5" name="AXIS ACTTION 5" from_dmx="68" to_dmx="82" slot_index="5"/>
+						<ChannelSet index="6" name="AXIS ACTTION 6" from_dmx="83" to_dmx="97" slot_index="6"/>
+						<ChannelSet index="7" name="AXIS ACTTION 7" from_dmx="98" to_dmx="112" slot_index="7"/>
+						<ChannelSet index="8" name="AXIS ACTTION 8" from_dmx="113" to_dmx="127" slot_index="8"/>
+						<ChannelSet index="9" name="AXIS ACTTION 9" from_dmx="128" to_dmx="142" slot_index="9"/>
+						<ChannelSet index="10" name="AXIS ACTTION 10" from_dmx="143" to_dmx="157" slot_index="10"/>
+						<ChannelSet index="11" name="AXIS ACTTION 11" from_dmx="158" to_dmx="172" slot_index="11"/>
+						<ChannelSet index="12" name="AXIS ACTTION 12" from_dmx="173" to_dmx="187" slot_index="12"/>
+						<ChannelSet index="13" name="AXIS ACTTION 13" from_dmx="188" to_dmx="202" slot_index="13"/>
+						<ChannelSet index="14" name="AXIS ACTTION 14" from_dmx="203" to_dmx="217" slot_index="14"/>
+						<ChannelSet index="15" name="AXIS ACTTION 15" from_dmx="218" to_dmx="232" slot_index="15"/>
+						<ChannelSet index="16" name="AXIS ACTTION 16" from_dmx="233" to_dmx="247" slot_index="16"/>
+						<ChannelSet index="17" name="SOUND TRIGGER" from_dmx="248" to_dmx="255" slot_index="17"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="EFFECTWHEEL2" feature="EFFECT" preset="BEAM" coarse="4" default="254.999" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="EFFECTWHEELSELECT2" subattribute_user_name="Select2" attribute="EFFECTWHEEL2" attribute_user_name="E2" feature="EFFECT" feature_user_name="Effect" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="EFFECTMACROS" feature="EFFECTMACROS" preset="BEAM" coarse="5" default="0.001" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="EFFECTMACROSELECT" subattribute_user_name="Select" attribute="EFFECTMACROS" attribute_user_name="EffectMacros" feature="EFFECTMACROS" feature_user_name="Macros" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="INVALID" from_dmx="0" to_dmx="14" slot_index="0"/>
+						<ChannelSet index="1" name="COLOR CHASE 1" from_dmx="15" to_dmx="35" slot_index="1"/>
+						<ChannelSet index="2" name="COLOR CHASE 2" from_dmx="36" to_dmx="56" slot_index="2"/>
+						<ChannelSet index="3" name="COLOR CHASE 3" from_dmx="57" to_dmx="76" slot_index="3"/>
+						<ChannelSet index="4" name="COLOR CHASE 4" from_dmx="77" to_dmx="97" slot_index="4"/>
+						<ChannelSet index="5" name="COLOR CHASE 5" from_dmx="98" to_dmx="117" slot_index="5"/>
+						<ChannelSet index="6" name="FULL BRIGHTNESS" from_dmx="118" to_dmx="255" slot_index="6"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="EFFECTMACRORATE" feature="EFFECTMACROS" preset="BEAM" coarse="6" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="EFFECTMACRORATE" subattribute_user_name="Rate" attribute="EFFECTMACRORATE" attribute_user_name="Rate" feature="EFFECTMACROS" feature_user_name="Macros" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="6" attribute="TILT" feature="POSITION" preset="POSITION" coarse="7" fine="8" default="32768">
+					<ChannelFunction index="0" from="-115" to="115" min_dmx_24="0" max_dmx_24="16777215" physfrom="-115" physto="115" subattribute="TILT" subattribute_user_name="Tilt" attribute="TILT" attribute_user_name="Tilt" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="home" from_dmx="32768" to_dmx="32768"/>
+						<ChannelSet index="2" name="max" from_dmx="65535" to_dmx="65535"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="7" attribute="PANMODE" feature="POSITION" preset="POSITION" coarse="9" default="0.001">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-70" physto="70" subattribute="PANMODEROTATE" subattribute_user_name="Rotate" attribute="PANMODE" attribute_user_name="PanMode" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="8" attribute="TILTMODE" feature="POSITION" preset="POSITION" coarse="10" default="0.001">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="TILTMODEROTATE" subattribute_user_name="Rotate" attribute="TILTMODE" attribute_user_name="TiltMode" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="9" attribute="RESET" feature="RESET" preset="CONTROL" coarse="23">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="RESET" subattribute_user_name="Reset" attribute="FUNCTION" attribute_user_name="FUNCTION" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="OFF" from_dmx="0" to_dmx="128"/>
+						<ChannelSet index="1" name="129" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="10" attribute="PAN" feature="POSITION" preset="POSITION">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-180" physto="180" subattribute="PAN" subattribute_user_name="Pan" attribute="PAN" attribute_user_name="Pan" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+			</Module>
+			<Module index="1" name="CABEZA" class="None" beamtype="Spot" beam_angle="2" beam_intensity="10000">
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="2">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer"/>
+				</ChannelType>
+				<ChannelType index="1" attribute="PAN" feature="POSITION" preset="POSITION" coarse="1" default="127.5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="-180" physto="180" subattribute="PAN" subattribute_user_name="Pan" attribute="PAN" attribute_user_name="Pan" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+			<Instance index="1" module_index="1" patch="11"/>
+			<Instance index="2" module_index="1" patch="13"/>
+			<Instance index="3" module_index="1" patch="15"/>
+			<Instance index="4" module_index="1" patch="17"/>
+			<Instance index="5" module_index="1" patch="19"/>
+			<Instance index="6" module_index="1" patch="21"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5">
+			<FixtureMacro index="0">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="RESET" from_value="0" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" attribute="RESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="RESET" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="1">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="RESET" from_value="0" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="255" attribute="RESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="RESET" instance_index="0"/>
+			</FixtureMacro>
+		</FixtureMacroCollect>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

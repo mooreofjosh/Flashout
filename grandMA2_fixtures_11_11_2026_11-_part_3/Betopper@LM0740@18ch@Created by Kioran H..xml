@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="LM0740" mode="18ch">
+        <InfoItems>
+            <Info type="Revision" date="2026-03-24T21:14:09">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2026-03-24T18:52:12">Created by Admin </Info>
+            <Info>3d model noch nicht korrekt. Dreht sich noch nicht mit, Reset von dem Motor ebenfalls noch nicht richtig  ~Kio∫√</Info>
+            <Info type="Revision" date="2026-03-24T21:14:11.281">Created%20by%20Kioran%20H., Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>Betopper Bee Eye Led Moving Head Light</short_name>
+        <manufacturer>Betopper</manufacturer>
+        <short_manufacturer>Betopper_KLH</short_manufacturer>
+        <Modules>
+            <Module name="Body" class="Headmover" beamtype="Wash" beam_intensity="10000" index="0" beam_angle="1">
+                <Model name="Body" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <Body>
+                    <Size x="0.1725" y="0.1725" z="1.08"/>
+                </Body>
+                <ChannelType coarse="1" fine="2" default="32896" attribute="PAN" feature="POSITION" preset="POSITION">
+                    <ChannelFunction subattribute="PAN" attribute="PAN" feature="POSITION" preset="POSITION" from="270" to="-270" physfrom="270" physto="-270" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="3" fine="4" default="32896" attribute="TILT" feature="POSITION" preset="POSITION">
+                    <ChannelFunction subattribute="TILT" attribute="TILT" feature="POSITION" preset="POSITION" from="-130" to="130" physfrom="-130" physto="130" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="5" default="0" attribute="PanTiltMode" feature="Control" preset="Control">
+                    <ChannelFunction subattribute="PanTiltMode" attribute="PanTiltMode" feature="Control" preset="Control" from="0" to="1" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="6" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="7" default="252" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" highlight_value="100">
+                    <ChannelFunction subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="8" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="9" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="10" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="11" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="12" default="0" attribute="CTC" feature="CTC" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="CTC" attribute="CTC" feature="CTC" preset="COLOR" from="0" to="100" physfrom="0" physto="10000" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="13" default="0" attribute="COLORMIXER" feature="COLORMIX" preset="COLOR">
+                    <ChannelFunction subattribute="COLORMIXNORMAL" attribute="COLORMIXER" feature="COLORMIX" preset="COLOR" from="0" to="100" physfrom="0" physto="0" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="14" default="0" attribute="ZOOM" feature="FOCUS" preset="FOCUS">
+                    <ChannelFunction subattribute="ZOOM" attribute="ZOOM" feature="FOCUS" preset="FOCUS" from="0" to="100" physfrom="4.5" physto="45" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="15" default="0" attribute="ZOOMMODE" feature="FOCUS" preset="FOCUS" highlight_value="100">
+                    <ChannelFunction subattribute="ZOOMMODENARROWANGLE" attribute="ZOOMMODE" feature="FOCUS" preset="FOCUS" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="16" default="0" attribute="EFFECT" feature="EFFECT" preset="BEAM" highlight_value="100">
+                    <ChannelFunction subattribute="EFFECTSELECT" attribute="EFFECT" feature="EFFECT" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="17" default="0" attribute="EFFECTRATE" feature="EFFECT" preset="BEAM" highlight_value="100">
+                    <ChannelFunction subattribute="EFFECTRATE" attribute="EFFECTRATE" feature="EFFECT" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="18" default="0" attribute="ColorSettingsReset" feature="Control" preset="Control" highlight_value="95.68627450980392">
+                    <ChannelFunction subattribute="ColorSettingsReset" attribute="ColorSettingsReset" feature="Control" preset="Control" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+        </Instances>
+        <Wheels/>
+    </FixtureType>
+</MA>

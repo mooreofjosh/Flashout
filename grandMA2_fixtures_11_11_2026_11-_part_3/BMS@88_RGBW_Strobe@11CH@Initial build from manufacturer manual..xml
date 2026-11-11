@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="88 RGBW Strobe" mode="11CH">
+        <InfoItems>
+            <Info type="Revision" date="2026-09-05T23:19:57">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2026-08-22T00:00:00">Initial build from manufacturer manual. All four DMX modes and both mode-effect tables transcribed. Housing size and weight estimated - the manual leaves those fields blank.</Info>
+            <Info type="Revision" date="2026-09-01T00:00:00">Renamed to BMS 8+8 RGBW Strobe - model designation confirmed by the operator. Previously published as BMS 8+8 LED Full Color Strobe. No DMX, geometry or photometric data changed.</Info>
+            <Info>Built from manufacturer manual (8+8 LED Full Color Strobe Light). All four DMX modes transcribed. Housing size and weight are estimates - the manual leaves those two fields blank.</Info>
+            <Info type="Revision" date="2026-09-05T23:20:04.455">Initial%20build%20from%20manufacturer%20manual., Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>8+8 RGBW Strobe</short_name>
+        <manufacturer>BMS</manufacturer>
+        <short_manufacturer>BMS</short_manufacturer>
+        <Modules>
+            <Module name="Main Module" class="None" beamtype="None" beam_intensity="" index="0" beam_angle="">
+                <Model name="Base" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Vertices>GAAAAML1qL7C9Si+rkdhvauqqr6rqiq/q6pKwgAAAAAAAAAAwvWovsL1KD6uR2G97AVRv+wF0T4MoknCAAAAAAAAAADC9ag+wvUoPq5HYb2rqqo+q6oqP6uqSsIAAAAAAAAAAML1qD7C9Si+rkdhvewFUT/sBdG+DKJJwgAAAAAAAAAAwvWovsL1KL6uR2E9q6oqv6uqqr5VVUXCAAAAAAAAAADC9ag+wvUovq5HYT3sBdE+7AVRv/RdRsIAAAAAAAAAAML1qD7C9Sg+rkdhPauqKj+rqqo+VVVFwgAAAAAAAAAAwvWovsL1KD6uR2E97AXRvuwFUT/0XUbCAAAAAAAAAADC9ai+wvUovq5HYb2rqqq+q6oqv6uqSsIAAAAAAAAAAML1qD7C9Si+rkdhvewFUT/sBdG+DKJJwgAAAAAAAAAAwvWoPsL1KL6uR2E97AXRPuwFUb/0XUbCAAAAAAAAAADC9ai+wvUovq5HYT2rqiq/q6qqvlVVRcIAAAAAAAAAAML1qD7C9Si+rkdhvewFUT/sBdG+DKJJwgAAAAAAAAAAwvWoPsL1KD6uR2G9q6qqPquqKj+rqkrCAAAAAAAAAADC9ag+wvUoPq5HYT2rqio/q6qqPlVVRcIAAAAAAAAAAML1qD7C9Si+rkdhPewF0T7sBVG/9F1GwgAAAAAAAAAAwvWoPsL1KD6uR2G9q6qqPquqKj+rqkrCAAAAAAAAAADC9ai+wvUoPq5HYb3sBVG/7AXRPgyiScIAAAAAAAAAAML1qL7C9Sg+rkdhPewF0b7sBVE/9F1GwgAAAAAAAAAAwvWoPsL1KD6uR2E9q6oqP6uqqj5VVUXCAAAAAAAAAADC9ai+wvUoPq5HYb3sBVG/7AXRPgyiScIAAAAAAAAAAML1qL7C9Si+rkdhvauqqr6rqiq/q6pKwgAAAAAAAAAAwvWovsL1KL6uR2E9q6oqv6uqqr5VVUXCAAAAAAAAAADC9ai+wvUoPq5HYT3sBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                    <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                    <SubSets>
+                        <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                    </SubSets>
+                    <Materials>
+                        <Material3d name="black" specularPower="0.1">
+                            <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                            <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                            <EmissiveColor r="0" g="0" b="0" a="1"/>
+                            <DiffuseInking x="0" y="0" z="0"/>
+                            <EmissiveInking x="0" y="0" z="0"/>
+                            <SurfaceTexture/>
+                            <AlphaTexture/>
+                        </Material3d>
+                    </Materials>
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <ChannelType coarse="1" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="25%" from_dmx="64" to_dmx="64"/>
+                        <ChannelSet name="50%" from_dmx="128" to_dmx="128"/>
+                        <ChannelSet name="75%" from_dmx="192" to_dmx="192"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="2" default="0" snap="true" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" highlight_value="0">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="3.53" physfrom="1" physto="1" min_dmx_24="0" max_dmx_24="592137">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="9" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="3.53" to="100" physfrom="1" physto="30" min_dmx_24="657930" max_dmx_24="16777215">
+                        <ChannelSet name="1 Hz" from_dmx="10" to_dmx="10"/>
+                        <ChannelSet name="15 Hz" from_dmx="132" to_dmx="132"/>
+                        <ChannelSet name="30 Hz" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="3" default="0" snap="true" attribute="EFFECT" feature="EFFECT" preset="BEAM">
+                    <ChannelFunction subattribute="EFFECTSELECT" attribute="EFFECT" feature="EFFECT" preset="BEAM" from="0" to="100" physfrom="0" physto="89" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="No Effect" from_dmx="0" to_dmx="2" slot_from="0" slot_to="0"/>
+                        <ChannelSet name="Red" from_dmx="3" to_dmx="5" slot_from="1" slot_to="1"/>
+                        <ChannelSet name="Green" from_dmx="6" to_dmx="8" slot_from="2" slot_to="2"/>
+                        <ChannelSet name="Blue" from_dmx="9" to_dmx="11" slot_from="3" slot_to="3"/>
+                        <ChannelSet name="Red + Green" from_dmx="12" to_dmx="14" slot_from="4" slot_to="4"/>
+                        <ChannelSet name="Red + Blue" from_dmx="15" to_dmx="17" slot_from="5" slot_to="5"/>
+                        <ChannelSet name="Green + Blue" from_dmx="18" to_dmx="20" slot_from="6" slot_to="6"/>
+                        <ChannelSet name="Red + Green + Blue" from_dmx="21" to_dmx="23" slot_from="7" slot_to="7"/>
+                        <ChannelSet name="Color Cycle 1-7" from_dmx="24" to_dmx="26" slot_from="8" slot_to="8"/>
+                        <ChannelSet name="Gradual Change" from_dmx="27" to_dmx="29" slot_from="9" slot_to="9"/>
+                        <ChannelSet name="Pulse Change" from_dmx="30" to_dmx="32" slot_from="10" slot_to="10"/>
+                        <ChannelSet name="Mode 11" from_dmx="33" to_dmx="35" slot_from="11" slot_to="11"/>
+                        <ChannelSet name="Mode 12" from_dmx="36" to_dmx="38" slot_from="12" slot_to="12"/>
+                        <ChannelSet name="Mode 13" from_dmx="39" to_dmx="41" slot_from="13" slot_to="13"/>
+                        <ChannelSet name="Mode 14" from_dmx="42" to_dmx="44" slot_from="14" slot_to="14"/>
+                        <ChannelSet name="Mode 15" from_dmx="45" to_dmx="47" slot_from="15" slot_to="15"/>
+                        <ChannelSet name="Mode 16" from_dmx="48" to_dmx="50" slot_from="16" slot_to="16"/>
+                        <ChannelSet name="Mode 17" from_dmx="51" to_dmx="53" slot_from="17" slot_to="17"/>
+                        <ChannelSet name="Mode 18" from_dmx="54" to_dmx="56" slot_from="18" slot_to="18"/>
+                        <ChannelSet name="Mode 19" from_dmx="57" to_dmx="59" slot_from="19" slot_to="19"/>
+                        <ChannelSet name="Mode 20" from_dmx="60" to_dmx="62" slot_from="20" slot_to="20"/>
+                        <ChannelSet name="Mode 21" from_dmx="63" to_dmx="65" slot_from="21" slot_to="21"/>
+                        <ChannelSet name="Mode 22" from_dmx="66" to_dmx="68" slot_from="22" slot_to="22"/>
+                        <ChannelSet name="Mode 23" from_dmx="69" to_dmx="71" slot_from="23" slot_to="23"/>
+                        <ChannelSet name="Mode 24" from_dmx="72" to_dmx="74" slot_from="24" slot_to="24"/>
+                        <ChannelSet name="Mode 25" from_dmx="75" to_dmx="77" slot_from="25" slot_to="25"/>
+                        <ChannelSet name="Mode 26" from_dmx="78" to_dmx="80" slot_from="26" slot_to="26"/>
+                        <ChannelSet name="Mode 27" from_dmx="81" to_dmx="83" slot_from="27" slot_to="27"/>
+                        <ChannelSet name="Mode 28" from_dmx="84" to_dmx="86" slot_from="28" slot_to="28"/>
+                        <ChannelSet name="Mode 29" from_dmx="87" to_dmx="89" slot_from="29" slot_to="29"/>
+                        <ChannelSet name="Mode 30" from_dmx="90" to_dmx="92" slot_from="30" slot_to="30"/>
+                        <ChannelSet name="Mode 31" from_dmx="93" to_dmx="95" slot_from="31" slot_to="31"/>
+                        <ChannelSet name="Mode 32" from_dmx="96" to_dmx="98" slot_from="32" slot_to="32"/>
+                        <ChannelSet name="Mode 33" from_dmx="99" to_dmx="101" slot_from="33" slot_to="33"/>
+                        <ChannelSet name="Mode 34" from_dmx="102" to_dmx="104" slot_from="34" slot_to="34"/>
+                        <ChannelSet name="Mode 35" from_dmx="105" to_dmx="107" slot_from="35" slot_to="35"/>
+                        <ChannelSet name="Mode 36" from_dmx="108" to_dmx="110" slot_from="36" slot_to="36"/>
+                        <ChannelSet name="Mode 37" from_dmx="111" to_dmx="113" slot_from="37" slot_to="37"/>
+                        <ChannelSet name="Mode 38" from_dmx="114" to_dmx="116" slot_from="38" slot_to="38"/>
+                        <ChannelSet name="Mode 39" from_dmx="117" to_dmx="119" slot_from="39" slot_to="39"/>
+                        <ChannelSet name="Mode 40" from_dmx="120" to_dmx="122" slot_from="40" slot_to="40"/>
+                        <ChannelSet name="Mode 41" from_dmx="123" to_dmx="125" slot_from="41" slot_to="41"/>
+                        <ChannelSet name="Mode 42" from_dmx="126" to_dmx="128" slot_from="42" slot_to="42"/>
+                        <ChannelSet name="Mode 43" from_dmx="129" to_dmx="131" slot_from="43" slot_to="43"/>
+                        <ChannelSet name="Mode 44" from_dmx="132" to_dmx="134" slot_from="44" slot_to="44"/>
+                        <ChannelSet name="Mode 45" from_dmx="135" to_dmx="137" slot_from="45" slot_to="45"/>
+                        <ChannelSet name="Mode 46" from_dmx="138" to_dmx="140" slot_from="46" slot_to="46"/>
+                        <ChannelSet name="Mode 47" from_dmx="141" to_dmx="143" slot_from="47" slot_to="47"/>
+                        <ChannelSet name="Mode 48" from_dmx="144" to_dmx="146" slot_from="48" slot_to="48"/>
+                        <ChannelSet name="Mode 49" from_dmx="147" to_dmx="149" slot_from="49" slot_to="49"/>
+                        <ChannelSet name="Mode 50" from_dmx="150" to_dmx="152" slot_from="50" slot_to="50"/>
+                        <ChannelSet name="Mode 51" from_dmx="153" to_dmx="155" slot_from="51" slot_to="51"/>
+                        <ChannelSet name="Mode 52" from_dmx="156" to_dmx="158" slot_from="52" slot_to="52"/>
+                        <ChannelSet name="Mode 53" from_dmx="159" to_dmx="161" slot_from="53" slot_to="53"/>
+                        <ChannelSet name="Mode 54" from_dmx="162" to_dmx="164" slot_from="54" slot_to="54"/>
+                        <ChannelSet name="Mode 55" from_dmx="165" to_dmx="167" slot_from="55" slot_to="55"/>
+                        <ChannelSet name="Mode 56" from_dmx="168" to_dmx="170" slot_from="56" slot_to="56"/>
+                        <ChannelSet name="Mode 57" from_dmx="171" to_dmx="173" slot_from="57" slot_to="57"/>
+                        <ChannelSet name="Mode 58" from_dmx="174" to_dmx="176" slot_from="58" slot_to="58"/>
+                        <ChannelSet name="Mode 59" from_dmx="177" to_dmx="179" slot_from="59" slot_to="59"/>
+                        <ChannelSet name="Mode 60" from_dmx="180" to_dmx="182" slot_from="60" slot_to="60"/>
+                        <ChannelSet name="Mode 61" from_dmx="183" to_dmx="185" slot_from="61" slot_to="61"/>
+                        <ChannelSet name="Mode 62" from_dmx="186" to_dmx="188" slot_from="62" slot_to="62"/>
+                        <ChannelSet name="Mode 63" from_dmx="189" to_dmx="191" slot_from="63" slot_to="63"/>
+                        <ChannelSet name="Mode 64" from_dmx="192" to_dmx="194" slot_from="64" slot_to="64"/>
+                        <ChannelSet name="Mode 65" from_dmx="195" to_dmx="197" slot_from="65" slot_to="65"/>
+                        <ChannelSet name="Mode 66" from_dmx="198" to_dmx="200" slot_from="66" slot_to="66"/>
+                        <ChannelSet name="Mode 67" from_dmx="201" to_dmx="203" slot_from="67" slot_to="67"/>
+                        <ChannelSet name="Mode 68" from_dmx="204" to_dmx="206" slot_from="68" slot_to="68"/>
+                        <ChannelSet name="Mode 69" from_dmx="207" to_dmx="209" slot_from="69" slot_to="69"/>
+                        <ChannelSet name="Mode 70" from_dmx="210" to_dmx="212" slot_from="70" slot_to="70"/>
+                        <ChannelSet name="Mode 71" from_dmx="213" to_dmx="215" slot_from="71" slot_to="71"/>
+                        <ChannelSet name="Mode 72" from_dmx="216" to_dmx="218" slot_from="72" slot_to="72"/>
+                        <ChannelSet name="Mode 73" from_dmx="219" to_dmx="221" slot_from="73" slot_to="73"/>
+                        <ChannelSet name="Mode 74" from_dmx="222" to_dmx="224" slot_from="74" slot_to="74"/>
+                        <ChannelSet name="Mode 75" from_dmx="225" to_dmx="227" slot_from="75" slot_to="75"/>
+                        <ChannelSet name="Mode 76" from_dmx="228" to_dmx="230" slot_from="76" slot_to="76"/>
+                        <ChannelSet name="Mode 77" from_dmx="231" to_dmx="233" slot_from="77" slot_to="77"/>
+                        <ChannelSet name="Mode 78" from_dmx="234" to_dmx="236" slot_from="78" slot_to="78"/>
+                        <ChannelSet name="Mode 79" from_dmx="237" to_dmx="239" slot_from="79" slot_to="79"/>
+                        <ChannelSet name="Mode 80" from_dmx="240" to_dmx="242" slot_from="80" slot_to="80"/>
+                        <ChannelSet name="Mode 81" from_dmx="243" to_dmx="245" slot_from="81" slot_to="81"/>
+                        <ChannelSet name="Mode 82" from_dmx="246" to_dmx="248" slot_from="82" slot_to="82"/>
+                        <ChannelSet name="Mode 87 - Colorful Accumulation" from_dmx="249" to_dmx="251" slot_from="87" slot_to="87"/>
+                        <ChannelSet name="Mode 88 - Colorful Flow" from_dmx="252" to_dmx="254" slot_from="88" slot_to="88"/>
+                        <ChannelSet name="Mode 89 - RGB Sets Background" from_dmx="255" to_dmx="255" slot_from="89" slot_to="89"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="4" default="0" attribute="EFFECTRATE" feature="EFFECT" preset="BEAM">
+                    <ChannelFunction subattribute="EFFECTRATE" attribute="EFFECTRATE" feature="EFFECT" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Slow" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Medium" from_dmx="128" to_dmx="128"/>
+                        <ChannelSet name="Fast" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="5" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="25%" from_dmx="64" to_dmx="64"/>
+                        <ChannelSet name="50%" from_dmx="128" to_dmx="128"/>
+                        <ChannelSet name="75%" from_dmx="192" to_dmx="192"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="6" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="25%" from_dmx="64" to_dmx="64"/>
+                        <ChannelSet name="50%" from_dmx="128" to_dmx="128"/>
+                        <ChannelSet name="75%" from_dmx="192" to_dmx="192"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="7" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="25%" from_dmx="64" to_dmx="64"/>
+                        <ChannelSet name="50%" from_dmx="128" to_dmx="128"/>
+                        <ChannelSet name="75%" from_dmx="192" to_dmx="192"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="8" default="0" snap="true" attribute="SHUTTER2" feature="Beam" preset="Beam" highlight_value="0">
+                    <ChannelFunction subattribute="SHUTTER2" attribute="SHUTTER2" feature="Beam" preset="Beam" from="0" to="3.53" physfrom="1" physto="1" min_dmx_24="0" max_dmx_24="592137">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="9" slot_from="1" slot_to="1"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE2" attribute="SHUTTER2" feature="Beam" preset="Beam" from="3.53" to="100" physfrom="1" physto="30" min_dmx_24="657930" max_dmx_24="16777215">
+                        <ChannelSet name="1 Hz" from_dmx="10" to_dmx="10"/>
+                        <ChannelSet name="15 Hz" from_dmx="132" to_dmx="132"/>
+                        <ChannelSet name="30 Hz" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="9" default="0" snap="true" attribute="EFFECT2" feature="Effects" preset="Effects">
+                    <ChannelFunction subattribute="EFFECTSELECT2" attribute="EFFECT2" feature="Effects" preset="Effects" from="0" to="100" physfrom="1" physto="88" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="No Effect" from_dmx="0" to_dmx="5" slot_from="1" slot_to="1"/>
+                        <ChannelSet name="White Section 1" from_dmx="6" to_dmx="11" slot_from="2" slot_to="2"/>
+                        <ChannelSet name="White Section 2" from_dmx="12" to_dmx="17" slot_from="3" slot_to="3"/>
+                        <ChannelSet name="White Section 3" from_dmx="18" to_dmx="23" slot_from="4" slot_to="4"/>
+                        <ChannelSet name="White Section 4" from_dmx="24" to_dmx="29" slot_from="5" slot_to="5"/>
+                        <ChannelSet name="White Section 5" from_dmx="30" to_dmx="35" slot_from="6" slot_to="6"/>
+                        <ChannelSet name="White Section 6" from_dmx="36" to_dmx="41" slot_from="7" slot_to="7"/>
+                        <ChannelSet name="White Section 7" from_dmx="42" to_dmx="47" slot_from="8" slot_to="8"/>
+                        <ChannelSet name="White Section 8" from_dmx="48" to_dmx="53" slot_from="9" slot_to="9"/>
+                        <ChannelSet name="Mode 19" from_dmx="54" to_dmx="59" slot_from="19" slot_to="19"/>
+                        <ChannelSet name="Mode 20" from_dmx="60" to_dmx="65" slot_from="20" slot_to="20"/>
+                        <ChannelSet name="Mode 23" from_dmx="66" to_dmx="71" slot_from="23" slot_to="23"/>
+                        <ChannelSet name="Mode 24" from_dmx="72" to_dmx="77" slot_from="24" slot_to="24"/>
+                        <ChannelSet name="Mode 27" from_dmx="78" to_dmx="83" slot_from="27" slot_to="27"/>
+                        <ChannelSet name="Mode 28" from_dmx="84" to_dmx="89" slot_from="28" slot_to="28"/>
+                        <ChannelSet name="Mode 30" from_dmx="90" to_dmx="95" slot_from="30" slot_to="30"/>
+                        <ChannelSet name="Mode 33" from_dmx="96" to_dmx="101" slot_from="33" slot_to="33"/>
+                        <ChannelSet name="Mode 34" from_dmx="102" to_dmx="107" slot_from="34" slot_to="34"/>
+                        <ChannelSet name="Mode 37" from_dmx="108" to_dmx="113" slot_from="37" slot_to="37"/>
+                        <ChannelSet name="Mode 39" from_dmx="114" to_dmx="119" slot_from="39" slot_to="39"/>
+                        <ChannelSet name="Mode 40" from_dmx="120" to_dmx="125" slot_from="40" slot_to="40"/>
+                        <ChannelSet name="Mode 43" from_dmx="126" to_dmx="131" slot_from="43" slot_to="43"/>
+                        <ChannelSet name="Mode 45" from_dmx="132" to_dmx="137" slot_from="45" slot_to="45"/>
+                        <ChannelSet name="Mode 47" from_dmx="138" to_dmx="143" slot_from="47" slot_to="47"/>
+                        <ChannelSet name="Mode 49" from_dmx="144" to_dmx="149" slot_from="49" slot_to="49"/>
+                        <ChannelSet name="Mode 51" from_dmx="150" to_dmx="155" slot_from="51" slot_to="51"/>
+                        <ChannelSet name="Mode 53" from_dmx="156" to_dmx="161" slot_from="53" slot_to="53"/>
+                        <ChannelSet name="Mode 55" from_dmx="162" to_dmx="167" slot_from="55" slot_to="55"/>
+                        <ChannelSet name="Mode 57" from_dmx="168" to_dmx="173" slot_from="57" slot_to="57"/>
+                        <ChannelSet name="Mode 59" from_dmx="174" to_dmx="179" slot_from="59" slot_to="59"/>
+                        <ChannelSet name="Mode 61" from_dmx="180" to_dmx="185" slot_from="61" slot_to="61"/>
+                        <ChannelSet name="Mode 63" from_dmx="186" to_dmx="191" slot_from="63" slot_to="63"/>
+                        <ChannelSet name="Mode 65" from_dmx="192" to_dmx="197" slot_from="65" slot_to="65"/>
+                        <ChannelSet name="Mode 67" from_dmx="198" to_dmx="203" slot_from="67" slot_to="67"/>
+                        <ChannelSet name="Mode 69" from_dmx="204" to_dmx="209" slot_from="69" slot_to="69"/>
+                        <ChannelSet name="Mode 71" from_dmx="210" to_dmx="215" slot_from="71" slot_to="71"/>
+                        <ChannelSet name="Mode 73" from_dmx="216" to_dmx="221" slot_from="73" slot_to="73"/>
+                        <ChannelSet name="Mode 75" from_dmx="222" to_dmx="227" slot_from="75" slot_to="75"/>
+                        <ChannelSet name="Mode 77" from_dmx="228" to_dmx="233" slot_from="77" slot_to="77"/>
+                        <ChannelSet name="Mode 79" from_dmx="234" to_dmx="239" slot_from="79" slot_to="79"/>
+                        <ChannelSet name="Mode 81" from_dmx="240" to_dmx="245" slot_from="81" slot_to="81"/>
+                        <ChannelSet name="Mode 87" from_dmx="246" to_dmx="251" slot_from="87" slot_to="87"/>
+                        <ChannelSet name="Mode 88" from_dmx="252" to_dmx="255" slot_from="88" slot_to="88"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="10" default="0" attribute="EFFECTRATE2" feature="Effects" preset="Effects">
+                    <ChannelFunction subattribute="EFFECTRATE2" attribute="EFFECTRATE2" feature="Effects" preset="Effects" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Slow" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Medium" from_dmx="128" to_dmx="128"/>
+                        <ChannelSet name="Fast" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="11" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="25%" from_dmx="64" to_dmx="64"/>
+                        <ChannelSet name="50%" from_dmx="128" to_dmx="128"/>
+                        <ChannelSet name="75%" from_dmx="192" to_dmx="192"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+        </Instances>
+        <Wheels/>
+    </FixtureType>
+</MA>

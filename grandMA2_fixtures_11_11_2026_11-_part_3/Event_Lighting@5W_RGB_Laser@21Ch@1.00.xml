@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA major_vers="3" minor_vers="2" stream_vers="2">
+  <Info datetime="2023-12-6T14:34:35" showfile="ma fixture builder"/>
+  <FixtureType index="0" name="5W RGB Laser" mode="21Ch">
+    <InfoItems>
+      <Info>Created using MA FixtureBuilder version v1.9.0</Info>
+    <Info type="Revision" date="2023-12-06T04:50:16">1.00, Uploaded to Fixture Share.</Info></InfoItems>
+    <short_name>5WRGBLas</short_name>
+    <manufacturer>Event Lighting</manufacturer>
+    <short_manufacturer>EventLig</short_manufacturer>
+    <Modules index="0">
+      <Module index="0" name="Module" class="Headmover" beamtype="Spot" beam_angle="1" beam_intensity="10000">
+        <Body>
+          <Size x="0.5" y="0.5" z="0.5"/>
+        </Body>
+        <ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER">
+            <ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="1" attribute="COLORMACROS" feature="COLORALL" preset="COLOR" coarse="2">
+          <ChannelFunction index="0" from="0" to="69" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORMACROAUDIO" attribute="COLORMACROS" feature="COLORALL" preset="COLOR">
+            <ChannelSet index="0" name="Static" from_dmx="0" to_dmx="69"/>
+            <ChannelSet index="1" name="Change" from_dmx="70" to_dmx="79"/>
+            <ChannelSet index="2" name="Default" from_dmx="80" to_dmx="89"/>
+            <ChannelSet index="3" name="Rainbow" from_dmx="90" to_dmx="94"/>
+            <ChannelSet index="4" name="2 Seg" from_dmx="95" to_dmx="114"/>
+            <ChannelSet index="5" name="3 Seg" from_dmx="115" to_dmx="139"/>
+            <ChannelSet index="6" name="4 Seg" from_dmx="140" to_dmx="164"/>
+            <ChannelSet index="7" name="8 Seg" from_dmx="165" to_dmx="189"/>
+            <ChannelSet index="8" name="16 Seg" from_dmx="190" to_dmx="224"/>
+            <ChannelSet index="9" name="Dyn 1" from_dmx="225" to_dmx="229"/>
+            <ChannelSet index="10" name="Dyn 2" from_dmx="230" to_dmx="234"/>
+            <ChannelSet index="11" name="Dyn 3" from_dmx="235" to_dmx="239"/>
+            <ChannelSet index="12" name="Dyn 4" from_dmx="240" to_dmx="244"/>
+            <ChannelSet index="13" name="Dyn 5" from_dmx="245" to_dmx="249"/>
+            <ChannelSet index="14" name="Dyn 6" from_dmx="250" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="2" attribute="COLORMACRORATE" feature="COLORALL" preset="COLOR" coarse="3">
+          <ChannelFunction index="0" from="0" to="9" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORMACRORATE" attribute="COLORMACRORATE" feature="COLORALL" preset="COLOR">
+            <ChannelSet index="0" name="No Func" from_dmx="0" to_dmx="9"/>
+            <ChannelSet index="1" name="CW" from_dmx="10" to_dmx="127"/>
+            <ChannelSet index="2" name="CCW" from_dmx="128" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="3" attribute="COLOR1" feature="COLOR1" preset="COLOR" coarse="4">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLOR1WHEELRANDOM" attribute="COLOR1" feature="COLOR1" preset="COLOR">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="4" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="5">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+            <ChannelSet index="0" name="Open" from_dmx="0" to_dmx="2"/>
+            <ChannelSet index="1" name="min" from_dmx="3" to_dmx="3"/>
+            <ChannelSet index="2" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="5" attribute="GOBO1" feature="GOBO1" preset="GOBO" coarse="6">
+          <ChannelFunction index="0" from="0" to="255" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="GOBO1" attribute="GOBO1" feature="GOBO1" preset="GOBO">
+            <ChannelSet index="0" name="Select" from_dmx="0" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="6" attribute="GOBOWHEELSMODE" feature="GOBOALL" preset="GOBO" coarse="7">
+          <ChannelFunction index="0" from="0" to="24" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="GOBOWHEELSMODENONE" attribute="GOBOWHEELSMODE" feature="GOBOALL" preset="GOBO">
+            <ChannelSet index="0" name="Group 1" from_dmx="0" to_dmx="24"/>
+            <ChannelSet index="1" name="Group 2" from_dmx="25" to_dmx="49"/>
+            <ChannelSet index="2" name="Group 3" from_dmx="50" to_dmx="74"/>
+            <ChannelSet index="3" name="Group 4" from_dmx="75" to_dmx="99"/>
+            <ChannelSet index="4" name="Group 5" from_dmx="100" to_dmx="124"/>
+            <ChannelSet index="5" name="ILDA 1" from_dmx="125" to_dmx="149"/>
+            <ChannelSet index="6" name="ILDA 2" from_dmx="150" to_dmx="174"/>
+            <ChannelSet index="7" name="ILDA 3" from_dmx="175" to_dmx="199"/>
+            <ChannelSet index="8" name="ILDA 4" from_dmx="200" to_dmx="224"/>
+            <ChannelSet index="9" name="ILDA 5" from_dmx="225" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="7" attribute="ZOOM" feature="FOCUS" preset="FOCUS" coarse="8">
+          <ChannelFunction index="0" from="0" to="63" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="ZOOM" attribute="ZOOM" feature="FOCUS" preset="FOCUS">
+            <ChannelSet index="0" name="Size" from_dmx="0" to_dmx="63"/>
+            <ChannelSet index="1" name="Small to Large" from_dmx="64" to_dmx="127"/>
+            <ChannelSet index="2" name="Large to Small" from_dmx="128" to_dmx="191"/>
+            <ChannelSet index="3" name="Speed" from_dmx="192" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="8" attribute="SPINZ" feature="SPINXYZ" preset="SHAPERS" coarse="9">
+          <ChannelFunction index="0" from="0" to="127" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="SPINZ" attribute="SPINZ" feature="SPINXYZ" preset="SHAPERS">
+            <ChannelSet index="0" name="Index" from_dmx="0" to_dmx="127"/>
+            <ChannelSet index="1" name="CW" from_dmx="128" to_dmx="191"/>
+            <ChannelSet index="2" name="CCW" from_dmx="192" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="9" attribute="SPINX" feature="SPINXYZ" preset="SHAPERS" coarse="10">
+          <ChannelFunction index="0" from="0" to="127" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="SPINX" attribute="SPINX" feature="SPINXYZ" preset="SHAPERS">
+            <ChannelSet index="0" name="Horizontal Direction" from_dmx="0" to_dmx="127"/>
+            <ChannelSet index="1" name="Horizontal Speed" from_dmx="128" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="10" attribute="SPINY" feature="SPINXYZ" preset="SHAPERS" coarse="11">
+          <ChannelFunction index="0" from="0" to="127" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="SPINY" attribute="SPINY" feature="SPINXYZ" preset="SHAPERS">
+            <ChannelSet index="0" name="Vertrical Direction" from_dmx="0" to_dmx="127"/>
+            <ChannelSet index="1" name="Vertical Speed" from_dmx="128" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="11" attribute="PAN" feature="POSITION" preset="POSITION" coarse="12" default="128">
+          <ChannelFunction index="0" from="-270" to="270" min_dmx_24="0" max_dmx_24="16777215" physfrom="-270" physto="270" subattribute="PAN" attribute="PAN" feature="POSITION" preset="POSITION">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="home" from_dmx="128" to_dmx="128"/>
+            <ChannelSet index="2" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="12" attribute="TILT" feature="POSITION" preset="POSITION" coarse="13" default="128">
+          <ChannelFunction index="0" from="-135" to="135" min_dmx_24="0" max_dmx_24="16777215" physfrom="-135" physto="135" subattribute="TILT" attribute="TILT" feature="POSITION" preset="POSITION">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="home" from_dmx="128" to_dmx="128"/>
+            <ChannelSet index="2" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="13" attribute="V_OP_X" feature="V_OBJ_POS" preset="VIDEO" coarse="14">
+          <ChannelFunction index="0" from="0" to="9" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="V_OP_X" attribute="V_OP_X" feature="V_OBJ_POS" preset="VIDEO">
+            <ChannelSet index="0" name="No Func" from_dmx="0" to_dmx="9"/>
+            <ChannelSet index="1" name="Range/Speed" from_dmx="10" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="14" attribute="V_OP_Y" feature="V_OBJ_POS" preset="VIDEO" coarse="15">
+          <ChannelFunction index="0" from="0" to="9" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="V_OP_Y" attribute="V_OP_Y" feature="V_OBJ_POS" preset="VIDEO">
+            <ChannelSet index="0" name="No Func" from_dmx="0" to_dmx="9"/>
+            <ChannelSet index="1" name="Range/Speed" from_dmx="10" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="15" attribute="GENERATOR" feature="GENERATOR" preset="BEAM" coarse="16">
+          <ChannelFunction index="0" from="0" to="1" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="GENERATORSELECT" attribute="GENERATOR" feature="GENERATOR" preset="BEAM">
+            <ChannelSet index="0" name="No Func" from_dmx="0" to_dmx="1"/>
+            <ChannelSet index="1" name="Man Draw" from_dmx="2" to_dmx="63"/>
+            <ChannelSet index="2" name="Man Draw 2" from_dmx="64" to_dmx="127"/>
+            <ChannelSet index="3" name="Auto Draw Inc" from_dmx="128" to_dmx="153"/>
+            <ChannelSet index="4" name="Auto Draw Dec" from_dmx="154" to_dmx="179"/>
+            <ChannelSet index="5" name="Auto Draw Inc Rev" from_dmx="180" to_dmx="205"/>
+            <ChannelSet index="6" name="Auto Draw Dec Rev" from_dmx="206" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="16" attribute="BEAMSHAPER" feature="BEAM1" preset="BEAM" coarse="17">
+          <ChannelFunction index="0" from="0" to="15" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="BEAMSHAPERINDEX" attribute="BEAMSHAPER" feature="BEAM1" preset="BEAM">
+            <ChannelSet index="0" name="No Func" from_dmx="0" to_dmx="15"/>
+            <ChannelSet index="1" name="Track 1" from_dmx="16" to_dmx="47"/>
+            <ChannelSet index="2" name="Track 2" from_dmx="48" to_dmx="79"/>
+            <ChannelSet index="3" name="Track 3" from_dmx="80" to_dmx="111"/>
+            <ChannelSet index="4" name="Track 4" from_dmx="112" to_dmx="143"/>
+            <ChannelSet index="5" name="Track 5" from_dmx="144" to_dmx="175"/>
+            <ChannelSet index="6" name="Track 6" from_dmx="176" to_dmx="207"/>
+            <ChannelSet index="7" name="Track 7" from_dmx="208" to_dmx="239"/>
+            <ChannelSet index="8" name="Track 8" from_dmx="240" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="17" attribute="BEAMSHAPERMODE" feature="BEAM1" preset="BEAM" coarse="18">
+          <ChannelFunction index="0" from="0" to="63" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="BEAMSHAPERMODEINDEX" attribute="BEAMSHAPERMODE" feature="BEAM1" preset="BEAM">
+            <ChannelSet index="0" name="Small" from_dmx="0" to_dmx="63"/>
+            <ChannelSet index="1" name="Medium" from_dmx="64" to_dmx="127"/>
+            <ChannelSet index="2" name="Large" from_dmx="128" to_dmx="191"/>
+            <ChannelSet index="3" name="Max" from_dmx="192" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="18" attribute="COPYMODE" feature="EFFECTSMISC" preset="BEAM" coarse="19">
+          <ChannelFunction index="0" from="0" to="1" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COPYMODESELECT" attribute="COPYMODE" feature="EFFECTSMISC" preset="BEAM">
+            <ChannelSet index="0" name="No Func" from_dmx="0" to_dmx="2"/>
+            <ChannelSet index="1" name="X Mirror" from_dmx="3" to_dmx="63"/>
+            <ChannelSet index="2" name="Y Mirror" from_dmx="64" to_dmx="127"/>
+            <ChannelSet index="3" name="XY Mirror " from_dmx="128" to_dmx="191"/>
+            <ChannelSet index="4" name="XY Mirror 2" from_dmx="192" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="19" attribute="EFFECT" feature="EFFECT" preset="BEAM" coarse="20">
+          <ChannelFunction index="0" from="0" to="1" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="EFFECTSELECT" attribute="EFFECT" feature="EFFECT" preset="BEAM">
+            <ChannelSet index="0" name="No Func" from_dmx="0" to_dmx="1"/>
+            <ChannelSet index="1" name="Dyn" from_dmx="2" to_dmx="213"/>
+            <ChannelSet index="2" name="Auto" from_dmx="214" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="20" attribute="EFFECTRATE" feature="EFFECT" preset="BEAM" coarse="21">
+          <ChannelFunction index="0" from="0" to="127" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="EFFECTRATE" attribute="EFFECTRATE" feature="EFFECT" preset="BEAM">
+            <ChannelSet index="0" name="Speed Fixed Colour" from_dmx="0" to_dmx="127"/>
+            <ChannelSet index="1" name="Speed Select Colour" from_dmx="128" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+      </Module>
+    </Modules>
+    <Instances index="1">
+      <Instance index="0" patch="1" module_index="0"/>
+    </Instances>
+    <Wheels index="2"/>
+    <FixtureMacroCollect index="5"/>
+  </FixtureType>
+</MA>

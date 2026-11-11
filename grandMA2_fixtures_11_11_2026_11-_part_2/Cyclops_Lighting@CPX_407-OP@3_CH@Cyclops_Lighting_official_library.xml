@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.5.0/MA.xsd" major_vers="3" minor_vers="5" stream_vers="0">
+	<Info datetime="2019-03-17T16:24:10" showfile="newmanmani"/>
+	<FixtureType index="2" name="CPX 407-OP" mode="3 CH">
+		<InfoItems>
+			<Info date="2019-03-17T16:23:41">www.cyclopslighting.com</Info>
+		<Info type="Revision" date="2019-03-17T01:03:14">Cyclops Lighting official library, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>CPX407-OP</short_name>
+		<manufacturer>Cyclops Lighting</manufacturer>
+		<short_manufacturer>CycloLi</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="LED" beamtype="Wash" beam_angle="15" beam_intensity="12000">
+				<Body>
+					<Size x="0.21" y="0.11" z="0.22"/>
+				</Body>
+				<ChannelType index="0" attribute="HUEADJUST" feature="HSADJUST" preset="COLOR" coarse="1">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="HUEADJUST" subattribute_user_name="Hue" attribute="HUEADJUST" attribute_user_name="Hue" feature="HSADJUST" feature_user_name="HS Adjust" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="SATURATIONADJUST" feature="HSADJUST" preset="COLOR" coarse="2">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="SATURATIONADJUST" subattribute_user_name="Saturation" attribute="SATURATIONADJUST" attribute_user_name="Saturation" feature="HSADJUST" feature_user_name="HS Adjust" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="3" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA major_vers="3" minor_vers="2" stream_vers="2">
+  <Info datetime="2024-11-24T19:9:47" showfile="ma fixture builder"/>
+  <FixtureType index="0" name="LEDStrobe" mode="Only Full Patch">
+    <InfoItems>
+      <Info>Created using MA FixtureBuilder version v1.9.0</Info>
+    <Info type="Revision" date="2025-08-09T10:39:50">1.0.0, Uploaded to Fixture Share.</Info></InfoItems>
+    <short_name>LEDStrob</short_name>
+    <manufacturer>Yuer Lighting Professional</manufacturer>
+    <short_manufacturer>YUER</short_manufacturer>
+    <Modules index="0">
+      <Module index="0" name="Module" class="LED" beamtype="Wash" beam_angle="40" beam_intensity="10000">
+        <Body>
+          <Size x="0.5" y="0.5" z="0.5"/>
+        </Body>
+        <ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" default="0">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER">
+            <ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType/>
+        <ChannelType index="2" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="2" default="0">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+            <ChannelSet index="0" name="RGB Shutter min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="RGB Shutter max" from_dmx="255" to_dmx="255"/>
+            <ChannelSet index="2" name="Breathing Effect" from_dmx="11" to_dmx="15"/>
+            <ChannelSet index="3" name="Jump Change Effect" from_dmx="16" to_dmx="20"/>
+            <ChannelSet index="4" name="Gradient Effect" from_dmx="21" to_dmx="25"/>
+            <ChannelSet index="5" name="Pulse Change Effect" from_dmx="26" to_dmx="30"/>
+            <ChannelSet index="6" name="Autorun Effects" from_dmx="31" to_dmx="204"/>
+            <ChannelSet index="7" name="Sound Modes" from_dmx="205" to_dmx="255"/>
+            <ChannelSet/>
+            <ChannelSet/>
+          </ChannelFunction>
+          <ChannelFunction/>
+        </ChannelType>
+        <ChannelType index="3" attribute="ANIMATIONSPEED" feature="EFFECTSANIMATION" preset="BEAM" coarse="4" default="0">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="ANIMATIONSPEED" attribute="ANIMATIONSPEED" feature="EFFECTSANIMATION" preset="BEAM">
+            <ChannelSet index="0" name="Autorun Effect Speed" from_dmx="0" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="4" attribute="COLOR1" feature="COLOR1" preset="COLOR" coarse="5" default="0.000000">
+          <ChannelFunction index="0" from="0" to="31" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLOR1WHEELRANDOM" attribute="COLOR1" feature="COLOR1" preset="COLOR">
+            <ChannelSet index="0" name="Default Colour" from_dmx="0" to_dmx="31"/>
+            <ChannelSet index="1" name="Red" from_dmx="32" to_dmx="63"/>
+            <ChannelSet index="2" name="Green" from_dmx="64" to_dmx="95"/>
+            <ChannelSet index="3" name="Blue" from_dmx="96" to_dmx="127"/>
+            <ChannelSet index="4" name="Yellow" from_dmx="128" to_dmx="158"/>
+            <ChannelSet index="5" name="Purple" from_dmx="160" to_dmx="191"/>
+            <ChannelSet index="6" name="Cyan" from_dmx="192" to_dmx="223"/>
+            <ChannelSet index="7" name="White" from_dmx="224" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="5" attribute="BACKGROUNDSHUTTERSTROBE" feature="SHUTTER" preset="BEAM" coarse="6" default="0">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="BACKGROUNDSHUTTER" attribute="BACKGROUNDSHUTTERSTROBE" feature="SHUTTER" preset="BEAM">
+            <ChannelSet index="0" name="White Shutter min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="White Shutter max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="6" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" coarse="7" default="0">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+            <ChannelSet index="0" name="Perform Ch12 White Dim" from_dmx="0" to_dmx="5"/>
+            <ChannelSet index="1" name="White Effects" from_dmx="6" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="7" attribute="MODETRANSITIONSPEED" feature="FIXTURE" preset="CONTROL" coarse="8" default="0">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="MODETRANSITIONTIMING" attribute="MODETRANSITIONSPEED" feature="FIXTURE" preset="CONTROL">
+            <ChannelSet index="0" name="White EffectSpeed" from_dmx="0" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="8" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="9" default="0">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR">
+            <ChannelSet index="0" name="RED min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="Red max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="9" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="10" default="0">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR">
+            <ChannelSet index="0" name="Green min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="Green max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="10" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="11" default="0">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR">
+            <ChannelSet index="0" name="Blue min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="Blue max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="11" attribute="COLORRGB7" feature="COLORRGB" preset="COLOR" coarse="12" default="0">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB7" attribute="COLORRGB7" feature="COLORRGB" preset="COLOR">
+            <ChannelSet index="0" name="White min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="White max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+      </Module>
+    </Modules>
+    <Instances index="1">
+      <Instance index="0" patch="1" module_index="0"/>
+    </Instances>
+    <Wheels index="2"/>
+    <FixtureMacroCollect index="5"/>
+  </FixtureType>
+</MA>

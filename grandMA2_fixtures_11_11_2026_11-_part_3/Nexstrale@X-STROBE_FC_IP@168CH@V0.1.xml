@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="X-STROBE FC IP" mode="168CH">
+        <InfoItems>
+            <Info type="Revision" date="2026-06-19T06:56:04">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2025-10-17T06:06:38">V0.1</Info>
+            <Info type="Revision" date="2025-10-17T10:12:44">V0.2</Info>
+            <Info type="Revision" date="2025-10-30T10:08:15">V0.3</Info>
+            <Info type="Revision" date="2026-02-06T11:35:24">0.31</Info>
+            <Info type="Revision" date="2026-02-06T12:38:06">0.32</Info>
+            <Info type="Revision" date="2026-02-06T12:59:33">0.33</Info>
+            <Info type="Revision" date="2026-02-07T00:55:09">0.34</Info>
+            <Info type="Revision" date="2026-02-07T01:11:09">0.35</Info>
+            <Info type="Revision" date="2026-02-07T06:31:36">0.36</Info>
+            <Info type="Revision" date="2026-02-07T06:42:34">V0.37</Info>
+            <Info type="Revision" date="2026-02-07T06:47:08">V0.38</Info>
+            <Info type="Revision" date="2026-02-07T07:08:33">V1.1</Info>
+            <Info type="Revision" date="2026-02-07T07:15:46">V1.2</Info>
+            <Info type="Revision" date="2026-05-20T05:36:20">V1.2</Info>
+            <Info type="Revision" date="2026-05-25T15:13:29">1_1_0</Info>
+            <Info type="Revision" date="2026-06-19T06:56:10.319">V0.1, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>X-STROBE FC IP</short_name>
+        <manufacturer>Nexstrale</manufacturer>
+        <short_manufacturer>NEXSTRALE</short_manufacturer>
+        <Modules>
+            <Module name="Base " class="None" beamtype="None" beam_intensity="" index="0" beam_angle="">
+                <Model name="Base " sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <ChannelType coarse="1" fine="2" default="0" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Closed" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Open" from_dmx="65535" to_dmx="65535"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="3" default="0" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="3.53" physfrom="1" physto="1" min_dmx_24="0" max_dmx_24="592137">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="9"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_PULSE_OPEN" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="3.53" to="19.22" physfrom="0.5" physto="6" min_dmx_24="657930" max_dmx_24="3223857">
+                        <ChannelSet name="Slow to fast 1" from_dmx="10" to_dmx="25"/>
+                        <ChannelSet name="Slow to fast 2" from_dmx="26" to_dmx="35"/>
+                        <ChannelSet name="Slow to fast 3" from_dmx="36" to_dmx="49"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_PULSE_CLOSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="19.22" to="34.9" physfrom="0.5" physto="6" min_dmx_24="3289650" max_dmx_24="5855577">
+                        <ChannelSet name="Slow to fast 1" from_dmx="50" to_dmx="59"/>
+                        <ChannelSet name="Slow to fast 2" from_dmx="60" to_dmx="79"/>
+                        <ChannelSet name="Slow to fast 3" from_dmx="80" to_dmx="89"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_PULSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="34.9" to="46.67" physfrom="0.5" physto="6" min_dmx_24="5921370" max_dmx_24="7829367">
+                        <ChannelSet name="Slow to fast 1" from_dmx="90" to_dmx="99"/>
+                        <ChannelSet name="Slow to fast 2" from_dmx="100" to_dmx="109"/>
+                        <ChannelSet name="Slow to fast 3" from_dmx="110" to_dmx="119"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_RANDOM" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="46.67" to="70.2" physfrom="1" physto="15" min_dmx_24="7895160" max_dmx_24="11776947">
+                        <ChannelSet name="Slow to fast 1" from_dmx="120" to_dmx="139"/>
+                        <ChannelSet name="Slow to fast 2" from_dmx="140" to_dmx="159"/>
+                        <ChannelSet name="Slow to fast 3" from_dmx="160" to_dmx="179"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="70.2" to="97.65" physfrom="1" physto="15" min_dmx_24="11842740" max_dmx_24="16382457">
+                        <ChannelSet name="Slow to fast 1" from_dmx="180" to_dmx="199"/>
+                        <ChannelSet name="Slow to fast 2" from_dmx="200" to_dmx="219"/>
+                        <ChannelSet name="Slow to fast 3" from_dmx="220" to_dmx="249"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="97.65" to="100" physfrom="1" physto="1" min_dmx_24="16448250" max_dmx_24="16777215">
+                        <ChannelSet name="Open" from_dmx="250" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="167" default="0" attribute="FROST" feature="BEAM1" preset="BEAM">
+                    <ChannelFunction subattribute="FROST" attribute="FROST" feature="BEAM1" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="168" default="0" attribute="CONTROL" feature="Control" preset="Control">
+                    <ChannelFunction subattribute="CONTROL" attribute="CONTROL" feature="Control" preset="Control" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="No Function" from_dmx="0" to_dmx="49"/>
+                        <ChannelSet name="Fan Standard" from_dmx="50" to_dmx="59"/>
+                        <ChannelSet name="Fan HighOutput" from_dmx="60" to_dmx="69"/>
+                        <ChannelSet name="Fan Silent" from_dmx="70" to_dmx="79"/>
+                        <ChannelSet name="Dis Blink Off" from_dmx="80" to_dmx="84"/>
+                        <ChannelSet name="Dis Blink On" from_dmx="85" to_dmx="89"/>
+                        <ChannelSet name="LED 1800Hz" from_dmx="170" to_dmx="177"/>
+                        <ChannelSet name="LED 3600Hz" from_dmx="178" to_dmx="185"/>
+                        <ChannelSet name="LED 7200Hz" from_dmx="186" to_dmx="193"/>
+                        <ChannelSet name="LED 25000Hz" from_dmx="194" to_dmx="199"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="RGB Pixel" class="None" beamtype="None" beam_intensity="" index="2" beam_angle="">
+                <Model/>
+                <ChannelType coarse="4" default="0" attribute="DIM" feature="DIMMER" preset="DIMMER">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="125" default="0" attribute="EFFECT" feature="EFFECT" preset="BEAM">
+                    <ChannelFunction subattribute="EFFECTSELECT" attribute="EFFECT" feature="EFFECT" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="No Function" from_dmx="0" to_dmx="9"/>
+                        <ChannelSet name="Effect" from_dmx="10" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="126" default="0" attribute="EffectSpeed" feature="Beam" preset="Beam">
+                    <ChannelFunction subattribute="EffectSpeed" attribute="EffectSpeed" feature="Beam" preset="Beam" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name=">>>" from_dmx="0" to_dmx="125"/>
+                        <ChannelSet name="Stop" from_dmx="126" to_dmx="129"/>
+                        <ChannelSet name="<<<" from_dmx="130" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="127" default="0" attribute="Effects1Fade" feature="Beam" preset="Beam">
+                    <ChannelFunction subattribute="Effects1Fade" attribute="Effects1Fade" feature="Beam" preset="Beam" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="No Function" from_dmx="0" to_dmx="2"/>
+                        <ChannelSet name="Curve 1" from_dmx="3" to_dmx="5"/>
+                        <ChannelSet name="Curve 2" from_dmx="6" to_dmx="8"/>
+                        <ChannelSet name="Curve 3" from_dmx="9" to_dmx="11"/>
+                        <ChannelSet name="Curve 4" from_dmx="12" to_dmx="14"/>
+                        <ChannelSet name="Fade" from_dmx="15" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="RGB Pixel 1" class="Conventional" beamtype="Wash" beam_intensity="14480" index="3" beam_angle="66">
+                <Model name="RGB Pixel 1" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Model name="Beam" model_type="Beam">
+                        <Offset>
+                            <Location x="0.000000" y="0.000000" z="0.000000"/>
+                            <Rotation x="0.000000" y="-3.141593" z="0.000000"/>
+                            <Scaling x="1" y="1" z="1"/>
+                        </Offset>
+                        <BeamClippingDistance>-0.066</BeamClippingDistance>
+                        <BeamDiameterAtOffset>0.100000</BeamDiameterAtOffset>
+                    </Model>
+                    <Vertices>GAAAAL10k7y9dJO8bhIDu6uqqr6rqiq/q6pKwgAAAAAAAAAAvXSTvL10kzxuEgO77AVRv+wF0T4MoknCAAAAAAAAAAC9dJM8vXSTPG4SA7urqqo+q6oqP6uqSsIAAAAAAAAAAL10kzy9dJO8bhIDu+wFUT/sBdG+DKJJwgAAAAAAAAAAvXSTvL10k7xuEgM7q6oqv6uqqr5VVUXCAAAAAAAAAAC9dJM8vXSTvG4SAzvsBdE+7AVRv/RdRsIAAAAAAAAAAL10kzy9dJM8bhIDO6uqKj+rqqo+VVVFwgAAAAAAAAAAvXSTvL10kzxuEgM77AXRvuwFUT/0XUbCAAAAAAAAAAC9dJO8vXSTvG4SA7urqqq+q6oqv6uqSsIAAAAAAAAAAL10kzy9dJO8bhIDu+wFUT/sBdG+DKJJwgAAAAAAAAAAvXSTPL10k7xuEgM77AXRPuwFUb/0XUbCAAAAAAAAAAC9dJO8vXSTvG4SAzurqiq/q6qqvlVVRcIAAAAAAAAAAL10kzy9dJO8bhIDu+wFUT/sBdG+DKJJwgAAAAAAAAAAvXSTPL10kzxuEgO7q6qqPquqKj+rqkrCAAAAAAAAAAC9dJM8vXSTPG4SAzurqio/q6qqPlVVRcIAAAAAAAAAAL10kzy9dJO8bhIDO+wF0T7sBVG/9F1GwgAAAAAAAAAAvXSTPL10kzxuEgO7q6qqPquqKj+rqkrCAAAAAAAAAAC9dJO8vXSTPG4SA7vsBVG/7AXRPgyiScIAAAAAAAAAAL10k7y9dJM8bhIDO+wF0b7sBVE/9F1GwgAAAAAAAAAAvXSTPL10kzxuEgM7q6oqP6uqqj5VVUXCAAAAAAAAAAC9dJO8vXSTPG4SA7vsBVG/7AXRPgyiScIAAAAAAAAAAL10k7y9dJO8bhIDu6uqqr6rqiq/q6pKwgAAAAAAAAAAvXSTvL10k7xuEgM7q6oqv6uqqr5VVUXCAAAAAAAAAAC9dJO8vXSTPG4SAzvsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                    <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                    <SubSets>
+                        <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                    </SubSets>
+                    <Materials>
+                        <Material3d name="black" specularPower="0.1">
+                            <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                            <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                            <EmissiveColor r="0" g="0" b="0" a="1"/>
+                            <DiffuseInking x="0" y="0" z="0"/>
+                            <EmissiveInking x="0" y="0" z="0"/>
+                            <SurfaceTexture/>
+                            <AlphaTexture/>
+                        </Material3d>
+                    </Materials>
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <ChannelType default="4278255360" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="1677747200">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216">
+                        <ChannelSet name="Closed" from_dmx="0" to_dmx="65536"/>
+                        <ChannelSet name="Open" from_dmx="16711935" to_dmx="16777216"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="5" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="6" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="7" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="W Pixel" class="None" beamtype="None" beam_intensity="" index="4" beam_angle="">
+                <Model/>
+                <ChannelType coarse="132" default="0" attribute="DIM" feature="DIMMER" preset="DIMMER">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="133" default="0" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="3.53" physfrom="1" physto="1" min_dmx_24="0" max_dmx_24="592137">
+                        <ChannelSet name="Open" from_dmx="0" to_dmx="9"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_PULSE_OPEN" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="3.53" to="19.22" physfrom="0.5" physto="6" min_dmx_24="657930" max_dmx_24="3223857">
+                        <ChannelSet name="Slow to fast 1" from_dmx="10" to_dmx="25"/>
+                        <ChannelSet name="Slow to fast 2" from_dmx="26" to_dmx="35"/>
+                        <ChannelSet name="Slow to fast 3" from_dmx="36" to_dmx="49"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_PULSE_CLOSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="19.22" to="34.9" physfrom="0.5" physto="6" min_dmx_24="3289650" max_dmx_24="5855577">
+                        <ChannelSet name="Slow to fast 1" from_dmx="50" to_dmx="59"/>
+                        <ChannelSet name="Slow to fast 2" from_dmx="60" to_dmx="79"/>
+                        <ChannelSet name="Slow to fast 3" from_dmx="80" to_dmx="89"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_PULSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="34.9" to="46.67" physfrom="0.5" physto="6" min_dmx_24="5921370" max_dmx_24="7829367">
+                        <ChannelSet name="Slow to fast 1" from_dmx="90" to_dmx="99"/>
+                        <ChannelSet name="Slow to fast 2" from_dmx="100" to_dmx="109"/>
+                        <ChannelSet name="Slow to fast 3" from_dmx="110" to_dmx="119"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_RANDOM" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="46.67" to="70.2" physfrom="1" physto="15" min_dmx_24="7895160" max_dmx_24="11776947">
+                        <ChannelSet name="Slow to fast 1" from_dmx="120" to_dmx="139"/>
+                        <ChannelSet name="Slow to fast 2" from_dmx="140" to_dmx="159"/>
+                        <ChannelSet name="Slow to fast 3" from_dmx="160" to_dmx="179"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="70.2" to="97.65" physfrom="1" physto="15" min_dmx_24="11842740" max_dmx_24="16382457">
+                        <ChannelSet name="Slow to fast 1" from_dmx="180" to_dmx="199"/>
+                        <ChannelSet name="Slow to fast 2" from_dmx="200" to_dmx="219"/>
+                        <ChannelSet name="Slow to fast 3" from_dmx="220" to_dmx="249"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="97.65" to="100" physfrom="1" physto="1" min_dmx_24="16448250" max_dmx_24="16777215">
+                        <ChannelSet name="Open" from_dmx="250" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="164" default="0" attribute="EFFECT" feature="EFFECT" preset="BEAM">
+                    <ChannelFunction subattribute="EFFECTSELECT" attribute="EFFECT" feature="EFFECT" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="No Function" from_dmx="0" to_dmx="9"/>
+                        <ChannelSet name="Static Effect" from_dmx="10" to_dmx="99"/>
+                        <ChannelSet name="Move Effect" from_dmx="100" to_dmx="199"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="165" default="0" attribute="EffectSpeed" feature="Beam" preset="Beam">
+                    <ChannelFunction subattribute="EffectSpeed" attribute="EffectSpeed" feature="Beam" preset="Beam" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name=">>>" from_dmx="0" to_dmx="125"/>
+                        <ChannelSet name="Stop" from_dmx="126" to_dmx="129"/>
+                        <ChannelSet name="<<<" from_dmx="130" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="166" default="0" attribute="Effects1Fade" feature="Beam" preset="Beam">
+                    <ChannelFunction subattribute="Effects1Fade" attribute="Effects1Fade" feature="Beam" preset="Beam" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="No Function" from_dmx="0" to_dmx="2"/>
+                        <ChannelSet name="Curve 1" from_dmx="3" to_dmx="5"/>
+                        <ChannelSet name="Curve 2" from_dmx="6" to_dmx="8"/>
+                        <ChannelSet name="Curve 3" from_dmx="9" to_dmx="11"/>
+                        <ChannelSet name="Curve 4" from_dmx="12" to_dmx="14"/>
+                        <ChannelSet name="Fade" from_dmx="15" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+            <Module name="W Pixel 1" class="Conventional" beamtype="Wash" beam_intensity="7920" index="5" beam_angle="66">
+                <Model name="W Pixel 1" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Vertices>GAAAAL10k7ymm0S7bhKDuquqqr6rqiq/q6pKwgAAAAAAAAAAvXSTvKabRDtuEoO67AVRv+wF0T4MoknCAAAAAAAAAAC9dJM8pptEO24Sg7qrqqo+q6oqP6uqSsIAAAAAAAAAAL10kzymm0S7bhKDuuwFUT/sBdG+DKJJwgAAAAAAAAAAvXSTvKabRLtuEoM6q6oqv6uqqr5VVUXCAAAAAAAAAAC9dJM8pptEu24SgzrsBdE+7AVRv/RdRsIAAAAAAAAAAL10kzymm0Q7bhKDOquqKj+rqqo+VVVFwgAAAAAAAAAAvXSTvKabRDtuEoM67AXRvuwFUT/0XUbCAAAAAAAAAAC9dJO8pptEu24Sg7qrqqq+q6oqv6uqSsIAAAAAAAAAAL10kzymm0S7bhKDuuwFUT/sBdG+DKJJwgAAAAAAAAAAvXSTPKabRLtuEoM67AXRPuwFUb/0XUbCAAAAAAAAAAC9dJO8pptEu24Sgzqrqiq/q6qqvlVVRcIAAAAAAAAAAL10kzymm0S7bhKDuuwFUT/sBdG+DKJJwgAAAAAAAAAAvXSTPKabRDtuEoO6q6qqPquqKj+rqkrCAAAAAAAAAAC9dJM8pptEO24Sgzqrqio/q6qqPlVVRcIAAAAAAAAAAL10kzymm0S7bhKDOuwF0T7sBVG/9F1GwgAAAAAAAAAAvXSTPKabRDtuEoO6q6qqPquqKj+rqkrCAAAAAAAAAAC9dJO8pptEO24Sg7rsBVG/7AXRPgyiScIAAAAAAAAAAL10k7ymm0Q7bhKDOuwF0b7sBVE/9F1GwgAAAAAAAAAAvXSTPKabRDtuEoM6q6oqP6uqqj5VVUXCAAAAAAAAAAC9dJO8pptEO24Sg7rsBVG/7AXRPgyiScIAAAAAAAAAAL10k7ymm0S7bhKDuquqqr6rqiq/q6pKwgAAAAAAAAAAvXSTvKabRLtuEoM6q6oqv6uqqr5VVUXCAAAAAAAAAAC9dJO8pptEO24SgzrsBdG+7AVRP/RdRsIAAAAAAAAAAA==</Vertices>
+                    <Faces>JAAAAAAAAQACAAIAAwAAAAQABQAGAAYABwAEAAgACQAKAAoACwAIAAwADQAOAA4ADwAMABAAEQASABIAEwAQABQAFQAWABYAFwAUAA==</Faces>
+                    <SubSets>
+                        <SubSet3d material_index="0" FaceStart="0" FacesCount="12"/>
+                    </SubSets>
+                    <Materials>
+                        <Material3d name="black" specularPower="0.1">
+                            <DiffuseColor r="0.157" g="0.157" b="0.157" a="1"/>
+                            <SpecularColor r="0.898" g="0.898" b="0.898" a="0"/>
+                            <EmissiveColor r="0" g="0" b="0" a="1"/>
+                            <DiffuseInking x="0" y="0" z="0"/>
+                            <EmissiveInking x="0" y="0" z="0"/>
+                            <SurfaceTexture/>
+                            <AlphaTexture/>
+                        </Material3d>
+                    </Materials>
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <ChannelType default="0" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="1671167799.2156863">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777216">
+                        <ChannelSet name="Closed" from_dmx="0" to_dmx="131073"/>
+                        <ChannelSet name="Open" from_dmx="16646398" to_dmx="16777216"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="134" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Background" class="None" beamtype="None" beam_intensity="" index="6" beam_angle="">
+                <Model/>
+                <ChannelType coarse="128" default="255" attribute="DIM" feature="DIMMER" preset="DIMMER">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Closed" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Open" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="129" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="130" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="131" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+            <Instance module_index="1" patch="1" locked="true"/>
+            <Instance module_index="2" patch="1" locked="true" X="0.167" Y="0.07" Z="-0.053"/>
+            <Instance module_index="2" patch="4" locked="true" X="0.131" Y="0.07" Z="-0.053"/>
+            <Instance module_index="2" patch="7" locked="true" X="0.095" Y="0.07" Z="-0.053"/>
+            <Instance module_index="2" patch="10" locked="true" X="0.059" Y="0.07" Z="-0.053"/>
+            <Instance module_index="2" patch="13" locked="true" X="0.023" Y="0.07" Z="-0.053"/>
+            <Instance module_index="2" patch="16" locked="true" X="-0.013" Y="0.07" Z="-0.053"/>
+            <Instance module_index="2" patch="19" locked="true" X="-0.049" Y="0.07" Z="-0.053"/>
+            <Instance module_index="2" patch="22" locked="true" X="-0.085" Y="0.07" Z="-0.053"/>
+            <Instance module_index="2" patch="25" locked="true" X="-0.121" Y="0.07" Z="-0.053"/>
+            <Instance module_index="2" patch="28" locked="true" X="-0.157" Y="0.07" Z="-0.053"/>
+            <Instance module_index="2" patch="31" locked="true" X="0.167" Y="0.023" Z="-0.053"/>
+            <Instance module_index="2" patch="34" locked="true" X="0.131" Y="0.023" Z="-0.053"/>
+            <Instance module_index="2" patch="37" locked="true" X="0.095" Y="0.023" Z="-0.053"/>
+            <Instance module_index="2" patch="40" locked="true" X="0.059" Y="0.023" Z="-0.053"/>
+            <Instance module_index="2" patch="43" locked="true" X="0.023" Y="0.023" Z="-0.053"/>
+            <Instance module_index="2" patch="46" locked="true" X="-0.013" Y="0.023" Z="-0.053"/>
+            <Instance module_index="2" patch="49" locked="true" X="-0.049" Y="0.023" Z="-0.053"/>
+            <Instance module_index="2" patch="52" locked="true" X="-0.085" Y="0.023" Z="-0.053"/>
+            <Instance module_index="2" patch="55" locked="true" X="-0.121" Y="0.023" Z="-0.053"/>
+            <Instance module_index="2" patch="58" locked="true" X="-0.157" Y="0.023" Z="-0.053"/>
+            <Instance module_index="2" patch="61" locked="true" X="0.167" Y="-0.023" Z="-0.053"/>
+            <Instance module_index="2" patch="64" locked="true" X="0.131" Y="-0.023" Z="-0.053"/>
+            <Instance module_index="2" patch="67" locked="true" X="0.095" Y="-0.023" Z="-0.053"/>
+            <Instance module_index="2" patch="70" locked="true" X="0.059" Y="-0.023" Z="-0.053"/>
+            <Instance module_index="2" patch="73" locked="true" X="0.023" Y="-0.023" Z="-0.053"/>
+            <Instance module_index="2" patch="76" locked="true" X="-0.013" Y="-0.023" Z="-0.053"/>
+            <Instance module_index="2" patch="79" locked="true" X="-0.049" Y="-0.023" Z="-0.053"/>
+            <Instance module_index="2" patch="82" locked="true" X="-0.085" Y="-0.023" Z="-0.053"/>
+            <Instance module_index="2" patch="85" locked="true" X="-0.121" Y="-0.023" Z="-0.053"/>
+            <Instance module_index="2" patch="88" locked="true" X="-0.157" Y="-0.023" Z="-0.053"/>
+            <Instance module_index="2" patch="91" locked="true" X="0.167" Y="-0.068" Z="-0.053"/>
+            <Instance module_index="2" patch="94" locked="true" X="0.131" Y="-0.068" Z="-0.053"/>
+            <Instance module_index="2" patch="97" locked="true" X="0.095" Y="-0.068" Z="-0.053"/>
+            <Instance module_index="2" patch="100" locked="true" X="0.059" Y="-0.068" Z="-0.053"/>
+            <Instance module_index="2" patch="103" locked="true" X="0.023" Y="-0.068" Z="-0.053"/>
+            <Instance module_index="2" patch="106" locked="true" X="-0.013" Y="-0.068" Z="-0.053"/>
+            <Instance module_index="2" patch="109" locked="true" X="-0.049" Y="-0.068" Z="-0.053"/>
+            <Instance module_index="2" patch="112" locked="true" X="-0.085" Y="-0.068" Z="-0.053"/>
+            <Instance module_index="2" patch="115" locked="true" X="-0.121" Y="-0.068" Z="-0.053"/>
+            <Instance module_index="2" patch="118" locked="true" X="-0.157" Y="-0.068" Z="-0.053"/>
+            <Instance module_index="3" patch="1" locked="true"/>
+            <Instance module_index="4" patch="1" locked="true" X="0.167" Y="0.047" Z="-0.053"/>
+            <Instance module_index="4" patch="2" locked="true" X="0.131" Y="0.047" Z="-0.053"/>
+            <Instance module_index="4" patch="3" locked="true" X="0.095" Y="0.047" Z="-0.053"/>
+            <Instance module_index="4" patch="4" locked="true" X="0.059" Y="0.047" Z="-0.053"/>
+            <Instance module_index="4" patch="5" locked="true" X="0.023" Y="0.047" Z="-0.053"/>
+            <Instance module_index="4" patch="6" locked="true" X="-0.013" Y="0.047" Z="-0.053"/>
+            <Instance module_index="4" patch="7" locked="true" X="-0.049" Y="0.047" Z="-0.053"/>
+            <Instance module_index="4" patch="8" locked="true" X="-0.085" Y="0.047" Z="-0.053"/>
+            <Instance module_index="4" patch="9" locked="true" X="-0.121" Y="0.047" Z="-0.053"/>
+            <Instance module_index="4" patch="10" locked="true" X="-0.157" Y="0.047" Z="-0.053"/>
+            <Instance module_index="4" patch="11" locked="true" X="0.167" Z="-0.053"/>
+            <Instance module_index="4" patch="12" locked="true" X="0.131" Z="-0.053"/>
+            <Instance module_index="4" patch="13" locked="true" X="0.095" Z="-0.053"/>
+            <Instance module_index="4" patch="14" locked="true" X="0.059" Z="-0.053"/>
+            <Instance module_index="4" patch="15" locked="true" X="0.023" Z="-0.053"/>
+            <Instance module_index="4" patch="16" locked="true" X="-0.013" Z="-0.053"/>
+            <Instance module_index="4" patch="17" locked="true" X="-0.049" Z="-0.053"/>
+            <Instance module_index="4" patch="18" locked="true" X="-0.085" Z="-0.053"/>
+            <Instance module_index="4" patch="19" locked="true" X="-0.121" Z="-0.053"/>
+            <Instance module_index="4" patch="20" locked="true" X="-0.157" Z="-0.053"/>
+            <Instance module_index="4" patch="21" locked="true" X="0.167" Y="-0.045" Z="-0.053"/>
+            <Instance module_index="4" patch="22" locked="true" X="0.131" Y="-0.045" Z="-0.053"/>
+            <Instance module_index="4" patch="23" locked="true" X="0.095" Y="-0.045" Z="-0.053"/>
+            <Instance module_index="4" patch="24" locked="true" X="0.059" Y="-0.045" Z="-0.053"/>
+            <Instance module_index="4" patch="25" locked="true" X="0.023" Y="-0.045" Z="-0.053"/>
+            <Instance module_index="4" patch="26" locked="true" X="-0.013" Y="-0.045" Z="-0.053"/>
+            <Instance module_index="4" patch="27" locked="true" X="-0.049" Y="-0.045" Z="-0.053"/>
+            <Instance module_index="4" patch="28" locked="true" X="-0.085" Y="-0.045" Z="-0.053"/>
+            <Instance module_index="4" patch="29" locked="true" X="-0.121" Y="-0.045" Z="-0.053"/>
+            <Instance module_index="4" patch="30" locked="true" X="-0.157" Y="-0.045" Z="-0.053"/>
+            <Instance module_index="5" patch="1" locked="true"/>
+        </Instances>
+        <Wheels/>
+    </FixtureType>
+</MA>

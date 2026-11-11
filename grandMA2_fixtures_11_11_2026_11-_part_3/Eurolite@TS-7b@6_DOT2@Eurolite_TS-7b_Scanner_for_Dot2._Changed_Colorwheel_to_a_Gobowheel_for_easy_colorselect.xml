@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA major_vers="3" minor_vers="2" stream_vers="2">
+  <Info datetime="2024-4-16T9:26:1" showfile="ma fixture builder"/>
+  <FixtureType index="4" name="TS-7b" mode="6 DOT2">
+    <InfoItems>
+      <Info>Created using MA FixtureBuilder version v1.9.0</Info>
+    <Info type="Revision" date="2024-04-16T10:06:08">Eurolite TS-7b Scanner for Dot2. Changed Colorwheel to a Gobowheel for easy colorselect, Uploaded to Fixture Share.</Info></InfoItems>
+    <short_name>TS-7b_DO</short_name>
+    <manufacturer>Eurolite</manufacturer>
+    <short_manufacturer>Eurolt</short_manufacturer>
+    <Modules index="0">
+      <Module index="0" name="Main Module" class="Mirror" beamtype="Spot" beam_angle="14" beam_intensity="10000">
+        <Body>
+          <Size x="0.33" y="1.23" z="0.22"/>
+        </Body>
+        <ChannelType index="0" attribute="PAN" feature="POSITION" preset="POSITION" coarse="1" default="127.5">
+          <ChannelFunction index="0" from="-90" to="90" min_dmx_24="0" max_dmx_24="16777215" physfrom="-90" physto="90" subattribute="PAN" attribute="PAN" feature="POSITION" preset="POSITION" subattribute_user_name="Pan" attribute_user_name="Pan" feature_user_name="Position" preset_user_name="Position">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="center" from_dmx="128" to_dmx="128"/>
+            <ChannelSet index="2" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="1" attribute="TILT" feature="POSITION" preset="POSITION" coarse="2" default="127.5">
+          <ChannelFunction index="0" from="-45" to="45" min_dmx_24="0" max_dmx_24="16777215" physfrom="-45" physto="45" subattribute="TILT" attribute="TILT" feature="POSITION" preset="POSITION" subattribute_user_name="Tilt" attribute_user_name="Tilt" feature_user_name="Position" preset_user_name="Position">
+            <ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="center" from_dmx="128" to_dmx="128"/>
+            <ChannelSet index="2" name="max" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="2" attribute="GOBO2" feature="GOBO2" preset="GOBO" coarse="4" highlight_value="0">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" wheel="1" subattribute="GOBO2" attribute="GOBO2" feature="GOBO2" preset="GOBO" subattribute_user_name="Select2" attribute_user_name="G2" feature_user_name="Gobo2" preset_user_name="Gobo">
+            <ChannelSet index="0" name="open" from_dmx="0" to_dmx="17" slot_index="0" slot_from="0" slot_to="0"/>
+            <ChannelSet index="1" name="Yellow" from_dmx="18" to_dmx="35" slot_index="1" slot_from="0" slot_to="0"/>
+            <ChannelSet index="2" name="Violet" from_dmx="36" to_dmx="53" slot_index="2" slot_from="0" slot_to="0"/>
+            <ChannelSet index="3" name="Cyan" from_dmx="54" to_dmx="71" slot_index="3" slot_from="0" slot_to="0"/>
+            <ChannelSet index="4" name="Dark Orange" from_dmx="72" to_dmx="89" slot_index="4" slot_from="0" slot_to="0"/>
+            <ChannelSet index="5" name="Magenta" from_dmx="90" to_dmx="107" slot_index="5" slot_from="0" slot_to="0"/>
+            <ChannelSet index="6" name="Light Green" from_dmx="108" to_dmx="125" slot_index="6" slot_from="0" slot_to="0"/>
+            <ChannelSet index="7" name="Blue" from_dmx="126" to_dmx="143" slot_index="7" slot_from="0" slot_to="0"/>
+            <ChannelSet index="8" name="Red" from_dmx="144" to_dmx="161" slot_index="8" slot_from="0" slot_to="0"/>
+            <ChannelSet index="9" name="Pink" from_dmx="162" to_dmx="179" slot_index="9" slot_from="0" slot_to="0"/>
+            <ChannelSet index="10" name="Yellow soft" from_dmx="180" to_dmx="197" slot_index="10" slot_from="0" slot_to="0"/>
+            <ChannelSet index="11" name="Orange" from_dmx="198" to_dmx="215" slot_index="11" slot_from="0" slot_to="0"/>
+            <ChannelSet index="12" name="Lavender" from_dmx="216" to_dmx="233" slot_index="12" slot_from="0" slot_to="0"/>
+            <ChannelSet index="13" name="Blue/Yellow" from_dmx="234" to_dmx="251" slot_index="13" slot_from="0" slot_to="0"/>
+            <ChannelSet index="14" name="Green/Red" from_dmx="252" to_dmx="255" slot_index="14" slot_from="0" slot_to="0"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="3" attribute="GOBO1" feature="GOBO1" preset="GOBO" coarse="3" highlight_value="0" snap="true">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" wheel="2" subattribute="GOBO1" attribute="GOBO1" feature="GOBO1" preset="GOBO" subattribute_user_name="Select" attribute_user_name="G1" feature_user_name="Gobo1" preset_user_name="Gobo">
+            <ChannelSet index="0" name="open" from_dmx="0" to_dmx="17" slot_index="0" slot_from="0" slot_to="0"/>
+            <ChannelSet index="1" name="Bakteria" from_dmx="18" to_dmx="35" slot_index="1" slot_from="0" slot_to="0"/>
+            <ChannelSet index="2" name="Cobweb" from_dmx="36" to_dmx="53" slot_index="2" slot_from="0" slot_to="0"/>
+            <ChannelSet index="3" name="Star with lines" from_dmx="54" to_dmx="71" slot_index="3" slot_from="0" slot_to="0"/>
+            <ChannelSet index="4" name="Scope 1" from_dmx="72" to_dmx="89" slot_index="4" slot_from="0" slot_to="0"/>
+            <ChannelSet index="5" name="Dots" from_dmx="90" to_dmx="107" slot_index="5" slot_from="0" slot_to="0"/>
+            <ChannelSet index="6" name="Cross" from_dmx="108" to_dmx="125" slot_index="6" slot_from="0" slot_to="0"/>
+            <ChannelSet index="7" name="5 parts squirkly line" from_dmx="126" to_dmx="143" slot_index="7" slot_from="0" slot_to="0"/>
+            <ChannelSet index="8" name="Atom" from_dmx="144" to_dmx="161" slot_index="8" slot_from="0" slot_to="0"/>
+            <ChannelSet index="9" name="Lines starform" from_dmx="162" to_dmx="179" slot_index="9" slot_from="0" slot_to="0"/>
+            <ChannelSet index="10" name="4 Ts" from_dmx="180" to_dmx="197" slot_index="10" slot_from="0" slot_to="0"/>
+            <ChannelSet index="11" name="Flowers" from_dmx="198" to_dmx="215" slot_index="11" slot_from="0" slot_to="0"/>
+            <ChannelSet index="12" name="Scope 2" from_dmx="216" to_dmx="233" slot_index="12" slot_from="0" slot_to="0"/>
+            <ChannelSet index="13" name="Pizza Slices" from_dmx="234" to_dmx="251" slot_index="13" slot_from="0" slot_to="0"/>
+            <ChannelSet index="14" name="3 Dots" from_dmx="252" to_dmx="255" slot_index="14" slot_from="0" slot_to="0"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="4" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="5" default="22" highlight_value="8.789">
+          <ChannelFunction index="0" from="0" to="11.719" min_dmx_24="0" max_dmx_24="1966079" subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" subattribute_user_name="Shutter" attribute_user_name="Shutter" feature_user_name="Shutter" preset_user_name="Beam">
+            <ChannelSet index="0" name="closed" from_dmx="0" to_dmx="14" slot_from="0" slot_to="0"/>
+            <ChannelSet index="1" name="open" from_dmx="15" to_dmx="29" slot_from="1" slot_to="1"/>
+          </ChannelFunction>
+          <ChannelFunction index="1" name="Strobe 1..100%" from="11.719" to="98.047" min_dmx_24="1966080" max_dmx_24="16449535" physfrom="1" physto="7" subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" subattribute_user_name="Strobe" attribute_user_name="Shutter" feature_user_name="Shutter" preset_user_name="Beam">
+            <ChannelSet index="0" name="min Strobe" from_dmx="30" to_dmx="30"/>
+            <ChannelSet index="1" name="max Strobe" from_dmx="250" to_dmx="250"/>
+          </ChannelFunction>
+          <ChannelFunction index="2" from="98.047" to="100" min_dmx_24="16449536" max_dmx_24="16777215" physfrom="1" physto="1" subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" subattribute_user_name="Shutter" attribute_user_name="Shutter" feature_user_name="Shutter" preset_user_name="Beam">
+            <ChannelSet index="0" name="open (2)" from_dmx="251" to_dmx="255" auto_create="false"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="5" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="6" highlight_value="100">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" subattribute_user_name="Dim" attribute_user_name="Dim" feature_user_name="Dimmer" preset_user_name="Dimmer">
+            <ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+      </Module>
+    </Modules>
+    <Instances index="1">
+      <Instance index="0" patch="1" module_index="0"/>
+    </Instances>
+    <Wheels index="2">
+      <Wheel index="0" subattribute="GOBO2" attribute="GOBO2" feature="GOBO2" preset="GOBO">
+        <Slot index="0" media_name="Open"/>
+        <Slot index="1" media_name="Yellow" b="0"/>
+        <Slot index="2" media_name="Violet" r="127" g="0"/>
+        <Slot index="3" media_name="Cyan" r="0"/>
+        <Slot index="4" media_name="Dark Orange" r="204" g="102" b="0"/>
+        <Slot index="5" media_name="Magenta" g="0"/>
+        <Slot index="6" media_name="Light Green" r="0" b="0"/>
+        <Slot index="7" media_name="Blue" r="0" g="0"/>
+        <Slot index="8" media_name="Red" g="0" b="0"/>
+        <Slot index="9" media_name="Pink" g="0" b="127"/>
+        <Slot index="10" media_name="Yellow Soft" b="80"/>
+        <Slot index="11" media_name="Orange" g="126" b="0"/>
+        <Slot index="12" media_name="Lavender" r="0" g="127"/>
+        <Slot index="13" media_name="Blue/Yellow" media_filename="Eurolite TS-7b Farben/0009012407601.png"/>
+        <Slot index="14" media_name="Green/Red" media_filename="Eurolite TS-7b Farben/0009012205304.png"/>
+      </Wheel>
+      <Wheel index="1" subattribute="GOBO1" attribute="GOBO1" feature="GOBO1" preset="GOBO">
+        <Slot index="0" media_name="open"/>
+        <Slot index="1" media_name="Bakteria" media_filename="Eurolite TS-7b Gobos/1.png"/>
+        <Slot index="2" media_name="Cobweb" media_filename="Eurolite TS-7b Gobos/2.bmp"/>
+        <Slot index="3" media_name="Star whith lines" media_filename="Eurolite TS-7b Gobos/4.png"/>
+        <Slot index="4" media_name="Scope 1" media_filename="Eurolite TS-7b Gobos/3.png"/>
+        <Slot index="5" media_name="Dots" media_filename="Eurolite TS-7b Gobos/5.png"/>
+        <Slot index="6" media_name="Cross" media_filename="Eurolite TS-7b Gobos/6.png"/>
+        <Slot index="7" media_name="5 parts squirkly line" media_filename="Eurolite TS-7b Gobos/7.bmp"/>
+        <Slot index="8" media_name="Atom" media_filename="Eurolite TS-7b Gobos/8.png"/>
+        <Slot index="9" media_name="lines starform" media_filename="Eurolite TS-7b Gobos/9.bmp"/>
+        <Slot index="10" media_name="4 Ts" media_filename="Eurolite TS-7b Gobos/10.png"/>
+        <Slot index="11" media_name="Flowers" media_filename="Eurolite TS-7b Gobos/11.png"/>
+        <Slot index="12" media_name="Scope 2" media_filename="Eurolite TS-7b Gobos/12.png"/>
+        <Slot index="13" media_name="Pizza Slices" media_filename="Eurolite TS-7b Gobos/13.png"/>
+        <Slot index="14" media_name="3 Dots" media_filename="Eurolite TS-7b Gobos/14.png"/>
+      </Wheel>
+    </Wheels>
+    <FixtureMacroCollect index="5"/>
+  </FixtureType>
+</MA>

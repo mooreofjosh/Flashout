@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.1.2/MA.xsd" major_vers="3" minor_vers="1" stream_vers="2">
+	<Info datetime="2020-03-09T14:17:38" showfile="newmanmani"/>
+	<FixtureType index="2" name="Flash 88" mode="3 CH">
+		<InfoItems>
+			<Info date="2020-03-09T14:12:51">www.cyclopslighting.com</Info>
+		<Info type="Revision" date="2020-03-09T11:18:59">Cyclops Lighting official library, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>Flash88</short_name>
+		<manufacturer>Cyclops Lighting</manufacturer>
+		<short_manufacturer>CycloLi</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="LED" beamtype="Wash" beam_angle="20" beam_intensity="85000">
+				<Body>
+					<Size x="0.575" y="0.21" z="0.334"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100" mib_disable="true">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="255" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="HUE" feature="COLORHSBC" preset="COLOR" coarse="1" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="HUE" subattribute_user_name="Hue" attribute="HUE" attribute_user_name="Hue" feature="COLORHSBC" feature_user_name="HSBC" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="SATURATION" feature="COLORHSBC" preset="COLOR" coarse="2" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="SATURATION" subattribute_user_name="Saturation" attribute="SATURATION" attribute_user_name="Saturation2" feature="COLORHSBC" feature_user_name="HSBC" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="INTENSITYADJUST" feature="DIMMER" preset="DIMMER" coarse="3" default="255" highlight_value="100" react_to_dim="1">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="INTENSITYADJUST" subattribute_user_name="INTENSITYADJUST" attribute="INTENSITYADJUST" attribute_user_name="INTENSITYADJUST" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5">
+			<FixtureMacro index="0" name="min">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET" from_value="0" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="1" name="max">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET" from_value="0" to_value="1"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="255" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" instance_index="0"/>
+			</FixtureMacro>
+		</FixtureMacroCollect>
+		<Body/>
+		<AutoPresets index="4"/>
+	</FixtureType>
+</MA>

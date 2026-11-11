@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="Strike Array 2C" mode="1Ch Mode">
+        <InfoItems>
+            <Info type="Revision" date="2024-04-01T18:13:19">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2024-04-01T18:11:21">Rev 1.0.8</Info>
+            <Info>STRIKE Array 2C is an IP65-rated audience blinder with two independently focusable pods. Intense RGBA-WW LED output delivers a full range of color as well as a wide choice of white color temperatures with exceptional color rendering. Offering the industry leading low end dimming performance our STRIKE Array fixtures are known for as well as Red Shift that warms the color temperature of the light as it dims to emulate a classic tungsten look. Variable PWM and high CRI make this the ideal blinder for broadcast applications. Its proprietary Tool-Free interlocking system enables STRIKE Array 2C to be easily interconnected with multiple Array units for scalable configurations. Omega-Bracket locks are also installed on both the yoke and the rear of the fixture to streamline the truss mounting process.</Info>
+            <Info type="Revision" date="2024-04-01T18:13:33.373">Rev%201.0.8, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>Strike Array 2C</short_name>
+        <manufacturer>Chauvet Professional</manufacturer>
+        <short_manufacturer>Chauvet Professional</short_manufacturer>
+        <Modules>
+            <Module name="Yoke" class="None" beamtype="None" beam_intensity="" beam_angle="">
+                <Model name="Yoke" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <ChannelType coarse="1" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="Min > Max" from_dmx="1" to_dmx="254"/>
+                        <ChannelSet name="Max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+        </Instances>
+        <Wheels/>
+        <RDMKey ESTAId="8612" DeviceModelId="2066"/>
+    </FixtureType>
+</MA>

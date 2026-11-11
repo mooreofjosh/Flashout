@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.3.4/MA.xsd" major_vers="3" minor_vers="3" stream_vers="4">
+	<Info datetime="2018-01-12T18:10:11" showfile="wlps_template_3_3_4_3"/>
+	<FixtureType index="12" name="FB4-SE" mode="Full Range">
+		<InfoItems>
+			<Info date="2017-12-26T11:42:22">Created by Pangolin.</Info>
+			<Info date="2017-12-26T11:42:29">Modified by Wodie.</Info>
+		<Info type="Revision" date="2018-01-13T01:01:56">16 channel mode with defaults and Smart values., Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>FB4-SE</short_name>
+		<manufacturer>Pangolin</manufacturer>
+		<short_manufacturer>Pangolin</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" class="Headmover" beamtype="Fibre" beam_angle="3" beam_intensity="99999">
+				<Body>
+					<Size x="0.5" y="0.42" z="0.66"/>
+				</Body>
+				<ChannelType index="0" attribute="LACCESS" feature="LAMP" preset="CONTROL" coarse="1" highlight_value="100" snap="true">
+					<ChannelFunction index="0" name="Disabled" from="0" to="12" min_dmx_24="0" max_dmx_24="2097151" subattribute="LACCESSOFF" subattribute_user_name="LACCESSOFF" attribute="LACCESS" attribute_user_name="LACCESS" feature="LAMP" feature_user_name="Lamp" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Disabled" from_dmx="0" to_dmx="31"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" name="Enabled" from="0" to="100" min_dmx_24="2097152" max_dmx_24="16777215" subattribute="LACCESSON" subattribute_user_name="LACCESSON" attribute="LACCESS" attribute_user_name="LACCESS" feature="LAMP" feature_user_name="Lamp" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Enabled" from_dmx="225" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="LPAGE" feature="LASERLIB" preset="GOBO" coarse="2" snap="true">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="LPAGE" subattribute_user_name="LPAGE" attribute="LPAGE" attribute_user_name="LPAGE" feature="LASERLIB" feature_user_name="LASERLIB" preset="GOBO" preset_user_name="Gobo">
+						<ChannelSet index="0" name="P 01" from_dmx="0" to_dmx="15"/>
+						<ChannelSet index="1" name="P 02" from_dmx="16" to_dmx="31"/>
+						<ChannelSet index="2" name="P 03" from_dmx="32" to_dmx="47"/>
+						<ChannelSet index="3" name="P 04" from_dmx="48" to_dmx="63"/>
+						<ChannelSet index="4" name="P 05" from_dmx="64" to_dmx="79"/>
+						<ChannelSet index="5" name="P 06" from_dmx="80" to_dmx="95"/>
+						<ChannelSet index="6" name="P 07" from_dmx="96" to_dmx="111"/>
+						<ChannelSet index="7" name="P 08" from_dmx="112" to_dmx="127"/>
+						<ChannelSet index="8" name="P 09" from_dmx="128" to_dmx="143"/>
+						<ChannelSet index="9" name="P 10" from_dmx="144" to_dmx="159"/>
+						<ChannelSet index="10" name="P 11" from_dmx="160" to_dmx="175"/>
+						<ChannelSet index="11" name="P 12" from_dmx="176" to_dmx="191"/>
+						<ChannelSet index="12" name="P 13" from_dmx="192" to_dmx="207"/>
+						<ChannelSet index="13" name="P 14" from_dmx="208" to_dmx="223"/>
+						<ChannelSet index="14" name="P 15" from_dmx="224" to_dmx="239"/>
+						<ChannelSet index="15" name="P 16" from_dmx="240" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="LCUE" feature="LASERLIB" preset="GOBO" coarse="3" snap="true">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="LCUE" subattribute_user_name="LCUE" attribute="LCUE" attribute_user_name="LCUE" feature="LASERLIB" feature_user_name="LASERLIB" preset="GOBO" preset_user_name="Gobo">
+						<ChannelSet index="0" name="Blackout" from_dmx="0" to_dmx="31"/>
+						<ChannelSet index="1" name="Cue 1" from_dmx="32" to_dmx="35"/>
+						<ChannelSet index="2" name="Cue 2" from_dmx="37" to_dmx="39"/>
+						<ChannelSet index="3" name="Cue 3" from_dmx="41" to_dmx="43"/>
+						<ChannelSet index="4" name="Cue 4" from_dmx="45" to_dmx="47"/>
+						<ChannelSet index="5" name="Cue 5" from_dmx="49" to_dmx="51"/>
+						<ChannelSet index="6" name="Cue 6" from_dmx="53" to_dmx="55"/>
+						<ChannelSet index="7" name="Cue 7" from_dmx="57" to_dmx="59"/>
+						<ChannelSet index="8" name="Cue 8" from_dmx="61" to_dmx="63"/>
+						<ChannelSet index="9" name="Cue 9" from_dmx="65" to_dmx="67"/>
+						<ChannelSet index="10" name="Cue 10" from_dmx="69" to_dmx="71"/>
+						<ChannelSet index="11" name="Cue 11" from_dmx="73" to_dmx="75"/>
+						<ChannelSet index="12" name="Cue 12" from_dmx="77" to_dmx="79"/>
+						<ChannelSet index="13" name="Cue 13" from_dmx="81" to_dmx="83"/>
+						<ChannelSet index="14" name="Cue 14" from_dmx="85" to_dmx="87"/>
+						<ChannelSet index="15" name="Cue 15" from_dmx="89" to_dmx="91"/>
+						<ChannelSet index="16" name="Cue 16" from_dmx="93" to_dmx="95"/>
+						<ChannelSet index="17" name="Cue 17" from_dmx="97" to_dmx="99"/>
+						<ChannelSet index="18" name="Cue 18" from_dmx="101" to_dmx="103"/>
+						<ChannelSet index="19" name="Cue 19" from_dmx="105" to_dmx="107"/>
+						<ChannelSet index="20" name="Cue 20" from_dmx="109" to_dmx="111"/>
+						<ChannelSet index="21" name="Cue 21" from_dmx="113" to_dmx="115"/>
+						<ChannelSet index="22" name="Cue 22" from_dmx="117" to_dmx="119"/>
+						<ChannelSet index="23" name="Cue 23" from_dmx="121" to_dmx="123"/>
+						<ChannelSet index="24" name="Cue 24" from_dmx="125" to_dmx="127"/>
+						<ChannelSet index="25" name="Cue 25" from_dmx="129" to_dmx="131"/>
+						<ChannelSet index="26" name="Cue 26" from_dmx="133" to_dmx="135"/>
+						<ChannelSet index="27" name="Cue 27" from_dmx="136" to_dmx="139"/>
+						<ChannelSet index="28" name="Cue 28" from_dmx="141" to_dmx="143"/>
+						<ChannelSet index="29" name="Cue 29" from_dmx="145" to_dmx="147"/>
+						<ChannelSet index="30" name="Cue 30" from_dmx="149" to_dmx="151"/>
+						<ChannelSet index="31" name="Cue 31" from_dmx="153" to_dmx="155"/>
+						<ChannelSet index="32" name="Cue 32" from_dmx="157" to_dmx="159"/>
+						<ChannelSet index="33" name="Cue 33" from_dmx="161" to_dmx="163"/>
+						<ChannelSet index="34" name="Cue 34" from_dmx="165" to_dmx="167"/>
+						<ChannelSet index="35" name="Cue 35" from_dmx="169" to_dmx="171"/>
+						<ChannelSet index="36" name="Cue 36" from_dmx="173" to_dmx="175"/>
+						<ChannelSet index="37" name="Cue 37" from_dmx="177" to_dmx="179"/>
+						<ChannelSet index="38" name="Cue 38" from_dmx="181" to_dmx="183"/>
+						<ChannelSet index="39" name="Cue 39" from_dmx="185" to_dmx="187"/>
+						<ChannelSet index="40" name="Cue 40" from_dmx="189" to_dmx="191"/>
+						<ChannelSet index="41" name="Cue 41" from_dmx="193" to_dmx="195"/>
+						<ChannelSet index="42" name="Cue 42" from_dmx="197" to_dmx="199"/>
+						<ChannelSet index="43" name="Cue 43" from_dmx="121" to_dmx="203"/>
+						<ChannelSet index="44" name="Cue 44" from_dmx="205" to_dmx="207"/>
+						<ChannelSet index="45" name="Cue 45" from_dmx="209" to_dmx="211"/>
+						<ChannelSet index="46" name="Cue 46" from_dmx="213" to_dmx="215"/>
+						<ChannelSet index="47" name="Cue 47" from_dmx="217" to_dmx="219"/>
+						<ChannelSet index="48" name="Cue 48" from_dmx="221" to_dmx="223"/>
+						<ChannelSet index="49" name="REPEAT" from_dmx="225" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="LSPEED" feature="MSPEED" preset="CONTROL" coarse="4" highlight_value="0" snap="true">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="LSPEED" subattribute_user_name="LSPEED" attribute="LSPEED" attribute_user_name="LSPEED" feature="MSPEED" feature_user_name="Mspeed" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="100%" from_dmx="0" to_dmx="15"/>
+						<ChannelSet index="1" name="Pause" from_dmx="17" to_dmx="31"/>
+						<ChannelSet index="2" name="25%-50%" from_dmx="32" to_dmx="64"/>
+						<ChannelSet index="3" name="50%-100%" from_dmx="65" to_dmx="127"/>
+						<ChannelSet index="4" name="100% var" from_dmx="128" to_dmx="128"/>
+						<ChannelSet index="5" name="100%-200%" from_dmx="129" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="SCALEALL" feature="SCALEXYZ" preset="SHAPERS" coarse="6" default="254.999">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="SCALEALL" subattribute_user_name="Normal" attribute="SCALEALL" attribute_user_name="ScaleAll" feature="SCALEXYZ" feature_user_name="Zoom" preset="SHAPERS" preset_user_name="Shapers">
+						<ChannelSet index="0" name="zero size" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="Zooming" from_dmx="1" to_dmx="254"/>
+						<ChannelSet index="2" name="Full Size" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="6" attribute="V_OS_X" feature="V_OBJ_SCALE" preset="VIDEO" coarse="7" default="254.999">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="V_OS_X" subattribute_user_name="X" attribute="V_OS_X" attribute_user_name="X" feature="V_OBJ_SCALE" feature_user_name="VScale" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="I&lt;" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="&lt;&lt;" from_dmx="1" to_dmx="126"/>
+						<ChannelSet index="2" name="0" from_dmx="127" to_dmx="128"/>
+						<ChannelSet index="3" name="&gt;&gt;" from_dmx="129" to_dmx="254"/>
+						<ChannelSet index="4" name="&gt;I" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="7" attribute="V_OS_Y" feature="V_OBJ_SCALE" preset="VIDEO" coarse="8" default="254.999">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="V_OS_Y" subattribute_user_name="Y" attribute="V_OS_Y" attribute_user_name="Y" feature="V_OBJ_SCALE" feature_user_name="VScale" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="I&lt;" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="&lt;&lt;" from_dmx="1" to_dmx="126"/>
+						<ChannelSet index="2" name="0" from_dmx="127" to_dmx="128"/>
+						<ChannelSet index="3" name="&gt;&gt;" from_dmx="129" to_dmx="254"/>
+						<ChannelSet index="4" name="&gt;I" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="8" attribute="V_OR_Z" feature="V_OBJ_ROT" preset="VIDEO" coarse="9">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="V_OR_Z" subattribute_user_name="Z" attribute="V_OR_Z" attribute_user_name="Z" feature="V_OBJ_ROT" feature_user_name="VRot" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="0 degrees" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="0-360 degrees" from_dmx="1" to_dmx="254"/>
+						<ChannelSet index="2" name="360 degrees" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="9" attribute="V_OP_X" feature="V_OBJ_POS" preset="VIDEO" coarse="10" default="127.5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="V_OP_X" subattribute_user_name="X" attribute="V_OP_X" attribute_user_name="X" feature="V_OBJ_POS" feature_user_name="VPos" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Default" from_dmx="128" to_dmx="128"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="10" attribute="V_OP_Y" feature="V_OBJ_POS" preset="VIDEO" coarse="11" default="127.5">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="V_OP_Y" subattribute_user_name="Y" attribute="V_OP_Y" attribute_user_name="Y" feature="V_OBJ_POS" feature_user_name="VPos" preset="VIDEO" preset_user_name="Video">
+						<ChannelSet index="0" name="Default" from_dmx="128" to_dmx="128"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="11" attribute="VISPOINTS" feature="EXTENDEDSET" preset="BEAM" coarse="12" default="254.999" highlight_value="100" snap="true">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="VISPOINTS" subattribute_user_name="VISPOINTS" attribute="VISPOINTS" attribute_user_name="VISPOINTS" feature="EXTENDEDSET" feature_user_name="EXTENDEDSET" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Invisible" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="Visible" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="12" attribute="LSCANRATE" feature="EFFECTMACROS" preset="BEAM" coarse="13" highlight_value="0" snap="true">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="LSCANRATE" subattribute_user_name="LSCANRATE" attribute="LSCANRATE" attribute_user_name="LSCANRATE" feature="EFFECTMACROS" feature_user_name="Macros" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Default" from_dmx="0" to_dmx="31"/>
+						<ChannelSet index="1" name="06K-29K" from_dmx="32" to_dmx="254"/>
+						<ChannelSet index="2" name="30K" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="13" attribute="LRELEASE" feature="EFFECTMACROS" preset="BEAM" coarse="14" snap="true">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="LRELEASE" subattribute_user_name="LRELEASE" attribute="LRELEASE" attribute_user_name="LRELEASE" feature="EFFECTMACROS" feature_user_name="Macros" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="Default" from_dmx="0" to_dmx="31"/>
+						<ChannelSet index="1" name="Hold" from_dmx="33" to_dmx="95"/>
+						<ChannelSet index="2" name="Loop" from_dmx="97" to_dmx="159"/>
+						<ChannelSet index="3" name="Next" from_dmx="161" to_dmx="223"/>
+						<ChannelSet index="4" name="Stop" from_dmx="225" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="14" attribute="COLOR1" feature="COLOR1" preset="COLOR" coarse="15" snap="true">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" wheel="1" subattribute="COLOR1" subattribute_user_name="Select" attribute="COLOR1" attribute_user_name="C1" feature="COLOR1" feature_user_name="Color1" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="Default" from_dmx="0" to_dmx="31" slot_index="0"/>
+						<ChannelSet index="1" name="Red" from_dmx="32" to_dmx="35" slot_index="1"/>
+						<ChannelSet index="2" name="Yellow" from_dmx="36" to_dmx="91" slot_index="2"/>
+						<ChannelSet index="3" name="Green" from_dmx="92" to_dmx="99" slot_index="3"/>
+						<ChannelSet index="4" name="Cyan" from_dmx="100" to_dmx="155" slot_index="4"/>
+						<ChannelSet index="5" name="Blue" from_dmx="156" to_dmx="163" slot_index="5"/>
+						<ChannelSet index="6" name="Magenta" from_dmx="164" to_dmx="219" slot_index="6"/>
+						<ChannelSet index="7" name="Red" from_dmx="220" to_dmx="223" slot_index="7"/>
+						<ChannelSet index="8" name="White" from_dmx="224" to_dmx="255" slot_index="8"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="15" attribute="LFX" feature="EFFECTMACROS" preset="BEAM" coarse="16" snap="true">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="LFX" subattribute_user_name="LFX" attribute="LFX" attribute_user_name="LFX" feature="EFFECTMACROS" feature_user_name="Macros" preset="BEAM" preset_user_name="Beam"/>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0" RW="0"/>
+		</Instances>
+		<Wheels index="2">
+			<Wheel index="0" subattribute="COLOR1" attribute="COLOR1" feature="COLOR1" preset="COLOR">
+				<Slot index="0" media_name="Default"/>
+				<Slot index="1" media_name="Red" g="0" b="0"/>
+				<Slot index="2" media_name="Yellow" b="0"/>
+				<Slot index="3" media_name="Green" r="0" b="0"/>
+				<Slot index="4" media_name="Cyan" r="0"/>
+				<Slot index="5" media_name="Blue" r="0" g="0"/>
+				<Slot index="6" media_name="Magenta" g="0"/>
+				<Slot index="7" media_name="Red2" g="0" b="0"/>
+				<Slot index="8" media_name="White"/>
+			</Wheel>
+		</Wheels>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

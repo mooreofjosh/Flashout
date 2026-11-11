@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA major_vers="3" minor_vers="2" stream_vers="2">
+  <Info datetime="2019-6-3T15:15:18" showfile="ma fixture builder"/>
+  <FixtureType index="0" name="SHOW FLAME" mode="02">
+    <InfoItems>
+      <Info>Created using MA FixtureBuilder version v1.5</Info>
+    <Info type="Revision" date="2019-06-03T10:53:19">ALIENPRO, Uploaded to Fixture Share.</Info></InfoItems>
+    <short_name>SHOWFLAM</short_name>
+    <manufacturer>ALIENPRO</manufacturer>
+    <short_manufacturer>ALIENPRO</short_manufacturer>
+    <Modules index="0">
+      <Module index="0" name="Show Flame" class="Conventional" beamtype="Effect" beam_angle="10" beam_intensity="8000">
+        <Body>
+          <Size x="0.4" y="0.4" z="0.4"/>
+        </Body>
+        <ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1">
+          <ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER">
+            <ChannelSet index="0" name="off" from_dmx="0" to_dmx="109"/>
+            <ChannelSet index="1" name="on, Flame output" from_dmx="110" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+        <ChannelType index="1" attribute="SAFEFIRE" feature="SPECIALFX" preset="CONTROL" coarse="2">
+          <ChannelFunction index="0" from="0.0" to="5.2" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="SAFE" attribute="SAFEFIRE" feature="SPECIALFX" preset="CONTROL">
+            <ChannelSet index="0" name="output flame 1 second" from_dmx="0" to_dmx="0"/>
+            <ChannelSet index="1" name="output flame 1 to 3 seconds" from_dmx="1" to_dmx="255"/>
+          </ChannelFunction>
+        </ChannelType>
+      </Module>
+    </Modules>
+    <Instances index="1">
+      <Instance index="0" patch="1" module_index="0"/>
+    </Instances>
+    <Wheels index="2"/>
+    <FixtureMacroCollect index="5"/>
+  </FixtureType>
+</MA>

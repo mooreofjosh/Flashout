@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.6.1/MA.xsd" major_vers="3" minor_vers="6" stream_vers="1">
+	<Info datetime="2019-03-13T11:08:16" showfile="2019 na aparati gm2 library v3"/>
+	<FixtureType index="136" name="NA MultiFlash DW Qplus" mode="DIMplusCT Exp">
+		<InfoItems>
+			<Info date="2019-03-13T11:07:55">Press and hold - Menu, set option - Control - Advanced - Dim + CT Exp.Use this fixture with the latest software version ( v2.5 ).</Info>
+			<Info type="Invisible" date="2016-05-13T00:00:00">generator_software_name="MA Importer",generator_software_version="00d7136ab774ccc2a27cadac97ac748b188e0aa5"</Info>
+		<Info type="Revision" date="2019-03-13T10:03:44">Initial, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>MultiFlash</short_name>
+		<manufacturer>Company NA</manufacturer>
+		<short_manufacturer>NA</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="RGB Cluster" class="LED" beamtype="Wash" beam_angle="36" beam_intensity="10000">
+				<Body>
+					<Size x="0.43" y="0.21" z="0.145"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="16777215" to_dmx="16777215"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="COLORTEMPERATURE" feature="COLORALL" preset="COLOR" coarse="2" default="34.425" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="COLORTEMPERATURE" subattribute_user_name="ColorTemperature" attribute="COLORTEMPERATURE" attribute_user_name="ColorTemperature" feature="COLORALL" feature_user_name="Color" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="2000 K" from_dmx="0" to_dmx="9"/>
+						<ChannelSet index="1" name="2250 K" from_dmx="10" to_dmx="19"/>
+						<ChannelSet index="2" name="2500 K" from_dmx="20" to_dmx="29"/>
+						<ChannelSet index="3" name="2750 K" from_dmx="30" to_dmx="39"/>
+						<ChannelSet index="4" name="3000K" from_dmx="40" to_dmx="49"/>
+						<ChannelSet index="5" name="3250 K" from_dmx="50" to_dmx="59"/>
+						<ChannelSet index="6" name="3500 K" from_dmx="60" to_dmx="69"/>
+						<ChannelSet index="7" name="3750 K" from_dmx="70" to_dmx="79"/>
+						<ChannelSet index="8" name="4000 K" from_dmx="80" to_dmx="89"/>
+						<ChannelSet index="9" name="4250 K" from_dmx="90" to_dmx="99"/>
+						<ChannelSet index="10" name="4500 K" from_dmx="100" to_dmx="109"/>
+						<ChannelSet index="11" name="4750 K" from_dmx="110" to_dmx="119"/>
+						<ChannelSet index="12" name="5000 K" from_dmx="120" to_dmx="129"/>
+						<ChannelSet index="13" name="5250 K" from_dmx="130" to_dmx="139"/>
+						<ChannelSet index="14" name="5500 K" from_dmx="140" to_dmx="149"/>
+						<ChannelSet index="15" name="5750 K" from_dmx="150" to_dmx="159"/>
+						<ChannelSet index="16" name="6000 K" from_dmx="160" to_dmx="169"/>
+						<ChannelSet index="17" name="6250 K" from_dmx="170" to_dmx="179"/>
+						<ChannelSet index="18" name="6500 K" from_dmx="180" to_dmx="189"/>
+						<ChannelSet index="19" name="6750 K" from_dmx="190" to_dmx="199"/>
+						<ChannelSet index="20" name="7000 K" from_dmx="200" to_dmx="209"/>
+						<ChannelSet index="21" name="8000 K" from_dmx="210" to_dmx="219"/>
+						<ChannelSet index="22" name="9000 K" from_dmx="220" to_dmx="229"/>
+						<ChannelSet index="23" name="10000 K" from_dmx="230" to_dmx="239"/>
+						<ChannelSet index="24" name="11000 K" from_dmx="240" to_dmx="249"/>
+						<ChannelSet index="25" name="12000 K" from_dmx="250" to_dmx="254"/>
+						<ChannelSet index="26" name="12500 K" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5"/>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="Nereid760 Outdoor" mode="35 Channels">
+        <InfoItems>
+            <Info type="Revision" date="2025-03-14T11:04:44">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2017-08-11T08:43:12">Created by Admin </Info>
+            <Info type="Revision" date="2018-03-23T14:52:00">Added Wheelcolors, added Beam Type, Added Beamradius</Info>
+            <Info type="Revision" date="2018-04-17T16:00:00">Added Lowlight values</Info>
+            <Info type="Revision" date="2018-06-12T15:55:00">updated geometries according to 0.86</Info>
+            <Info type="Revision" date="2018-06-26T10:45:00">All other changes according to GDTF 0.86</Info>
+            <Info type="Revision" date="2019-02-25T11:00:00">changed pan/tilt attribute linking</Info>
+            <Info type="Revision" date="2019-09-18T07:35:32">added own geometry structure for standard mode; adjusted geometry offsets regarding to new default models; adjusted real fade times; set DMX invert for Zoom Channel</Info>
+            <Info type="Revision" date="2021-06-22T16:40:23">Updated to GDTF 1.1, Uploaded to GDTF Share.</Info>
+            <Info type="Revision" date="2022-09-23T01:11:09">Rev 1.0, dimmer as base2.0</Info>
+            <Info type="Revision" date="2022-09-23T01:49:53">Geometry changes</Info>
+            <Info type="Revision" date="2022-09-24T03:23:04">Updated Function Triggers</Info>
+            <Info type="Revision" date="2022-09-28T18:06:17">1.0.3</Info>
+            <Info type="Revision" date="2024-02-08T14:39:57">V1.0</Info>
+            <Info type="Revision" date="2024-03-06T16:34:13">MHL1912 Moving Head Wash with Zoom, Uploaded to GDTF Share.</Info>
+            <Info type="Revision" date="2024-03-20T15:15:47">MHL1240 LED Moving Head Zoom 12x40W 2 pieces in Flightcase</Info>
+            <Info type="Revision" date="2024-06-21T14:22:48">MHL1240 </Info>
+            <Info type="Revision" date="2024-09-27T13:10:47">Nereid1940</Info>
+            <Info type="Revision" date="2025-01-02T11:20:46">Nereid760</Info>
+            <Info>
+Experience the weatherproof moving heads of the beamZ Nereid series. This series of professional outdoor moving heads guarantees durability and top performance, thanks to its weatherproof IP65 design that can handle any environment. With powerful motors that ensure smooth and fast movements, these moving heads offer precise positioning like no other.
+The Nereid series brings any event to life with vibrant colours, dynamic effects and impressive light output. Whether for concerts, festivals, outdoor events or architectural applications - this series brings every event to life. Thanks to their clear operation and energy efficiency, they meet all your lighting needs without compromising on versatility and creativity.
+Light up your world with the beamZ Nereid Series and make every event an unforgettable experience!</Info>
+            <Info type="Revision" date="2025-03-14T11:04:50.723">nereid760, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>Nereid760 Outdoor </short_name>
+        <manufacturer>BeamZ</manufacturer>
+        <short_manufacturer>BeamZ</short_manufacturer>
+        <Modules>
+            <Module name="Main Module" class="Headmover" beamtype="Wash" beam_intensity="15000" index="0" beam_angle="15">
+                <Model name="Base" sunshadeType="ExcludeOwnBeam" vertices_have_pos="true" vertices_have_tex0="true" model_type="Model" axis_to_parent="None">
+                    <Offset>
+                        <Location x="0.000000" y="0.000000" z="0.000000"/>
+                        <Rotation x="0.000000" y="-0.000000" z="0.000000"/>
+                        <Scaling x="1" y="1" z="1"/>
+                    </Offset>
+                </Model>
+                <Body>
+                    <Size x="0.16" y="0.16" z="0.11"/>
+                </Body>
+                <ChannelType coarse="1" fine="2" default="0" attribute="PAN" feature="POSITION" preset="POSITION">
+                    <ChannelFunction subattribute="PAN" attribute="PAN" feature="POSITION" preset="POSITION" from="0" to="1" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="3" fine="4" default="0" attribute="TILT" feature="POSITION" preset="POSITION">
+                    <ChannelFunction subattribute="TILT" attribute="TILT" feature="POSITION" preset="POSITION" from="0" to="1" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="5" default="0" attribute="PanTiltMode" feature="Control" preset="Control">
+                    <ChannelFunction subattribute="PanTiltMode" attribute="PanTiltMode" feature="Control" preset="Control" from="0" to="1" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="6" default="0" attribute="ZOOM" feature="FOCUS" preset="FOCUS">
+                    <ChannelFunction subattribute="ZOOM" attribute="ZOOM" feature="FOCUS" preset="FOCUS" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="7" default="0" attribute="EFFECTINDEXROTATE" feature="EFFECT" preset="BEAM">
+                    <ChannelFunction subattribute="EFFECTROTATE" attribute="EFFECTINDEXROTATE" feature="EFFECT" preset="BEAM" from="0" to="100" physfrom="0" physto="0.16666666666666666" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Step rotation" from_dmx="0" to_dmx="127"/>
+                        <ChannelSet name="Counterclockwise rotation" from_dmx="128" to_dmx="188"/>
+                        <ChannelSet name="Stop" from_dmx="189" to_dmx="193"/>
+                        <ChannelSet name="Clockwise rotation" from_dmx="194" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="8" fine="9" default="0" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="0.38910505836575876">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="10" default="0" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="No Function" from_dmx="0" to_dmx="3"/>
+                        <ChannelSet name="Strobe slow/fast" from_dmx="4" to_dmx="103"/>
+                        <ChannelSet name="Open" from_dmx="104" to_dmx="107"/>
+                        <ChannelSet name="Pulse slow/fast" from_dmx="108" to_dmx="207"/>
+                        <ChannelSet name="Open" from_dmx="208" to_dmx="212"/>
+                        <ChannelSet name="Random strobe slow" from_dmx="213" to_dmx="225"/>
+                        <ChannelSet name="Random strobe medium" from_dmx="226" to_dmx="238"/>
+                        <ChannelSet name="Random strobe high" from_dmx="239" to_dmx="251"/>
+                        <ChannelSet name="Open" from_dmx="252" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="11" fine="12" default="0" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="0.38910505836575876">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="13" fine="14" default="0" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="0.38910505836575876">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="15" fine="16" default="0" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="0.38910505836575876">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="17" fine="18" default="0" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" highlight_value="0.38910505836575876">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="19" default="0" attribute="CTO" feature="CTC" preset="COLOR">
+                    <ChannelFunction subattribute="CTO" attribute="CTO" feature="CTC" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="No Function" from_dmx="0" to_dmx="9"/>
+                        <ChannelSet name="Warm-Cold White" from_dmx="10" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="20" default="0" attribute="COLORMIXMODE" feature="Control" preset="Control">
+                    <ChannelFunction subattribute="COLORMIXMODE" attribute="COLORMIXMODE" feature="Control" preset="Control" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="No Function" from_dmx="0" to_dmx="9"/>
+                        <ChannelSet name="Color select" from_dmx="10" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="21" default="0" attribute="BEAMRESET" feature="RESET" preset="CONTROL">
+                    <ChannelFunction subattribute="BEAMRESET" attribute="BEAMRESET" feature="RESET" preset="CONTROL" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="No Function" from_dmx="0" to_dmx="25"/>
+                        <ChannelSet name="Motor reset" from_dmx="26" to_dmx="76"/>
+                        <ChannelSet name="XY motor reset" from_dmx="77" to_dmx="127"/>
+                        <ChannelSet name="All reset" from_dmx="128" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="22" default="0" attribute="DIM_1" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="23" default="0" attribute="SHUTTER_1" feature="SHUTTER" preset="BEAM">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="No Function" from_dmx="0" to_dmx="3"/>
+                        <ChannelSet name="Strobe slow/fast" from_dmx="4" to_dmx="103"/>
+                        <ChannelSet name="Open" from_dmx="104" to_dmx="107"/>
+                        <ChannelSet name="Pulse slow/fast" from_dmx="108" to_dmx="207"/>
+                        <ChannelSet name="Open" from_dmx="208" to_dmx="212"/>
+                        <ChannelSet name="Random strobe slow" from_dmx="213" to_dmx="225"/>
+                        <ChannelSet name="Random strobe medium" from_dmx="226" to_dmx="238"/>
+                        <ChannelSet name="Random strobe high" from_dmx="239" to_dmx="251"/>
+                        <ChannelSet name="Open" from_dmx="252" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="24" default="0" attribute="EFFECT" feature="Beam" preset="Beam">
+                    <ChannelFunction subattribute="AnimationWheel1Macro" attribute="EFFECT" feature="Beam" preset="Beam" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="No Function" from_dmx="0" to_dmx="7"/>
+                        <ChannelSet name="Macro 1" from_dmx="8" to_dmx="13"/>
+                        <ChannelSet name="Macro 2" from_dmx="14" to_dmx="19"/>
+                        <ChannelSet name="Macro 3" from_dmx="20" to_dmx="25"/>
+                        <ChannelSet name="Macro 4" from_dmx="26" to_dmx="31"/>
+                        <ChannelSet name="Macro 5" from_dmx="32" to_dmx="37"/>
+                        <ChannelSet name="Macro 6" from_dmx="38" to_dmx="43"/>
+                        <ChannelSet name="Macro 7" from_dmx="44" to_dmx="49"/>
+                        <ChannelSet name="Macro 8" from_dmx="50" to_dmx="55"/>
+                        <ChannelSet name="Macro 9" from_dmx="56" to_dmx="61"/>
+                        <ChannelSet name="Macro 10" from_dmx="62" to_dmx="67"/>
+                        <ChannelSet name="Macro 11" from_dmx="68" to_dmx="73"/>
+                        <ChannelSet name="Macro 12" from_dmx="74" to_dmx="79"/>
+                        <ChannelSet name="Macro 13" from_dmx="80" to_dmx="85"/>
+                        <ChannelSet name="Macro 14" from_dmx="86" to_dmx="91"/>
+                        <ChannelSet name="Macro 15" from_dmx="92" to_dmx="97"/>
+                        <ChannelSet name="Macro 16" from_dmx="98" to_dmx="103"/>
+                        <ChannelSet name="Macro 17" from_dmx="104" to_dmx="109"/>
+                        <ChannelSet name="Macro 18" from_dmx="110" to_dmx="115"/>
+                        <ChannelSet name="Macro 19" from_dmx="116" to_dmx="121"/>
+                        <ChannelSet name="Macro 20" from_dmx="122" to_dmx="127"/>
+                        <ChannelSet name="Macro 21" from_dmx="128" to_dmx="133"/>
+                        <ChannelSet name="Macro 22" from_dmx="134" to_dmx="139"/>
+                        <ChannelSet name="Macro 23" from_dmx="140" to_dmx="145"/>
+                        <ChannelSet name="Macro 24" from_dmx="146" to_dmx="151"/>
+                        <ChannelSet name="Macro 25" from_dmx="152" to_dmx="157"/>
+                        <ChannelSet name="Macro 26" from_dmx="158" to_dmx="163"/>
+                        <ChannelSet name="Macro 27" from_dmx="164" to_dmx="169"/>
+                        <ChannelSet name="Macro 28" from_dmx="170" to_dmx="175"/>
+                        <ChannelSet name="Macro 29" from_dmx="176" to_dmx="181"/>
+                        <ChannelSet name="Macro 30" from_dmx="182" to_dmx="187"/>
+                        <ChannelSet name="Macro 31" from_dmx="188" to_dmx="193"/>
+                        <ChannelSet name="Macro 32" from_dmx="194" to_dmx="199"/>
+                        <ChannelSet name="Macro 33" from_dmx="200" to_dmx="205"/>
+                        <ChannelSet name="Macro 34" from_dmx="206" to_dmx="211"/>
+                        <ChannelSet name="Macro 35" from_dmx="212" to_dmx="217"/>
+                        <ChannelSet name="Macro 36" from_dmx="218" to_dmx="223"/>
+                        <ChannelSet name="Macro 37" from_dmx="224" to_dmx="229"/>
+                        <ChannelSet name="Macro 38" from_dmx="230" to_dmx="235"/>
+                        <ChannelSet name="Macro 39" from_dmx="236" to_dmx="241"/>
+                        <ChannelSet name="Macro 40" from_dmx="242" to_dmx="247"/>
+                        <ChannelSet name="Macro 41" from_dmx="248" to_dmx="253"/>
+                        <ChannelSet name="Macro 42" from_dmx="254" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="25" default="0" attribute="EFFECTRATE" feature="Beam" preset="Beam">
+                    <ChannelFunction subattribute="ShaperMacrosSpeed" attribute="EFFECTRATE" feature="Beam" preset="Beam" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Macro index" from_dmx="0" to_dmx="63"/>
+                        <ChannelSet name="Clockwise rotation" from_dmx="64" to_dmx="158"/>
+                        <ChannelSet name="Stop" from_dmx="159" to_dmx="160"/>
+                        <ChannelSet name="Counterclockwise rotation" from_dmx="161" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="26" default="0" attribute="COLORRGB1_1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="27" default="0" attribute="COLORRGB2_1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="28" default="0" attribute="COLORRGB3_1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="29" default="0" attribute="COLORRGB5_1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB5" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="30" default="0" attribute="Effects1Fade" feature="Beam" preset="Beam">
+                    <ChannelFunction subattribute="Effects1Fade" attribute="Effects1Fade" feature="Beam" preset="Beam" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="31" default="0" attribute="BeamShaperMacro" feature="Beam" preset="Beam">
+                    <ChannelFunction subattribute="BeamShaperMacro" attribute="BeamShaperMacro" feature="Beam" preset="Beam" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="32" default="0" attribute="FRAMEMACROS" feature="Shapers" preset="Shapers">
+                    <ChannelFunction subattribute="FRAMEMACROS" attribute="FRAMEMACROS" feature="Shapers" preset="Shapers" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+            </Module>
+            <Module name="Background " class="Conventional" beamtype="Wash" beam_intensity="10000" index="4" beam_angle="15">
+                <Model/>
+                <ChannelType coarse="33" default="0" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215"/>
+                </ChannelType>
+                <ChannelType coarse="34" default="0" attribute="SHUTTER" feature="SHUTTER" preset="BEAM">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="No Function" from_dmx="0" to_dmx="3"/>
+                        <ChannelSet name="Strobe slow/fast" from_dmx="4" to_dmx="103"/>
+                        <ChannelSet name="Open" from_dmx="104" to_dmx="107"/>
+                        <ChannelSet name="Pulse slow/fast" from_dmx="108" to_dmx="207"/>
+                        <ChannelSet name="Open" from_dmx="208" to_dmx="212"/>
+                        <ChannelSet name="Random strobe slow" from_dmx="213" to_dmx="225"/>
+                        <ChannelSet name="Random strobe medium" from_dmx="226" to_dmx="238"/>
+                        <ChannelSet name="Random strobe high" from_dmx="239" to_dmx="251"/>
+                        <ChannelSet name="Open" from_dmx="252" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="35" default="0" attribute="EFFECT" feature="EFFECT" preset="BEAM">
+                    <ChannelFunction subattribute="EFFECTSELECT" attribute="EFFECT" feature="EFFECT" preset="BEAM" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="Wash " from_dmx="0" to_dmx="7"/>
+                        <ChannelSet name="No Function" from_dmx="8" to_dmx="8"/>
+                        <ChannelSet name="Ring 1" from_dmx="9" to_dmx="78"/>
+                        <ChannelSet name="Ring 2" from_dmx="79" to_dmx="148"/>
+                        <ChannelSet name="Ring 1/2" from_dmx="149" to_dmx="218"/>
+                        <ChannelSet name="Mirror effect" from_dmx="219" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+            <Instance module_index="1" patch="1" locked="true"/>
+        </Instances>
+        <Wheels/>
+    </FixtureType>
+</MA>

@@ -1,0 +1,2087 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.60/MA.xsd" major_vers="3" minor_vers="9" stream_vers="60">
+	<Info datetime="2024-01-18T12:07:02" showfile="essais divers v2 thru v4"/>
+	<FixtureType index="19" name="P1 Mini" mode="Pixel">
+		<InfoItems>
+			<Info>Set menu option DMX Mode to Pixel for this personality</Info>
+			<Info type="Revision" date="2021-07-30T00:00:00">Automated import from MA Lighting (C-RevNum: 3; Date: 2021-03-11)</Info>
+			<Info type="Invisible" date="2021-07-30T00:00:00">generator_software_name="MA Importer",generator_software_version="649d65d4444e8999f157704b49c50f945e8ea2e8"</Info>
+		<Info type="Revision" date="2024-02-23T19:35:20">Initial, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>P1MinPix</short_name>
+		<manufacturer>Portman</manufacturer>
+		<short_manufacturer>Portman</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="LED" beamtype="Wash" beam_angle="25" beam_intensity="0">
+				<Body>
+					<Size x="0.15" y="0.15" z="0.05"/>
+				</Body>
+				<ChannelType index="0" attribute="SHUTTERGLOW" feature="SHUTTER" preset="BEAM" coarse="36" default="0.001" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="7.812" min_dmx_24="0" max_dmx_24="1310719" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="9" slot_from="1" slot_to="1"/>
+						<ChannelSet index="1" name="closed" from_dmx="10" to_dmx="19" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" name="Strobe 1..100%" from="7.812" to="47.656" min_dmx_24="1310720" max_dmx_24="7995391" physfrom="0.5" physto="30" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Strobe" from_dmx="20" to_dmx="20"/>
+						<ChannelSet index="1" name="max Strobe" from_dmx="121" to_dmx="121"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" from="47.656" to="50.781" min_dmx_24="7995392" max_dmx_24="8519679" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open (2)" from_dmx="122" to_dmx="129" auto_create="false"/>
+					</ChannelFunction>
+					<ChannelFunction index="3" name="Rnd 1..100%" from="50.781" to="96.094" min_dmx_24="8519680" max_dmx_24="16121855" physfrom="0.5" physto="30" subattribute="STROBE_RANDOM" subattribute_user_name="Rnd" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Rnd" from_dmx="130" to_dmx="130"/>
+						<ChannelSet index="1" name="max Rnd" from_dmx="245" to_dmx="245"/>
+					</ChannelFunction>
+					<ChannelFunction index="4" from="96.094" to="100" min_dmx_24="16121856" max_dmx_24="16777215" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open (3)" from_dmx="246" to_dmx="255" auto_create="false"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="SHUTTERMAIN" feature="SHUTTER" preset="BEAM" coarse="37" default="0.001" highlight_value="0">
+					<ChannelFunction index="0" from="0" to="7.812" min_dmx_24="0" max_dmx_24="1310719" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="9" slot_from="1" slot_to="1"/>
+						<ChannelSet index="1" name="closed" from_dmx="10" to_dmx="19" slot_from="0" slot_to="0"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" name="Strobe 1..100%" from="7.812" to="47.656" min_dmx_24="1310720" max_dmx_24="7995391" physfrom="0.5" physto="30" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Strobe" from_dmx="20" to_dmx="20"/>
+						<ChannelSet index="1" name="max Strobe" from_dmx="121" to_dmx="121"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" from="47.656" to="50.781" min_dmx_24="7995392" max_dmx_24="8519679" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open (2)" from_dmx="122" to_dmx="129" auto_create="false"/>
+					</ChannelFunction>
+					<ChannelFunction index="3" name="Rnd 1..100%" from="50.781" to="96.094" min_dmx_24="8519680" max_dmx_24="16121855" physfrom="0.5" physto="30" subattribute="STROBE_RANDOM" subattribute_user_name="Rnd" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Rnd" from_dmx="130" to_dmx="130"/>
+						<ChannelSet index="1" name="max Rnd" from_dmx="245" to_dmx="245"/>
+					</ChannelFunction>
+					<ChannelFunction index="4" from="96.094" to="100" min_dmx_24="16121856" max_dmx_24="16777215" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open (3)" from_dmx="246" to_dmx="255" auto_create="false"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="COLORMIXERGLOW" feature="COLORMIX" preset="COLOR" coarse="38">
+					<ChannelFunction index="0" from="0" to="93.137" min_dmx_24="0" max_dmx_24="15597567" wheel="1" subattribute="COLORMIXCOLOR" subattribute_user_name="Color" attribute="COLORMIXER" attribute_user_name="ColorMix" feature="COLORMIX" feature_user_name="ColorMix" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="9" slot_index="0"/>
+						<ChannelSet index="1" name="White" from_dmx="10" to_dmx="39" slot_index="0"/>
+						<ChannelSet index="2" name="RED" from_dmx="40" to_dmx="40" slot_index="1"/>
+						<ChannelSet index="3" name="red&gt;yellow" from_dmx="41" to_dmx="71" auto_create="false"/>
+						<ChannelSet index="4" name="YELLOW" from_dmx="72" to_dmx="72" slot_index="2"/>
+						<ChannelSet index="5" name="yellow&gt;green" from_dmx="73" to_dmx="103" auto_create="false"/>
+						<ChannelSet index="6" name="GREEN" from_dmx="104" to_dmx="104" slot_index="3"/>
+						<ChannelSet index="7" name="green&gt;cyan" from_dmx="105" to_dmx="140" auto_create="false"/>
+						<ChannelSet index="8" name="CYAN" from_dmx="141" to_dmx="141" slot_index="4"/>
+						<ChannelSet index="9" name="cyan&gt;blue" from_dmx="142" to_dmx="172" auto_create="false"/>
+						<ChannelSet index="10" name="BLUE" from_dmx="173" to_dmx="173" slot_index="5"/>
+						<ChannelSet index="11" name="blue&gt;magenta" from_dmx="174" to_dmx="204" auto_create="false"/>
+						<ChannelSet index="12" name="MAGENTA" from_dmx="205" to_dmx="205" slot_index="6"/>
+						<ChannelSet index="13" name="magenta&gt;red" from_dmx="206" to_dmx="236" auto_create="false"/>
+						<ChannelSet index="14" name="RED (2)" from_dmx="237" to_dmx="237" slot_index="1"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="93.137" to="99.804" min_dmx_24="15597568" max_dmx_24="16711679" subattribute="COLORMIXCYCLE" subattribute_user_name="Cycle" attribute="COLORMIXER" attribute_user_name="ColorMix" feature="COLORMIX" feature_user_name="ColorMix" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min spin" from_dmx="238" to_dmx="238"/>
+						<ChannelSet index="1" name="max spin" from_dmx="254" to_dmx="254"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" from="99.804" to="100" min_dmx_24="16711680" max_dmx_24="16777215" wheel="1" subattribute="COLORMIXCOLOR" subattribute_user_name="Color" attribute="COLORMIXER" attribute_user_name="ColorMix" feature="COLORMIX" feature_user_name="ColorMix" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="open (2)" from_dmx="255" to_dmx="255" slot_index="0"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="DIM4" feature="DIMMER" preset="DIMMER" coarse="39">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM4" subattribute_user_name="DimMacros" attribute="DIM4" attribute_user_name="DimMacros" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="MACROS" feature="MACRO" preset="CONTROL" coarse="40" snap="true">
+					<ChannelFunction index="0" from="0" to="35.49" min_dmx_24="0" max_dmx_24="5963775" subattribute="COLORMIXMACROSELECT" subattribute_user_name="Macro Select" attribute="COLORMIXER" attribute_user_name="ColorMix" feature="COLORMIX" feature_user_name="ColorMix" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="No macro" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="Macro 1" from_dmx="1" to_dmx="1"/>
+						<ChannelSet index="2" name="Macro 2" from_dmx="2" to_dmx="2"/>
+						<ChannelSet index="3" name="Macro 3" from_dmx="3" to_dmx="3"/>
+						<ChannelSet index="4" name="Macro 4" from_dmx="4" to_dmx="4"/>
+						<ChannelSet index="5" name="Macro 5" from_dmx="5" to_dmx="5"/>
+						<ChannelSet index="6" name="Macro 6" from_dmx="6" to_dmx="6"/>
+						<ChannelSet index="7" name="Macro 7" from_dmx="7" to_dmx="7"/>
+						<ChannelSet index="8" name="Macro 8" from_dmx="8" to_dmx="8"/>
+						<ChannelSet index="9" name="Macro 9" from_dmx="9" to_dmx="9"/>
+						<ChannelSet index="10" name="Macro 10" from_dmx="10" to_dmx="10"/>
+						<ChannelSet index="11" name="Macro 11" from_dmx="11" to_dmx="11"/>
+						<ChannelSet index="12" name="Macro 12" from_dmx="12" to_dmx="12"/>
+						<ChannelSet index="13" name="Macro 13" from_dmx="13" to_dmx="13"/>
+						<ChannelSet index="14" name="Macro 14" from_dmx="14" to_dmx="14"/>
+						<ChannelSet index="15" name="Macro 15" from_dmx="15" to_dmx="15"/>
+						<ChannelSet index="16" name="Macro 16" from_dmx="16" to_dmx="16"/>
+						<ChannelSet index="17" name="Macro 17" from_dmx="17" to_dmx="17"/>
+						<ChannelSet index="18" name="Macro 18" from_dmx="18" to_dmx="18"/>
+						<ChannelSet index="19" name="Macro 19" from_dmx="19" to_dmx="19"/>
+						<ChannelSet index="20" name="Macro 20" from_dmx="20" to_dmx="20"/>
+						<ChannelSet index="21" name="Macro 21" from_dmx="21" to_dmx="21"/>
+						<ChannelSet index="22" name="Macro 22" from_dmx="22" to_dmx="22"/>
+						<ChannelSet index="23" name="Macro 23" from_dmx="23" to_dmx="23"/>
+						<ChannelSet index="24" name="Macro 24" from_dmx="24" to_dmx="24"/>
+						<ChannelSet index="25" name="Macro 25" from_dmx="25" to_dmx="25"/>
+						<ChannelSet index="26" name="Macro 26" from_dmx="26" to_dmx="26"/>
+						<ChannelSet index="27" name="Macro 27" from_dmx="27" to_dmx="27"/>
+						<ChannelSet index="28" name="Macro 28" from_dmx="28" to_dmx="28"/>
+						<ChannelSet index="29" name="Macro 29" from_dmx="29" to_dmx="29"/>
+						<ChannelSet index="30" name="Macro 30" from_dmx="30" to_dmx="30"/>
+						<ChannelSet index="31" name="Macro 31" from_dmx="31" to_dmx="31"/>
+						<ChannelSet index="32" name="Macro 32" from_dmx="32" to_dmx="32"/>
+						<ChannelSet index="33" name="Macro 33" from_dmx="33" to_dmx="33"/>
+						<ChannelSet index="34" name="Macro 34" from_dmx="34" to_dmx="34"/>
+						<ChannelSet index="35" name="Macro 35" from_dmx="35" to_dmx="35"/>
+						<ChannelSet index="36" name="Macro 36" from_dmx="36" to_dmx="36"/>
+						<ChannelSet index="37" name="Macro 37" from_dmx="37" to_dmx="37"/>
+						<ChannelSet index="38" name="Macro 38" from_dmx="38" to_dmx="38"/>
+						<ChannelSet index="39" name="Macro 39" from_dmx="39" to_dmx="39"/>
+						<ChannelSet index="40" name="Macro 40" from_dmx="40" to_dmx="40"/>
+						<ChannelSet index="41" name="Macro 41" from_dmx="41" to_dmx="41"/>
+						<ChannelSet index="42" name="Macro 42" from_dmx="42" to_dmx="42"/>
+						<ChannelSet index="43" name="Macro 43" from_dmx="43" to_dmx="43"/>
+						<ChannelSet index="44" name="Macro 44" from_dmx="44" to_dmx="44"/>
+						<ChannelSet index="45" name="Macro 45" from_dmx="45" to_dmx="45"/>
+						<ChannelSet index="46" name="Macro 46" from_dmx="46" to_dmx="46"/>
+						<ChannelSet index="47" name="Macro 47" from_dmx="47" to_dmx="47"/>
+						<ChannelSet index="48" name="Macro 48" from_dmx="48" to_dmx="48"/>
+						<ChannelSet index="49" name="Macro 49" from_dmx="49" to_dmx="49"/>
+						<ChannelSet index="50" name="Macro 50" from_dmx="50" to_dmx="50"/>
+						<ChannelSet index="51" name="Macro 51" from_dmx="51" to_dmx="51"/>
+						<ChannelSet index="52" name="Macro 52" from_dmx="52" to_dmx="52"/>
+						<ChannelSet index="53" name="Macro 53" from_dmx="53" to_dmx="53"/>
+						<ChannelSet index="54" name="Macro 54" from_dmx="54" to_dmx="54"/>
+						<ChannelSet index="55" name="Macro 55" from_dmx="55" to_dmx="55"/>
+						<ChannelSet index="56" name="Macro 56" from_dmx="56" to_dmx="56"/>
+						<ChannelSet index="57" name="Macro 57" from_dmx="57" to_dmx="57"/>
+						<ChannelSet index="58" name="Macro 58" from_dmx="58" to_dmx="58"/>
+						<ChannelSet index="59" name="Macro 59" from_dmx="59" to_dmx="59"/>
+						<ChannelSet index="60" name="Macro 60" from_dmx="60" to_dmx="60"/>
+						<ChannelSet index="61" name="Macro 61" from_dmx="61" to_dmx="61"/>
+						<ChannelSet index="62" name="Macro 62" from_dmx="62" to_dmx="62"/>
+						<ChannelSet index="63" name="Macro 63" from_dmx="63" to_dmx="63"/>
+						<ChannelSet index="64" name="Macro 64" from_dmx="64" to_dmx="64"/>
+						<ChannelSet index="65" name="Macro 65" from_dmx="65" to_dmx="65"/>
+						<ChannelSet index="66" name="Macro 66" from_dmx="66" to_dmx="66"/>
+						<ChannelSet index="67" name="Macro 67" from_dmx="67" to_dmx="67"/>
+						<ChannelSet index="68" name="Macro 68" from_dmx="68" to_dmx="68"/>
+						<ChannelSet index="69" name="Macro 69" from_dmx="69" to_dmx="69"/>
+						<ChannelSet index="70" name="Macro 70" from_dmx="70" to_dmx="70"/>
+						<ChannelSet index="71" name="Macro 71" from_dmx="71" to_dmx="71"/>
+						<ChannelSet index="72" name="Macro 72" from_dmx="72" to_dmx="72"/>
+						<ChannelSet index="73" name="Macro 73" from_dmx="73" to_dmx="73"/>
+						<ChannelSet index="74" name="Macro 74" from_dmx="74" to_dmx="74"/>
+						<ChannelSet index="75" name="Macro 75" from_dmx="75" to_dmx="75"/>
+						<ChannelSet index="76" name="Macro 76" from_dmx="76" to_dmx="76"/>
+						<ChannelSet index="77" name="Macro 77" from_dmx="77" to_dmx="77"/>
+						<ChannelSet index="78" name="Macro 78" from_dmx="78" to_dmx="78"/>
+						<ChannelSet index="79" name="Macro 79" from_dmx="79" to_dmx="79"/>
+						<ChannelSet index="80" name="Macro 80" from_dmx="80" to_dmx="80"/>
+						<ChannelSet index="81" name="Macro 81" from_dmx="81" to_dmx="81"/>
+						<ChannelSet index="82" name="Macro 82" from_dmx="82" to_dmx="82"/>
+						<ChannelSet index="83" name="Macro 83" from_dmx="83" to_dmx="83"/>
+						<ChannelSet index="84" name="Macro 84" from_dmx="84" to_dmx="84"/>
+						<ChannelSet index="85" name="Macro 85" from_dmx="85" to_dmx="85"/>
+						<ChannelSet index="86" name="Macro 86" from_dmx="86" to_dmx="86"/>
+						<ChannelSet index="87" name="Macro 87" from_dmx="87" to_dmx="87"/>
+						<ChannelSet index="88" name="Macro 88" from_dmx="88" to_dmx="88"/>
+						<ChannelSet index="89" name="Macro 89" from_dmx="89" to_dmx="89"/>
+						<ChannelSet index="90" name="Macro 90" from_dmx="90" to_dmx="90"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="35.49" to="100" min_dmx_24="5963776" max_dmx_24="16777215" subattribute="NOFEATURE" subattribute_user_name="No Feature" attribute="DUMMY" attribute_user_name="Dummy" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control"/>
+				</ChannelType>
+				<ChannelType index="5" attribute="MACROSPEED" feature="MACRO" preset="CONTROL" coarse="41">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="MACROSPEED" subattribute_user_name="MacroSpeed" attribute="MACROSPEED" attribute_user_name="MacroSpeed" feature="MACRO" feature_user_name="Macro" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Stop" from_dmx="0" to_dmx="9"/>
+						<ChannelSet index="1" name="&gt;" from_dmx="10" to_dmx="10"/>
+						<ChannelSet index="2" name="Speed 1..100%" from_dmx="11" to_dmx="126"/>
+						<ChannelSet index="3" name="&gt;&gt;&gt;" from_dmx="127" to_dmx="127"/>
+						<ChannelSet index="4" name="&lt;&lt;&lt;" from_dmx="128" to_dmx="128"/>
+						<ChannelSet index="5" name="Speed -100..-1%" from_dmx="129" to_dmx="244"/>
+						<ChannelSet index="6" name="&lt;" from_dmx="245" to_dmx="245"/>
+						<ChannelSet index="7" name="Stop (2)" from_dmx="246" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="6" attribute="FIXTUREGLOBALRESET" feature="RESET" preset="CONTROL" coarse="42">
+					<ChannelFunction index="0" from="0" to="12.109" min_dmx_24="0" max_dmx_24="2031615" subattribute="NOFEATURE" subattribute_user_name="No Feature" attribute="DUMMY" attribute_user_name="Dummy" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control"/>
+					<ChannelFunction index="1" from="12.109" to="19.804" min_dmx_24="2031616" max_dmx_24="3342335" subattribute="INTENSITYMODE" subattribute_user_name="Mode" attribute="INTENSITYMODE" attribute_user_name="Mode" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="Flicker Mode 1" from_dmx="31" to_dmx="40" slot_from="1" slot_to="1"/>
+						<ChannelSet index="1" name="Flicker Mode 2" from_dmx="41" to_dmx="50" slot_from="2" slot_to="2"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" from="19.804" to="23.828" min_dmx_24="3342336" max_dmx_24="3997695" subattribute="NOFEATURE" subattribute_user_name="No Feature" attribute="DUMMY" attribute_user_name="Dummy" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control"/>
+					<ChannelFunction index="3" from="23.828" to="35.49" min_dmx_24="3997696" max_dmx_24="5963775" subattribute="DIMMERCURVE" subattribute_user_name="Curve" attribute="DIMMERCURVE" attribute_user_name="Function" feature="FIXTURE" feature_user_name="Fixture" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Linear" from_dmx="61" to_dmx="70" slot_from="1" slot_to="1"/>
+						<ChannelSet index="1" name="Logarithmic" from_dmx="71" to_dmx="80" slot_from="2" slot_to="2"/>
+						<ChannelSet index="2" name="Halogen" from_dmx="81" to_dmx="90"/>
+					</ChannelFunction>
+					<ChannelFunction index="4" from="35.49" to="96.094" min_dmx_24="5963776" max_dmx_24="16121855" subattribute="NOFEATURE" subattribute_user_name="No Feature" attribute="DUMMY" attribute_user_name="Dummy" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control"/>
+					<ChannelFunction index="5" from="96.094" to="100" min_dmx_24="16121856" max_dmx_24="16777215" subattribute="FIXTUREGLOBALRESET" subattribute_user_name="Reset" attribute="FIXTUREGLOBALRESET" attribute_user_name="FixtureGlobal" feature="RESET" feature_user_name="Reset" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Reset" from_dmx="246" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+			<Module index="1" name="Pixel" class="LED" beamtype="Wash" beam_angle="25" beam_intensity="10000">
+				<Body>
+					<Size x="0.15" y="0.15" z="0.05"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" coarse="2" default="255" highlight_value="100" color="ff0000">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB1" subattribute_user_name="R" attribute="COLORRGB1" attribute_user_name="R" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" coarse="3" default="255" highlight_value="100" color="00ff00">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB2" subattribute_user_name="G" attribute="COLORRGB2" attribute_user_name="G" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" coarse="4" default="255" highlight_value="100" color="0000ff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB3" subattribute_user_name="B" attribute="COLORRGB3" attribute_user_name="B" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="COLORRGB5" feature="COLORRGB" preset="COLOR" coarse="5" highlight_value="0" color="ffffff">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="COLORRGB5" subattribute_user_name="White" attribute="COLORRGB5" attribute_user_name="White" feature="COLORRGB" feature_user_name="MixColor" preset="COLOR" preset_user_name="Color">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="5" attribute="DIM3" feature="DIMMER" preset="DIMMER" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIMGLOW" subattribute_user_name="DimGlow" attribute="DIM3" attribute_user_name="DimGlow" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="16777215" to_dmx="16777215"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+			<Instance index="1" module_index="1" Y="0.25"/>
+			<Instance index="2" module_index="1" patch="6" X="-0.3" Y="0.125"/>
+			<Instance index="3" module_index="1" patch="11" X="-0.3" Y="-0.125"/>
+			<Instance index="4" module_index="1" patch="16" Y="-0.25"/>
+			<Instance index="5" module_index="1" patch="21" X="0.3" Y="-0.125"/>
+			<Instance index="6" module_index="1" patch="26" X="0.3" Y="0.125"/>
+			<Instance index="7" module_index="1" patch="31"/>
+		</Instances>
+		<Wheels index="2">
+			<Wheel index="0" subattribute="COLORMIXCOLOR" attribute="COLORMIXER" feature="COLORMIX" preset="COLOR">
+				<Slot index="0" media_name="OPEN"/>
+				<Slot index="1" media_name="RED" g="0" b="0"/>
+				<Slot index="2" media_name="YELLOW" b="0"/>
+				<Slot index="3" media_name="GREEN" r="0" b="0"/>
+				<Slot index="4" media_name="CYAN" r="0"/>
+				<Slot index="5" media_name="BLUE" r="0" g="0"/>
+				<Slot index="6" media_name="MAGENTA" g="0"/>
+			</Wheel>
+		</Wheels>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5">
+			<FixtureMacro index="0">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="1">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="1" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="2">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="2" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="3">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="3" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="4">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="4" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="5">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="5" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="6">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="6" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="7">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="7" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="8">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="8" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="9">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="9" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="10">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="10" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="11">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="11" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="12">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="12" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="13">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="13" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="14">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="14" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="15">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="15" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="16">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="16" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="17">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="17" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="18">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="18" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="19">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="19" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="20">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="20" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="21">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="21" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="22">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="22" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="23">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="23" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="24">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="24" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="25">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="25" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="26">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="26" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="27">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="27" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="28">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="28" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="29">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="29" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="30">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="30" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="31">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="31" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="32">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="32" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="33">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="33" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="34">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="34" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="35">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="35" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="36">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="36" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="37">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="37" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="38">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="38" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="39">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="39" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="40">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="40" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="41">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="41" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="42">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="42" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="43">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="43" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="44">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="44" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="45">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="45" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="46">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="46" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="47">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="47" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="48">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="48" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="49">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="49" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="50">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="50" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="51">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="51" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="52">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="52" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="53">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="53" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="54">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="54" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="55">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="55" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="56">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="56" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="57">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="57" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="58">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="58" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="59">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="59" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="60">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="60" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="61">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="61" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="62">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="62" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="63">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="63" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="64">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="64" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="65">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="65" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="66">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="66" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="67">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="67" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="68">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="68" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="69">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="69" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="70">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="70" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="71">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="71" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="72">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="72" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="73">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="73" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="74">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="74" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="75">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="75" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="76">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="76" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="77">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="77" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="78">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="78" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="79">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="79" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="80">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="80" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="81">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="81" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="82">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="82" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="83">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="83" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="84">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="84" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="85">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="85" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="86">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="86" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="87">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="87" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="88">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="88" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="89">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="89" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="90">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="90" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="91">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="91" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="92">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="92" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="93">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="93" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="94">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="94" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="95">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="95" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="96">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="96" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="97">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="97" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="98">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="98" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="99">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="99" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="100">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="100" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="101">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="101" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="102">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="102" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="103">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="103" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="104">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="104" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="105">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="105" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="106">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="106" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="107">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="107" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="108">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="108" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="109">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="109" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="110">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="110" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="111">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="111" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="112">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="112" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="113">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="113" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="114">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="114" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="115">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="115" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="116">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="116" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="117">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="117" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="118">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="118" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="119">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="119" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="120">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="120" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="121">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="121" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="122">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="122" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="123">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="123" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="124">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="124" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="125">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="125" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="126">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="126" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="127">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="127" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="128">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="128" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="129">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="129" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="130">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="130" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="131">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="131" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="132">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="132" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="133">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="133" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="134">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="134" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="135">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="135" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="136">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="136" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="137">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="137" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="138">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="138" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="139">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="139" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="140">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="140" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="141">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="141" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="142">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="142" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="143">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="143" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="144">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="144" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="145">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="145" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="146">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="146" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="147">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="147" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="148">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="148" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="149">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="149" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="150">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="150" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="151">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="151" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="152">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="152" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="153">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="153" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="154">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="154" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="155">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="155" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="156">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="156" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="157">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="157" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="158">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="158" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="159">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="159" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="160">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="160" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="161">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="161" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="162">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="162" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="163">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="163" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="164">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="164" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="165">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="165" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="166">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="166" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="167">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="167" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="168">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="168" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="169">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="169" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="170">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="170" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="171">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="171" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="172">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="172" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="173">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="173" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="174">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="174" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="175">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="175" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="176">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="176" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="177">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="177" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="178">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="178" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="179">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="179" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="180">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="180" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="181">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="181" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="182">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="182" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="183">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="183" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="184">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="184" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="185">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="185" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="186">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="186" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="187">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="187" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="188">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="188" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="189">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="189" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="190">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="190" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="191">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="191" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="192">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="192" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="193">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="193" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="194">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="194" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="195">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="195" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="196">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="196" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="197">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="197" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="198">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="198" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="199">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="199" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="200">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="200" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="201">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="201" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="202">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="202" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="203">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="203" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="204">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="204" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="205">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="205" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="206">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="206" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="207">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="207" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="208">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="208" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="209">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="209" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="210">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="210" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="211">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="211" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="212">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="212" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="213">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="213" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="214">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="214" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="215">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="215" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="216">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="216" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="217">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="217" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="218">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="218" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="219">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="219" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="220">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="220" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="221">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="221" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="222">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="222" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="223">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="223" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="224">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="224" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="225">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="225" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="226">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="226" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="227">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="227" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="228">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="228" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="229">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="229" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="230">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="230" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="231">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="231" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="232">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="232" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="233">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="233" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="234">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="234" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="235">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="235" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="236">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="236" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="237">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="237" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="238">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="238" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="239">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="239" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="240">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="240" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="241">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="241" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="242">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="242" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="243">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="243" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="244">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="244" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="245">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="245" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="246">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="246" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="247">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="247" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="248">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="248" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="249">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="249" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="250">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="250" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="251">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="251" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="252">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="252" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="253">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="253" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="254">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="254" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="255">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT" from_value="0" to_value="255"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="255" attribute="MACROS" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="4"/>
+			</FixtureMacro>
+			<FixtureMacro index="256">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="255" attribute="FIXTUREGLOBALRESET" instance_index="4"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="4"/>
+			</FixtureMacro>
+		</FixtureMacroCollect>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

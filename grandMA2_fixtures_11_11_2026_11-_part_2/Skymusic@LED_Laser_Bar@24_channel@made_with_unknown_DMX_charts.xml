@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.5.0/MA.xsd" major_vers="3" minor_vers="5" stream_vers="0">
+	<Info datetime="2019-12-05T10:26:43" showfile="skymusic"/>
+	<FixtureType index="1" name="LED Laser Bar" mode="24 channel">
+		<InfoItems>
+			<Info date="2019-12-05T09:52:07">made with unknown DMX charts</Info>
+		<Info type="Revision" date="2019-12-05T10:27:57">made with unknown DMX charts, Uploaded to Fixture Share.</Info></InfoItems>
+		<short_name>LLB24ch</short_name>
+		<manufacturer>Skymusic</manufacturer>
+		<short_manufacturer>Skymusic</short_manufacturer>
+		<Modules index="0">
+			<Module index="0" name="Main Module" class="Headmover" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<Body>
+					<Size x="0.3" y="0.1" z="0.1"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="1" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" coarse="18">
+					<ChannelFunction index="0" from="0" to="0" min_dmx_24="0" max_dmx_24="65535" physfrom="1" physto="1" subattribute="SHUTTER" subattribute_user_name="Shutter" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="open" from_dmx="0" to_dmx="0"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="0.392" to="100" min_dmx_24="65536" max_dmx_24="16777215" physfrom="1" physto="20" subattribute="STROBE" subattribute_user_name="Strobe" attribute="SHUTTER" attribute_user_name="Shutter" feature="SHUTTER" feature_user_name="Shutter" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Strobe" from_dmx="1" to_dmx="1"/>
+						<ChannelSet index="1" name="max Strobe" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="2" attribute="TILT" feature="POSITION" preset="POSITION" coarse="19" fine="20" default="32767.863">
+					<ChannelFunction index="0" from="-90" to="90" min_dmx_24="0" max_dmx_24="16777215" physfrom="-90" physto="90" subattribute="TILT" subattribute_user_name="Tilt" attribute="TILT" attribute_user_name="Tilt" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="min" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="center" from_dmx="32768" to_dmx="32768"/>
+						<ChannelSet index="2" name="max" from_dmx="65535" to_dmx="65535"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="3" attribute="TILTOFFSET" feature="POSITION" preset="POSITION" coarse="21">
+					<ChannelFunction index="0" from="0" to="7.843" min_dmx_24="0" max_dmx_24="1376255" subattribute="NOFEATURE" subattribute_user_name="No Feature" attribute="DUMMY" attribute_user_name="Dummy" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="no function" from_dmx="0" to_dmx="20"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="8.235" to="100" min_dmx_24="1376256" max_dmx_24="16777215" physfrom="10" physto="1" subattribute="TILTSCAN" subattribute_user_name="TiltScan" attribute="TILTOFFSET" attribute_user_name="TiltOffset" feature="POSITION" feature_user_name="Position" preset="POSITION" preset_user_name="Position">
+						<ChannelSet index="0" name="max Speed" from_dmx="21" to_dmx="21"/>
+						<ChannelSet index="1" name="min Speed" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="4" attribute="FIXTUREGLOBALRESET" feature="RESET" preset="CONTROL" coarse="22">
+					<ChannelFunction index="0" from="0" to="19.608" min_dmx_24="0" max_dmx_24="3342335" subattribute="NOFEATURE" subattribute_user_name="No Feature" attribute="DUMMY" attribute_user_name="Dummy" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="no function" from_dmx="0" to_dmx="50"/>
+					</ChannelFunction>
+					<ChannelFunction index="1" from="20" to="39.216" min_dmx_24="3342336" max_dmx_24="6619135" subattribute="FIXTUREGLOBALRESET" subattribute_user_name="Reset" attribute="FIXTUREGLOBALRESET" attribute_user_name="FixtureGlobal" feature="RESET" feature_user_name="Reset" preset="CONTROL" preset_user_name="Control">
+						<ChannelSet index="0" name="Reset" from_dmx="51" to_dmx="100"/>
+					</ChannelFunction>
+					<ChannelFunction index="2" from="39.608" to="100" min_dmx_24="6619136" max_dmx_24="16777215" subattribute="NOFEATURE" subattribute_user_name="No Feature" attribute="DUMMY" attribute_user_name="Dummy" feature="CONTROL" feature_user_name="Control" preset="CONTROL" preset_user_name="Control"/>
+				</ChannelType>
+				<ChannelType index="5" attribute="EFFECTMACROS" feature="EFFECTMACROS" preset="BEAM" coarse="23">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" subattribute="EFFECTMACROSELECT" subattribute_user_name="Select" attribute="EFFECTMACROS" attribute_user_name="EffectMacros" feature="EFFECTMACROS" feature_user_name="Macros" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="no function" from_dmx="0" to_dmx="35"/>
+						<ChannelSet index="1" name="jump run pattern 1" from_dmx="36" to_dmx="45"/>
+						<ChannelSet index="2" name="unknown" from_dmx="46" to_dmx="115" auto_create="false"/>
+						<ChannelSet index="3" name="jump run pattern 8" from_dmx="116" to_dmx="125"/>
+						<ChannelSet index="4" name="voice control 1" from_dmx="126" to_dmx="135"/>
+						<ChannelSet index="5" name="voice control 2" from_dmx="136" to_dmx="145"/>
+						<ChannelSet index="6" name="jump change running pattern 1" from_dmx="146" to_dmx="155"/>
+						<ChannelSet index="7" name="unknown (2)" from_dmx="156" to_dmx="225" auto_create="false"/>
+						<ChannelSet index="8" name="jump running pattern 8" from_dmx="226" to_dmx="235"/>
+						<ChannelSet index="9" name="voice auto control 1" from_dmx="236" to_dmx="245"/>
+						<ChannelSet index="10" name="voice auto control 2" from_dmx="246" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+				<ChannelType index="6" attribute="EFFECTMACRORATE" feature="EFFECTMACROS" preset="BEAM" coarse="24">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="1" physto="10" subattribute="EFFECTMACRORATE" subattribute_user_name="Rate" attribute="EFFECTMACRORATE" attribute_user_name="Rate" feature="EFFECTMACROS" feature_user_name="Macros" preset="BEAM" preset_user_name="Beam">
+						<ChannelSet index="0" name="min Speed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="max Speed" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+			<Module index="1" name="Dim Module" class="LED" beamtype="Wash" beam_angle="35" beam_intensity="10000">
+				<Body>
+					<Size x="0.02" y="0.02" z="0.01"/>
+				</Body>
+				<ChannelType index="0" attribute="DIM" feature="DIMMER" preset="DIMMER" coarse="1" highlight_value="100">
+					<ChannelFunction index="0" from="0" to="100" min_dmx_24="0" max_dmx_24="16777215" physfrom="0" physto="1" subattribute="DIM" subattribute_user_name="Dim" attribute="DIM" attribute_user_name="Dim" feature="DIMMER" feature_user_name="Dimmer" preset="DIMMER" preset_user_name="Dimmer">
+						<ChannelSet index="0" name="closed" from_dmx="0" to_dmx="0"/>
+						<ChannelSet index="1" name="open" from_dmx="255" to_dmx="255"/>
+					</ChannelFunction>
+				</ChannelType>
+			</Module>
+		</Modules>
+		<Instances index="1">
+			<Instance index="0" module_index="0"/>
+			<Instance index="1" module_index="1" patch="2"/>
+			<Instance index="2" module_index="1" patch="3"/>
+			<Instance index="3" module_index="1" patch="4"/>
+			<Instance index="4" module_index="1" patch="5"/>
+			<Instance index="5" module_index="1" patch="6"/>
+			<Instance index="6" module_index="1" patch="7"/>
+			<Instance index="7" module_index="1" patch="8"/>
+			<Instance index="8" module_index="1" patch="9"/>
+			<Instance index="9" module_index="1" patch="10"/>
+			<Instance index="10" module_index="1" patch="11"/>
+			<Instance index="11" module_index="1" patch="12"/>
+			<Instance index="12" module_index="1" patch="13"/>
+			<Instance index="13" module_index="1" patch="14"/>
+			<Instance index="14" module_index="1" patch="15"/>
+			<Instance index="15" module_index="1" patch="16"/>
+			<Instance index="16" module_index="1" patch="17"/>
+		</Instances>
+		<Wheels index="2"/>
+		<VirtualFunctionBlocks index="3"/>
+		<FixtureMacroCollect index="5">
+			<FixtureMacro index="0" name="Reset">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="FIXTUREGLOBALRESET"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="76" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="FIXTUREGLOBALRESET" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="1" name="no function">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="2" name="jump run pattern 1">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="40" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="3" name="unknown">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="80" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="4" name="jump run pattern 8">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="120" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="5" name="voice control 1">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="131" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="6" name="voice control 2">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="140" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="7" name="jump change running pattern 1">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="150" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="8" name="unknown (2)">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="191" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="9" name="jump running pattern 8">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="231" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="10" name="voice auto control 1">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="241" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+			<FixtureMacro index="11" name="voice auto control 2">
+				<PhysicalFeatures>
+					<PhysicalFeature subattribute="MACROSELECT"/>
+				</PhysicalFeatures>
+				<FixtureMacroStep index="0" duration="5" dmx_value="255" attribute="MACROS" instance_index="0"/>
+				<FixtureMacroStep index="1" duration="1" attribute="MACROS" instance_index="0"/>
+			</FixtureMacro>
+		</FixtureMacroCollect>
+		<Body/>
+		<AutoPresets index="4"/>
+		<RdmNotifications index="6">
+			<RdmNotification index="0" Type="Absent" Subcategory="RDM Warning"/>
+		</RdmNotifications>
+	</FixtureType>
+</MA>

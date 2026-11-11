@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<MA xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/2.8.123/MA.xsd" xmlns="http://schemas.malighting.de/grandma2/xml/MA" major_vers="3" minor_vers="7" stream_vers="0">
+    <FixtureType name="P-2" mode="6 Channel CTC">
+        <InfoItems>
+            <Info type="Revision" date="2025-08-11T12:38:32">Converted GDTF to grandMA2 fixture type with Share Converter version 1.4.1</Info>
+            <Info type="Revision" date="2025-08-11T12:31:03">Reference by Manual</Info>
+            <Info type="Revision" date="2025-08-11T12:38:39.461">Reference%20by%20Manual, Uploaded to Fixture Share.</Info>
+        </InfoItems>
+        <short_name>P-2</short_name>
+        <manufacturer>LPL</manufacturer>
+        <short_manufacturer>LPL</short_manufacturer>
+        <Modules>
+            <Module name="Panel" class="Conventional" beamtype="Wash" beam_intensity="8727" index="2" beam_angle="36">
+                <Model/>
+                <Body>
+                    <Size x="0.151" y="0.271" z="0.097"/>
+                </Body>
+                <ChannelType coarse="1" default="8" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" highlight_value="3.1372549019607843">
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="0" to="5.88" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="986895">
+                        <ChannelSet name="Closed" from_dmx="0" to_dmx="7"/>
+                        <ChannelSet name="Open" from_dmx="8" to_dmx="15"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="5.88" to="59.22" physfrom="1" physto="0" min_dmx_24="1052688" max_dmx_24="9934743">
+                        <ChannelSet name="Fastest Strobe" from_dmx="16" to_dmx="16"/>
+                        <ChannelSet name="Slowest Strobe" from_dmx="151" to_dmx="151"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_PULSE_OPEN" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="59.22" to="68.63" physfrom="0" physto="1" min_dmx_24="10000536" max_dmx_24="11513775">
+                        <ChannelSet name="Slowest Pulse Open" from_dmx="152" to_dmx="152"/>
+                        <ChannelSet name="Fastest Pulse Open" from_dmx="175" to_dmx="175"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_RANDOM_PULSE_CLOSE" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="68.63" to="78.04" physfrom="0" physto="1" min_dmx_24="11579568" max_dmx_24="13092807">
+                        <ChannelSet name="Slowest Pulse Close" from_dmx="176" to_dmx="176"/>
+                        <ChannelSet name="Fastest Pulse Close" from_dmx="199" to_dmx="199"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="STROBE_RANDOM" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="78.04" to="95.69" physfrom="0" physto="1" min_dmx_24="13158600" max_dmx_24="16053492">
+                        <ChannelSet name="Slowest Random" from_dmx="200" to_dmx="200"/>
+                        <ChannelSet name="Fastest Random" from_dmx="244" to_dmx="244"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="SHUTTER" attribute="SHUTTER" feature="SHUTTER" preset="BEAM" from="95.69" to="100" physfrom="0" physto="1" min_dmx_24="16119285" max_dmx_24="16777215">
+                        <ChannelSet name="Open" from_dmx="245" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="2" default="0" react_to_master="1" attribute="DIM" feature="DIMMER" preset="DIMMER" highlight_value="100">
+                    <ChannelFunction subattribute="DIM" attribute="DIM" feature="DIMMER" preset="DIMMER" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="3" default="0" attribute="CTC" feature="CTC" preset="COLOR">
+                    <ChannelFunction subattribute="CTC" attribute="CTC" feature="CTC" preset="COLOR" from="0" to="0" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="0">
+                        <ChannelSet name="5600K (Default)" from_dmx="0" to_dmx="0"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="CTC" attribute="CTC" feature="CTC" preset="COLOR" from="0" to="1.57" physfrom="0" physto="1" min_dmx_24="65793" max_dmx_24="263172">
+                        <ChannelSet name="RAW" from_dmx="1" to_dmx="4"/>
+                    </ChannelFunction>
+                    <ChannelFunction subattribute="CTC" attribute="CTC" feature="CTC" preset="COLOR" from="1.57" to="100" physfrom="0" physto="1" min_dmx_24="328965" max_dmx_24="16777215">
+                        <ChannelSet name="2000K" from_dmx="5" to_dmx="5"/>
+                        <ChannelSet name="10000K" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="4" default="255" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB1" attribute="COLORRGB1" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="5" default="255" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB2" attribute="COLORRGB2" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+                <ChannelType coarse="6" default="255" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" highlight_value="100">
+                    <ChannelFunction subattribute="COLORRGB3" attribute="COLORRGB3" feature="COLORRGB" preset="COLOR" from="0" to="100" physfrom="0" physto="1" min_dmx_24="0" max_dmx_24="16777215">
+                        <ChannelSet name="min" from_dmx="0" to_dmx="0"/>
+                        <ChannelSet name="max" from_dmx="255" to_dmx="255"/>
+                    </ChannelFunction>
+                </ChannelType>
+            </Module>
+        </Modules>
+        <Instances>
+            <Instance module_index="0" patch="1" locked="true"/>
+        </Instances>
+        <Wheels/>
+    </FixtureType>
+</MA>
