@@ -359,28 +359,12 @@ function cablePrintHtml(gig) {
     <tbody>${used.map((r) => `<tr><td>${esc(r.name)}</td><td>${esc(r.via)}</td><td>${esc(r.distro.name)}</td><td>${esc([...r.positions].join(', '))}</td><td>${r.used}/${r.circuits.length}</td></tr>`).join('')}</tbody></table>`;
 }
 
-// Breaker labels: one landscape page per distro, one row per multicore run, coloured by resistor code.
-export function breakerPrintHtml(gig, distroId = '__all') {
+// Breaker labels data: one sheet per distro, one row per multicore run, coloured by resistor code.
+export function breakerModel(gig, distroId = '__all') {
   const p = ensurePower(gig);
   const a = analyse(gig.fixtures, p, getType);
   const distros = p.distros.filter((d) => distroId === '__all' || d.id === distroId);
-  if (!distros.length) return '<p>No distros set up. Plan power in the Power tab.</p>';
-
-  const feeds = (c) => {
-    const s = a.circuits.get(c.id);
-    const byPos = new Map();
-    for (const f of [...s.fixtures].sort((x, y) => naturalCompare(x.unit, y.unit))) {
-      const pos = f.position || 'No position';
-      if (!byPos.has(pos)) byPos.set(pos, new Map());
-      const k = typeLabel(getType(f.typeId));
-      if (!byPos.get(pos).has(k)) byPos.get(pos).set(k, []);
-      byPos.get(pos).get(k).push(f.unit || '–');
-    }
-    return { s, byPos };
-  };
-
   return distros.map((d) => {
-    // Rows: consecutive circuits sharing a run; plain circuits in rows of 6.
     const rows = [];
     for (const c of d.circuits) {
       const key = MULTICORE[c.via] ? `${c.via}:${c.run || c.id}` : null;
@@ -389,37 +373,93 @@ export function breakerPrintHtml(gig, distroId = '__all') {
       else if (last && !key && !last.key && last.circuits.length < 6) last.circuits.push(c);
       else rows.push({ key, circuits: [c] });
     }
-    const cols = Math.max(...rows.map((r) => r.circuits.length));
-    return `<section class="breaker-sheet">
-      <header class="breaker-title">
-        <h2>${esc(d.name)}</h2>
-        <p>${esc(gig.name)} · ${d.supply === '3ph' ? '3-phase' : 'single-phase'} ${d.ratingA}A${gig.venue ? ` · ${esc(gig.venue)}` : ''}</p>
-      </header>
-      ${rows.map((r) => {
+    return {
+      title: d.name,
+      subtitle: [gig.name, `${d.supply === '3ph' ? '3-phase' : 'single-phase'} ${d.ratingA}A`, gig.venue].filter(Boolean).join(' · '),
+      rows: rows.map((r) => {
         const first = r.circuits[0];
         const col = runColour(d, first);
-        const label = col ? `${esc(first.run || first.via)}` : 'Outlets';
-        return `<div class="breaker-row" style="--cols:${cols}">
-          <div class="run-tag" style="${col ? `background:${col.bg};color:${col.fg}` : ''}">
-            <strong>${label}</strong>${col ? `<span>${col.name}</span>` : ''}<small>${esc(first.via || '')}</small>
-          </div>
-          ${r.circuits.map((c) => {
-            const { s, byPos } = feeds(c);
-            const used = s.fixtures.length;
-            const pct = s.amps / c.ratingA;
-            return `<div class="breaker ${used ? '' : 'spare'}">
-              <div class="breaker-band" style="${col ? `background:${col.bg};color:${col.fg}` : ''}">
-                <span class="ch">${esc(c.label)}</span>
-                <span class="brk-meta">${d.supply === '3ph' ? esc(c.phase) + ' · ' : ''}${c.ratingA}A</span>
-              </div>
-              <div class="breaker-body">
-                ${used ? [...byPos].map(([pos, types]) => `<div class="feed"><b>${esc(pos)}</b>${[...types].map(([t, units]) => `<span>${esc(t)}: ${esc(unitRanges(units))}</span>`).join('')}</div>`).join('') : '<div class="feed spare-text">SPARE</div>'}
-              </div>
-              ${used ? `<div class="breaker-load">${s.amps.toFixed(1)}A · ${Math.round(pct * 100)}%</div>` : ''}
-            </div>`;
-          }).join('')}
-        </div>`;
-      }).join('')}
+        return {
+          tag: { label: col ? (first.run || first.via) : 'Outlets', colour: col?.name || '', via: first.via || '', bg: col?.bg || '', fg: col?.fg || '' },
+          cells: r.circuits.map((c) => {
+            const s = a.circuits.get(c.id);
+            const byPos = new Map();
+            for (const f of [...s.fixtures].sort((x, y) => naturalCompare(x.unit, y.unit))) {
+              const pos = f.position || 'No position';
+              if (!byPos.has(pos)) byPos.set(pos, new Map());
+              const k = typeLabel(getType(f.typeId));
+              if (!byPos.get(pos).has(k)) byPos.get(pos).set(k, []);
+              byPos.get(pos).get(k).push(f.unit || '–');
+            }
+            return {
+              ch: c.label,
+              meta: `${d.supply === '3ph' ? `${c.phase} · ` : ''}${c.ratingA}A`,
+              feeds: [...byPos].map(([pos, types]) => ({ pos, lines: [...types].map(([t, units]) => `${t}: ${unitRanges(units)}`) })),
+              load: s.fixtures.length ? `${s.amps.toFixed(1)}A · ${Math.round((s.amps / c.ratingA) * 100)}%` : '',
+              spare: !s.fixtures.length,
+              bg: col?.bg || '', fg: col?.fg || '',
+            };
+          }),
+        };
+      }),
+    };
+  });
+}
+
+export function breakerPrintHtml(gig, distroId = '__all') {
+  const sheets = breakerModel(gig, distroId);
+  if (!sheets.length) return '<p>No distros set up. Plan power in the Power tab.</p>';
+  const style = (x) => (x.bg ? `background:${x.bg};color:${x.fg}` : '');
+  return sheets.map((sh) => {
+    const cols = Math.max(...sh.rows.map((r) => r.cells.length));
+    return `<section class="breaker-sheet">
+      <header class="breaker-title"><h2>${esc(sh.title)}</h2><p>${esc(sh.subtitle)}</p></header>
+      ${sh.rows.map((r) => `<div class="breaker-row" style="--cols:${cols}">
+        <div class="run-tag" style="${style(r.tag)}"><strong>${esc(r.tag.label)}</strong>${r.tag.colour ? `<span>${esc(r.tag.colour)}</span>` : ''}<small>${esc(r.tag.via)}</small></div>
+        ${r.cells.map((c) => `<div class="breaker ${c.spare ? 'spare' : ''}">
+          <div class="breaker-band" style="${style(c)}"><span class="ch">${esc(c.ch)}</span><span class="brk-meta">${esc(c.meta)}</span></div>
+          <div class="breaker-body">${c.spare ? '<div class="feed spare-text">SPARE</div>' : c.feeds.map((f) => `<div class="feed"><b>${esc(f.pos)}</b>${f.lines.map((l) => `<span>${esc(l)}</span>`).join('')}</div>`).join('')}</div>
+          ${c.load ? `<div class="breaker-load">${esc(c.load)}</div>` : ''}
+        </div>`).join('')}
+      </div>`).join('')}
     </section>`;
   }).join('');
+}
+
+// Power plan as PDF table sections.
+export function powerPdfSections(gig) {
+  const p = ensurePower(gig);
+  const a = analyse(gig.fixtures, p, getType);
+  if (!p.distros.length) return [{ note: 'No distros set up. Plan power in the Power tab.' }];
+  const sections = a.distros.map(({ distro: d, phases, watts }) => ({
+    heading: d.name,
+    note: `${d.supply === '3ph' ? '3-phase' : 'Single-phase'} ${d.ratingA}A · ${(watts / 1000).toFixed(1)} kW · ${Object.entries(phases).map(([ph, A]) => `${d.supply === '3ph' ? ph : 'Supply'} ${A.toFixed(1)}A`).join(', ')}`,
+    head: ['Circuit', 'Phase', 'Rating', 'Via', 'Fixtures', 'W', 'A', '%'],
+    body: d.circuits.map((c) => {
+      const s = a.circuits.get(c.id);
+      const groups = new Map();
+      for (const f of [...s.fixtures].sort((x, y) => naturalCompare(x.unit, y.unit))) {
+        const k = `${f.position || 'No position'} · ${typeLabel(getType(f.typeId))}`;
+        if (!groups.has(k)) groups.set(k, []);
+        groups.get(k).push(f.unit || '–');
+      }
+      const col = runColour(d, c);
+      return [c.label, d.supply === '3ph' ? c.phase : '', `${c.ratingA}A`, `${c.run || c.via || ''}${col ? ` (${col.name})` : ''}`,
+        [...groups].map(([k, u]) => `${k}: ${unitRanges(u)}`).join('\n') || '-',
+        s.watts || '', s.amps ? s.amps.toFixed(1) : '', s.amps ? Math.round((s.amps / c.ratingA) * 100) : ''];
+    }),
+    columnStyles: { 0: { fontStyle: 'bold', cellWidth: 16 }, 1: { cellWidth: 13 }, 2: { cellWidth: 15 }, 3: { cellWidth: 30 }, 5: { cellWidth: 14 }, 6: { cellWidth: 12 }, 7: { cellWidth: 11 } },
+  }));
+  const { runs, totals } = cableCount(gig.fixtures, p);
+  const used = runs.filter((r) => r.used);
+  if (used.length) {
+    sections.push({
+      heading: 'Multicore pull list',
+      note: Object.entries(totals).map(([via, t]) => `${t.runs} x ${via} + ${t.breakouts} breakout${t.breakouts === 1 ? '' : 's'}`).join(' · '),
+      head: ['Run', 'Type', 'Distro', 'Feeds', 'Circuits used'],
+      body: used.map((r) => [r.name, r.via, r.distro.name, [...r.positions].join(', '), `${r.used}/${r.circuits.length}`]),
+    });
+  }
+  if (a.unassigned.length) sections.push({ note: `Not on a circuit: ${a.unassigned.map((f) => f.unit || '-').join(', ')}` });
+  return sections;
 }

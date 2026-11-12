@@ -1,6 +1,6 @@
 // One gig: Rig, Prep, Patch and Print tabs.
 import * as store from '../store.js';
-import { esc, sheet, confirmSheet, formData, toast, offerFile, printNow } from '../ui.js';
+import { esc, sheet, confirmSheet, formData, toast, offerFile, printNow, saveFile } from '../ui.js';
 import { go, refresh } from '../app.js';
 import {
   footprint, isPatched, formatAddress, absoluteAddress, autoAddress, findIssues,
@@ -12,7 +12,7 @@ import {
 } from './common.js';
 import { editGigSheet } from './gigs.js';
 import { importMVR } from './mvrImport.js';
-import { power, powerPrintHtml, breakerPrintHtml } from './power.js';
+import { power, powerPrintHtml, breakerPrintHtml, breakerModel, powerPdfSections } from './power.js';
 
 const ui = {
   prepPosition: '__all',
@@ -22,6 +22,8 @@ const ui = {
   printGroup: 'position',
   printPosition: '__all',
   printDistro: '__all',
+  labelOutlines: false,
+  exporting: false,
   undo: null, // { gigId, before: [{id, universe, address}] }
   rigSelect: false, // multi-select mode in the Rig tab
   rigSel: new Set(),
@@ -597,7 +599,11 @@ function print(gig) {
             ${positions.map((p) => `<option value="${esc(p)}" ${ui.printPosition === p ? 'selected' : ''}>${esc(posName(p))}</option>`).join('')}
           </select>
         </label>`}
-        <div class="toolbar"><button class="btn primary" data-action="print">Print</button></div>
+        ${ui.printMode === 'labels' ? `<label class="switch"><input type="checkbox" data-change="outlines" ${ui.labelOutlines ? 'checked' : ''}> Draw label outlines (for plain paper)</label>` : ''}
+        <div class="toolbar">
+          <button class="btn primary" data-action="exportPdf" ${ui.exporting ? 'disabled' : ''}>${ui.exporting ? 'Making PDF…' : 'Export PDF'}</button>
+          <button class="btn" data-action="print">Print</button>
+        </div>
         ${ui.printMode === 'labels' ? '<p class="muted small">Labels are laid out 3 across on A4 (63.5 × 38.1 mm, 21 per sheet).</p>' : ''}
       </div>
       <div class="print-area ${ui.printMode === 'labels' ? 'print-labels' : ''} ${ui.printMode === 'breakers' ? 'print-breakers' : ''}">${fixtures.length || ui.printMode === 'power' || ui.printMode === 'breakers' ? preview : '<p class="muted">No fixtures to print.</p>'}</div>`,
@@ -606,7 +612,82 @@ function print(gig) {
       pgroup(el) { ui.printGroup = el.dataset.v; refresh(); },
       ppos(el) { ui.printPosition = el.value; refresh(); },
       pdistro(el) { ui.printDistro = el.value; refresh(); },
+      outlines(el) { ui.labelOutlines = el.checked; },
+      async exportPdf() {
+        if (ui.exporting) return;
+        ui.exporting = true; refresh();
+        try {
+          const { blob, name } = await buildPdf(gig, fixtures);
+          const r = await saveFile(name, blob, 'application/pdf');
+          if (r === 'saved' || r === 'downloaded') toast(`Saved ${name}`);
+        } catch (e) {
+          console.error(e);
+          toast(e.message || 'Could not make the PDF', 'bad');
+        } finally {
+          ui.exporting = false; refresh();
+        }
+      },
       print: printNow,
     },
   };
+}
+
+// ---------------- PDF EXPORT ----------------
+
+const fileSlug = (s) => (String(s || 'gig').replace(/[^\w\- ]+/g, '').trim().replace(/\s+/g, '-') || 'gig');
+
+async function buildPdf(gig, fixtures) {
+  const pdf = await import('../pdf.js');
+  const subtitle = [gig.venue, gig.client, gig.date].filter(Boolean).join(' · ');
+  const base = fileSlug(gig.name);
+  const mode = ui.printMode;
+
+  if (mode === 'labels') {
+    const labels = fixtures.map((f) => {
+      const t = getType(f.typeId);
+      const m = t?.modes?.[f.modeIndex];
+      return { unit: f.unit, addr: formatAddress(f) === '—' ? '' : formatAddress(f), name: typeLabel(t), line1: m ? `${m.name} · ${m.channels}ch` : '', line2: f.position };
+    });
+    if (!labels.length) throw new Error('No fixtures to make labels for');
+    return { blob: await pdf.labelsPdf(labels, { outlines: ui.labelOutlines }), name: `${base}-labels.pdf` };
+  }
+
+  if (mode === 'breakers') {
+    const sheets = breakerModel(gig, ui.printDistro);
+    if (!sheets.length) throw new Error('No distros set up. Plan power in the Power tab first');
+    const one = sheets.length === 1 ? `-${fileSlug(sheets[0].title)}` : '';
+    return { blob: await pdf.breakersPdf(sheets), name: `${base}-distro-breakers${one}.pdf` };
+  }
+
+  if (mode === 'power') {
+    return { blob: await pdf.tablesPdf({ title: 'Power plan', gigName: gig.name, subtitle, sections: powerPdfSections(gig) }), name: `${base}-power-plan.pdf` };
+  }
+
+  if (mode === 'faults') {
+    const faulty = fixtures.filter((f) => f.faults.length);
+    const sections = faulty.length ? [{
+      head: ['Unit', 'Fixture', 'Position', 'Fault', 'Logged', 'Status'],
+      body: faulty.flatMap((f) => f.faults.map((x) => [f.unit, typeLabel(getType(f.typeId)), f.position, x.text, new Date(x.date).toLocaleDateString(), x.resolved ? 'Fixed' : 'OPEN'])),
+      columnStyles: { 0: { cellWidth: 13, fontStyle: 'bold' }, 4: { cellWidth: 22 }, 5: { cellWidth: 16 } },
+    }] : [{ note: 'No faults logged.' }];
+    return { blob: await pdf.tablesPdf({ title: 'Fault report', gigName: gig.name, subtitle, sections }), name: `${base}-fault-report.pdf` };
+  }
+
+  // patch sheet
+  const groups = new Map();
+  const keyOf = (f) => (ui.printGroup === 'universe' ? (isPatched(f) ? `Universe ${f.universe}` : 'Not patched') : ui.printGroup === 'position' ? posName(f.position) : 'All fixtures');
+  const sorted = ui.printGroup === 'universe' ? sortForPatch(fixtures, 'address') : fixtures;
+  for (const f of sorted) { const k = keyOf(f); if (!groups.has(k)) groups.set(k, []); groups.get(k).push(f); }
+  if (!groups.size) throw new Error('No fixtures to put on a patch sheet');
+  const sections = [...groups.keys()].sort(naturalCompare).map((k) => ({
+    heading: `${k} (${groups.get(k).length})`,
+    head: ['Unit', 'Fixture', 'Mode', 'Ch', 'Address', 'Abs', 'Position', 'Rig'],
+    body: groups.get(k).map((f) => {
+      const t = getType(f.typeId);
+      const m = t?.modes?.[f.modeIndex];
+      return [f.unit, typeLabel(t), m?.name || '', m?.channels ?? '', formatAddress(f) === '—' ? '-' : formatAddress(f), isPatched(f) ? absoluteAddress(f.universe, f.address) : '', f.position, f.rigging === 'ground' ? 'G' : 'F'];
+    }),
+    columnStyles: { 0: { cellWidth: 13, fontStyle: 'bold' }, 3: { cellWidth: 10 }, 4: { cellWidth: 19, fontStyle: 'bold' }, 5: { cellWidth: 12 }, 7: { cellWidth: 9 } },
+  }));
+  return { blob: await pdf.tablesPdf({ title: 'Patch sheet', gigName: gig.name, subtitle, sections }), name: `${base}-patch-sheet.pdf` };
 }

@@ -1,8 +1,8 @@
 // Offline support: cache the app shell, serve it when there's no signal.
-const CACHE = 'flashout-v4';
+const CACHE = 'flashout-v5';
 const SHELL = [
   './', 'index.html', 'manifest.webmanifest', 'css/app.css', 'icons/icon.svg',
-  'js/app.js', 'js/store.js', 'js/ui.js', 'js/patch.js', 'js/zip.js', 'js/fixtures.js', 'js/mvr.js', 'js/builtin.js', 'data/ma2-library.json', 'js/views/mvrImport.js',
+  'js/app.js', 'js/store.js', 'js/ui.js', 'js/patch.js', 'js/zip.js', 'js/fixtures.js', 'js/mvr.js', 'js/builtin.js', 'js/pdf.js', 'vendor/jspdf.umd.min.js', 'vendor/jspdf.plugin.autotable.min.js', 'data/ma2-library.json', 'js/views/mvrImport.js',
   'js/power.js', 'js/views/power.js', 'js/views/common.js', 'js/views/gigs.js', 'js/views/gig.js', 'js/views/library.js', 'js/views/settings.js',
 ];
 self.addEventListener('install', (e) => e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting())));

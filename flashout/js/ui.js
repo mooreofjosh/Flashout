@@ -57,23 +57,57 @@ export function formData(form) {
   return out;
 }
 
-// Offer a generated file. Falls back to copy-to-clipboard where downloads are blocked.
-export async function offerFile(filename, text, mime = 'text/plain') {
-  const blob = new Blob([text], { type: mime });
+// Saving files. Inside claude.ai the page may not download directly, so use the host's
+// "downloads" capability there (the viewer confirms the save); anywhere else, a normal download.
+let downloadsCap = null;
+export function getDownloads() {
+  if (!window.claude?.use) return Promise.resolve(null);
+  downloadsCap ||= Promise.resolve(window.claude.use('downloads')).catch(() => null);
+  return downloadsCap;
+}
+
+export async function saveFile(filename, data, mime = 'application/octet-stream') {
+  const cap = await getDownloads();
+  if (cap) {
+    try {
+      await cap.save({ filename, data });
+      return 'saved';
+    } catch (e) {
+      if (e?.code === 'declined') return 'declined';
+      if (e?.code === 'rate_limited') { toast('A save is already waiting for you to confirm', 'bad'); return 'busy'; }
+      if (e?.code === 'too_large') { toast('That file is too large to save here', 'bad'); return 'failed'; }
+      // anything else: fall back to a normal browser download below
+    }
+  }
+  const blob = data instanceof Blob ? data : new Blob([data], { type: mime });
   const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.append(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 60000);
+  return 'downloaded';
+}
+
+// Offer a generated text file: save it, or copy its contents.
+export async function offerFile(filename, text, mime = 'text/plain') {
   await sheet('Export ' + filename, `
     <p class="muted">Save the file, or copy its contents to paste somewhere else.</p>
     <div class="row-end">
       <button class="btn" data-copy>Copy</button>
-      <a class="btn primary" href="${url}" download="${esc(filename)}" data-dl>Download</a>
+      <button class="btn primary" data-dl>Save file</button>
     </div>`, (root, close) => {
     root.querySelector('[data-copy]').addEventListener('click', async () => {
       try { await navigator.clipboard.writeText(text); toast('Copied'); close(); }
       catch { toast('Copy was blocked by the browser', 'bad'); }
     });
-    root.querySelector('[data-dl]').addEventListener('click', () => setTimeout(close, 300));
+    root.querySelector('[data-dl]').addEventListener('click', async () => {
+      const r = await saveFile(filename, text, mime);
+      if (r === 'saved' || r === 'downloaded') close();
+    });
   });
-  setTimeout(() => URL.revokeObjectURL(url), 60000);
 }
 
 export function printNow() {

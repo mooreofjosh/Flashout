@@ -73,3 +73,6 @@ if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
 }
 
 render();
+
+// Ask the host for the downloads capability early, so the first export is quick.
+setTimeout(() => import('./ui.js').then((m) => m.getDownloads()), 0);
