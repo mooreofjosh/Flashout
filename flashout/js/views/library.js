@@ -112,9 +112,8 @@ export function editTypeSheet(type, { focus = '' } = {}) {
         currentA: d.currentA === '' ? null : +d.currentA, powerIn: d.powerIn || '', powerOut: d.powerOut === 'yes',
         linkMax: d.powerOut === 'yes' && d.linkMax ? +d.linkMax : null,
       };
-      if (type) store.updateType(type.id, data);
-      else store.addType({ ...data, source: 'manual' });
-      close(true);
+      if (type) { store.updateType(type.id, data); close(true); }
+      else close(store.addType({ ...data, source: 'manual' }));
     });
   });
 }
@@ -150,7 +149,8 @@ export const libraryView = {
 
     return {
       title: 'Fixture library',
-      section: 'library',
+      section: 'settings',
+      back: 'settings',
       html: `
         <section class="card">
           <h3>Find a fixture</h3>
