@@ -1,6 +1,6 @@
 // One gig: Rig, Prep, Patch and Print tabs.
 import * as store from '../store.js';
-import { esc, sheet, confirmSheet, formData, toast, offerFile, printNow, saveFile } from '../ui.js';
+import { esc, sheet, confirmSheet, formData, toast, offerFile, printNow, saveFile, pickFile } from '../ui.js';
 import { go, refresh } from '../app.js';
 import {
   footprint, isPatched, formatAddress, absoluteAddress, autoAddress, findIssues,
@@ -16,6 +16,9 @@ import { power, powerPrintHtml, breakerPrintHtml, breakerModel, powerPdfSections
 import { worksheet } from './worksheet.js';
 import { isLaptop } from '../mode.js';
 import { fixtureInfoSheet } from './common.js';
+import { editTypeSheet } from './library.js';
+import { loadBuiltin, searchBuiltin, fixtureFromBuiltin } from '../builtin.js';
+import { searchOFL, fetchOFL, fixtureFromFile } from '../fixtures.js';
 
 const ui = {
   prepPosition: '__all',
@@ -81,42 +84,145 @@ export const gigView = {
 
 // ---------------- RIG ----------------
 
+// Add fixtures: search your fixtures and the built-in library in one place, import a file,
+// type one in, or search Open Fixture Library. Picked fixtures are saved to your library.
 function addFixturesSheet(gig, preset = {}) {
-  const types = store.getState().fixtureTypes;
-  if (!types.length) {
-    return sheet('Add fixtures', `
-      <p>Your fixture library is empty. Add the fixture types you're working with first: search Open Fixture Library, import a GDTF file, or type one in.</p>
-      <div class="row-end"><button class="btn" data-close>Cancel</button><a class="btn primary" href="#library" data-close>Go to library</a></div>`);
-  }
   const nextUnit = gig.fixtures.reduce((m, f) => Math.max(m, parseInt(f.unit, 10) || 0), 0) + 1;
-  const firstType = preset.typeId ? getType(preset.typeId) : types[0];
+  let chosen = preset.typeId ? getType(preset.typeId) : null;
+  let builtin = null;
+  let oflKeys = null;
+
   return sheet('Add fixtures', `
-    <form class="form" data-form>
-      <label>Fixture<select name="typeId">${typeOptions(firstType.id)}</select></label>
-      <label>Mode<select name="modeIndex">${modeOptions(firstType, 0)}</select></label>
-      <div class="grid2">
-        <label>How many<input name="qty" type="number" min="1" max="500" value="${preset.qty || 1}" inputmode="numeric" required></label>
-        <label>First unit #<input name="unit" type="number" min="0" value="${nextUnit}" inputmode="numeric"></label>
+    <div class="fx-pick">
+      <div class="fx-chosen" data-chosen hidden></div>
+      <div data-finder>
+        <input type="search" class="fx-search" data-q placeholder="Search fixtures, e.g. Spiider, Aura XB, Sharpy" autocomplete="off" aria-label="Search fixtures">
+        <div class="fx-results" data-results></div>
+        <div class="fx-more">
+          <button type="button" class="btn small" data-ofl>Search Open Fixture Library</button>
+          <button type="button" class="btn small" data-import>Import file</button>
+          <button type="button" class="btn small" data-manual>Type one in</button>
+        </div>
       </div>
-      <label>Position<input name="position" list="positions" value="${esc(preset.position || '')}" placeholder="e.g. FOH truss, Mid truss, SL boom"></label>
-      ${positionDatalist(gig)}
-      ${riggingField(preset.rigging)}
-      <div class="row-end"><button type="button" class="btn" data-close>Cancel</button><button class="btn primary">Add</button></div>
-    </form>`, (root, close) => {
-    wireTypeMode(root);
+    </div>
+    <form class="form" data-form>
+      <div data-details hidden>
+        <label>Mode<select name="modeIndex"></select></label>
+        <label data-chans hidden>Channels in this mode (from the manual)<input name="chans" type="number" min="1" max="512" inputmode="numeric" placeholder="unknown"></label>
+        <div class="grid2">
+          <label>How many<input name="qty" type="number" min="1" max="500" value="${preset.qty || 1}" inputmode="numeric" required></label>
+          <label>First unit #<input name="unit" type="number" min="0" value="${nextUnit}" inputmode="numeric"></label>
+        </div>
+        <label>Position<input name="position" list="positions" value="${esc(preset.position || '')}" placeholder="e.g. FOH truss, Mid truss, SL boom"></label>
+        ${positionDatalist(gig)}
+        ${riggingField(preset.rigging)}
+      </div>
+      <div class="row-end"><button type="button" class="btn" data-close>Cancel</button><button class="btn primary" data-submit disabled>Add</button></div>
+    </form>`, async (root, close) => {
+    const q = root.querySelector('[data-q]');
+    const results = root.querySelector('[data-results]');
+    const chosenBox = root.querySelector('[data-chosen]');
+    const finder = root.querySelector('[data-finder]');
+    const details = root.querySelector('[data-details]');
+    const modeSel = root.querySelector('[name=modeIndex]');
+    const chans = root.querySelector('[data-chans]');
+    const submit = root.querySelector('[data-submit]');
+
+    const mine = () => [...store.getState().fixtureTypes].sort((a, b) => (a.manufacturer + a.name).localeCompare(b.manufacturer + b.name));
+    const norm = (x) => String(x || '').toLowerCase().replace(/[^a-z0-9 ]/g, ' ');
+    const modesText = (modes) => modes.map((m) => (Array.isArray(m) ? m[1] : m.channels) || '?').join('/') + 'ch';
+
+    const pick = (type) => {
+      chosen = type;
+      chosenBox.hidden = false;
+      finder.hidden = true;
+      details.hidden = false;
+      submit.disabled = false;
+      chosenBox.innerHTML = `<div><strong>${esc(type.name)}</strong><small>${esc(type.manufacturer || '')} · ${type.modes.length} mode${type.modes.length === 1 ? '' : 's'}</small></div>
+        <button type="button" class="btn small" data-change>Change</button>`;
+      chosenBox.querySelector('[data-change]').addEventListener('click', () => {
+        chosenBox.hidden = true; finder.hidden = false; details.hidden = true; submit.disabled = true;
+        q.focus();
+      });
+      modeSel.innerHTML = modeOptions(type, 0);
+      onMode();
+    };
+    const onMode = () => {
+      const m = chosen?.modes?.[+modeSel.value || 0];
+      chans.hidden = !(m && (!m.channels || m.check));
+      chans.querySelector('input').value = m?.channels || '';
+    };
+    modeSel.addEventListener('change', onMode);
+
+    const draw = () => {
+      const words = norm(q.value).split(/\s+/).filter(Boolean);
+      const hit = (s) => words.every((w) => norm(s).includes(w) || norm(s).replace(/ /g, '').includes(w));
+      const own = mine().filter((t) => !words.length || hit(`${t.manufacturer} ${t.name}`));
+      const ownKeys = new Set(own.map((t) => t.sourceKey));
+      const more = words.length && builtin ? searchBuiltin(builtin, q.value, 30).results.filter((f) => !ownKeys.has(`ma2:${f.manufacturer}/${f.name}`)) : [];
+      const row = (attr, name, sub, tag) => `<button type="button" class="fx-result" ${attr}><span><strong>${esc(name)}</strong><small>${esc(sub)}</small></span><span class="tag">${tag}</span></button>`;
+      let html = '';
+      if (own.length) html += `<p class="fx-head">${words.length ? 'Your fixtures' : 'Your fixtures (or start typing to search all 1,900+)'}</p>` + own.slice(0, words.length ? 20 : 8).map((t) => row(`data-mine="${t.id}"`, t.name, `${t.manufacturer} · ${modesText(t.modes)}`, 'Yours')).join('');
+      if (more.length) html += '<p class="fx-head">Built-in library</p>' + more.map((f) => row(`data-builtin="${f.i}"`, f.name, `${f.manufacturer} · ${f.modes.length} mode${f.modes.length === 1 ? '' : 's'} · ${modesText(f.modes)}`, 'Library')).join('');
+      if (oflKeys) html += oflKeys.length ? '<p class="fx-head">Open Fixture Library</p>' + oflKeys.slice(0, 20).map((k) => row(`data-oflkey="${esc(k)}"`, k.split('/')[1].replace(/-/g, ' '), k.split('/')[0].replace(/-/g, ' '), 'OFL')).join('') : '<p class="muted small">Nothing on Open Fixture Library for that.</p>';
+      if (!html) html = words.length ? `<p class="muted">No match for “${esc(q.value)}”. Try fewer words, search Open Fixture Library, import a file or type it in.</p>`
+        : '<p class="muted small">Start typing a fixture or manufacturer name.</p>';
+      results.innerHTML = html;
+    };
+    q.addEventListener('input', () => { oflKeys = null; draw(); });
+    results.addEventListener('click', async (e) => {
+      const b = e.target.closest('button');
+      if (!b) return;
+      if (b.dataset.mine) pick(getType(b.dataset.mine));
+      else if (b.dataset.builtin) pick(store.addType(fixtureFromBuiltin(builtin[+b.dataset.builtin])));
+      else if (b.dataset.oflkey) {
+        b.disabled = true;
+        try { pick(store.addType(await fetchOFL(b.dataset.oflkey))); }
+        catch { toast("Couldn't load that fixture from Open Fixture Library. Download it there and use Import file.", 'bad'); b.disabled = false; }
+      }
+    });
+    root.querySelector('[data-ofl]').addEventListener('click', async (e) => {
+      if (!q.value.trim()) { toast('Type a fixture name first'); q.focus(); return; }
+      e.target.disabled = true; e.target.textContent = 'Searching…';
+      try { oflKeys = await searchOFL(q.value.trim()); }
+      catch { toast("Couldn't reach Open Fixture Library from here. Download the fixture there and use Import file.", 'bad'); }
+      e.target.disabled = false; e.target.textContent = 'Search Open Fixture Library';
+      draw();
+    });
+    root.querySelector('[data-import]').addEventListener('click', async () => {
+      const file = await pickFile('.gdtf,.json,.zip');
+      if (!file) return;
+      try { pick(store.addType(await fixtureFromFile(file))); }
+      catch (err) { toast(`${file.name}: ${err.message}`, 'bad'); }
+    });
+    root.querySelector('[data-manual]').addEventListener('click', async () => {
+      const t = await editTypeSheet();
+      if (t && t.id) pick(t);
+    });
+
     root.querySelector('[data-form]').addEventListener('submit', (e) => {
       e.preventDefault();
+      if (!chosen) { q.focus(); return; }
       const d = formData(e.target);
+      const modeIndex = +d.modeIndex || 0;
+      const m = chosen.modes[modeIndex];
+      if (m && !chans.hidden && +d.chans > 0 && +d.chans !== m.channels) {
+        m.channels = +d.chans; delete m.check; store.save(); // fills in the library too
+      }
       const qty = Math.min(500, Math.max(1, parseInt(d.qty, 10) || 1));
       const start = d.unit === '' ? null : parseInt(d.unit, 10);
-      const list = Array.from({ length: qty }, (_, i) => ({
-        typeId: d.typeId, modeIndex: +d.modeIndex || 0, position: d.position.trim(), rigging: d.rigging,
+      store.addFixtures(gig.id, Array.from({ length: qty }, (_, i) => ({
+        typeId: chosen.id, modeIndex, position: d.position.trim(), rigging: d.rigging,
         unit: start === null ? '' : String(start + i),
-      }));
-      store.addFixtures(gig.id, list);
-      toast(`Added ${qty} fixture${qty > 1 ? 's' : ''}`);
+      })));
+      toast(`Added ${qty} × ${chosen.name}`);
       close(true);
     });
+
+    if (chosen) pick(chosen);
+    draw();
+    if (!chosen && !matchMedia('(pointer: coarse)').matches) q.focus();
+    try { builtin = await loadBuiltin(); draw(); } catch { /* own fixtures still work */ }
   });
 }
 

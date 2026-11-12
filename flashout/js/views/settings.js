@@ -1,6 +1,7 @@
 import * as store from '../store.js';
 import { esc, toast, offerFile, pickFile, confirmSheet } from '../ui.js';
 import { refresh } from '../app.js';
+import { fixtureFromFile } from '../fixtures.js';
 
 export const settingsView = {
   render() {
@@ -10,6 +11,15 @@ export const settingsView = {
       title: 'Settings',
       section: 'settings',
       html: `
+        <section class="card">
+          <h3>Fixture library</h3>
+          <p class="muted small">Fixtures you've added to gigs are saved here, so their modes and power specs are ready next time. You don't need to come here to add fixtures: <strong>+ Add fixtures</strong> in a gig searches everything.</p>
+          <p class="small">${s.fixtureTypes.length} saved fixture${s.fixtureTypes.length === 1 ? '' : 's'}${(() => { const n = s.fixtureTypes.filter((t) => t.modes.some((m) => !m.channels || m.check) || !(t.powerW || t.currentA)).length; return n ? ` · <span class="warn-text">${n} missing channel counts or power specs</span>` : ''; })()}</p>
+          <div class="toolbar">
+            <a class="btn primary" href="#library">Manage fixtures</a>
+            <button class="btn" data-action="importFixtures">Import fixture files (.gdtf / .json)</button>
+          </div>
+        </section>
         <section class="card">
           <h3>Layout</h3>
           <p class="muted small">Phone layout is for prep on the floor. Laptop layout has the worksheet, patch, power and paperwork. Automatic picks by screen width.</p>
@@ -55,6 +65,16 @@ export const settingsView = {
         });
       },
       actions: {
+        async importFixtures() {
+          const files = await pickFile('.gdtf,.json,.zip', true);
+          let added = 0;
+          for (const file of files || []) {
+            try { const before = s.fixtureTypes.length; store.addType(await fixtureFromFile(file)); if (s.fixtureTypes.length > before) added++; }
+            catch (err) { toast(`${file.name}: ${err.message}`, 'bad'); }
+          }
+          if (added) toast(`Added ${added} fixture${added > 1 ? 's' : ''} to your library`);
+          refresh();
+        },
         layout(el) { s.settings.layout = el.value; store.save(); refresh(); },
         resetLists() {
           s.settings.checklists = structuredClone(store.DEFAULT_CHECKLISTS);
