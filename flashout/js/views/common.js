@@ -77,6 +77,13 @@ export function editFixtureSheet(gig, f) {
       <label>Position<input name="position" list="positions" value="${esc(f.position)}" placeholder="e.g. FOH truss, SL boom"></label>
       ${positionDatalist(gig)}
       ${riggingField(f.rigging)}
+      <div class="grid2">
+        <label>Channel<input name="channel" value="${esc(f.channel || '')}" placeholder="console channel / FID"></label>
+        <label>Purpose<input name="purpose" value="${esc(f.purpose || '')}" placeholder="e.g. DS wash, specials"></label>
+        <label>Colour<input name="colour" value="${esc(f.colour || '')}" placeholder="e.g. L201"></label>
+        <label>Gobo<input name="gobo" value="${esc(f.gobo || '')}"></label>
+      </div>
+      <label>Accessories<input name="accessories" value="${esc(f.accessories || '')}" placeholder="e.g. top hat, barn doors, safety"></label>
       <label>Notes<textarea name="notes" rows="2">${esc(f.notes)}</textarea></label>
       <p class="error" data-err hidden></p>
       <div class="row-split">
@@ -88,7 +95,10 @@ export function editFixtureSheet(gig, f) {
     root.querySelector('[data-form]').addEventListener('submit', (e) => {
       e.preventDefault();
       const d = formData(e.target);
-      const patch = { unit: d.unit.trim(), typeId: d.typeId, modeIndex: +d.modeIndex || 0, position: d.position.trim(), rigging: d.rigging, notes: d.notes };
+      const patch = {
+        unit: d.unit.trim(), typeId: d.typeId, modeIndex: +d.modeIndex || 0, position: d.position.trim(), rigging: d.rigging, notes: d.notes,
+        channel: d.channel.trim(), purpose: d.purpose.trim(), colour: d.colour.trim(), gobo: d.gobo.trim(), accessories: d.accessories.trim(),
+      };
       if (d.addr.trim()) {
         const a = parseAddress(d.addr);
         if (!a || a.address < 1 || a.address > 512 || a.universe < 1) {
@@ -151,3 +161,45 @@ export function faultsSheet(gig, f) {
     });
   });
 }
+
+// Phone: one fixture's details, with its prep checklist to tick and its faults.
+export function fixtureInfoSheet(gig, f) {
+  const settings = store.getState().settings;
+  const type = store.getType(f.typeId);
+  const info = [
+    ['Address', isPatchedAddr(f)], ['Channel', f.channel], ['Mode', modeLabel(type, f.modeIndex)],
+    ['Position', f.position], ['Purpose', f.purpose], ['Colour', f.colour], ['Gobo', f.gobo], ['Accessories', f.accessories], ['Notes', f.notes],
+  ].filter(([, v]) => v);
+  const draw = (root) => {
+    const p = prepState(f, settings);
+    root.querySelector('[data-checks]').innerHTML = p.items.map((item) => {
+      const on = !!f.checks[item];
+      return `<button type="button" class="check ${on ? 'on' : ''}" aria-pressed="${on}" data-item="${esc(item)}"><span class="box">${on ? '✓' : ''}</span><span class="check-text">${esc(item)}</span></button>`;
+    }).join('');
+    root.querySelector('[data-progress]').textContent = `${p.done}/${p.total} done`;
+    const nf = openFaults(f).length;
+    root.querySelector('[data-faults]').textContent = nf ? `⚠ ${nf} fault${nf > 1 ? 's' : ''}` : 'Log fault';
+    root.querySelector('[data-faults]').classList.toggle('danger', !!nf);
+  };
+  return sheet(`Unit ${f.unit || '?'} · ${typeLabel(type)}`, `
+    <dl class="info-list">${info.map(([k, v]) => `<dt>${k}</dt><dd class="${k === 'Address' || k === 'Channel' ? 'mono' : ''}">${esc(v)}</dd>`).join('')}</dl>
+    <div class="row-split"><strong>Prep · ${f.rigging === 'ground' ? 'Ground' : 'Flown'}</strong><span class="muted small" data-progress></span></div>
+    <div class="checks" data-checks></div>
+    <div class="row-split">
+      <button type="button" class="btn small" data-faults></button>
+      <span><button type="button" class="btn small" data-edit>Edit details</button> <button type="button" class="btn small primary" data-close>Done</button></span>
+    </div>`, (root, close) => {
+    draw(root);
+    root.querySelector('[data-checks]').addEventListener('click', (e) => {
+      const b = e.target.closest('[data-item]');
+      if (!b) return;
+      f.checks[b.dataset.item] = !f.checks[b.dataset.item];
+      store.save();
+      draw(root);
+    });
+    root.querySelector('[data-faults]').addEventListener('click', async () => { close(true); await faultsSheet(gig, f); });
+    root.querySelector('[data-edit]').addEventListener('click', async () => { close(true); await editFixtureSheet(gig, f); });
+  });
+}
+
+const isPatchedAddr = (f) => (formatAddress(f) === '—' ? 'Not patched' : formatAddress(f));

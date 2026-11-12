@@ -49,7 +49,7 @@ export const gigsView = {
           const p = progress(g);
           return `
           <article class="card gig-card">
-            <a class="gig-link" href="#gig-${g.id}-rig">
+            <a class="gig-link" href="#gig-${g.id}">
               <h3>${esc(g.name || 'Untitled gig')}</h3>
               <p class="muted">${esc([g.venue, g.client].filter(Boolean).join(' · ')) || '&nbsp;'}</p>
               <p class="meta">${esc(fmtDate(g.date))}${g.date ? ' · ' : ''}${g.fixtures.length} fixtures${p.faults ? ` · <span class="bad-text">${p.faults} open fault${p.faults > 1 ? 's' : ''}</span>` : ''}</p>
@@ -73,11 +73,11 @@ export const gigsView = {
       actions: {
         async new() {
           const gig = await editGigSheet();
-          if (gig) go(`gig-${gig.id}-rig`);
+          if (gig) go(`gig-${gig.id}`);
         },
         async mvr() {
           const id = await importMVR();
-          if (id) go(`gig-${id}-rig`);
+          if (id) go(`gig-${id}`);
         },
         async menu(el) {
           const gig = store.getGig(el.dataset.id);

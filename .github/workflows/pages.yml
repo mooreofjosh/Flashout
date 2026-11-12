@@ -1,12 +1,12 @@
-# Publishes the Flashout app (the flashout/ folder) to GitHub Pages whenever main changes.
+# Publishes the Flashout app (the flashout/ folder) to GitHub Pages.
 name: Deploy Flashout to GitHub Pages
 
+# On hold: runs only when started by hand (Actions -> Deploy Flashout to GitHub Pages -> Run workflow).
+# To publish automatically again, add back:
+#   push:
+#     branches: [main]
+#     paths: ['flashout/**', '.github/workflows/pages.yml']
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'flashout/**'
-      - '.github/workflows/pages.yml'
   workflow_dispatch:
 
 permissions:

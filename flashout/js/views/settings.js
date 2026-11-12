@@ -11,6 +11,13 @@ export const settingsView = {
       section: 'settings',
       html: `
         <section class="card">
+          <h3>Layout</h3>
+          <p class="muted small">Phone layout is for prep on the floor. Laptop layout has the worksheet, patch, power and paperwork. Automatic picks by screen width.</p>
+          <fieldset class="seg" aria-label="Layout">
+            ${[['auto', 'Automatic'], ['phone', 'Phone'], ['laptop', 'Laptop']].map(([v, l]) => `<label><input type="radio" name="layout" value="${v}" data-change="layout" ${(s.settings.layout || 'auto') === v ? 'checked' : ''}><span>${l}</span></label>`).join('')}
+          </fieldset>
+        </section>
+        <section class="card">
           <h3>Prep checklists</h3>
           <p class="muted small">One item per line. Each fixture gets the list for how it's rigged.</p>
           <form class="form" data-checklists>
@@ -48,6 +55,7 @@ export const settingsView = {
         });
       },
       actions: {
+        layout(el) { s.settings.layout = el.value; store.save(); refresh(); },
         resetLists() {
           s.settings.checklists = structuredClone(store.DEFAULT_CHECKLISTS);
           store.save();
