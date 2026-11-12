@@ -5,6 +5,7 @@ import { gigsView } from './views/gigs.js';
 import { gigView } from './views/gig.js';
 import { libraryView } from './views/library.js';
 import { settingsView } from './views/settings.js';
+import { getMode, onModeChange } from './mode.js';
 
 store.load();
 
@@ -14,11 +15,11 @@ const back = $('#back');
 
 let current = null;
 
-// Hash routes: #gigs, #library, #settings, #gig-<id>-<tab>
+// Hash routes: #gigs, #library, #settings, #gig-<id> (opens the gig's home tab), #gig-<id>-<tab>
 function parseRoute() {
   const h = location.hash.replace(/^#/, '');
-  const m = h.match(/^gig-([a-z0-9]+)-(rig|prep|patch|power|print)$/);
-  if (m) return { view: gigView, params: { id: m[1], tab: m[2] } };
+  const m = h.match(/^gig-([a-z0-9]+)(?:-(sheet|rig|lookup|prep|patch|power|print))?$/);
+  if (m) return { view: gigView, params: { id: m[1], tab: m[2] || '' } };
   if (h === 'library') return { view: libraryView, params: {} };
   if (h === 'settings') return { view: settingsView, params: {} };
   return { view: gigsView, params: {} };
@@ -31,13 +32,16 @@ export function go(hash) {
 
 export function render({ keepScroll = false } = {}) {
   const y = window.scrollY;
+  document.body.dataset.mode = getMode();
   const route = parseRoute();
+  current?.out.unmount?.();
   const out = route.view.render(route.params);
   current = { ...route, out };
   title.textContent = out.title;
   back.hidden = !out.back;
   back.dataset.to = out.back || '';
   main.classList.toggle('wide', !!out.wide);
+  main.classList.toggle('full', !!out.full);
   main.innerHTML = out.html;
   out.mount?.(main);
   for (const a of document.querySelectorAll('.nav a')) {
@@ -62,6 +66,7 @@ main.addEventListener('change', (e) => {
 });
 
 back.addEventListener('click', () => go(back.dataset.to));
+onModeChange(() => render({ keepScroll: true }));
 window.addEventListener('hashchange', () => render());
 
 if (!store.isPersistent()) {

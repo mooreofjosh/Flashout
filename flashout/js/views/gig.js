@@ -13,6 +13,9 @@ import {
 import { editGigSheet } from './gigs.js';
 import { importMVR } from './mvrImport.js';
 import { power, powerPrintHtml, breakerPrintHtml, breakerModel, powerPdfSections } from './power.js';
+import { worksheet } from './worksheet.js';
+import { isLaptop } from '../mode.js';
+import { fixtureInfoSheet } from './common.js';
 
 const ui = {
   prepPosition: '__all',
@@ -31,17 +34,31 @@ const ui = {
   rigUndo: null, // { gigId, removed: [{ fixture, index }] }
 };
 
-const TABS = [['rig', 'Rig'], ['prep', 'Prep'], ['patch', 'Patch'], ['power', 'Power'], ['print', 'Print']];
+const LAPTOP_TABS = [['sheet', 'Worksheet'], ['prep', 'Prep'], ['patch', 'Patch'], ['power', 'Power'], ['print', 'Paperwork']];
+const PHONE_TABS = [['prep', 'Prep'], ['lookup', 'Fixtures']];
+
+// Which tab to show: the gig's home tab depends on the layout; old "rig" links still work.
+function resolveTab(tab) {
+  const laptop = isLaptop();
+  if (!tab) return laptop ? 'sheet' : 'prep';
+  if (tab === 'rig') return laptop ? 'sheet' : 'lookup';
+  if (tab === 'lookup' && laptop) return 'sheet';
+  return tab;
+}
 const getType = (id) => store.getType(id);
 const posName = (p) => p || 'No position';
 
 export const gigView = {
-  render({ id, tab }) {
+  render({ id, tab: asked }) {
     const gig = store.getGig(id);
     if (!gig) return { title: 'Gig not found', back: 'gigs', html: '<div class="empty"><p>This gig no longer exists.</p></div>' };
+    const tab = resolveTab(asked);
+    const TABS = isLaptop() ? LAPTOP_TABS : PHONE_TABS;
     const tabs = `<nav class="tabs" role="tablist">${TABS.map(([k, label]) =>
       `<a role="tab" href="#gig-${gig.id}-${k}" class="${k === tab ? 'active' : ''}" aria-selected="${k === tab}">${label}</a>`).join('')}</nav>`;
-    const body = { rig, prep, patch, power, print }[tab](gig);
+    const body = tab === 'sheet' ? worksheet(gig, { addFixturesSheet, importMVR })
+      : { rig, lookup, prep, patch, power, print }[tab](gig);
+    const laptopOnly = !isLaptop() && ['sheet', 'patch', 'power', 'print'].includes(tab);
     return {
       title: gig.name || 'Gig',
       back: 'gigs',
@@ -49,9 +66,11 @@ export const gigView = {
       html: `<div class="gig-head">
           <p class="muted">${esc([gig.venue, gig.client, gig.date].filter(Boolean).join(' · ')) || 'No venue set'}</p>
           <button class="btn small" data-action="editGig">Edit</button>
-        </div>${tabs}${body.html}`,
+        </div>${tabs}${laptopOnly ? '<p class="desktop-hint">This screen is built for the laptop layout.</p>' : ''}${body.html}`,
       mount: body.mount,
+      unmount: body.unmount,
       wide: body.wide,
+      full: body.full,
       actions: {
         async editGig() { await editGigSheet(gig); refresh(); },
         ...body.actions,
@@ -254,6 +273,45 @@ function rig(gig) {
         }
         refresh();
       },
+    },
+  };
+}
+
+// ---------------- LOOKUP (phone) ----------------
+
+const look = { q: '' };
+
+function lookup(gig) {
+  const settings = store.getState().settings;
+  const q = look.q.trim().toLowerCase();
+  const words = q.split(/\s+/).filter(Boolean);
+  const hay = (f) => [f.unit, f.channel, formatAddress(f), typeLabel(getType(f.typeId)), f.position, f.purpose, f.colour].join(' ').toLowerCase();
+  const list = sortFixtures(gig.fixtures).filter((f) => words.every((w) => hay(f).includes(w)));
+  return {
+    html: `
+      <input class="lookup-search" type="search" placeholder="Unit, channel, address, fixture…" value="${esc(look.q)}" data-lookup aria-label="Find a fixture" inputmode="search">
+      <ul class="rows">${list.map((f) => {
+        const t = getType(f.typeId);
+        const p = prepState(f, settings);
+        const nf = openFaults(f).length;
+        return `<li><button class="row" data-action="info" data-id="${f.id}">
+          <span class="unit ${p.complete ? 'done' : ''}">${esc(f.unit || '–')}</span>
+          <span class="row-main"><strong>${esc(typeLabel(t))}</strong><small>${esc(posName(f.position))}${f.channel ? ` · Ch ${esc(f.channel)}` : ''}${f.purpose ? ` · ${esc(f.purpose)}` : ''}</small></span>
+          <span class="row-side"><span class="addr">${formatAddress(f)}</span><small>${p.done}/${p.total}${nf ? ` <span class="bad-text">⚠${nf}</span>` : ''}</small></span>
+        </button></li>`;
+      }).join('') || `<li class="muted empty-li">${gig.fixtures.length ? 'No match.' : 'No fixtures yet. Add them on the laptop.'}</li>`}</ul>`,
+    mount(root) {
+      const input = root.querySelector('[data-lookup]');
+      input.addEventListener('input', () => {
+        look.q = input.value;
+        const pos = input.selectionStart;
+        refresh();
+        const again = document.querySelector('[data-lookup]');
+        again?.focus(); again?.setSelectionRange(pos, pos);
+      });
+    },
+    actions: {
+      async info(el) { await fixtureInfoSheet(gig, store.getFixture(gig, el.dataset.id)); refresh(); },
     },
   };
 }
@@ -526,6 +584,56 @@ function patch(gig) {
   };
 }
 
+// ---------------- REPORTS ----------------
+
+// Channel hookup and colour/gobo pull: shared by the on-screen preview and PDF export.
+function reportSections(gig, fixtures, mode) {
+  if (mode === 'hookup') {
+    const rows = [...fixtures].sort((a, b) => {
+      const ea = !a.channel, eb = !b.channel;
+      if (ea !== eb) return ea ? 1 : -1;
+      return naturalCompare(a.channel, b.channel) || naturalCompare(a.unit, b.unit);
+    });
+    return [{
+      head: ['Channel', 'Unit', 'Address', 'Position', 'Fixture', 'Purpose', 'Colour', 'Gobo'],
+      body: rows.map((f) => [f.channel || '-', f.unit, isPatched(f) ? formatAddress(f) : '-', f.position, typeLabel(getType(f.typeId)), f.purpose, f.colour, f.gobo]),
+      columnStyles: { 0: { fontStyle: 'bold', cellWidth: 17 }, 1: { cellWidth: 13 }, 2: { cellWidth: 17 } },
+    }];
+  }
+  // pull list: what to bring for colour, gobos and accessories, by fixture type
+  const tally = (field) => {
+    const m = new Map();
+    for (const f of fixtures) {
+      for (const v of String(f[field] || '').split(/[,;+]/).map((x) => x.trim()).filter(Boolean)) {
+        const k = `${v}\u0000${typeLabel(getType(f.typeId))}`;
+        if (!m.has(k)) m.set(k, { value: v, type: typeLabel(getType(f.typeId)), units: [] });
+        m.get(k).units.push(f.unit || '-');
+      }
+    }
+    return [...m.values()].sort((a, b) => naturalCompare(a.value, b.value) || a.type.localeCompare(b.type));
+  };
+  const section = (label, single, field) => {
+    const list = tally(field);
+    return list.length ? {
+      heading: label,
+      head: [single, 'Fixture', 'Qty', 'Units'],
+      body: list.map((r) => [r.value, r.type, r.units.length, r.units.sort(naturalCompare).join(', ')]),
+      columnStyles: { 0: { fontStyle: 'bold', cellWidth: 34 }, 2: { cellWidth: 12 } },
+    } : { heading: label, note: `No ${label.toLowerCase()} entered.` };
+  };
+  return [section('Colours', 'Colour', 'colour'), section('Gobos', 'Gobo', 'gobo'), section('Accessories', 'Accessory', 'accessories')];
+}
+
+function sectionsHtml(sections) {
+  return sections.map((s) => `
+    ${s.heading ? `<h3>${esc(s.heading)}</h3>` : ''}
+    ${s.note ? `<p>${esc(s.note)}</p>` : ''}
+    ${s.head ? `<table class="print-table"><thead><tr>${s.head.map((h) => `<th>${esc(h)}</th>`).join('')}</tr></thead>
+      <tbody>${s.body.map((r) => `<tr>${r.map((c, i) => `<td>${i === 0 ? `<strong>${esc(c)}</strong>` : esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>` : ''}`).join('');
+}
+
+const REPORT_TITLES = { hookup: 'Channel hookup', pull: 'Colour & gobo pull' };
+
 // ---------------- PRINT ----------------
 
 function print(gig) {
@@ -544,11 +652,11 @@ function print(gig) {
     preview = hdr + keys.map((k) => `
       <h3>${esc(k)} <small>(${groups.get(k).length})</small></h3>
       <table class="print-table">
-        <thead><tr><th>Unit</th><th>Fixture</th><th>Mode</th><th>Ch</th><th>Address</th><th>Abs</th><th>Position</th><th>Rig</th></tr></thead>
+        <thead><tr><th>Unit</th><th>Chan</th><th>Fixture</th><th>Mode</th><th>Ch</th><th>Address</th><th>Abs</th><th>Position</th><th>Rig</th></tr></thead>
         <tbody>${groups.get(k).map((f) => {
           const t = getType(f.typeId);
           const m = t?.modes?.[f.modeIndex];
-          return `<tr><td>${esc(f.unit)}</td><td>${esc(typeLabel(t))}</td><td>${esc(m?.name)}</td><td>${m?.channels ?? ''}</td>
+          return `<tr><td>${esc(f.unit)}</td><td>${esc(f.channel || '')}</td><td>${esc(typeLabel(t))}</td><td>${esc(m?.name)}</td><td>${m?.channels ?? ''}</td>
             <td><strong>${formatAddress(f)}</strong></td><td>${isPatched(f) ? absoluteAddress(f.universe, f.address) : ''}</td>
             <td>${esc(f.position)}</td><td>${f.rigging === 'ground' ? 'G' : 'F'}</td></tr>`;
         }).join('')}</tbody>
@@ -569,6 +677,8 @@ function print(gig) {
     preview = hdr + '<h3>Power plan</h3>' + powerPrintHtml(gig);
   } else if (ui.printMode === 'breakers') {
     preview = breakerPrintHtml(gig, ui.printDistro);
+  } else if (ui.printMode === 'hookup' || ui.printMode === 'pull') {
+    preview = hdr + `<h3>${REPORT_TITLES[ui.printMode]}</h3>` + sectionsHtml(reportSections(gig, fixtures, ui.printMode));
   } else {
     const faulty = fixtures.filter((f) => f.faults.length);
     preview = hdr + '<h3>Fault report</h3>' + (faulty.length ? `<table class="print-table">
@@ -585,7 +695,7 @@ function print(gig) {
   return {
     html: `
       <div class="no-print">
-        <div class="chips-scroll">${mode('sheet', 'Patch sheet')}${mode('labels', 'Labels')}${mode('power', 'Power plan')}${mode('breakers', 'Distro breakers')}${mode('faults', 'Fault report')}</div>
+        <div class="chips-scroll">${mode('sheet', 'Patch sheet')}${mode('hookup', 'Channel hookup')}${mode('pull', 'Colour & gobo pull')}${mode('labels', 'Labels')}${mode('power', 'Power plan')}${mode('breakers', 'Distro breakers')}${mode('faults', 'Fault report')}</div>
         ${ui.printMode === 'sheet' ? `<div class="chips-scroll">Group by: ${group('position', 'Position')}${group('universe', 'Universe')}${group('none', 'None')}</div>` : ''}
         ${ui.printMode === 'breakers' ? `<label>Distro
           <select data-change="pdistro">
@@ -663,6 +773,11 @@ async function buildPdf(gig, fixtures) {
     return { blob: await pdf.tablesPdf({ title: 'Power plan', gigName: gig.name, subtitle, sections: powerPdfSections(gig) }), name: `${base}-power-plan.pdf` };
   }
 
+  if (mode === 'hookup' || mode === 'pull') {
+    const slug = mode === 'hookup' ? 'channel-hookup' : 'colour-gobo-pull';
+    return { blob: await pdf.tablesPdf({ title: REPORT_TITLES[mode], gigName: gig.name, subtitle, sections: reportSections(gig, fixtures, mode) }), name: `${base}-${slug}.pdf` };
+  }
+
   if (mode === 'faults') {
     const faulty = fixtures.filter((f) => f.faults.length);
     const sections = faulty.length ? [{
@@ -681,13 +796,13 @@ async function buildPdf(gig, fixtures) {
   if (!groups.size) throw new Error('No fixtures to put on a patch sheet');
   const sections = [...groups.keys()].sort(naturalCompare).map((k) => ({
     heading: `${k} (${groups.get(k).length})`,
-    head: ['Unit', 'Fixture', 'Mode', 'Ch', 'Address', 'Abs', 'Position', 'Rig'],
+    head: ['Unit', 'Chan', 'Fixture', 'Mode', 'Ch', 'Address', 'Abs', 'Position', 'Rig'],
     body: groups.get(k).map((f) => {
       const t = getType(f.typeId);
       const m = t?.modes?.[f.modeIndex];
-      return [f.unit, typeLabel(t), m?.name || '', m?.channels ?? '', formatAddress(f) === '—' ? '-' : formatAddress(f), isPatched(f) ? absoluteAddress(f.universe, f.address) : '', f.position, f.rigging === 'ground' ? 'G' : 'F'];
+      return [f.unit, f.channel || '', typeLabel(t), m?.name || '', m?.channels ?? '', formatAddress(f) === '—' ? '-' : formatAddress(f), isPatched(f) ? absoluteAddress(f.universe, f.address) : '', f.position, f.rigging === 'ground' ? 'G' : 'F'];
     }),
-    columnStyles: { 0: { cellWidth: 13, fontStyle: 'bold' }, 3: { cellWidth: 10 }, 4: { cellWidth: 19, fontStyle: 'bold' }, 5: { cellWidth: 12 }, 7: { cellWidth: 9 } },
+    columnStyles: { 0: { cellWidth: 13, fontStyle: 'bold' }, 1: { cellWidth: 13 }, 4: { cellWidth: 10 }, 5: { cellWidth: 19, fontStyle: 'bold' }, 6: { cellWidth: 12 }, 8: { cellWidth: 9 } },
   }));
   return { blob: await pdf.tablesPdf({ title: 'Patch sheet', gigName: gig.name, subtitle, sections }), name: `${base}-patch-sheet.pdf` };
 }

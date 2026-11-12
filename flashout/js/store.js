@@ -122,7 +122,8 @@ export function addFixtures(gigId, list) {
   for (const f of list) {
     gig.fixtures.push({
       id: uid(), typeId: null, modeIndex: 0, unit: '', position: '', rigging: 'flown',
-      universe: null, address: null, notes: '', checks: {}, faults: [], ...f,
+      universe: null, address: null, notes: '', channel: '', purpose: '', colour: '', gobo: '', accessories: '',
+      checks: {}, faults: [], ...f,
     });
   }
   save();

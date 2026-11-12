@@ -132,15 +132,15 @@ const csvCell = (v) => {
 };
 
 export function patchCSV(fixtures, getType) {
-  const head = ['Unit', 'Fixture', 'Manufacturer', 'Mode', 'Channels', 'Universe', 'Address', 'Absolute Address', 'Position', 'Rigging', 'Notes'];
+  const head = ['Unit', 'Channel', 'Fixture', 'Manufacturer', 'Mode', 'Channels', 'Universe', 'Address', 'Absolute Address', 'Position', 'Purpose', 'Colour', 'Gobo', 'Accessories', 'Rigging', 'Notes'];
   const rows = fixtures.map((f) => {
     const t = getType(f.typeId);
     const m = t?.modes?.[f.modeIndex];
     const p = isPatched(f);
     return [
-      f.unit, t?.name, t?.manufacturer, m?.name, m?.channels,
+      f.unit, f.channel, t?.name, t?.manufacturer, m?.name, m?.channels,
       p ? f.universe : '', p ? f.address : '', p ? absoluteAddress(f.universe, f.address) : '',
-      f.position, f.rigging, f.notes,
+      f.position, f.purpose, f.colour, f.gobo, f.accessories, f.rigging, f.notes,
     ];
   });
   return [head, ...rows].map((r) => r.map(csvCell).join(',')).join('\r\n');

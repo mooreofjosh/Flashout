@@ -6,13 +6,16 @@ Fixture prep, patching and power planning for live-event lighting crews. Runs in
 
 ## Features
 
-- **Gigs**: venue, client, date and notes. Copy a previous gig as a starting point.
-- **Fixture library**: 1,900+ built-in fixtures (converted from grandMA2 library exports), Open Fixture Library search, GDTF and OFL JSON import, or manual entry.
-- **Rig**: add fixtures by position, flown or ground. Import a whole rig from an **MVR** file (Vectorworks, grandMA3, Capture…).
-- **Prep**: a checklist on each fixture (flown: clamps, safeties, ID sticker, addressed, power cable, flashed out; ground: ID sticker onward). Lists are editable, and fault notes are kept per unit.
-- **Patch**: auto-addressing, clash and out-of-range checks, CSV export.
-- **Power**: distros (default 32A 3-phase → 12 × 10A on Socapex or Wieland), drag-and-drop circuit assignment, auto-assign that balances phases and keeps multicore runs to one position, load warnings, multicore run and breakout count.
-- **Print**: patch sheets, A4 labels (21 per sheet), power plan with multicore pull list, fault report.
+Two layouts, picked by screen width (or set in Settings):
+
+- **Phone: prep on the floor.** A gig opens on the prep checklist. A Fixtures lookup finds a unit by number, channel, address or name, and shows its details with its checklist to tick and its faults.
+- **Laptop: the full toolkit.**
+  - **Worksheet**: a spreadsheet of every fixture (position, unit, fixture, mode, address, channel, purpose, colour, gobo, accessories, rigging, circuit, prep, faults, notes). Click a cell and type to edit; Enter/Tab/arrows move; click headings to sort (shift-click for a second sort); filter; group by position; choose columns; select rows to bulk-change, renumber or delete; Ctrl/⌘+D fills down.
+  - **Prep**: checklist per fixture (flown: clamps, safeties, ID sticker, addressed, power cable, flashed out; ground: ID sticker onward), editable lists, fault notes.
+  - **Patch**: auto-addressing, clash and out-of-range checks, CSV export.
+  - **Power**: distros (default 32A 3-phase → 12 × 10A on Socapex or Wieland), fixture power specs, drag-and-drop circuits, phase-balancing auto-assign, Socapex/Wieland run and breakout count.
+  - **Paperwork**: patch sheet, channel hookup, colour & gobo pull list, A4 labels, power plan, distro breaker labels colour-coded by resistor code, fault report. Every one exports to PDF.
+- **Fixture library**: 1,900+ built-in fixtures (converted from grandMA2 library exports), Open Fixture Library search, GDTF and OFL JSON import, manual entry. Whole rigs import from **MVR** files.
 
 ## Running it
 
