@@ -470,3 +470,7 @@ table.ws tr.ws-group td span { color: var(--muted); font-weight: 500; margin-lef
 .sheet .checks { margin: .5rem 0 .75rem; }
 .ws-bulk { min-height: 46px; }
 .ws-bulk.idle { background: transparent; border-style: dashed; border-color: var(--line); }
+.lookup-tools { margin-top: 0; }
+/* keep toasts clear of the bottom action bar */
+body:has(.action-bar:not([hidden])) #toast { bottom: calc(150px + env(safe-area-inset-bottom)); }
+body[data-mode="laptop"]:has(.action-bar:not([hidden])) #toast { bottom: 6rem; }
