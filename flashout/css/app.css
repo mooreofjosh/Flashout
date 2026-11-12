@@ -329,3 +329,17 @@ main.wide .tabs, main.wide .gig-head { max-width: 860px; }
 @media (max-width: 560px) { .circuit-head { display: none; } .circuit-row { grid-template-columns: 1fr 4rem 4rem; } }
 .cables { margin-top: .75rem; }
 .chips.big li { font-size: .95rem; padding: .35rem .8rem; }
+
+/* ---------- multi-select ---------- */
+.row.selecting { cursor: pointer; }
+.row.picked { background: #2a2210; }
+.selbox { flex: none; width: 26px; height: 26px; border-radius: 7px; border: 2px solid var(--muted); display: grid; place-items: center; font-weight: 800; color: #04130c; }
+.row.picked .selbox { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.select-toolbar select { width: auto; min-height: var(--tap); }
+.action-bar { position: fixed; z-index: 20; left: 50%; transform: translateX(-50%); bottom: calc(72px + env(safe-area-inset-bottom)); width: min(560px, calc(100% - 1.5rem)); display: flex; justify-content: space-between; align-items: center; gap: .75rem; padding: .6rem .6rem .6rem 1rem; background: #2b3038; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 8px 30px rgba(0,0,0,.5); }
+.action-bar[hidden] { display: none; }
+.btn.danger-fill { background: var(--bad); border-color: var(--bad); color: #fff; font-weight: 650; }
+.section-head { display: flex; justify-content: space-between; align-items: center; gap: .5rem; margin: 1.25rem 0 .5rem; }
+.section-head .section-title { margin: 0; }
+.section-head .toolbar { margin: 0; }
+main:has(.action-bar:not([hidden])) { padding-bottom: 5rem; }

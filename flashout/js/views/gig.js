@@ -22,6 +22,10 @@ const ui = {
   printGroup: 'position',
   printPosition: '__all',
   undo: null, // { gigId, before: [{id, universe, address}] }
+  rigSelect: false, // multi-select mode in the Rig tab
+  rigSel: new Set(),
+  rigGig: null,
+  rigUndo: null, // { gigId, removed: [{ fixture, index }] }
 };
 
 const TABS = [['rig', 'Rig'], ['prep', 'Prep'], ['patch', 'Patch'], ['power', 'Power'], ['print', 'Print']];
@@ -95,6 +99,10 @@ function addFixturesSheet(gig, preset = {}) {
 }
 
 function rig(gig) {
+  if (ui.rigGig !== gig.id) { ui.rigGig = gig.id; ui.rigSelect = false; ui.rigSel.clear(); ui.rigUndo = null; }
+  for (const id of [...ui.rigSel]) if (!gig.fixtures.some((f) => f.id === id)) ui.rigSel.delete(id);
+  const selecting = ui.rigSelect;
+  const nSel = ui.rigSel.size;
   const groups = new Map();
   for (const f of sortFixtures(gig.fixtures)) {
     const k = f.position || '';
@@ -120,16 +128,18 @@ function rig(gig) {
     <section class="group">
       <header class="group-head">
         <h3>${esc(posName(pos))} <span class="muted">(${groups.get(pos).length})</span></h3>
-        <span>
+        ${selecting ? `<button class="btn small" data-action="selPos" data-pos="${esc(pos)}">${groups.get(pos).every((f) => ui.rigSel.has(f.id)) ? 'Deselect' : 'Select'} all ${groups.get(pos).length}</button>` : `<span>
           <button class="btn small" data-action="addTo" data-pos="${esc(pos)}">+ Add</button>
           <button class="icon-btn" data-action="posMenu" data-pos="${esc(pos)}" aria-label="Position options">⋯</button>
-        </span>
+        </span>`}
       </header>
       <ul class="rows">${groups.get(pos).map((f) => {
         const t = getType(f.typeId);
         const p = prepState(f, settings);
         const nf = openFaults(f).length;
-        return `<li><button class="row" data-action="edit" data-id="${f.id}">
+        const on = ui.rigSel.has(f.id);
+        return `<li><button class="row ${selecting ? 'selecting' : ''} ${on ? 'picked' : ''}" data-action="${selecting ? 'toggleSel' : 'edit'}" data-id="${f.id}" ${selecting ? `aria-pressed="${on}"` : ''}>
+          ${selecting ? `<span class="selbox">${on ? '✓' : ''}</span>` : ''}
           <span class="unit">${esc(f.unit || '–')}</span>
           <span class="row-main"><strong>${esc(typeLabel(t))}</strong><small>${esc(modeLabel(t, f.modeIndex))}</small></span>
           <span class="row-side">
@@ -142,7 +152,25 @@ function rig(gig) {
 
   return {
     html: `
-      <div class="toolbar"><button class="btn primary" data-action="add">+ Add fixtures</button><button class="btn" data-action="mvr">Import MVR</button></div>
+      ${selecting ? `
+      <div class="toolbar select-toolbar">
+        <button class="btn primary" data-action="selDone">Done</button>
+        <button class="btn" data-action="selAll">${nSel === gig.fixtures.length ? 'Deselect all' : `Select all ${gig.fixtures.length}`}</button>
+        <select data-change="selType" aria-label="Select all of a fixture type">
+          <option value="">Select by fixture…</option>
+          ${[...counts.keys()].sort().map((k) => `<option value="${esc(k)}">${esc(k)} (${counts.get(k)})</option>`).join('')}
+        </select>
+      </div>
+      <div class="action-bar" ${nSel ? '' : 'hidden'}>
+        <span><strong>${nSel}</strong> selected</span>
+        <button class="btn danger-fill" data-action="deleteSel">Delete ${nSel}</button>
+      </div>` : `
+      <div class="toolbar">
+        <button class="btn primary" data-action="add">+ Add fixtures</button>
+        <button class="btn" data-action="mvr">Import MVR</button>
+        ${gig.fixtures.length ? '<button class="btn" data-action="selStart">Select</button>' : ''}
+        ${ui.rigUndo?.gigId === gig.id ? `<button class="btn" data-action="undoDelete">Undo delete (${ui.rigUndo.removed.length})</button>` : ''}
+      </div>`}
       ${summary}
       ${list || '<div class="empty"><h3>No fixtures in this rig</h3><p class="muted">Add fixtures by position, e.g. 8 moving heads on the FOH truss.</p></div>'}`,
     actions: {
@@ -153,6 +181,48 @@ function rig(gig) {
         if (await addFixturesSheet(gig, { position: el.dataset.pos, rigging: sample?.rigging, typeId: sample?.typeId })) refresh();
       },
       async edit(el) { if (await editFixtureSheet(gig, store.getFixture(gig, el.dataset.id))) refresh(); },
+      selStart() { ui.rigSelect = true; ui.rigSel.clear(); refresh(); },
+      selDone() { ui.rigSelect = false; ui.rigSel.clear(); refresh(); },
+      toggleSel(el) { const id = el.dataset.id; ui.rigSel.has(id) ? ui.rigSel.delete(id) : ui.rigSel.add(id); refresh(); },
+      selAll() {
+        if (ui.rigSel.size === gig.fixtures.length) ui.rigSel.clear();
+        else gig.fixtures.forEach((f) => ui.rigSel.add(f.id));
+        refresh();
+      },
+      selPos(el) {
+        const inPos = gig.fixtures.filter((f) => (f.position || '') === el.dataset.pos);
+        const all = inPos.every((f) => ui.rigSel.has(f.id));
+        inPos.forEach((f) => (all ? ui.rigSel.delete(f.id) : ui.rigSel.add(f.id)));
+        refresh();
+      },
+      selType(el) {
+        if (!el.value) return;
+        gig.fixtures.forEach((f) => { if (typeLabel(getType(f.typeId)) === el.value) ui.rigSel.add(f.id); });
+        refresh();
+      },
+      async deleteSel() {
+        const ids = [...ui.rigSel];
+        if (!ids.length) return;
+        const chosen = gig.fixtures.filter((f) => ui.rigSel.has(f.id));
+        const faults = chosen.reduce((n, f) => n + f.faults.length, 0);
+        const ok = await confirmSheet(`Delete ${ids.length} fixture${ids.length > 1 ? 's' : ''}?`,
+          `Their patch, prep ticks${faults ? ` and ${faults} fault note${faults > 1 ? 's' : ''}` : ''} go too. You can undo this until you leave the gig.`, `Delete ${ids.length}`, true);
+        if (!ok) return;
+        ui.rigUndo = { gigId: gig.id, removed: gig.fixtures.map((f, index) => ({ fixture: f, index })).filter((x) => ui.rigSel.has(x.fixture.id)) };
+        store.deleteFixtures(gig.id, ids);
+        ui.rigSelect = false;
+        ui.rigSel.clear();
+        toast(`Deleted ${ids.length} fixture${ids.length > 1 ? 's' : ''}`);
+        refresh();
+      },
+      undoDelete() {
+        const { removed } = ui.rigUndo;
+        for (const { fixture, index } of removed) gig.fixtures.splice(Math.min(index, gig.fixtures.length), 0, fixture);
+        ui.rigUndo = null;
+        store.save();
+        toast(`Restored ${removed.length} fixture${removed.length > 1 ? 's' : ''}`);
+        refresh();
+      },
       async posMenu(el) {
         const pos = el.dataset.pos;
         const fixtures = gig.fixtures.filter((f) => (f.position || '') === pos);
