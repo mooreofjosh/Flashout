@@ -4,7 +4,7 @@ import { esc, sheet, confirmSheet, formData, toast } from '../ui.js';
 import { refresh } from '../app.js';
 import { naturalCompare } from '../patch.js';
 import {
-  PHASES, VIA, MULTICORE, cableCount, WARN_PCT, DEFAULT_POWER, TEMPLATES, makeDistro, makeCircuit, runFor, analyse, powerIssues, autoAssign, amps, fixtureWatts,
+  PHASES, VIA, MULTICORE, cableCount, runColour, unitRanges, WARN_PCT, DEFAULT_POWER, TEMPLATES, makeDistro, makeCircuit, runFor, analyse, powerIssues, autoAssign, amps, fixtureWatts,
 } from '../power.js';
 import { typeLabel, sortFixtures } from './common.js';
 
@@ -183,7 +183,7 @@ export function power(gig) {
         const pct = s.amps / c.ratingA;
         return `<div class="circuit ${level(pct)} ${sel ? 'target' : ''}" data-cid="${c.id}" data-action="${sel ? 'assignHere' : ''}" ${sel ? 'role="button" tabindex="0"' : ''}>
           <div class="c-head"><strong>${esc(c.label)}</strong>${d.supply === '3ph' ? `<span class="ph ${c.phase}">${c.phase}</span>` : ''}<span class="amps">${fmtA(s.amps)}/${c.ratingA}A</span></div>
-          <div class="via">${esc(c.run || c.via || '')}</div>
+          <div class="via">${(() => { const col = runColour(d, c); return col ? `<span class="swatch" style="background:${col.bg}"></span>${esc(c.run || c.via)} · ${col.name}` : esc(c.run || c.via || ''); })()}</div>
           ${bar(pct)}
           <div class="chips-in">${s.fixtures.sort((x, y) => naturalCompare(x.unit, y.unit)).map((f) => `<button class="fx-chip" data-action="unplug" data-id="${f.id}" title="${esc(typeLabel(getType(f.typeId)))} · click to unplug">${esc(f.unit || '–')}</button>`).join('')}</div>
         </div>`;
@@ -357,4 +357,69 @@ function cablePrintHtml(gig) {
     <p>${Object.entries(totals).map(([via, t]) => `<strong>${t.runs} × ${esc(via)}</strong> + ${t.breakouts} breakout${t.breakouts === 1 ? '' : 's'}`).join(' · ')}</p>
     <table class="print-table"><thead><tr><th>Run</th><th>Type</th><th>Distro</th><th>Feeds</th><th>Circuits used</th></tr></thead>
     <tbody>${used.map((r) => `<tr><td>${esc(r.name)}</td><td>${esc(r.via)}</td><td>${esc(r.distro.name)}</td><td>${esc([...r.positions].join(', '))}</td><td>${r.used}/${r.circuits.length}</td></tr>`).join('')}</tbody></table>`;
+}
+
+// Breaker labels: one landscape page per distro, one row per multicore run, coloured by resistor code.
+export function breakerPrintHtml(gig, distroId = '__all') {
+  const p = ensurePower(gig);
+  const a = analyse(gig.fixtures, p, getType);
+  const distros = p.distros.filter((d) => distroId === '__all' || d.id === distroId);
+  if (!distros.length) return '<p>No distros set up. Plan power in the Power tab.</p>';
+
+  const feeds = (c) => {
+    const s = a.circuits.get(c.id);
+    const byPos = new Map();
+    for (const f of [...s.fixtures].sort((x, y) => naturalCompare(x.unit, y.unit))) {
+      const pos = f.position || 'No position';
+      if (!byPos.has(pos)) byPos.set(pos, new Map());
+      const k = typeLabel(getType(f.typeId));
+      if (!byPos.get(pos).has(k)) byPos.get(pos).set(k, []);
+      byPos.get(pos).get(k).push(f.unit || '–');
+    }
+    return { s, byPos };
+  };
+
+  return distros.map((d) => {
+    // Rows: consecutive circuits sharing a run; plain circuits in rows of 6.
+    const rows = [];
+    for (const c of d.circuits) {
+      const key = MULTICORE[c.via] ? `${c.via}:${c.run || c.id}` : null;
+      const last = rows[rows.length - 1];
+      if (last && key && last.key === key) last.circuits.push(c);
+      else if (last && !key && !last.key && last.circuits.length < 6) last.circuits.push(c);
+      else rows.push({ key, circuits: [c] });
+    }
+    const cols = Math.max(...rows.map((r) => r.circuits.length));
+    return `<section class="breaker-sheet">
+      <header class="breaker-title">
+        <h2>${esc(d.name)}</h2>
+        <p>${esc(gig.name)} · ${d.supply === '3ph' ? '3-phase' : 'single-phase'} ${d.ratingA}A${gig.venue ? ` · ${esc(gig.venue)}` : ''}</p>
+      </header>
+      ${rows.map((r) => {
+        const first = r.circuits[0];
+        const col = runColour(d, first);
+        const label = col ? `${esc(first.run || first.via)}` : 'Outlets';
+        return `<div class="breaker-row" style="--cols:${cols}">
+          <div class="run-tag" style="${col ? `background:${col.bg};color:${col.fg}` : ''}">
+            <strong>${label}</strong>${col ? `<span>${col.name}</span>` : ''}<small>${esc(first.via || '')}</small>
+          </div>
+          ${r.circuits.map((c) => {
+            const { s, byPos } = feeds(c);
+            const used = s.fixtures.length;
+            const pct = s.amps / c.ratingA;
+            return `<div class="breaker ${used ? '' : 'spare'}">
+              <div class="breaker-band" style="${col ? `background:${col.bg};color:${col.fg}` : ''}">
+                <span class="ch">${esc(c.label)}</span>
+                <span class="brk-meta">${d.supply === '3ph' ? esc(c.phase) + ' · ' : ''}${c.ratingA}A</span>
+              </div>
+              <div class="breaker-body">
+                ${used ? [...byPos].map(([pos, types]) => `<div class="feed"><b>${esc(pos)}</b>${[...types].map(([t, units]) => `<span>${esc(t)}: ${esc(unitRanges(units))}</span>`).join('')}</div>`).join('') : '<div class="feed spare-text">SPARE</div>'}
+              </div>
+              ${used ? `<div class="breaker-load">${s.amps.toFixed(1)}A · ${Math.round(pct * 100)}%</div>` : ''}
+            </div>`;
+          }).join('')}
+        </div>`;
+      }).join('')}
+    </section>`;
+  }).join('');
 }

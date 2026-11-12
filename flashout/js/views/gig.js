@@ -12,7 +12,7 @@ import {
 } from './common.js';
 import { editGigSheet } from './gigs.js';
 import { importMVR } from './mvrImport.js';
-import { power, powerPrintHtml } from './power.js';
+import { power, powerPrintHtml, breakerPrintHtml } from './power.js';
 
 const ui = {
   prepPosition: '__all',
@@ -21,6 +21,7 @@ const ui = {
   printMode: 'sheet',
   printGroup: 'position',
   printPosition: '__all',
+  printDistro: '__all',
   undo: null, // { gigId, before: [{id, universe, address}] }
   rigSelect: false, // multi-select mode in the Rig tab
   rigSel: new Set(),
@@ -564,6 +565,8 @@ function print(gig) {
     }).join('')}</div>`;
   } else if (ui.printMode === 'power') {
     preview = hdr + '<h3>Power plan</h3>' + powerPrintHtml(gig);
+  } else if (ui.printMode === 'breakers') {
+    preview = breakerPrintHtml(gig, ui.printDistro);
   } else {
     const faulty = fixtures.filter((f) => f.faults.length);
     preview = hdr + '<h3>Fault report</h3>' + (faulty.length ? `<table class="print-table">
@@ -580,22 +583,29 @@ function print(gig) {
   return {
     html: `
       <div class="no-print">
-        <div class="chips-scroll">${mode('sheet', 'Patch sheet')}${mode('labels', 'Labels')}${mode('power', 'Power plan')}${mode('faults', 'Fault report')}</div>
+        <div class="chips-scroll">${mode('sheet', 'Patch sheet')}${mode('labels', 'Labels')}${mode('power', 'Power plan')}${mode('breakers', 'Distro breakers')}${mode('faults', 'Fault report')}</div>
         ${ui.printMode === 'sheet' ? `<div class="chips-scroll">Group by: ${group('position', 'Position')}${group('universe', 'Universe')}${group('none', 'None')}</div>` : ''}
-        <label>Fixtures
+        ${ui.printMode === 'breakers' ? `<label>Distro
+          <select data-change="pdistro">
+            <option value="__all">All distros (one page each)</option>
+            ${(gig.power?.distros || []).map((d) => `<option value="${d.id}" ${ui.printDistro === d.id ? 'selected' : ''}>${esc(d.name)}</option>`).join('')}
+          </select>
+        </label>
+        <p class="muted small">Landscape A4. Multicore runs are coloured by resistor code: 1 brown, 2 red, 3 orange, 4 yellow, 5 green, 6 blue, 7 violet, 8 grey, 9 white, 10 black.</p>` : ui.printMode === 'power' ? '' : `<label>Fixtures
           <select data-change="ppos">
             <option value="__all">All positions</option>
             ${positions.map((p) => `<option value="${esc(p)}" ${ui.printPosition === p ? 'selected' : ''}>${esc(posName(p))}</option>`).join('')}
           </select>
-        </label>
+        </label>`}
         <div class="toolbar"><button class="btn primary" data-action="print">Print</button></div>
         ${ui.printMode === 'labels' ? '<p class="muted small">Labels are laid out 3 across on A4 (63.5 × 38.1 mm, 21 per sheet).</p>' : ''}
       </div>
-      <div class="print-area ${ui.printMode === 'labels' ? 'print-labels' : ''}">${fixtures.length || ui.printMode === 'power' ? preview : '<p class="muted">No fixtures to print.</p>'}</div>`,
+      <div class="print-area ${ui.printMode === 'labels' ? 'print-labels' : ''} ${ui.printMode === 'breakers' ? 'print-breakers' : ''}">${fixtures.length || ui.printMode === 'power' || ui.printMode === 'breakers' ? preview : '<p class="muted">No fixtures to print.</p>'}</div>`,
     actions: {
       pmode(el) { ui.printMode = el.dataset.v; refresh(); },
       pgroup(el) { ui.printGroup = el.dataset.v; refresh(); },
       ppos(el) { ui.printPosition = el.value; refresh(); },
+      pdistro(el) { ui.printDistro = el.value; refresh(); },
       print: printNow,
     },
   };

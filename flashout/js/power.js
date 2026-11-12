@@ -256,3 +256,52 @@ export function cableCount(fixtures, power) {
   }
   return { runs: list, totals, warnings };
 }
+
+// Resistor colour code, used to colour multicore runs: run 1 brown, 2 red, 3 orange...
+export const RESISTOR = [
+  { name: 'Black', bg: '#111111', fg: '#ffffff' },
+  { name: 'Brown', bg: '#7a4419', fg: '#ffffff' },
+  { name: 'Red', bg: '#d42a2a', fg: '#ffffff' },
+  { name: 'Orange', bg: '#ff8a1f', fg: '#111111' },
+  { name: 'Yellow', bg: '#ffd83a', fg: '#111111' },
+  { name: 'Green', bg: '#1f9d4c', fg: '#ffffff' },
+  { name: 'Blue', bg: '#2563eb', fg: '#ffffff' },
+  { name: 'Violet', bg: '#8b3fd9', fg: '#ffffff' },
+  { name: 'Grey', bg: '#8f959e', fg: '#111111' },
+  { name: 'White', bg: '#ffffff', fg: '#111111' },
+];
+
+// Run number for a multicore circuit: the number in its run name ("Soca 2" -> 2),
+// otherwise its order among the distro's runs of that type.
+export function runNumber(distro, circuit) {
+  if (!isMulticore(circuit)) return null;
+  const m = String(circuit.run || '').match(/(\d+)\s*$/);
+  if (m) return +m[1];
+  const seen = [];
+  for (const c of distro.circuits) {
+    if (c.via !== circuit.via) continue;
+    const k = c.run || c.id;
+    if (!seen.includes(k)) seen.push(k);
+    if (c === circuit) break;
+  }
+  return seen.length;
+}
+
+export function runColour(distro, circuit) {
+  const n = runNumber(distro, circuit);
+  return n == null ? null : RESISTOR[n % 10];
+}
+
+// "101, 102, 103, 105" -> "101–103, 105"
+export function unitRanges(units) {
+  const nums = units.map((u) => String(u));
+  const out = [];
+  let i = 0;
+  while (i < nums.length) {
+    let j = i;
+    while (j + 1 < nums.length && /^\d+$/.test(nums[j]) && /^\d+$/.test(nums[j + 1]) && +nums[j + 1] === +nums[j] + 1) j++;
+    out.push(j - i >= 2 ? `${nums[i]}–${nums[j]}` : nums.slice(i, j + 1).join(', '));
+    i = j + 1;
+  }
+  return out.join(', ');
+}

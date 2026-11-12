@@ -351,3 +351,32 @@ main:has(.action-bar:not([hidden])) { padding-bottom: 5rem; }
 .check.on .check-addr { color: var(--good); }
 .prep-head strong { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .prep-head small { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* ---------- distro breaker labels ---------- */
+.circuit .via .swatch { display: inline-block; width: .7rem; height: .7rem; border-radius: 3px; margin-right: .3rem; vertical-align: -1px; border: 1px solid rgba(255,255,255,.35); }
+.print-breakers { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.breaker-sheet { margin-bottom: 1.5rem; }
+.breaker-title { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; border-bottom: 3px solid #111; padding-bottom: 2mm; margin-bottom: 3mm; }
+.breaker-title h2 { font-size: 22pt; }
+.breaker-title p { color: #444; }
+.breaker-row { display: grid; grid-template-columns: 34mm repeat(var(--cols), minmax(0, 1fr)); gap: 2mm; margin-bottom: 3mm; }
+.run-tag { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border: 1.5px solid #111; border-radius: 2mm; padding: 2mm; background: #f2f2f2; }
+.run-tag strong { font-size: 16pt; line-height: 1.1; }
+.run-tag span { font-size: 13pt; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.run-tag small { font-size: 8pt; opacity: .85; }
+.breaker { border: 1.5px solid #111; border-radius: 2mm; overflow: hidden; display: flex; flex-direction: column; min-height: 50mm; background: #fff; }
+.breaker-band { display: flex; justify-content: space-between; align-items: center; padding: 1.5mm 2.5mm; background: #e6e6e6; color: #111; border-bottom: 1.5px solid #111; }
+.breaker-band .ch { font-size: 26pt; font-weight: 800; line-height: 1; }
+.breaker-band .brk-meta { font-size: 10pt; font-weight: 800; }
+.breaker-body { padding: 2mm 2.5mm; font-size: 10.5pt; line-height: 1.25; flex: 1; color: #111; }
+.feed { margin-bottom: 1.2mm; }
+.feed b { display: block; font-size: 12pt; }
+.feed span { display: block; }
+.spare-text { font-size: 12pt; color: #999; font-weight: 800; letter-spacing: .1em; text-align: center; margin-top: 4mm; }
+.breaker-load { font-size: 9pt; padding: 1mm 2.5mm; border-top: 1px solid #ccc; color: #333; }
+@media print {
+  @page breakers { size: A4 landscape; margin: 8mm; }
+  .print-breakers .breaker-sheet { page: breakers; break-after: page; margin: 0; }
+  .print-breakers .breaker-sheet:last-child { break-after: auto; }
+  .breaker-row { break-inside: avoid; }
+}
