@@ -113,10 +113,18 @@ function addFixturesSheet(gig, preset = {}) {
           <label>How many<input name="qty" type="number" min="1" max="500" value="${preset.qty || 1}" inputmode="numeric" required></label>
           <label>First unit #<input name="unit" type="number" min="0" value="${nextUnit}" inputmode="numeric"></label>
         </div>
+        <label>Start address
+          <span class="addr-row">
+            <input name="startAddr" placeholder="e.g. 1.001 (blank = patch later)" inputmode="decimal" autocomplete="off">
+            <button type="button" class="btn small" data-nextfree>Next free</button>
+          </span>
+        </label>
+        <p class="muted small" data-addrhint></p>
         <label>Position<input name="position" list="positions" value="${esc(preset.position || '')}" placeholder="e.g. FOH truss, Mid truss, SL boom"></label>
         ${positionDatalist(gig)}
         ${riggingField(preset.rigging)}
       </div>
+      <p class="error" data-err hidden></p>
       <div class="row-end"><button type="button" class="btn" data-close>Cancel</button><button class="btn primary" data-submit disabled>Add</button></div>
     </form>`, async (root, close) => {
     const q = root.querySelector('[data-q]');
@@ -147,10 +155,56 @@ function addFixturesSheet(gig, preset = {}) {
       modeSel.innerHTML = modeOptions(type, 0);
       onMode();
     };
+    // Start address: preview the range the new fixtures will take.
+    const addrIn = root.querySelector('[name=startAddr]');
+    const addrHint = root.querySelector('[data-addrhint]');
+    const qtyIn = root.querySelector('[name=qty]');
+    const chansIn = chans.querySelector('input');
+    const footprintNow = () => {
+      const m = chosen?.modes?.[+modeSel.value || 0];
+      return (!chans.hidden && +chansIn.value) || m?.channels || 0;
+    };
+    const planAddresses = () => {
+      const text = addrIn.value.trim();
+      if (!text) return { none: true };
+      const a = parseAddress(text);
+      if (!a || a.universe < 1 || a.address < 1 || a.address > 512) return { error: 'Start address should look like 1.001, or an absolute address like 513.' };
+      const fp = footprintNow();
+      if (!fp) return { error: 'This mode has no channel count yet. Enter it above so the fixtures can be addressed.' };
+      const qty = Math.min(500, Math.max(1, parseInt(qtyIn.value, 10) || 1));
+      const temp = Array.from({ length: qty }, (_, i) => ({ id: `new${i}`, typeId: '__new', modeIndex: 0 }));
+      const getT = (id) => (id === '__new' ? { modes: [{ channels: fp }] } : getType(id));
+      const res = autoAddress(temp, [...gig.fixtures, ...temp], getT, { universe: a.universe, address: a.address });
+      const first = res[0], last = res[res.length - 1];
+      const end = { universe: last.universe, address: last.address + fp - 1 };
+      const contiguous = res.every((r, i) => i === 0 || absoluteAddress(r.universe, r.address) === absoluteAddress(res[i - 1].universe, res[i - 1].address) + fp);
+      const moved = first.universe !== a.universe || first.address !== a.address;
+      return { res, text: `${qty} × ${fp}ch → ${formatAddress(first)} – ${formatAddress(end)}${moved ? ' (start was in use, moved to the next free address)' : !contiguous ? ' (skips addresses already in use)' : ''}` };
+    };
+    const updateAddr = () => {
+      const plan = planAddresses();
+      addrHint.textContent = plan.text || plan.error || '';
+      addrHint.classList.toggle('warn-text', !!plan.error);
+    };
+    ['input', 'change'].forEach((ev) => { addrIn.addEventListener(ev, updateAddr); qtyIn.addEventListener(ev, updateAddr); chansIn.addEventListener(ev, updateAddr); });
+    root.querySelector('[data-nextfree]').addEventListener('click', () => {
+      const patched = gig.fixtures.filter(isPatched);
+      const last = patched.sort((x, y) => absoluteAddress(y.universe, y.address) - absoluteAddress(x.universe, x.address))[0];
+      let u = 1, a = 1;
+      if (last) {
+        const end = last.address + footprint(last, getType);
+        u = end > UNIVERSE_SIZE ? last.universe + 1 : last.universe;
+        a = end > UNIVERSE_SIZE ? 1 : end;
+      }
+      addrIn.value = `${u}.${String(a).padStart(3, '0')}`;
+      updateAddr();
+    });
+
     const onMode = () => {
       const m = chosen?.modes?.[+modeSel.value || 0];
       chans.hidden = !(m && (!m.channels || m.check));
-      chans.querySelector('input').value = m?.channels || '';
+      chansIn.value = m?.channels || '';
+      updateAddr();
     };
     modeSel.addEventListener('change', onMode);
 
@@ -209,13 +263,22 @@ function addFixturesSheet(gig, preset = {}) {
       if (m && !chans.hidden && +d.chans > 0 && +d.chans !== m.channels) {
         m.channels = +d.chans; delete m.check; store.save(); // fills in the library too
       }
+      const plan = planAddresses();
+      if (plan.error) {
+        const err = root.querySelector('[data-err]');
+        err.textContent = plan.error; err.hidden = false;
+        addrIn.focus();
+        return;
+      }
       const qty = Math.min(500, Math.max(1, parseInt(d.qty, 10) || 1));
       const start = d.unit === '' ? null : parseInt(d.unit, 10);
       store.addFixtures(gig.id, Array.from({ length: qty }, (_, i) => ({
         typeId: chosen.id, modeIndex, position: d.position.trim(), rigging: d.rigging,
         unit: start === null ? '' : String(start + i),
+        universe: plan.res ? plan.res[i].universe : null,
+        address: plan.res ? plan.res[i].address : null,
       })));
-      toast(`Added ${qty} × ${chosen.name}`);
+      toast(`Added ${qty} × ${chosen.name}${plan.res ? ` · ${formatAddress(plan.res[0])} onwards` : ''}`);
       close(true);
     });
 
