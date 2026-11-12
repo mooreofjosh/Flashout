@@ -67,7 +67,8 @@ main.addEventListener('change', (e) => {
 
 back.addEventListener('click', () => go(back.dataset.to));
 onModeChange(() => render({ keepScroll: true }));
-window.addEventListener('hashchange', () => render());
+// Changing screen (including the browser/phone Back gesture) closes any open dialog.
+window.addEventListener('hashchange', () => { document.querySelectorAll('.sheet-wrap').forEach((w) => w.remove()); render(); });
 
 if (!store.isPersistent()) {
   $('#banner').innerHTML = `<div class="banner">${esc('This browser is not letting the app save data. Use Settings → Backup to keep a copy of your work.')}</div>`;
@@ -81,3 +82,9 @@ render();
 
 // Ask the host for the downloads capability early, so the first export is quick.
 setTimeout(() => import('./ui.js').then((m) => m.getDownloads()), 0);
+
+// Status bar clock.
+const clock = $('#clock');
+const tick = () => { if (clock) clock.textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); };
+tick();
+setInterval(tick, 15000);
