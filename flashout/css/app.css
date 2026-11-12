@@ -380,3 +380,26 @@ main:has(.action-bar:not([hidden])) { padding-bottom: 5rem; }
   .print-breakers .breaker-sheet:last-child { break-after: auto; }
   .breaker-row { break-inside: avoid; }
 }
+
+/* ---------- power tab tidy ---------- */
+.power-toolbar { align-items: center; }
+.power-toolbar .icon-text { margin-left: auto; }
+.status-strip { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem 1.25rem; background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--line); border-radius: var(--radius); padding: .6rem 1rem; margin-bottom: .75rem; }
+.status-strip.ok { border-left-color: var(--good); }
+.status-strip.warn { border-left-color: var(--warn); }
+.status-strip.bad { border-left-color: var(--bad); }
+.status-strip .stat { color: var(--muted); font-size: .9rem; }
+.status-strip .stat strong { color: var(--text); font-size: 1.1rem; }
+.status-strip .status-text { margin-left: auto; font-weight: 600; }
+.status-strip.ok .status-text { color: var(--good); }
+.status-strip.warn .status-text { color: var(--warn); }
+.status-strip.bad .status-text { color: var(--bad); }
+.status-strip .issues { width: 100%; margin: .25rem 0 0; }
+.status-strip .link { color: inherit; font-weight: 600; margin-left: .35rem; }
+.specs { margin-bottom: .75rem; padding: 0; }
+.specs-head { display: flex; align-items: center; gap: .75rem; width: 100%; background: none; border: 0; color: inherit; font: inherit; padding: .7rem 1rem; cursor: pointer; text-align: left; }
+.specs-head h3 { margin: 0; }
+.specs-head .chev { margin-left: auto; color: var(--muted); }
+.specs .table-wrap { margin: 0 .75rem; }
+.specs > p { margin: .5rem 1rem .75rem; }
+.power-spec { display: grid; gap: .6rem; }

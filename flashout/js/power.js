@@ -46,8 +46,34 @@ export function makeDistro({ name, supply = '3ph', ratingA = 63, outputs = 18, o
 
 export const makeCircuit = (label, phase = 'L1', ratingA = 10, via = '10A', run = '') => ({ id: id(), label, phase, ratingA, via, run });
 
-export const fixtureWatts = (f, getType) => getType(f.typeId)?.powerW || 0;
 export const amps = (watts, power) => watts / ((power.voltage || 230) * (power.pf || 1));
+
+// Power connectors a fixture can have.
+export const POWER_IN = ['10A plug', 'powerCON', 'powerCON TRUE1', 'IEC', '16A', 'Hardwired'];
+
+// A fixture's draw: the type's stated current wins (rated at 230V, scaled to the gig voltage);
+// otherwise work it out from watts.
+export function fixtureAmps(f, getType, power) {
+  const t = getType(f.typeId);
+  if (!t) return 0;
+  if (t.currentA) return t.currentA * (230 / (power.voltage || 230));
+  return t.powerW ? amps(t.powerW, power) : 0;
+}
+export function fixtureWatts(f, getType, power = { voltage: 230, pf: 1 }) {
+  const t = getType(f.typeId);
+  if (!t) return 0;
+  return t.powerW || (t.currentA ? Math.round(t.currentA * (power.voltage || 230) * (power.pf || 1)) : 0);
+}
+export const hasPowerSpec = (t) => !!(t && (t.powerW || t.currentA));
+
+// How many of this type fit on one circuit under the warning limit (and the link limit, if any).
+export function perCircuit(type, ratingA, power) {
+  const a = type.currentA ? type.currentA * (230 / (power.voltage || 230)) : type.powerW ? amps(type.powerW, power) : 0;
+  if (!a) return null;
+  let n = Math.floor((ratingA * WARN_PCT) / a);
+  if (type.linkMax) n = Math.min(n, type.linkMax);
+  return Math.max(0, n);
+}
 
 // Where is each circuit? circuitId -> { distro, circuit }
 export function circuitIndex(power) {
@@ -64,14 +90,14 @@ export function analyse(fixtures, power, getType) {
   const unassigned = [];
   const noWatts = [];
   for (const f of fixtures) {
-    const w = fixtureWatts(f, getType);
-    if (!w) noWatts.push(f);
+    const w = fixtureWatts(f, getType, power);
+    if (!hasPowerSpec(getType(f.typeId))) noWatts.push(f);
     const slot = f.circuit && circuits.get(f.circuit);
     if (!slot) { unassigned.push(f); continue; }
     slot.watts += w;
+    slot.amps += fixtureAmps(f, getType, power);
     slot.fixtures.push(f);
   }
-  for (const s of circuits.values()) s.amps = amps(s.watts, power);
 
   const distros = power.distros.map((d) => {
     const phases = Object.fromEntries((d.supply === '3ph' ? PHASES : ['L1']).map((p) => [p, 0]));
@@ -90,8 +116,9 @@ export function analyse(fixtures, power, getType) {
     return { distro: d, phases, watts, maxPhase: max, imbalance, unbalanced };
   });
 
-  const totalWatts = fixtures.reduce((s, f) => s + fixtureWatts(f, getType), 0);
-  return { circuits, distros, unassigned, noWatts, totalWatts };
+  const totalWatts = fixtures.reduce((s, f) => s + fixtureWatts(f, getType, power), 0);
+  const totalAmps = fixtures.reduce((s, f) => s + fixtureAmps(f, getType, power), 0);
+  return { circuits, distros, unassigned, noWatts, totalWatts, totalAmps };
 }
 
 export function powerIssues(a, power, getType) {
@@ -112,7 +139,18 @@ export function powerIssues(a, power, getType) {
   }
   const types = new Map();
   for (const f of a.noWatts) { const t = getType(f.typeId); if (t) types.set(t.id, t); }
-  for (const t of types.values()) issues.push({ level: 'warn', text: `${t.name}: no wattage set, so it counts as 0 W`, typeId: t.id });
+  for (const t of types.values()) issues.push({ level: 'warn', text: `${t.name}: no power specs, so it counts as 0A`, typeId: t.id });
+  // Link limits: more units of a type on one circuit than its power-out allows.
+  for (const { distro: d } of a.distros) {
+    for (const c of d.circuits) {
+      const per = new Map();
+      for (const f of a.circuits.get(c.id).fixtures) per.set(f.typeId, (per.get(f.typeId) || 0) + 1);
+      for (const [tid, n] of per) {
+        const t = getType(tid);
+        if (t?.linkMax && n > t.linkMax) issues.push({ level: 'warn', text: `${d.name} circuit ${c.label}: ${n} × ${t.name}, but it links ${t.linkMax} max. Needs more than one feed` });
+      }
+    }
+  }
   if (a.unassigned.length) issues.push({ level: 'info', text: `${a.unassigned.length} fixture${a.unassigned.length > 1 ? 's' : ''} not on a circuit yet` });
   return issues;
 }
@@ -147,10 +185,10 @@ export function autoAssign(fixtures, power, getType, { onlyIds = null, distroId 
   const todo = [];
   for (const f of a.unassigned) {
     if (onlyIds && !onlyIds.has(f.id)) continue;
-    if (!fixtureWatts(f, getType)) skipped.push({ f, why: 'no wattage' });
+    if (!hasPowerSpec(getType(f.typeId))) skipped.push({ f, why: 'no wattage' });
     else todo.push(f);
   }
-  const need = (f) => amps(fixtureWatts(f, getType), power);
+  const need = (f) => fixtureAmps(f, getType, power);
   const byUnit = (x, y) => String(x.unit).localeCompare(String(y.unit), undefined, { numeric: true });
 
   // Typical circuit size decides group size.

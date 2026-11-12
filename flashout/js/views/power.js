@@ -4,12 +4,13 @@ import { esc, sheet, confirmSheet, formData, toast } from '../ui.js';
 import { refresh } from '../app.js';
 import { naturalCompare } from '../patch.js';
 import {
-  PHASES, VIA, MULTICORE, cableCount, runColour, unitRanges, WARN_PCT, DEFAULT_POWER, TEMPLATES, makeDistro, makeCircuit, runFor, analyse, powerIssues, autoAssign, amps, fixtureWatts,
+  PHASES, VIA, MULTICORE, cableCount, runColour, unitRanges, WARN_PCT, DEFAULT_POWER, TEMPLATES, makeDistro, makeCircuit, runFor, analyse, powerIssues, autoAssign, amps, fixtureWatts, fixtureAmps, hasPowerSpec, perCircuit,
 } from '../power.js';
 import { typeLabel, sortFixtures } from './common.js';
+import { editTypeSheet } from './library.js';
 
 const getType = (id) => store.getType(id);
-const ui = { selected: new Set(), filter: '__unassigned', gigId: null, autoDistro: '' };
+const ui = { selected: new Set(), filter: '__unassigned', gigId: null, autoDistro: '', showIssues: false, showSpecs: null };
 
 export const ensurePower = (gig) => (gig.power ||= DEFAULT_POWER());
 
@@ -152,17 +153,17 @@ export function power(gig) {
       </header>
       <div class="sel-bar">
         <label class="switch"><input type="checkbox" data-change="selAll" ${list.length && list.every((f) => ui.selected.has(f.id)) ? 'checked' : ''}> Select all shown</label>
-        ${sel ? `<span><strong>${sel}</strong> selected · ${fmtA(gig.fixtures.filter((f) => ui.selected.has(f.id)).reduce((s, f) => s + amps(fixtureWatts(f, getType), p), 0))}A <button class="btn small" data-action="unassignSel">Unplug</button></span>` : '<span class="muted small hide-touch">Drag onto a circuit, or select then click a circuit</span>'}
+        ${sel ? `<span><strong>${sel}</strong> selected · ${fmtA(gig.fixtures.filter((f) => ui.selected.has(f.id)).reduce((s, f) => s + fixtureAmps(f, getType, p), 0))}A <button class="btn small" data-action="unassignSel">Unplug</button></span>` : '<span class="muted small hide-touch">Drag onto a circuit, or select then click a circuit</span>'}
       </div>
       <ul class="fx-list">${list.map((f) => {
         const t = getType(f.typeId);
-        const w = fixtureWatts(f, getType);
+        const A = fixtureAmps(f, getType, p);
         const at = circuitOf.get(f.circuit);
         return `<li draggable="true" data-fid="${f.id}" class="${ui.selected.has(f.id) ? 'sel' : ''}">
           <label><input type="checkbox" data-change="sel" data-id="${f.id}" ${ui.selected.has(f.id) ? 'checked' : ''}>
           <span class="unit sm">${esc(f.unit || '–')}</span>
           <span class="row-main"><strong>${esc(typeLabel(t))}</strong><small>${esc(f.position || 'No position')}${at ? ` · ${esc(at.d.name)} / ${esc(at.c.label)}` : ''}</small></span>
-          <span class="watts ${w ? '' : 'warn-text'}">${w ? `${w} W` : '? W'}</span></label>
+          <span class="watts ${A ? '' : 'warn-text'}">${A ? `${A.toFixed(1)}A` : '?A'}</span></label>
         </li>`;
       }).join('') || '<li class="muted empty-li">Nothing here.</li>'}</ul>
     </aside>`;
@@ -191,11 +192,57 @@ export function power(gig) {
     </section>`;
   }).join('');
 
+  const errors = problems.filter((i) => i.level === 'error').length;
+  const statusText = !p.distros.length ? 'Add a distro to start'
+    : problems.length ? `${problems.length} problem${problems.length > 1 ? 's' : ''}`
+    : a.unassigned.length ? `${a.unassigned.length} not on a circuit`
+    : '✓ All on circuits, within limits';
+  const statusStrip = `
+    <section class="status-strip ${errors ? 'bad' : problems.length ? 'warn' : p.distros.length && !a.unassigned.length ? 'ok' : ''}">
+      <span class="stat"><strong>${(a.totalWatts / 1000).toFixed(1)}</strong> kW</span>
+      <span class="stat"><strong>${fmtA(a.totalAmps)}</strong> A total</span>
+      <span class="stat"><strong>${gig.fixtures.length - a.unassigned.length}</strong>/${gig.fixtures.length} on circuits</span>
+      <span class="status-text">${statusText}${problems.length ? ` <button class="link" data-action="toggleIssues">${ui.showIssues ? 'Hide' : 'Show'}</button>` : ''}</span>
+      ${problems.length && ui.showIssues ? `<ul class="issues">${problems.map((i) => `<li class="${i.level}">${esc(i.text)}</li>`).join('')}</ul>` : ''}
+    </section>`;
+
+  // Fixture power specs for the types in this rig.
+  const typeCounts = new Map();
+  for (const f of gig.fixtures) if (getType(f.typeId)) typeCounts.set(f.typeId, (typeCounts.get(f.typeId) || 0) + 1);
+  const typeRows = [...typeCounts].map(([tid, n]) => ({ t: getType(tid), n })).sort((x, y) => typeLabel(x.t).localeCompare(typeLabel(y.t)));
+  const missing = typeRows.filter((r) => !hasPowerSpec(r.t)).length;
+  const commonRating = p.distros.flatMap((d) => d.circuits.map((c) => c.ratingA)).sort((x, y) => x - y)[0] || 10;
+  const specsOpen = ui.showSpecs ?? missing > 0;
+  const specsTable = typeRows.length ? `
+    <section class="panel specs ${specsOpen ? 'open' : ''}">
+      <button class="specs-head" data-action="toggleSpecs" aria-expanded="${specsOpen}">
+        <h3>Fixture power</h3>
+        <span class="muted small">${typeRows.length} type${typeRows.length > 1 ? 's' : ''}${missing ? ` · <span class="warn-text">${missing} missing specs</span>` : ''}</span>
+        <span class="chev">${specsOpen ? '▾' : '▸'}</span>
+      </button>
+      ${specsOpen ? `<div class="table-wrap"><table class="patch-table">
+        <thead><tr><th>Fixture</th><th>Qty</th><th>Power</th><th>Each</th><th class="wide">In / out</th><th>Per ${commonRating}A</th><th></th></tr></thead>
+        <tbody>${typeRows.map(({ t, n }) => {
+          const each = fixtureAmps({ typeId: t.id }, getType, p);
+          const fit = perCircuit(t, commonRating, p);
+          return `<tr class="${hasPowerSpec(t) ? '' : 'warn'}">
+            <td><strong>${esc(typeLabel(t))}</strong><small>${esc(t.manufacturer || '')}</small></td>
+            <td>${n}</td>
+            <td>${t.powerW ? `${t.powerW} W` : ''}${t.currentA ? `${t.powerW ? '<br>' : ''}${t.currentA} A rated` : ''}${hasPowerSpec(t) ? '' : '<span class="warn-text">not set</span>'}</td>
+            <td>${each ? `${each.toFixed(2)}A` : ''}</td>
+            <td class="wide">${esc(t.powerIn || '—')}${t.powerOut ? ` → link${t.linkMax ? ` (max ${t.linkMax})` : ''}` : ''}</td>
+            <td>${fit == null ? '' : fit}</td>
+            <td><button class="btn small" data-action="editSpecs" data-type="${t.id}">${hasPowerSpec(t) ? 'Edit' : 'Set power'}</button></td>
+          </tr>`;
+        }).join('')}</tbody>
+      </table></div><p class="muted small">Specs are saved to your fixture library and used for every gig. "Per ${commonRating}A" is how many fit on one circuit while staying under ${WARN_PCT * 100}%.</p>` : ''}
+    </section>` : '';
+
   return {
     wide: true,
     html: `
       <p class="desktop-hint">Power planning works best on a laptop or desktop. On a phone: select fixtures, then tap a circuit.</p>
-      <div class="toolbar">
+      <div class="toolbar power-toolbar">
         <button class="btn primary" data-action="addDistro">+ Add distro</button>
         <span class="auto-group">
           <button class="btn" data-action="auto" ${p.distros.length ? '' : 'disabled'}>Auto-assign ${sel ? `${sel} selected` : 'unassigned'}</button>
@@ -205,18 +252,10 @@ export function power(gig) {
           </select>` : ''}
         </span>
         <button class="btn" data-action="clearAll" ${gig.fixtures.some((f) => f.circuit) ? '' : 'disabled'}>Unplug all</button>
-        <span class="settings-inline">
-          <label>Voltage <input type="number" data-change="voltage" value="${p.voltage}" min="100" max="260" inputmode="numeric"></label>
-          <label>Power factor <input type="number" data-change="pf" value="${p.pf}" min="0.5" max="1" step="0.05" inputmode="decimal"></label>
-        </span>
+        <button class="btn icon-text" data-action="settings" aria-label="Power settings">⚙ ${p.voltage}V</button>
       </div>
-      <section class="card ${problems.some((i) => i.level === 'error') ? 'issues-bad' : problems.length ? '' : 'issues-ok'}">
-        <p><strong>${(a.totalWatts / 1000).toFixed(1)} kW</strong> total · ${fmtA(amps(a.totalWatts, p))}A at ${p.voltage}V single-phase equivalent${p.distros.length ? '' : ' · add a distro to start'}</p>
-        ${problems.length ? `<ul class="issues">${problems.map((i) => `<li class="${i.level}">${esc(i.text)}</li>`).join('')}</ul>` : (p.distros.length && !a.unassigned.length ? '<p><strong>✓ All fixtures on circuits within limits</strong></p>' : '')}
-        ${missingTypes.length ? `<div class="watt-fix"><p class="small">Set wattage (saved to your library):</p>${missingTypes.map((t) => `
-          <label class="inline-field">${esc(t.name)} <input type="number" min="0" placeholder="W" data-change="setWatts" data-type="${t.id}" inputmode="numeric"> W</label>`).join('')}</div>` : ''}
-        <p class="muted small">Amps = watts ÷ (${p.voltage}V × ${p.pf} power factor). Warnings at ${WARN_PCT * 100}% of a circuit or phase rating. Check against manufacturer data and the venue's supply.</p>
-      </section>
+      ${statusStrip}
+      ${specsTable}
       ${gig.fixtures.length ? `<div class="power-layout">${fixturesPanel}<div class="distros">${distroCards || `
         <div class="empty panel"><h3>No distros yet</h3><p class="muted">Add the distro(s) you're working from, e.g. a 32A 3-phase with 12 × 10A circuits on Socapex.</p></div>`}</div></div>`
         : '<div class="empty"><h3>No fixtures</h3><p class="muted">Add fixtures in the Rig tab first.</p></div>'}
@@ -245,13 +284,23 @@ export function power(gig) {
       autoDistro(el) { ui.autoDistro = el.value; },
       sel(el) { el.checked ? ui.selected.add(el.dataset.id) : ui.selected.delete(el.dataset.id); refresh(); },
       selAll(el) { for (const f of list) el.checked ? ui.selected.add(f.id) : ui.selected.delete(f.id); refresh(); },
-      voltage(el) { p.voltage = Math.min(260, Math.max(100, +el.value || 230)); store.save(); refresh(); },
-      pf(el) { p.pf = Math.min(1, Math.max(0.5, +el.value || 0.9)); store.save(); refresh(); },
-      setWatts(el) {
-        const w = parseInt(el.value, 10);
-        if (!w) return;
-        store.updateType(el.dataset.type, { powerW: w });
-        toast(`${getType(el.dataset.type).name}: ${w} W saved to library`);
+      toggleIssues() { ui.showIssues = !ui.showIssues; refresh(); },
+      toggleSpecs() { ui.showSpecs = !(ui.showSpecs ?? missing > 0); refresh(); },
+      async editSpecs(el) { if (await editTypeSheet(getType(el.dataset.type), { focus: 'power' })) refresh(); },
+      async settings() {
+        const r = await sheet('Power settings', `
+          <form class="form" data-form>
+            <div class="grid2">
+              <label>Supply voltage (V)<input name="voltage" type="number" min="100" max="260" value="${p.voltage}" inputmode="numeric"></label>
+              <label>Power factor<input name="pf" type="number" min="0.5" max="1" step="0.05" value="${p.pf}" inputmode="decimal"></label>
+            </div>
+            <p class="muted small">Current is taken from a fixture's rated amps when you've entered it; otherwise it's watts ÷ (voltage × power factor). 0.9 is a safe power factor for most LED and discharge fixtures. Warnings show at ${WARN_PCT * 100}% of a circuit or phase. Always check against manufacturer data and the venue's supply.</p>
+            <div class="row-end"><button type="button" class="btn" data-close>Cancel</button><button class="btn primary">Save</button></div>
+          </form>`, (root, close) => root.querySelector('[data-form]').addEventListener('submit', (e) => { e.preventDefault(); close(formData(e.target)); }));
+        if (!r) return;
+        p.voltage = Math.min(260, Math.max(100, +r.voltage || 230));
+        p.pf = Math.min(1, Math.max(0.5, +r.pf || 0.9));
+        store.save();
         refresh();
       },
       async addDistro() { if (await distroSheet(gig)) refresh(); },
