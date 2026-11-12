@@ -279,27 +279,42 @@ function rig(gig) {
 
 // ---------------- LOOKUP (phone) ----------------
 
-const look = { q: '' };
+const look = { q: '', gigId: null, selecting: false, sel: new Set(), undo: null };
 
 function lookup(gig) {
+  if (look.gigId !== gig.id) Object.assign(look, { gigId: gig.id, selecting: false, sel: new Set(), undo: null });
+  for (const id of [...look.sel]) if (!gig.fixtures.some((f) => f.id === id)) look.sel.delete(id);
   const settings = store.getState().settings;
   const q = look.q.trim().toLowerCase();
   const words = q.split(/\s+/).filter(Boolean);
   const hay = (f) => [f.unit, f.channel, formatAddress(f), typeLabel(getType(f.typeId)), f.position, f.purpose, f.colour].join(' ').toLowerCase();
   const list = sortFixtures(gig.fixtures).filter((f) => words.every((w) => hay(f).includes(w)));
+  const n = look.sel.size;
+  const allShown = list.length && list.every((f) => look.sel.has(f.id));
   return {
     html: `
+      <div class="toolbar lookup-tools">
+        ${look.selecting
+          ? `<button class="btn primary" data-action="lkDone">Done</button>
+             <button class="btn" data-action="lkAll">${allShown ? 'Deselect all' : `Select all ${list.length}`}</button>`
+          : `<button class="btn primary" data-action="lkAdd">+ Add</button>
+             ${gig.fixtures.length ? '<button class="btn" data-action="lkSelect">Select</button>' : ''}
+             ${look.undo ? `<button class="btn" data-action="lkUndo">Undo delete (${look.undo.length})</button>` : ''}`}
+      </div>
       <input class="lookup-search" type="search" placeholder="Unit, channel, address, fixture…" value="${esc(look.q)}" data-lookup aria-label="Find a fixture" inputmode="search">
       <ul class="rows">${list.map((f) => {
         const t = getType(f.typeId);
         const p = prepState(f, settings);
         const nf = openFaults(f).length;
-        return `<li><button class="row" data-action="info" data-id="${f.id}">
+        const on = look.sel.has(f.id);
+        return `<li><button class="row ${look.selecting ? 'selecting' : ''} ${on ? 'picked' : ''}" data-action="${look.selecting ? 'lkToggle' : 'info'}" data-id="${f.id}" ${look.selecting ? `aria-pressed="${on}"` : ''}>
+          ${look.selecting ? `<span class="selbox">${on ? '✓' : ''}</span>` : ''}
           <span class="unit ${p.complete ? 'done' : ''}">${esc(f.unit || '–')}</span>
           <span class="row-main"><strong>${esc(typeLabel(t))}</strong><small>${esc(posName(f.position))}${f.channel ? ` · Ch ${esc(f.channel)}` : ''}${f.purpose ? ` · ${esc(f.purpose)}` : ''}</small></span>
           <span class="row-side"><span class="addr">${formatAddress(f)}</span><small>${p.done}/${p.total}${nf ? ` <span class="bad-text">⚠${nf}</span>` : ''}</small></span>
         </button></li>`;
-      }).join('') || `<li class="muted empty-li">${gig.fixtures.length ? 'No match.' : 'No fixtures yet. Add them on the laptop.'}</li>`}</ul>`,
+      }).join('') || `<li class="muted empty-li">${gig.fixtures.length ? 'No match.' : 'No fixtures yet. Tap + Add.'}</li>`}</ul>
+      ${look.selecting ? `<div class="action-bar" ${n ? '' : 'hidden'}><span><strong>${n}</strong> selected</span><button class="btn danger-fill" data-action="lkDelete">Delete ${n}</button></div>` : ''}`,
     mount(root) {
       const input = root.querySelector('[data-lookup]');
       input.addEventListener('input', () => {
@@ -312,6 +327,31 @@ function lookup(gig) {
     },
     actions: {
       async info(el) { await fixtureInfoSheet(gig, store.getFixture(gig, el.dataset.id)); refresh(); },
+      async lkAdd() { if (await addFixturesSheet(gig)) { look.undo = null; refresh(); } },
+      lkSelect() { look.selecting = true; look.sel.clear(); refresh(); },
+      lkDone() { look.selecting = false; look.sel.clear(); refresh(); },
+      lkToggle(el) { const id = el.dataset.id; look.sel.has(id) ? look.sel.delete(id) : look.sel.add(id); refresh(); },
+      lkAll() { list.forEach((f) => (allShown ? look.sel.delete(f.id) : look.sel.add(f.id))); refresh(); },
+      async lkDelete() {
+        const chosen = gig.fixtures.filter((f) => look.sel.has(f.id));
+        if (!chosen.length) return;
+        const faults = chosen.reduce((k, f) => k + f.faults.length, 0);
+        const ok = await confirmSheet(`Delete ${chosen.length} fixture${chosen.length > 1 ? 's' : ''}?`,
+          `Their patch, prep ticks${faults ? ` and ${faults} fault note${faults > 1 ? 's' : ''}` : ''} go too. You can undo this until you leave the gig.`, `Delete ${chosen.length}`, true);
+        if (!ok) return;
+        look.undo = gig.fixtures.map((f, index) => ({ fixture: f, index })).filter((x) => look.sel.has(x.fixture.id));
+        store.deleteFixtures(gig.id, chosen.map((f) => f.id));
+        look.selecting = false; look.sel.clear();
+        toast(`Deleted ${chosen.length} fixture${chosen.length > 1 ? 's' : ''}`);
+        refresh();
+      },
+      lkUndo() {
+        for (const { fixture, index } of look.undo) gig.fixtures.splice(Math.min(index, gig.fixtures.length), 0, fixture);
+        toast(`Restored ${look.undo.length} fixture${look.undo.length > 1 ? 's' : ''}`);
+        look.undo = null;
+        store.save();
+        refresh();
+      },
     },
   };
 }
