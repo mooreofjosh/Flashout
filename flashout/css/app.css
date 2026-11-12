@@ -643,3 +643,27 @@ table.ws tr.ws-group td { background: #121314 !important; color: var(--accent); 
 .form label.spec.off > span, .form label.spec.off > select { opacity: .4; }
 .spec-all { display: flex; gap: .4rem; margin: .1rem 0 .3rem; }
 .form label.switch { display: flex; align-items: center; gap: .55rem; color: var(--text); font-size: .92rem; }
+
+/* ---------- distro rack plot (paperwork) ---------- */
+.rack-plot { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+table.rp { width: 100%; border-collapse: collapse; table-layout: fixed; margin-bottom: 14px; color: #000; font-family: Arial, Helvetica, sans-serif; break-inside: avoid; }
+table.rp col.rp-head-col { width: 8%; }
+table.rp th, table.rp td { border: 1px solid #000; text-align: center; padding: 2px 3px; overflow: hidden; }
+table.rp .rp-title { border: 0; font-size: 22px; font-weight: 800; text-decoration: underline; padding: 4px 0 2px; }
+table.rp tr:first-child th:first-child { border: 0; }
+table.rp tr > th:first-child { font-weight: 800; font-size: 13px; text-align: left; white-space: nowrap; }
+table.rp .rp-circuit th, table.rp .rp-circuit td { background: #111; color: #fff; font-weight: 800; font-size: 13px; }
+table.rp .rp-circuit small { font-weight: 600; opacity: .7; margin-left: 4px; font-size: 10px; }
+table.rp .rp-units td { font-weight: 800; font-size: 13px; height: 40px; white-space: nowrap; line-height: 1.25; }
+table.rp .rp-type td { font-weight: 700; font-size: 9.5px; white-space: nowrap; text-overflow: ellipsis; }
+table.rp .rp-tag td { font-weight: 800; font-size: 12px; }
+table.rp .rp-amps td { font-size: 10px; }
+@media print {
+  @page racks { size: A4 landscape; margin: 8mm; }
+  .print-area:has(.rack-plot) { page: racks; }
+}
+/* circuit editor gains connector + colour columns */
+.circuit-head { grid-template-columns: 1fr 4.2rem 4.2rem 7rem 1fr 4.5rem 6.5rem 44px; }
+.circuit-row { grid-template-columns: 1fr 4.2rem 4.2rem 7rem 1fr 4.5rem 6.5rem auto; }
+.sheet:has(.circuit-edit) { max-width: 860px; }
+@media (max-width: 700px) { .circuit-head { display: none; } .circuit-row { grid-template-columns: 1fr 4rem 4rem 4.5rem; } }

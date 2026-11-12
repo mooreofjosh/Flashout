@@ -45,6 +45,7 @@ export function editTypeSheet(type, { focus = '' } = {}) {
     <form class="form" data-form>
       <label>Manufacturer<input name="manufacturer" value="${esc(t.manufacturer)}" placeholder="e.g. Robe"></label>
       <label>Fixture name<input name="name" required value="${esc(t.name)}" placeholder="e.g. Spiider"></label>
+      <label>Short name (for paperwork)<input name="shortName" value="${esc(t.shortName || '')}" placeholder="e.g. ENVEE, Q.PROF (blank = full name)" maxlength="16"></label>
       <fieldset class="power-spec" data-power>
         <legend>Power</legend>
         <div class="grid2">
@@ -107,7 +108,7 @@ export function editTypeSheet(type, { focus = '' } = {}) {
         return m;
       });
       const data = {
-        name: d.name.trim(), manufacturer: d.manufacturer.trim(), notes: d.notes,
+        name: d.name.trim(), manufacturer: d.manufacturer.trim(), notes: d.notes, shortName: d.shortName.trim().toUpperCase(),
         powerW: d.powerW === '' ? null : +d.powerW, weightKg: d.weightKg === '' ? null : +d.weightKg, modes: modeList,
         currentA: d.currentA === '' ? null : +d.currentA, powerIn: d.powerIn || '', powerOut: d.powerOut === 'yes',
         linkMax: d.powerOut === 'yes' && d.linkMax ? +d.linkMax : null,

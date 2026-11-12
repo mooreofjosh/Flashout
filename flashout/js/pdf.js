@@ -145,95 +145,86 @@ export async function labelsPdf(labels, { outlines = false } = {}) {
 }
 
 /**
- * Distro breaker labels: one landscape page per distro.
- * sheets: [{ title, subtitle, rows: [{ tag: { label, colour, via, bg, fg }, cells: [{ ch, meta, feeds: [{ pos, lines: [] }], load, spare, bg, fg }] }] }]
+ * Distro rack plot: landscape A4, as many racks per page as fit.
+ * racks: [{ title, viaLabel, cols: [{ label, phase, units: [], type, tag, amps, bg, fg }] }]
  */
-export async function breakersPdf(sheets) {
+export async function racksPdf(racks, { gigName = '', subtitle = '' } = {}) {
   const JsPDF = await loadPdfLib();
   const doc = new JsPDF({ unit: 'mm', format: 'a4', orientation: 'landscape' });
   const pageW = doc.internal.pageSize.getWidth();
   const pageH = doc.internal.pageSize.getHeight();
   const m = 8;
-  sheets.forEach((sheet, si) => {
-    if (si > 0) doc.addPage();
-    doc.setTextColor('#111111');
-    doc.setFont('helvetica', 'bold'); doc.setFontSize(22);
-    doc.text(pdfText(sheet.title), m, m + 8);
-    doc.setFont('helvetica', 'normal'); doc.setFontSize(10); doc.setTextColor('#444444');
-    doc.text(pdfText(sheet.subtitle), pageW - m, m + 8, { align: 'right' });
-    doc.setDrawColor('#111111'); doc.setLineWidth(0.8); doc.line(m, m + 11, pageW - m, m + 11);
+  const headW = 24;
+  const rows = { title: 9, circuit: 6.5, units: 12, type: 5.5, tag: 6, amps: 5.5 };
+  const blockH = Object.values(rows).reduce((a, b) => a + b, 0);
+  const gap = 4;
+  let y = m + 7;
 
-    const cols = Math.max(1, ...sheet.rows.map((r) => r.cells.length));
-    const tagW = 34, gap = 2.5;
-    const top = m + 15;
-    const avail = pageH - top - m;
-    const rowH = Math.min(52, (avail - gap * (sheet.rows.length - 1)) / Math.max(1, sheet.rows.length));
-    const cellW = (pageW - m * 2 - tagW - gap * cols) / cols;
-    const band = Math.min(11, rowH * 0.24);
+  const pageHeader = () => {
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(11); doc.setTextColor('#111111');
+    doc.text(pdfText(gigName ? `${gigName} · Distro racks` : 'Distro racks'), m, m + 3);
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor('#555555');
+    if (subtitle) doc.text(pdfText(subtitle), pageW - m, m + 3, { align: 'right' });
+  };
+  // Text centred in a cell, shrunk until it fits the width.
+  const fit = (text, cx, cy, w, size, bold = true) => {
+    const t = pdfText(text);
+    doc.setFont('helvetica', bold ? 'bold' : 'normal');
+    let s = size;
+    doc.setFontSize(s);
+    while (s > 4.5 && doc.getTextWidth(t) > w - 1.5) { s -= 0.5; doc.setFontSize(s); }
+    doc.text(t, cx, cy, { align: 'center', baseline: 'middle' });
+  };
+  const cell = (x, yy, w, h, fill) => {
+    doc.setDrawColor('#000000'); doc.setLineWidth(0.25);
+    if (fill) { doc.setFillColor(fill); doc.rect(x, yy, w, h, 'FD'); } else doc.rect(x, yy, w, h, 'S');
+  };
 
-    sheet.rows.forEach((row, ri) => {
-      const y = top + ri * (rowH + gap);
-      // run tag
-      const t = row.tag;
-      doc.setLineWidth(0.4); doc.setDrawColor('#111111');
-      doc.setFillColor(t.bg || '#f2f2f2');
-      doc.roundedRect(m, y, tagW, rowH, 2, 2, 'FD');
-      doc.setTextColor(t.fg || '#111111');
-      doc.setFont('helvetica', 'bold'); doc.setFontSize(15);
-      const cx = m + tagW / 2;
-      doc.text(pdfText(t.label), cx, y + rowH / 2 - 3, { align: 'center' });
-      if (t.colour) { doc.setFontSize(12); doc.text(pdfText(t.colour.toUpperCase()), cx, y + rowH / 2 + 3, { align: 'center' }); }
-      doc.setFont('helvetica', 'normal'); doc.setFontSize(8);
-      if (t.via) doc.text(pdfText(t.via), cx, y + rowH / 2 + 8, { align: 'center' });
-
-      row.cells.forEach((c, ci) => {
-        const x = m + tagW + gap + ci * (cellW + gap);
-        doc.setFillColor('#ffffff'); doc.setDrawColor('#111111'); doc.setLineWidth(0.4);
-        doc.roundedRect(x, y, cellW, rowH, 2, 2, 'FD');
-        // coloured band: rounded top corners, square bottom edge
-        doc.setFillColor(c.bg || '#e6e6e6');
-        doc.roundedRect(x, y, cellW, band, 2, 2, 'F');
-        doc.rect(x, y + band / 2, cellW, band / 2, 'F');
-        doc.line(x, y + band, x + cellW, y + band);
-        doc.roundedRect(x, y, cellW, rowH, 2, 2, 'S');
-        doc.setTextColor(c.fg || '#111111');
-        doc.setFont('helvetica', 'bold'); doc.setFontSize(Math.min(24, band * 2.3));
-        doc.text(pdfText(c.ch), x + 2.5, y + band - 2.2);
-        doc.setFontSize(9.5);
-        doc.text(pdfText(c.meta), x + cellW - 2.5, y + band - 3, { align: 'right' });
-
-        const innerW = cellW - 5;
-        let ty = y + band + 5;
-        const maxY = y + rowH - (c.load ? 6 : 2.5);
-        doc.setTextColor('#111111');
-        if (c.spare) {
-          doc.setFont('helvetica', 'bold'); doc.setFontSize(12); doc.setTextColor('#999999');
-          doc.text('SPARE', x + cellW / 2, y + band + (rowH - band) / 2 + 2, { align: 'center' });
-        } else {
-          for (const f of c.feeds) {
-            if (ty > maxY) break;
-            doc.setFont('helvetica', 'bold'); doc.setFontSize(11);
-            doc.text(doc.splitTextToSize(pdfText(f.pos), innerW)[0], x + 2.5, ty);
-            ty += 4.6;
-            doc.setFont('helvetica', 'normal'); doc.setFontSize(9.5);
-            for (const line of f.lines) {
-              for (const part of doc.splitTextToSize(pdfText(line), innerW)) {
-                if (ty > maxY) break;
-                doc.text(part, x + 2.5, ty);
-                ty += 4;
-              }
-            }
-            ty += 1.2;
-          }
-        }
-        if (c.load) {
-          doc.setDrawColor('#cccccc'); doc.setLineWidth(0.2);
-          doc.line(x, y + rowH - 5, x + cellW, y + rowH - 5);
-          doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor('#333333');
-          doc.text(pdfText(c.load), x + 2.5, y + rowH - 1.6);
-        }
+  pageHeader();
+  racks.forEach((r) => {
+    if (y + blockH > pageH - m) { doc.addPage(); pageHeader(); y = m + 7; }
+    const n = Math.max(1, r.cols.length);
+    const colW = (pageW - m * 2 - headW) / n;
+    const x0 = m + headW;
+    // title row: name over each half, underlined
+    doc.setTextColor('#000000');
+    const halves = n > 6 ? [[0, Math.ceil(n / 2)], [Math.ceil(n / 2), n]] : [[0, n]];
+    for (const [a, b] of halves) {
+      const cx = x0 + ((a + b) / 2) * colW;
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(16);
+      const t = pdfText(r.title);
+      doc.text(t, cx, y + rows.title / 2 + 0.5, { align: 'center', baseline: 'middle' });
+      const tw = doc.getTextWidth(t);
+      doc.setLineWidth(0.4); doc.line(cx - tw / 2, y + rows.title - 0.8, cx + tw / 2, y + rows.title - 0.8);
+    }
+    let yy = y + rows.title;
+    const rowDefs = [
+      ['circuit', 'Circuit'], ['units', 'Unit No'], ['type', 'Type'], ['tag', r.viaLabel], ['amps', 'Amps'],
+    ];
+    for (const [key, label] of rowDefs) {
+      const h = rows[key];
+      const dark = key === 'circuit';
+      cell(m, yy, headW, h, dark ? '#111111' : '#ffffff');
+      doc.setTextColor(dark ? '#ffffff' : '#000000');
+      fit(label, m + headW / 2, yy + h / 2, headW, 10);
+      r.cols.forEach((c, i) => {
+        const x = x0 + i * colW;
+        const coloured = (key === 'units' || key === 'tag') && c.bg;
+        cell(x, yy, colW, h, dark ? '#111111' : coloured ? c.bg : '#ffffff');
+        doc.setTextColor(dark ? '#ffffff' : coloured ? c.fg : '#000000');
+        const cx = x + colW / 2;
+        if (key === 'circuit') fit(c.label + (c.phase ? `  ${c.phase}` : ''), cx, yy + h / 2, colW, 10);
+        else if (key === 'units') {
+          const lines = c.units.length ? c.units : [''];
+          const lh = Math.min(5, (h - 1) / lines.length);
+          lines.slice(0, 3).forEach((u, li) => fit(u, cx, yy + h / 2 + (li - (Math.min(lines.length, 3) - 1) / 2) * lh, colW, lines.length > 1 ? 9.5 : 11));
+        } else if (key === 'type') fit(c.type, cx, yy + h / 2, colW, 7);
+        else if (key === 'tag') fit(c.tag, cx, yy + h / 2, colW, 10);
+        else fit(c.amps, cx, yy + h / 2, colW, 8.5, false);
       });
-    });
+      yy += h;
+    }
+    y += blockH + gap;
   });
   return doc.output('blob');
 }

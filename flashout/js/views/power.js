@@ -4,9 +4,9 @@ import { esc, sheet, confirmSheet, formData, toast } from '../ui.js';
 import { refresh } from '../app.js';
 import { naturalCompare } from '../patch.js';
 import {
-  PHASES, VIA, MULTICORE, cableCount, runColour, unitRanges, WARN_PCT, DEFAULT_POWER, TEMPLATES, makeDistro, makeCircuit, runFor, analyse, powerIssues, autoAssign, amps, fixtureWatts, fixtureAmps, hasPowerSpec, perCircuit,
+  PHASES, VIA, MULTICORE, cableCount, unitRanges, circuitColour, circuitTag, CABLE_COLOURS, WARN_PCT, DEFAULT_POWER, TEMPLATES, makeDistro, makeCircuit, runFor, analyse, powerIssues, autoAssign, amps, fixtureWatts, fixtureAmps, hasPowerSpec, perCircuit,
 } from '../power.js';
-import { typeLabel, sortFixtures } from './common.js';
+import { typeLabel, typeShort, sortFixtures } from './common.js';
 import { editTypeSheet } from './library.js';
 
 const getType = (id) => store.getType(id);
@@ -40,7 +40,8 @@ function distroSheet(gig, d = null) {
           <label class="small">runs of <input data-bulk-size type="number" min="0" max="24" value="${MULTICORE[d.circuits[0]?.via]?.circuits || 6}" inputmode="numeric"></label>
           <button type="button" class="btn small" data-bulk>Apply</button>
         </div>
-        <div class="circuit-head muted small"><span>Label</span><span>Phase</span><span>Amps</span><span>Via</span><span>Run</span><span></span></div>
+        <div class="circuit-head muted small"><span>Label</span><span>Phase</span><span>Amps</span><span>Via</span><span>Run</span><span>Conn.</span><span>Colour</span><span></span></div>
+        <p class="muted small">Conn. is the connector label on the rack plot (e.g. A1 = Weiland A, circuit 1). Leave it blank and Colour on Auto to number runs A, B, C… and colour them brown, red, orange…</p>
         <div class="circuit-edit" data-circuits>${d.circuits.map((c) => circuitRow(c, d.supply)).join('')}</div>
         <button type="button" class="btn small" data-addc>+ Add circuit</button>
       </fieldset>` : ''}
@@ -69,6 +70,8 @@ function distroSheet(gig, d = null) {
       [...list.querySelectorAll('.circuit-row')].forEach((row, i) => {
         row.querySelector('[data-f=via]').value = via;
         row.querySelector('[data-f=run]').value = via === '10A' || via === '16A' || via === '32A' ? '' : runFor(i, size, name);
+        row.querySelector('[data-f=tag]').value = '';
+        row.querySelector('[data-f=colour]').value = '';
       });
     });
     root.querySelector('[data-del]')?.addEventListener('click', async () => {
@@ -99,6 +102,7 @@ function distroSheet(gig, d = null) {
             phase: d.supply === '3ph' ? row.querySelector('[data-f=phase]').value : 'L1',
             ratingA: +row.querySelector('[data-f=rating]').value || 10,
             via: row.querySelector('[data-f=via]').value, run: row.querySelector('[data-f=run]').value.trim(),
+            tag: row.querySelector('[data-f=tag]').value.trim(), colour: row.querySelector('[data-f=colour]').value,
           };
           keep.add(c.id);
           return c;
@@ -118,6 +122,12 @@ function circuitRow(c, supply) {
     <input data-f="rating" type="number" min="1" value="${c.ratingA}" inputmode="numeric" aria-label="Rating (A)">
     <select data-f="via" aria-label="Via">${VIA.map((v) => `<option ${v === (c.via || '10A') ? 'selected' : ''}>${v}</option>`).join('')}</select>
     <input data-f="run" value="${esc(c.run || '')}" placeholder="e.g. Soca 1" aria-label="Multicore run">
+    <input data-f="tag" value="${esc(c.tag || '')}" placeholder="auto" aria-label="Connector label, e.g. A1">
+    <select data-f="colour" aria-label="Loom colour">
+      <option value="" ${!c.colour ? 'selected' : ''}>Auto</option>
+      <option value="none" ${c.colour === 'none' ? 'selected' : ''}>None</option>
+      ${CABLE_COLOURS.map((k) => `<option ${c.colour === k.name ? 'selected' : ''}>${k.name}</option>`).join('')}
+    </select>
     <button type="button" class="icon-btn" data-rmc aria-label="Remove circuit">✕</button>
   </div>`;
 }
@@ -184,7 +194,7 @@ export function power(gig) {
         const pct = s.amps / c.ratingA;
         return `<div class="circuit ${level(pct)} ${sel ? 'target' : ''}" data-cid="${c.id}" data-action="${sel ? 'assignHere' : ''}" ${sel ? 'role="button" tabindex="0"' : ''}>
           <div class="c-head"><strong>${esc(c.label)}</strong>${d.supply === '3ph' ? `<span class="ph ${c.phase}">${c.phase}</span>` : ''}<span class="amps">${fmtA(s.amps)}/${c.ratingA}A</span></div>
-          <div class="via">${(() => { const col = runColour(d, c); return col ? `<span class="swatch" style="background:${col.bg}"></span>${esc(c.run || c.via)} · ${col.name}` : esc(c.run || c.via || ''); })()}</div>
+          <div class="via">${(() => { const col = circuitColour(d, c); const tag = circuitTag(d, c); return `${col ? `<span class="swatch" style="background:${col.bg}"></span>` : ''}${esc([tag, c.run || c.via].filter(Boolean).join(' · '))}${col ? ` · ${col.name}` : ''}`; })()}</div>
           ${bar(pct)}
           <div class="chips-in">${s.fixtures.sort((x, y) => naturalCompare(x.unit, y.unit)).map((f) => `<button class="fx-chip" data-action="unplug" data-id="${f.id}" title="${esc(typeLabel(getType(f.typeId)))} · click to unplug">${esc(f.unit || '–')}</button>`).join('')}</div>
         </div>`;
@@ -408,71 +418,61 @@ function cablePrintHtml(gig) {
     <tbody>${used.map((r) => `<tr><td>${esc(r.name)}</td><td>${esc(r.via)}</td><td>${esc(r.distro.name)}</td><td>${esc([...r.positions].join(', '))}</td><td>${r.used}/${r.circuits.length}</td></tr>`).join('')}</tbody></table>`;
 }
 
-// Breaker labels data: one sheet per distro, one row per multicore run, coloured by resistor code.
-export function breakerModel(gig, distroId = '__all') {
+// Distro rack plot: per distro, a block of rows (Circuit / Unit No / Type / connector / Amps)
+// across its circuits, cells filled with the circuit's loom colour.
+export function rackModel(gig, distroId = '__all') {
   const p = ensurePower(gig);
   const a = analyse(gig.fixtures, p, getType);
-  const distros = p.distros.filter((d) => distroId === '__all' || d.id === distroId);
-  return distros.map((d) => {
-    const rows = [];
-    for (const c of d.circuits) {
-      const key = MULTICORE[c.via] ? `${c.via}:${c.run || c.id}` : null;
-      const last = rows[rows.length - 1];
-      if (last && key && last.key === key) last.circuits.push(c);
-      else if (last && !key && !last.key && last.circuits.length < 6) last.circuits.push(c);
-      else rows.push({ key, circuits: [c] });
-    }
+  return p.distros.filter((d) => distroId === '__all' || d.id === distroId).map((d) => {
+    const vias = new Set(d.circuits.filter((c) => MULTICORE[c.via]).map((c) => c.via));
+    const viaLabel = vias.size === 1 ? [...vias][0] : vias.size ? 'Connector' : 'Outlet';
     return {
       title: d.name,
       subtitle: [gig.name, `${d.supply === '3ph' ? '3-phase' : 'single-phase'} ${d.ratingA}A`, gig.venue].filter(Boolean).join(' · '),
-      rows: rows.map((r) => {
-        const first = r.circuits[0];
-        const col = runColour(d, first);
+      viaLabel,
+      cols: d.circuits.map((c) => {
+        const s = a.circuits.get(c.id);
+        const byType = new Map();
+        for (const f of [...s.fixtures].sort((x, y) => naturalCompare(x.unit, y.unit))) {
+          const k = typeShort(getType(f.typeId));
+          if (!byType.has(k)) byType.set(k, []);
+          byType.get(k).push(f.unit || '-');
+        }
+        const col = circuitColour(d, c);
         return {
-          tag: { label: col ? (first.run || first.via) : 'Outlets', colour: col?.name || '', via: first.via || '', bg: col?.bg || '', fg: col?.fg || '' },
-          cells: r.circuits.map((c) => {
-            const s = a.circuits.get(c.id);
-            const byPos = new Map();
-            for (const f of [...s.fixtures].sort((x, y) => naturalCompare(x.unit, y.unit))) {
-              const pos = f.position || 'No position';
-              if (!byPos.has(pos)) byPos.set(pos, new Map());
-              const k = typeLabel(getType(f.typeId));
-              if (!byPos.get(pos).has(k)) byPos.get(pos).set(k, []);
-              byPos.get(pos).get(k).push(f.unit || '–');
-            }
-            return {
-              ch: c.label,
-              meta: `${d.supply === '3ph' ? `${c.phase} · ` : ''}${c.ratingA}A`,
-              feeds: [...byPos].map(([pos, types]) => ({ pos, lines: [...types].map(([t, units]) => `${t}: ${unitRanges(units)}`) })),
-              load: s.fixtures.length ? `${s.amps.toFixed(1)}A · ${Math.round((s.amps / c.ratingA) * 100)}%` : '',
-              spare: !s.fixtures.length,
-              bg: col?.bg || '', fg: col?.fg || '',
-            };
-          }),
+          label: c.label,
+          phase: d.supply === '3ph' ? c.phase : '',
+          units: [...byType.values()].map((u) => unitRanges(u, { dash: '-', minRun: 2 })),
+          type: [...byType.keys()].join('+'),
+          tag: circuitTag(d, c) || (MULTICORE[c.via] ? '' : c.via || ''),
+          amps: s.amps.toFixed(1),
+          spare: !s.fixtures.length,
+          bg: col?.bg || '', fg: col?.fg || '', colourName: col?.name || '',
         };
       }),
     };
   });
 }
 
-export function breakerPrintHtml(gig, distroId = '__all') {
-  const sheets = breakerModel(gig, distroId);
-  if (!sheets.length) return '<p>No distros set up. Plan power in the Power tab.</p>';
-  const style = (x) => (x.bg ? `background:${x.bg};color:${x.fg}` : '');
-  return sheets.map((sh) => {
-    const cols = Math.max(...sh.rows.map((r) => r.cells.length));
-    return `<section class="breaker-sheet">
-      <header class="breaker-title"><h2>${esc(sh.title)}</h2><p>${esc(sh.subtitle)}</p></header>
-      ${sh.rows.map((r) => `<div class="breaker-row" style="--cols:${cols}">
-        <div class="run-tag" style="${style(r.tag)}"><strong>${esc(r.tag.label)}</strong>${r.tag.colour ? `<span>${esc(r.tag.colour)}</span>` : ''}<small>${esc(r.tag.via)}</small></div>
-        ${r.cells.map((c) => `<div class="breaker ${c.spare ? 'spare' : ''}">
-          <div class="breaker-band" style="${style(c)}"><span class="ch">${esc(c.ch)}</span><span class="brk-meta">${esc(c.meta)}</span></div>
-          <div class="breaker-body">${c.spare ? '<div class="feed spare-text">SPARE</div>' : c.feeds.map((f) => `<div class="feed"><b>${esc(f.pos)}</b>${f.lines.map((l) => `<span>${esc(l)}</span>`).join('')}</div>`).join('')}</div>
-          ${c.load ? `<div class="breaker-load">${esc(c.load)}</div>` : ''}
-        </div>`).join('')}
-      </div>`).join('')}
-    </section>`;
-  }).join('');
+export function rackPrintHtml(gig, distroId = '__all') {
+  const racks = rackModel(gig, distroId);
+  if (!racks.length) return '<p>No distros set up. Plan power in the Power tab.</p>';
+  const fill = (c) => (c.bg ? `style="background:${c.bg};color:${c.fg}"` : '');
+  return `<div class="rack-plot">${racks.map((r) => {
+    const half = Math.ceil(r.cols.length / 2);
+    const titleRow = r.cols.length > 6
+      ? `<th></th><th colspan="${half}" class="rp-title">${esc(r.title)}</th><th colspan="${r.cols.length - half}" class="rp-title">${esc(r.title)}</th>`
+      : `<th></th><th colspan="${r.cols.length}" class="rp-title">${esc(r.title)}</th>`;
+    return `<table class="rp">
+      <colgroup><col class="rp-head-col">${r.cols.map(() => '<col>').join('')}</colgroup>
+      <tr>${titleRow}</tr>
+      <tr class="rp-circuit"><th>Circuit</th>${r.cols.map((c) => `<td>${esc(c.label)}${c.phase ? `<small>${esc(c.phase)}</small>` : ''}</td>`).join('')}</tr>
+      <tr class="rp-units"><th>Unit No</th>${r.cols.map((c) => `<td ${fill(c)}>${c.units.map((u) => `<div>${esc(u)}</div>`).join('')}</td>`).join('')}</tr>
+      <tr class="rp-type"><th>Type</th>${r.cols.map((c) => `<td>${esc(c.type)}</td>`).join('')}</tr>
+      <tr class="rp-tag"><th>${esc(r.viaLabel)}</th>${r.cols.map((c) => `<td ${fill(c)}>${esc(c.tag)}</td>`).join('')}</tr>
+      <tr class="rp-amps"><th>Amps</th>${r.cols.map((c) => `<td>${c.amps}</td>`).join('')}</tr>
+    </table>`;
+  }).join('')}</div>`;
 }
 
 // Power plan as PDF table sections.
@@ -492,8 +492,9 @@ export function powerPdfSections(gig) {
         if (!groups.has(k)) groups.set(k, []);
         groups.get(k).push(f.unit || '–');
       }
-      const col = runColour(d, c);
-      return [c.label, d.supply === '3ph' ? c.phase : '', `${c.ratingA}A`, `${c.run || c.via || ''}${col ? ` (${col.name})` : ''}`,
+      const col = circuitColour(d, c);
+      const tag = circuitTag(d, c);
+      return [c.label, d.supply === '3ph' ? c.phase : '', `${c.ratingA}A`, `${[tag, c.run || c.via].filter(Boolean).join(' · ')}${col ? ` (${col.name})` : ''}`,
         [...groups].map(([k, u]) => `${k}: ${unitRanges(u)}`).join('\n') || '-',
         s.watts || '', s.amps ? s.amps.toFixed(1) : '', s.amps ? Math.round((s.amps / c.ratingA) * 100) : ''];
     }),

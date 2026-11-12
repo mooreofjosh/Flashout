@@ -330,15 +330,48 @@ export function runColour(distro, circuit) {
   return n == null ? null : RESISTOR[n % 10];
 }
 
+// Loom colours: the resistor code plus extras commonly used on tape.
+export const CABLE_COLOURS = [
+  ...RESISTOR.slice(1),
+  RESISTOR[0],
+  { name: 'Cyan', bg: '#19d3f0', fg: '#111111' },
+  { name: 'Magenta', bg: '#ff3df5', fg: '#111111' },
+  { name: 'Pink', bg: '#ff9ccf', fg: '#111111' },
+];
+export const colourByName = (name) => CABLE_COLOURS.find((c) => c.name.toLowerCase() === String(name || '').toLowerCase()) || null;
+
+// A circuit's loom colour: the colour set on it, else its multicore run's resistor colour.
+export function circuitColour(distro, circuit) {
+  if (circuit.colour === 'none') return null;
+  return colourByName(circuit.colour) || runColour(distro, circuit);
+}
+
+// A circuit's connector label, e.g. "A1" = Weiland A, circuit 1 within it. Set on the circuit,
+// else worked out: runs of the same type lettered A, B, C... in order, pins numbered within the run.
+export function circuitTag(distro, circuit) {
+  if (circuit.tag != null && circuit.tag !== '') return circuit.tag;
+  if (!isMulticore(circuit)) return '';
+  const runs = [];
+  for (const c of distro.circuits) {
+    if (c.via !== circuit.via) continue;
+    const k = c.run || c.id;
+    if (!runs.includes(k)) runs.push(k);
+  }
+  const k = circuit.run || circuit.id;
+  const letter = String.fromCharCode(65 + (runs.indexOf(k) % 26));
+  const pin = distro.circuits.filter((c) => c.via === circuit.via && (c.run || c.id) === k).indexOf(circuit) + 1;
+  return `${letter}${pin}`;
+}
+
 // "101, 102, 103, 105" -> "101–103, 105"
-export function unitRanges(units) {
+export function unitRanges(units, { dash = '–', minRun = 3 } = {}) {
   const nums = units.map((u) => String(u));
   const out = [];
   let i = 0;
   while (i < nums.length) {
     let j = i;
     while (j + 1 < nums.length && /^\d+$/.test(nums[j]) && /^\d+$/.test(nums[j + 1]) && +nums[j + 1] === +nums[j] + 1) j++;
-    out.push(j - i >= 2 ? `${nums[i]}–${nums[j]}` : nums.slice(i, j + 1).join(', '));
+    out.push(j - i >= minRun - 1 ? `${nums[i]}${dash}${nums[j]}` : nums.slice(i, j + 1).join(', '));
     i = j + 1;
   }
   return out.join(', ');

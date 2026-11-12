@@ -12,7 +12,7 @@ import {
 } from './common.js';
 import { editGigSheet } from './gigs.js';
 import { importMVR } from './mvrImport.js';
-import { power, powerPrintHtml, breakerPrintHtml, breakerModel, powerPdfSections } from './power.js';
+import { power, powerPrintHtml, rackPrintHtml, rackModel, powerPdfSections } from './power.js';
 import { worksheet } from './worksheet.js';
 import { isLaptop } from '../mode.js';
 import { fixtureInfoSheet } from './common.js';
@@ -885,7 +885,7 @@ function print(gig) {
   } else if (ui.printMode === 'power') {
     preview = hdr + '<h3>Power plan</h3>' + powerPrintHtml(gig);
   } else if (ui.printMode === 'breakers') {
-    preview = breakerPrintHtml(gig, ui.printDistro);
+    preview = rackPrintHtml(gig, ui.printDistro);
   } else if (ui.printMode === 'hookup' || ui.printMode === 'pull') {
     preview = hdr + `<h3>${REPORT_TITLES[ui.printMode]}</h3>` + sectionsHtml(reportSections(gig, fixtures, ui.printMode));
   } else {
@@ -904,15 +904,15 @@ function print(gig) {
   return {
     html: `
       <div class="no-print">
-        <div class="chips-scroll">${mode('sheet', 'Patch sheet')}${mode('hookup', 'Channel hookup')}${mode('pull', 'Colour & gobo pull')}${mode('labels', 'Labels')}${mode('power', 'Power plan')}${mode('breakers', 'Distro breakers')}${mode('faults', 'Fault report')}</div>
+        <div class="chips-scroll">${mode('sheet', 'Patch sheet')}${mode('hookup', 'Channel hookup')}${mode('pull', 'Colour & gobo pull')}${mode('labels', 'Labels')}${mode('power', 'Power plan')}${mode('breakers', 'Distro racks')}${mode('faults', 'Fault report')}</div>
         ${ui.printMode === 'sheet' ? `<div class="chips-scroll">Group by: ${group('position', 'Position')}${group('universe', 'Universe')}${group('none', 'None')}</div>` : ''}
         ${ui.printMode === 'breakers' ? `<label>Distro
           <select data-change="pdistro">
-            <option value="__all">All distros (one page each)</option>
+            <option value="__all">All distros</option>
             ${(gig.power?.distros || []).map((d) => `<option value="${d.id}" ${ui.printDistro === d.id ? 'selected' : ''}>${esc(d.name)}</option>`).join('')}
           </select>
         </label>
-        <p class="muted small">Landscape A4. Multicore runs are coloured by resistor code: 1 brown, 2 red, 3 orange, 4 yellow, 5 green, 6 blue, 7 violet, 8 grey, 9 white, 10 black.</p>` : ui.printMode === 'power' ? '' : `<label>Fixtures
+        <p class="muted small">Landscape A4, several racks per page. Cells are coloured by each circuit's loom colour (set per circuit in the distro editor; by default run 1 brown, 2 red, 3 orange, 4 yellow…). Type uses each fixture's short name.</p>` : ui.printMode === 'power' ? '' : `<label>Fixtures
           <select data-change="ppos">
             <option value="__all">All positions</option>
             ${positions.map((p) => `<option value="${esc(p)}" ${ui.printPosition === p ? 'selected' : ''}>${esc(posName(p))}</option>`).join('')}
@@ -972,10 +972,10 @@ async function buildPdf(gig, fixtures) {
   }
 
   if (mode === 'breakers') {
-    const sheets = breakerModel(gig, ui.printDistro);
-    if (!sheets.length) throw new Error('No distros set up. Plan power in the Power tab first');
-    const one = sheets.length === 1 ? `-${fileSlug(sheets[0].title)}` : '';
-    return { blob: await pdf.breakersPdf(sheets), name: `${base}-distro-breakers${one}.pdf` };
+    const racks = rackModel(gig, ui.printDistro);
+    if (!racks.length) throw new Error('No distros set up. Plan power in the Power tab first');
+    const one = racks.length === 1 ? `-${fileSlug(racks[0].title)}` : '';
+    return { blob: await pdf.racksPdf(racks, { gigName: gig.name, subtitle }), name: `${base}-distro-racks${one}.pdf` };
   }
 
   if (mode === 'power') {
