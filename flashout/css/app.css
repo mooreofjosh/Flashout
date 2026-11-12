@@ -636,3 +636,10 @@ table.ws tr.ws-group td { background: #121314 !important; color: var(--accent); 
 .tagline { font-family: var(--cond); letter-spacing: .04em; color: var(--accent); }
 .specs.panel { padding: 0; }
 .specs-head { margin: 0 !important; }
+/* MVR import: per-type include tick boxes */
+.form label.spec { grid-template-columns: auto 1fr; align-items: start; column-gap: .6rem; }
+.form label.spec > input[type=checkbox] { width: 22px; min-height: 22px; margin-top: .15rem; accent-color: var(--accent); }
+.form label.spec > select { grid-column: 2; }
+.form label.spec.off > span, .form label.spec.off > select { opacity: .4; }
+.spec-all { display: flex; gap: .4rem; margin: .1rem 0 .3rem; }
+.form label.switch { display: flex; align-items: center; gap: .55rem; color: var(--text); font-size: .92rem; }
