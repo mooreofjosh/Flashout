@@ -55,10 +55,12 @@ export async function importMVR(targetGig = null) {
       <p><strong>${data.fixtures.length} fixtures</strong> in ${positions.size} position${positions.size === 1 ? '' : 's'} · ${patched} with DMX addresses</p>
       <ul class="chips">${[...positions].sort((a, b) => naturalCompare(a[0], b[0])).map(([p, n]) => `<li>${esc(p)} (${n})</li>`).join('')}</ul>
       ${targetGig ? '' : `<label>New gig name<input name="gigName" value="${esc(fileBase)}" required></label>`}
-      <fieldset><legend>Fixture types</legend>
+      <fieldset><legend>Fixture types <span class="muted small">· untick any you don't want</span></legend>
+        <div class="spec-all"><button type="button" class="btn small" data-all="1">Tick all</button> <button type="button" class="btn small" data-all="0">Untick all</button></div>
         ${specs.map((s, i) => {
           const label = specLabel(s.spec);
-          return `<label class="spec">
+          return `<label class="spec" data-spec="${i}">
+            <input type="checkbox" name="inc${i}" checked aria-label="Import ${esc(label.name)}">
             <span><strong>${s.count}× ${esc(label.name)}</strong> ${label.manufacturer ? `<small>${esc(label.manufacturer)}</small>` : ''}
             <small class="${s.error ? 'bad-text' : 'muted'}">${s.error ? esc(s.error) : ''}${s.modeNames.size ? `${s.error ? ' · ' : ''}Mode: ${esc([...s.modeNames].join(', '))}` : ''}</small></span>
             <select name="spec${i}">${typeChoiceOptions(s)}</select>
@@ -69,8 +71,27 @@ export async function importMVR(targetGig = null) {
       <label class="switch"><input type="checkbox" name="keepPatch" ${patched ? 'checked' : ''}> Keep DMX addresses from the MVR</label>
       ${dupes ? `<label class="switch"><input type="checkbox" name="skipDupes" checked> Skip ${dupes} fixture${dupes === 1 ? '' : 's'} already imported into this gig</label>` : ''}
       <p class="muted small">You can change any fixture's position, rigging or address after import.</p>
-      <div class="row-end"><button type="button" class="btn" data-close>Cancel</button><button class="btn primary">Import ${data.fixtures.length} fixtures</button></div>
+      <div class="row-end"><button type="button" class="btn" data-close>Cancel</button><button class="btn primary" data-go>Import ${data.fixtures.length} fixtures</button></div>
     </form>`, (root, close) => {
+    // Live count of what will be imported; unticked types grey out.
+    const go = root.querySelector('[data-go]');
+    const update = () => {
+      let n = 0;
+      specs.forEach((s, i) => {
+        const on = root.querySelector(`[name=inc${i}]`).checked;
+        root.querySelector(`[data-spec="${i}"]`).classList.toggle('off', !on);
+        root.querySelector(`[name=spec${i}]`).disabled = !on;
+        if (on) n += data.fixtures.filter((f) => f.spec === s.spec && !(root.querySelector('[name=skipDupes]')?.checked && f.uuid && existing.has(f.uuid))).length;
+      });
+      go.textContent = n === 0 ? 'Nothing to import' : n === data.fixtures.length ? `Import ${n} fixtures` : `Import ${n} of ${data.fixtures.length} fixtures`;
+      go.disabled = n === 0;
+    };
+    root.querySelector('[data-form]').addEventListener('change', update);
+    root.querySelectorAll('[data-all]').forEach((b) => b.addEventListener('click', () => {
+      specs.forEach((_, i) => { root.querySelector(`[name=inc${i}]`).checked = b.dataset.all === '1'; });
+      update();
+    }));
+    update();
     root.querySelector('[data-form]').addEventListener('submit', (e) => {
       e.preventDefault();
       close(formData(e.target));
@@ -78,12 +99,15 @@ export async function importMVR(targetGig = null) {
   });
   if (!result) return null;
 
-  const typeFor = new Map(specs.map((s, i) => [s.spec, resolveType(s, result['spec' + i])]));
+  // Only resolve (and add to the library) the fixture types being imported.
+  const included = new Set(specs.filter((_, i) => result['inc' + i]).map((s) => s.spec));
+  const typeFor = new Map(specs.filter((s) => included.has(s.spec)).map((s) => [s.spec, resolveType(s, result['spec' + specs.indexOf(s)])]));
   const flownMm = (parseFloat(result.flownAbove) || 0) * 1000;
   let seq = (targetGig?.fixtures || []).reduce((m, f) => Math.max(m, parseInt(f.unit, 10) || 0), 0);
 
   const list = [];
   for (const f of data.fixtures) {
+    if (!included.has(f.spec)) continue;
     if (result.skipDupes && f.uuid && existing.has(f.uuid)) continue;
     const type = typeFor.get(f.spec);
     const keep = result.keepPatch && f.address;
@@ -103,6 +127,7 @@ export async function importMVR(targetGig = null) {
   const gig = targetGig || store.addGig({ name: result.gigName || fileBase });
   store.addFixtures(gig.id, list);
   const placeholders = [...typeFor.values()].filter((t) => t?.modes.every((m) => !m.channels)).length;
-  toast(`Imported ${list.length} fixtures${placeholders ? ` · set channel counts for ${placeholders} fixture type${placeholders > 1 ? 's' : ''} in Library` : ''}`);
+  const skippedTypes = specs.length - included.size;
+  toast(`Imported ${list.length} fixtures${skippedTypes ? ` · skipped ${skippedTypes} fixture type${skippedTypes > 1 ? 's' : ''}` : ''}${placeholders ? ` · set channel counts for ${placeholders} type${placeholders > 1 ? 's' : ''} in Settings → Fixture library` : ''}`);
   return gig.id;
 }

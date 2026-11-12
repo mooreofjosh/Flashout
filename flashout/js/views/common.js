@@ -13,6 +13,9 @@ export function prepState(f, settings) {
 
 export const openFaults = (f) => f.faults.filter((x) => !x.resolved);
 
+// Short name for paperwork (rack plots), e.g. "ENVEE", "Q.PROF". Set on the fixture type, else its name.
+export const typeShort = (type) => (type ? (type.shortName || type.name || '').toUpperCase() : '?');
+
 export function typeLabel(type) {
   if (!type) return 'Unknown fixture';
   return type.name;
