@@ -4,12 +4,13 @@ import { esc, sheet, confirmSheet, formData, toast } from '../ui.js';
 import { refresh } from '../app.js';
 import { naturalCompare } from '../patch.js';
 import {
-  PHASES, VIA, MULTICORE, cableCount, WARN_PCT, DEFAULT_POWER, TEMPLATES, makeDistro, makeCircuit, runFor, analyse, powerIssues, autoAssign, amps, fixtureWatts,
+  PHASES, VIA, MULTICORE, cableCount, runColour, unitRanges, WARN_PCT, DEFAULT_POWER, TEMPLATES, makeDistro, makeCircuit, runFor, analyse, powerIssues, autoAssign, amps, fixtureWatts, fixtureAmps, hasPowerSpec, perCircuit,
 } from '../power.js';
 import { typeLabel, sortFixtures } from './common.js';
+import { editTypeSheet } from './library.js';
 
 const getType = (id) => store.getType(id);
-const ui = { selected: new Set(), filter: '__unassigned', gigId: null, autoDistro: '' };
+const ui = { selected: new Set(), filter: '__unassigned', gigId: null, autoDistro: '', showIssues: false, showSpecs: null };
 
 export const ensurePower = (gig) => (gig.power ||= DEFAULT_POWER());
 
@@ -152,17 +153,17 @@ export function power(gig) {
       </header>
       <div class="sel-bar">
         <label class="switch"><input type="checkbox" data-change="selAll" ${list.length && list.every((f) => ui.selected.has(f.id)) ? 'checked' : ''}> Select all shown</label>
-        ${sel ? `<span><strong>${sel}</strong> selected · ${fmtA(gig.fixtures.filter((f) => ui.selected.has(f.id)).reduce((s, f) => s + amps(fixtureWatts(f, getType), p), 0))}A <button class="btn small" data-action="unassignSel">Unplug</button></span>` : '<span class="muted small hide-touch">Drag onto a circuit, or select then click a circuit</span>'}
+        ${sel ? `<span><strong>${sel}</strong> selected · ${fmtA(gig.fixtures.filter((f) => ui.selected.has(f.id)).reduce((s, f) => s + fixtureAmps(f, getType, p), 0))}A <button class="btn small" data-action="unassignSel">Unplug</button></span>` : '<span class="muted small hide-touch">Drag onto a circuit, or select then click a circuit</span>'}
       </div>
       <ul class="fx-list">${list.map((f) => {
         const t = getType(f.typeId);
-        const w = fixtureWatts(f, getType);
+        const A = fixtureAmps(f, getType, p);
         const at = circuitOf.get(f.circuit);
         return `<li draggable="true" data-fid="${f.id}" class="${ui.selected.has(f.id) ? 'sel' : ''}">
           <label><input type="checkbox" data-change="sel" data-id="${f.id}" ${ui.selected.has(f.id) ? 'checked' : ''}>
           <span class="unit sm">${esc(f.unit || '–')}</span>
           <span class="row-main"><strong>${esc(typeLabel(t))}</strong><small>${esc(f.position || 'No position')}${at ? ` · ${esc(at.d.name)} / ${esc(at.c.label)}` : ''}</small></span>
-          <span class="watts ${w ? '' : 'warn-text'}">${w ? `${w} W` : '? W'}</span></label>
+          <span class="watts ${A ? '' : 'warn-text'}">${A ? `${A.toFixed(1)}A` : '?A'}</span></label>
         </li>`;
       }).join('') || '<li class="muted empty-li">Nothing here.</li>'}</ul>
     </aside>`;
@@ -183,7 +184,7 @@ export function power(gig) {
         const pct = s.amps / c.ratingA;
         return `<div class="circuit ${level(pct)} ${sel ? 'target' : ''}" data-cid="${c.id}" data-action="${sel ? 'assignHere' : ''}" ${sel ? 'role="button" tabindex="0"' : ''}>
           <div class="c-head"><strong>${esc(c.label)}</strong>${d.supply === '3ph' ? `<span class="ph ${c.phase}">${c.phase}</span>` : ''}<span class="amps">${fmtA(s.amps)}/${c.ratingA}A</span></div>
-          <div class="via">${esc(c.run || c.via || '')}</div>
+          <div class="via">${(() => { const col = runColour(d, c); return col ? `<span class="swatch" style="background:${col.bg}"></span>${esc(c.run || c.via)} · ${col.name}` : esc(c.run || c.via || ''); })()}</div>
           ${bar(pct)}
           <div class="chips-in">${s.fixtures.sort((x, y) => naturalCompare(x.unit, y.unit)).map((f) => `<button class="fx-chip" data-action="unplug" data-id="${f.id}" title="${esc(typeLabel(getType(f.typeId)))} · click to unplug">${esc(f.unit || '–')}</button>`).join('')}</div>
         </div>`;
@@ -191,11 +192,57 @@ export function power(gig) {
     </section>`;
   }).join('');
 
+  const errors = problems.filter((i) => i.level === 'error').length;
+  const statusText = !p.distros.length ? 'Add a distro to start'
+    : problems.length ? `${problems.length} problem${problems.length > 1 ? 's' : ''}`
+    : a.unassigned.length ? `${a.unassigned.length} not on a circuit`
+    : '✓ All on circuits, within limits';
+  const statusStrip = `
+    <section class="status-strip ${errors ? 'bad' : problems.length ? 'warn' : p.distros.length && !a.unassigned.length ? 'ok' : ''}">
+      <span class="stat"><strong>${(a.totalWatts / 1000).toFixed(1)}</strong> kW</span>
+      <span class="stat"><strong>${fmtA(a.totalAmps)}</strong> A total</span>
+      <span class="stat"><strong>${gig.fixtures.length - a.unassigned.length}</strong>/${gig.fixtures.length} on circuits</span>
+      <span class="status-text">${statusText}${problems.length ? ` <button class="link" data-action="toggleIssues">${ui.showIssues ? 'Hide' : 'Show'}</button>` : ''}</span>
+      ${problems.length && ui.showIssues ? `<ul class="issues">${problems.map((i) => `<li class="${i.level}">${esc(i.text)}</li>`).join('')}</ul>` : ''}
+    </section>`;
+
+  // Fixture power specs for the types in this rig.
+  const typeCounts = new Map();
+  for (const f of gig.fixtures) if (getType(f.typeId)) typeCounts.set(f.typeId, (typeCounts.get(f.typeId) || 0) + 1);
+  const typeRows = [...typeCounts].map(([tid, n]) => ({ t: getType(tid), n })).sort((x, y) => typeLabel(x.t).localeCompare(typeLabel(y.t)));
+  const missing = typeRows.filter((r) => !hasPowerSpec(r.t)).length;
+  const commonRating = p.distros.flatMap((d) => d.circuits.map((c) => c.ratingA)).sort((x, y) => x - y)[0] || 10;
+  const specsOpen = ui.showSpecs ?? missing > 0;
+  const specsTable = typeRows.length ? `
+    <section class="panel specs ${specsOpen ? 'open' : ''}">
+      <button class="specs-head" data-action="toggleSpecs" aria-expanded="${specsOpen}">
+        <h3>Fixture power</h3>
+        <span class="muted small">${typeRows.length} type${typeRows.length > 1 ? 's' : ''}${missing ? ` · <span class="warn-text">${missing} missing specs</span>` : ''}</span>
+        <span class="chev">${specsOpen ? '▾' : '▸'}</span>
+      </button>
+      ${specsOpen ? `<div class="table-wrap"><table class="patch-table">
+        <thead><tr><th>Fixture</th><th>Qty</th><th>Power</th><th>Each</th><th class="wide">In / out</th><th>Per ${commonRating}A</th><th></th></tr></thead>
+        <tbody>${typeRows.map(({ t, n }) => {
+          const each = fixtureAmps({ typeId: t.id }, getType, p);
+          const fit = perCircuit(t, commonRating, p);
+          return `<tr class="${hasPowerSpec(t) ? '' : 'warn'}">
+            <td><strong>${esc(typeLabel(t))}</strong><small>${esc(t.manufacturer || '')}</small></td>
+            <td>${n}</td>
+            <td>${t.powerW ? `${t.powerW} W` : ''}${t.currentA ? `${t.powerW ? '<br>' : ''}${t.currentA} A rated` : ''}${hasPowerSpec(t) ? '' : '<span class="warn-text">not set</span>'}</td>
+            <td>${each ? `${each.toFixed(2)}A` : ''}</td>
+            <td class="wide">${esc(t.powerIn || '—')}${t.powerOut ? ` → link${t.linkMax ? ` (max ${t.linkMax})` : ''}` : ''}</td>
+            <td>${fit == null ? '' : fit}</td>
+            <td><button class="btn small" data-action="editSpecs" data-type="${t.id}">${hasPowerSpec(t) ? 'Edit' : 'Set power'}</button></td>
+          </tr>`;
+        }).join('')}</tbody>
+      </table></div><p class="muted small">Specs are saved to your fixture library and used for every gig. "Per ${commonRating}A" is how many fit on one circuit while staying under ${WARN_PCT * 100}%.</p>` : ''}
+    </section>` : '';
+
   return {
     wide: true,
     html: `
       <p class="desktop-hint">Power planning works best on a laptop or desktop. On a phone: select fixtures, then tap a circuit.</p>
-      <div class="toolbar">
+      <div class="toolbar power-toolbar">
         <button class="btn primary" data-action="addDistro">+ Add distro</button>
         <span class="auto-group">
           <button class="btn" data-action="auto" ${p.distros.length ? '' : 'disabled'}>Auto-assign ${sel ? `${sel} selected` : 'unassigned'}</button>
@@ -205,18 +252,10 @@ export function power(gig) {
           </select>` : ''}
         </span>
         <button class="btn" data-action="clearAll" ${gig.fixtures.some((f) => f.circuit) ? '' : 'disabled'}>Unplug all</button>
-        <span class="settings-inline">
-          <label>Voltage <input type="number" data-change="voltage" value="${p.voltage}" min="100" max="260" inputmode="numeric"></label>
-          <label>Power factor <input type="number" data-change="pf" value="${p.pf}" min="0.5" max="1" step="0.05" inputmode="decimal"></label>
-        </span>
+        <button class="btn icon-text" data-action="settings" aria-label="Power settings">⚙ ${p.voltage}V</button>
       </div>
-      <section class="card ${problems.some((i) => i.level === 'error') ? 'issues-bad' : problems.length ? '' : 'issues-ok'}">
-        <p><strong>${(a.totalWatts / 1000).toFixed(1)} kW</strong> total · ${fmtA(amps(a.totalWatts, p))}A at ${p.voltage}V single-phase equivalent${p.distros.length ? '' : ' · add a distro to start'}</p>
-        ${problems.length ? `<ul class="issues">${problems.map((i) => `<li class="${i.level}">${esc(i.text)}</li>`).join('')}</ul>` : (p.distros.length && !a.unassigned.length ? '<p><strong>✓ All fixtures on circuits within limits</strong></p>' : '')}
-        ${missingTypes.length ? `<div class="watt-fix"><p class="small">Set wattage (saved to your library):</p>${missingTypes.map((t) => `
-          <label class="inline-field">${esc(t.name)} <input type="number" min="0" placeholder="W" data-change="setWatts" data-type="${t.id}" inputmode="numeric"> W</label>`).join('')}</div>` : ''}
-        <p class="muted small">Amps = watts ÷ (${p.voltage}V × ${p.pf} power factor). Warnings at ${WARN_PCT * 100}% of a circuit or phase rating. Check against manufacturer data and the venue's supply.</p>
-      </section>
+      ${statusStrip}
+      ${specsTable}
       ${gig.fixtures.length ? `<div class="power-layout">${fixturesPanel}<div class="distros">${distroCards || `
         <div class="empty panel"><h3>No distros yet</h3><p class="muted">Add the distro(s) you're working from, e.g. a 32A 3-phase with 12 × 10A circuits on Socapex.</p></div>`}</div></div>`
         : '<div class="empty"><h3>No fixtures</h3><p class="muted">Add fixtures in the Rig tab first.</p></div>'}
@@ -245,13 +284,23 @@ export function power(gig) {
       autoDistro(el) { ui.autoDistro = el.value; },
       sel(el) { el.checked ? ui.selected.add(el.dataset.id) : ui.selected.delete(el.dataset.id); refresh(); },
       selAll(el) { for (const f of list) el.checked ? ui.selected.add(f.id) : ui.selected.delete(f.id); refresh(); },
-      voltage(el) { p.voltage = Math.min(260, Math.max(100, +el.value || 230)); store.save(); refresh(); },
-      pf(el) { p.pf = Math.min(1, Math.max(0.5, +el.value || 0.9)); store.save(); refresh(); },
-      setWatts(el) {
-        const w = parseInt(el.value, 10);
-        if (!w) return;
-        store.updateType(el.dataset.type, { powerW: w });
-        toast(`${getType(el.dataset.type).name}: ${w} W saved to library`);
+      toggleIssues() { ui.showIssues = !ui.showIssues; refresh(); },
+      toggleSpecs() { ui.showSpecs = !(ui.showSpecs ?? missing > 0); refresh(); },
+      async editSpecs(el) { if (await editTypeSheet(getType(el.dataset.type), { focus: 'power' })) refresh(); },
+      async settings() {
+        const r = await sheet('Power settings', `
+          <form class="form" data-form>
+            <div class="grid2">
+              <label>Supply voltage (V)<input name="voltage" type="number" min="100" max="260" value="${p.voltage}" inputmode="numeric"></label>
+              <label>Power factor<input name="pf" type="number" min="0.5" max="1" step="0.05" value="${p.pf}" inputmode="decimal"></label>
+            </div>
+            <p class="muted small">Current is taken from a fixture's rated amps when you've entered it; otherwise it's watts ÷ (voltage × power factor). 0.9 is a safe power factor for most LED and discharge fixtures. Warnings show at ${WARN_PCT * 100}% of a circuit or phase. Always check against manufacturer data and the venue's supply.</p>
+            <div class="row-end"><button type="button" class="btn" data-close>Cancel</button><button class="btn primary">Save</button></div>
+          </form>`, (root, close) => root.querySelector('[data-form]').addEventListener('submit', (e) => { e.preventDefault(); close(formData(e.target)); }));
+        if (!r) return;
+        p.voltage = Math.min(260, Math.max(100, +r.voltage || 230));
+        p.pf = Math.min(1, Math.max(0.5, +r.pf || 0.9));
+        store.save();
         refresh();
       },
       async addDistro() { if (await distroSheet(gig)) refresh(); },
@@ -357,4 +406,109 @@ function cablePrintHtml(gig) {
     <p>${Object.entries(totals).map(([via, t]) => `<strong>${t.runs} × ${esc(via)}</strong> + ${t.breakouts} breakout${t.breakouts === 1 ? '' : 's'}`).join(' · ')}</p>
     <table class="print-table"><thead><tr><th>Run</th><th>Type</th><th>Distro</th><th>Feeds</th><th>Circuits used</th></tr></thead>
     <tbody>${used.map((r) => `<tr><td>${esc(r.name)}</td><td>${esc(r.via)}</td><td>${esc(r.distro.name)}</td><td>${esc([...r.positions].join(', '))}</td><td>${r.used}/${r.circuits.length}</td></tr>`).join('')}</tbody></table>`;
+}
+
+// Breaker labels data: one sheet per distro, one row per multicore run, coloured by resistor code.
+export function breakerModel(gig, distroId = '__all') {
+  const p = ensurePower(gig);
+  const a = analyse(gig.fixtures, p, getType);
+  const distros = p.distros.filter((d) => distroId === '__all' || d.id === distroId);
+  return distros.map((d) => {
+    const rows = [];
+    for (const c of d.circuits) {
+      const key = MULTICORE[c.via] ? `${c.via}:${c.run || c.id}` : null;
+      const last = rows[rows.length - 1];
+      if (last && key && last.key === key) last.circuits.push(c);
+      else if (last && !key && !last.key && last.circuits.length < 6) last.circuits.push(c);
+      else rows.push({ key, circuits: [c] });
+    }
+    return {
+      title: d.name,
+      subtitle: [gig.name, `${d.supply === '3ph' ? '3-phase' : 'single-phase'} ${d.ratingA}A`, gig.venue].filter(Boolean).join(' · '),
+      rows: rows.map((r) => {
+        const first = r.circuits[0];
+        const col = runColour(d, first);
+        return {
+          tag: { label: col ? (first.run || first.via) : 'Outlets', colour: col?.name || '', via: first.via || '', bg: col?.bg || '', fg: col?.fg || '' },
+          cells: r.circuits.map((c) => {
+            const s = a.circuits.get(c.id);
+            const byPos = new Map();
+            for (const f of [...s.fixtures].sort((x, y) => naturalCompare(x.unit, y.unit))) {
+              const pos = f.position || 'No position';
+              if (!byPos.has(pos)) byPos.set(pos, new Map());
+              const k = typeLabel(getType(f.typeId));
+              if (!byPos.get(pos).has(k)) byPos.get(pos).set(k, []);
+              byPos.get(pos).get(k).push(f.unit || '–');
+            }
+            return {
+              ch: c.label,
+              meta: `${d.supply === '3ph' ? `${c.phase} · ` : ''}${c.ratingA}A`,
+              feeds: [...byPos].map(([pos, types]) => ({ pos, lines: [...types].map(([t, units]) => `${t}: ${unitRanges(units)}`) })),
+              load: s.fixtures.length ? `${s.amps.toFixed(1)}A · ${Math.round((s.amps / c.ratingA) * 100)}%` : '',
+              spare: !s.fixtures.length,
+              bg: col?.bg || '', fg: col?.fg || '',
+            };
+          }),
+        };
+      }),
+    };
+  });
+}
+
+export function breakerPrintHtml(gig, distroId = '__all') {
+  const sheets = breakerModel(gig, distroId);
+  if (!sheets.length) return '<p>No distros set up. Plan power in the Power tab.</p>';
+  const style = (x) => (x.bg ? `background:${x.bg};color:${x.fg}` : '');
+  return sheets.map((sh) => {
+    const cols = Math.max(...sh.rows.map((r) => r.cells.length));
+    return `<section class="breaker-sheet">
+      <header class="breaker-title"><h2>${esc(sh.title)}</h2><p>${esc(sh.subtitle)}</p></header>
+      ${sh.rows.map((r) => `<div class="breaker-row" style="--cols:${cols}">
+        <div class="run-tag" style="${style(r.tag)}"><strong>${esc(r.tag.label)}</strong>${r.tag.colour ? `<span>${esc(r.tag.colour)}</span>` : ''}<small>${esc(r.tag.via)}</small></div>
+        ${r.cells.map((c) => `<div class="breaker ${c.spare ? 'spare' : ''}">
+          <div class="breaker-band" style="${style(c)}"><span class="ch">${esc(c.ch)}</span><span class="brk-meta">${esc(c.meta)}</span></div>
+          <div class="breaker-body">${c.spare ? '<div class="feed spare-text">SPARE</div>' : c.feeds.map((f) => `<div class="feed"><b>${esc(f.pos)}</b>${f.lines.map((l) => `<span>${esc(l)}</span>`).join('')}</div>`).join('')}</div>
+          ${c.load ? `<div class="breaker-load">${esc(c.load)}</div>` : ''}
+        </div>`).join('')}
+      </div>`).join('')}
+    </section>`;
+  }).join('');
+}
+
+// Power plan as PDF table sections.
+export function powerPdfSections(gig) {
+  const p = ensurePower(gig);
+  const a = analyse(gig.fixtures, p, getType);
+  if (!p.distros.length) return [{ note: 'No distros set up. Plan power in the Power tab.' }];
+  const sections = a.distros.map(({ distro: d, phases, watts }) => ({
+    heading: d.name,
+    note: `${d.supply === '3ph' ? '3-phase' : 'Single-phase'} ${d.ratingA}A · ${(watts / 1000).toFixed(1)} kW · ${Object.entries(phases).map(([ph, A]) => `${d.supply === '3ph' ? ph : 'Supply'} ${A.toFixed(1)}A`).join(', ')}`,
+    head: ['Circuit', 'Phase', 'Rating', 'Via', 'Fixtures', 'W', 'A', '%'],
+    body: d.circuits.map((c) => {
+      const s = a.circuits.get(c.id);
+      const groups = new Map();
+      for (const f of [...s.fixtures].sort((x, y) => naturalCompare(x.unit, y.unit))) {
+        const k = `${f.position || 'No position'} · ${typeLabel(getType(f.typeId))}`;
+        if (!groups.has(k)) groups.set(k, []);
+        groups.get(k).push(f.unit || '–');
+      }
+      const col = runColour(d, c);
+      return [c.label, d.supply === '3ph' ? c.phase : '', `${c.ratingA}A`, `${c.run || c.via || ''}${col ? ` (${col.name})` : ''}`,
+        [...groups].map(([k, u]) => `${k}: ${unitRanges(u)}`).join('\n') || '-',
+        s.watts || '', s.amps ? s.amps.toFixed(1) : '', s.amps ? Math.round((s.amps / c.ratingA) * 100) : ''];
+    }),
+    columnStyles: { 0: { fontStyle: 'bold', cellWidth: 16 }, 1: { cellWidth: 13 }, 2: { cellWidth: 15 }, 3: { cellWidth: 30 }, 5: { cellWidth: 14 }, 6: { cellWidth: 12 }, 7: { cellWidth: 11 } },
+  }));
+  const { runs, totals } = cableCount(gig.fixtures, p);
+  const used = runs.filter((r) => r.used);
+  if (used.length) {
+    sections.push({
+      heading: 'Multicore pull list',
+      note: Object.entries(totals).map(([via, t]) => `${t.runs} x ${via} + ${t.breakouts} breakout${t.breakouts === 1 ? '' : 's'}`).join(' · '),
+      head: ['Run', 'Type', 'Distro', 'Feeds', 'Circuits used'],
+      body: used.map((r) => [r.name, r.via, r.distro.name, [...r.positions].join(', '), `${r.used}/${r.circuits.length}`]),
+    });
+  }
+  if (a.unassigned.length) sections.push({ note: `Not on a circuit: ${a.unassigned.map((f) => f.unit || '-').join(', ')}` });
+  return sections;
 }

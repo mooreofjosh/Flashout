@@ -4,6 +4,7 @@ import { esc, sheet, confirmSheet, formData, toast, pickFile } from '../ui.js';
 import { refresh } from '../app.js';
 import { searchOFL, fetchOFL, fixtureFromFile, oflPageUrl } from '../fixtures.js';
 import { loadBuiltin, searchBuiltin, fixtureFromBuiltin } from '../builtin.js';
+import { POWER_IN, WARN_PCT } from '../power.js';
 
 const ui = { query: '', results: null, error: '', busy: false, filter: '', builtin: null, selecting: false, sel: new Set() };
 
@@ -32,7 +33,7 @@ function builtinResultsHtml() {
     ${total > results.length ? `<p class="muted small">Showing ${results.length} of ${total}. Add more words to narrow it down.</p>` : ''}`;
 }
 
-export function editTypeSheet(type) {
+export function editTypeSheet(type, { focus = '' } = {}) {
   const t = type || { name: '', manufacturer: '', powerW: null, weightKg: null, notes: '', modes: [{ name: 'Standard', channels: 1 }], source: 'manual' };
   const modeRow = (m = { name: '', channels: '' }) => `
     <div class="mode-row">
@@ -44,10 +45,20 @@ export function editTypeSheet(type) {
     <form class="form" data-form>
       <label>Manufacturer<input name="manufacturer" value="${esc(t.manufacturer)}" placeholder="e.g. Robe"></label>
       <label>Fixture name<input name="name" required value="${esc(t.name)}" placeholder="e.g. Spiider"></label>
-      <div class="grid2">
-        <label>Power (W)<input name="powerW" type="number" min="0" value="${esc(t.powerW ?? '')}" inputmode="numeric"></label>
-        <label>Weight (kg)<input name="weightKg" type="number" min="0" step="0.1" value="${esc(t.weightKg ?? '')}" inputmode="decimal"></label>
-      </div>
+      <fieldset class="power-spec" data-power>
+        <legend>Power</legend>
+        <div class="grid2">
+          <label>Max power (W)<input name="powerW" type="number" min="0" value="${esc(t.powerW ?? '')}" inputmode="numeric" placeholder="e.g. 660"></label>
+          <label>Current at 230V (A)<input name="currentA" type="number" min="0" step="0.01" value="${esc(t.currentA ?? '')}" inputmode="decimal" placeholder="optional"></label>
+        </div>
+        <div class="grid2">
+          <label>Power in<select name="powerIn"><option value="">—</option>${POWER_IN.map((c) => `<option ${t.powerIn === c ? 'selected' : ''}>${c}</option>`).join('')}</select></label>
+          <label>Power out / link<select name="powerOut"><option value="">No</option><option value="yes" ${t.powerOut ? 'selected' : ''}>Yes</option></select></label>
+        </div>
+        <label data-linkmax ${t.powerOut ? '' : 'hidden'}>Max units on one link (from the manual)<input name="linkMax" type="number" min="1" max="99" value="${esc(t.linkMax ?? '')}" inputmode="numeric" placeholder="optional"></label>
+        <p class="muted small" data-powerhint></p>
+      </fieldset>
+      <label>Weight (kg)<input name="weightKg" type="number" min="0" step="0.1" value="${esc(t.weightKg ?? '')}" inputmode="decimal"></label>
       <fieldset><legend>DMX modes</legend>
         <div data-modes>${t.modes.map(modeRow).join('')}</div>
         <button type="button" class="btn small" data-addmode>+ Add mode</button>
@@ -61,6 +72,23 @@ export function editTypeSheet(type) {
       </div>
     </form>`, (root, close) => {
     const modes = root.querySelector('[data-modes]');
+    // Power hint: current and how many fit on a 10A / 16A circuit.
+    const pf = 0.9;
+    const hint = root.querySelector('[data-powerhint]');
+    const updateHint = () => {
+      const w = +root.querySelector('[name=powerW]').value || 0;
+      const cur = +root.querySelector('[name=currentA]').value || 0;
+      const link = root.querySelector('[name=powerOut]').value === 'yes' ? (+root.querySelector('[name=linkMax]').value || 0) : 0;
+      root.querySelector('[data-linkmax]').hidden = root.querySelector('[name=powerOut]').value !== 'yes';
+      const amp = cur || (w ? w / (230 * pf) : 0);
+      if (!amp) { hint.textContent = 'Enter watts or current. Without it this fixture counts as 0A in power planning.'; return; }
+      const fit = (r) => { let n = Math.floor((r * WARN_PCT) / amp); if (link) n = Math.min(n, link); return n; };
+      hint.textContent = `${amp.toFixed(2)}A each${cur ? '' : ` (from watts at 230V, power factor ${pf})`} · up to ${fit(10)} per 10A circuit, ${fit(16)} per 16A (staying under ${WARN_PCT * 100}%)${link ? `, link limit ${link}` : ''}.`;
+    };
+    root.querySelector('[data-power]').addEventListener('input', updateHint);
+    root.querySelector('[data-power]').addEventListener('change', updateHint);
+    updateHint();
+    if (focus === 'power') setTimeout(() => { const el = root.querySelector('[name=powerW]'); el.scrollIntoView({ block: 'center' }); el.focus(); }, 50);
     root.querySelector('[data-addmode]').addEventListener('click', () => modes.insertAdjacentHTML('beforeend', modeRow()));
     modes.addEventListener('click', (e) => { if (e.target.closest('[data-rm]') && modes.children.length > 1) e.target.closest('.mode-row').remove(); });
     root.querySelector('[data-del]')?.addEventListener('click', async () => {
@@ -81,6 +109,8 @@ export function editTypeSheet(type) {
       const data = {
         name: d.name.trim(), manufacturer: d.manufacturer.trim(), notes: d.notes,
         powerW: d.powerW === '' ? null : +d.powerW, weightKg: d.weightKg === '' ? null : +d.weightKg, modes: modeList,
+        currentA: d.currentA === '' ? null : +d.currentA, powerIn: d.powerIn || '', powerOut: d.powerOut === 'yes',
+        linkMax: d.powerOut === 'yes' && d.linkMax ? +d.linkMax : null,
       };
       if (type) store.updateType(type.id, data);
       else store.addType({ ...data, source: 'manual' });
@@ -147,7 +177,7 @@ export const libraryView = {
           <li><button class="row ${ui.selecting ? 'selecting' : ''} ${ui.sel.has(t.id) ? 'picked' : ''}" data-action="${ui.selecting ? 'libToggle' : 'edit'}" data-id="${t.id}">
             ${ui.selecting ? `<span class="selbox">${ui.sel.has(t.id) ? '✓' : ''}</span>` : ''}
             <span class="row-main"><strong>${esc(t.name)}</strong><small>${esc(t.manufacturer)} · ${t.modes.map(chText).join(' / ')}${t.modes.some((m) => m.check || !m.channels) ? ' · <span class="warn-text">check channels</span>' : ''}</small></span>
-            <span class="row-side"><span class="tag">${sourceTag[t.source] || 'Manual'}</span><small>${t.powerW ? `${t.powerW} W` : ''}</small></span>
+            <span class="row-side"><span class="tag">${sourceTag[t.source] || 'Manual'}</span><small>${t.powerW ? `${t.powerW} W` : t.currentA ? `${t.currentA} A` : ''}${t.powerIn ? ` · ${esc(t.powerIn)}` : ''}</small></span>
           </button></li>`).join('')}</ul>`
           : '<div class="empty"><p class="muted">No fixtures yet. Add the ones you use most, and they\'ll be ready for every gig.</p></div>'}`,
       mount(root) {
