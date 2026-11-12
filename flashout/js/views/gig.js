@@ -286,7 +286,10 @@ function prep(gig) {
     <article class="card prep-card ${p.complete ? 'complete' : ''}" id="p-${f.id}">
       <header>
         <span class="unit">${esc(f.unit || '–')}</span>
-        <span class="row-main"><strong>${esc(typeLabel(t))}</strong><small>${esc(posName(f.position))} · ${esc(modeLabel(t, f.modeIndex))}</small></span>
+        <span class="row-main prep-head">
+          <strong>${esc(typeLabel(t))}</strong>
+          <small>${esc(posName(f.position))} · ${esc(modeLabel(t, f.modeIndex))}</small>
+        </span>
         <span class="seg mini" role="group" aria-label="Rigging">
           <button class="${f.rigging !== 'ground' ? 'on' : ''}" data-action="rigging" data-id="${f.id}" data-v="flown">Flown</button>
           <button class="${f.rigging === 'ground' ? 'on' : ''}" data-action="rigging" data-id="${f.id}" data-v="ground">Ground</button>
@@ -295,8 +298,8 @@ function prep(gig) {
       <div class="checks">
         ${p.items.map((item) => {
           const on = !!f.checks[item];
-          const extra = /address/i.test(item) ? ` <small>${formatAddress(f)}</small>` : '';
-          return `<button class="check ${on ? 'on' : ''}" aria-pressed="${on}" data-action="check" data-id="${f.id}" data-item="${esc(item)}"><span class="box">${on ? '✓' : ''}</span>${esc(item)}${extra}</button>`;
+          const addr = /address/i.test(item) ? `<small class="check-addr ${isPatched(f) ? '' : 'none'}">${isPatched(f) ? formatAddress(f) : 'not patched'}</small>` : '';
+          return `<button class="check ${on ? 'on' : ''}" aria-pressed="${on}" data-action="check" data-id="${f.id}" data-item="${esc(item)}"><span class="box">${on ? '✓' : ''}</span><span class="check-text">${esc(item)}${addr}</span></button>`;
         }).join('')}
       </div>
       <footer>

@@ -343,3 +343,11 @@ main.wide .tabs, main.wide .gig-head { max-width: 860px; }
 .section-head .section-title { margin: 0; }
 .section-head .toolbar { margin: 0; }
 main:has(.action-bar:not([hidden])) { padding-bottom: 5rem; }
+
+/* prep card: address placement */
+.check-text { display: flex; flex-direction: column; min-width: 0; line-height: 1.2; }
+.check .check-addr { margin: .15rem 0 0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .95rem; font-weight: 700; color: var(--accent); }
+.check .check-addr.none { color: var(--muted); font-family: inherit; font-weight: 400; font-size: .8rem; }
+.check.on .check-addr { color: var(--good); }
+.prep-head strong { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.prep-head small { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
