@@ -88,3 +88,31 @@ const clock = $('#clock');
 const tick = () => { if (clock) clock.textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); };
 tick();
 setInterval(tick, 15000);
+
+// ---------- sync between devices ----------
+import('./sync.js').then(({ startSync, onSyncStatus }) => {
+  const chip = $('#syncChip');
+  const LABELS = { connecting: 'Connecting…', syncing: 'Syncing…', synced: 'Synced', offline: 'Offline', signedout: 'Not syncing', error: 'Sync problem', unavailable: '' };
+  onSyncStatus((st) => {
+    chip.hidden = !LABELS[st.state];
+    chip.textContent = LABELS[st.state] || '';
+    chip.className = `sync-chip ${st.state}`;
+    chip.title = st.detail || (st.state === 'synced' ? 'Your gigs are synced across your devices' : '');
+  });
+  chip.addEventListener('click', () => go('settings'));
+
+  // Apply changes from another device without interrupting an edit in progress.
+  let pending = false;
+  const busy = () => {
+    const a = document.activeElement;
+    return document.querySelector('.sheet-wrap') || (a && /^(INPUT|SELECT|TEXTAREA)$/.test(a.tagName));
+  };
+  const safeRefresh = () => {
+    if (busy()) { pending = true; return; }
+    pending = false;
+    render({ keepScroll: true });
+  };
+  setInterval(() => { if (pending) safeRefresh(); }, 1500);
+  document.addEventListener('focusout', () => setTimeout(() => { if (pending) safeRefresh(); }, 300));
+  setTimeout(() => startSync({ onRemoteChange: safeRefresh }), 0);
+});
