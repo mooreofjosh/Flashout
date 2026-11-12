@@ -12,6 +12,12 @@ export const settingsView = {
       section: 'settings',
       html: `
         <section class="card">
+          <h3>Sync</h3>
+          <p class="small" data-sync-text>…</p>
+          <p class="muted small">Open Flashout on your phone and laptop while signed in to Claude, and your gigs, fixture library and settings stay in step. Each device keeps its own copy, so it keeps working with no signal and catches up when it's back online. Changes on both devices are merged; only an edit to the same field on both at once takes the newer one. Your layout choice stays per device.</p>
+          <div class="toolbar"><button class="btn" data-action="syncNow">Sync now</button></div>
+        </section>
+        <section class="card">
           <h3>Fixture library</h3>
           <p class="muted small">Fixtures you've added to gigs are saved here, so their modes and power specs are ready next time. You don't need to come here to add fixtures: <strong>+ Add fixtures</strong> in a gig searches everything.</p>
           <p class="small">${s.fixtureTypes.length} saved fixture${s.fixtureTypes.length === 1 ? '' : 's'}${(() => { const n = s.fixtureTypes.filter((t) => t.modes.some((m) => !m.channels || m.check) || !(t.powerW || t.currentA)).length; return n ? ` · <span class="warn-text">${n} missing channel counts or power specs</span>` : ''; })()}</p>
@@ -55,6 +61,16 @@ export const settingsView = {
           <p class="muted small">Flashout: fixture prep, patch and paperwork for live events. Fixture data comes from the built-in library (converted from grandMA2 fixture files), <a href="https://open-fixture-library.org" target="_blank" rel="noopener">Open Fixture Library</a> and GDTF files. Always check channel counts and power figures against the manufacturer's manual.</p>
         </section>`,
       mount(root) {
+        import('../sync.js').then(({ getSyncStatus, onSyncStatus }) => {
+          const el = root.querySelector('[data-sync-text]');
+          const draw = (st) => {
+            if (!el.isConnected) return;
+            const words = { synced: '✓ Synced', syncing: 'Syncing…', connecting: 'Connecting…', offline: 'Offline', signedout: 'Not syncing', error: 'Sync problem', unavailable: 'Not available', off: 'Not started' };
+            el.textContent = `${words[st.state] || st.state}${st.lastSync ? ` · last synced ${new Date(st.lastSync).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}` : ''}${st.detail ? ` · ${st.detail}` : ''}`;
+          };
+          draw(getSyncStatus());
+          onSyncStatus(draw);
+        });
         root.querySelector('[data-checklists]').addEventListener('submit', (e) => {
           e.preventDefault();
           const lines = (t) => [...new Set(t.split('\n').map((x) => x.trim()).filter(Boolean))];
@@ -75,6 +91,7 @@ export const settingsView = {
           if (added) toast(`Added ${added} fixture${added > 1 ? 's' : ''} to your library`);
           refresh();
         },
+        syncNow() { import('../sync.js').then((m) => { m.syncNow(); toast('Syncing…'); }); },
         layout(el) { s.settings.layout = el.value; store.save(); refresh(); },
         resetLists() {
           s.settings.checklists = structuredClone(store.DEFAULT_CHECKLISTS);
