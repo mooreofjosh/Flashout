@@ -5,7 +5,7 @@ import { refresh } from '../app.js';
 import { searchOFL, fetchOFL, fixtureFromFile, oflPageUrl } from '../fixtures.js';
 import { loadBuiltin, searchBuiltin, fixtureFromBuiltin } from '../builtin.js';
 
-const ui = { query: '', results: null, error: '', busy: false, filter: '', builtin: null };
+const ui = { query: '', results: null, error: '', busy: false, filter: '', builtin: null, selecting: false, sel: new Set() };
 
 const sourceTag = { ofl: 'OFL', gdtf: 'GDTF', manual: 'Manual', mvr: 'MVR', library: 'Library' };
 
@@ -135,10 +135,17 @@ export const libraryView = {
             <button class="btn" data-action="manual">+ Type one in</button>
           </div>
         </section>
-        <h3 class="section-title">My fixtures (${store.getState().fixtureTypes.length})</h3>
+        <div class="section-head">
+          <h3 class="section-title">My fixtures (${store.getState().fixtureTypes.length})</h3>
+          ${store.getState().fixtureTypes.length ? (ui.selecting
+            ? `<span class="toolbar"><button class="btn small" data-action="libSelAll">${types.length && types.every((t) => ui.sel.has(t.id)) ? 'Deselect all' : `Select all ${types.length}`}</button><button class="btn small primary" data-action="libSelDone">Done</button></span>`
+            : '<button class="btn small" data-action="libSelStart">Select</button>') : ''}
+        </div>
+        ${ui.selecting ? `<div class="action-bar" ${ui.sel.size ? '' : 'hidden'}><span><strong>${ui.sel.size}</strong> selected</span><button class="btn danger-fill" data-action="libDelete">Delete ${ui.sel.size}</button></div>` : ''}
         ${store.getState().fixtureTypes.length > 6 ? `<input class="filter" type="search" placeholder="Filter my fixtures" value="${esc(ui.filter)}" data-change="filter" aria-label="Filter my fixtures">` : ''}
         ${types.length ? `<ul class="rows">${types.map((t) => `
-          <li><button class="row" data-action="edit" data-id="${t.id}">
+          <li><button class="row ${ui.selecting ? 'selecting' : ''} ${ui.sel.has(t.id) ? 'picked' : ''}" data-action="${ui.selecting ? 'libToggle' : 'edit'}" data-id="${t.id}">
+            ${ui.selecting ? `<span class="selbox">${ui.sel.has(t.id) ? '✓' : ''}</span>` : ''}
             <span class="row-main"><strong>${esc(t.name)}</strong><small>${esc(t.manufacturer)} · ${t.modes.map(chText).join(' / ')}${t.modes.some((m) => m.check || !m.channels) ? ' · <span class="warn-text">check channels</span>' : ''}</small></span>
             <span class="row-side"><span class="tag">${sourceTag[t.source] || 'Manual'}</span><small>${t.powerW ? `${t.powerW} W` : ''}</small></span>
           </button></li>`).join('')}</ul>`
@@ -159,6 +166,27 @@ export const libraryView = {
       },
       actions: {
         filter(el) { ui.filter = el.value; refresh(); },
+        libSelStart() { ui.selecting = true; ui.sel.clear(); refresh(); },
+        libSelDone() { ui.selecting = false; ui.sel.clear(); refresh(); },
+        libToggle(el) { const id = el.dataset.id; ui.sel.has(id) ? ui.sel.delete(id) : ui.sel.add(id); refresh(); },
+        libSelAll() {
+          const all = types.length && types.every((t) => ui.sel.has(t.id));
+          types.forEach((t) => (all ? ui.sel.delete(t.id) : ui.sel.add(t.id)));
+          refresh();
+        },
+        async libDelete() {
+          const ids = [...ui.sel];
+          const inUse = ids.filter((id) => store.typeInUse(id));
+          const free = ids.filter((id) => !store.typeInUse(id));
+          if (!free.length) { toast('All of these are used in a gig. Remove them from those rigs first.', 'bad'); return; }
+          const ok = await confirmSheet(`Delete ${free.length} fixture${free.length > 1 ? 's' : ''} from your library?`,
+            `${inUse.length ? `${inUse.length} more ${inUse.length > 1 ? 'are' : 'is'} used in a gig and will be kept. ` : ''}Built-in fixtures can be added again any time.`, `Delete ${free.length}`, true);
+          if (!ok) return;
+          free.forEach((id) => store.deleteType(id));
+          ui.selecting = false; ui.sel.clear();
+          toast(`Deleted ${free.length} fixture${free.length > 1 ? 's' : ''}${inUse.length ? ` · kept ${inUse.length} in use` : ''}`);
+          refresh();
+        },
         addBuiltin(el) {
           addImported(fixtureFromBuiltin(ui.builtin[+el.dataset.i]));
           refresh();
