@@ -676,3 +676,13 @@ table.rp .rp-amps td { font-size: 10px; }
 .sync-chip.offline::before, .sync-chip.signedout::before { color: var(--warn); }
 .sync-chip.error::before { color: var(--bad); }
 .sync-chip:not([hidden]) + .clock { margin-left: .5rem; }
+
+/* ---------- sticker IDs ---------- */
+.stickers { margin-top: .5rem; }
+.st-label { margin: .2rem 0; color: var(--muted); font-size: .85rem; }
+.chips-scroll.wrap { flex-wrap: wrap; overflow: visible; }
+.st-opts { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .6rem; margin: .5rem 0; }
+.st-opts .seg label span { min-height: 38px; font-size: .9rem; }
+.st-text { width: 100%; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9rem; line-height: 1.45; tab-size: 14; white-space: pre; overflow: auto; margin: .5rem 0; }
+.seg label { position: relative; }
+.seg input { left: 0; top: 0; width: 1px; height: 1px; }
