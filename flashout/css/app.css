@@ -686,3 +686,16 @@ table.rp .rp-amps td { font-size: 10px; }
 .st-text { width: 100%; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9rem; line-height: 1.45; tab-size: 14; white-space: pre; overflow: auto; margin: .5rem 0; }
 .seg label { position: relative; }
 .seg input { left: 0; top: 0; width: 1px; height: 1px; }
+/* sticker IDs: layout editor + tape previews */
+.st-grid { display: grid; grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr); gap: 1rem; align-items: start; }
+@media (max-width: 760px) { .st-grid { grid-template-columns: 1fr; } }
+.st-template { width: 100%; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .95rem; line-height: 1.5; margin: .3rem 0 .4rem; }
+.st-tokens .chip { min-height: 30px; font-size: .82rem; }
+.st-opts { grid-template-columns: 1fr; }
+.st-previews { display: flex; flex-wrap: wrap; gap: .5rem; }
+.st-tape { position: relative; background: #fff; color: #111; border-radius: 3px; padding: .45rem 2rem .45rem .7rem; min-height: 72px; min-width: 160px; display: flex; align-items: center; box-shadow: inset 0 0 0 1px #ccc; font-family: Helvetica, Arial, sans-serif; }
+.st-text-out { font-size: 15px; line-height: 1.25; white-space: nowrap; }
+.st-text-out div:first-child { font-weight: 700; }
+.st-copy1 { position: absolute; top: 2px; right: 2px; min-width: 28px; min-height: 28px; font-size: .95rem; color: #666; }
+.st-copy1:hover { background: #eee; color: #111; }
+.st-steps { margin: .4rem 0 .5rem 1.1rem; padding: 0; line-height: 1.55; color: var(--text); }
