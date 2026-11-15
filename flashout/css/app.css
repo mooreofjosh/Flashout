@@ -667,3 +667,22 @@ table.rp .rp-amps td { font-size: 10px; }
 .circuit-row { grid-template-columns: 1fr 4.2rem 4.2rem 7rem 1fr 4.5rem 6.5rem auto; }
 .sheet:has(.circuit-edit) { max-width: 860px; }
 @media (max-width: 700px) { .circuit-head { display: none; } .circuit-row { grid-template-columns: 1fr 4rem 4rem 4.5rem; } }
+
+/* sync status chip */
+.sync-chip { margin-left: auto; font: inherit; font-size: .78rem; font-family: var(--cond); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); background: #0e0e10; border: 1px solid var(--line); border-radius: 3px; padding: .2rem .55rem; cursor: pointer; }
+.sync-chip::before { content: '●'; margin-right: .35rem; color: var(--muted); }
+.sync-chip.synced::before { color: var(--good); }
+.sync-chip.syncing::before, .sync-chip.connecting::before { color: var(--accent); }
+.sync-chip.offline::before, .sync-chip.signedout::before { color: var(--warn); }
+.sync-chip.error::before { color: var(--bad); }
+.sync-chip:not([hidden]) + .clock { margin-left: .5rem; }
+
+/* ---------- sticker IDs ---------- */
+.stickers { margin-top: .5rem; }
+.st-label { margin: .2rem 0; color: var(--muted); font-size: .85rem; }
+.chips-scroll.wrap { flex-wrap: wrap; overflow: visible; }
+.st-opts { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .6rem; margin: .5rem 0; }
+.st-opts .seg label span { min-height: 38px; font-size: .9rem; }
+.st-text { width: 100%; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9rem; line-height: 1.45; tab-size: 14; white-space: pre; overflow: auto; margin: .5rem 0; }
+.seg label { position: relative; }
+.seg input { left: 0; top: 0; width: 1px; height: 1px; }

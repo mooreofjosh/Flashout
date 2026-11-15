@@ -7,7 +7,7 @@ import {
   universeSummary, patchCSV, parseAddress, naturalCompare, UNIVERSE_SIZE,
 } from '../patch.js';
 import {
-  prepState, openFaults, typeLabel, modeLabel, sortFixtures, positionsOf, typeOptions, modeOptions,
+  prepState, openFaults, typeLabel, typeShort, modeLabel, sortFixtures, positionsOf, typeOptions, modeOptions,
   wireTypeMode, positionDatalist, riggingField, editFixtureSheet, faultsSheet,
 } from './common.js';
 import { editGigSheet } from './gigs.js';
@@ -843,6 +843,68 @@ function sectionsHtml(sections) {
 
 const REPORT_TITLES = { hookup: 'Channel hookup', pull: 'Colour & gobo pull' };
 
+// ---------------- STICKER IDS (copy into Brother P-touch Editor) ----------------
+
+const STICKER_FIELDS = [
+  ['unit', 'Unit'], ['address', 'Address'], ['channel', 'Channel'], ['fixture', 'Fixture'],
+  ['mode', 'Mode'], ['position', 'Position'], ['purpose', 'Purpose'], ['notes', 'Notes'],
+];
+const STICKER_DEFAULTS = { fields: ['unit', 'address', 'fixture'], format: 'tab', header: true, sort: 'unit', addr: 'dot' };
+
+function stickerOpts() {
+  const s = store.getState().settings;
+  return { ...STICKER_DEFAULTS, ...(s.stickers || {}) };
+}
+function setStickerOpts(patch) {
+  const s = store.getState().settings;
+  s.stickers = { ...stickerOpts(), ...patch };
+  store.save();
+}
+
+function stickerValue(f, key, o) {
+  const t = getType(f.typeId);
+  switch (key) {
+    case 'unit': return f.unit || '';
+    case 'address':
+      if (!isPatched(f)) return '';
+      if (o.addr === 'abs') return String(absoluteAddress(f.universe, f.address));
+      return `${f.universe}${o.addr === 'slash' ? '/' : '.'}${String(f.address).padStart(3, '0')}`;
+    case 'channel': return f.channel || '';
+    case 'fixture': return typeShort(t);
+    case 'mode': return t?.modes?.[f.modeIndex]?.name || '';
+    case 'position': return f.position || '';
+    case 'purpose': return f.purpose || '';
+    case 'notes': return f.notes || '';
+    default: return '';
+  }
+}
+
+// The text to paste: tab-separated rows, one line per sticker, or stacked lines.
+export function stickerText(fixtures, o) {
+  const keys = STICKER_FIELDS.map(([k]) => k).filter((k) => o.fields.includes(k)); // always in chip order
+  if (!keys.length) return '';
+  const label = Object.fromEntries(STICKER_FIELDS);
+  const sorted = [...fixtures].sort((a, b) => {
+    if (o.sort === 'address') {
+      const pa = isPatched(a), pb = isPatched(b);
+      if (pa !== pb) return pa ? -1 : 1;
+      if (pa) return absoluteAddress(a.universe, a.address) - absoluteAddress(b.universe, b.address);
+    }
+    if (o.sort === 'position') return naturalCompare(a.position, b.position) || naturalCompare(a.unit, b.unit);
+    return naturalCompare(a.unit, b.unit);
+  });
+  const clean = (v) => String(v).replace(/[\t\r\n]+/g, ' ').trim();
+  const rows = sorted.map((f) => keys.map((k) => clean(stickerValue(f, k, o))));
+  if (o.format === 'line') return rows.map((r) => r.filter(Boolean).join(' · ')).join('\n');
+  if (o.format === 'stack') return rows.map((r) => r.filter(Boolean).join('\n')).join('\n\n');
+  return [...(o.header ? [keys.map((k) => label[k])] : []), ...rows].map((r) => r.join('\t')).join('\n');
+}
+
+const stickerCSV = (fixtures, o) => {
+  const t = stickerText(fixtures, { ...o, format: 'tab', header: true });
+  return t.split('\n').map((line) => line.split('\t').map((c) => (/[",\n]/.test(c) ? `"${c.replace(/"/g, '""')}"` : c)).join(',')).join('\r\n');
+};
+
 // ---------------- PRINT ----------------
 
 function print(gig) {
@@ -886,6 +948,27 @@ function print(gig) {
     preview = hdr + '<h3>Power plan</h3>' + powerPrintHtml(gig);
   } else if (ui.printMode === 'breakers') {
     preview = rackPrintHtml(gig, ui.printDistro);
+  } else if (ui.printMode === 'stickers') {
+    const o = stickerOpts();
+    const chip = (k, l) => `<button class="chip ${o.fields.includes(k) ? 'on' : ''}" data-action="stField" data-v="${k}" aria-pressed="${o.fields.includes(k)}">${l}</button>`;
+    const opt = (name, v, l) => `<label><input type="radio" name="${name}" value="${v}" data-change="stOpt" ${o[name] === v ? 'checked' : ''}><span>${l}</span></label>`;
+    const text = stickerText(fixtures, o);
+    preview = `<section class="stickers">
+      <p class="st-label">Fields to include</p>
+      <div class="chips-scroll wrap">${STICKER_FIELDS.map(([k, l]) => chip(k, l)).join('')}</div>
+      <div class="st-opts">
+        <fieldset class="seg"><legend>Format</legend>${opt('format', 'tab', 'Columns (tab)')}${opt('format', 'line', 'One line each')}${opt('format', 'stack', 'Stacked')}</fieldset>
+        <fieldset class="seg"><legend>Sort</legend>${opt('sort', 'unit', 'Unit')}${opt('sort', 'position', 'Position')}${opt('sort', 'address', 'Address')}</fieldset>
+        <fieldset class="seg"><legend>Address style</legend>${opt('addr', 'dot', '1.001')}${opt('addr', 'slash', '1/001')}${opt('addr', 'abs', 'Absolute')}</fieldset>
+      </div>
+      ${o.format === 'tab' ? `<label class="switch"><input type="checkbox" data-change="stHeader" ${o.header ? 'checked' : ''}> Include a header row</label>` : ''}
+      <textarea class="st-text" data-sticker-text readonly rows="${Math.min(18, Math.max(6, text.split('\n').length + 1))}" spellcheck="false" aria-label="Sticker text to copy">${esc(text)}</textarea>
+      <div class="toolbar">
+        <button class="btn primary" data-action="stCopy" ${text ? '' : 'disabled'}>Copy all (${fixtures.length} sticker${fixtures.length === 1 ? '' : 's'})</button>
+        <button class="btn" data-action="stCsv" ${text ? '' : 'disabled'}>Save CSV for P-touch database</button>
+      </div>
+      <p class="muted small">P-touch Editor: <strong>Columns</strong> pastes straight into the database view or a spreadsheet, one sticker per row. Or save the CSV and use <em>Database → Connect</em> to print one label per row. <strong>One line each</strong> and <strong>Stacked</strong> paste into a text box. If a spreadsheet turns 1.010 into 1.01, use the 1/001 address style.</p>
+    </section>`;
   } else if (ui.printMode === 'hookup' || ui.printMode === 'pull') {
     preview = hdr + `<h3>${REPORT_TITLES[ui.printMode]}</h3>` + sectionsHtml(reportSections(gig, fixtures, ui.printMode));
   } else {
@@ -904,7 +987,7 @@ function print(gig) {
   return {
     html: `
       <div class="no-print">
-        <div class="chips-scroll">${mode('sheet', 'Patch sheet')}${mode('hookup', 'Channel hookup')}${mode('pull', 'Colour & gobo pull')}${mode('labels', 'Labels')}${mode('power', 'Power plan')}${mode('breakers', 'Distro racks')}${mode('faults', 'Fault report')}</div>
+        <div class="chips-scroll">${mode('sheet', 'Patch sheet')}${mode('hookup', 'Channel hookup')}${mode('pull', 'Colour & gobo pull')}${mode('labels', 'Labels')}${mode('stickers', 'Sticker IDs')}${mode('power', 'Power plan')}${mode('breakers', 'Distro racks')}${mode('faults', 'Fault report')}</div>
         ${ui.printMode === 'sheet' ? `<div class="chips-scroll">Group by: ${group('position', 'Position')}${group('universe', 'Universe')}${group('none', 'None')}</div>` : ''}
         ${ui.printMode === 'breakers' ? `<label>Distro
           <select data-change="pdistro">
@@ -919,19 +1002,36 @@ function print(gig) {
           </select>
         </label>`}
         ${ui.printMode === 'labels' ? `<label class="switch"><input type="checkbox" data-change="outlines" ${ui.labelOutlines ? 'checked' : ''}> Draw label outlines (for plain paper)</label>` : ''}
-        <div class="toolbar">
+        ${ui.printMode === 'stickers' ? '' : `<div class="toolbar">
           <button class="btn primary" data-action="exportPdf" ${ui.exporting ? 'disabled' : ''}>${ui.exporting ? 'Making PDF…' : 'Export PDF'}</button>
           <button class="btn" data-action="print">Print</button>
-        </div>
+        </div>`}
         ${ui.printMode === 'labels' ? '<p class="muted small">Labels are laid out 3 across on A4 (63.5 × 38.1 mm, 21 per sheet).</p>' : ''}
       </div>
-      <div class="print-area ${ui.printMode === 'labels' ? 'print-labels' : ''} ${ui.printMode === 'breakers' ? 'print-breakers' : ''}">${fixtures.length || ui.printMode === 'power' || ui.printMode === 'breakers' ? preview : '<p class="muted">No fixtures to print.</p>'}</div>`,
+      <div class="${ui.printMode === 'stickers' ? 'sticker-area' : 'print-area'} ${ui.printMode === 'labels' ? 'print-labels' : ''} ${ui.printMode === 'breakers' ? 'print-breakers' : ''}">${fixtures.length || ui.printMode === 'power' || ui.printMode === 'breakers' ? preview : '<p class="muted">No fixtures to print.</p>'}</div>`,
     actions: {
       pmode(el) { ui.printMode = el.dataset.v; refresh(); },
       pgroup(el) { ui.printGroup = el.dataset.v; refresh(); },
       ppos(el) { ui.printPosition = el.value; refresh(); },
       pdistro(el) { ui.printDistro = el.value; refresh(); },
       outlines(el) { ui.labelOutlines = el.checked; },
+      stField(el) {
+        const o = stickerOpts();
+        const k = el.dataset.v;
+        setStickerOpts({ fields: o.fields.includes(k) ? o.fields.filter((x) => x !== k) : [...o.fields, k] });
+        refresh();
+      },
+      stOpt(el) { setStickerOpts({ [el.name]: el.value }); refresh(); },
+      stHeader(el) { setStickerOpts({ header: el.checked }); refresh(); },
+      async stCopy() {
+        const ta = document.querySelector('[data-sticker-text]');
+        try { await navigator.clipboard.writeText(ta.value); toast(`Copied ${fixtures.length} sticker${fixtures.length === 1 ? '' : 's'}. Paste into P-touch Editor`); }
+        catch { ta.focus(); ta.select(); toast('Text selected: press Ctrl/⌘+C to copy'); }
+      },
+      async stCsv() {
+        const r = await saveFile(`${fileSlug(gig.name)}-sticker-ids.csv`, stickerCSV(fixtures, stickerOpts()), 'text/csv');
+        if (r === 'saved' || r === 'downloaded') toast('CSV saved');
+      },
       async exportPdf() {
         if (ui.exporting) return;
         ui.exporting = true; refresh();
