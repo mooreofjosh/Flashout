@@ -530,7 +530,11 @@ function lookup(gig) {
 function prep(gig) {
   const settings = store.getState().settings;
   const positions = positionsOf(gig);
-  if (ui.prepPosition !== '__all' && ui.prepPosition !== '__faults' && !positions.includes(ui.prepPosition)) ui.prepPosition = '__all';
+  // Filters: position, fixture type, faults only, hide finished (all combine).
+  if (ui.prepPosition === '__faults') { ui.prepPosition = '__all'; ui.prepFaults = true; }
+  if (ui.prepPosition !== '__all' && !positions.includes(ui.prepPosition)) ui.prepPosition = '__all';
+  ui.prepType ||= '__all';
+  if (ui.prepType !== '__all' && !gig.fixtures.some((f) => f.typeId === ui.prepType)) ui.prepType = '__all';
 
   let all = sortFixtures(gig.fixtures);
   let total = 0, done = 0, completeUnits = 0;
@@ -540,13 +544,23 @@ function prep(gig) {
   }
   const faultCount = all.reduce((n, f) => n + openFaults(f).length, 0);
 
-  let shown = all;
-  if (ui.prepPosition === '__faults') shown = shown.filter((f) => openFaults(f).length);
-  else if (ui.prepPosition !== '__all') shown = shown.filter((f) => (f.position || '') === ui.prepPosition);
-  if (ui.prepIncomplete) shown = shown.filter((f) => !prepState(f, settings).complete);
+  const byPos = (f) => ui.prepPosition === '__all' || (f.position || '') === ui.prepPosition;
+  const byType = (f) => ui.prepType === '__all' || f.typeId === ui.prepType;
+  const byFault = (f) => !ui.prepFaults || openFaults(f).length > 0;
+  const matched = all.filter((f) => byPos(f) && byType(f) && byFault(f));
+  const shown = ui.prepIncomplete ? matched.filter((f) => !prepState(f, settings).complete) : matched;
+  const filtered = matched.length !== all.length;
 
   const pct = total ? Math.round((done / total) * 100) : 0;
-  const chip = (v, label) => `<button class="chip ${ui.prepPosition === v ? 'on' : ''}" data-action="prepPos" data-v="${esc(v)}">${label}</button>`;
+  let mTotal = 0, mDone = 0, mComplete = 0;
+  for (const f of matched) { const p = prepState(f, settings); mTotal += p.total; mDone += p.done; if (p.complete) mComplete++; }
+  const mPct = mTotal ? Math.round((mDone / mTotal) * 100) : 0;
+
+  // Option counts follow the other filters, so you can see what each choice would show.
+  const posCount = (p) => all.filter((f) => (p === '__all' || (f.position || '') === p) && byType(f) && byFault(f)).length;
+  const types = [...new Map(all.map((f) => [f.typeId, getType(f.typeId)])).entries()]
+    .map(([id, t]) => ({ id, name: typeLabel(t) })).sort((a, b) => a.name.localeCompare(b.name));
+  const typeCount = (id) => all.filter((f) => (id === '__all' || f.typeId === id) && byPos(f) && byFault(f)).length;
 
   const cards = shown.map((f) => {
     const t = getType(f.typeId);
@@ -587,20 +601,41 @@ function prep(gig) {
   return {
     html: gig.fixtures.length ? `
       <section class="card summary">
-        <p><strong>${completeUnits}/${all.length}</strong> fixtures fully prepped · ${pct}%${faultCount ? ` · <span class="bad-text">${faultCount} open fault${faultCount > 1 ? 's' : ''}</span>` : ''}</p>
-        <div class="bar"><span style="width:${pct}%"></span></div>
+        ${filtered
+          ? `<p><strong>${mComplete}/${matched.length}</strong> of this selection fully prepped · ${mPct}%</p>
+             <div class="bar"><span style="width:${mPct}%"></span></div>
+             <p class="muted small">Whole gig: ${completeUnits}/${all.length} fixtures · ${pct}%${faultCount ? ` · <span class="bad-text">${faultCount} open fault${faultCount > 1 ? 's' : ''}</span>` : ''}</p>`
+          : `<p><strong>${completeUnits}/${all.length}</strong> fixtures fully prepped · ${pct}%${faultCount ? ` · <span class="bad-text">${faultCount} open fault${faultCount > 1 ? 's' : ''}</span>` : ''}</p>
+             <div class="bar"><span style="width:${pct}%"></span></div>`}
       </section>
-      <div class="chips-scroll">
-        ${chip('__all', 'All')}
-        ${positions.map((p) => chip(p, esc(posName(p)))).join('')}
-        ${faultCount ? chip('__faults', '⚠ Faults') : ''}
+      <div class="prep-filters">
+        <label>Position
+          <select data-change="prepPos" aria-label="Filter by position">
+            <option value="__all">All positions (${posCount('__all')})</option>
+            ${positions.map((p) => `<option value="${esc(p)}" ${ui.prepPosition === p ? 'selected' : ''}>${esc(posName(p))} (${posCount(p)})</option>`).join('')}
+          </select>
+        </label>
+        <label>Fixture type
+          <select data-change="prepType" aria-label="Filter by fixture type">
+            <option value="__all">All fixtures (${typeCount('__all')})</option>
+            ${types.map((t) => `<option value="${esc(t.id)}" ${ui.prepType === t.id ? 'selected' : ''}>${esc(t.name)} (${typeCount(t.id)})</option>`).join('')}
+          </select>
+        </label>
       </div>
-      <label class="switch"><input type="checkbox" data-change="incomplete" ${ui.prepIncomplete ? 'checked' : ''}> Hide finished fixtures</label>
-      ${cards || '<div class="empty"><p class="muted">Nothing left to prep here. 🎉</p></div>'}`
+      <div class="prep-toggles">
+        ${faultCount || ui.prepFaults ? `<button class="chip ${ui.prepFaults ? 'on' : ''}" data-action="prepFaults" aria-pressed="${!!ui.prepFaults}">⚠ Faults only</button>` : ''}
+        <button class="chip ${ui.prepIncomplete ? 'on' : ''}" data-action="prepHideDone" aria-pressed="${!!ui.prepIncomplete}">Hide finished</button>
+        ${filtered || ui.prepIncomplete ? '<button class="chip" data-action="prepClear">Clear filters</button>' : ''}
+        <span class="muted small prep-count">Showing ${shown.length} of ${all.length}</span>
+      </div>
+      ${cards || `<div class="empty"><p class="muted">${matched.length ? 'Everything here is prepped. 🎉' : 'No fixtures match these filters.'}</p></div>`}`
       : '<div class="empty"><h3>No fixtures to prep</h3><p class="muted">Add fixtures in the Rig tab first.</p></div>',
     actions: {
-      prepPos(el) { ui.prepPosition = el.dataset.v; refresh(); },
-      incomplete(el) { ui.prepIncomplete = el.checked; refresh(); },
+      prepPos(el) { ui.prepPosition = el.value; refresh(); },
+      prepType(el) { ui.prepType = el.value; refresh(); },
+      prepFaults() { ui.prepFaults = !ui.prepFaults; refresh(); },
+      prepHideDone() { ui.prepIncomplete = !ui.prepIncomplete; refresh(); },
+      prepClear() { Object.assign(ui, { prepPosition: '__all', prepType: '__all', prepFaults: false, prepIncomplete: false }); refresh(); },
       check(el) {
         const f = store.getFixture(gig, el.dataset.id);
         f.checks[el.dataset.item] = !f.checks[el.dataset.item];
