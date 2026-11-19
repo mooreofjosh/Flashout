@@ -27,6 +27,13 @@ export const settingsView = {
           </div>
         </section>
         <section class="card">
+          <h3>Look</h3>
+          <fieldset class="seg" aria-label="Look">
+            ${[['backstage', 'Backstage'], ['console', 'Console']].map(([v, l]) => `<label><input type="radio" name="theme" value="${v}" data-change="theme" ${(s.settings.theme === 'console' ? 'console' : 'backstage') === v ? 'checked' : ''}><span>${l}</span></label>`).join('')}
+          </fieldset>
+          <p class="muted small">Backstage: slate with tape labels. Console: black with yellow keys.</p>
+        </section>
+        <section class="card">
           <h3>Layout</h3>
           <p class="muted small">Phone layout is for prep on the floor. Laptop layout has the worksheet, patch, power and paperwork. Automatic picks by screen width.</p>
           <fieldset class="seg" aria-label="Layout">
@@ -92,6 +99,7 @@ export const settingsView = {
           refresh();
         },
         syncNow() { import('../sync.js').then((m) => { m.syncNow(); toast('Syncing…'); }); },
+        theme(el) { s.settings.theme = el.value; store.save(); refresh(); },
         layout(el) { s.settings.layout = el.value; store.save(); refresh(); },
         resetLists() {
           s.settings.checklists = structuredClone(store.DEFAULT_CHECKLISTS);

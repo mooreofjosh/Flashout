@@ -2,6 +2,7 @@
 import * as store from '../store.js';
 import { esc, sheet, confirmSheet, formData } from '../ui.js';
 import { formatAddress, parseAddress, naturalCompare } from '../patch.js';
+import { fixtureCircuit, circuitText } from '../power.js';
 
 export const checklistFor = (f, settings) => settings.checklists[f.rigging === 'ground' ? 'ground' : 'flown'] || [];
 
@@ -169,8 +170,9 @@ export function faultsSheet(gig, f) {
 export function fixtureInfoSheet(gig, f) {
   const settings = store.getState().settings;
   const type = store.getType(f.typeId);
+  const at = fixtureCircuit(gig.power, f);
   const info = [
-    ['Address', isPatchedAddr(f)], ['Channel', f.channel], ['Mode', modeLabel(type, f.modeIndex)],
+    ['Address', isPatchedAddr(f)], ['Channel', f.channel], ['Circuit', at ? circuitText(at) : ''], ['Mode', modeLabel(type, f.modeIndex)],
     ['Position', f.position], ['Purpose', f.purpose], ['Colour', f.colour], ['Gobo', f.gobo], ['Accessories', f.accessories], ['Notes', f.notes],
   ].filter(([, v]) => v);
   const draw = (root) => {

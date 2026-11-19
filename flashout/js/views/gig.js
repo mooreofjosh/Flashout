@@ -12,7 +12,8 @@ import {
 } from './common.js';
 import { editGigSheet } from './gigs.js';
 import { importMVR } from './mvrImport.js';
-import { power, powerPrintHtml, rackPrintHtml, rackModel, powerPdfSections } from './power.js';
+import { power, phonePower, powerPrintHtml, rackPrintHtml, rackModel, powerPdfSections } from './power.js';
+import { fixtureCircuit, circuitText } from '../power.js';
 import { worksheet } from './worksheet.js';
 import { isLaptop } from '../mode.js';
 import { fixtureInfoSheet } from './common.js';
@@ -38,7 +39,7 @@ const ui = {
 };
 
 const LAPTOP_TABS = [['sheet', 'Worksheet'], ['prep', 'Prep'], ['patch', 'Patch'], ['power', 'Power'], ['print', 'Paperwork']];
-const PHONE_TABS = [['prep', 'Prep'], ['lookup', 'Fixtures']];
+const PHONE_TABS = [['prep', 'Prep'], ['lookup', 'Fixtures'], ['circuits', 'Power']];
 
 // Which tab to show: the gig's home tab depends on the layout; old "rig" links still work.
 function resolveTab(tab) {
@@ -46,6 +47,7 @@ function resolveTab(tab) {
   if (!tab) return laptop ? 'sheet' : 'prep';
   if (tab === 'rig') return laptop ? 'sheet' : 'lookup';
   if (tab === 'lookup' && laptop) return 'sheet';
+  if (tab === 'circuits' && laptop) return 'power';
   return tab;
 }
 const getType = (id) => store.getType(id);
@@ -60,6 +62,7 @@ export const gigView = {
     const tabs = `<nav class="tabs" role="tablist">${TABS.map(([k, label]) =>
       `<a role="tab" href="#gig-${gig.id}-${k}" class="${k === tab ? 'active' : ''}" aria-selected="${k === tab}">${label}</a>`).join('')}</nav>`;
     const body = tab === 'sheet' ? worksheet(gig, { addFixturesSheet, importMVR })
+      : tab === 'circuits' ? phonePower(gig)
       : { rig, lookup, prep, patch, power, print }[tab](gig);
     const laptopOnly = !isLaptop() && ['sheet', 'patch', 'power', 'print'].includes(tab);
     return {
@@ -530,7 +533,11 @@ function lookup(gig) {
 function prep(gig) {
   const settings = store.getState().settings;
   const positions = positionsOf(gig);
-  if (ui.prepPosition !== '__all' && ui.prepPosition !== '__faults' && !positions.includes(ui.prepPosition)) ui.prepPosition = '__all';
+  // Filters: position, fixture type, faults only, hide finished (all combine).
+  if (ui.prepPosition === '__faults') { ui.prepPosition = '__all'; ui.prepFaults = true; }
+  if (ui.prepPosition !== '__all' && !positions.includes(ui.prepPosition)) ui.prepPosition = '__all';
+  ui.prepType ||= '__all';
+  if (ui.prepType !== '__all' && !gig.fixtures.some((f) => f.typeId === ui.prepType)) ui.prepType = '__all';
 
   let all = sortFixtures(gig.fixtures);
   let total = 0, done = 0, completeUnits = 0;
@@ -540,13 +547,23 @@ function prep(gig) {
   }
   const faultCount = all.reduce((n, f) => n + openFaults(f).length, 0);
 
-  let shown = all;
-  if (ui.prepPosition === '__faults') shown = shown.filter((f) => openFaults(f).length);
-  else if (ui.prepPosition !== '__all') shown = shown.filter((f) => (f.position || '') === ui.prepPosition);
-  if (ui.prepIncomplete) shown = shown.filter((f) => !prepState(f, settings).complete);
+  const byPos = (f) => ui.prepPosition === '__all' || (f.position || '') === ui.prepPosition;
+  const byType = (f) => ui.prepType === '__all' || f.typeId === ui.prepType;
+  const byFault = (f) => !ui.prepFaults || openFaults(f).length > 0;
+  const matched = all.filter((f) => byPos(f) && byType(f) && byFault(f));
+  const shown = ui.prepIncomplete ? matched.filter((f) => !prepState(f, settings).complete) : matched;
+  const filtered = matched.length !== all.length;
 
   const pct = total ? Math.round((done / total) * 100) : 0;
-  const chip = (v, label) => `<button class="chip ${ui.prepPosition === v ? 'on' : ''}" data-action="prepPos" data-v="${esc(v)}">${label}</button>`;
+  let mTotal = 0, mDone = 0, mComplete = 0;
+  for (const f of matched) { const p = prepState(f, settings); mTotal += p.total; mDone += p.done; if (p.complete) mComplete++; }
+  const mPct = mTotal ? Math.round((mDone / mTotal) * 100) : 0;
+
+  // Option counts follow the other filters, so you can see what each choice would show.
+  const posCount = (p) => all.filter((f) => (p === '__all' || (f.position || '') === p) && byType(f) && byFault(f)).length;
+  const types = [...new Map(all.map((f) => [f.typeId, getType(f.typeId)])).entries()]
+    .map(([id, t]) => ({ id, name: typeLabel(t) })).sort((a, b) => a.name.localeCompare(b.name));
+  const typeCount = (id) => all.filter((f) => (id === '__all' || f.typeId === id) && byPos(f) && byFault(f)).length;
 
   const cards = shown.map((f) => {
     const t = getType(f.typeId);
@@ -558,7 +575,8 @@ function prep(gig) {
         <span class="unit">${esc(f.unit || '–')}</span>
         <span class="row-main prep-head">
           <strong>${esc(typeLabel(t))}</strong>
-          <small>${esc(posName(f.position))} · ${esc(modeLabel(t, f.modeIndex))}</small>
+          <small>${esc(posName(f.position))}, ${esc(modeLabel(t, f.modeIndex))}</small>
+          ${(() => { const at = fixtureCircuit(gig.power, f); return at ? `<small class="pc-line">${at.colour ? `<span class="swatch" style="background:${at.colour.bg}"></span>` : ''}⚡ ${esc(circuitText(at))}</small>` : ''; })()}
         </span>
         <span class="seg mini" role="group" aria-label="Rigging">
           <button class="${f.rigging !== 'ground' ? 'on' : ''}" data-action="rigging" data-id="${f.id}" data-v="flown">Flown</button>
@@ -587,20 +605,41 @@ function prep(gig) {
   return {
     html: gig.fixtures.length ? `
       <section class="card summary">
-        <p><strong>${completeUnits}/${all.length}</strong> fixtures fully prepped · ${pct}%${faultCount ? ` · <span class="bad-text">${faultCount} open fault${faultCount > 1 ? 's' : ''}</span>` : ''}</p>
-        <div class="bar"><span style="width:${pct}%"></span></div>
+        ${filtered
+          ? `<p><strong>${mComplete}/${matched.length}</strong> of this selection fully prepped · ${mPct}%</p>
+             <div class="bar"><span style="width:${mPct}%"></span></div>
+             <p class="muted small">Whole gig: ${completeUnits}/${all.length} fixtures · ${pct}%${faultCount ? ` · <span class="bad-text">${faultCount} open fault${faultCount > 1 ? 's' : ''}</span>` : ''}</p>`
+          : `<p><strong>${completeUnits}/${all.length}</strong> fixtures fully prepped · ${pct}%${faultCount ? ` · <span class="bad-text">${faultCount} open fault${faultCount > 1 ? 's' : ''}</span>` : ''}</p>
+             <div class="bar"><span style="width:${pct}%"></span></div>`}
       </section>
-      <div class="chips-scroll">
-        ${chip('__all', 'All')}
-        ${positions.map((p) => chip(p, esc(posName(p)))).join('')}
-        ${faultCount ? chip('__faults', '⚠ Faults') : ''}
+      <div class="prep-filters">
+        <label>Position
+          <select data-change="prepPos" aria-label="Filter by position">
+            <option value="__all">All positions (${posCount('__all')})</option>
+            ${positions.map((p) => `<option value="${esc(p)}" ${ui.prepPosition === p ? 'selected' : ''}>${esc(posName(p))} (${posCount(p)})</option>`).join('')}
+          </select>
+        </label>
+        <label>Fixture type
+          <select data-change="prepType" aria-label="Filter by fixture type">
+            <option value="__all">All fixtures (${typeCount('__all')})</option>
+            ${types.map((t) => `<option value="${esc(t.id)}" ${ui.prepType === t.id ? 'selected' : ''}>${esc(t.name)} (${typeCount(t.id)})</option>`).join('')}
+          </select>
+        </label>
       </div>
-      <label class="switch"><input type="checkbox" data-change="incomplete" ${ui.prepIncomplete ? 'checked' : ''}> Hide finished fixtures</label>
-      ${cards || '<div class="empty"><p class="muted">Nothing left to prep here. 🎉</p></div>'}`
+      <div class="prep-toggles">
+        ${faultCount || ui.prepFaults ? `<button class="chip ${ui.prepFaults ? 'on' : ''}" data-action="prepFaults" aria-pressed="${!!ui.prepFaults}">⚠ Faults only</button>` : ''}
+        <button class="chip ${ui.prepIncomplete ? 'on' : ''}" data-action="prepHideDone" aria-pressed="${!!ui.prepIncomplete}">Hide finished</button>
+        ${filtered || ui.prepIncomplete ? '<button class="chip" data-action="prepClear">Clear filters</button>' : ''}
+        <span class="muted small prep-count">Showing ${shown.length} of ${all.length}</span>
+      </div>
+      ${cards || `<div class="empty"><p class="muted">${matched.length ? 'Everything here is prepped. 🎉' : 'No fixtures match these filters.'}</p></div>`}`
       : '<div class="empty"><h3>No fixtures to prep</h3><p class="muted">Add fixtures in the Rig tab first.</p></div>',
     actions: {
-      prepPos(el) { ui.prepPosition = el.dataset.v; refresh(); },
-      incomplete(el) { ui.prepIncomplete = el.checked; refresh(); },
+      prepPos(el) { ui.prepPosition = el.value; refresh(); },
+      prepType(el) { ui.prepType = el.value; refresh(); },
+      prepFaults() { ui.prepFaults = !ui.prepFaults; refresh(); },
+      prepHideDone() { ui.prepIncomplete = !ui.prepIncomplete; refresh(); },
+      prepClear() { Object.assign(ui, { prepPosition: '__all', prepType: '__all', prepFaults: false, prepIncomplete: false }); refresh(); },
       check(el) {
         const f = store.getFixture(gig, el.dataset.id);
         f.checks[el.dataset.item] = !f.checks[el.dataset.item];
@@ -843,17 +882,21 @@ function sectionsHtml(sections) {
 
 const REPORT_TITLES = { hookup: 'Channel hookup', pull: 'Colour & gobo pull' };
 
-// ---------------- STICKER IDS (copy into Brother P-touch Editor) ----------------
+// ---------------- STICKER IDS (Brother P-touch Editor) ----------------
+// P-touch Editor makes one label per row of a database file (CSV), so the main output is a CSV
+// with a ready-made multi-line "Label" column, its lines as separate columns, and every field.
 
-const STICKER_FIELDS = [
-  ['unit', 'Unit'], ['address', 'Address'], ['channel', 'Channel'], ['fixture', 'Fixture'],
-  ['mode', 'Mode'], ['position', 'Position'], ['purpose', 'Purpose'], ['notes', 'Notes'],
+const STICKER_TOKENS = [
+  ['unit', 'Unit'], ['address', 'Address'], ['channel', 'Channel'], ['fixture', 'Fixture'], ['short', 'Short name'],
+  ['manufacturer', 'Maker'], ['modech', 'Mode + ch'], ['mode', 'Mode'], ['channels', 'Ch count'],
+  ['position', 'Position'], ['purpose', 'Purpose'], ['colour', 'Colour'], ['gobo', 'Gobo'], ['notes', 'Notes'],
 ];
-const STICKER_DEFAULTS = { fields: ['unit', 'address', 'fixture'], format: 'tab', header: true, sort: 'unit', addr: 'dot' };
+const STICKER_DEFAULTS = { template: '{unit} {address}\n{fixture}\n{modech}', sort: 'unit', addr: 'dot' };
 
 function stickerOpts() {
-  const s = store.getState().settings;
-  return { ...STICKER_DEFAULTS, ...(s.stickers || {}) };
+  const o = { ...STICKER_DEFAULTS, ...(store.getState().settings.stickers || {}) };
+  if (typeof o.template !== 'string') o.template = STICKER_DEFAULTS.template;
+  return o;
 }
 function setStickerOpts(patch) {
   const s = store.getState().settings;
@@ -861,30 +904,42 @@ function setStickerOpts(patch) {
   store.save();
 }
 
-function stickerValue(f, key, o) {
+function stickerValues(f, o) {
   const t = getType(f.typeId);
-  switch (key) {
-    case 'unit': return f.unit || '';
-    case 'address':
-      if (!isPatched(f)) return '';
-      if (o.addr === 'abs') return String(absoluteAddress(f.universe, f.address));
-      return `${f.universe}${o.addr === 'slash' ? '/' : '.'}${String(f.address).padStart(3, '0')}`;
-    case 'channel': return f.channel || '';
-    case 'fixture': return typeShort(t);
-    case 'mode': return t?.modes?.[f.modeIndex]?.name || '';
-    case 'position': return f.position || '';
-    case 'purpose': return f.purpose || '';
-    case 'notes': return f.notes || '';
-    default: return '';
-  }
+  const m = t?.modes?.[f.modeIndex];
+  const ch = m?.channels ? `${m.channels}ch` : '';
+  const addr = !isPatched(f) ? ''
+    : o.addr === 'abs' ? String(absoluteAddress(f.universe, f.address))
+    : o.addr === 'short' ? `${f.universe}.${f.address}`
+    : `${f.universe}${o.addr === 'slash' ? '/' : '.'}${String(f.address).padStart(3, '0')}`;
+  const modech = !m ? '' : m.name.replace(/\s+/g, '').toLowerCase() === ch ? ch : [m.name, ch].filter(Boolean).join(' ');
+  return {
+    unit: f.unit || '', address: addr, channel: f.channel || '', fixture: t?.name || '', short: typeShort(t),
+    manufacturer: t?.manufacturer || '', modech, mode: m?.name || '', channels: m?.channels ? String(m.channels) : '',
+    position: f.position || '', purpose: f.purpose || '', colour: f.colour || '', gobo: f.gobo || '', notes: f.notes || '',
+  };
 }
 
-// The text to paste: tab-separated rows, one line per sticker, or stacked lines.
-export function stickerText(fixtures, o) {
-  const keys = STICKER_FIELDS.map(([k]) => k).filter((k) => o.fields.includes(k)); // always in chip order
-  if (!keys.length) return '';
-  const label = Object.fromEntries(STICKER_FIELDS);
-  const sorted = [...fixtures].sort((a, b) => {
+// Fill the layout for one fixture: unknown tokens stay as typed; empty values collapse.
+function fillTemplate(template, vals) {
+  const out = [];
+  for (const line of template.split('\n')) {
+    let tokens = 0, filled = 0;
+    const text = line.replace(/\{(\w+)\}/g, (m0, k) => {
+      if (!(k in vals)) return m0;
+      tokens++;
+      const v = String(vals[k]).replace(/[\t\r\n]+/g, ' ').trim();
+      if (v) filled++;
+      return v;
+    }).replace(/[ \t]{2,}/g, ' ').trim();
+    if (tokens && !filled) continue; // e.g. "Ch {channel}" on a fixture with no channel
+    if (text) out.push(text);
+  }
+  return out;
+}
+
+function sortStickers(fixtures, o) {
+  return [...fixtures].sort((a, b) => {
     if (o.sort === 'address') {
       const pa = isPatched(a), pb = isPatched(b);
       if (pa !== pb) return pa ? -1 : 1;
@@ -893,17 +948,24 @@ export function stickerText(fixtures, o) {
     if (o.sort === 'position') return naturalCompare(a.position, b.position) || naturalCompare(a.unit, b.unit);
     return naturalCompare(a.unit, b.unit);
   });
-  const clean = (v) => String(v).replace(/[\t\r\n]+/g, ' ').trim();
-  const rows = sorted.map((f) => keys.map((k) => clean(stickerValue(f, k, o))));
-  if (o.format === 'line') return rows.map((r) => r.filter(Boolean).join(' · ')).join('\n');
-  if (o.format === 'stack') return rows.map((r) => r.filter(Boolean).join('\n')).join('\n\n');
-  return [...(o.header ? [keys.map((k) => label[k])] : []), ...rows].map((r) => r.join('\t')).join('\n');
 }
 
-const stickerCSV = (fixtures, o) => {
-  const t = stickerText(fixtures, { ...o, format: 'tab', header: true });
-  return t.split('\n').map((line) => line.split('\t').map((c) => (/[",\n]/.test(c) ? `"${c.replace(/"/g, '""')}"` : c)).join(',')).join('\r\n');
-};
+export function stickerLabels(fixtures, o) {
+  return sortStickers(fixtures, o).map((f) => fillTemplate(o.template, stickerValues(f, o)));
+}
+
+export function stickerCSV(fixtures, o) {
+  const sorted = sortStickers(fixtures, o);
+  const lines = sorted.map((f) => fillTemplate(o.template, stickerValues(f, o)));
+  const nLines = Math.max(1, ...lines.map((l) => l.length));
+  const head = ['Label', ...Array.from({ length: nLines }, (_, i) => `Line ${i + 1}`), ...STICKER_TOKENS.map(([, l]) => l)];
+  const rows = sorted.map((f, r) => {
+    const v = stickerValues(f, o);
+    return [lines[r].join('\n'), ...Array.from({ length: nLines }, (_, i) => lines[r][i] || ''), ...STICKER_TOKENS.map(([k]) => String(v[k]).replace(/[\t\r\n]+/g, ' ').trim())];
+  });
+  const cell = (c) => (/[",\n\r]/.test(c) ? `"${String(c).replace(/"/g, '""')}"` : String(c));
+  return [head, ...rows].map((r) => r.map(cell).join(',')).join('\r\n') + '\r\n';
+}
 
 // ---------------- PRINT ----------------
 
@@ -950,24 +1012,36 @@ function print(gig) {
     preview = rackPrintHtml(gig, ui.printDistro);
   } else if (ui.printMode === 'stickers') {
     const o = stickerOpts();
-    const chip = (k, l) => `<button class="chip ${o.fields.includes(k) ? 'on' : ''}" data-action="stField" data-v="${k}" aria-pressed="${o.fields.includes(k)}">${l}</button>`;
+    const labels = stickerLabels(fixtures, o);
     const opt = (name, v, l) => `<label><input type="radio" name="${name}" value="${v}" data-change="stOpt" ${o[name] === v ? 'checked' : ''}><span>${l}</span></label>`;
-    const text = stickerText(fixtures, o);
     preview = `<section class="stickers">
-      <p class="st-label">Fields to include</p>
-      <div class="chips-scroll wrap">${STICKER_FIELDS.map(([k, l]) => chip(k, l)).join('')}</div>
-      <div class="st-opts">
-        <fieldset class="seg"><legend>Format</legend>${opt('format', 'tab', 'Columns (tab)')}${opt('format', 'line', 'One line each')}${opt('format', 'stack', 'Stacked')}</fieldset>
-        <fieldset class="seg"><legend>Sort</legend>${opt('sort', 'unit', 'Unit')}${opt('sort', 'position', 'Position')}${opt('sort', 'address', 'Address')}</fieldset>
-        <fieldset class="seg"><legend>Address style</legend>${opt('addr', 'dot', '1.001')}${opt('addr', 'slash', '1/001')}${opt('addr', 'abs', 'Absolute')}</fieldset>
+      <div class="st-grid">
+        <div>
+          <p class="st-label">Sticker layout <span class="muted small">· one line per row; tap a field to add it</span></p>
+          <textarea class="st-template" data-st-template rows="4" spellcheck="false" aria-label="Sticker layout">${esc(o.template)}</textarea>
+          <div class="chips-scroll wrap st-tokens">${STICKER_TOKENS.map(([k, l]) => `<button class="chip" data-action="stToken" data-v="${k}">${l}</button>`).join('')}
+            <button class="chip" data-action="stReset">Reset</button></div>
+          <div class="st-opts">
+            <fieldset class="seg"><legend>Sort</legend>${opt('sort', 'unit', 'Unit')}${opt('sort', 'position', 'Position')}${opt('sort', 'address', 'Address')}</fieldset>
+            <fieldset class="seg"><legend>Address</legend>${opt('addr', 'dot', '1.001')}${opt('addr', 'short', '1.1')}${opt('addr', 'slash', '1/001')}${opt('addr', 'abs', 'Absolute')}</fieldset>
+          </div>
+        </div>
+        <div>
+          <p class="st-label">Preview <span class="muted small">· ${labels.length} sticker${labels.length === 1 ? '' : 's'}${labels.length > 8 ? ', first 8 shown' : ''}</span></p>
+          <div class="st-previews">${labels.slice(0, 8).map((l, i) => `<div class="st-tape"><div class="st-text-out">${l.map((x) => `<div>${esc(x)}</div>`).join('') || '<div class="muted">(empty)</div>'}</div><button class="icon-btn st-copy1" data-action="stCopyOne" data-i="${i}" title="Copy this label" aria-label="Copy this label">⧉</button></div>`).join('')}</div>
+        </div>
       </div>
-      ${o.format === 'tab' ? `<label class="switch"><input type="checkbox" data-change="stHeader" ${o.header ? 'checked' : ''}> Include a header row</label>` : ''}
-      <textarea class="st-text" data-sticker-text readonly rows="${Math.min(18, Math.max(6, text.split('\n').length + 1))}" spellcheck="false" aria-label="Sticker text to copy">${esc(text)}</textarea>
       <div class="toolbar">
-        <button class="btn primary" data-action="stCopy" ${text ? '' : 'disabled'}>Copy all (${fixtures.length} sticker${fixtures.length === 1 ? '' : 's'})</button>
-        <button class="btn" data-action="stCsv" ${text ? '' : 'disabled'}>Save CSV for P-touch database</button>
+        <button class="btn primary" data-action="stCsv" ${labels.length ? '' : 'disabled'}>Save P-touch file (${labels.length} label${labels.length === 1 ? '' : 's'})</button>
+        <button class="btn" data-action="stCopy" ${labels.length ? '' : 'disabled'}>Copy all as text</button>
       </div>
-      <p class="muted small">P-touch Editor: <strong>Columns</strong> pastes straight into the database view or a spreadsheet, one sticker per row. Or save the CSV and use <em>Database → Connect</em> to print one label per row. <strong>One line each</strong> and <strong>Stacked</strong> paste into a text box. If a spreadsheet turns 1.010 into 1.01, use the 1/001 address style.</p>
+      <ol class="st-steps small">
+        <li><strong>Save P-touch file</strong> (a .csv, one row per label).</li>
+        <li>In P-touch Editor, drag the file onto <em>Drag &amp; drop database file here</em> at the bottom of the window.</li>
+        <li>Click into your text box and insert the <strong>Label</strong> field from the database (it holds the whole sticker, line breaks included). If your version shows it on one line, insert <strong>Line 1</strong>, <strong>Line 2</strong> and <strong>Line 3</strong> on separate lines instead.</li>
+        <li>Print: P-touch makes one label per row. Tip: Fixtures filter at the top picks one position.</li>
+      </ol>
+      <p class="muted small">Pasting into P-touch Editor puts everything into one label, so copy and paste is best for a single label (⧉ on a preview).</p>
     </section>`;
   } else if (ui.printMode === 'hookup' || ui.printMode === 'pull') {
     preview = hdr + `<h3>${REPORT_TITLES[ui.printMode]}</h3>` + sectionsHtml(reportSections(gig, fixtures, ui.printMode));
@@ -1009,28 +1083,56 @@ function print(gig) {
         ${ui.printMode === 'labels' ? '<p class="muted small">Labels are laid out 3 across on A4 (63.5 × 38.1 mm, 21 per sheet).</p>' : ''}
       </div>
       <div class="${ui.printMode === 'stickers' ? 'sticker-area' : 'print-area'} ${ui.printMode === 'labels' ? 'print-labels' : ''} ${ui.printMode === 'breakers' ? 'print-breakers' : ''}">${fixtures.length || ui.printMode === 'power' || ui.printMode === 'breakers' ? preview : '<p class="muted">No fixtures to print.</p>'}</div>`,
+    mount(root) {
+      // Sticker layout: save as you type and update the previews without losing the cursor.
+      const ta = root.querySelector('[data-st-template]');
+      if (!ta) return;
+      const remember = () => { ui.stCaret = ta.selectionStart; };
+      ['keyup', 'click', 'select', 'input'].forEach((ev) => ta.addEventListener(ev, remember));
+      let t;
+      ta.addEventListener('input', () => {
+        clearTimeout(t);
+        t = setTimeout(() => {
+          const pos = ta.selectionStart;
+          setStickerOpts({ template: ta.value });
+          refresh();
+          const again = document.querySelector('[data-st-template]');
+          if (again) { again.focus(); again.setSelectionRange(pos, pos); }
+        }, 400);
+      });
+    },
     actions: {
       pmode(el) { ui.printMode = el.dataset.v; refresh(); },
       pgroup(el) { ui.printGroup = el.dataset.v; refresh(); },
       ppos(el) { ui.printPosition = el.value; refresh(); },
       pdistro(el) { ui.printDistro = el.value; refresh(); },
       outlines(el) { ui.labelOutlines = el.checked; },
-      stField(el) {
-        const o = stickerOpts();
-        const k = el.dataset.v;
-        setStickerOpts({ fields: o.fields.includes(k) ? o.fields.filter((x) => x !== k) : [...o.fields, k] });
+      stOpt(el) { setStickerOpts({ [el.name]: el.value }); refresh(); },
+      stToken(el) {
+        const ta = document.querySelector('[data-st-template]');
+        const tok = `{${el.dataset.v}}`;
+        const pos = Math.min(ui.stCaret ?? ta.value.length, ta.value.length);
+        const before = ta.value.slice(0, pos), after = ta.value.slice(pos);
+        const padL = before && !/\s$/.test(before) ? ' ' : '';
+        const padR = after && !/^\s/.test(after) ? ' ' : '';
+        setStickerOpts({ template: before + padL + tok + padR + after });
+        ui.stCaret = (before + padL + tok).length;
         refresh();
       },
-      stOpt(el) { setStickerOpts({ [el.name]: el.value }); refresh(); },
-      stHeader(el) { setStickerOpts({ header: el.checked }); refresh(); },
+      stReset() { ui.stCaret = null; setStickerOpts({ template: STICKER_DEFAULTS.template }); refresh(); },
+      async stCopyOne(el) {
+        const l = stickerLabels(fixtures, stickerOpts())[+el.dataset.i] || [];
+        try { await navigator.clipboard.writeText(l.join('\n')); toast('Label copied. Paste into a P-touch text box'); }
+        catch { toast('Copy was blocked here. Use Save P-touch file instead', 'bad'); }
+      },
       async stCopy() {
-        const ta = document.querySelector('[data-sticker-text]');
-        try { await navigator.clipboard.writeText(ta.value); toast(`Copied ${fixtures.length} sticker${fixtures.length === 1 ? '' : 's'}. Paste into P-touch Editor`); }
-        catch { ta.focus(); ta.select(); toast('Text selected: press Ctrl/⌘+C to copy'); }
+        const text = stickerLabels(fixtures, stickerOpts()).map((l) => l.join('\n')).join('\n\n');
+        try { await navigator.clipboard.writeText(text); toast(`Copied ${fixtures.length} label${fixtures.length === 1 ? '' : 's'} as text`); }
+        catch { toast('Copy was blocked here. Use Save P-touch file instead', 'bad'); }
       },
       async stCsv() {
-        const r = await saveFile(`${fileSlug(gig.name)}-sticker-ids.csv`, stickerCSV(fixtures, stickerOpts()), 'text/csv');
-        if (r === 'saved' || r === 'downloaded') toast('CSV saved');
+        const r = await saveFile(`${fileSlug(gig.name)}-ptouch-labels.csv`, stickerCSV(fixtures, stickerOpts()), 'text/csv');
+        if (r === 'saved' || r === 'downloaded') toast('Saved. Drag it onto P-touch Editor’s database area');
       },
       async exportPdf() {
         if (ui.exporting) return;

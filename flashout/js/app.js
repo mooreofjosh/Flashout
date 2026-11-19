@@ -18,7 +18,7 @@ let current = null;
 // Hash routes: #gigs, #library, #settings, #gig-<id> (opens the gig's home tab), #gig-<id>-<tab>
 function parseRoute() {
   const h = location.hash.replace(/^#/, '');
-  const m = h.match(/^gig-([a-z0-9]+)(?:-(sheet|rig|lookup|prep|patch|power|print))?$/);
+  const m = h.match(/^gig-([a-z0-9]+)(?:-(sheet|rig|lookup|circuits|prep|patch|power|print))?$/);
   if (m) return { view: gigView, params: { id: m[1], tab: m[2] || '' } };
   if (h === 'library') return { view: libraryView, params: {} };
   if (h === 'settings') return { view: settingsView, params: {} };
@@ -33,6 +33,7 @@ export function go(hash) {
 export function render({ keepScroll = false } = {}) {
   const y = window.scrollY;
   document.body.dataset.mode = getMode();
+  document.body.dataset.theme = store.getState().settings.theme === 'console' ? 'console' : 'backstage';
   const route = parseRoute();
   current?.out.unmount?.();
   const out = route.view.render(route.params);
