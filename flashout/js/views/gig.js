@@ -575,7 +575,7 @@ function prep(gig) {
         <span class="unit">${esc(f.unit || '–')}</span>
         <span class="row-main prep-head">
           <strong>${esc(typeLabel(t))}</strong>
-          <small>${esc(posName(f.position))} · ${esc(modeLabel(t, f.modeIndex))}</small>
+          <small>${esc(posName(f.position))}, ${esc(modeLabel(t, f.modeIndex))}</small>
           ${(() => { const at = fixtureCircuit(gig.power, f); return at ? `<small class="pc-line">${at.colour ? `<span class="swatch" style="background:${at.colour.bg}"></span>` : ''}⚡ ${esc(circuitText(at))}</small>` : ''; })()}
         </span>
         <span class="seg mini" role="group" aria-label="Rigging">

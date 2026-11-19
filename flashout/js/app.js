@@ -33,6 +33,7 @@ export function go(hash) {
 export function render({ keepScroll = false } = {}) {
   const y = window.scrollY;
   document.body.dataset.mode = getMode();
+  document.body.dataset.theme = store.getState().settings.theme === 'console' ? 'console' : 'backstage';
   const route = parseRoute();
   current?.out.unmount?.();
   const out = route.view.render(route.params);
