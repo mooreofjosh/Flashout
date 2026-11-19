@@ -513,3 +513,75 @@ export function powerPdfSections(gig) {
   if (a.unassigned.length) sections.push({ note: `Not on a circuit: ${a.unassigned.map((f) => f.unit || '-').join(', ')}` });
   return sections;
 }
+
+// ---------------- PHONE: read-only power circuits ----------------
+const phoneUi = { q: '', open: new Set(), gigId: null };
+
+export function phonePower(gig) {
+  if (phoneUi.gigId !== gig.id) Object.assign(phoneUi, { gigId: gig.id, q: '', open: new Set() });
+  const p = ensurePower(gig);
+  if (!p.distros.length) {
+    return { html: '<div class="empty"><h3>No power plan yet</h3><p class="muted">Distros and circuits are set up in the Power tab on the laptop. They show here once added.</p></div>' };
+  }
+  const a = analyse(gig.fixtures, p, getType);
+  const q = phoneUi.q.trim().toLowerCase();
+  const units = (fs) => {
+    const byType = new Map();
+    for (const f of [...fs].sort((x, y) => naturalCompare(x.unit, y.unit))) {
+      const k = typeShort(getType(f.typeId));
+      if (!byType.has(k)) byType.set(k, []);
+      byType.get(k).push(f.unit || '–');
+    }
+    return [...byType].map(([t, u]) => ({ t, u: unitRanges(u, { dash: '-', minRun: 2 }) }));
+  };
+  const matches = (c, fs, d) => !q || fs.some((f) => String(f.unit).toLowerCase() === q || String(f.unit).toLowerCase().startsWith(q))
+    || c.label.toLowerCase() === q || (circuitTag(d, c) || '').toLowerCase() === q;
+
+  const blocks = a.distros.map(({ distro: d, phases, watts }) => {
+    const rows = d.circuits.map((c) => ({ c, s: a.circuits.get(c.id) })).filter(({ c, s }) => matches(c, s.fixtures, d));
+    if (q && !rows.length) return '';
+    const open = q || phoneUi.open.has(d.id) || p.distros.length === 1;
+    return `<section class="pp-distro">
+      <button class="pp-head" data-action="ppToggle" data-id="${d.id}" aria-expanded="${!!open}">
+        <span><strong>${esc(d.name)}</strong><small>${d.supply === '3ph' ? '3-phase' : 'Single'} ${d.ratingA}A · ${(watts / 1000).toFixed(1)} kW</small></span>
+        <span class="chev">${open ? '▾' : '▸'}</span>
+      </button>
+      <div class="pp-phases">${Object.entries(phases).map(([ph, A]) => `<span class="pp-phase"><span class="ph ${ph}">${d.supply === '3ph' ? ph : 'Supply'}</span>${bar(A / d.ratingA)}<b>${fmtA(A)}/${d.ratingA}A</b></span>`).join('')}</div>
+      ${open ? `<ul class="pp-circuits">${rows.map(({ c, s }) => {
+        const col = circuitColour(d, c);
+        const tag = circuitTag(d, c);
+        const pct = s.amps / c.ratingA;
+        return `<li class="pp-c ${level(pct)}">
+          <span class="pp-num" ${col ? `style="background:${col.bg};color:${col.fg}"` : ''}>${esc(c.label)}${tag ? `<small>${esc(tag)}</small>` : ''}</span>
+          <span class="pp-body">
+            <span class="pp-meta">${d.supply === '3ph' ? `<span class="ph ${c.phase}">${c.phase}</span>` : ''}${esc([c.run || c.via, col?.name].filter(Boolean).join(' · '))}</span>
+            ${s.fixtures.length ? units(s.fixtures).map((g) => `<span class="pp-units"><b>${esc(g.u)}</b> ${esc(g.t)}</span>`).join('') : '<span class="muted">Spare</span>'}
+            ${bar(pct)}
+          </span>
+          <span class="pp-amps">${fmtA(s.amps)}<small>/${c.ratingA}A</small></span>
+        </li>`;
+      }).join('')}</ul>` : ''}
+    </section>`;
+  }).join('');
+
+  return {
+    html: `
+      <input class="lookup-search" type="search" data-pp-search placeholder="Unit, circuit or connector (107, A3)" value="${esc(phoneUi.q)}" aria-label="Find a unit or circuit" inputmode="search">
+      ${blocks || '<div class="empty"><p class="muted">No circuit has that unit or label.</p></div>'}
+      ${a.unassigned.length ? `<p class="muted small">Not on a circuit: ${esc(a.unassigned.map((f) => f.unit || '–').join(', '))}</p>` : ''}
+      <p class="muted small">Plan and change circuits in the Power tab on the laptop.</p>`,
+    mount(root) {
+      const input = root.querySelector('[data-pp-search]');
+      input.addEventListener('input', () => {
+        phoneUi.q = input.value;
+        const pos = input.selectionStart;
+        refresh();
+        const again = document.querySelector('[data-pp-search]');
+        again?.focus(); again?.setSelectionRange(pos, pos);
+      });
+    },
+    actions: {
+      ppToggle(el) { const id = el.dataset.id; phoneUi.open.has(id) ? phoneUi.open.delete(id) : phoneUi.open.add(id); refresh(); },
+    },
+  };
+}

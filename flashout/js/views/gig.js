@@ -12,7 +12,8 @@ import {
 } from './common.js';
 import { editGigSheet } from './gigs.js';
 import { importMVR } from './mvrImport.js';
-import { power, powerPrintHtml, rackPrintHtml, rackModel, powerPdfSections } from './power.js';
+import { power, phonePower, powerPrintHtml, rackPrintHtml, rackModel, powerPdfSections } from './power.js';
+import { fixtureCircuit, circuitText } from '../power.js';
 import { worksheet } from './worksheet.js';
 import { isLaptop } from '../mode.js';
 import { fixtureInfoSheet } from './common.js';
@@ -38,7 +39,7 @@ const ui = {
 };
 
 const LAPTOP_TABS = [['sheet', 'Worksheet'], ['prep', 'Prep'], ['patch', 'Patch'], ['power', 'Power'], ['print', 'Paperwork']];
-const PHONE_TABS = [['prep', 'Prep'], ['lookup', 'Fixtures']];
+const PHONE_TABS = [['prep', 'Prep'], ['lookup', 'Fixtures'], ['circuits', 'Power']];
 
 // Which tab to show: the gig's home tab depends on the layout; old "rig" links still work.
 function resolveTab(tab) {
@@ -46,6 +47,7 @@ function resolveTab(tab) {
   if (!tab) return laptop ? 'sheet' : 'prep';
   if (tab === 'rig') return laptop ? 'sheet' : 'lookup';
   if (tab === 'lookup' && laptop) return 'sheet';
+  if (tab === 'circuits' && laptop) return 'power';
   return tab;
 }
 const getType = (id) => store.getType(id);
@@ -60,6 +62,7 @@ export const gigView = {
     const tabs = `<nav class="tabs" role="tablist">${TABS.map(([k, label]) =>
       `<a role="tab" href="#gig-${gig.id}-${k}" class="${k === tab ? 'active' : ''}" aria-selected="${k === tab}">${label}</a>`).join('')}</nav>`;
     const body = tab === 'sheet' ? worksheet(gig, { addFixturesSheet, importMVR })
+      : tab === 'circuits' ? phonePower(gig)
       : { rig, lookup, prep, patch, power, print }[tab](gig);
     const laptopOnly = !isLaptop() && ['sheet', 'patch', 'power', 'print'].includes(tab);
     return {
@@ -573,6 +576,7 @@ function prep(gig) {
         <span class="row-main prep-head">
           <strong>${esc(typeLabel(t))}</strong>
           <small>${esc(posName(f.position))} · ${esc(modeLabel(t, f.modeIndex))}</small>
+          ${(() => { const at = fixtureCircuit(gig.power, f); return at ? `<small class="pc-line">${at.colour ? `<span class="swatch" style="background:${at.colour.bg}"></span>` : ''}⚡ ${esc(circuitText(at))}</small>` : ''; })()}
         </span>
         <span class="seg mini" role="group" aria-label="Rigging">
           <button class="${f.rigging !== 'ground' ? 'on' : ''}" data-action="rigging" data-id="${f.id}" data-v="flown">Flown</button>

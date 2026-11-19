@@ -376,3 +376,14 @@ export function unitRanges(units, { dash = '–', minRun = 3 } = {}) {
   }
   return out.join(', ');
 }
+
+// Where a fixture is plugged: { distro, circuit, tag, colour } or null.
+export function fixtureCircuit(power, f) {
+  if (!power || !f?.circuit) return null;
+  for (const d of power.distros || []) {
+    const c = d.circuits.find((x) => x.id === f.circuit);
+    if (c) return { distro: d, circuit: c, tag: circuitTag(d, c), colour: circuitColour(d, c) };
+  }
+  return null;
+}
+export const circuitText = (at) => (at ? [`${at.distro.name} / ${at.circuit.label}`, at.circuit.phase, at.tag, at.colour?.name].filter(Boolean).join(' · ') : '');
